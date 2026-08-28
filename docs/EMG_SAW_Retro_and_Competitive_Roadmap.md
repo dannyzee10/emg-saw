@@ -44,11 +44,11 @@ Facts are locked in `PROJECT_CONTEXT.md`; gates in `QUALITY_BAR.md`.
 | Real-time display | ✅ scope + sweep | ✅ | ✅ (MR) |
 | RMS / envelope | ✅ | ✅ | ✅ |
 | **MVC normalization** | ✅ | ✅ | ✅ |
-| **Median/mean freq (fatigue)** | ✅ median | ✅ | ✅ |
+| **Median/mean freq (fatigue)** | ✅ median+mean | ✅ | ✅ |
 | **Onset detection** | ✅ highlight | ✅ | ✅ |
 | **Live FFT spectrum** | ✅ | ✅ | ✅ |
 | Report generation | ✅ HTML | ✅ | ✅ |
-| Co-contraction / iEMG | ❌ | ✅ | ✅ |
+| Co-contraction / iEMG | ✅ | ✅ | ✅ |
 | Session/trial DB + replay | ❌ | ✅ | ✅ |
 | Export EDF/C3D | CSV only | ✅ | ✅ |
 | Video / force / mocap sync | ❌ | ✅ | ✅ |
