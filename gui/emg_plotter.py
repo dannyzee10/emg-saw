@@ -908,7 +908,6 @@ def main():
     if args.kick:
         win.kick_cli = PROG_CLI
     win.show()
-    print("DEBUG: window shown, entering event loop")
     sys.exit(app.exec_())
 
 
