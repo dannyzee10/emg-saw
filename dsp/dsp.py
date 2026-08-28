@@ -139,3 +139,83 @@ class LeadoffTracker:
         else:
             self._pending[ch], self._count[ch] = raw, 1
         return self.state[ch], self.quality[ch]
+
+
+# ------------------------------------------------------------------ analytics (M3)
+def iemg(x, fs):
+    """Integrated EMG: area under the rectified (DC-removed) signal, in V·s.
+    A measure of total muscle activity over the window."""
+    x = np.asarray(x, dtype=float)
+    if x.shape[0] < 2:
+        return 0.0
+    trapz = getattr(np, "trapezoid", np.trapz)      # numpy 2.x renamed trapz -> trapezoid
+    return float(trapz(np.abs(x - x.mean()), dx=1.0 / fs))
+
+
+def mean_frequency(x, fs, band=(20.0, 450.0)):
+    """Mean (centroid) frequency of the power spectrum over `band` (Hz). Complements
+    median frequency; both fall during a sustained contraction as the muscle fatigues."""
+    x = np.asarray(x, dtype=float)
+    n = x.shape[0]
+    if n < 8:
+        return 0.0
+    P = np.abs(np.fft.rfft((x - x.mean()) * np.hanning(n))) ** 2
+    f = np.fft.rfftfreq(n, 1.0 / fs)
+    m = (f >= band[0]) & (f <= min(band[1], 0.5 * fs))
+    tot = float(P[m].sum())
+    return float((f[m] * P[m]).sum() / tot) if tot > 0 else 0.0
+
+
+def cocontraction_index(a, b):
+    """Symmetric co-activation index between two RMS envelopes (same length), 0..100 %:
+    ``2·Σ min(a,b) / Σ (a+b) · 100``. 100 % = identical activation, 0 % = no overlap."""
+    a = np.abs(np.asarray(a, dtype=float))
+    b = np.abs(np.asarray(b, dtype=float))
+    denom = float((a + b).sum())
+    if denom <= 0:
+        return 0.0
+    return float(2.0 * np.minimum(a, b).sum() / denom * 100.0)
+
+
+def onset_offset(env, fs, thresh, min_on_ms=50.0, min_off_ms=50.0):
+    """Activation intervals from an RMS envelope crossing `thresh`. Returns a list of
+    ``(onset_s, offset_s)``; runs shorter than `min_on_ms` are ignored and gaps shorter
+    than `min_off_ms` are bridged (debounce)."""
+    env = np.asarray(env, dtype=float)
+    n = env.shape[0]
+    if n == 0:
+        return []
+    min_on = max(1, int(fs * min_on_ms / 1000.0))
+    min_off = max(1, int(fs * min_off_ms / 1000.0))
+    above = env >= thresh
+    intervals, i = [], 0
+    while i < n:
+        if above[i]:
+            start, j, gap, last = i, i, 0, i
+            while j < n:
+                if above[j]:
+                    last, gap = j, 0
+                else:
+                    gap += 1
+                    if gap >= min_off:
+                        break
+                j += 1
+            if (last - start + 1) >= min_on:
+                intervals.append((start / fs, (last + 1) / fs))
+            i = j + 1
+        else:
+            i += 1
+    return intervals
+
+
+def fatigue_trend(mdf_series, times=None):
+    """Linear trend of a median/mean-frequency series over a trial. Returns
+    ``(slope_hz_per_s, pct_change)``; a negative slope = fatigue (spectral compression)."""
+    y = np.asarray(mdf_series, dtype=float)
+    n = y.shape[0]
+    if n < 2:
+        return 0.0, 0.0
+    t = np.asarray(times, dtype=float) if times is not None else np.arange(n, dtype=float)
+    slope = float(np.polyfit(t, y, 1)[0])
+    pct = float((y[-1] - y[0]) / (y[0] + 1e-12) * 100.0)
+    return slope, pct

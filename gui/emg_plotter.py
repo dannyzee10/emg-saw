@@ -42,7 +42,7 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
-from dsp.dsp import EmgFilters, LeadoffTracker
+from dsp.dsp import EmgFilters, LeadoffTracker, mean_frequency, cocontraction_index
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -798,9 +798,10 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                     rms = float(np.sqrt(np.mean(ac * ac)))
                     pk = float(np.ptp(x))
                     mf = self._median_freq(ac)
+                    mnf = mean_frequency(ac, self.fs)
                     self.plots[c].setTitle(
                         f"{self.muscle_names[c]}   RMS {self._fmt_amp(rms)}"
-                        f"   pk-pk {self._fmt_amp(pk)}   medF {mf:.0f} Hz",
+                        f"   pk-pk {self._fmt_amp(pk)}   medF {mf:.0f}  mnF {mnf:.0f} Hz",
                         color=CH_COLORS[c % len(CH_COLORS)], size="8pt")
                     if c < len(self.ch_cards):
                         card = self.ch_cards[c]
@@ -828,6 +829,12 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                         self.plots[c].setYRange(ylo2, yhi2, padding=0)
                         self.plots[c].getAxis("left").setTicks(
                             [self._make_ticks(ylo2, yhi2, step)])
+
+                if self.nch >= 2:
+                    env0 = self.filters.rms_envelope(proc[:, 0:1])[:, 0]
+                    env1 = self.filters.rms_envelope(proc[:, 1:2])[:, 0]
+                    cci = cocontraction_index(env0, env1)
+                    self.lbl_stat.setText(self.lbl_stat.text() + f" | CCI(1,2) {cci:.0f}%")
 
                 if self.show_spectrum and proc.shape[0] >= 64:
                     n = proc.shape[0]
