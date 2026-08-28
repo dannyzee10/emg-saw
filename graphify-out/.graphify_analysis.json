@@ -1,129 +1,6 @@
 {
   "communities": {
     "0": [
-      "_claude_claude",
-      "agents_emg_saw_agent_roster",
-      "agents_emg_saw_agent_roster_round_table",
-      "agents_emg_saw_agent_roster_safe",
-      "claude",
-      "claude_agents_dsp_engineer",
-      "claude_agents_firmware_engineer",
-      "claude_agents_gui_engineer",
-      "claude_agents_hardware_engineer",
-      "claude_agents_systems_architect",
-      "claude_agents_test_engineer",
-      "claude_skills_graphify_skill",
-      "docs_checkpoints",
-      "docs_checkpoints_cp1",
-      "docs_checkpoints_cp2",
-      "docs_checkpoints_cp3",
-      "docs_checkpoints_cp4",
-      "docs_checkpoints_cp5",
-      "docs_checkpoints_cp6",
-      "docs_emg_realtime_readme",
-      "docs_emg_saw_agent_roster",
-      "docs_emg_saw_project_plan",
-      "docs_emg_saw_project_plan_median_frequency",
-      "docs_emg_saw_project_plan_onset_detection",
-      "docs_emg_system_architecture",
-      "docs_emg_system_architecture_acquisitionmodel",
-      "docs_emg_system_architecture_ads1299",
-      "docs_emg_system_architecture_afe",
-      "docs_emg_system_architecture_filterchain",
-      "docs_emg_system_architecture_maincontroller",
-      "docs_emg_system_architecture_mainwindow",
-      "docs_emg_system_architecture_mvc",
-      "docs_emg_system_architecture_serialcomm",
-      "docs_emg_system_architecture_stm32f103",
-      "firmware_bluepill_f103_config",
-      "firmware_bluepill_f103_config_adc1",
-      "firmware_bluepill_f103_config_dma",
-      "firmware_bluepill_f103_config_tim2",
-      "firmware_bluepill_f103_config_usart1",
-      "firmware_clock_tree_explained",
-      "firmware_clock_tree_explained_clock_tree",
-      "firmware_cp4_binary_dma",
-      "firmware_cp4_binary_dma_hal_adc_convhalfcpltcallback",
-      "firmware_cp4_binary_dma_send_half",
-      "firmware_cp4_binary_dma_tim3",
-      "firmware_stm32_firmware",
-      "firmware_stm32_firmware_build_frame",
-      "firmware_stm32_firmware_crc16_ccitt",
-      "firmware_stm32_firmware_hal_adc_convcpltcallback",
-      "graphify_knowledge_graph",
-      "requirements",
-      "requirements_numpy",
-      "requirements_pyqt5",
-      "requirements_pyqtgraph",
-      "requirements_pyserial",
-      "requirements_scipy",
-      "team_dsp_engineer",
-      "team_firmware_engineer",
-      "team_gui_engineer",
-      "team_hardware_engineer",
-      "team_saw_world_map",
-      "team_systems_architect",
-      "team_test_engineer",
-      "token_policy"
-    ],
-    "1": [
-      "communication_sources",
-      "communication_sources_asciisource",
-      "communication_sources_asciisource_init",
-      "communication_sources_asciisource_run",
-      "communication_sources_bufferedsource",
-      "communication_sources_bufferedsource_init",
-      "communication_sources_bufferedsource_push",
-      "communication_sources_bufferedsource_read_new",
-      "communication_sources_bufferedsource_run",
-      "communication_sources_bufferedsource_start",
-      "communication_sources_bufferedsource_stop",
-      "communication_sources_open_serial",
-      "communication_sources_rationale_1",
-      "communication_sources_rationale_123",
-      "communication_sources_rationale_169",
-      "communication_sources_rationale_30",
-      "communication_sources_rationale_47",
-      "communication_sources_rationale_71",
-      "communication_sources_serialsource",
-      "communication_sources_serialsource_init",
-      "communication_sources_serialsource_run",
-      "communication_sources_simsource",
-      "communication_sources_simsource_init",
-      "communication_sources_simsource_run",
-      "emg_1ch",
-      "emg_5ch",
-      "gui_channel_panel",
-      "gui_channel_panel_channelpanel",
-      "gui_channel_panel_channelpanel_build_ui",
-      "gui_channel_panel_channelpanel_init",
-      "gui_channel_panel_channelpanel_on_muscle_edit",
-      "gui_channel_panel_rationale_1",
-      "gui_channel_panel_rationale_10",
-      "gui_controller",
-      "gui_controller_maincontroller",
-      "gui_controller_maincontroller_init",
-      "gui_controller_maincontroller_start",
-      "gui_controller_maincontroller_stop",
-      "gui_controller_rationale_1",
-      "gui_emg_plotter",
-      "gui_emg_plotter_main",
-      "gui_emg_plotter_rationale_1",
-      "gui_model",
-      "gui_model_acquisitionmodel",
-      "gui_model_acquisitionmodel_init",
-      "gui_model_acquisitionmodel_read_new",
-      "gui_model_acquisitionmodel_start",
-      "gui_model_acquisitionmodel_stop",
-      "gui_model_rationale_1",
-      "gui_model_rationale_36",
-      "gui_plot_widget",
-      "gui_plot_widget_rationale_1",
-      "ndarray",
-      "qobject",
-      "run_emg"
-    ],
-    "2": [
       "gui_emg_plotter_emgscope",
       "gui_emg_plotter_emgscope_add_marker",
       "gui_emg_plotter_emgscope_apply_scaling",
@@ -163,48 +40,107 @@
       "gui_emg_plotter_emgscope_tick_clock",
       "gui_emg_plotter_emgscope_update",
       "gui_emg_plotter_emgscope_update_status",
-      "gui_emg_plotter_rationale_531",
-      "gui_emg_plotter_rationale_566",
-      "gui_emg_plotter_rationale_692"
+      "gui_emg_plotter_rationale_555",
+      "gui_emg_plotter_rationale_590",
+      "gui_emg_plotter_rationale_716"
+    ],
+    "1": [
+      "_claude_claude",
+      "agents_emg_saw_agent_roster",
+      "agents_emg_saw_agent_roster_round_table",
+      "agents_emg_saw_agent_roster_safe",
+      "claude",
+      "claude_agents_dsp_engineer",
+      "claude_agents_firmware_engineer",
+      "claude_agents_gui_engineer",
+      "claude_agents_hardware_engineer",
+      "claude_agents_systems_architect",
+      "claude_agents_test_engineer",
+      "claude_skills_graphify_skill",
+      "docs_emg_saw_agent_roster",
+      "docs_emg_saw_project_plan",
+      "docs_emg_saw_project_plan_median_frequency",
+      "docs_emg_saw_project_plan_onset_detection",
+      "docs_emg_system_architecture",
+      "docs_emg_system_architecture_acquisitionmodel",
+      "docs_emg_system_architecture_ads1299",
+      "docs_emg_system_architecture_afe",
+      "docs_emg_system_architecture_filterchain",
+      "docs_emg_system_architecture_maincontroller",
+      "docs_emg_system_architecture_mainwindow",
+      "docs_emg_system_architecture_mvc",
+      "docs_emg_system_architecture_serialcomm",
+      "docs_emg_system_architecture_stm32f103",
+      "graphify_knowledge_graph",
+      "team_dsp_engineer",
+      "team_firmware_engineer",
+      "team_gui_engineer",
+      "team_hardware_engineer",
+      "team_saw_world_map",
+      "team_systems_architect",
+      "team_test_engineer",
+      "token_policy"
+    ],
+    "2": [
+      "docs_checkpoints",
+      "docs_checkpoints_cp1",
+      "docs_checkpoints_cp2",
+      "docs_checkpoints_cp3",
+      "docs_checkpoints_cp4",
+      "docs_checkpoints_cp5",
+      "docs_checkpoints_cp6",
+      "docs_emg_realtime_readme",
+      "firmware_bluepill_f103_config",
+      "firmware_bluepill_f103_config_adc1",
+      "firmware_bluepill_f103_config_dma",
+      "firmware_bluepill_f103_config_tim2",
+      "firmware_bluepill_f103_config_usart1",
+      "firmware_clock_tree_explained",
+      "firmware_clock_tree_explained_clock_tree",
+      "firmware_cp4_binary_dma",
+      "firmware_cp4_binary_dma_hal_adc_convhalfcpltcallback",
+      "firmware_cp4_binary_dma_send_half",
+      "firmware_cp4_binary_dma_tim3",
+      "firmware_stm32_firmware",
+      "firmware_stm32_firmware_build_frame",
+      "firmware_stm32_firmware_crc16_ccitt",
+      "firmware_stm32_firmware_hal_adc_convcpltcallback",
+      "requirements",
+      "requirements_numpy",
+      "requirements_pyqt5",
+      "requirements_pyqtgraph",
+      "requirements_pyserial",
+      "requirements_scipy"
     ],
     "3": [
-      "docs_emg_saw_retro_and_competitive_roadmap",
-      "docs_emg_saw_retro_and_competitive_roadmap_emg_saw_retrospective_competitive_roadmap",
-      "docs_emg_saw_retro_and_competitive_roadmap_part_1_what_each_agent_shipped_retro_of_the_build",
-      "docs_emg_saw_retro_and_competitive_roadmap_part_2_remaining_goals_per_agent_near_term",
-      "docs_emg_saw_retro_and_competitive_roadmap_part_3_where_we_stand_vs_delsys_noraxon",
-      "docs_emg_saw_retro_and_competitive_roadmap_part_4_the_win_roadmap_prioritized",
-      "handoff",
-      "handoff_0_how_to_use_this_handoff",
-      "handoff_10_push_to_github_for_your_coworker",
-      "handoff_11_doc_index",
-      "handoff_1_mission",
-      "handoff_2_quick_start_open_the_emg_scope",
-      "handoff_3_current_state_done_as_of_2026_08_27",
-      "handoff_4_repo_map",
-      "handoff_5_what_each_agent_did_retro_the_memory_of_the_build",
-      "handoff_6_deep_plan_what_each_agent_does_next_backlogs",
-      "handoff_7_milestones_competitive_beat_delsys_noraxon",
-      "handoff_8_critical_gotchas_locked_do_not_rediscover",
-      "handoff_9_saw_workflow",
-      "handoff_emg_saw_handoff_read_this_first",
-      "project_context",
-      "project_context_architecture_locked_pipeline",
-      "project_context_current_state_done_as_of_2026_08_26",
-      "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
-      "project_context_locked_hardware_facts",
-      "project_context_locked_wire_protocol",
-      "project_context_project_identity",
-      "project_context_roadmap",
-      "project_context_signal_facts",
-      "project_context_source_of_truth",
-      "readme",
-      "readme_architecture",
-      "readme_emg_saw_beihang_emg_acquisition_system_gui",
-      "readme_quick_start",
-      "readme_repo",
-      "readme_status",
-      "readme_what_it_does"
+      "communication_sources",
+      "communication_sources_asciisource",
+      "communication_sources_asciisource_init",
+      "communication_sources_asciisource_run",
+      "communication_sources_bufferedsource",
+      "communication_sources_bufferedsource_init",
+      "communication_sources_bufferedsource_push",
+      "communication_sources_bufferedsource_read_new",
+      "communication_sources_bufferedsource_run",
+      "communication_sources_bufferedsource_start",
+      "communication_sources_bufferedsource_stop",
+      "communication_sources_open_serial",
+      "communication_sources_py_ndarray",
+      "communication_sources_rationale_1",
+      "communication_sources_rationale_123",
+      "communication_sources_rationale_169",
+      "communication_sources_rationale_30",
+      "communication_sources_rationale_47",
+      "communication_sources_rationale_71",
+      "communication_sources_serialsource",
+      "communication_sources_serialsource_init",
+      "communication_sources_serialsource_run",
+      "communication_sources_simsource",
+      "communication_sources_simsource_init",
+      "communication_sources_simsource_run",
+      "gui_emg_plotter",
+      "gui_emg_plotter_main",
+      "gui_emg_plotter_rationale_1"
     ],
     "4": [
       "_claude_skills_graphify_references_add_watch_add",
@@ -241,20 +177,9 @@
       "communication_protocol_frameparser_init",
       "communication_protocol_frameparser_try_extract",
       "communication_protocol_rationale_1",
-      "communication_protocol_rationale_37",
-      "communication_protocol_rationale_49",
-      "communication_protocol_rationale_67",
-      "tests_test_hil_simulation",
-      "tests_test_hil_simulation_main",
-      "tests_test_hil_simulation_rationale_1",
-      "tests_test_hil_simulation_rationale_27",
-      "tests_test_hil_simulation_run_hil_simulation",
-      "tests_test_hil_simulation_simulate_firmware_output",
-      "tests_test_protocol_roundtrip",
-      "tests_test_protocol_roundtrip_main",
-      "tests_test_protocol_roundtrip_rationale_1",
-      "tests_test_protocol_roundtrip_rationale_21",
-      "tests_test_protocol_roundtrip_run_roundtrip_test"
+      "communication_protocol_rationale_31",
+      "communication_protocol_rationale_43",
+      "communication_protocol_rationale_53"
     ],
     "6": [
       "dsp_dsp",
@@ -266,76 +191,46 @@
       "dsp_dsp_emgfilters_rms_envelope",
       "dsp_dsp_py_ndarray",
       "dsp_dsp_rationale_1",
-      "dsp_dsp_rationale_45",
-      "tests_test_dsp",
-      "tests_test_dsp_rationale_1",
-      "tests_test_dsp_rationale_31",
-      "tests_test_dsp_rationale_48",
-      "tests_test_dsp_rationale_63",
-      "tests_test_dsp_testemgfilters",
-      "tests_test_dsp_testemgfilters_setup",
-      "tests_test_dsp_testemgfilters_test_multichannel_rms_envelope",
-      "tests_test_dsp_testemgfilters_test_notch_50hz_attenuation",
-      "tests_test_dsp_testemgfilters_test_rms_envelope_amplitude"
+      "dsp_dsp_rationale_45"
     ],
     "7": [
-      "docs_protocol_spec",
-      "docs_protocol_spec_channel_data_format",
-      "docs_protocol_spec_crc_algorithm",
-      "docs_protocol_spec_emg_uart_protocol_specification",
-      "docs_protocol_spec_error_handling",
-      "docs_protocol_spec_frame_structure",
-      "docs_protocol_spec_frame_structure_version_1_legacy",
-      "docs_protocol_spec_frame_structure_version_2_current",
-      "docs_protocol_spec_physical_layer",
-      "docs_protocol_spec_purpose",
-      "docs_protocol_spec_reference_implementation",
-      "docs_protocol_spec_sequence_number_behavior",
-      "docs_protocol_spec_status",
-      "docs_protocol_spec_upgrade_path_version_2",
-      "docs_protocol_spec_validation",
-      "docs_protocol_spec_version",
-      "docs_protocol_spec_version_1_legacy",
-      "docs_protocol_spec_version_2_current",
-      "docs_protocol_spec_version_detection"
+      "assets_logo_png",
+      "assets_r_png",
+      "docs_checkpoints_beihang_branding"
     ],
     "8": [
-      "firmware_emg_bluepill_main",
-      "firmware_emg_bluepill_main_assert_failed",
-      "firmware_emg_bluepill_main_build_frame",
-      "firmware_emg_bluepill_main_c_adc_handletypedef",
-      "firmware_emg_bluepill_main_crc16_ccitt",
-      "firmware_emg_bluepill_main_error_handler",
-      "firmware_emg_bluepill_main_hal_adc_convcpltcallback",
-      "firmware_emg_bluepill_main_hal_adc_convhalfcpltcallback",
-      "firmware_emg_bluepill_main_main",
-      "firmware_emg_bluepill_main_mx_adc1_init",
-      "firmware_emg_bluepill_main_mx_dma_init",
-      "firmware_emg_bluepill_main_mx_gpio_init",
-      "firmware_emg_bluepill_main_mx_tim3_init",
-      "firmware_emg_bluepill_main_mx_usart1_uart_init",
-      "firmware_emg_bluepill_main_send_half",
-      "firmware_emg_bluepill_main_systemclock_config"
+      "_claude_skills_graphify_references_github_and_merge_clone",
+      "_claude_skills_graphify_references_github_and_merge_merge_graphs"
     ],
     "9": [
-      "gui_plot_widget_emgplotwidget",
-      "gui_plot_widget_emgplotwidget_build_plots",
-      "gui_plot_widget_emgplotwidget_build_spectrum",
-      "gui_plot_widget_emgplotwidget_clear_overlay",
-      "gui_plot_widget_emgplotwidget_init",
-      "gui_plot_widget_emgplotwidget_set_cursor_visible",
-      "gui_plot_widget_emgplotwidget_set_visible",
-      "gui_plot_widget_emgplotwidget_update_cursor",
-      "gui_plot_widget_emgplotwidget_update_curves",
-      "gui_plot_widget_emgplotwidget_update_overlay",
-      "gui_plot_widget_emgplotwidget_update_spectrum",
-      "gui_plot_widget_rationale_11",
-      "gui_plot_widget_rationale_73",
-      "gui_plot_widget_rationale_77",
-      "gui_plot_widget_rationale_82",
-      "gui_plot_widget_rationale_94"
+      "patterns_library",
+      "patterns_readme"
     ],
     "10": [
+      "_claude_skills_graphify_references_exports_benchmark"
+    ],
+    "11": [
+      "_claude_skills_graphify_references_exports_falkordb"
+    ],
+    "12": [
+      "_claude_skills_graphify_references_exports_graphml"
+    ],
+    "13": [
+      "_claude_skills_graphify_references_exports_neo4j"
+    ],
+    "14": [
+      "_claude_skills_graphify_references_exports_svg"
+    ],
+    "15": [
+      "_claude_skills_graphify_references_exports_wiki"
+    ],
+    "16": [
+      "docs_checkpoints_mvc_normalization"
+    ],
+    "17": [
+      "docs_emg_system_architecture_metricscalculator"
+    ],
+    "18": [
       "quality_bar",
       "quality_bar_authority",
       "quality_bar_gate_reference",
@@ -350,271 +245,50 @@
       "quality_bar_hg7_human_safety",
       "quality_bar_hg8_single_source_of_truth_fresh_graph",
       "quality_bar_hg9_checkpoint_discipline",
+      "quality_bar_quality_bar_md",
       "quality_bar_supporting_rules_a_pattern_of_violations_becomes_blocking"
     ],
-    "11": [
-      "firmware_emg_bluepill_stm32f1xx_it",
-      "firmware_emg_bluepill_stm32f1xx_it_busfault_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_debugmon_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_dma1_channel1_irqhandler",
-      "firmware_emg_bluepill_stm32f1xx_it_dma1_channel4_irqhandler",
-      "firmware_emg_bluepill_stm32f1xx_it_hardfault_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_memmanage_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_nmi_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_pendsv_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_svc_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_systick_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_usagefault_handler",
-      "firmware_emg_bluepill_stm32f1xx_it_usart1_irqhandler"
-    ],
-    "12": [
-      "gui_recording_controller",
-      "gui_recording_controller_rationale_1",
-      "gui_recording_controller_rationale_21",
-      "gui_recording_controller_rationale_41",
-      "gui_recording_controller_rationale_51",
-      "gui_recording_controller_rationale_7",
-      "gui_recording_controller_recordingcontroller",
-      "gui_recording_controller_recordingcontroller_active",
-      "gui_recording_controller_recordingcontroller_init",
-      "gui_recording_controller_recordingcontroller_start",
-      "gui_recording_controller_recordingcontroller_stop",
-      "gui_recording_controller_recordingcontroller_write_marker",
-      "gui_recording_controller_recordingcontroller_write_samples"
-    ],
-    "13": [
-      "docs_gui_architecture",
-      "docs_gui_architecture_controller",
-      "docs_gui_architecture_current_state",
-      "docs_gui_architecture_data_flow",
-      "docs_gui_architecture_gui_architecture_proposal_emg_instrument",
-      "docs_gui_architecture_immediate_refactoring_steps",
-      "docs_gui_architecture_model",
-      "docs_gui_architecture_proposed_modular_architecture",
-      "docs_gui_architecture_view"
-    ],
-    "14": [
-      "firmware_protocol_seq_evaluation",
-      "firmware_protocol_seq_evaluation_action_items",
-      "firmware_protocol_seq_evaluation_calculation",
-      "firmware_protocol_seq_evaluation_context",
-      "firmware_protocol_seq_evaluation_date",
-      "firmware_protocol_seq_evaluation_impact",
-      "firmware_protocol_seq_evaluation_recommendation",
-      "firmware_protocol_seq_evaluation_sequence_number_width_evaluation",
-      "firmware_protocol_seq_evaluation_status"
-    ],
-    "15": [
-      "agents_playbooks_dsp_engineer_playbook",
-      "agents_playbooks_dsp_engineer_playbook_common_pitfalls",
-      "agents_playbooks_dsp_engineer_playbook_dsp_engineer_playbook",
-      "agents_playbooks_dsp_engineer_playbook_exit_state",
-      "agents_playbooks_dsp_engineer_playbook_knowledge_base",
-      "agents_playbooks_dsp_engineer_playbook_quality_gates",
-      "agents_playbooks_dsp_engineer_playbook_role",
-      "agents_playbooks_dsp_engineer_playbook_workflow"
-    ],
-    "16": [
-      "agents_playbooks_firmware_engineer_playbook",
-      "agents_playbooks_firmware_engineer_playbook_common_pitfalls",
-      "agents_playbooks_firmware_engineer_playbook_exit_state",
-      "agents_playbooks_firmware_engineer_playbook_firmware_engineer_playbook",
-      "agents_playbooks_firmware_engineer_playbook_knowledge_base",
-      "agents_playbooks_firmware_engineer_playbook_quality_gates",
-      "agents_playbooks_firmware_engineer_playbook_role",
-      "agents_playbooks_firmware_engineer_playbook_workflow"
-    ],
-    "17": [
-      "agents_playbooks_gui_engineer_playbook",
-      "agents_playbooks_gui_engineer_playbook_common_pitfalls",
-      "agents_playbooks_gui_engineer_playbook_exit_state",
-      "agents_playbooks_gui_engineer_playbook_gui_engineer_playbook",
-      "agents_playbooks_gui_engineer_playbook_knowledge_base",
-      "agents_playbooks_gui_engineer_playbook_quality_gates",
-      "agents_playbooks_gui_engineer_playbook_role",
-      "agents_playbooks_gui_engineer_playbook_workflow"
-    ],
-    "18": [
-      "agents_playbooks_hardware_engineer_playbook",
-      "agents_playbooks_hardware_engineer_playbook_common_pitfalls",
-      "agents_playbooks_hardware_engineer_playbook_exit_state",
-      "agents_playbooks_hardware_engineer_playbook_hardware_engineer_playbook",
-      "agents_playbooks_hardware_engineer_playbook_knowledge_base",
-      "agents_playbooks_hardware_engineer_playbook_quality_gates",
-      "agents_playbooks_hardware_engineer_playbook_role",
-      "agents_playbooks_hardware_engineer_playbook_workflow"
-    ],
     "19": [
-      "agents_playbooks_test_engineer_playbook",
-      "agents_playbooks_test_engineer_playbook_common_pitfalls",
-      "agents_playbooks_test_engineer_playbook_exit_state",
-      "agents_playbooks_test_engineer_playbook_knowledge_base",
-      "agents_playbooks_test_engineer_playbook_quality_gates",
-      "agents_playbooks_test_engineer_playbook_role",
-      "agents_playbooks_test_engineer_playbook_test_engineer_playbook",
-      "agents_playbooks_test_engineer_playbook_workflow"
-    ],
-    "20": [
-      "agents_playbooks_systems_architect_playbook",
-      "agents_playbooks_systems_architect_playbook_core_workflow_task_delegation",
-      "agents_playbooks_systems_architect_playbook_quality_gates",
-      "agents_playbooks_systems_architect_playbook_role",
-      "agents_playbooks_systems_architect_playbook_stop_the_line_rules",
-      "agents_playbooks_systems_architect_playbook_systems_architect_playbook_brain_agent",
-      "agents_playbooks_systems_architect_playbook_token_discipline"
-    ],
-    "21": [
-      "firmware_readme",
-      "firmware_readme_build_tools",
-      "firmware_readme_configuration",
-      "firmware_readme_emg_firmware",
-      "firmware_readme_protocol",
-      "firmware_readme_status",
-      "firmware_readme_todo"
-    ],
-    "22": [
-      "firmware_src_main",
-      "firmware_src_main_c_adc_handletypedef",
-      "firmware_src_main_crc16_ccitt",
-      "firmware_src_main_hal_adc_convcpltcallback",
-      "firmware_src_main_main",
-      "firmware_src_main_send_frame"
-    ],
-    "23": [
-      "launcher_app",
-      "launcher_app_launcher",
-      "launcher_app_launcher_init",
-      "launcher_app_launcher_launch"
-    ],
-    "24": [
-      "scripts_agent_map",
-      "scripts_agent_map_load_ownership",
-      "scripts_agent_map_main",
-      "scripts_agent_map_owner_of"
-    ],
-    "25": [
-      "assets_logo_png",
-      "assets_r_png",
-      "docs_checkpoints_beihang_branding"
-    ],
-    "26": [
-      "_claude_skills_graphify_references_github_and_merge_clone",
-      "_claude_skills_graphify_references_github_and_merge_merge_graphs"
-    ],
-    "27": [
-      "patterns_library",
-      "patterns_readme"
-    ],
-    "28": [
-      "scripts_hooks_pre_commit",
-      "scripts_hooks_pre_commit__entry"
-    ],
-    "29": [
-      "_claude_skills_graphify_references_exports_benchmark"
-    ],
-    "30": [
-      "_claude_skills_graphify_references_exports_falkordb"
-    ],
-    "31": [
-      "_claude_skills_graphify_references_exports_graphml"
-    ],
-    "32": [
-      "_claude_skills_graphify_references_exports_neo4j"
-    ],
-    "33": [
-      "_claude_skills_graphify_references_exports_svg"
-    ],
-    "34": [
-      "_claude_skills_graphify_references_exports_wiki"
-    ],
-    "35": [
-      "communication_sources_py_ndarray"
-    ],
-    "36": [
-      "docs_checkpoints_mvc_normalization"
-    ],
-    "37": [
-      "docs_emg_system_architecture_metricscalculator"
-    ],
-    "38": [
-      "emgscope"
-    ],
-    "39": [
-      "scripts_refresh"
+      "project_context",
+      "project_context_architecture_locked_pipeline",
+      "project_context_current_state_done_as_of_2026_08_26",
+      "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
+      "project_context_locked_hardware_facts",
+      "project_context_locked_wire_protocol",
+      "project_context_project_context_md",
+      "project_context_project_identity",
+      "project_context_roadmap",
+      "project_context_signal_facts",
+      "project_context_source_of_truth"
     ]
   },
   "cohesion": {
-    "0": 0.057539682539682536,
-    "1": 0.059932659932659935,
-    "2": 0.08478513356562137,
-    "3": 0.05405405405405406,
+    "0": 0.0859465737514518,
+    "1": 0.11428571428571428,
+    "2": 0.0960591133004926,
+    "3": 0.10317460317460317,
     "4": 0.09057971014492754,
-    "5": 0.16017316017316016,
-    "6": 0.12105263157894737,
-    "7": 0.10526315789473684,
-    "8": 0.25,
-    "9": 0.14166666666666666,
-    "10": 0.13333333333333333,
-    "11": 0.15384615384615385,
-    "12": 0.16666666666666666,
-    "13": 0.2222222222222222,
-    "14": 0.2222222222222222,
-    "15": 0.25,
-    "16": 0.25,
-    "17": 0.25,
-    "18": 0.25,
-    "19": 0.25,
-    "20": 0.2857142857142857,
-    "21": 0.2857142857142857,
-    "22": 0.4666666666666667,
-    "23": 0.6666666666666666,
-    "24": 0.8333333333333334,
-    "25": 1.0,
-    "26": 1.0,
-    "27": 1.0,
-    "28": 1.0,
-    "29": 1.0,
-    "30": 1.0,
-    "31": 1.0,
-    "32": 1.0,
-    "33": 1.0,
-    "34": 1.0,
-    "35": 1.0,
-    "36": 1.0,
-    "37": 1.0,
-    "38": 1.0,
-    "39": 1.0
+    "5": 0.23636363636363636,
+    "6": 0.26666666666666666,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 0.125,
+    "19": 0.18181818181818182
   },
   "gods": [
     {
       "id": "gui_emg_plotter_emgscope",
       "label": "EmgScope",
-      "degree": 48
-    },
-    {
-      "id": "docs_protocol_spec_emg_uart_protocol_specification",
-      "label": "EMG UART Protocol Specification",
-      "degree": 18
-    },
-    {
-      "id": "gui_plot_widget_emgplotwidget",
-      "label": "EmgPlotWidget",
-      "degree": 16
-    },
-    {
-      "id": "handoff_emg_saw_handoff_read_this_first",
-      "label": "EMG SAW \u2014 HANDOFF (read this first)",
-      "degree": 13
-    },
-    {
-      "id": "communication_protocol_frameparser",
-      "label": "FrameParser",
-      "degree": 13
-    },
-    {
-      "id": "quality_bar_hard_gate_rules",
-      "label": "Hard gate rules",
-      "degree": 11
+      "degree": 41
     },
     {
       "id": "communication_sources_bufferedsource",
@@ -622,19 +296,44 @@
       "degree": 11
     },
     {
-      "id": "gui_recording_controller_recordingcontroller",
-      "label": "RecordingController",
+      "id": "quality_bar_hard_gate_rules",
+      "label": "Hard gate rules",
       "degree": 11
     },
     {
-      "id": "communication_sources_simsource",
-      "label": "SimSource",
-      "degree": 10
+      "id": "graphify_knowledge_graph",
+      "label": "Graphify Knowledge Graph",
+      "degree": 9
     },
     {
-      "id": "gui_model_acquisitionmodel",
-      "label": "AcquisitionModel",
-      "degree": 10
+      "id": "docs_checkpoints",
+      "label": "EMG Bring-up Checkpoint Log",
+      "degree": 9
+    },
+    {
+      "id": "firmware_bluepill_f103_config",
+      "label": "Blue Pill F103 Config",
+      "degree": 9
+    },
+    {
+      "id": "firmware_cp4_binary_dma",
+      "label": "CP4 Binary DMA Pipeline",
+      "degree": 9
+    },
+    {
+      "id": "communication_protocol_frameparser",
+      "label": "FrameParser",
+      "degree": 8
+    },
+    {
+      "id": "dsp_dsp_emgfilters",
+      "label": "EmgFilters",
+      "degree": 8
+    },
+    {
+      "id": "docs_emg_saw_project_plan",
+      "label": "EMG SAW Project Plan",
+      "degree": 8
     }
   ],
   "surprises": [
@@ -694,8 +393,41 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `EmgScope` connect `EmgScope` to `_BufferedSource`, `EmgFilters`?",
+      "why": "High betweenness centrality (0.122) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `main()` connect `_BufferedSource` to `EmgScope`?",
+      "why": "High betweenness centrality (0.044) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Authority`, `Gate reference`, `HG10 — No \"done\" without Daniyal approval` to the rest of the system?",
+      "why": "61 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `EmgScope` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0859465737514518 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Graphify Knowledge Graph` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11428571428571428 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `EMG Bring-up Checkpoint Log` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0960591133004926 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `_BufferedSource` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10317460317460317 - nodes in this community are weakly interconnected."
+    }
+  ]
 }
