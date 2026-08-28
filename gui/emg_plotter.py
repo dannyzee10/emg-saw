@@ -42,7 +42,7 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
-from dsp.dsp import EmgFilters, leadoff_status
+from dsp.dsp import EmgFilters, LeadoffTracker
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -111,6 +111,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.vref = vref
         self.full = float((1 << bits) - 1)
         self.filters = EmgFilters(fs)
+        self._leadoff = LeadoffTracker(nch, fs, vref)   # per-channel electrode lead-off
 
         # scope state
         self.coupling = coupling            # DC / AC / GND
@@ -790,6 +791,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                 need = min(self.filled, self.screen_n)
                 rawwin = self.ring[-need:] if need >= 64 else None   # raw un-notched volts
                 mains_hz = self.do_notch if self.do_notch in (50, 60) else 50
+                self._leadoff.mains_hz = mains_hz
                 for c in range(self.nch):
                     x = proc[:, c]
                     ac = x - x.mean()
@@ -815,8 +817,8 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                             self._act_max[c] = max(self._act_max[c] * 0.999, rms, 1e-4)
                             card["bar"].setValue(int(min(100, 100 * rms / self._act_max[c])))
                         if rawwin is not None:
-                            self.channel_panel.set_status(
-                                c, leadoff_status(rawwin[:, c], self.fs, self.vref, mains_hz))
+                            st, q = self._leadoff.update(c, rawwin[:, c])
+                            self.channel_panel.set_status(c, st, q)
                     if self.autoscale:
                         lo, hi = float(x.min()), float(x.max())
                         span = max(hi - lo, 1e-4)

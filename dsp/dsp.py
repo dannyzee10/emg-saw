@@ -54,45 +54,88 @@ class EmgFilters:
         return out
 
 
-def leadoff_status(x, fs, vref=3.3, mains_hz=50.0,
+def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
                    rail_frac=0.20, mains_dom=0.5, amp_floor=0.02):
-    """Heuristic electrode-connection state from a RAW (un-notched, absolute-volt)
-    single-channel window. No extra hardware — infers the state from signal shape:
+    """Analyse one RAW (un-notched, absolute-volt) single-channel window; return
+    ``(state, quality, metrics)``:
 
-        'open' : a large fraction of samples sit near 0 V or Vref (disconnected /
-                 shorted -> the AD8237 output rails).
-        'poor' : a sizeable signal dominated by mains (50/60 Hz) -> a floating,
-                 high-impedance electrode acting as a mains antenna (gotcha #7).
-        'good' : neither -> real EMG, or a quiet connected baseline.
+        state   : 'open' (railed near 0/Vref -> disconnected/shorted), 'poor'
+                  (mains-dominated -> floating high-impedance electrode / antenna),
+                  or 'good' (real EMG or a quiet connected baseline).
+        quality : 0-100 signal-quality index (100 = clean, 0 = railed).
+        metrics : {'rail': frac railed, 'mains': mains/total power, 'dc': |offset|/half-scale}.
 
-    Must be fed the raw signal BEFORE the notch (mains info) and BEFORE band-pass
-    (rail info). Thresholds are heuristic and tunable; this is a sanity indicator,
-    not a true impedance (kOhm) measurement — that arrives with the ADS1299 LOFF (M4).
+    Must be fed the signal BEFORE the notch (mains info) and BEFORE band-pass (rail info).
+    Heuristic, not a kOhm impedance measurement (that arrives with the ADS1299 LOFF, M4).
+    With a working DRL, a connected electrode has its mains actively cancelled, so
+    residual mains is a strong 'bad electrode' cue.
     """
     x = np.asarray(x, dtype=float)
     n = x.shape[0]
     if n < 32:
-        return "good"
-    # 1) rail / saturation fraction on the absolute-volt signal (0..vref)
+        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0}
     margin = 0.03 * vref
     rail = float(np.mean((x < margin) | (x > vref - margin)))
+    dc = float(abs(x.mean() - vref / 2.0) / (vref / 2.0 + 1e-12))   # 0=centered, 1=at rail
+    ptp = float(np.ptp(x))
+    mains_ratio = 0.0
+    if ptp > amp_floor:
+        xc = x - x.mean()
+        w = np.hanning(n)
+        P = np.abs(np.fft.rfft(xc * w)) ** 2
+        f = np.fft.rfftfreq(n, 1.0 / fs)
+
+        def _band(lo, hi):
+            m = (f >= lo) & (f < hi)
+            return float(P[m].sum())
+
+        mains = sum(_band(mains_hz * k - 2.0, mains_hz * k + 2.0)
+                    for k in (1, 2, 3) if mains_hz * k < fs / 2.0)
+        total = _band(1.0, 0.49 * fs) + 1e-15
+        mains_ratio = mains / total
+
     if rail > rail_frac:
-        return "open"
-    # 2) mains dominance: mains-band power vs total AC power (needs un-notched signal)
-    if float(np.ptp(x)) <= amp_floor:
-        return "good"                       # quiet, connected baseline
-    xc = x - x.mean()
-    w = np.hanning(n)
-    P = np.abs(np.fft.rfft(xc * w)) ** 2
-    f = np.fft.rfftfreq(n, 1.0 / fs)
+        state = "open"
+    elif ptp > amp_floor and mains_ratio > mains_dom:
+        state = "poor"
+    else:
+        state = "good"
 
-    def _band(lo, hi):
-        m = (f >= lo) & (f < hi)
-        return float(P[m].sum())
+    quality = 100.0 * (1.0 - min(1.0, rail)) / (1.0 + 3.0 * mains_ratio)
+    quality = float(max(0.0, min(100.0, quality)))
+    return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc}
 
-    mains = sum(_band(mains_hz * k - 2.0, mains_hz * k + 2.0)
-                for k in (1, 2, 3) if mains_hz * k < fs / 2.0)
-    total = _band(1.0, 0.49 * fs) + 1e-15
-    if mains / total > mains_dom:
-        return "poor"
-    return "good"
+
+def leadoff_status(x, fs, vref=3.3, mains_hz=50.0, **kw):
+    """Back-compatible wrapper: just the state string from :func:`leadoff_report`."""
+    return leadoff_report(x, fs, vref, mains_hz, **kw)[0]
+
+
+class LeadoffTracker:
+    """Per-channel electrode lead-off with temporal hysteresis (no flicker) and a
+    smoothed 0-100 quality score. Feed one raw window per channel per update tick;
+    a new state must persist ``hold`` ticks before it latches (debounce)."""
+
+    def __init__(self, nch, fs, vref=3.3, mains_hz=50.0, hold=2):
+        self.nch = nch
+        self.fs = fs
+        self.vref = vref
+        self.mains_hz = mains_hz
+        self.hold = hold
+        self.state = ["good"] * nch
+        self.quality = [100.0] * nch
+        self._pending = [None] * nch
+        self._count = [0] * nch
+
+    def update(self, ch, x):
+        raw, q, _ = leadoff_report(x, self.fs, self.vref, self.mains_hz)
+        self.quality[ch] = 0.6 * self.quality[ch] + 0.4 * q            # EMA smoothing
+        if raw == self.state[ch]:
+            self._pending[ch], self._count[ch] = None, 0
+        elif raw == self._pending[ch]:
+            self._count[ch] += 1
+            if self._count[ch] >= self.hold:
+                self.state[ch], self._pending[ch], self._count[ch] = raw, None, 0
+        else:
+            self._pending[ch], self._count[ch] = raw, 1
+        return self.state[ch], self.quality[ch]

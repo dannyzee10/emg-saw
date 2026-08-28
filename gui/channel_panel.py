@@ -95,13 +95,16 @@ class ChannelPanel(QtWidgets.QFrame):
 
         col.addStretch(1)
 
-    def set_status(self, idx, state):
+    def set_status(self, idx, state, quality=None):
         """Set the per-channel electrode status dot: 'good' | 'poor' | 'open'."""
         if 0 <= idx < len(self.cards):
             color = STATUS_COLORS.get(state, STATUS_COLORS["none"])
             dot = self.cards[idx]["dot"]
             dot.setStyleSheet(f"background:{color}; border-radius:5px;")
-            dot.setToolTip(f"electrode: {state}")
+            tip = f"electrode: {state}"
+            if quality is not None:
+                tip += f"  ({quality:.0f}%)"
+            dot.setToolTip(tip)
 
     def _on_muscle_edit(self, idx, text):
         if 0 <= idx < len(self.muscle_names):
