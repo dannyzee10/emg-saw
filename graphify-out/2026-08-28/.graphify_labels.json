@@ -1,6 +1,7 @@
 {
   "0": "EmgScope",
   "1": "EMG Bring-up Checkpoint Log",
+  "2": "EMG SAW — HANDOFF (read this first)",
   "3": "emg_plotter.py",
   "4": "graphify query",
   "5": "emg_bluepill/main.c",
@@ -20,7 +21,7 @@
   "19": "PROJECT_CONTEXT.md",
   "20": "agent_map.py",
   "21": "stm32f1xx_it.c",
-  "22": "EMG SAW — Retrospective + Competitive Roadmap",
+  "22": "emgscope.py",
   "23": "pre-commit",
   "24": "refresh.ps1",
   "25": "DSP Engineer Playbook",

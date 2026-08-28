@@ -1,22 +1,23 @@
-# Graph Report - emg-saw  (2026-08-27)
+# Graph Report - emg-saw  (2026-08-28)
 
 ## Corpus Check
-- 69 files · ~41,463 words
+- 72 files · ~43,142 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 446 nodes · 597 edges · 38 communities (27 shown, 11 thin omitted)
+- 468 nodes · 620 edges · 39 communities (28 shown, 11 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `697dba51`
+- Built from commit: `6521dbd9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - EmgScope
 - EMG Bring-up Checkpoint Log
+- EMG SAW — HANDOFF (read this first)
 - emg_plotter.py
 - graphify query
 - emg_bluepill/main.c
@@ -35,7 +36,6 @@
 - Hard gate rules
 - PROJECT_CONTEXT.md
 - agent_map.py
-- EMG SAW — Retrospective + Competitive Roadmap
 - pre-commit
 - DSP Engineer Playbook
 - Firmware Engineer Playbook
@@ -58,11 +58,11 @@
 3. `EMG UART Protocol Specification` - 15 edges
 4. `EMG UART Protocol Specification` - 14 edges
 5. `FrameParser` - 13 edges
-6. `EmgFilters` - 12 edges
-7. `_BufferedSource` - 11 edges
-8. `RecordingController` - 11 edges
-9. `Hard gate rules` - 11 edges
-10. `AcquisitionModel` - 10 edges
+6. `EMG SAW — HANDOFF (read this first)` - 13 edges
+7. `EmgFilters` - 12 edges
+8. `_BufferedSource` - 11 edges
+9. `RecordingController` - 11 edges
+10. `Hard gate rules` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Test Engineer (team note)` --semantically_similar_to--> `Test Engineer Agent`  [INFERRED] [semantically similar]
@@ -86,7 +86,7 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (38 total, 11 thin omitted)
+## Communities (39 total, 11 thin omitted)
 
 ### Community 0 - "EmgScope"
 Cohesion: 0.08
@@ -95,6 +95,10 @@ Nodes (4): EmgScope, EMG median frequency (Hz) over the 20-450 Hz band — a fat
 ### Community 1 - "EMG Bring-up Checkpoint Log"
 Cohesion: 0.06
 Nodes (64): Graphify Trigger Config (.claude/CLAUDE.md), EMG SAW Agent Roster (agents/), Round Table Collaboration, SAFe Methodology (Epic/Feature/Story), Graphify Project Instructions (CLAUDE.md), DSP Engineer Agent, Firmware Engineer Agent, GUI Engineer Agent (+56 more)
+
+### Community 2 - "EMG SAW — HANDOFF (read this first)"
+Cohesion: 0.15
+Nodes (13): 0. How to use this handoff, 10. Push to GitHub (for your coworker), 11. Doc index, 1. Mission, 2. Quick start — open the EMG scope, 3. Current state — DONE ✅ (as of 2026-08-27), 4. Repo map, 5. What each agent did (retro) — the memory of the build (+5 more)
 
 ### Community 3 - "emg_plotter.py"
 Cohesion: 0.06
@@ -121,16 +125,12 @@ Cohesion: 0.12
 Nodes (14): Authority, Gate reference, Hard gate rules, HG10 — No "done" without Daniyal approval, HG1 — Protocol integrity, HG2 — Firmware timing & delivery, HG3 — DSP correctness, HG4 — GUI robustness (+6 more)
 
 ### Community 19 - "PROJECT_CONTEXT.md"
-Cohesion: 0.18
-Nodes (9): Architecture (locked pipeline), Current state — DONE ✅ (as of 2026-08-26), Locked gotchas (each cost hours — do NOT rediscover), Locked hardware facts, Locked wire protocol, Project identity, Roadmap, Signal facts (+1 more)
+Cohesion: 0.08
+Nodes (20): EMG SAW — Retrospective + Competitive Roadmap, Part 1 — What each agent shipped (retro of the build), Part 2 — Remaining goals per agent (near-term), Part 3 — Where we stand vs Delsys & Noraxon, Part 4 — The "win" roadmap (prioritized), Architecture (locked pipeline), Current state — DONE ✅ (as of 2026-08-26), Locked gotchas (each cost hours — do NOT rediscover) (+12 more)
 
 ### Community 20 - "agent_map.py"
 Cohesion: 0.83
 Nodes (3): load_ownership(), main(), owner_of()
-
-### Community 22 - "EMG SAW — Retrospective + Competitive Roadmap"
-Cohesion: 0.33
-Nodes (5): EMG SAW — Retrospective + Competitive Roadmap, Part 1 — What each agent shipped (retro of the build), Part 2 — Remaining goals per agent (near-term), Part 3 — Where we stand vs Delsys & Noraxon, Part 4 — The "win" roadmap (prioritized)
 
 ### Community 25 - "DSP Engineer Playbook"
 Cohesion: 0.25
@@ -189,7 +189,7 @@ Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
 ## Knowledge Gaps
-- **145 isolated node(s):** `Project identity`, `Architecture (locked pipeline)`, `Locked hardware facts`, `Locked wire protocol`, `Current state — DONE ✅ (as of 2026-08-26)` (+140 more)
+- **162 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+157 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -197,15 +197,15 @@ Nodes (6): RecordingController – manages CSV recording independent of the GUI.
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `EmgScope` connect `EmgScope` to `RecordingController`, `emg_plotter.py`, `EmgPlotWidget`, `EmgFilters`?**
-  _High betweenness centrality (0.062) - this node is a cross-community bridge._
+  _High betweenness centrality (0.056) - this node is a cross-community bridge._
 - **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `emg_plotter.py`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `EmgPlotWidget` connect `EmgPlotWidget` to `EmgScope`, `emg_plotter.py`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `EmgScope` (e.g. with `EmgFilters` and `ChannelPanel`) actually correct?**
   _`EmgScope` has 6 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Project identity`, `Architecture (locked pipeline)`, `Locked hardware facts` to the rest of the system?**
-  _145 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope` to the rest of the system?**
+  _162 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `EmgScope` be split into smaller, more focused modules?**
   _Cohesion score 0.08478513356562137 - nodes in this community are weakly interconnected._
 - **Should `EMG Bring-up Checkpoint Log` be split into smaller, more focused modules?**

@@ -1,59 +1,60 @@
 # Graph Report - emg-saw  (2026-08-28)
 
 ## Corpus Check
-- 72 files · ~43,142 words
+- 76 files · ~43,864 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 468 nodes · 620 edges · 39 communities (28 shown, 11 thin omitted)
+- 476 nodes · 633 edges · 40 communities (27 shown, 13 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6521dbd9`
+- Built from commit: `22b3cdfc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- EmgScope
 - EMG Bring-up Checkpoint Log
-- EMG SAW — HANDOFF (read this first)
 - emg_plotter.py
+- EmgScope
+- EMG SAW — HANDOFF (read this first)
 - graphify query
-- emg_bluepill/main.c
+- FrameParser
 - EmgFilters
-- Beihang University Logo (logo.png)
-- graphify clone (GitHub)
-- Patterns Library (11 production patterns)
-- Token reduction benchmark
-- FalkorDB export
-- GraphML export
-- Neo4j export
-- SVG export
-- Wiki export
-- MVC Normalization (% MVC)
-- MetricsCalculator
+- EMG UART Protocol Specification
+- emg_bluepill/main.c
+- EmgPlotWidget
 - Hard gate rules
-- PROJECT_CONTEXT.md
-- agent_map.py
-- pre-commit
+- RecordingController
+- GUI Architecture Proposal (EMG Instrument)
+- Sequence Number Width Evaluation
 - DSP Engineer Playbook
 - Firmware Engineer Playbook
 - GUI Engineer Playbook
 - Hardware Engineer Playbook
 - Test Engineer Playbook
 - Systems Architect Playbook (Brain Agent)
-- EMG UART Protocol Specification
-- Sequence Number Width Evaluation
 - EMG Firmware
 - src/main.c
-- FrameParser
-- GUI Architecture Proposal (EMG Instrument)
-- EmgPlotWidget
-- RecordingController
+- Launcher
+- agent_map.py
+- Beihang University Logo (logo.png)
+- graphify clone (GitHub)
+- Patterns Library (11 production patterns)
+- pre-commit
+- Token reduction benchmark
+- FalkorDB export
+- GraphML export
+- Neo4j export
+- SVG export
+- Wiki export
+- launchers.md
+- MVC Normalization (% MVC)
+- MetricsCalculator
 
 ## God Nodes (most connected - your core abstractions)
-1. `EmgScope` - 47 edges
+1. `EmgScope` - 49 edges
 2. `EmgPlotWidget` - 16 edges
 3. `EMG UART Protocol Specification` - 15 edges
 4. `EMG UART Protocol Specification` - 14 edges
@@ -86,127 +87,123 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (39 total, 11 thin omitted)
+## Communities (40 total, 13 thin omitted)
 
-### Community 0 - "EmgScope"
-Cohesion: 0.08
-Nodes (4): EmgScope, EMG median frequency (Hz) over the 20-450 Hz band — a fatigue indicator., Highlight active (contraction) samples in white on top of the trace., Absolute volts in -> displayed volts out (coupling + optional filters).
-
-### Community 1 - "EMG Bring-up Checkpoint Log"
+### Community 0 - "EMG Bring-up Checkpoint Log"
 Cohesion: 0.06
 Nodes (64): Graphify Trigger Config (.claude/CLAUDE.md), EMG SAW Agent Roster (agents/), Round Table Collaboration, SAFe Methodology (Epic/Feature/Story), Graphify Project Instructions (CLAUDE.md), DSP Engineer Agent, Firmware Engineer Agent, GUI Engineer Agent (+56 more)
 
-### Community 2 - "EMG SAW — HANDOFF (read this first)"
-Cohesion: 0.15
-Nodes (13): 0. How to use this handoff, 10. Push to GitHub (for your coworker), 11. Doc index, 1. Mission, 2. Quick start — open the EMG scope, 3. Current state — DONE ✅ (as of 2026-08-27), 4. Repo map, 5. What each agent did (retro) — the memory of the build (+5 more)
-
-### Community 3 - "emg_plotter.py"
+### Community 1 - "emg_plotter.py"
 Cohesion: 0.06
 Nodes (24): AsciiSource, _BufferedSource, _open_serial(), ndarray, Data sources for the plotter. Every source runs a background thread that fills…, Fallback for a quick STM32 `printf("%d,%d\\n", ...)` bring-up., Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise…, Open the serial port exactly like a plain read that is known to work here. Open… (+16 more)
+
+### Community 2 - "EmgScope"
+Cohesion: 0.08
+Nodes (4): EmgScope, EMG median frequency (Hz) over the 20-450 Hz band — a fatigue indicator., Highlight active (contraction) samples in white on top of the trace., Absolute volts in -> displayed volts out (coupling + optional filters).
+
+### Community 3 - "EMG SAW — HANDOFF (read this first)"
+Cohesion: 0.05
+Nodes (33): EMG SAW — Retrospective + Competitive Roadmap, Part 1 — What each agent shipped (retro of the build), Part 2 — Remaining goals per agent (near-term), Part 3 — Where we stand vs Delsys & Noraxon, Part 4 — The "win" roadmap (prioritized), 0. How to use this handoff, 10. Push to GitHub (for your coworker), 11. Doc index (+25 more)
 
 ### Community 4 - "graphify query"
 Cohesion: 0.09
 Nodes (24): graphify add (URL ingest), Watch debounce, graphify --watch folder watcher, MCP server, Confidence tiers (EXTRACTED/INFERRED/AMBIGUOUS), Confidence score rubric, Hyperedges, Node ID format (+16 more)
 
-### Community 5 - "emg_bluepill/main.c"
-Cohesion: 0.25
-Nodes (14): build_frame(), ADC_HandleTypeDef, crc16_ccitt(), Error_Handler(), HAL_ADC_ConvCpltCallback(), HAL_ADC_ConvHalfCpltCallback(), main(), MX_ADC1_Init() (+6 more)
+### Community 5 - "FrameParser"
+Cohesion: 0.16
+Nodes (16): crc16_ccitt(), encode_frame(), FrameParser, Wire protocol shared by the STM32 firmware and the laptop plotter. Version 1…, CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF). Matches the C code in firmware/., Build one frame. `version` = 1 for legacy 8-bit seq, 2 for 16-bit seq., Streaming parser that auto-detects protocol version per frame. Yields (seq,…, main() (+8 more)
 
 ### Community 6 - "EmgFilters"
 Cohesion: 0.13
 Nodes (9): EmgFilters, ndarray, Display-side signal processing (done on the laptop, so you can tweak live —…, Linear envelope: moving-RMS of the (already band-passed) signal., Unit tests for EmgFilters DSP functions. Validates: - Notch filter attenuation…, 50 Hz sine should be attenuated by more than 20 dB., RMS envelope of a 100 Hz sine (amplitude 1) should be ~0.707 V., RMS envelope should preserve number of channels. (+1 more)
 
-### Community 7 - "Beihang University Logo (logo.png)"
-Cohesion: 1.00
-Nodes (3): Beihang University Logo (logo.png), Beihang University Logo (R.png), Beihang-branded UI Header
-
-### Community 18 - "Hard gate rules"
-Cohesion: 0.12
-Nodes (14): Authority, Gate reference, Hard gate rules, HG10 — No "done" without Daniyal approval, HG1 — Protocol integrity, HG2 — Firmware timing & delivery, HG3 — DSP correctness, HG4 — GUI robustness (+6 more)
-
-### Community 19 - "PROJECT_CONTEXT.md"
-Cohesion: 0.08
-Nodes (20): EMG SAW — Retrospective + Competitive Roadmap, Part 1 — What each agent shipped (retro of the build), Part 2 — Remaining goals per agent (near-term), Part 3 — Where we stand vs Delsys & Noraxon, Part 4 — The "win" roadmap (prioritized), Architecture (locked pipeline), Current state — DONE ✅ (as of 2026-08-26), Locked gotchas (each cost hours — do NOT rediscover) (+12 more)
-
-### Community 20 - "agent_map.py"
-Cohesion: 0.83
-Nodes (3): load_ownership(), main(), owner_of()
-
-### Community 25 - "DSP Engineer Playbook"
-Cohesion: 0.25
-Nodes (7): Common Pitfalls, DSP Engineer Playbook, Exit State, Knowledge Base, Quality Gates, Role, Workflow
-
-### Community 26 - "Firmware Engineer Playbook"
-Cohesion: 0.25
-Nodes (7): Common Pitfalls, Exit State, Firmware Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
-
-### Community 27 - "GUI Engineer Playbook"
-Cohesion: 0.25
-Nodes (7): Common Pitfalls, Exit State, GUI Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
-
-### Community 28 - "Hardware Engineer Playbook"
-Cohesion: 0.25
-Nodes (7): Common Pitfalls, Exit State, Hardware Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
-
-### Community 29 - "Test Engineer Playbook"
-Cohesion: 0.25
-Nodes (7): Common Pitfalls, Exit State, Knowledge Base, Quality Gates, Role, Test Engineer Playbook, Workflow
-
-### Community 30 - "Systems Architect Playbook (Brain Agent)"
-Cohesion: 0.29
-Nodes (6): Core Workflow (Task Delegation), Quality Gates, Role, Stop-the-Line Rules, Systems Architect Playbook (Brain Agent), Token Discipline
-
-### Community 31 - "EMG UART Protocol Specification"
+### Community 7 - "EMG UART Protocol Specification"
 Cohesion: 0.07
 Nodes (29): Channel Data Format, Channel Data Format, CRC Algorithm, CRC Algorithm, EMG UART Protocol Specification, EMG UART Protocol Specification, Error Handling, Error Handling (+21 more)
 
-### Community 32 - "Sequence Number Width Evaluation"
-Cohesion: 0.22
-Nodes (8): Action Items, Calculation, Context, Date, Impact, Recommendation, Sequence Number Width Evaluation, Status
+### Community 8 - "emg_bluepill/main.c"
+Cohesion: 0.25
+Nodes (14): build_frame(), ADC_HandleTypeDef, crc16_ccitt(), Error_Handler(), HAL_ADC_ConvCpltCallback(), HAL_ADC_ConvHalfCpltCallback(), main(), MX_ADC1_Init() (+6 more)
 
-### Community 33 - "EMG Firmware"
-Cohesion: 0.29
-Nodes (6): Build Tools, Configuration, EMG Firmware, Protocol, Status, TODO
-
-### Community 34 - "src/main.c"
-Cohesion: 0.47
-Nodes (4): ADC_HandleTypeDef, crc16_ccitt(), HAL_ADC_ConvCpltCallback(), send_frame()
-
-### Community 35 - "FrameParser"
-Cohesion: 0.16
-Nodes (16): crc16_ccitt(), encode_frame(), FrameParser, Wire protocol shared by the STM32 firmware and the laptop plotter. Version 1…, CRC-16/CCITT-FALSE (poly 0x1021, init 0xFFFF). Matches the C code in firmware/., Build one frame. `version` = 1 for legacy 8-bit seq, 2 for 16-bit seq., Streaming parser that auto-detects protocol version per frame. Yields (seq,…, main() (+8 more)
-
-### Community 36 - "GUI Architecture Proposal (EMG Instrument)"
-Cohesion: 0.22
-Nodes (8): Controller, Current State, Data Flow, GUI Architecture Proposal (EMG Instrument), Immediate Refactoring Steps, Model, Proposed Modular Architecture, View
-
-### Community 37 - "EmgPlotWidget"
+### Community 9 - "EmgPlotWidget"
 Cohesion: 0.14
 Nodes (6): EmgPlotWidget, Holds the GraphicsLayoutWidget, per-channel plots, curves, overlays, cursors,…, Show/hide the spectrum plot., Update all channel curves with new data. `data` shape (n_samples, nch)., Update onset overlay for channel c., Update spectrum curves. `psd_list` is list of arrays per channel.
 
-### Community 38 - "RecordingController"
+### Community 10 - "Hard gate rules"
+Cohesion: 0.12
+Nodes (14): Authority, Gate reference, Hard gate rules, HG10 — No "done" without Daniyal approval, HG1 — Protocol integrity, HG2 — Firmware timing & delivery, HG3 — DSP correctness, HG4 — GUI robustness (+6 more)
+
+### Community 12 - "RecordingController"
 Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
+### Community 13 - "GUI Architecture Proposal (EMG Instrument)"
+Cohesion: 0.22
+Nodes (8): Controller, Current State, Data Flow, GUI Architecture Proposal (EMG Instrument), Immediate Refactoring Steps, Model, Proposed Modular Architecture, View
+
+### Community 14 - "Sequence Number Width Evaluation"
+Cohesion: 0.22
+Nodes (8): Action Items, Calculation, Context, Date, Impact, Recommendation, Sequence Number Width Evaluation, Status
+
+### Community 15 - "DSP Engineer Playbook"
+Cohesion: 0.25
+Nodes (7): Common Pitfalls, DSP Engineer Playbook, Exit State, Knowledge Base, Quality Gates, Role, Workflow
+
+### Community 16 - "Firmware Engineer Playbook"
+Cohesion: 0.25
+Nodes (7): Common Pitfalls, Exit State, Firmware Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
+
+### Community 17 - "GUI Engineer Playbook"
+Cohesion: 0.25
+Nodes (7): Common Pitfalls, Exit State, GUI Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
+
+### Community 18 - "Hardware Engineer Playbook"
+Cohesion: 0.25
+Nodes (7): Common Pitfalls, Exit State, Hardware Engineer Playbook, Knowledge Base, Quality Gates, Role, Workflow
+
+### Community 19 - "Test Engineer Playbook"
+Cohesion: 0.25
+Nodes (7): Common Pitfalls, Exit State, Knowledge Base, Quality Gates, Role, Test Engineer Playbook, Workflow
+
+### Community 20 - "Systems Architect Playbook (Brain Agent)"
+Cohesion: 0.29
+Nodes (6): Core Workflow (Task Delegation), Quality Gates, Role, Stop-the-Line Rules, Systems Architect Playbook (Brain Agent), Token Discipline
+
+### Community 21 - "EMG Firmware"
+Cohesion: 0.29
+Nodes (6): Build Tools, Configuration, EMG Firmware, Protocol, Status, TODO
+
+### Community 22 - "src/main.c"
+Cohesion: 0.47
+Nodes (4): ADC_HandleTypeDef, crc16_ccitt(), HAL_ADC_ConvCpltCallback(), send_frame()
+
+### Community 24 - "agent_map.py"
+Cohesion: 0.83
+Nodes (3): load_ownership(), main(), owner_of()
+
+### Community 25 - "Beihang University Logo (logo.png)"
+Cohesion: 1.00
+Nodes (3): Beihang University Logo (logo.png), Beihang University Logo (R.png), Beihang-branded UI Header
+
 ## Knowledge Gaps
-- **162 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+157 more)
+- **163 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+158 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EmgScope` connect `EmgScope` to `RecordingController`, `emg_plotter.py`, `EmgPlotWidget`, `EmgFilters`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `emg_plotter.py`?**
+- **Why does `EmgScope` connect `EmgScope` to `emg_plotter.py`, `RecordingController`, `EmgFilters`, `EmgPlotWidget`?**
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
+- **Why does `EmgFilters` connect `EmgFilters` to `emg_plotter.py`, `EmgScope`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `EmgPlotWidget` connect `EmgPlotWidget` to `EmgScope`, `emg_plotter.py`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `EmgPlotWidget` connect `EmgPlotWidget` to `emg_plotter.py`, `EmgScope`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `EmgScope` (e.g. with `EmgFilters` and `ChannelPanel`) actually correct?**
   _`EmgScope` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope` to the rest of the system?**
-  _162 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `EmgScope` be split into smaller, more focused modules?**
-  _Cohesion score 0.08478513356562137 - nodes in this community are weakly interconnected._
+  _163 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `EMG Bring-up Checkpoint Log` be split into smaller, more focused modules?**
   _Cohesion score 0.057539682539682536 - nodes in this community are weakly interconnected._
+- **Should `emg_plotter.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.059932659932659935 - nodes in this community are weakly interconnected._
