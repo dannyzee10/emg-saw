@@ -14,6 +14,20 @@
 Agents live in `.claude/agents/`. This is a SAFe "Round Table" workflow — equal voice, evidence-based,
 stop-the-line authority, nothing final without Daniyal's approval.
 
+## Task routing protocol (graphify-first) — DEFAULT for every roadmap task
+Speed + token discipline: never brute-force read/grep when the graph can answer. For each task:
+1. **LOCATE** — query the code-graph FIRST (`graphify query "<task>"`, or read `graphify-out/graph.json` /
+   `GRAPH_REPORT.md`) to get the scoped set of affected nodes + files. A subgraph, not whole-file dumps.
+2. **ROUTE** — map those nodes → owning agent via `AGENT_OWNERSHIP.yml` / `agent_map.html` (the "continent"
+   the work lands in). Pick the agent who owns the most-affected code; split across agents by ownership.
+3. **DISPATCH** — hand ONLY that scoped subgraph + acceptance criteria to that one engineer agent.
+4. **GATE** — the change must pass its `QUALITY_BAR` gate; test-engineer produces the evidence.
+5. **REFRESH + APPROVE** — `scripts/refresh.ps1` (fresh graph, HG8), then Daniyal approves (HG10).
+
+Token rule (`TOKEN_POLICY.md`): graph subgraph → read only the exact `file:line` → edit. That is the
+point of graphify — fast search, minimal context, then act. The main-brain orchestrates; it does not
+do an owned agent's work itself.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.

@@ -90,10 +90,15 @@ Legend: `[ ]` todo · `[x]` done · `[!]` stuck
   muscle bursts are obvious and repeatable.
 - Result: ______________________  Date: __________
 
-## CP6 — record + scale
-- Hit **Record** → confirm `emg_YYYYMMDD_HHMMSS.csv` fills with codes + timestamps.
-- Later: `#define NCH 5`, 5 ADC ranks (PA0–PA4), run `--channels 5`. All channels
-  stay time-aligned in one DMA scan (needed for double-differential).
+## CP6 — 5 channels (PA0–PA4)   ⏭ NEXT  (matches PROJECT_CONTEXT / HANDOFF)
+> Record + V/div/Time-div scaling already shipped in the MVC instrument (see CP4 / instrument) —
+> not a separate open checkpoint; folded into "done".
+- **Firmware:** `#define NCH 5`; ADC **Scan** enabled, `NbrOfConversion = 5`, ranks 1–5 =
+  `ADC_CHANNEL_0..4` (PA0–PA4), sample time 71.5 cyc. One **TIM3 TRGO** triggers the whole scan so
+  all 5 channels are time-aligned in a single DMA sweep (needed for double-differential). Build → `flash_run.bat`.
+- **PC:** `python emgscope.py --port COM8 --baud 921600 --channels 5 --fs 2000 --coupling AC --kick`.
+- **PASS when:** 5 live lanes; touching each of PA0–PA4 moves only that lane; **S/s ≈ 2010, drop ≈ 0,
+  crc ≈ 0** sustained (HG2); HG1 round-trip @ nch=5 and HG4 offscreen 5-lane both green.
 - Result: ______________________  Date: __________
 ## T-001 Protocol Round-trip Validation
 

@@ -45,6 +45,17 @@ def run_roundtrip_test(frame_count: int, nch: int, version: int):
     return True, len(recovered), elapsed
 
 
+# --- pytest-collectable gate (HG1): frames round-trip byte-exact at nch=5 ---
+def test_roundtrip_nch5_v2():
+    ok, n, _ = run_roundtrip_test(500, nch=5, version=2)
+    assert ok and n == 500
+
+
+def test_roundtrip_nch5_v1():
+    ok, n, _ = run_roundtrip_test(500, nch=5, version=1)
+    assert ok and n == 500
+
+
 def main():
     nch = 8
     tests = [
