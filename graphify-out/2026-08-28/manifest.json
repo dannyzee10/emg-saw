@@ -1,0 +1,440 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1787805689.0786085,
+    "seen": 1787805903.6861043,
+    "ast_hash": "2169f32504931e337e3d14715f2973b1",
+    "semantic_hash": "2169f32504931e337e3d14715f2973b1"
+  },
+  "communication/protocol.py": {
+    "mtime": 1787820264.1397903,
+    "seen": 1787820801.6378796,
+    "ast_hash": "43f10f61b130427d241cc85ac2811f39",
+    "semantic_hash": ""
+  },
+  "communication/sources.py": {
+    "mtime": 1787821890.9937649,
+    "seen": 1787822071.6606243,
+    "ast_hash": "6c10e441b50679b3b041fc5400dee2fa",
+    "semantic_hash": ""
+  },
+  "dsp/dsp.py": {
+    "mtime": 1787214441.8901064,
+    "seen": 1787805903.6861043,
+    "ast_hash": "137aa18fcc3b2334b582938c214868fd",
+    "semantic_hash": "137aa18fcc3b2334b582938c214868fd"
+  },
+  "gui/emg_plotter.py": {
+    "mtime": 1787827160.54146,
+    "seen": 1787829778.093777,
+    "ast_hash": "9a079605df0fa274c96fcd84326af3fc",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1787817519.4770534,
+    "seen": 1787818126.8056815,
+    "ast_hash": "7effd963bd88194ea78c4f5a87e571fe",
+    "semantic_hash": ""
+  },
+  ".claude/agents/dsp-engineer.md": {
+    "mtime": 1787805744.5397568,
+    "seen": 1787814817.7446425,
+    "ast_hash": "d6c39330a489945b45ed28b99244ce10",
+    "semantic_hash": "d6c39330a489945b45ed28b99244ce10"
+  },
+  ".claude/agents/firmware-engineer.md": {
+    "mtime": 1787805751.209423,
+    "seen": 1787814817.7446425,
+    "ast_hash": "8c0b941dc23c271edb65a61133c37061",
+    "semantic_hash": "8c0b941dc23c271edb65a61133c37061"
+  },
+  ".claude/agents/gui-engineer.md": {
+    "mtime": 1787805756.9513495,
+    "seen": 1787814817.7446425,
+    "ast_hash": "15fa85ebaa88a89d0c83d7c8c8ac262e",
+    "semantic_hash": "15fa85ebaa88a89d0c83d7c8c8ac262e"
+  },
+  ".claude/agents/hardware-engineer.md": {
+    "mtime": 1787805761.2884288,
+    "seen": 1787814817.7446425,
+    "ast_hash": "f646d1c9f63eb87fb4a40c42758807fb",
+    "semantic_hash": "f646d1c9f63eb87fb4a40c42758807fb"
+  },
+  ".claude/agents/systems-architect.md": {
+    "mtime": 1787805765.5734968,
+    "seen": 1787814817.7446425,
+    "ast_hash": "15c060a28fa0b041d08bca1599bd1d46",
+    "semantic_hash": "15c060a28fa0b041d08bca1599bd1d46"
+  },
+  ".claude/agents/test-engineer.md": {
+    "mtime": 1787805769.7932115,
+    "seen": 1787814817.7446425,
+    "ast_hash": "7e59e860373d496f597f7a3cb766ad8a",
+    "semantic_hash": "7e59e860373d496f597f7a3cb766ad8a"
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1787805689.0401628,
+    "seen": 1787814817.7446425,
+    "ast_hash": "2e223eed9c5bb9ec3999615806cf0681",
+    "semantic_hash": "2e223eed9c5bb9ec3999615806cf0681"
+  },
+  "CLAUDE.md": {
+    "mtime": 1787805689.0765991,
+    "seen": 1787814817.7446425,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "TOKEN_POLICY.md": {
+    "mtime": 1787805675.1503265,
+    "seen": 1787814817.7446425,
+    "ast_hash": "2018abda13e02fec8e2c4c5cd08da6c8",
+    "semantic_hash": "2018abda13e02fec8e2c4c5cd08da6c8"
+  },
+  "agents/EMG_SAW_Agent_Roster.md": {
+    "mtime": 1787804675.76399,
+    "seen": 1787814817.7446425,
+    "ast_hash": "4fa125a94813e99699c0a550c4c4456f",
+    "semantic_hash": "4fa125a94813e99699c0a550c4c4456f"
+  },
+  "docs/CHECKPOINTS.md": {
+    "mtime": 1787825727.5650458,
+    "seen": 1787825919.4318197,
+    "ast_hash": "b5050d5fb2414fc20d7787ea10f95c60",
+    "semantic_hash": ""
+  },
+  "docs/EMG_REALTIME_README.md": {
+    "mtime": 1787731440.9486897,
+    "seen": 1787814817.7446425,
+    "ast_hash": "48358e543cea6b346285c11875452be0",
+    "semantic_hash": "48358e543cea6b346285c11875452be0"
+  },
+  "docs/EMG_SAW_Agent_Roster.md": {
+    "mtime": 1787804316.9510882,
+    "seen": 1787814817.7446425,
+    "ast_hash": "1e793b828a98860fc5db481a3148ae45",
+    "semantic_hash": "1e793b828a98860fc5db481a3148ae45"
+  },
+  "docs/EMG_SAW_Project_Plan.md": {
+    "mtime": 1787804273.6019466,
+    "seen": 1787814817.7446425,
+    "ast_hash": "fa3ad7173847817775549ec8435d9dd9",
+    "semantic_hash": "fa3ad7173847817775549ec8435d9dd9"
+  },
+  "docs/EMG_System_Architecture.md": {
+    "mtime": 1787804301.2312686,
+    "seen": 1787814817.7446425,
+    "ast_hash": "296f8f377505235f2e0cdcc9d4d09d13",
+    "semantic_hash": "296f8f377505235f2e0cdcc9d4d09d13"
+  },
+  "firmware/bluepill_f103_config.md": {
+    "mtime": 1787215049.6000571,
+    "seen": 1787814817.7446425,
+    "ast_hash": "d0b58c0c5546f73e3758ebb4262ea4ad",
+    "semantic_hash": "d0b58c0c5546f73e3758ebb4262ea4ad"
+  },
+  "firmware/clock_tree_explained.md": {
+    "mtime": 1787710804.015056,
+    "seen": 1787814817.7446425,
+    "ast_hash": "4ee508231bf1973c95d323b5240f406e",
+    "semantic_hash": "4ee508231bf1973c95d323b5240f406e"
+  },
+  "firmware/cp4_binary_dma.md": {
+    "mtime": 1787747768.9826305,
+    "seen": 1787814817.7446425,
+    "ast_hash": "cbb311c162eae68a7b64d431755e6ba9",
+    "semantic_hash": "cbb311c162eae68a7b64d431755e6ba9"
+  },
+  "firmware/stm32_firmware.md": {
+    "mtime": 1787214590.0101473,
+    "seen": 1787814817.7446425,
+    "ast_hash": "4986f65a4acad18efa4b01e83ef31734",
+    "semantic_hash": "4986f65a4acad18efa4b01e83ef31734"
+  },
+  "patterns/README.md": {
+    "mtime": 1782800384.3671548,
+    "seen": 1787814817.7446425,
+    "ast_hash": "5b1bd7e97ff5901dc574cb47f3a07296",
+    "semantic_hash": "5b1bd7e97ff5901dc574cb47f3a07296"
+  },
+  "requirements.txt": {
+    "mtime": 1787214302.2815566,
+    "seen": 1787814817.7446425,
+    "ast_hash": "92856a1e54586691efde9a10f117cfc2",
+    "semantic_hash": "92856a1e54586691efde9a10f117cfc2"
+  },
+  "team/SAW_WORLD_MAP.md": {
+    "mtime": 1787806652.7847219,
+    "seen": 1787814817.7446425,
+    "ast_hash": "de9ee7203ed49d8f33ecd0b5dc279d2a",
+    "semantic_hash": "de9ee7203ed49d8f33ecd0b5dc279d2a"
+  },
+  "team/dsp-engineer.md": {
+    "mtime": 1787806712.2876923,
+    "seen": 1787814817.7446425,
+    "ast_hash": "334ace5fc51398e26ebdfb8014b29698",
+    "semantic_hash": "334ace5fc51398e26ebdfb8014b29698"
+  },
+  "team/firmware-engineer.md": {
+    "mtime": 1787806687.763854,
+    "seen": 1787814817.7446425,
+    "ast_hash": "1b33d8c7631c2cea9fa550ee0f3655b9",
+    "semantic_hash": "1b33d8c7631c2cea9fa550ee0f3655b9"
+  },
+  "team/gui-engineer.md": {
+    "mtime": 1787806698.8009384,
+    "seen": 1787814817.7446425,
+    "ast_hash": "14ff90a5812e200d055fbc898c736754",
+    "semantic_hash": "14ff90a5812e200d055fbc898c736754"
+  },
+  "team/hardware-engineer.md": {
+    "mtime": 1787806721.110498,
+    "seen": 1787814817.7446425,
+    "ast_hash": "6cdb0b63ab0de18ac339da26af0cbac8",
+    "semantic_hash": "6cdb0b63ab0de18ac339da26af0cbac8"
+  },
+  "team/systems-architect.md": {
+    "mtime": 1787806673.7550597,
+    "seen": 1787814817.7446425,
+    "ast_hash": "3b19f1d0e516774e6ec22dcb236c6dbe",
+    "semantic_hash": "3b19f1d0e516774e6ec22dcb236c6dbe"
+  },
+  "team/test-engineer.md": {
+    "mtime": 1787806731.7812097,
+    "seen": 1787814817.7446425,
+    "ast_hash": "a03efe32884fcff81f86241955abf5e3",
+    "semantic_hash": "a03efe32884fcff81f86241955abf5e3"
+  },
+  "assets/R.png": {
+    "mtime": 1787749924.488241,
+    "seen": 1787814817.7446425,
+    "ast_hash": "2fadbaf0d1283f28a5abffcc51c84967",
+    "semantic_hash": "2fadbaf0d1283f28a5abffcc51c84967"
+  },
+  "assets/logo.png": {
+    "mtime": 1787750034.0097141,
+    "seen": 1787814817.7446425,
+    "ast_hash": "2fadbaf0d1283f28a5abffcc51c84967",
+    "semantic_hash": "2fadbaf0d1283f28a5abffcc51c84967"
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1787805682.5795822,
+    "seen": 1787815032.6638167,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": "d59d027fe449f06aa03905a01184e779"
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1787805682.5805948,
+    "seen": 1787815032.6638167,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": "9da2a2152e60a22f07f05fed5158f287"
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1787805682.5815938,
+    "seen": 1787815032.6638167,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": "42fef56a01698118f7fd722acdadea34"
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1787805682.5825932,
+    "seen": 1787815032.6638167,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": "cde13df085e4c492aeb7ba298a996d0d"
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1787805682.5835922,
+    "seen": 1787815032.6638167,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": "3f545db6ce646650bb9de588f5512a27"
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1787805682.5855925,
+    "seen": 1787815032.6638167,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": "3c46f8ad006874260614ed8657d02307"
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1787805682.5878723,
+    "seen": 1787815032.6638167,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": "67b6a5fa6c0974e18f60db9f8932fbd8"
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1787805682.5898724,
+    "seen": 1787815032.6638167,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": "9378bd03d56baaf78bd738ab3848f142"
+  },
+  "PROJECT_CONTEXT.md": {
+    "mtime": 1787815447.7306738,
+    "seen": 1787815519.5514033,
+    "ast_hash": "e7eee68dee748fc19be9206220692a3b",
+    "semantic_hash": ""
+  },
+  "QUALITY_BAR.md": {
+    "mtime": 1787815396.8730524,
+    "seen": 1787815519.5514033,
+    "ast_hash": "64bcd817c5b6fa0d42aef7ca4fbbe3c3",
+    "semantic_hash": ""
+  },
+  "scripts/agent_map.py": {
+    "mtime": 1787816523.348584,
+    "seen": 1787818126.8056815,
+    "ast_hash": "74612f9fee7617beb046768258559eab",
+    "semantic_hash": ""
+  },
+  "AGENT_OWNERSHIP.yml": {
+    "mtime": 1787815883.2516608,
+    "seen": 1787816302.2219603,
+    "ast_hash": "898570d8120fc58dc4edc0782977aa5d",
+    "semantic_hash": ""
+  },
+  "firmware/emg_bluepill/main.c": {
+    "mtime": 1787816631.1847725,
+    "seen": 1787818126.8056815,
+    "ast_hash": "0aa0710740279ff73b7cd8a0229b19c9",
+    "semantic_hash": ""
+  },
+  "firmware/emg_bluepill/stm32f1xx_it.c": {
+    "mtime": 1787816631.2698717,
+    "seen": 1787818126.8056815,
+    "ast_hash": "a95b32ed8ed7f247ffee6c70af53b5fb",
+    "semantic_hash": ""
+  },
+  "scripts/hooks/pre-commit": {
+    "mtime": 1787816734.1022787,
+    "seen": 1787818126.8056815,
+    "ast_hash": "12ec5385ff912bcff880301fd5fd4715",
+    "semantic_hash": ""
+  },
+  "scripts/refresh.ps1": {
+    "mtime": 1787816704.813495,
+    "seen": 1787818126.8056815,
+    "ast_hash": "e11b789f007bd26f3e3e231950bda942",
+    "semantic_hash": ""
+  },
+  "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md": {
+    "mtime": 1787817705.0253294,
+    "seen": 1787818126.8056815,
+    "ast_hash": "fe3488487ed10e68b94cbe0a0652cb48",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/dsp-engineer-playbook.md": {
+    "mtime": 1787819168.4563851,
+    "seen": 1787819260.5811026,
+    "ast_hash": "1b7e46e3f3c8eb77dd376c5b230ce124",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/firmware-engineer-playbook.md": {
+    "mtime": 1787819141.8700378,
+    "seen": 1787819260.5811026,
+    "ast_hash": "c94c56059382ce300c2ea11e072f2fc6",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/gui-engineer-playbook.md": {
+    "mtime": 1787819151.7015915,
+    "seen": 1787819260.5811026,
+    "ast_hash": "3b36c29ecb3f7c7f39ba2f7029545305",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/hardware-engineer-playbook.md": {
+    "mtime": 1787819179.704877,
+    "seen": 1787819260.5811026,
+    "ast_hash": "31d7686aa31c7d33cd67701daf6ae945",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/systems-architect-playbook.md": {
+    "mtime": 1787819114.2057018,
+    "seen": 1787819260.5811026,
+    "ast_hash": "25caf31f83fcc52f5d297f62e2f19def",
+    "semantic_hash": ""
+  },
+  "agents/playbooks/test-engineer-playbook.md": {
+    "mtime": 1787819189.1432085,
+    "seen": 1787819260.5811026,
+    "ast_hash": "9bcaed62fc04ab9c1be9469b290468fc",
+    "semantic_hash": ""
+  },
+  "tests/test_protocol_roundtrip.py": {
+    "mtime": 1787820706.837766,
+    "seen": 1787820801.6378796,
+    "ast_hash": "d3b121b5a6b0593aae4029791ed491ab",
+    "semantic_hash": ""
+  },
+  "firmware/protocol_seq_evaluation.md": {
+    "mtime": 1787819860.0657403,
+    "seen": 1787819890.9040146,
+    "ast_hash": "58752806b1e9a0fe5485a3f15de41ed7",
+    "semantic_hash": ""
+  },
+  "docs/protocol_spec.md": {
+    "mtime": 1787821097.824903,
+    "seen": 1787821123.9640324,
+    "ast_hash": "e9a58350ebb466b677ae95218c12544c",
+    "semantic_hash": ""
+  },
+  "firmware/src/main.c": {
+    "mtime": 1787820917.3184307,
+    "seen": 1787820972.6678712,
+    "ast_hash": "3b96d2a5c2fadd2e26abedf58b790ba1",
+    "semantic_hash": ""
+  },
+  "firmware/README.md": {
+    "mtime": 1787820951.9220357,
+    "seen": 1787820972.6678712,
+    "ast_hash": "307b76b818912bd177b85e7d44d2c08c",
+    "semantic_hash": ""
+  },
+  "tests/test_hil_simulation.py": {
+    "mtime": 1787821182.123989,
+    "seen": 1787821253.8772147,
+    "ast_hash": "1934bbd1361927a552b497436f57237f",
+    "semantic_hash": ""
+  },
+  "docs/gui_architecture.md": {
+    "mtime": 1787821299.8861432,
+    "seen": 1787821324.567933,
+    "ast_hash": "a93ae82bda27ef0366901bf6fd9df815",
+    "semantic_hash": ""
+  },
+  "gui/controller.py": {
+    "mtime": 1787821501.2874155,
+    "seen": 1787822071.6606243,
+    "ast_hash": "e129925f5c700d762e3e987cc08908e6",
+    "semantic_hash": ""
+  },
+  "gui/model.py": {
+    "mtime": 1787821486.7579417,
+    "seen": 1787822071.6606243,
+    "ast_hash": "b322517510fe86a3411e1f44832dd285",
+    "semantic_hash": ""
+  },
+  "gui/channel_panel.py": {
+    "mtime": 1787822333.3130212,
+    "seen": 1787823947.9962034,
+    "ast_hash": "26568b84268e1e4a3e6daadbe5e9cd83",
+    "semantic_hash": ""
+  },
+  "gui/plot_widget.py": {
+    "mtime": 1787822090.003371,
+    "seen": 1787823947.9962034,
+    "ast_hash": "be06234565ed14322355313ae13aac75",
+    "semantic_hash": ""
+  },
+  "run_emg.py": {
+    "mtime": 1787828205.978794,
+    "seen": 1787829778.093777,
+    "ast_hash": "010f8b702cd921d5b1a80c1e637c88f8",
+    "semantic_hash": ""
+  },
+  "gui/recording_controller.py": {
+    "mtime": 1787825188.810638,
+    "seen": 1787825715.3929348,
+    "ast_hash": "5e509cc5bdde66c980ca6014d9a90b5b",
+    "semantic_hash": ""
+  },
+  "tests/test_dsp.py": {
+    "mtime": 1787825872.8631012,
+    "seen": 1787825919.4318197,
+    "ast_hash": "b6cc28dde52abfc75f35481d41cf36de",
+    "semantic_hash": ""
+  }
+}

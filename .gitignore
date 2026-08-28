@@ -1,0 +1,23 @@
+﻿venv/
+.venv/
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+agent_map.html
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.log
+*.bat
+run_emg.spec
+EMG_Acquisition.spec
+EMG_Debug.spec
+
+# keep the flashing helper even though *.bat is ignored above
+!scripts/flash_run.bat

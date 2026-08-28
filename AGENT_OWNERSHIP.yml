@@ -1,0 +1,39 @@
+# EMG SAW — Agent Ownership Map
+# Maps each SAW agent to the code/docs it owns. Powers scripts/agent_map.py
+# (the agent world-map) and work routing. Each graph node's `source_file` is
+# matched against `files` (exact, wins) then `globs` (fnmatch). First match wins.
+# Colors = the "continent" colors on the map.
+
+agents:
+  systems-architect:
+    color: "#8b7bff"
+    role: "Architecture, protocol contract, checkpoints, governance"
+    globs: ["docs/**", "specs/**", ".claude/**", "team/**", "patterns/**",
+            "agents/**", "assets/**", "*.md", "requirements.txt"]
+
+  firmware-engineer:
+    color: "#ff8c42"
+    role: "STM32 firmware, TIM/ADC/DMA, timing, wire protocol"
+    globs: ["firmware/**"]
+    files: ["communication/protocol.py"]     # the wire contract is firmware-owned
+
+  gui-engineer:
+    color: "#2f9bff"
+    role: "PyQt5 / pyqtgraph instrument, serial readers"
+    globs: ["gui/**"]
+    files: ["communication/sources.py"]       # PC-side readers
+
+  dsp-engineer:
+    color: "#31d0aa"
+    role: "Filters, RMS / MVC / median-freq, spectrum"
+    globs: ["dsp/**"]
+
+  hardware-engineer:
+    color: "#ff5d8f"
+    role: "Electrodes, AFE, ADS1299 upgrade, EMC, human-safety"
+    globs: ["hardware/**"]
+
+  test-engineer:
+    color: "#ffd23f"
+    role: "Bench sanity, signal quality, HIL, unit tests"
+    globs: ["tests/**", "scripts/**"]
