@@ -81,3 +81,41 @@ onset, spectrum, report — the clinical staples). The real gaps are **hardware*
 
 **Milestone ladder:** M1 done (SAW + CP4 + instrument) → **M2: 5-ch** → **M3: analytics parity** →
 **M4: ADS1299 24-bit** → **M5: wireless + IMU** → **M6: isolation + PCB + packaging** → M7: validation study.
+
+---
+
+## Part 5 — Electrode lead-off / integrity plan
+
+Each recording channel is a **double-differential montage of 3 electrodes** (E1,E2,E3) →
+buffers → DD network → AD8237 → **one** ADC pin. Every electrode node has a **22 MΩ→VREF**
+bias resistor; a **combined DRL** (all nodes averaged → buffer → **1 MΩ safety** → body,
+≈3.3 µA worst case, IEC-60601-safe) drives the common mode. Because the DD collapses 3
+electrodes into 1 ADC channel, **per-electrode status must come from the buffered node
+signals**, not the montage output.
+
+**Detection basis (with the DRL running):** a *connected* node has its mains actively
+cancelled (low 50/60 Hz); a *disconnected* node floats to VREF via 22 MΩ and picks up mains
+as an antenna + DC-drifts. So **mains-ratio + DC-drift** are the cues (`dsp.leadoff_report`).
+Passive limit: an open node can sit quietly at VREF (false "good"); truly definitive
+open-detection needs a switched pull-probe or current injection (→ ADS1299).
+
+### Now — Blue Pill, Channel 1, 3 electrodes (no mux, reuses existing software)
+- Wire channel-1 buffers **BUF1/BUF2/BUF3 (E1/E2/E3) → 3 ADC pins** (e.g. PA0/PA1/PA2).
+- Firmware: `#define NCH 3`, ranks = those pins; stream the 3 nodes.
+- PC: `python emgscope.py --port COM8 --baud 921600 --channels 3 --fs 2000 --coupling DC --kick`
+  → the existing per-channel lead-off dots **are** E1/E2/E3 (rename the 3 channels). Reuses
+  `LeadoffTracker` (hysteresis + quality) unchanged.
+- Optional firmware enhancement: brief **GPIO pull-probe** at each node for a definitive open test.
+
+### Next STM32 upgrade — all 15 electrodes (deferred; needs more/faster ADC)
+The Blue Pill runs out of pins (5 DD + 15 nodes = 20 > ~10 ADC). On a bigger STM32
+(F303 / G4 / F4) or via a **16:1 analog mux** (15 buffered nodes → 1 ADC pin + 4 GPIO select):
+- Firmware **"check mode"** (paused): scan 15 nodes → per-electrode status; recording still
+  uses the 5 DD outputs.
+- Protocol: low-rate **status word** = 15 electrode bits + 1 reference bit (designed to match
+  the ADS1299 LOFF layout, so the swap is drop-in).
+- GUI: **3 sub-dots per channel card** (E1/E2/E3) → 15 total.
+
+### Ultimate — ADS1299 (M4)
+Built-in lead-off: **6 nA AC injection**, per-channel `LOFF_STATP/N` status, true kΩ,
+medical-grade. Drop-in replaces the heuristic *source*; the GUI dots + status word stay identical.
