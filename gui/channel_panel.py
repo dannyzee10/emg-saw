@@ -5,10 +5,14 @@ from PyQt5 import QtCore, QtWidgets
 CH_COLORS = ["#00e0ff", "#7CFC00", "#ff5050", "#ffb000", "#c080ff",
              "#ff80c0", "#80ffd0", "#ffd000"]
 
+# electrode connection status dot colors (Phase A lead-off indicator)
+STATUS_COLORS = {"good": "#39d353", "poor": "#e3b341", "open": "#f85149",
+                 "none": "#556677"}
+
 
 class ChannelPanel(QtWidgets.QFrame):
     """Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,
-    and MVC set/clear buttons."""
+    an electrode status dot, and MVC set/clear buttons."""
 
     def __init__(self, nch, muscle_names=None, parent=None):
         super().__init__(parent)
@@ -46,10 +50,21 @@ class ChannelPanel(QtWidgets.QFrame):
             cl.setContentsMargins(8, 6, 8, 6)
             cl.setSpacing(3)
 
+            # name row: electrode status dot + editable muscle name
+            name_row = QtWidgets.QHBoxLayout()
+            name_row.setContentsMargins(0, 0, 0, 0)
+            name_row.setSpacing(6)
+            dot = QtWidgets.QLabel()
+            dot.setObjectName("statusDot")
+            dot.setFixedSize(10, 10)
+            dot.setStyleSheet(f"background:{STATUS_COLORS['none']}; border-radius:5px;")
+            dot.setToolTip("electrode status")
             name_edit = QtWidgets.QLineEdit(self.muscle_names[c])
             name_edit.setObjectName("muscle")
             name_edit.textChanged.connect(lambda text, i=c: self._on_muscle_edit(i, text))
-            cl.addWidget(name_edit)
+            name_row.addWidget(dot)
+            name_row.addWidget(name_edit, 1)
+            cl.addLayout(name_row)
 
             rms_label = QtWidgets.QLabel("RMS  —")
             rms_label.setObjectName("rmsBig")
@@ -75,9 +90,18 @@ class ChannelPanel(QtWidgets.QFrame):
                 "rms": rms_label,
                 "sub": sub_label,
                 "bar": bar,
+                "dot": dot,
             })
 
         col.addStretch(1)
+
+    def set_status(self, idx, state):
+        """Set the per-channel electrode status dot: 'good' | 'poor' | 'open'."""
+        if 0 <= idx < len(self.cards):
+            color = STATUS_COLORS.get(state, STATUS_COLORS["none"])
+            dot = self.cards[idx]["dot"]
+            dot.setStyleSheet(f"background:{color}; border-radius:5px;")
+            dot.setToolTip(f"electrode: {state}")
 
     def _on_muscle_edit(self, idx, text):
         if 0 <= idx < len(self.muscle_names):

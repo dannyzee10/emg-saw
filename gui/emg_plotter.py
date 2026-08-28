@@ -42,7 +42,7 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
-from dsp.dsp import EmgFilters
+from dsp.dsp import EmgFilters, leadoff_status
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -787,6 +787,9 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             # per-channel live readouts (RMS + pk-pk) and optional auto V/lane (MR4 style)
             proc = self._proc_cache
             if proc is not None and proc.shape[0] > 2:
+                need = min(self.filled, self.screen_n)
+                rawwin = self.ring[-need:] if need >= 64 else None   # raw un-notched volts
+                mains_hz = self.do_notch if self.do_notch in (50, 60) else 50
                 for c in range(self.nch):
                     x = proc[:, c]
                     ac = x - x.mean()
@@ -811,6 +814,9 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                                 f"pk-pk {self._fmt_amp(pk)}    medF {mf:.0f} Hz")
                             self._act_max[c] = max(self._act_max[c] * 0.999, rms, 1e-4)
                             card["bar"].setValue(int(min(100, 100 * rms / self._act_max[c])))
+                        if rawwin is not None:
+                            self.channel_panel.set_status(
+                                c, leadoff_status(rawwin[:, c], self.fs, self.vref, mains_hz))
                     if self.autoscale:
                         lo, hi = float(x.min()), float(x.max())
                         span = max(hi - lo, 1e-4)
