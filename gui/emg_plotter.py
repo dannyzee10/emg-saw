@@ -29,6 +29,7 @@ import math
 import os
 import sys
 import time
+from collections import deque
 
 from pathlib import Path
 
@@ -42,7 +43,8 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
-from dsp.dsp import EmgFilters, LeadoffTracker, mean_frequency, cocontraction_index
+from dsp.dsp import (EmgFilters, LeadoffTracker, mean_frequency, cocontraction_index,
+                     iemg, onset_offset, fatigue_trend)
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -112,6 +114,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.full = float((1 << bits) - 1)
         self.filters = EmgFilters(fs)
         self._leadoff = LeadoffTracker(nch, fs, vref)   # per-channel electrode lead-off
+        self._mdf_hist = [deque(maxlen=600) for _ in range(nch)]   # (t, median-freq) -> fatigue
 
         # scope state
         self.coupling = coupling            # DC / AC / GND
@@ -606,13 +609,26 @@ class EmgScope(QtWidgets.QMainWindow):
                 rms_v = float(np.sqrt(np.mean(ac * ac)))
                 rms = self._fmt_amp(rms_v)
                 pk = self._fmt_amp(float(np.ptp(x)))
-                mf = f"{self._median_freq(ac):.0f} Hz"
+                mf = f"{self._median_freq(ac):.0f}"
+                mnf = f"{mean_frequency(ac, self.fs):.0f}"
+                ie = f"{iemg(ac, self.fs) * 1e3:.1f}"
                 mvc = f"{100.0 * rms_v / self.mvc[c]:.0f}%" if self.mvc[c] else "&mdash;"
+                env = self.filters.rms_envelope(proc[:, c:c + 1])[:, 0]
+                thr = 0.2 * float(env.max()) if env.size else 0.0
+                iv = onset_offset(env, self.fs, thr) if thr > 0 else []
+                onset = f"{len(iv)} ({iv[0][0]:.2f}s)" if iv else "0"
+                if len(self._mdf_hist[c]) >= 4:
+                    ts_, mdfs_ = zip(*self._mdf_hist[c])
+                    _, fpct = fatigue_trend(mdfs_, ts_)
+                    fat = f"{fpct:+.0f}%"
+                else:
+                    fat = "&mdash;"
             else:
-                rms = pk = mf = mvc = "&mdash;"
+                rms = pk = mf = mnf = ie = mvc = onset = fat = "&mdash;"
             color = CH_COLORS[c % len(CH_COLORS)]
             rows += (f"<tr><td style='color:{color};font-weight:700'>{self.muscle_names[c]}</td>"
-                     f"<td>{rms}</td><td>{pk}</td><td>{mf}</td><td>{mvc}</td></tr>")
+                     f"<td>{rms}</td><td>{pk}</td><td>{mf}</td><td>{mnf}</td>"
+                     f"<td>{ie}</td><td>{mvc}</td><td>{onset}</td><td>{fat}</td></tr>")
         marks = "".join(f"<li>{l} @ {t:.2f}s</li>" for t, l in self.markers) or "<li>none</li>"
         el = int(time.time() - self._start_time)
         html = f"""<!doctype html><html><head><meta charset='utf-8'><title>EMG Report {ts}</title>
@@ -631,7 +647,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
 <tr><td><b>Acquisition</b></td><td>{self.fs:.0f} S/s &middot; {self.nch} channel(s) &middot; {self._conn_info}</td></tr>
 </table>
 <h3>Per-channel summary</h3>
-<table><tr><th>Muscle</th><th>RMS</th><th>pk-pk</th><th>Median freq</th><th>% MVC</th></tr>{rows}</table>
+<table><tr><th>Muscle</th><th>RMS</th><th>pk-pk</th><th>Med Hz</th><th>Mean Hz</th><th>iEMG mV&middot;s</th><th>% MVC</th><th>Onsets</th><th>Fatigue</th></tr>{rows}</table>
 <h3>Event markers</h3><ul>{marks}</ul>
 <h3>Snapshot</h3><img src='{png}'>
 </body></html>"""
@@ -799,6 +815,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                     pk = float(np.ptp(x))
                     mf = self._median_freq(ac)
                     mnf = mean_frequency(ac, self.fs)
+                    self._mdf_hist[c].append((self.total_samples / self.fs, mf))
                     self.plots[c].setTitle(
                         f"{self.muscle_names[c]}   RMS {self._fmt_amp(rms)}"
                         f"   pk-pk {self._fmt_amp(pk)}   medF {mf:.0f}  mnF {mnf:.0f} Hz",
@@ -835,6 +852,11 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                     env1 = self.filters.rms_envelope(proc[:, 1:2])[:, 0]
                     cci = cocontraction_index(env0, env1)
                     self.lbl_stat.setText(self.lbl_stat.text() + f" | CCI(1,2) {cci:.0f}%")
+
+                if len(self._mdf_hist[0]) >= 4:
+                    ts_, mdfs_ = zip(*self._mdf_hist[0])
+                    _, fpct = fatigue_trend(mdfs_, ts_)
+                    self.lbl_stat.setText(self.lbl_stat.text() + f" | fat(1) {fpct:+.0f}%")
 
                 if self.show_spectrum and proc.shape[0] >= 64:
                     n = proc.shape[0]

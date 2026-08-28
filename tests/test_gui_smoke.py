@@ -33,3 +33,27 @@ def test_gui_builds_and_runs_5ch():
     # 5 channel cards = 5 lanes were built
     assert len(win.channel_panel.cards) == 5
     win.close()
+
+
+def test_report_generates(tmp_path, monkeypatch):
+    """HG4: the HTML report builds (with the M3 analytics columns) without exception."""
+    from PyQt5 import QtWidgets
+    from communication.sources import SimSource
+    from gui.emg_plotter import EmgScope
+
+    monkeypatch.setattr(os, "startfile", lambda *a, **k: None, raising=False)
+    monkeypatch.chdir(tmp_path)
+
+    app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    win = EmgScope(SimSource(2, 2000.0, 12), 2, 2000.0, 3.3, 12, False, coupling="AC")
+    win.show()
+    for _ in range(30):
+        app.processEvents()
+        time.sleep(0.005)
+
+    win._report()
+    htmls = list(tmp_path.glob("emg_report_*.html"))
+    assert htmls, "no report written"
+    txt = htmls[0].read_text(encoding="utf-8")
+    assert "Fatigue" in txt and "iEMG" in txt
+    win.close()
