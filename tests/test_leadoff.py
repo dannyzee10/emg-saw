@@ -97,3 +97,23 @@ def test_poor_broadband_highfreq():
     hi = np.fft.irfft(X, n=2048)
     x = VREF / 2 + 0.06 * hi / (np.std(hi) + 1e-9)
     assert leadoff_status(x, FS, VREF) == "poor"
+
+
+def _emg_band_signal(rms_v, seed):
+    # EMG-shaped (20-180 Hz) signal at a target RMS around mid-scale
+    rng = np.random.default_rng(seed)
+    X = np.fft.rfft(rng.standard_normal(2048))
+    f = np.fft.rfftfreq(2048, 1.0 / FS)
+    X[(f < 20) | (f > 180)] = 0
+    sig = np.fft.irfft(X, n=2048)
+    return VREF / 2 + rms_v * sig / (np.std(sig) + 1e-9)
+
+
+def test_good_strong_contraction():
+    # measured contraction ~59 mV RMS, EMG spectrum -> good (below the 120 mV ceiling)
+    assert leadoff_status(_emg_band_signal(0.059, 6), FS, VREF) == "good"
+
+
+def test_poor_amplitude_blowup():
+    # electrode fault (e.g. no ref): EMG-ish spectrum but RMS ~300 mV >> ceiling -> poor
+    assert leadoff_status(_emg_band_signal(0.30, 7), FS, VREF) == "poor"

@@ -55,7 +55,7 @@ class EmgFilters:
 
 
 def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
-                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0):
+                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0, rms_hi=0.12):
     """Analyse one RAW (un-notched, absolute-volt) single-channel window; return
     ``(state, quality, metrics)``:
 
@@ -73,11 +73,12 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
     x = np.asarray(x, dtype=float)
     n = x.shape[0]
     if n < 32:
-        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0, "centroid": 0.0}
+        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0, "centroid": 0.0, "rms": 0.0}
     margin = 0.03 * vref
     rail = float(np.mean((x < margin) | (x > vref - margin)))
     dc = float(abs(x.mean() - vref / 2.0) / (vref / 2.0 + 1e-12))   # 0=centered, 1=at rail
     ptp = float(np.ptp(x))
+    rms = float(np.sqrt(np.mean((x - x.mean()) ** 2)))
     mains_ratio = 0.0
     centroid = 0.0
     if ptp > amp_floor:
@@ -102,7 +103,7 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
 
     if rail > rail_frac:
         state = "open"
-    elif ptp > amp_floor and (mains_ratio > mains_dom or centroid > emg_hi):
+    elif ptp > amp_floor and (mains_ratio > mains_dom or centroid > emg_hi or rms > rms_hi):
         state = "poor"
     else:
         state = "good"
@@ -110,8 +111,11 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
     quality = 100.0 * (1.0 - min(1.0, rail)) / (1.0 + 3.0 * mains_ratio)
     if centroid > emg_hi:
         quality *= max(0.15, (emg_hi / centroid) ** 2)   # non-physiological spectrum
+    if rms > rms_hi:
+        quality *= max(0.10, rms_hi / rms)               # amplitude blow-up (electrode fault)
     quality = float(max(0.0, min(100.0, quality)))
-    return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc, "centroid": centroid}
+    return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc,
+                            "centroid": centroid, "rms": rms}
 
 
 def leadoff_status(x, fs, vref=3.3, mains_hz=50.0, **kw):
