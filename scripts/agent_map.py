@@ -113,10 +113,11 @@ def main():
         f.write(html)
     print(f"agent_map.html written: {len(nodes)} cities, {len(links)} trails, "
           f"{len(present)} continents (+unassigned), {len(communities)} communities -> {OUT}")
-    try:
-        webbrowser.open("file://" + OUT.replace("\\", "/"))
-    except Exception:
-        pass
+    if "--no-open" not in sys.argv:
+        try:
+            webbrowser.open("file://" + OUT.replace("\\", "/"))
+        except Exception:
+            pass
 
 
 HTML = r"""<!doctype html><html><head><meta charset="utf-8">
@@ -145,6 +146,19 @@ HTML = r"""<!doctype html><html><head><meta charset="utf-8">
   #tip{position:fixed;pointer-events:none;background:rgba(10,16,26,.95);border:1px solid #2b3f60;
        border-radius:6px;padding:6px 9px;font-size:12px;color:#e6eefc;opacity:0;transition:opacity .1s;max-width:280px}
   #foot{position:fixed;bottom:10px;left:14px;font-size:11px;color:#61748f}
+  #launch{position:fixed;top:14px;right:14px;background:rgba(12,18,30,.86);border:1px solid #1e2c44;
+          border-radius:10px;padding:10px 12px;backdrop-filter:blur(4px);display:flex;flex-direction:column;gap:7px;width:186px}
+  #launch .lh{font-size:11px;letter-spacing:1.5px;color:#8aa0c0;margin-bottom:2px;font-weight:700}
+  .lbtn{display:flex;align-items:center;gap:8px;border:1px solid #22314c;border-radius:7px;padding:7px 10px;
+        font-size:12px;color:#e6eefc;background:#0c1524;cursor:pointer;transition:all .12s;user-select:none}
+  .lbtn:hover{border-color:#3f5f8f;box-shadow:0 0 10px rgba(80,140,255,.35)}
+  .lbtn .ic{font-size:11px;opacity:.85}
+  .lbtn.sim{border-left:3px solid #63c9ff}
+  .lbtn.live{border-left:3px solid #39d353}
+  .lbtn.refresh{border-left:3px solid #e3b341;justify-content:center;color:#cdd8ea}
+  #toast{position:fixed;top:14px;right:212px;background:rgba(10,16,26,.95);border:1px solid #2b3f60;
+         border-radius:7px;padding:8px 12px;font-size:12px;color:#e6eefc;opacity:0;transition:opacity .2s;
+         pointer-events:none;max-width:260px}
 </style></head><body>
 <svg id="map"></svg>
 <div id="hud"><h1>EMG SAW — Agent World Map</h1>
@@ -152,6 +166,14 @@ HTML = r"""<!doctype html><html><head><meta charset="utf-8">
   <input id="search" placeholder="Search nodes…  (fly to a city)">
   <div id="modes"><button id="mAgent" class="on">By agent</button><button id="mComm">By community</button></div>
   <div id="legend"></div></div>
+<div id="launch">
+  <div class="lh">&#9654; LAUNCH SCOPE</div>
+  <div class="lbtn sim"  onclick="launch('sim1')"><span class="ic">&#9654;</span> Channel 1 &middot; sim</div>
+  <div class="lbtn sim"  onclick="launch('sim5')"><span class="ic">&#9654;</span> Channel 5 &middot; sim</div>
+  <div class="lbtn live" onclick="launch('live1')"><span class="ic">&#9654;</span> Channel 1 &middot; live</div>
+  <div class="lbtn live" onclick="launch('live5')"><span class="ic">&#9654;</span> Channel 5 &middot; live</div>
+  <div class="lbtn refresh" onclick="refreshMap()">&#8635; Refresh graph</div>
+</div>
 <div id="tip"></div>
 <div id="foot">graph @ __COMMIT__ · hover a city to light its links · click a legend row to isolate</div>
 <script>
@@ -292,6 +314,20 @@ d3.select("#search").on("input",function(){query=this.value.trim(); paint();
     const cx=d3.mean(m,n=>n.x),cy=d3.mean(m,n=>n.y),k=m.length===1?1.9:1.3;
     svg.transition().duration(500).call(zoom.transform,
       d3.zoomIdentity.translate(W/2-cx*k,H/2-cy*k).scale(k));}}});
+
+// ---- launch bar: call the local control server (emg_map_server.py) ----
+function _toast(msg, ok){const t=d3.select("#toast");
+  t.style("opacity",1).style("border-color", ok===false?"#f85149":(ok?"#39d353":"#2b3f60")).text(msg);
+  clearTimeout(window._tt); window._tt=setTimeout(()=>t.style("opacity",0),2800);}
+function launch(target){_toast("launching "+target+" …");
+  fetch("/launch?target="+target).then(r=>r.json())
+    .then(d=>_toast(d.ok?("started ✓  "+target):("error: "+d.msg), d.ok))
+    .catch(()=>_toast("no server — run:  python scripts/emg_map_server.py", false));}
+function refreshMap(){_toast("refreshing graph …");
+  fetch("/refresh").then(r=>r.json())
+    .then(d=>{_toast(d.ok?"refreshed ✓ reloading…":("error: "+d.msg), d.ok);
+             if(d.ok) setTimeout(()=>location.reload(), 900);})
+    .catch(()=>_toast("no server — run:  python scripts/emg_map_server.py", false));}
 
 buildLegend(); paint();
 </script></body></html>"""

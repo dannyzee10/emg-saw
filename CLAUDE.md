@@ -8,6 +8,7 @@
 
 **Run the scope:** `python emgscope.py --sim --channels 5` (demo) or
 `python emgscope.py --port COM8 --baud 921600 --channels 1 --fs 2000 --coupling AC --kick` (hardware).
+**Dashboard:** `python scripts/emg_map_server.py` → the world-map with one-click launch buttons (Ch1/Ch5 · sim/live).
 **Flash firmware:** Build in CubeIDE → `scripts\flash_run.bat` (never the IDE Debug/Run buttons).
 **After any code change:** `.\scripts\refresh.ps1` then commit (QUALITY_BAR HG8).
 

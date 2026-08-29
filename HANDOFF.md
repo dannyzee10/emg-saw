@@ -137,6 +137,7 @@ Our edge: **open + ~100× cheaper**.
 - **6 agents** in `.claude/agents/` (systems-architect, firmware, gui, dsp, hardware, test).
 - **graphify** = code-structure graph (`graphify-out/`); query it before raw reads.
 - **agent_map.html** = agents-as-continents world map (run `scripts/agent_map.py`; refresh with `scripts/refresh.ps1`).
+  Open it as a **dashboard with one-click launch buttons** (Ch1/Ch5 · sim/live): `python scripts/emg_map_server.py`.
 - **QUALITY_BAR.md** hard gates; **PROJECT_CONTEXT.md** locked facts; **TOKEN_POLICY.md** read discipline.
 - After any code change: `.\scripts\refresh.ps1` then commit (HG8).
 
