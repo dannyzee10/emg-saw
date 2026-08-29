@@ -48,7 +48,7 @@ def test_good_emg_like():
     noise = rng.standard_normal(2048)
     X = np.fft.rfft(noise)
     f = np.fft.rfftfreq(2048, 1.0 / FS)
-    X[(f < 20) | (f > 450)] = 0
+    X[(f < 20) | (f > 180)] = 0        # EMG-realistic band (centroid ~100 Hz)
     emg = np.fft.irfft(X, n=2048)
     x = VREF / 2 + 0.03 * emg / (np.std(emg) + 1e-9)
     assert leadoff_status(x, FS, VREF) == "good"
@@ -67,7 +67,7 @@ def test_report_quality_ordering():
     rng = np.random.default_rng(1)
     X = np.fft.rfft(rng.standard_normal(2048))
     f = np.fft.rfftfreq(2048, 1.0 / FS)
-    X[(f < 20) | (f > 450)] = 0
+    X[(f < 20) | (f > 180)] = 0
     good = VREF / 2 + 0.03 * np.fft.irfft(X, n=2048)
     q_open = leadoff_report(railed, FS, VREF)[1]
     q_poor = leadoff_report(mains, FS, VREF, mains_hz=50.0)[1]
@@ -86,3 +86,14 @@ def test_tracker_hysteresis_ignores_single_blip():
     assert tr.state[0] == "good"
     tr.update(0, railed)              # second consecutive bad window latches it
     assert tr.state[0] == "open"
+
+
+def test_poor_broadband_highfreq():
+    # floating pin: sizeable broadband/high-freq noise (centroid >> EMG band) -> poor
+    rng = np.random.default_rng(3)
+    X = np.fft.rfft(rng.standard_normal(2048))
+    f = np.fft.rfftfreq(2048, 1.0 / FS)
+    X[(f < 250) | (f > 480)] = 0     # energy pushed high, like the observed medF ~360
+    hi = np.fft.irfft(X, n=2048)
+    x = VREF / 2 + 0.06 * hi / (np.std(hi) + 1e-9)
+    assert leadoff_status(x, FS, VREF) == "poor"

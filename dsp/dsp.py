@@ -55,7 +55,7 @@ class EmgFilters:
 
 
 def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
-                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02):
+                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0):
     """Analyse one RAW (un-notched, absolute-volt) single-channel window; return
     ``(state, quality, metrics)``:
 
@@ -73,12 +73,13 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
     x = np.asarray(x, dtype=float)
     n = x.shape[0]
     if n < 32:
-        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0}
+        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0, "centroid": 0.0}
     margin = 0.03 * vref
     rail = float(np.mean((x < margin) | (x > vref - margin)))
     dc = float(abs(x.mean() - vref / 2.0) / (vref / 2.0 + 1e-12))   # 0=centered, 1=at rail
     ptp = float(np.ptp(x))
     mains_ratio = 0.0
+    centroid = 0.0
     if ptp > amp_floor:
         xc = x - x.mean()
         w = np.hanning(n)
@@ -93,17 +94,24 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
                     for k in (1, 2, 3) if mains_hz * k < fs / 2.0)
         total = _band(1.0, 0.49 * fs) + 1e-15
         mains_ratio = mains / total
+        # spectral centroid over the EMG band: real sEMG sits ~50-150 Hz; a floating pin's
+        # broadband/high-freq noise pushes it far up -> a "not physiological EMG" cue.
+        bm = (f >= 20.0) & (f <= min(0.49 * fs, 500.0))
+        pw = float(P[bm].sum())
+        centroid = float((f[bm] * P[bm]).sum() / pw) if pw > 0 else 0.0
 
     if rail > rail_frac:
         state = "open"
-    elif ptp > amp_floor and mains_ratio > mains_dom:
+    elif ptp > amp_floor and (mains_ratio > mains_dom or centroid > emg_hi):
         state = "poor"
     else:
         state = "good"
 
     quality = 100.0 * (1.0 - min(1.0, rail)) / (1.0 + 3.0 * mains_ratio)
+    if centroid > emg_hi:
+        quality *= max(0.15, (emg_hi / centroid) ** 2)   # non-physiological spectrum
     quality = float(max(0.0, min(100.0, quality)))
-    return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc}
+    return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc, "centroid": centroid}
 
 
 def leadoff_status(x, fs, vref=3.3, mains_hz=50.0, **kw):
