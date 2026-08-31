@@ -180,6 +180,9 @@ class EmgScope(QtWidgets.QMainWindow):
         self.spec_plot = self.plot_widget.spec_plot
         self.spec_curves = self.plot_widget.spec_curves
         self.ch_cards = self.channel_panel.cards
+        # ChannelPanel's MVC buttons were left unconnected by the MVC refactor — wire them
+        self.channel_panel.btn_mvc.clicked.connect(self._set_mvc)
+        self.channel_panel.btn_mvc_clr.clicked.connect(self._clear_mvc)
 
         self._build_ui()
         self._apply_scaling()
@@ -551,11 +554,17 @@ class EmgScope(QtWidgets.QMainWindow):
     def _set_mvc(self):
         proc = self._proc_cache
         if proc is None or proc.shape[0] < 4:
+            self.lbl_footer.setText("MVC: no signal yet — stream, hold a max contraction, then click Set MVC")
             return
+        vals = []
         for c in range(self.nch):
             ac = proc[:, c] - proc[:, c].mean()
-            self.mvc[c] = max(float(np.sqrt(np.mean(ac * ac))), 1e-5)
-        self.lbl_footer.setText("MVC reference captured — channels now show % MVC")
+            env = self.filters.rms_envelope(ac.reshape(-1, 1))[:, 0]   # peak sustained RMS
+            self.mvc[c] = max(float(env.max()), 1e-5)
+            vals.append(self.mvc[c])
+        self.lbl_footer.setText("MVC captured: " +
+                                ", ".join(self._fmt_amp(v) for v in vals) +
+                                " — channels now show % MVC")
 
     def _clear_mvc(self):
         self.mvc = [None] * self.nch
