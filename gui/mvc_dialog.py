@@ -290,3 +290,68 @@ class MvcSaveDialog(QtWidgets.QDialog):
 
     def subject(self):
         return self.ed_subject.text().strip()
+
+
+class SaveRecordingDialog(QtWidgets.QDialog):
+    """Noraxon-style 'Save Data' shown after stopping a test recording: name the record,
+    confirm subject/trial, then Save & View (save + a quick summary), Save, or Discard.
+    The CSV is already written live; this step names/keeps/discards it."""
+
+    def __init__(self, subject="", trial="", duration=0.0, samples=0, parent=None):
+        super().__init__(parent)
+        self.view = False
+        self.discard = False
+        self.setWindowTitle("Save recording")
+        self.resize(470, 260)
+        v = QtWidgets.QVBoxLayout(self)
+        v.setSpacing(8)
+
+        head = QtWidgets.QLabel(f"Recording stopped — {duration:.1f} s, {samples} samples captured.")
+        head.setWordWrap(True)
+        head.setStyleSheet("font-weight:bold; color:#e6eefc;")
+        v.addWidget(head)
+
+        form = QtWidgets.QFormLayout()
+        stamp = time.strftime("%Y-%m-%d %H:%M")
+        base = " ".join(x for x in (subject.strip(), trial.strip()) if x) or "Recording"
+        self.ed_name = QtWidgets.QLineEdit(f"{base} {stamp}")
+        self.ed_subject = QtWidgets.QLineEdit(subject.strip())
+        self.ed_trial = QtWidgets.QLineEdit(trial.strip())
+        form.addRow("Name", self.ed_name)
+        form.addRow("Subject", self.ed_subject)
+        form.addRow("Trial", self.ed_trial)
+        v.addLayout(form)
+        v.addStretch(1)
+
+        ctl = QtWidgets.QHBoxLayout()
+        self.btn_discard = QtWidgets.QPushButton("Discard")
+        self.btn_discard.clicked.connect(self._on_discard)
+        _style(self.btn_discard, "neutral")
+        ctl.addWidget(self.btn_discard)
+        ctl.addStretch(1)
+        self.btn_save = QtWidgets.QPushButton("Save")
+        self.btn_save.clicked.connect(self.accept)
+        _style(self.btn_save, "neutral")
+        self.btn_view = QtWidgets.QPushButton("Save & View")
+        self.btn_view.clicked.connect(self._on_view)
+        _style(self.btn_view, "green")
+        ctl.addWidget(self.btn_save)
+        ctl.addWidget(self.btn_view)
+        v.addLayout(ctl)
+
+    def _on_discard(self):
+        self.discard = True
+        self.reject()
+
+    def _on_view(self):
+        self.view = True
+        self.accept()
+
+    def name(self):
+        return self.ed_name.text().strip() or "Recording"
+
+    def subject(self):
+        return self.ed_subject.text().strip()
+
+    def trial(self):
+        return self.ed_trial.text().strip()

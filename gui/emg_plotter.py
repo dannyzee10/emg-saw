@@ -43,8 +43,8 @@ import numpy as np
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
-from dsp.dsp import (EmgFilters, LeadoffTracker, mean_frequency, cocontraction_index,
-                     iemg, onset_offset, fatigue_trend)
+from dsp.dsp import (EmgFilters, LeadoffTracker, leadoff_report, mean_frequency,
+                     cocontraction_index, iemg, onset_offset, fatigue_trend)
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -1116,8 +1116,72 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
         else:
             self.recording.stop()
             self.btn_rec.setText("● Record")
-            self._flash_banner("ok", "Recording saved ✓ — open 📄 Report, or press ● Record for another.")
+            self._prompt_save_recording()
         self._update_rec_hint()
+
+    def _prompt_save_recording(self):
+        """#9 Save Data step after a test recording: name it (Save & View / Save / Discard)."""
+        from gui.mvc_dialog import SaveRecordingDialog
+        path = getattr(self.recording, "path", None)
+        if not path or not os.path.exists(path) or self.recording.count == 0:
+            self._flash_banner("warn", "Recording stopped — nothing to save (no samples captured).")
+            return
+        dur = self.recording.count / self.fs
+        dlg = SaveRecordingDialog(subject=self.ed_subject.text(), trial=self.ed_trial.text(),
+                                  duration=dur, samples=self.recording.count, parent=self)
+        dlg.exec_()
+        if dlg.discard:
+            try:
+                os.remove(path)
+            except OSError:
+                pass
+            self._flash_banner("warn", "Recording discarded.")
+            return
+        newpath = self._finalize_recording_name(path, dlg.name())
+        base = os.path.basename(newpath)
+        if dlg.view:
+            self._flash_banner("ok", f"Saved “{base}” — {self._recording_summary(newpath)}")
+        else:
+            self._flash_banner("ok", f"Saved “{base}”.")
+
+    def _finalize_recording_name(self, path, name):
+        """Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +
+        original timestamp so it stays unique and analyzable)."""
+        import re
+        safe = re.sub(r"[^A-Za-z0-9._-]+", "_", name.strip()).strip("_")[:60] or "recording"
+        stem = os.path.splitext(os.path.basename(path))[0]      # emg_YYYYmmdd_HHMMSS
+        newpath = os.path.join(os.path.dirname(path), f"{stem}_{safe}.csv")
+        try:
+            if os.path.abspath(newpath) != os.path.abspath(path):
+                os.replace(path, newpath)
+            self.recording.path = newpath
+            return newpath
+        except OSError:
+            return path
+
+    def _recording_summary(self, path):
+        """Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off)."""
+        rows = []
+        try:
+            with open(path, encoding="utf-8") as f:
+                for ln in f:
+                    s = ln.strip()
+                    if not s or s.startswith("#") or s.startswith("t_s"):
+                        continue
+                    rows.append([float(x) for x in s.split(",")])
+        except OSError:
+            return "could not read file"
+        if not rows:
+            return "no samples"
+        codes = np.array(rows)[:, 1:]
+        out = []
+        for c in range(min(self.nch, codes.shape[1])):
+            volts = codes[:, c] / self.full * self.vref
+            ac = volts - volts.mean()
+            rms = float(np.sqrt(np.mean(ac * ac))) * 1e3
+            st, _, _ = leadoff_report(volts, self.fs, self.vref)
+            out.append(f"{self.muscle_names[c]} {rms:.1f}mV {st}")
+        return " | ".join(out)
 
     def closeEvent(self, ev):
         self.controller.stop()

@@ -1,5 +1,6 @@
 """RecordingController – manages CSV recording independent of the GUI."""
 
+import os
 import time
 
 
@@ -11,6 +12,7 @@ class RecordingController:
         self.nch = nch
         self.vref = vref
         self.file = None
+        self.path = None            # absolute path of the CSV currently/last written
         self.count = 0
 
     @property
@@ -23,6 +25,7 @@ class RecordingController:
             self.stop()
         fname = time.strftime("emg_%Y%m%d_%H%M%S.csv")
         self.file = open(fname, "w", newline="")
+        self.path = os.path.abspath(fname)
         self.file.write(f"# Subject: {subject}\n")
         self.file.write(f"# Trial: {trial}\n")
         self.file.write(f"# Notes: {notes}\n")

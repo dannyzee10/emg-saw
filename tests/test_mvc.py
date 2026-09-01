@@ -85,3 +85,34 @@ def test_save_mvc_record_writes_stack(tmp_path, monkeypatch):
     store = json.loads((tmp_path / "mvc_store.json").read_text(encoding="utf-8"))
     assert len(store) == 2
     win.close()
+
+
+def test_save_recording_dialog_defaults():
+    from PyQt5 import QtWidgets
+    from gui.mvc_dialog import SaveRecordingDialog
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    dlg = SaveRecordingDialog(subject="S01", trial="grip", duration=4.2, samples=8400)
+    assert "S01" in dlg.name() and "grip" in dlg.name()
+    assert dlg.subject() == "S01" and dlg.trial() == "grip"
+    assert not dlg.view and not dlg.discard          # defaults before any button
+
+
+def test_finalize_and_summarize_recording(tmp_path, monkeypatch):
+    from PyQt5 import QtWidgets
+    from communication.sources import SimSource
+    from gui.emg_plotter import EmgScope
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    monkeypatch.chdir(tmp_path)
+
+    csv = tmp_path / "emg_20260101_120000.csv"
+    lines = ["# Subject: S01", "# fs=2000 Hz, nch=1, vref=3.3 V", "t_s,ch1_code"]
+    lines += [f"{i/FS:.6f},{2048 + (i % 7) * 40}" for i in range(400)]
+    csv.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    win = EmgScope(SimSource(1, FS, 12), 1, FS, 3.3, 12, False, coupling="AC")
+    new = win._finalize_recording_name(str(csv), "S01 grip test")
+    assert new.endswith("_S01_grip_test.csv") and os.path.exists(new)
+    assert not os.path.exists(str(csv))              # original was renamed, not duplicated
+    summ = win._recording_summary(new)
+    assert "mV" in summ                              # per-channel numeric summary produced
+    win.close()
