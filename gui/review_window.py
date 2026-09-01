@@ -52,6 +52,11 @@ class ReviewWindow(QtWidgets.QDialog):
         self.do_notch = 0
         self.pipeline = []              # ordered op keys (Signal Processing pipeline)
         self.proc_channels = "all"      # 'all' or a channel index
+        self._norm_refs = None          # per-channel normalization reference (V)
+        self._norm_mode = None
+        self._peak_idx = None           # per-channel envelope-peak sample (green window)
+        self._norm_window = None        # (i0,i1) window used for the reference, or None
+        self.amp_range = 120            # % axis top after normalization
         self.cursor_i = 0
         self.playing = False
         self._disp = None
@@ -113,6 +118,15 @@ class ReviewWindow(QtWidgets.QDialog):
         self.btn_proc.setToolTip("Build a custom offline processing pipeline (Available -> Selected)")
         self.btn_proc.clicked.connect(self._open_processing)
         ops.addWidget(self.btn_proc)
+        self.btn_pick = QtWidgets.QPushButton("▭ Pick Window")
+        self.btn_pick.setCheckable(True)
+        self.btn_pick.setToolTip("Drag a window to restrict Peak/Mean normalization to it")
+        self.btn_pick.toggled.connect(self._toggle_pick)
+        ops.addWidget(self.btn_pick)
+        self.btn_norm = QtWidgets.QPushButton("⤢ Normalize…")
+        self.btn_norm.setToolTip("Amplitude-normalize to Peak/Mean/MVC/Manual/Other (= 100 %)")
+        self.btn_norm.clicked.connect(self._open_normalize)
+        ops.addWidget(self.btn_norm)
         ops.addWidget(QtWidgets.QLabel("Notch"))
         self.cmb_notch = QtWidgets.QComboBox()
         self.cmb_notch.addItems(["off", "50 Hz", "60 Hz"])
@@ -137,6 +151,7 @@ class ReviewWindow(QtWidgets.QDialog):
         self.glw.setBackground("#0b0f16")
         v.addWidget(self.glw, 1)
         self.plots, self.curves, self.cursors = [], [], []
+        self.pick_regions, self.peak_regions, self.ref_lines = [], [], []
         for c in range(self.nch):
             p = self.glw.addPlot(row=c, col=0)
             p.showGrid(x=True, y=True, alpha=0.3)
@@ -144,7 +159,23 @@ class ReviewWindow(QtWidgets.QDialog):
             p.setMenuEnabled(False)
             col = CH_COLORS[c % len(CH_COLORS)]
             p.setLabel("left", self.muscle_names[c], units=self._unit)
+            # green 'peak window' (reference), behind the trace; added first = drawn under
+            gr = pg.LinearRegionItem(brush=(60, 220, 120, 55), movable=False)
+            gr.setVisible(False)
+            p.addItem(gr)
+            self.peak_regions.append(gr)
             self.curves.append(p.plot(pen=pg.mkPen(col, width=1.2)))
+            # yellow movable selection window (Pick)
+            pr = pg.LinearRegionItem(brush=(255, 210, 0, 45), movable=True)
+            pr.setVisible(False)
+            pr.sigRegionChanged.connect(lambda _r, ci=c: self._sync_pick(ci))
+            p.addItem(pr)
+            self.pick_regions.append(pr)
+            rl = pg.InfiniteLine(angle=0, movable=False, pos=100.0,
+                                 pen=pg.mkPen("#39d353", width=1, style=QtCore.Qt.DashLine))
+            rl.setVisible(False)
+            p.addItem(rl)
+            self.ref_lines.append(rl)
             cur = pg.InfiniteLine(angle=90, movable=True, pen=pg.mkPen("#ffd000", width=1.5))
             cur.sigPositionChanged.connect(self._on_cursor_drag)
             p.addItem(cur)
@@ -185,7 +216,9 @@ class ReviewWindow(QtWidgets.QDialog):
                 ac = self.filters.apply_notch(ac.reshape(-1, 1), self.do_notch)[:, 0]
             apply_here = self.pipeline and (self.proc_channels == "all" or self.proc_channels == c)
             if apply_here:
-                ctx = {"fs": self.fs, "filters": self.filters, "mvc": self.mvc[c], "smooth_ms": 100.0}
+                ctx = {"fs": self.fs, "filters": self.filters, "mvc": self.mvc[c],
+                       "smooth_ms": 100.0,
+                       "norm_ref": (self._norm_refs[c] if self._norm_refs else None)}
                 sig = apply_pipeline(ac, self.pipeline, ctx)
                 unit = pipeline_unit(self.pipeline)
                 out[:, c] = sig if unit == "%" else sig * 1e3
@@ -200,10 +233,17 @@ class ReviewWindow(QtWidgets.QDialog):
     def _redraw(self):
         t = self.t if self.t.shape[0] == self._disp.shape[0] else np.arange(self._disp.shape[0]) / self.fs
         self._tvec = t
+        normalizing = "normalize" in self.pipeline
         for c in range(self.nch):
             self.curves[c].setData(t, self._disp[:, c])
             self.plots[c].setLabel("left", self.muscle_names[c], units=self._units[c])
-            self.plots[c].enableAutoRange(axis="y")
+            if self._units[c] == "%":
+                self.plots[c].setYRange(0, self.amp_range, padding=0)
+            else:
+                self.plots[c].enableAutoRange(axis="y")
+            if not normalizing:
+                self.peak_regions[c].setVisible(False)
+                self.ref_lines[c].setVisible(False)
         self._update_cursor()
 
     # --------------------------------------------------------------- cursor / playback
@@ -265,11 +305,134 @@ class ReviewWindow(QtWidgets.QDialog):
         if dlg.exec_() == QtWidgets.QDialog.Accepted:
             self.pipeline = dlg.selected_keys()
             self.proc_channels = dlg.channels()
+            self._norm_refs = None                  # a manual pipeline clears any normalize ref
             self.cmb_view.blockSignals(True)
             self.cmb_view.setCurrentText("Custom")
             self.cmb_view.blockSignals(False)
             self._recompute()
             self._redraw()
+
+    # ---------------------------------------------------------------- normalization (Img13-15)
+    def _toggle_pick(self, on):
+        if on:
+            n = self._disp.shape[0]
+            lo = float(self._tvec[int(n * 0.35)])
+            hi = float(self._tvec[int(n * 0.60)])
+            for r in self.pick_regions:
+                r.blockSignals(True)
+                r.setRegion([lo, hi])
+                r.setVisible(True)
+                r.blockSignals(False)
+        else:
+            for r in self.pick_regions:
+                r.setVisible(False)
+
+    def _sync_pick(self, ci):
+        lo, hi = self.pick_regions[ci].getRegion()
+        for c, r in enumerate(self.pick_regions):
+            if c != ci:
+                r.blockSignals(True)
+                r.setRegion([lo, hi])
+                r.blockSignals(False)
+
+    def _picked_window(self):
+        if not getattr(self, "btn_pick", None) or not self.btn_pick.isChecked():
+            return None
+        lo, hi = self.pick_regions[0].getRegion()
+        n = self._disp.shape[0]
+        i0 = int(np.clip(np.searchsorted(self._tvec, lo), 0, n))
+        i1 = int(np.clip(np.searchsorted(self._tvec, hi), 0, n))
+        return (min(i0, i1), max(i0, i1)) if i1 > i0 else None
+
+    def _channel_env(self, c):
+        v = self.codes[:, c] / self.full * self.vref
+        ac = v - v.mean()
+        if self.do_notch:
+            ac = self.filters.apply_notch(ac.reshape(-1, 1), self.do_notch)[:, 0]
+        bp = self.filters.bandpass(ac.reshape(-1, 1))[:, 0]
+        return self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
+
+    def _load_other_env(self, path):
+        rows = []
+        try:
+            with open(path, encoding="utf-8") as f:
+                for ln in f:
+                    s = ln.strip()
+                    if not s or s.startswith("#") or s.startswith("t_s"):
+                        continue
+                    rows.append([float(x) for x in s.split(",")])
+        except OSError:
+            return None
+        if not rows:
+            return None
+        codes = np.array(rows)[:, 1:]
+        envs = []
+        for c in range(codes.shape[1]):
+            v = codes[:, c] / self.full * self.vref
+            ac = v - v.mean()
+            bp = self.filters.bandpass(ac.reshape(-1, 1))[:, 0]
+            envs.append(self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0])
+        return envs
+
+    def _open_normalize(self):
+        from gui.normalize_dialog import NormalizeDialog
+        dlg = NormalizeDialog(self._picked_window() is not None, any(self.mvc), parent=self)
+        if dlg.exec_() != QtWidgets.QDialog.Accepted:
+            return
+        self._apply_normalize(dlg.mode(), dlg.manual_mv(), dlg.use_window(),
+                              dlg.other_path(), dlg.amp_range())
+
+    def _apply_normalize(self, mode, manual_mv, use_window, other_path, amp_range):
+        """Compute a per-channel reference (=100 %) from the chosen source/window, then run
+        [band-pass -> RMS -> normalize] and show the % result (green peak window + ref line)."""
+        from dsp.pipeline import compute_reference, peak_index
+        self.amp_range = int(amp_range)
+        window = self._picked_window() if use_window else None
+        self._norm_window = window
+        other = self._load_other_env(other_path) if (mode == "other" and other_path) else None
+        manual_v = (manual_mv / 1e3) if (manual_mv and manual_mv > 0) else None
+        refs, peaks = [], []
+        for c in range(self.nch):
+            env = self._channel_env(c)
+            if mode == "other" and other is not None and c < len(other):
+                ref = float(np.max(other[c])) + 1e-12
+            else:
+                ref = compute_reference(env, mode, mvc=self.mvc[c], manual=manual_v, window=window)
+            refs.append(ref)
+            peaks.append(peak_index(env, window))
+        self._norm_refs = refs
+        self._norm_mode = mode
+        self._peak_idx = peaks
+        self.pipeline = ["bandpass", "rms", "normalize"]
+        self.proc_channels = "all"
+        self.cmb_view.blockSignals(True)
+        self.cmb_view.setCurrentText("Custom")
+        self.cmb_view.blockSignals(False)
+        self._recompute()
+        self._redraw()
+        self._show_norm_result(window)
+
+    def _show_norm_result(self, window):
+        """Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak
+        window' — the picked window, else a band around each channel's envelope peak."""
+        for c in range(self.nch):
+            self.plots[c].setYRange(0, self.amp_range, padding=0)
+            if window:
+                i0, i1 = window
+            else:
+                pk = self._peak_idx[c]
+                half = max(1, int(0.1 * self.fs))
+                i0, i1 = max(0, pk - half), min(len(self._tvec) - 1, pk + half)
+            t0 = float(self._tvec[int(np.clip(i0, 0, len(self._tvec) - 1))])
+            t1 = float(self._tvec[int(np.clip(i1, 0, len(self._tvec) - 1))])
+            self.peak_regions[c].setRegion([t0, t1])
+            self.peak_regions[c].setVisible(True)
+            self.ref_lines[c].setValue(100.0)
+            self.ref_lines[c].setVisible(True)
+        mode_lbl = {"peak": "Peak", "mean": "Mean", "mvc": "MVC",
+                    "manual": "Manual", "other": "Other record"}.get(self._norm_mode, self._norm_mode)
+        win = " over picked window" if window else ""
+        self.lbl_read.setText(f"Normalized to {mode_lbl}{win} — 100% ref line, 0-{self.amp_range}% axis")
 
     def _on_notch(self, t):
         self.do_notch = 0 if t.startswith("off") else int(t.split()[0])

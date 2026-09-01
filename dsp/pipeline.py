@@ -60,6 +60,42 @@ def op_norm_mean(sig, ctx):
     return np.asarray(sig, dtype=float) / (float(np.mean(np.abs(sig))) + 1e-12) * 100.0
 
 
+def op_normalize(sig, ctx):
+    """Normalize to an externally-computed per-channel reference ``ctx['norm_ref']`` (same
+    units as sig). Falls back to the signal's own peak if no reference is supplied."""
+    ref = ctx.get("norm_ref")
+    if not ref or ref <= 0:
+        ref = float(np.max(sig)) + 1e-12
+    return np.asarray(sig, dtype=float) / ref * 100.0
+
+
+def compute_reference(env, mode, mvc=None, manual=None, window=None):
+    """Reference amplitude (=100 %) for offline normalization, from an RMS envelope (volts):
+      'peak'  -> max of the envelope (over ``window`` if given),
+      'mean'  -> mean of the envelope (over ``window``),
+      'mvc'   -> the set MVC reference (volts),
+      'manual'-> a user value (volts).
+    ``window`` is a (i0,i1) sample slice restricting peak/mean (Noraxon 'restrict to window')."""
+    env = np.asarray(env, dtype=float)
+    seg = env[window[0]:window[1]] if (window and window[1] > window[0]) else env
+    if mode == "mvc" and mvc and mvc > 0:
+        return float(mvc)
+    if mode == "manual" and manual and manual > 0:
+        return float(manual)
+    if mode == "mean":
+        return float(np.mean(seg)) + 1e-12 if seg.size else 1e-12
+    return float(np.max(seg)) + 1e-12 if seg.size else 1e-12      # peak (default)
+
+
+def peak_index(env, window=None):
+    """Sample index of the envelope peak (within ``window`` if given) — for the green
+    'peak window' marker after normalization."""
+    env = np.asarray(env, dtype=float)
+    base = window[0] if (window and window[1] > window[0]) else 0
+    seg = env[window[0]:window[1]] if (window and window[1] > window[0]) else env
+    return base + int(np.argmax(seg)) if seg.size else 0
+
+
 # key -> (label, fn, produces_percent)
 OPS = {
     "rectify":  ("Rectify",                      op_rectify,   False),
@@ -71,6 +107,7 @@ OPS = {
     "norm_mvc": ("Amplitude Normalization: % MVC",  op_norm_mvc,  True),
     "norm_peak":("Amplitude Normalization: % Peak", op_norm_peak, True),
     "norm_mean":("Amplitude Normalization: % Mean", op_norm_mean, True),
+    "normalize":("Amplitude Normalization (reference)", op_normalize, True),
 }
 
 # quick presets (Review 'Operation' shortcuts) -> ordered pipeline

@@ -107,3 +107,52 @@ def test_processing_dialog_build_and_channel_scope(tmp_path, monkeypatch):
     win._recompute()
     assert win._units[0] == "%" and win._units[1] == "mV"
     win.close()
+
+
+def test_review_normalize_modes_window_and_result(tmp_path, monkeypatch):
+    from PyQt5 import QtWidgets
+    from gui.review_window import ReviewWindow
+    from gui.normalize_dialog import NormalizeDialog
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    monkeypatch.chdir(tmp_path)
+    csv = tmp_path / "emg_20260101_120000.csv"
+    _write_csv(csv, n=2000, nch=2)
+    win = ReviewWindow(str(csv), FS, 2, 3.3, 4095.0, ["FCR", "ECR"], mvc=[0.05, None])
+
+    # Peak over the whole recording -> % axis, refs set, result markers shown, peak ~100%
+    win._apply_normalize("peak", None, False, "", 150)
+    assert win._units == ["%", "%"]
+    assert win._norm_refs and all(r > 0 for r in win._norm_refs)
+    assert win.amp_range == 150
+    assert win.peak_regions[0].isVisible() and win.ref_lines[0].isVisible()
+    assert abs(float(win._disp[:, 0].max()) - 100.0) < 2.0
+
+    # Manual: reference = manual mV -> volts
+    win._apply_normalize("manual", 40.0, False, "", 120)
+    assert abs(win._norm_refs[0] - 0.040) < 1e-9
+
+    # MVC: ch0 uses the set MVC (0.05 V); ch1 (no MVC) falls back to its peak
+    win._apply_normalize("mvc", None, False, "", 120)
+    assert abs(win._norm_refs[0] - 0.05) < 1e-9 and win._norm_refs[1] > 0
+
+    # Other record: reference = peak of another file's envelope
+    other = tmp_path / "emg_20260101_130000.csv"
+    _write_csv(other, n=1500, nch=2)
+    win._apply_normalize("other", None, False, str(other), 120)
+    assert win._norm_refs and win._norm_refs[0] > 0
+
+    # Pick window restricts the reference; a preset then hides the result markers
+    win.btn_pick.setChecked(True)
+    w = win._picked_window()
+    assert w is not None and w[1] > w[0]
+    win._apply_normalize("peak", None, True, "", 120)
+    assert win._norm_window == w
+    win.cmb_view.setCurrentText("Raw")
+    assert not win.peak_regions[0].isVisible() and not win.ref_lines[0].isVisible()
+
+    # dialog reports its picks (MODES order: Peak, Mean, MVC, Manual, Other)
+    dlg = NormalizeDialog(has_window=True, has_mvc=True)
+    dlg.cmb_mode.setCurrentIndex(2)
+    assert dlg.mode() == "mvc"
+    assert dlg.amp_range() == 120 and dlg.use_window() is True
+    win.close()
