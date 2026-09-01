@@ -642,39 +642,57 @@ class EmgScope(QtWidgets.QMainWindow):
             self._apply_scaling()
 
     def _baseline_check(self):
-        """Noraxon-style EMG Baseline Check: sample the resting signal, report per-channel
-        RMS + pass/fail (relaxed vs noisy)."""
+        """Noraxon-style EMG Baseline Check: report per-channel resting RMS AND the electrode
+        lead-off state (the SAME latched state that drives the channel dot), so a disconnected
+        or poor lead fails the baseline even though its RMS is low."""
         show_n = min(int(2.0 * self.fs), self.filled)
         if show_n < 40:
             self.lbl_hint.setText("EMG Baseline: no signal yet — stream, relax the muscle, then click")
-            self._baseline_popup(False, "No signal yet",
+            self._baseline_popup("warn", "No signal yet",
                                  "Start streaming, relax the muscle, then click EMG Baseline.")
             return
         raw = self.ring[-show_n:]
-        parts, lines, ok_all = [], [], True
+        parts, lines = [], []
+        level = "ok"                                    # ok -> warn -> bad (worst channel wins)
         for c in range(self.nch):
             bp = self.filters.bandpass(raw[:, c:c + 1])[:, 0]
             env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
             lvl = float(np.median(env)) * 1e3          # mV
-            ok = lvl < 20.0
-            ok_all = ok_all and ok
-            parts.append(f"{self.muscle_names[c]} {lvl:.1f}mV {'✓' if ok else '⚠'}")
-            lines.append(f"{self.muscle_names[c]}:  {lvl:5.1f} mV   {'OK (relaxed) ✓' if ok else 'NOISY ⚠'}")
-        tag = "OK — relaxed ✓" if ok_all else "NOISY ⚠ relax / check electrode + DRL"
-        color = "#39d353" if ok_all else "#e3b341"
+            st = self._leadoff.state[c]                # 'good'/'poor'/'open' == the dot colour
+            if st == "open":
+                sev, note = "bad", "DISCONNECTED — reconnect the electrode / lead"
+            elif st == "poor":
+                sev, note = "warn", f"poor contact / noisy ({lvl:.1f} mV) — check electrode + DRL"
+            elif lvl >= 20.0:
+                sev, note = "warn", f"not relaxed ({lvl:.1f} mV) — rest the muscle"
+            else:
+                sev, note = "ok", f"{lvl:.1f} mV — relaxed ✓"
+            level = self._worse(level, sev)
+            mark = {"ok": "✓", "warn": "⚠", "bad": "✗"}[sev]
+            parts.append(f"{self.muscle_names[c]} {mark}")
+            lines.append(f"{self.muscle_names[c]}:  {note}")
+        tag = {"ok": "OK — relaxed ✓", "warn": "CHECK ⚠", "bad": "LEAD OFF ✗"}[level]
+        color = {"ok": "#39d353", "warn": "#e3b341", "bad": "#ff6b6b"}[level]
         self.lbl_hint.setStyleSheet(f"font-style:italic; font-weight:bold; color:{color};")
         self.lbl_hint.setText("EMG Baseline: " + " | ".join(parts) + "  —  " + tag)
-        # unmissable popup (Noraxon-style baseline check) — the footer text is easy to miss
-        head = "Baseline OK — muscle relaxed ✓" if ok_all else "Baseline NOISY ⚠"
-        info = "\n".join(lines) + ("\n\nReady to record MVC." if ok_all
-                else "\n\nRelax the muscle, check electrode contact + the DRL/ground lead, then re-check.")
-        self._baseline_popup(ok_all, head, info)
+        head = {"ok": "Baseline OK — muscle relaxed ✓", "warn": "Baseline CHECK ⚠",
+                "bad": "Electrode LEAD OFF ✗"}[level]
+        info = "\n".join(lines) + ("\n\nReady to record MVC." if level == "ok"
+                else "\n\nFix the flagged channel(s), then re-check.")
+        self._baseline_popup(level, head, info)
 
-    def _baseline_popup(self, ok, head, info):
+    @staticmethod
+    def _worse(a, b):
+        order = {"ok": 0, "warn": 1, "bad": 2}
+        return a if order[a] >= order[b] else b
+
+    def _baseline_popup(self, level, head, info):
         """Flash a big in-window banner with the result (child widget -> safe teardown,
-        no modal to dismiss). Auto-hides after a few seconds."""
+        no modal to dismiss). Auto-hides after a few seconds. level = ok/warn/bad."""
         one = info.replace("\n\n", "  —  ").replace("\n", "   ")
-        bg, fg = ("#173d1f", "#39d353") if ok else ("#3d2f10", "#e3b341")
+        bg, fg = {"ok": ("#173d1f", "#39d353"),
+                  "warn": ("#3d2f10", "#e3b341"),
+                  "bad": ("#3d1414", "#ff6b6b")}[level]
         self.lbl_banner.setStyleSheet(
             f"background:{bg}; color:{fg}; font-size:15px; font-weight:bold;"
             f"padding:8px; border:1px solid {fg}; border-radius:4px;")
