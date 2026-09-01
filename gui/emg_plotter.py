@@ -381,9 +381,13 @@ class EmgScope(QtWidgets.QMainWindow):
         self.btn_snap.clicked.connect(self._snapshot)
         self.btn_report = QtWidgets.QPushButton("📄 Report")
         self.btn_report.clicked.connect(self._report)
+        self.btn_review = QtWidgets.QPushButton("📂 Review")
+        self.btn_review.setToolTip("Open a saved recording in View/Review mode (playback + report)")
+        self.btn_review.clicked.connect(self._open_review_dialog)
         s.addWidget(self.btn_marker)
         s.addWidget(self.btn_snap)
         s.addWidget(self.btn_report)
+        s.addWidget(self.btn_review)
         return sf
 
     def _build_channel_panel(self):
@@ -1141,8 +1145,23 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
         base = os.path.basename(newpath)
         if dlg.view:
             self._flash_banner("ok", f"Saved “{base}” — {self._recording_summary(newpath)}")
+            self._open_review(newpath)
         else:
             self._flash_banner("ok", f"Saved “{base}”.")
+
+    def _open_review(self, path):
+        """Open a saved recording in the View/Review window (playback + Operations + Report)."""
+        from gui.review_window import ReviewWindow
+        self._review_win = ReviewWindow(path, self.fs, self.nch, self.vref, self.full,
+                                        self.muscle_names, mvc=self.mvc, parent=self)
+        self._review_win.show()
+        self._review_win.raise_()
+
+    def _open_review_dialog(self):
+        path, _ = QtWidgets.QFileDialog.getOpenFileName(
+            self, "Open recording for review", "", "EMG CSV (emg_*.csv);;All files (*.*)")
+        if path:
+            self._open_review(path)
 
     def _finalize_recording_name(self, path, name):
         """Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +
