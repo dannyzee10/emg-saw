@@ -73,9 +73,16 @@ def _bp_env(codes, fs):
     return bp, env
 
 
-def mvc_ref(codes, fs):
-    _, env = _bp_env(codes, fs)
-    return float(env.max())             # peak sustained RMS = 100% MVC
+def mvc_ref(codes, fs, win_s=1.0):
+    # 100% MVC = best continuous `win_s` RMS (robust to brief spikes; standard MVC practice)
+    bp, _ = _bp_env(codes, fs)
+    ac = bp - bp.mean()
+    n = int(fs * win_s)
+    if len(ac) < n:
+        return float(np.sqrt(np.mean(ac ** 2)))
+    csum = np.concatenate([[0.0], np.cumsum(ac ** 2)])
+    win_ms = (csum[n:] - csum[:-n]) / n         # mean-square in every 1 s window
+    return float(np.sqrt(win_ms.max()))
 
 
 def trial_features(codes, fs, mvcref):
