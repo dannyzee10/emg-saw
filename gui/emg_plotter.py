@@ -331,6 +331,15 @@ class EmgScope(QtWidgets.QMainWindow):
         bar.addWidget(self.lbl_stat)
         v.addWidget(barframe)
 
+        # transient result banner (EMG baseline check etc.) — big, colored, auto-hides
+        self.lbl_banner = QtWidgets.QLabel("")
+        self.lbl_banner.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_banner.setVisible(False)
+        v.addWidget(self.lbl_banner)
+        self._banner_timer = QtCore.QTimer(self)
+        self._banner_timer.setSingleShot(True)
+        self._banner_timer.timeout.connect(lambda: self.lbl_banner.setVisible(False))
+
         mainrow = QtWidgets.QHBoxLayout()
         mainrow.setContentsMargins(0, 0, 0, 0)
         mainrow.setSpacing(0)
@@ -662,17 +671,16 @@ class EmgScope(QtWidgets.QMainWindow):
         self._baseline_popup(ok_all, head, info)
 
     def _baseline_popup(self, ok, head, info):
-        """Non-modal result box for the baseline check (kept on self so it isn't GC'd;
-        non-blocking so it never stalls the scope or the headless tests)."""
-        box = getattr(self, "_base_box", None)
-        if box is None:
-            box = self._base_box = QtWidgets.QMessageBox(self)
-            box.setWindowTitle("EMG Baseline Check")
-        box.setIcon(QtWidgets.QMessageBox.Information if ok else QtWidgets.QMessageBox.Warning)
-        box.setText(f"<b>{head}</b>")
-        box.setInformativeText(info)
-        box.show()
-        box.raise_()
+        """Flash a big in-window banner with the result (child widget -> safe teardown,
+        no modal to dismiss). Auto-hides after a few seconds."""
+        one = info.replace("\n\n", "  —  ").replace("\n", "   ")
+        bg, fg = ("#173d1f", "#39d353") if ok else ("#3d2f10", "#e3b341")
+        self.lbl_banner.setStyleSheet(
+            f"background:{bg}; color:{fg}; font-size:15px; font-weight:bold;"
+            f"padding:8px; border:1px solid {fg}; border-radius:4px;")
+        self.lbl_banner.setText(f"EMG Baseline — {head}      ({one})")
+        self.lbl_banner.setVisible(True)
+        self._banner_timer.start(6000)
 
     def _onset_overlay(self, c, t, y):
         """Highlight active (contraction) samples in white on top of the trace."""

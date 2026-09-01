@@ -67,7 +67,7 @@ def main():
         print(f"  ch{c+1}: RMS {rms:7.1f} mV | pk-pk {pk:7.1f} mV | DC {dcv:4.2f} V | "
               f"medF {median_freq(ac, fs):4.0f} | meanF {mean_frequency(ac, fs):4.0f} Hz | "
               f"mains {m['mains'] * 100:3.0f}% | centroid {m['centroid']:4.0f} Hz | "
-              f"--> {state.upper()} (q{q:.0f})")
+              f"hh {m.get('hh', 0.0) * 100:3.0f}% | --> {state.upper()} (q{q:.0f})")
 
 
 if __name__ == "__main__":

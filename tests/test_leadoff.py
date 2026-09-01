@@ -67,6 +67,25 @@ def test_good_quiet_connected_even_if_mains_shaped():
     assert leadoff_status(x, FS, VREF) == "good"
 
 
+def test_open_lead_off_high_harmonic_signature():
+    # disconnected signal lead (this AFE): low amplitude, but the 50/100 Hz mains pickup is
+    # replaced by sharp lines at 4x/8x mains (200/400 Hz) -> must read 'open', not green.
+    t = _t(2048)
+    x = (VREF / 2 + 0.004 * np.sin(2 * np.pi * 200.0 * t)
+                  + 0.003 * np.sin(2 * np.pi * 400.0 * t)
+                  + 5e-4 * np.random.randn(2048))
+    assert leadoff_status(x, FS, VREF) == "open"
+
+
+def test_good_connected_low_harmonics_not_flagged():
+    # connected lead: mains pickup lives at 50/100 Hz (low harmonics) -> NOT a lead-off, stays good
+    t = _t(2048)
+    x = (VREF / 2 + 0.005 * np.sin(2 * np.pi * 50.0 * t)
+                  + 0.003 * np.sin(2 * np.pi * 100.0 * t)
+                  + 5e-4 * np.random.randn(2048))
+    assert leadoff_status(x, FS, VREF) == "good"
+
+
 def test_report_quality_ordering():
     # quality: good (EMG) > poor (mains) > open (railed)
     railed = np.full(1024, 0.004)

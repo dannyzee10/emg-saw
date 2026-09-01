@@ -55,8 +55,8 @@ class EmgFilters:
 
 
 def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
-                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0, rms_hi=0.12,
-                   quiet_floor=0.02):
+                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.01, emg_hi=250.0, rms_hi=0.12,
+                   quiet_floor=0.02, leadoff_hh=0.20):
     """Analyse one RAW (un-notched, absolute-volt) single-channel window; return
     ``(state, quality, metrics)``:
 
@@ -74,7 +74,7 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
     x = np.asarray(x, dtype=float)
     n = x.shape[0]
     if n < 32:
-        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0, "centroid": 0.0, "rms": 0.0}
+        return "good", 100.0, {"rail": 0.0, "mains": 0.0, "dc": 0.0, "centroid": 0.0, "rms": 0.0, "hh": 0.0}
     margin = 0.03 * vref
     rail = float(np.mean((x < margin) | (x > vref - margin)))
     dc = float(abs(x.mean() - vref / 2.0) / (vref / 2.0 + 1e-12))   # 0=centered, 1=at rail
@@ -82,6 +82,8 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
     rms = float(np.sqrt(np.mean((x - x.mean()) ** 2)))
     mains_ratio = 0.0
     centroid = 0.0
+    hh = 0.0                 # high-harmonic (lead-off) ratio: power at 4x/8x vs 1x/2x mains
+    lead_off = False
     if ptp > amp_floor:
         xc = x - x.mean()
         w = np.hanning(n)
@@ -92,8 +94,10 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
             m = (f >= lo) & (f < hi)
             return float(P[m].sum())
 
-        mains = sum(_band(mains_hz * k - 2.0, mains_hz * k + 2.0)
-                    for k in (1, 2, 3) if mains_hz * k < fs / 2.0)
+        def _line(k):        # power in a +/-2 Hz line at the k-th mains harmonic
+            return _band(mains_hz * k - 2.0, mains_hz * k + 2.0) if mains_hz * k < 0.49 * fs else 0.0
+
+        mains = sum(_line(k) for k in (1, 2, 3))
         total = _band(1.0, 0.49 * fs) + 1e-15
         mains_ratio = mains / total
         # spectral centroid over the EMG band: real sEMG sits ~50-150 Hz; a floating pin's
@@ -101,9 +105,17 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
         bm = (f >= 20.0) & (f <= min(0.49 * fs, 500.0))
         pw = float(P[bm].sum())
         centroid = float((f[bm] * P[bm]).sum() / pw) if pw > 0 else 0.0
+        # electrode-off signature (empirical, this AD8237 AFE): a *connected* lead shows mains
+        # pickup at 50/100 Hz; when the signal lead comes OFF that pickup vanishes and sharp
+        # lines appear at 4x/8x mains (200/400 Hz). This is amplitude-INDEPENDENT (the off lead
+        # is quiet), so it catches a disconnect that the RMS/quiet-floor test alone reads green.
+        low_h = _line(1) + _line(2)
+        high_h = _line(4) + _line(8)
+        hh = high_h / (low_h + high_h + 1e-15)
+        lead_off = high_h > 1.5 * low_h and high_h > leadoff_hh * total
 
-    if rail > rail_frac:
-        state = "open"
+    if rail > rail_frac or lead_off:
+        state = "open"                       # railed OR lead-off (200/400 Hz signature) -> disconnected
     elif rms > quiet_floor and (mains_ratio > mains_dom or centroid > emg_hi or rms > rms_hi):
         state = "poor"                       # quiet connected baseline (rms<=quiet_floor) stays 'good'
     else:
@@ -114,9 +126,11 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
         quality *= max(0.15, (emg_hi / centroid) ** 2)   # non-physiological spectrum
     if rms > rms_hi:
         quality *= max(0.10, rms_hi / rms)               # amplitude blow-up (electrode fault)
+    if lead_off:
+        quality = min(quality, 8.0)                      # lead off -> quality floored low
     quality = float(max(0.0, min(100.0, quality)))
     return state, quality, {"rail": rail, "mains": mains_ratio, "dc": dc,
-                            "centroid": centroid, "rms": rms}
+                            "centroid": centroid, "rms": rms, "hh": hh}
 
 
 def leadoff_status(x, fs, vref=3.3, mains_hz=50.0, **kw):
