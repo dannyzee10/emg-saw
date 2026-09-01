@@ -55,7 +55,8 @@ class EmgFilters:
 
 
 def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
-                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0, rms_hi=0.12):
+                   rail_frac=0.20, mains_dom=0.5, amp_floor=0.02, emg_hi=250.0, rms_hi=0.12,
+                   quiet_floor=0.02):
     """Analyse one RAW (un-notched, absolute-volt) single-channel window; return
     ``(state, quality, metrics)``:
 
@@ -103,8 +104,8 @@ def leadoff_report(x, fs, vref=3.3, mains_hz=50.0,
 
     if rail > rail_frac:
         state = "open"
-    elif ptp > amp_floor and (mains_ratio > mains_dom or centroid > emg_hi or rms > rms_hi):
-        state = "poor"
+    elif rms > quiet_floor and (mains_ratio > mains_dom or centroid > emg_hi or rms > rms_hi):
+        state = "poor"                       # quiet connected baseline (rms<=quiet_floor) stays 'good'
     else:
         state = "good"
 

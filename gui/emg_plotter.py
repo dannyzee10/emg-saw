@@ -649,6 +649,8 @@ class EmgScope(QtWidgets.QMainWindow):
             ok_all = ok_all and ok
             parts.append(f"{self.muscle_names[c]} {lvl:.1f}mV {'✓' if ok else '⚠'}")
         tag = "OK — relaxed ✓" if ok_all else "NOISY ⚠ relax / check electrode + DRL"
+        color = "#39d353" if ok_all else "#e3b341"
+        self.lbl_hint.setStyleSheet(f"font-style:italic; font-weight:bold; color:{color};")
         self.lbl_hint.setText("EMG Baseline: " + " | ".join(parts) + "  —  " + tag)
 
     def _onset_overlay(self, c, t, y):

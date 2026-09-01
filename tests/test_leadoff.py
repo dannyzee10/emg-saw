@@ -60,6 +60,13 @@ def test_good_quiet_baseline():
     assert leadoff_status(x, FS, VREF) == "good"
 
 
+def test_good_quiet_connected_even_if_mains_shaped():
+    # connected electrode at rest ~6 mV RMS, even if a bit 50 Hz / noise shaped -> good
+    t = np.arange(2048) / FS
+    x = VREF / 2 + 0.006 * np.sin(2 * np.pi * 50.0 * t) + 0.003 * np.random.randn(2048)
+    assert leadoff_status(x, FS, VREF) == "good"
+
+
 def test_report_quality_ordering():
     # quality: good (EMG) > poor (mains) > open (railed)
     railed = np.full(1024, 0.004)
