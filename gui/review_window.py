@@ -50,10 +50,12 @@ class ReviewWindow(QtWidgets.QDialog):
         self.muscle_names = [names[c] if c < len(names) else f"Ch{c+1}" for c in range(self.nch)]
         self.filters = EmgFilters(self.fs)
         self.do_notch = 0
-        self.view = "Raw"
+        self.pipeline = []              # ordered op keys (Signal Processing pipeline)
+        self.proc_channels = "all"      # 'all' or a channel index
         self.cursor_i = 0
         self.playing = False
         self._disp = None
+        self._units = []
         self._unit = "mV"
         self._build_ui()
         self._recompute()
@@ -104,9 +106,13 @@ class ReviewWindow(QtWidgets.QDialog):
         ops = QtWidgets.QHBoxLayout()
         ops.addWidget(QtWidgets.QLabel("Operation"))
         self.cmb_view = QtWidgets.QComboBox()
-        self.cmb_view.addItems(self.VIEWS)
+        self.cmb_view.addItems(self.VIEWS + ["Custom"])
         self.cmb_view.currentTextChanged.connect(self._on_view)
         ops.addWidget(self.cmb_view)
+        self.btn_proc = QtWidgets.QPushButton("⚙ Signal Processing")
+        self.btn_proc.setToolTip("Build a custom offline processing pipeline (Available -> Selected)")
+        self.btn_proc.clicked.connect(self._open_processing)
+        ops.addWidget(self.btn_proc)
         ops.addWidget(QtWidgets.QLabel("Notch"))
         self.cmb_notch = QtWidgets.QComboBox()
         self.cmb_notch.addItems(["off", "50 Hz", "60 Hz"])
@@ -166,35 +172,37 @@ class ReviewWindow(QtWidgets.QDialog):
 
     # --------------------------------------------------------------- processing
     def _recompute(self):
-        """Build the display array (N,nch) in display units for the current Operation."""
+        """Run the Signal-Processing pipeline per channel; build display array + per-channel units.
+        Channels outside the pipeline's scope stay raw (mV); each plot carries its own unit."""
+        from dsp.pipeline import apply_pipeline, pipeline_unit
         n = self.codes.shape[0]
         out = np.zeros((n, self.nch), dtype=float)
+        units = []
         for c in range(self.nch):
             v = self.codes[:, c] / self.full * self.vref
             ac = v - v.mean()
             if self.do_notch:
                 ac = self.filters.apply_notch(ac.reshape(-1, 1), self.do_notch)[:, 0]
-            if self.view == "Raw":
+            apply_here = self.pipeline and (self.proc_channels == "all" or self.proc_channels == c)
+            if apply_here:
+                ctx = {"fs": self.fs, "filters": self.filters, "mvc": self.mvc[c], "smooth_ms": 100.0}
+                sig = apply_pipeline(ac, self.pipeline, ctx)
+                unit = pipeline_unit(self.pipeline)
+                out[:, c] = sig if unit == "%" else sig * 1e3
+                units.append(unit)
+            else:
                 out[:, c] = ac * 1e3
-            elif self.view == "Rectified":
-                out[:, c] = np.abs(ac) * 1e3
-            elif self.view == "RMS envelope":
-                bp = self.filters.bandpass(ac.reshape(-1, 1))[:, 0]
-                out[:, c] = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0] * 1e3
-            else:  # % MVC — normalize to the set MVC, else to this channel's own peak envelope
-                bp = self.filters.bandpass(ac.reshape(-1, 1))[:, 0]
-                env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
-                ref = self.mvc[c] if self.mvc[c] else (float(env.max()) + 1e-12)
-                out[:, c] = env / ref * 100.0
-        self._unit = "%" if self.view == "% MVC" else "mV"
+                units.append("mV")
         self._disp = out
+        self._units = units
+        self._unit = units[0] if units else "mV"
 
     def _redraw(self):
         t = self.t if self.t.shape[0] == self._disp.shape[0] else np.arange(self._disp.shape[0]) / self.fs
         self._tvec = t
         for c in range(self.nch):
             self.curves[c].setData(t, self._disp[:, c])
-            self.plots[c].setLabel("left", self.muscle_names[c], units=self._unit)
+            self.plots[c].setLabel("left", self.muscle_names[c], units=self._units[c])
             self.plots[c].enableAutoRange(axis="y")
         self._update_cursor()
 
@@ -209,7 +217,7 @@ class ReviewWindow(QtWidgets.QDialog):
         self.slider.blockSignals(True)
         self.slider.setValue(i)
         self.slider.blockSignals(False)
-        vals = "  ".join(f"{self.muscle_names[c]} {self._disp[i, c]:.1f}{self._unit}"
+        vals = "  ".join(f"{self.muscle_names[c]} {self._disp[i, c]:.1f}{self._units[c]}"
                          for c in range(self.nch))
         total = self._disp.shape[0] / self.fs
         self.lbl_read.setText(f"t={tc:6.2f}/{total:5.1f}s   {vals}")
@@ -241,9 +249,27 @@ class ReviewWindow(QtWidgets.QDialog):
         self._update_cursor()
 
     def _on_view(self, t):
-        self.view = t
-        self._recompute()
-        self._redraw()
+        from dsp.pipeline import PRESETS
+        if t in PRESETS:                        # a quick preset defines a whole pipeline
+            self.pipeline = list(PRESETS[t])
+            self.proc_channels = "all"
+            self._recompute()
+            self._redraw()
+        # 'Custom' is set by the Signal Processing dialog; ignore its combo echo
+
+    def _open_processing(self):
+        """Open the Signal Processing pipeline builder; apply the result to the review."""
+        from gui.processing_dialog import ProcessingDialog
+        dlg = ProcessingDialog(self.pipeline, self.nch, self.muscle_names,
+                               self.proc_channels, parent=self)
+        if dlg.exec_() == QtWidgets.QDialog.Accepted:
+            self.pipeline = dlg.selected_keys()
+            self.proc_channels = dlg.channels()
+            self.cmb_view.blockSignals(True)
+            self.cmb_view.setCurrentText("Custom")
+            self.cmb_view.blockSignals(False)
+            self._recompute()
+            self._redraw()
 
     def _on_notch(self, t):
         self.do_notch = 0 if t.startswith("off") else int(t.split()[0])
