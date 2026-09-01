@@ -4,6 +4,8 @@ Open → live RMS-envelope preview + baseline check → ● Record the max hold 
 the peak MVC is highlighted (green window) with its value + bar → Use MVC. The main
 window feeds live absolute-volt chunks via feed() (passive display, one reader).
 """
+import time
+
 import numpy as np
 import pyqtgraph as pg
 from PyQt5 import QtCore, QtWidgets
@@ -234,3 +236,57 @@ class MvcDialog(QtWidgets.QDialog):
             self.bars[c].setValue(100)
         self.btn_use.setEnabled(any(v > 0 for v in self.mvc_values))
         self._set_hint("captured")
+
+
+class MvcSaveDialog(QtWidgets.QDialog):
+    """Noraxon-style 'Save Data' step shown right after an MVC capture: name the record
+    (auto '(MVC)' suffix), confirm the subject, then Save & Activate (persist the MVC to the
+    stack + normalize the scope to %MVC) or Skip. Adapted to our single-window scope."""
+
+    def __init__(self, mvc_values, muscle_names, subject="", parent=None):
+        super().__init__(parent)
+        self.mvc_values = list(mvc_values)
+        self.muscle_names = list(muscle_names)
+        self.setWindowTitle("Save MVC")
+        self.resize(460, 300)
+        v = QtWidgets.QVBoxLayout(self)
+        v.setSpacing(8)
+
+        head = QtWidgets.QLabel("MVC captured — save it to the MVC stack and normalize the scope to %MVC.")
+        head.setWordWrap(True)
+        head.setStyleSheet("font-weight:bold; color:#e6eefc;")
+        v.addWidget(head)
+
+        form = QtWidgets.QFormLayout()
+        stamp = time.strftime("%Y-%m-%d %H:%M")
+        base = subject.strip() or "Session"
+        self.ed_name = QtWidgets.QLineEdit(f"{base} {stamp} (MVC)")
+        self.ed_subject = QtWidgets.QLineEdit(subject.strip())
+        form.addRow("Name", self.ed_name)
+        form.addRow("Subject", self.ed_subject)
+        v.addLayout(form)
+
+        rows = "\n".join(f"   {self.muscle_names[c]}:  {val*1e3:.1f} mV  (100% MVC)"
+                         for c, val in enumerate(self.mvc_values) if val)
+        info = QtWidgets.QLabel("Reference levels:\n" + (rows or "   (none)"))
+        info.setStyleSheet("color:#bcd0ee; font-size:12px;")
+        v.addWidget(info)
+        v.addStretch(1)
+
+        ctl = QtWidgets.QHBoxLayout()
+        ctl.addStretch(1)
+        self.btn_skip = QtWidgets.QPushButton("Skip")
+        self.btn_skip.clicked.connect(self.reject)
+        _style(self.btn_skip, "neutral")
+        self.btn_save = QtWidgets.QPushButton("Save & Activate")
+        self.btn_save.clicked.connect(self.accept)
+        _style(self.btn_save, "green")
+        ctl.addWidget(self.btn_skip)
+        ctl.addWidget(self.btn_save)
+        v.addLayout(ctl)
+
+    def name(self):
+        return self.ed_name.text().strip() or "MVC"
+
+    def subject(self):
+        return self.ed_subject.text().strip()

@@ -588,24 +588,63 @@ class EmgScope(QtWidgets.QMainWindow):
         return float(fb[min(idx, len(fb) - 1)])
 
     def _set_mvc(self):
-        from gui.mvc_dialog import MvcDialog
+        from gui.mvc_dialog import MvcDialog, MvcSaveDialog
         dlg = MvcDialog(self.nch, self.fs, self.muscle_names, vref=self.vref, parent=self)
         self._mvc_dialog = dlg
         try:
             accepted = dlg.exec_()
         finally:
             self._mvc_dialog = None
-        if accepted == QtWidgets.QDialog.Accepted:
-            for c in range(self.nch):
-                if dlg.mvc_values[c] > 0:
-                    self.mvc[c] = dlg.mvc_values[c]
-            self.lbl_footer.setText(
-                "MVC captured: " + ", ".join(self._fmt_amp(v) for v in self.mvc if v) +
-                " — channels now show % MVC")
-            self.lbl_hint.setText(f"MVC set ✓ — tick % MVC to see normalized effort (0–{self.mvc_range}%)")
-            if self.show_mvc:
-                self.sweep_y = None
-                self._apply_scaling()
+        if accepted != QtWidgets.QDialog.Accepted:
+            return
+        for c in range(self.nch):
+            if dlg.mvc_values[c] > 0:
+                self.mvc[c] = dlg.mvc_values[c]
+        # #5 Save Data dialog (auto '(MVC)' name + subject) -> persist to the MVC stack
+        save = MvcSaveDialog(self.mvc, self.muscle_names, subject=self.ed_subject.text(), parent=self)
+        if save.exec_() == QtWidgets.QDialog.Accepted:
+            rec = self._save_mvc_record(save.name(), save.subject())
+            if save.subject():
+                self.ed_subject.setText(save.subject())
+            note = f"saved as “{rec['name']}”"
+        else:
+            note = "not saved"
+        # #6 auto-activate the normalized (%MVC) view + 'MVC stack updated'
+        self._activate_mvc(note)
+
+    def _save_mvc_record(self, name, subject):
+        """Persist the current per-channel MVC to mvc_store.json (the reusable 'MVC stack')."""
+        import json
+        rec = {"name": name, "subject": subject,
+               "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"), "fs": self.fs,
+               "channels": [{"name": self.muscle_names[c],
+                             "mvc_v": v, "mvc_mv": (v * 1e3 if v else None)}
+                            for c, v in enumerate(self.mvc)]}
+        path = os.path.abspath("mvc_store.json")
+        store = []
+        if os.path.exists(path):
+            try:
+                with open(path, encoding="utf-8") as f:
+                    store = json.load(f)
+            except Exception:
+                store = []
+        store.append(rec)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(store, f, indent=2)
+        return rec
+
+    def _activate_mvc(self, note):
+        """#6: after MVC, switch the scope to %MVC (y-axis becomes %) and confirm."""
+        self.lbl_footer.setText(
+            "MVC captured: " + ", ".join(self._fmt_amp(v) for v in self.mvc if v) +
+            " — channels now show % MVC")
+        self.lbl_hint.setText(f"MVC set ✓ — normalized to % MVC (0–{self.mvc_range}%). Untick % MVC for raw.")
+        if not self.cb_mvc.isChecked():
+            self.cb_mvc.setChecked(True)          # auto-activate normalized view (fires _on_mvc_view)
+        else:
+            self.sweep_y = None
+            self._apply_scaling()
+        self._flash_banner("ok", f"MVC stack updated — amplitude normalized to %MVC ({note})")
 
     def _clear_mvc(self):
         self.mvc = [None] * self.nch
@@ -687,16 +726,19 @@ class EmgScope(QtWidgets.QMainWindow):
         return a if order[a] >= order[b] else b
 
     def _baseline_popup(self, level, head, info):
-        """Flash a big in-window banner with the result (child widget -> safe teardown,
-        no modal to dismiss). Auto-hides after a few seconds. level = ok/warn/bad."""
         one = info.replace("\n\n", "  —  ").replace("\n", "   ")
+        self._flash_banner(level, f"EMG Baseline — {head}      ({one})")
+
+    def _flash_banner(self, level, text):
+        """Big in-window banner below the toolbar (child widget -> safe teardown, no modal
+        to dismiss). level = ok/warn/bad; auto-hides after a few seconds."""
         bg, fg = {"ok": ("#173d1f", "#39d353"),
                   "warn": ("#3d2f10", "#e3b341"),
                   "bad": ("#3d1414", "#ff6b6b")}[level]
         self.lbl_banner.setStyleSheet(
             f"background:{bg}; color:{fg}; font-size:15px; font-weight:bold;"
             f"padding:8px; border:1px solid {fg}; border-radius:4px;")
-        self.lbl_banner.setText(f"EMG Baseline — {head}      ({one})")
+        self.lbl_banner.setText(text)
         self.lbl_banner.setVisible(True)
         self._banner_timer.start(6000)
 

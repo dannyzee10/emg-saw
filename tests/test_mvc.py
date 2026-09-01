@@ -54,3 +54,34 @@ def test_mvc_peak_ge_best1s():
     dlg.rule = "best1s"
     best1s, _, _ = dlg._compute_mvc(env)
     assert peak >= best1s > 0                     # peak envelope >= best sustained 1 s
+
+
+def test_mvc_save_dialog_defaults():
+    from PyQt5 import QtWidgets
+    from gui.mvc_dialog import MvcSaveDialog
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    dlg = MvcSaveDialog([0.05, 0.08], ["FCR", "ECR"], subject="S01")
+    assert dlg.name().endswith("(MVC)")          # Noraxon-style auto '(MVC)' suffix
+    assert "S01" in dlg.name()
+    assert dlg.subject() == "S01"
+
+
+def test_save_mvc_record_writes_stack(tmp_path, monkeypatch):
+    from PyQt5 import QtWidgets
+    from communication.sources import SimSource
+    from gui.emg_plotter import EmgScope
+    import json
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    monkeypatch.chdir(tmp_path)
+
+    win = EmgScope(SimSource(2, FS, 12), 2, FS, 3.3, 12, False, coupling="AC")
+    win.mvc = [0.05, 0.08]
+    rec = win._save_mvc_record("S01 (MVC)", "S01")
+    assert rec["channels"][0]["mvc_v"] == 0.05
+    store = json.loads((tmp_path / "mvc_store.json").read_text(encoding="utf-8"))
+    assert len(store) == 1 and store[0]["name"] == "S01 (MVC)"
+    # a second save appends to the stack
+    win._save_mvc_record("S01 b (MVC)", "S01")
+    store = json.loads((tmp_path / "mvc_store.json").read_text(encoding="utf-8"))
+    assert len(store) == 2
+    win.close()
