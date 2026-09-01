@@ -116,6 +116,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self._leadoff = LeadoffTracker(nch, fs, vref)   # per-channel electrode lead-off
         self._mdf_hist = [deque(maxlen=600) for _ in range(nch)]   # (t, median-freq) -> fatigue
         self._mvc_dialog = None            # open MVC calibration dialog (fed live by _update)
+        self.show_mvc = False              # % MVC display mode (RMS envelope normalized, 0-120%)
 
         # scope state
         self.coupling = coupling            # DC / AC / GND
@@ -287,6 +288,11 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cb_onset.setToolTip("Highlight active (contraction) periods on the trace")
         self.cb_onset.stateChanged.connect(lambda s: setattr(self, "show_onset", bool(s)))
         bar.addWidget(self.cb_onset)
+
+        self.cb_mvc = QtWidgets.QCheckBox("% MVC")
+        self.cb_mvc.setToolTip("Show each lane as % MVC — RMS envelope normalized to the MVC, 0-120% (set MVC first)")
+        self.cb_mvc.stateChanged.connect(self._on_mvc_view)
+        bar.addWidget(self.cb_mvc)
 
         self.cb_spec = QtWidgets.QCheckBox("Spectrum")
         self.cb_spec.setToolTip("Show a live FFT frequency spectrum below the traces")
@@ -567,6 +573,9 @@ class EmgScope(QtWidgets.QMainWindow):
             self.lbl_footer.setText(
                 "MVC captured: " + ", ".join(self._fmt_amp(v) for v in self.mvc if v) +
                 " — channels now show % MVC")
+            if self.show_mvc:
+                self.sweep_y = None
+                self._apply_scaling()
 
     def _clear_mvc(self):
         self.mvc = [None] * self.nch
@@ -576,6 +585,16 @@ class EmgScope(QtWidgets.QMainWindow):
         self.show_spectrum = bool(s)
         if self.spec_plot is not None:
             self.spec_plot.setVisible(self.show_spectrum)
+
+    def _mvc_view_on(self):
+        return self.show_mvc and all(v for v in self.mvc)
+
+    def _on_mvc_view(self, s):
+        self.show_mvc = bool(s)
+        if self.show_mvc and not self._mvc_view_on():
+            self.lbl_footer.setText("Set MVC first (Set MVC button), then enable % MVC view")
+        self.sweep_y = None                # units changed -> rebuild the sweep buffer
+        self._apply_scaling()
 
     def _onset_overlay(self, c, t, y):
         """Highlight active (contraction) samples in white on top of the trace."""
@@ -690,12 +709,19 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
         # snap the Y range so the top & bottom edges land exactly on grid lines (incl. below 0)
         ylo = math.floor((self.vpos - half) / self.vdiv + 1e-9) * self.vdiv
         yhi = ylo + self.vdiv * NVDIV
-        for p in self.plots:
+        mvc_view = self._mvc_view_on()
+        for i, p in enumerate(self.plots):
             p.setXRange(0, window, padding=0)
             p.getAxis("bottom").setTicks([xticks])
-            if not self.autoscale:                    # autoscale Y is set in _update_status
-                p.setYRange(ylo, yhi, padding=0)
-                p.getAxis("left").setTicks([self._make_ticks(ylo, yhi, self.vdiv)])
+            if mvc_view:
+                p.setYRange(0, 120, padding=0)
+                p.getAxis("left").setTicks([[(v, str(v)) for v in (0, 20, 40, 60, 80, 100, 120)]])
+                p.setLabel("left", "%MVC")
+            else:
+                p.setLabel("left", f"Ch{i+1}", units="V")
+                if not self.autoscale:                # autoscale Y is set in _update_status
+                    p.setYRange(ylo, yhi, padding=0)
+                    p.getAxis("left").setTicks([self._make_ticks(ylo, yhi, self.vdiv)])
 
     def _autoset(self):
         if self.filled < 10:
@@ -718,6 +744,13 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
     # ---------- data path ----------
     def _process(self, data):
         """Absolute volts in -> displayed volts out (coupling + optional filters)."""
+        if self._mvc_view_on():
+            out = np.empty_like(data, dtype=float)
+            for c in range(self.nch):
+                bp = self.filters.bandpass(data[:, c:c + 1])[:, 0]
+                env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
+                out[:, c] = env / self.mvc[c] * 100.0        # % MVC
+            return out
         if self.coupling == "GND":
             return np.zeros_like(data)
         out = data
@@ -852,7 +885,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                         if rawwin is not None:
                             st, q = self._leadoff.update(c, rawwin[:, c])
                             self.channel_panel.set_status(c, st, q)
-                    if self.autoscale:
+                    if self.autoscale and not self.show_mvc:
                         lo, hi = float(x.min()), float(x.max())
                         span = max(hi - lo, 1e-4)
                         step = self._nice_step(span / (NVDIV - 2))
