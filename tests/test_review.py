@@ -84,6 +84,14 @@ def test_processing_dialog_build_and_channel_scope(tmp_path, monkeypatch):
             break
     dlg._insert()
     assert dlg.selected_keys() == ["rectify", "rms"]
+    # Remove All asks to confirm — 'No' keeps the pipeline
+    monkeypatch.setattr(QtWidgets.QMessageBox, "question",
+                        lambda *a, **k: QtWidgets.QMessageBox.No)
+    dlg._remove_all()
+    assert dlg.selected_keys() == ["rectify", "rms"]
+    # 'Yes' clears it
+    monkeypatch.setattr(QtWidgets.QMessageBox, "question",
+                        lambda *a, **k: QtWidgets.QMessageBox.Yes)
     dlg._remove_all()
     assert dlg.selected_keys() == []
     assert dlg.channels() == "all"

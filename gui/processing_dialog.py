@@ -104,7 +104,13 @@ class ProcessingDialog(QtWidgets.QDialog):
             self.selected.takeItem(row)
 
     def _remove_all(self):
-        self.selected.clear()
+        if self.selected.count() == 0:
+            return
+        r = QtWidgets.QMessageBox.question(
+            self, "Clear processing", "Remove all operations from the pipeline?",
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+        if r == QtWidgets.QMessageBox.Yes:
+            self.selected.clear()
 
     def _move(self, delta):
         row = self.selected.currentRow()
