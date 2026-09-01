@@ -49,6 +49,11 @@ def test_gui_builds_and_runs_5ch():
         app.processEvents()
         time.sleep(0.005)
     assert win.show_mvc and win._mvc_view_on()
+    win.cmb_amp.setCurrentText("150%")   # amplitude (display range) selector
+    for _ in range(4):
+        app.processEvents()
+        time.sleep(0.005)
+    assert win.mvc_range == 150
     win.cb_mvc.setChecked(False)
     win.close()
 

@@ -117,6 +117,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self._mdf_hist = [deque(maxlen=600) for _ in range(nch)]   # (t, median-freq) -> fatigue
         self._mvc_dialog = None            # open MVC calibration dialog (fed live by _update)
         self.show_mvc = False              # % MVC display mode (RMS envelope normalized, 0-120%)
+        self.mvc_range = 120               # % MVC display range ("Amplitude", Noraxon default 120)
 
         # scope state
         self.coupling = coupling            # DC / AC / GND
@@ -294,6 +295,13 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cb_mvc.stateChanged.connect(self._on_mvc_view)
         bar.addWidget(self.cb_mvc)
 
+        self.cmb_amp = QtWidgets.QComboBox()
+        self.cmb_amp.addItems(["100%", "120%", "150%", "200%"])
+        self.cmb_amp.setCurrentText("120%")
+        self.cmb_amp.setToolTip("% MVC display range (Amplitude) — Noraxon default 120% shows effort above the MVC")
+        self.cmb_amp.currentTextChanged.connect(self._on_amp_range)
+        bar.addWidget(self.cmb_amp)
+
         self.cb_spec = QtWidgets.QCheckBox("Spectrum")
         self.cb_spec.setToolTip("Show a live FFT frequency spectrum below the traces")
         self.cb_spec.stateChanged.connect(self._on_spectrum)
@@ -307,6 +315,10 @@ class EmgScope(QtWidgets.QMainWindow):
         self.btn_rec = QtWidgets.QPushButton("● Record")
         self.btn_rec.setCheckable(True)
         self.btn_rec.toggled.connect(self._on_record)
+        self.btn_rec.setStyleSheet(
+            "QPushButton{min-height:30px;font-size:13px;font-weight:bold;padding:4px 16px;"
+            "border-radius:6px;background:#2e7d32;color:#fff;border:none;}"
+            "QPushButton:hover{background:#388e3c;} QPushButton:checked{background:#c62828;}")
         bar.addWidget(self.btn_rec)
 
         bar.addStretch(1)
@@ -459,6 +471,9 @@ class EmgScope(QtWidgets.QMainWindow):
         self.lbl_conn = QtWidgets.QLabel(self._conn_info)
         self.lbl_conn.setObjectName("footerL")
         f.addWidget(self.lbl_conn)
+        self.lbl_hint = QtWidgets.QLabel("Tip: click Set MVC to calibrate — then tick % MVC for normalized effort")
+        self.lbl_hint.setStyleSheet("font-style:italic; color:#7fa8dd;")
+        f.addWidget(self.lbl_hint)
         f.addStretch(1)
         self.lbl_footer = QtWidgets.QLabel("Ready")
         self.lbl_footer.setObjectName("footerR")
@@ -573,6 +588,7 @@ class EmgScope(QtWidgets.QMainWindow):
             self.lbl_footer.setText(
                 "MVC captured: " + ", ".join(self._fmt_amp(v) for v in self.mvc if v) +
                 " — channels now show % MVC")
+            self.lbl_hint.setText(f"MVC set ✓ — tick % MVC to see normalized effort (0–{self.mvc_range}%)")
             if self.show_mvc:
                 self.sweep_y = None
                 self._apply_scaling()
@@ -599,6 +615,15 @@ class EmgScope(QtWidgets.QMainWindow):
     def _on_envelope(self, s):
         self.do_envelope = bool(s)
         if self.show_mvc:                  # %MVC axis differs for raw vs envelope
+            self.sweep_y = None
+            self._apply_scaling()
+
+    def _on_amp_range(self, t):
+        try:
+            self.mvc_range = int(t.rstrip("%"))
+        except ValueError:
+            self.mvc_range = 120
+        if self.show_mvc:
             self.sweep_y = None
             self._apply_scaling()
 
@@ -721,10 +746,12 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             p.getAxis("bottom").setTicks([xticks])
             if mvc_view:
                 p.setLabel("left", "%MVC")
-                if self.do_envelope:                  # RMS envelope: 0-120% activation view
+                if self.do_envelope:                  # RMS envelope: 0-<range>% activation view
                     p.getViewBox().disableAutoRange()
-                    p.setYRange(0, 120, padding=0)
-                    p.getAxis("left").setTicks([[(v, str(v)) for v in (0, 20, 40, 60, 80, 100, 120)]])
+                    hi_ = self.mvc_range
+                    p.setYRange(0, hi_, padding=0)
+                    step = 20 if hi_ <= 120 else (25 if hi_ <= 150 else 50)
+                    p.getAxis("left").setTicks([[(v, str(v)) for v in range(0, hi_ + 1, step)]])
                 else:                                 # raw EMG normalized: fit the +/- swing
                     p.getAxis("left").setTicks(None)
                     p.getViewBox().enableAutoRange(axis="y")

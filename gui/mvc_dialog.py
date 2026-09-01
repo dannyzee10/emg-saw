@@ -1,9 +1,8 @@
-"""MvcDialog — Noraxon-style MVC calibration.
+"""MvcDialog — Noraxon-style MVC calibration with guided steps.
 
-Record a maximum contraction, watch the live RMS envelope, then set 100% MVC =
-peak (or best-1 s) of the envelope in the auto-selected (highlighted) window.
-The main window feeds live absolute-volt chunks via feed(); this is a passive
-display so only one reader stays on the source.
+Open → live RMS-envelope preview + baseline check → ● Record the max hold → ■ Stop →
+the peak MVC is highlighted (green window) with its value + bar → Use MVC. The main
+window feeds live absolute-volt chunks via feed() (passive display, one reader).
 """
 import numpy as np
 import pyqtgraph as pg
@@ -14,8 +13,28 @@ from dsp.dsp import EmgFilters
 CH_COLORS = ["#00e0ff", "#7CFC00", "#ff5050", "#ffb000", "#c080ff",
              "#ff80c0", "#80ffd0", "#ffd000"]
 
+GREEN, GREEN_H = "#2e7d32", "#388e3c"
+RED, RED_H = "#c62828", "#d32f2f"
+
+
+def _style(btn, kind):
+    c = {"green": (GREEN, GREEN_H, "#fff", "bold"),
+         "red": (RED, RED_H, "#fff", "bold"),
+         "neutral": ("#1b2c48", "#243a5e", "#e6eefc", "normal")}[kind]
+    bg, hv, fg, w = c
+    btn.setStyleSheet(
+        f"QPushButton{{min-height:34px;font-size:13px;font-weight:{w};padding:5px 18px;"
+        f"border-radius:6px;background:{bg};color:{fg};border:none;}}"
+        f"QPushButton:hover{{background:{hv};}}")
+
 
 class MvcDialog(QtWidgets.QDialog):
+    HINTS = {
+        "ready": "Relax the muscle (baseline should be quiet), then press ● Record and hold your MAXIMUM ~5 s.",
+        "recording": "● Recording — HOLD your maximum contraction!  Press ■ Stop when done.",
+        "captured": "Peak MVC captured (green window). Click Use MVC to apply it, or Redo.",
+    }
+
     def __init__(self, nch, fs, muscle_names=None, vref=3.3, parent=None):
         super().__init__(parent)
         self.nch = nch
@@ -24,27 +43,33 @@ class MvcDialog(QtWidgets.QDialog):
         self.names = muscle_names or [f"Ch{c+1}" for c in range(nch)]
         self.filters = EmgFilters(fs)
         self._chunks = []
-        self.recording = False
-        self.mvc_values = [0.0] * nch     # per-channel MVCref (volts) on accept
-        self.rms_win_ms = 500.0           # Noraxon: 500-1000 ms normalization window
-        self.rule = "peak"                # 'peak' (Noraxon) or 'best1s' (research)
+        self.state = "ready"              # ready -> recording -> captured
+        self.recording = False            # kept for API compatibility
+        self.mvc_values = [0.0] * nch
+        self.rms_win_ms = 500.0           # Noraxon: 500-1000 ms
+        self.rule = "peak"                # 'peak' (Noraxon) or 'best1s'
         self._max_s = 20.0
         self._build_ui()
+        self._set_hint("ready")
         self._timer = QtCore.QTimer(self)
         self._timer.timeout.connect(self._redraw)
-        self._timer.start(100)            # 10 Hz live envelope redraw
+        self._timer.start(100)
 
     # ---------------------------------------------------------------- UI
     def _build_ui(self):
         self.setWindowTitle("MVC calibration")
-        self.resize(760, 480)
+        self.resize(780, 500)
         v = QtWidgets.QVBoxLayout(self)
+        v.setSpacing(8)
 
-        hint = QtWidgets.QLabel(
-            "Press ● Record, hold your MAXIMUM contraction ~5 s, then ■ Stop.  "
-            "100% MVC = peak of the RMS envelope in the highlighted window.")
-        hint.setWordWrap(True)
-        v.addWidget(hint)
+        self.lbl_hint = QtWidgets.QLabel()
+        self.lbl_hint.setWordWrap(True)
+        self.lbl_hint.setStyleSheet("font-style:italic; font-size:13px; color:#bcd0ee;")
+        v.addWidget(self.lbl_hint)
+
+        self.lbl_base = QtWidgets.QLabel("baseline: —")
+        self.lbl_base.setStyleSheet("color:#8aa0c0; font-size:12px;")
+        v.addWidget(self.lbl_base)
 
         self.glw = pg.GraphicsLayoutWidget()
         self.glw.setBackground("#0b0f16")
@@ -58,24 +83,24 @@ class MvcDialog(QtWidgets.QDialog):
             p.setMenuEnabled(False)
             col = CH_COLORS[c % len(CH_COLORS)]
             self.curves.append(p.plot(pen=pg.mkPen(col, width=1.6)))
-            region = pg.LinearRegionItem(brush=(60, 220, 120, 45), movable=False)
+            region = pg.LinearRegionItem(brush=(60, 220, 120, 55), movable=False)
             region.setVisible(False)
             p.addItem(region)
             self.regions.append(region)
             self.plots.append(p)
         self.plots[-1].setLabel("bottom", "time", units="s")
 
-        # per-channel MVC value + bar (the "MVC in the bar")
         bars = QtWidgets.QHBoxLayout()
         self.val_lbls, self.bars = [], []
         for c in range(self.nch):
             box = QtWidgets.QVBoxLayout()
             lbl = QtWidgets.QLabel(f"{self.names[c]}: —")
+            lbl.setStyleSheet("font-size:12px; color:#e6eefc;")
             bar = QtWidgets.QProgressBar()
             bar.setRange(0, 100)
             bar.setValue(0)
             bar.setTextVisible(False)
-            bar.setFixedHeight(10)
+            bar.setFixedHeight(12)
             bar.setStyleSheet(f"QProgressBar::chunk {{ background:{CH_COLORS[c % len(CH_COLORS)]}; }}")
             box.addWidget(lbl)
             box.addWidget(bar)
@@ -87,6 +112,8 @@ class MvcDialog(QtWidgets.QDialog):
         ctl = QtWidgets.QHBoxLayout()
         self.btn_rec = QtWidgets.QPushButton("● Record MVC")
         self.btn_rec.clicked.connect(self._toggle_record)
+        _style(self.btn_rec, "green")
+        lw = QtWidgets.QLabel("RMS win")
         self.cmb_win = QtWidgets.QComboBox()
         self.cmb_win.addItems(["250 ms", "500 ms", "1000 ms"])
         self.cmb_win.setCurrentText("500 ms")
@@ -98,12 +125,15 @@ class MvcDialog(QtWidgets.QDialog):
         self.btn_use = QtWidgets.QPushButton("Use MVC")
         self.btn_use.clicked.connect(self.accept)
         self.btn_use.setEnabled(False)
+        _style(self.btn_use, "green")
         self.btn_redo = QtWidgets.QPushButton("Redo")
         self.btn_redo.clicked.connect(self.start_record)
+        _style(self.btn_redo, "neutral")
         self.btn_cancel = QtWidgets.QPushButton("Cancel")
         self.btn_cancel.clicked.connect(self.reject)
+        _style(self.btn_cancel, "neutral")
         ctl.addWidget(self.btn_rec)
-        ctl.addWidget(QtWidgets.QLabel("RMS win"))
+        ctl.addWidget(lw)
         ctl.addWidget(self.cmb_win)
         ctl.addWidget(self.cmb_rule)
         ctl.addStretch(1)
@@ -112,16 +142,19 @@ class MvcDialog(QtWidgets.QDialog):
         ctl.addWidget(self.btn_cancel)
         v.addLayout(ctl)
 
+    def _set_hint(self, state):
+        self.lbl_hint.setText(self.HINTS.get(state, ""))
+
     # ---------------------------------------------------------------- data
     def feed(self, volts):
-        if not self.recording:
+        if self.state == "captured":
             return
         a = np.asarray(volts, dtype=float)
         if a.ndim == 1:
             a = a.reshape(-1, 1)
         self._chunks.append(a)
+        cap = int((self._max_s if self.state == "recording" else 1.5) * self.fs)
         tot = sum(ch.shape[0] for ch in self._chunks)
-        cap = int(self._max_s * self.fs)
         while tot > cap and len(self._chunks) > 1:
             tot -= self._chunks.pop(0).shape[0]
 
@@ -134,14 +167,22 @@ class MvcDialog(QtWidgets.QDialog):
                                          win_ms=self.rms_win_ms)[:, 0]
 
     def _redraw(self):
-        if not self.recording:
+        if self.state == "captured":
             return
         buf = self._buffer()
         if buf is None or buf.shape[0] < 40:
             return
         t = np.arange(buf.shape[0]) / self.fs
+        base = []
         for c in range(self.nch):
-            self.curves[c].setData(t, self._env(buf, c) * 1e3)
+            env = self._env(buf, c)
+            self.curves[c].setData(t, env * 1e3)
+            base.append(float(np.median(env)) * 1e3)
+        if self.state == "ready" and base:
+            b = max(base)
+            ok = b < 20.0
+            self.lbl_base.setText(f"baseline: {b:.1f} mV  " + ("low ✓" if ok else "noisy ⚠ relax first"))
+            self.lbl_base.setStyleSheet(f"color:{'#39d353' if ok else '#e3b341'}; font-size:12px;")
 
     def _compute_mvc(self, env):
         n = len(env)
@@ -158,21 +199,28 @@ class MvcDialog(QtWidgets.QDialog):
 
     # ---------------------------------------------------------------- control
     def _toggle_record(self):
-        self.stop_record() if self.recording else self.start_record()
+        self.stop_record() if self.state == "recording" else self.start_record()
 
     def start_record(self):
         self._chunks = []
+        self.state = "recording"
         self.recording = True
         self.btn_rec.setText("■ Stop")
+        _style(self.btn_rec, "red")
         self.btn_use.setEnabled(False)
+        self._set_hint("recording")
         for r in self.regions:
             r.setVisible(False)
 
     def stop_record(self):
+        self.state = "captured"
         self.recording = False
         self.btn_rec.setText("● Record MVC")
+        _style(self.btn_rec, "green")
         buf = self._buffer()
         if buf is None or buf.shape[0] < int(0.2 * self.fs):
+            self.state = "ready"
+            self._set_hint("ready")
             return
         t = np.arange(buf.shape[0]) / self.fs
         for c in range(self.nch):
@@ -185,3 +233,4 @@ class MvcDialog(QtWidgets.QDialog):
             self.val_lbls[c].setText(f"{self.names[c]}: {ref*1e3:.1f} mV  (100% MVC)")
             self.bars[c].setValue(100)
         self.btn_use.setEnabled(any(v > 0 for v in self.mvc_values))
+        self._set_hint("captured")
