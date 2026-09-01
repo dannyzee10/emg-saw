@@ -26,7 +26,7 @@ class MvcDialog(QtWidgets.QDialog):
         self._chunks = []
         self.recording = False
         self.mvc_values = [0.0] * nch     # per-channel MVCref (volts) on accept
-        self.rms_win_ms = 250.0
+        self.rms_win_ms = 500.0           # Noraxon: 500-1000 ms normalization window
         self.rule = "peak"                # 'peak' (Noraxon) or 'best1s' (research)
         self._max_s = 20.0
         self._build_ui()
@@ -88,8 +88,8 @@ class MvcDialog(QtWidgets.QDialog):
         self.btn_rec = QtWidgets.QPushButton("● Record MVC")
         self.btn_rec.clicked.connect(self._toggle_record)
         self.cmb_win = QtWidgets.QComboBox()
-        self.cmb_win.addItems(["100 ms", "250 ms", "500 ms"])
-        self.cmb_win.setCurrentText("250 ms")
+        self.cmb_win.addItems(["250 ms", "500 ms", "1000 ms"])
+        self.cmb_win.setCurrentText("500 ms")
         self.cmb_win.currentTextChanged.connect(lambda t: setattr(self, "rms_win_ms", float(t.split()[0])))
         self.cmb_rule = QtWidgets.QComboBox()
         self.cmb_rule.addItems(["Peak (Noraxon)", "Best 1 s (research)"])
