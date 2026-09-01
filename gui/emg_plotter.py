@@ -638,9 +638,11 @@ class EmgScope(QtWidgets.QMainWindow):
         show_n = min(int(2.0 * self.fs), self.filled)
         if show_n < 40:
             self.lbl_hint.setText("EMG Baseline: no signal yet — stream, relax the muscle, then click")
+            self._baseline_popup(False, "No signal yet",
+                                 "Start streaming, relax the muscle, then click EMG Baseline.")
             return
         raw = self.ring[-show_n:]
-        parts, ok_all = [], True
+        parts, lines, ok_all = [], [], True
         for c in range(self.nch):
             bp = self.filters.bandpass(raw[:, c:c + 1])[:, 0]
             env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
@@ -648,10 +650,29 @@ class EmgScope(QtWidgets.QMainWindow):
             ok = lvl < 20.0
             ok_all = ok_all and ok
             parts.append(f"{self.muscle_names[c]} {lvl:.1f}mV {'✓' if ok else '⚠'}")
+            lines.append(f"{self.muscle_names[c]}:  {lvl:5.1f} mV   {'OK (relaxed) ✓' if ok else 'NOISY ⚠'}")
         tag = "OK — relaxed ✓" if ok_all else "NOISY ⚠ relax / check electrode + DRL"
         color = "#39d353" if ok_all else "#e3b341"
         self.lbl_hint.setStyleSheet(f"font-style:italic; font-weight:bold; color:{color};")
         self.lbl_hint.setText("EMG Baseline: " + " | ".join(parts) + "  —  " + tag)
+        # unmissable popup (Noraxon-style baseline check) — the footer text is easy to miss
+        head = "Baseline OK — muscle relaxed ✓" if ok_all else "Baseline NOISY ⚠"
+        info = "\n".join(lines) + ("\n\nReady to record MVC." if ok_all
+                else "\n\nRelax the muscle, check electrode contact + the DRL/ground lead, then re-check.")
+        self._baseline_popup(ok_all, head, info)
+
+    def _baseline_popup(self, ok, head, info):
+        """Non-modal result box for the baseline check (kept on self so it isn't GC'd;
+        non-blocking so it never stalls the scope or the headless tests)."""
+        box = getattr(self, "_base_box", None)
+        if box is None:
+            box = self._base_box = QtWidgets.QMessageBox(self)
+            box.setWindowTitle("EMG Baseline Check")
+        box.setIcon(QtWidgets.QMessageBox.Information if ok else QtWidgets.QMessageBox.Warning)
+        box.setText(f"<b>{head}</b>")
+        box.setInformativeText(info)
+        box.show()
+        box.raise_()
 
     def _onset_overlay(self, c, t, y):
         """Highlight active (contraction) samples in white on top of the trace."""
