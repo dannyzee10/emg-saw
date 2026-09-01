@@ -115,6 +115,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.filters = EmgFilters(fs)
         self._leadoff = LeadoffTracker(nch, fs, vref)   # per-channel electrode lead-off
         self._mdf_hist = [deque(maxlen=600) for _ in range(nch)]   # (t, median-freq) -> fatigue
+        self._mvc_dialog = None            # open MVC calibration dialog (fed live by _update)
 
         # scope state
         self.coupling = coupling            # DC / AC / GND
@@ -552,19 +553,20 @@ class EmgScope(QtWidgets.QMainWindow):
         return float(fb[min(idx, len(fb) - 1)])
 
     def _set_mvc(self):
-        proc = self._proc_cache
-        if proc is None or proc.shape[0] < 4:
-            self.lbl_footer.setText("MVC: no signal yet — stream, hold a max contraction, then click Set MVC")
-            return
-        vals = []
-        for c in range(self.nch):
-            ac = proc[:, c] - proc[:, c].mean()
-            env = self.filters.rms_envelope(ac.reshape(-1, 1))[:, 0]   # peak sustained RMS
-            self.mvc[c] = max(float(env.max()), 1e-5)
-            vals.append(self.mvc[c])
-        self.lbl_footer.setText("MVC captured: " +
-                                ", ".join(self._fmt_amp(v) for v in vals) +
-                                " — channels now show % MVC")
+        from gui.mvc_dialog import MvcDialog
+        dlg = MvcDialog(self.nch, self.fs, self.muscle_names, vref=self.vref, parent=self)
+        self._mvc_dialog = dlg
+        try:
+            accepted = dlg.exec_()
+        finally:
+            self._mvc_dialog = None
+        if accepted == QtWidgets.QDialog.Accepted:
+            for c in range(self.nch):
+                if dlg.mvc_values[c] > 0:
+                    self.mvc[c] = dlg.mvc_values[c]
+            self.lbl_footer.setText(
+                "MVC captured: " + ", ".join(self._fmt_amp(v) for v in self.mvc if v) +
+                " — channels now show % MVC")
 
     def _clear_mvc(self):
         self.mvc = [None] * self.nch
@@ -741,6 +743,8 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
 
         # ABSOLUTE volts (0..vref), scaled by probe
         volts = new.astype(float) / self.full * self.vref * self.probe
+        if self._mvc_dialog is not None:
+            self._mvc_dialog.feed(volts)
         n = new.shape[0]
         if n >= self.buf_n:
             self.ring[:] = volts[-self.buf_n:]
@@ -825,6 +829,8 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                     mf = self._median_freq(ac)
                     mnf = mean_frequency(ac, self.fs)
                     self._mdf_hist[c].append((self.total_samples / self.fs, mf))
+                    env_c = self.filters.rms_envelope(ac.reshape(-1, 1))[:, 0]
+                    cur = float(env_c[-max(1, int(0.25 * self.fs)):].mean())  # current RMS-env level
                     self.plots[c].setTitle(
                         f"{self.muscle_names[c]}   RMS {self._fmt_amp(rms)}"
                         f"   pk-pk {self._fmt_amp(pk)}   medF {mf:.0f}  mnF {mnf:.0f} Hz",
@@ -832,7 +838,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
                     if c < len(self.ch_cards):
                         card = self.ch_cards[c]
                         if self.mvc[c]:
-                            pct = 100.0 * rms / self.mvc[c]
+                            pct = 100.0 * cur / self.mvc[c]
                             card["rms"].setText(f"{pct:.0f}% MVC")
                             card["sub"].setText(
                                 f"RMS {self._fmt_amp(rms)}    medF {mf:.0f} Hz")
