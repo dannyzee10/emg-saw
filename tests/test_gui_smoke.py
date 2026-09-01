@@ -58,6 +58,19 @@ def test_gui_builds_and_runs_5ch():
         app.processEvents()
         time.sleep(0.005)
     assert win.mvc_range == 150
+
+    # Show Raw overrides the processed (%MVC / RMS env) view; the settings are kept
+    win.cb_raw.setChecked(True)
+    assert win.show_raw and not win._mvc_view_on()
+    win.cb_raw.setChecked(False)
+    assert win._mvc_view_on()
+
+    # Record/Pause activity step hints update contextually
+    win.btn_pause.setChecked(True)
+    assert "paused" in win.lbl_hint.text().lower()
+    win.btn_pause.setChecked(False)
+    assert "record" in win.lbl_hint.text().lower()
+
     win.cb_mvc.setChecked(False)
     win.close()
 

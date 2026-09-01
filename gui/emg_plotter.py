@@ -127,6 +127,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.probe = 1.0                   # multiply measured volts (e.g. 2.0 for /2 divider)
         self.do_notch = 0
         self.do_envelope = False
+        self.show_raw = False              # momentary raw override (Show Raw) over env/%MVC
         self.paused = False
         self.autoscale = False             # per-channel auto vertical scaling (MR4 style)
         self._proc_cache = None            # last processed visible window (for readouts)
@@ -279,6 +280,11 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cb_env = QtWidgets.QCheckBox("RMS env")
         self.cb_env.stateChanged.connect(self._on_envelope)
         bar.addWidget(self.cb_env)
+
+        self.cb_raw = QtWidgets.QCheckBox("Show Raw")
+        self.cb_raw.setToolTip("Momentarily show the raw EMG (overrides RMS env / % MVC) — your settings are kept")
+        self.cb_raw.stateChanged.connect(self._on_show_raw)
+        bar.addWidget(self.cb_raw)
 
         self.cb_auto = QtWidgets.QCheckBox("Auto V/ch")
         self.cb_auto.setToolTip("Auto-scale each channel's lane to its own signal (MR4 style)")
@@ -485,7 +491,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.lbl_conn = QtWidgets.QLabel(self._conn_info)
         self.lbl_conn.setObjectName("footerL")
         f.addWidget(self.lbl_conn)
-        self.lbl_hint = QtWidgets.QLabel("Tip: click Set MVC to calibrate — then tick % MVC for normalized effort")
+        self.lbl_hint = QtWidgets.QLabel("Ready — check EMG Baseline, then press ● Record to capture the activity.")
         self.lbl_hint.setStyleSheet("font-style:italic; color:#7fa8dd;")
         f.addWidget(self.lbl_hint)
         f.addStretch(1)
@@ -539,6 +545,24 @@ class EmgScope(QtWidgets.QMainWindow):
     def _on_pause(self, checked):
         self.paused = checked
         self.btn_pause.setText("Resume" if checked else "Pause")
+        self._update_rec_hint()
+
+    def _on_show_raw(self, s):
+        self.show_raw = bool(s)
+        self.sweep_y = None                 # units may change (env/% -> raw) -> rebuild sweep
+        self._apply_scaling()
+
+    def _update_rec_hint(self):
+        """Guide the Record -> Pause -> Stop activity with a contextual step hint."""
+        if self.recording.active:
+            if self.paused:
+                self.lbl_hint.setText("View paused (still recording) — Resume to watch, or ■ Stop to finish & save.")
+            else:
+                self.lbl_hint.setText("● Recording — Pause freezes the view (capture continues); ■ Stop finishes & saves.")
+        elif self.paused:
+            self.lbl_hint.setText("View paused — Resume to watch. Press ● Record to capture the activity.")
+        else:
+            self.lbl_hint.setText("Ready — check EMG Baseline, then press ● Record to capture the activity.")
 
     def _on_auto(self, s):
         self.autoscale = bool(s)
@@ -656,7 +680,7 @@ class EmgScope(QtWidgets.QMainWindow):
             self.spec_plot.setVisible(self.show_spectrum)
 
     def _mvc_view_on(self):
-        return self.show_mvc and all(v for v in self.mvc)
+        return self.show_mvc and all(v for v in self.mvc) and not self.show_raw
 
     def _on_mvc_view(self, s):
         self.show_mvc = bool(s)
@@ -913,7 +937,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             out = out - out.mean(axis=0)            # block DC, center on 0
         if self.do_notch:
             out = self.filters.apply_notch(out, self.do_notch)
-        if self.do_envelope:
+        if self.do_envelope and not self.show_raw:      # Show Raw overrides the envelope
             base = out if self.coupling == "AC" else out - out.mean(axis=0)
             out = self.filters.rms_envelope(base)
         return out
@@ -1092,6 +1116,8 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
         else:
             self.recording.stop()
             self.btn_rec.setText("● Record")
+            self._flash_banner("ok", "Recording saved ✓ — open 📄 Report, or press ● Record for another.")
+        self._update_rec_hint()
 
     def closeEvent(self, ev):
         self.controller.stop()
