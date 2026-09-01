@@ -302,6 +302,11 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cmb_amp.currentTextChanged.connect(self._on_amp_range)
         bar.addWidget(self.cmb_amp)
 
+        self.btn_base = QtWidgets.QPushButton("EMG Baseline")
+        self.btn_base.setToolTip("Check the resting EMG baseline before recording — relax the muscle, then click")
+        self.btn_base.clicked.connect(self._baseline_check)
+        bar.addWidget(self.btn_base)
+
         self.cb_spec = QtWidgets.QCheckBox("Spectrum")
         self.cb_spec.setToolTip("Show a live FFT frequency spectrum below the traces")
         self.cb_spec.stateChanged.connect(self._on_spectrum)
@@ -626,6 +631,25 @@ class EmgScope(QtWidgets.QMainWindow):
         if self.show_mvc:
             self.sweep_y = None
             self._apply_scaling()
+
+    def _baseline_check(self):
+        """Noraxon-style EMG Baseline Check: sample the resting signal, report per-channel
+        RMS + pass/fail (relaxed vs noisy)."""
+        show_n = min(int(2.0 * self.fs), self.filled)
+        if show_n < 40:
+            self.lbl_hint.setText("EMG Baseline: no signal yet — stream, relax the muscle, then click")
+            return
+        raw = self.ring[-show_n:]
+        parts, ok_all = [], True
+        for c in range(self.nch):
+            bp = self.filters.bandpass(raw[:, c:c + 1])[:, 0]
+            env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
+            lvl = float(np.median(env)) * 1e3          # mV
+            ok = lvl < 20.0
+            ok_all = ok_all and ok
+            parts.append(f"{self.muscle_names[c]} {lvl:.1f}mV {'✓' if ok else '⚠'}")
+        tag = "OK — relaxed ✓" if ok_all else "NOISY ⚠ relax / check electrode + DRL"
+        self.lbl_hint.setText("EMG Baseline: " + " | ".join(parts) + "  —  " + tag)
 
     def _onset_overlay(self, c, t, y):
         """Highlight active (contraction) samples in white on top of the trace."""

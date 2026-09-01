@@ -33,6 +33,10 @@ def test_gui_builds_and_runs_5ch():
     # 5 channel cards = 5 lanes were built
     assert len(win.channel_panel.cards) == 5
 
+    # EMG baseline check button runs without error and reports a result
+    win.btn_base.click()
+    assert "Baseline" in win.lbl_hint.text() or "signal" in win.lbl_hint.text()
+
     # Set MVC opens the MVC calibration dialog (tested in test_mvc.py); Clear resets the reference
     win.mvc[0] = 1.0
     win.channel_panel.btn_mvc_clr.click()
