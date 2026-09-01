@@ -38,10 +38,14 @@ def test_gui_builds_and_runs_5ch():
     win.channel_panel.btn_mvc_clr.click()
     assert win.mvc[0] is None
 
-    # % MVC view toggles without error (needs MVC set on all channels)
+    # % MVC view toggles without error (needs MVC set on all channels), raw + envelope paths
     win.mvc = [1.0] * win.nch
-    win.cb_mvc.setChecked(True)
-    for _ in range(8):
+    win.cb_mvc.setChecked(True)          # % MVC on raw EMG
+    for _ in range(6):
+        app.processEvents()
+        time.sleep(0.005)
+    win.cb_env.setChecked(True)          # % MVC on RMS envelope
+    for _ in range(6):
         app.processEvents()
         time.sleep(0.005)
     assert win.show_mvc and win._mvc_view_on()

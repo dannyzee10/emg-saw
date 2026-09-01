@@ -276,7 +276,7 @@ class EmgScope(QtWidgets.QMainWindow):
         bar.addWidget(self.cmb_notch)
 
         self.cb_env = QtWidgets.QCheckBox("RMS env")
-        self.cb_env.stateChanged.connect(lambda s: setattr(self, "do_envelope", bool(s)))
+        self.cb_env.stateChanged.connect(self._on_envelope)
         bar.addWidget(self.cb_env)
 
         self.cb_auto = QtWidgets.QCheckBox("Auto V/ch")
@@ -596,6 +596,12 @@ class EmgScope(QtWidgets.QMainWindow):
         self.sweep_y = None                # units changed -> rebuild the sweep buffer
         self._apply_scaling()
 
+    def _on_envelope(self, s):
+        self.do_envelope = bool(s)
+        if self.show_mvc:                  # %MVC axis differs for raw vs envelope
+            self.sweep_y = None
+            self._apply_scaling()
+
     def _onset_overlay(self, c, t, y):
         """Highlight active (contraction) samples in white on top of the trace."""
         ov = self.overlays[c]
@@ -714,10 +720,16 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             p.setXRange(0, window, padding=0)
             p.getAxis("bottom").setTicks([xticks])
             if mvc_view:
-                p.setYRange(0, 120, padding=0)
-                p.getAxis("left").setTicks([[(v, str(v)) for v in (0, 20, 40, 60, 80, 100, 120)]])
                 p.setLabel("left", "%MVC")
+                if self.do_envelope:                  # RMS envelope: 0-120% activation view
+                    p.getViewBox().disableAutoRange()
+                    p.setYRange(0, 120, padding=0)
+                    p.getAxis("left").setTicks([[(v, str(v)) for v in (0, 20, 40, 60, 80, 100, 120)]])
+                else:                                 # raw EMG normalized: fit the +/- swing
+                    p.getAxis("left").setTicks(None)
+                    p.getViewBox().enableAutoRange(axis="y")
             else:
+                p.getViewBox().disableAutoRange()
                 p.setLabel("left", f"Ch{i+1}", units="V")
                 if not self.autoscale:                # autoscale Y is set in _update_status
                     p.setYRange(ylo, yhi, padding=0)
@@ -748,8 +760,9 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             out = np.empty_like(data, dtype=float)
             for c in range(self.nch):
                 bp = self.filters.bandpass(data[:, c:c + 1])[:, 0]
-                env = self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
-                out[:, c] = env / self.mvc[c] * 100.0        # % MVC
+                bp = bp - bp.mean()
+                sig = self.filters.rms_envelope(bp.reshape(-1, 1))[:, 0] if self.do_envelope else bp
+                out[:, c] = sig / self.mvc[c] * 100.0   # % MVC (envelope if RMS env on, else raw EMG)
             return out
         if self.coupling == "GND":
             return np.zeros_like(data)
