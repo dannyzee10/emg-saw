@@ -23,6 +23,8 @@ class EmgFilters:
         ny = fs / 2.0
         hp = 20.0 / ny
         lp = min(450.0, 0.9 * ny) / ny
+        # 20-450 Hz surface-EMG band (SENIAM: Hermens et al. 2000, J. Electromyogr. Kinesiol. 10);
+        # 4th-order Butterworth applied zero-phase (sosfiltfilt) -> no phase distortion.
         self.bp_sos = butter(4, [hp, lp], btype="band", output="sos")
         self.notch = {}
         for f0 in (50.0, 60.0):
@@ -42,7 +44,8 @@ class EmgFilters:
         return filtfilt(b, a, x, axis=0)
 
     def rms_envelope(self, x: np.ndarray, win_ms: float = 100.0) -> np.ndarray:
-        """Linear envelope: moving-RMS of the (already band-passed) signal."""
+        """Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window — the amplitude
+        estimator used for % MVC normalization (Basmajian & De Luca 1985; SENIAM)."""
         n = max(1, int(self.fs * win_ms / 1000.0))
         if x.shape[0] < n:
             return np.abs(x)
@@ -170,8 +173,8 @@ class LeadoffTracker:
 
 # ------------------------------------------------------------------ analytics (M3)
 def iemg(x, fs):
-    """Integrated EMG: area under the rectified (DC-removed) signal, in V·s.
-    A measure of total muscle activity over the window."""
+    """Integrated EMG (iEMG): area under the full-wave-rectified signal, ∫|EMG| dt (V·s) —
+    total muscle activity over the window (Basmajian & De Luca 1985, *Muscles Alive*)."""
     x = np.asarray(x, dtype=float)
     if x.shape[0] < 2:
         return 0.0
@@ -180,8 +183,10 @@ def iemg(x, fs):
 
 
 def mean_frequency(x, fs, band=(20.0, 450.0)):
-    """Mean (centroid) frequency of the power spectrum over `band` (Hz). Complements
-    median frequency; both fall during a sustained contraction as the muscle fatigues."""
+    """Mean power-frequency MNF (Hz): the spectral centroid  MNF = Σ f·P(f) / Σ P(f)  over
+    `band`. With median frequency, the standard sEMG fatigue indicator — both fall during a
+    sustained contraction as conduction velocity drops (De Luca 1997, *J. Appl. Biomech.* 13;
+    Merletti & Parker 2004, *Electromyography*). P(f) = Hanning-windowed periodogram."""
     x = np.asarray(x, dtype=float)
     n = x.shape[0]
     if n < 8:
@@ -193,9 +198,29 @@ def mean_frequency(x, fs, band=(20.0, 450.0)):
     return float((f[m] * P[m]).sum() / tot) if tot > 0 else 0.0
 
 
+def median_frequency(x, fs, band=(20.0, 450.0)):
+    """Median power-frequency MDF (Hz): the frequency that splits the sEMG power spectrum into
+    two equal-energy halves,  Σ_{f<=MDF} P = ½ Σ P  (De Luca 1997; Merletti & Parker 2004).
+    Canonical implementation reused by the scope, review and scripts."""
+    x = np.asarray(x, dtype=float)
+    n = x.shape[0]
+    if n < 8:
+        return 0.0
+    P = np.abs(np.fft.rfft((x - x.mean()) * np.hanning(n))) ** 2
+    f = np.fft.rfftfreq(n, 1.0 / fs)
+    m = (f >= band[0]) & (f <= min(band[1], 0.5 * fs))
+    fb, Pb = f[m], P[m]
+    if fb.size == 0 or float(Pb.sum()) <= 0.0:
+        return 0.0
+    cum = np.cumsum(Pb)
+    idx = int(np.searchsorted(cum, cum[-1] / 2.0))
+    return float(fb[min(idx, fb.size - 1)])
+
+
 def cocontraction_index(a, b):
-    """Symmetric co-activation index between two RMS envelopes (same length), 0..100 %:
-    ``2·Σ min(a,b) / Σ (a+b) · 100``. 100 % = identical activation, 0 % = no overlap."""
+    """Co-contraction index between two RMS envelopes (0..100 %): the common-area method
+    ``CCI = 2·Σ min(a,b) / Σ (a+b) · 100`` (Falconer & Winter 1985, *Electromyogr. Clin.
+    Neurophysiol.* 25; Winter 2009). 100 % = identical activation, 0 % = no overlap."""
     a = np.abs(np.asarray(a, dtype=float))
     b = np.abs(np.asarray(b, dtype=float))
     denom = float((a + b).sum())
@@ -205,9 +230,10 @@ def cocontraction_index(a, b):
 
 
 def onset_offset(env, fs, thresh, min_on_ms=50.0, min_off_ms=50.0):
-    """Activation intervals from an RMS envelope crossing `thresh`. Returns a list of
-    ``(onset_s, offset_s)``; runs shorter than `min_on_ms` are ignored and gaps shorter
-    than `min_off_ms` are bridged (debounce)."""
+    """Muscle activation intervals by the threshold method: the RMS envelope must exceed
+    `thresh` (typically baseline mean + k·SD, or a fraction of peak) for at least `min_on_ms`,
+    with gaps shorter than `min_off_ms` bridged (Hodges & Bui 1996, *Electroencephalogr. Clin.
+    Neurophysiol.* 101). Returns a list of ``(onset_s, offset_s)`` intervals."""
     env = np.asarray(env, dtype=float)
     n = env.shape[0]
     if n == 0:
@@ -236,8 +262,9 @@ def onset_offset(env, fs, thresh, min_on_ms=50.0, min_off_ms=50.0):
 
 
 def fatigue_trend(mdf_series, times=None):
-    """Linear trend of a median/mean-frequency series over a trial. Returns
-    ``(slope_hz_per_s, pct_change)``; a negative slope = fatigue (spectral compression)."""
+    """Myoelectric fatigue index: least-squares linear slope of the median/mean-frequency
+    time series (Hz/s). A negative slope = spectral compression = fatigue (Merletti, Lo Conte
+    & Orizio 1991, *J. Appl. Physiol.* 69; De Luca 1997). Returns ``(slope_hz_per_s, pct)``."""
     y = np.asarray(mdf_series, dtype=float)
     n = y.shape[0]
     if n < 2:

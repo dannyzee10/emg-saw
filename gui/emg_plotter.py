@@ -44,7 +44,7 @@ import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui, QtWidgets
 
 from dsp.dsp import (EmgFilters, LeadoffTracker, leadoff_report, mean_frequency,
-                     cocontraction_index, iemg, onset_offset, fatigue_trend)
+                     median_frequency, cocontraction_index, iemg, onset_offset, fatigue_trend)
 from communication.sources import SerialSource, AsciiSource, SimSource
 from gui.model import AcquisitionModel
 from gui.controller import MainController
@@ -653,21 +653,9 @@ class EmgScope(QtWidgets.QMainWindow):
 
     # ---------- research metrics + export ----------
     def _median_freq(self, x):
-        """EMG median frequency (Hz) over the 20-450 Hz band — a fatigue indicator."""
-        n = len(x)
-        if n < 32:
-            return 0.0
-        f = np.fft.rfftfreq(n, 1.0 / self.fs)
-        P = np.abs(np.fft.rfft(x * np.hanning(n))) ** 2
-        band = (f >= 20.0) & (f <= 450.0)
-        if not band.any():
-            return 0.0
-        fb, Pb = f[band], P[band]
-        cum = np.cumsum(Pb)
-        if cum[-1] <= 0:
-            return 0.0
-        idx = int(np.searchsorted(cum, cum[-1] / 2.0))
-        return float(fb[min(idx, len(fb) - 1)])
+        """EMG median frequency (Hz), 20-450 Hz band — delegates to the canonical
+        dsp.median_frequency so scope, review and scripts share one implementation."""
+        return median_frequency(x, self.fs)
 
     def _set_mvc(self):
         from gui.mvc_dialog import MvcDialog, MvcSaveDialog
