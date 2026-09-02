@@ -187,6 +187,20 @@ class EmgScope(QtWidgets.QMainWindow):
         self.spec_plot = self.plot_widget.spec_plot
         self.spec_curves = self.plot_widget.spec_curves
         self.ch_cards = self.channel_panel.cards
+
+        # % MVC target guide (fatigue biofeedback): a horizontal target line + tolerance band per lane
+        self.target_lines, self.target_bands = [], []
+        for p in self.plots:
+            band = pg.LinearRegionItem(values=[35, 45], orientation="horizontal",
+                                       brush=(60, 220, 120, 40), movable=False)
+            band.setVisible(False)
+            p.addItem(band)
+            line = pg.InfiniteLine(angle=0, movable=False, pos=40,
+                                   pen=pg.mkPen("#39d353", width=1.5, style=QtCore.Qt.DashLine))
+            line.setVisible(False)
+            p.addItem(line)
+            self.target_bands.append(band)
+            self.target_lines.append(line)
         # ChannelPanel's MVC buttons were left unconnected by the MVC refactor — wire them
         self.channel_panel.btn_mvc.clicked.connect(self._set_mvc)
         self.channel_panel.btn_mvc_clr.clicked.connect(self._clear_mvc)
@@ -310,6 +324,19 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cmb_amp.setToolTip("% MVC display range (Amplitude) — Noraxon default 120% shows effort above the MVC")
         self.cmb_amp.currentTextChanged.connect(self._on_amp_range)
         bar.addWidget(self.cmb_amp)
+
+        self.cb_target = QtWidgets.QCheckBox("Target")
+        self.cb_target.setToolTip("Hold-a-target biofeedback: a % MVC target line + band to keep a constant "
+                                  "effort (for constant-force fatigue). Needs % MVC on.")
+        self.cb_target.stateChanged.connect(self._on_target)
+        bar.addWidget(self.cb_target)
+        self.spin_target = QtWidgets.QSpinBox()
+        self.spin_target.setRange(5, 120)
+        self.spin_target.setValue(40)
+        self.spin_target.setSuffix("%")
+        self.spin_target.setToolTip("Target % MVC to hold")
+        self.spin_target.valueChanged.connect(self._on_target)
+        bar.addWidget(self.spin_target)
 
         self.btn_ampcfg = QtWidgets.QPushButton("⚙ Amp/Smooth")
         self.btn_ampcfg.setToolTip("Amplitude Normalization config: smoothing algorithm + window (ms) + Amplitude %")
@@ -568,6 +595,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.show_raw = bool(s)
         self.sweep_y = None                 # units may change (env/% -> raw) -> rebuild sweep
         self._apply_scaling()
+        self._update_target()
 
     def _update_rec_hint(self):
         """Guide the Record -> Pause -> Stop activity with a contextual step hint."""
@@ -705,6 +733,7 @@ class EmgScope(QtWidgets.QMainWindow):
             self.lbl_footer.setText("Set MVC first (Set MVC button), then enable % MVC view")
         self.sweep_y = None                # units changed -> rebuild the sweep buffer
         self._apply_scaling()
+        self._update_target()
 
     def _on_envelope(self, s):
         self.do_envelope = bool(s)
@@ -720,6 +749,7 @@ class EmgScope(QtWidgets.QMainWindow):
         if self.show_mvc:
             self.sweep_y = None
             self._apply_scaling()
+        self._update_target()
 
     def _open_amp_norm(self):
         """Img1+Img4: real-time Amplitude Normalization config — smoothing algorithm +
@@ -756,6 +786,24 @@ class EmgScope(QtWidgets.QMainWindow):
         self._apply_scaling()
         label = " -> ".join(OPS[k][0].split(":")[-1].strip() for k in keys) if keys else "none (default RMS)"
         self.lbl_hint.setText(f"Live processing pipeline: {label}")
+
+    def _on_target(self, *_):
+        self._update_target()
+
+    def _update_target(self):
+        """% MVC target line + tolerance band (hold-a-target fatigue biofeedback). Only shown in
+        the % MVC view, where the y-axis is in % — hold your envelope inside the green band."""
+        if not hasattr(self, "target_lines"):
+            return
+        on = self.cb_target.isChecked() and self._mvc_view_on()
+        tv = float(self.spin_target.value())
+        tol = 5.0
+        for c in range(self.nch):
+            self.target_lines[c].setVisible(on)
+            self.target_bands[c].setVisible(on)
+            if on:
+                self.target_lines[c].setValue(tv)
+                self.target_bands[c].setRegion([max(0.0, tv - tol), tv + tol])
 
     def _baseline_check(self):
         """Noraxon-style EMG Baseline Check: report per-channel resting RMS AND the electrode

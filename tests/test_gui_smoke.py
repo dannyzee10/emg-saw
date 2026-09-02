@@ -59,6 +59,14 @@ def test_gui_builds_and_runs_5ch():
         time.sleep(0.005)
     assert win.mvc_range == 150
 
+    # % MVC target guide (fatigue biofeedback): shows only in the % MVC view
+    win.spin_target.setValue(40)
+    win.cb_target.setChecked(True)
+    assert win.target_lines[0].isVisible() and win.target_bands[0].isVisible()
+    assert win.target_lines[0].value() == 40
+    win.cb_target.setChecked(False)
+    assert not win.target_lines[0].isVisible()
+
     # Show Raw overrides the processed (%MVC / RMS env) view; the settings are kept
     win.cb_raw.setChecked(True)
     assert win.show_raw and not win._mvc_view_on()
