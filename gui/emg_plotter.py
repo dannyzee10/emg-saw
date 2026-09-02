@@ -237,9 +237,14 @@ class EmgScope(QtWidgets.QMainWindow):
         v.addWidget(self._build_session_bar())
 
         barframe = QtWidgets.QFrame()
-        bar = QtWidgets.QHBoxLayout(barframe)
-        bar.setContentsMargins(12, 8, 12, 8)
-        bar.setSpacing(8)
+        _outer = QtWidgets.QVBoxLayout(barframe)
+        _outer.setContentsMargins(12, 6, 12, 6)
+        _outer.setSpacing(6)
+        row1 = QtWidgets.QHBoxLayout()
+        row1.setSpacing(8)
+        row2 = QtWidgets.QHBoxLayout()
+        row2.setSpacing(8)
+        bar = row1                          # row 1: scope / signal controls
 
         bar.addWidget(QtWidgets.QLabel("Mode"))
         self.cmb_mode = QtWidgets.QComboBox()
@@ -293,6 +298,12 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cmb_notch.addItems(["off", "50 Hz", "60 Hz"])
         self.cmb_notch.currentTextChanged.connect(self._on_notch)
         bar.addWidget(self.cmb_notch)
+
+        bar.addStretch(1)
+        self.lbl_stat = QtWidgets.QLabel("")     # live S/s / drop / crc / fat readout (row 1, right)
+        bar.addWidget(self.lbl_stat)
+
+        bar = row2                          # row 2: view / processing / actions
 
         self.cb_env = QtWidgets.QCheckBox("RMS env")
         self.cb_env.stateChanged.connect(self._on_envelope)
@@ -358,6 +369,7 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cb_spec.stateChanged.connect(self._on_spectrum)
         bar.addWidget(self.cb_spec)
 
+        bar.addStretch(1)                   # push the actions to the right of row 2
         self.btn_pause = QtWidgets.QPushButton("Pause")
         self.btn_pause.setCheckable(True)
         self.btn_pause.toggled.connect(self._on_pause)
@@ -372,9 +384,8 @@ class EmgScope(QtWidgets.QMainWindow):
             "QPushButton:hover{background:#388e3c;} QPushButton:checked{background:#c62828;}")
         bar.addWidget(self.btn_rec)
 
-        bar.addStretch(1)
-        self.lbl_stat = QtWidgets.QLabel("")
-        bar.addWidget(self.lbl_stat)
+        _outer.addLayout(row1)
+        _outer.addLayout(row2)
         v.addWidget(barframe)
 
         # transient result banner (EMG baseline check etc.) — big, colored, auto-hides
@@ -411,9 +422,11 @@ class EmgScope(QtWidgets.QMainWindow):
         self.ed_trial.setMaximumWidth(160)
         self.ed_notes = QtWidgets.QLineEdit()
         self.ed_notes.setPlaceholderText("Notes")
+        self.ed_notes.setMaximumWidth(280)
         for lab, w in (("Subject", self.ed_subject), ("Trial", self.ed_trial), ("Notes", self.ed_notes)):
             s.addWidget(QtWidgets.QLabel(lab))
-            s.addWidget(w, 1 if lab == "Notes" else 0)
+            s.addWidget(w, 0)
+        s.addStretch(1)                     # flexible gap so the buttons stay right-aligned
         self.btn_marker = QtWidgets.QPushButton("⚑ Marker")
         self.btn_marker.setToolTip("Drop a timestamped event marker (also key: M)")
         self.btn_marker.clicked.connect(self._add_marker)
