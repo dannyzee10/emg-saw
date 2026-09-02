@@ -128,6 +128,9 @@ class EmgScope(QtWidgets.QMainWindow):
         self.do_notch = 0
         self.do_envelope = False
         self.show_raw = False              # momentary raw override (Show Raw) over env/%MVC
+        self.smooth_ms = 100.0             # envelope smoothing window (Amplitude-Norm config)
+        self.smooth_algo = "rms"           # 'rms' or 'mean' (mean-absolute)
+        self.live_pipeline = []            # optional real-time processing pipeline (mV ops)
         self.paused = False
         self.autoscale = False             # per-channel auto vertical scaling (MR4 style)
         self._proc_cache = None            # last processed visible window (for readouts)
@@ -307,6 +310,16 @@ class EmgScope(QtWidgets.QMainWindow):
         self.cmb_amp.setToolTip("% MVC display range (Amplitude) — Noraxon default 120% shows effort above the MVC")
         self.cmb_amp.currentTextChanged.connect(self._on_amp_range)
         bar.addWidget(self.cmb_amp)
+
+        self.btn_ampcfg = QtWidgets.QPushButton("⚙ Amp/Smooth")
+        self.btn_ampcfg.setToolTip("Amplitude Normalization config: smoothing algorithm + window (ms) + Amplitude %")
+        self.btn_ampcfg.clicked.connect(self._open_amp_norm)
+        bar.addWidget(self.btn_ampcfg)
+
+        self.btn_proc = QtWidgets.QPushButton("⚙ Processing")
+        self.btn_proc.setToolTip("Build a real-time processing pipeline for the RMS-env view (Available -> Selected)")
+        self.btn_proc.clicked.connect(self._open_live_processing)
+        bar.addWidget(self.btn_proc)
 
         self.btn_base = QtWidgets.QPushButton("EMG Baseline")
         self.btn_base.setToolTip("Check the resting EMG baseline before recording — relax the muscle, then click")
@@ -708,6 +721,42 @@ class EmgScope(QtWidgets.QMainWindow):
             self.sweep_y = None
             self._apply_scaling()
 
+    def _open_amp_norm(self):
+        """Img1+Img4: real-time Amplitude Normalization config — smoothing algorithm +
+        window (ms) for the live envelope/%MVC, plus the Amplitude (% display range)."""
+        from gui.amp_norm_dialog import AmpNormDialog
+        dlg = AmpNormDialog(self.smooth_algo, self.smooth_ms, self.mvc_range, parent=self)
+        if dlg.exec_() != QtWidgets.QDialog.Accepted:
+            return
+        algo_label = dlg.cmb_algo.currentText()
+        self.smooth_algo = dlg.algo()
+        self.smooth_ms = dlg.window_ms()
+        self.mvc_range = dlg.amp()
+        self.cmb_amp.blockSignals(True)
+        self.cmb_amp.setCurrentText(f"{self.mvc_range}%")
+        self.cmb_amp.blockSignals(False)
+        self.sweep_y = None
+        self._apply_scaling()
+        self.lbl_hint.setText(
+            f"Smoothing: {algo_label} @ {int(self.smooth_ms)} ms  ·  Amplitude {self.mvc_range}%")
+
+    def _open_live_processing(self):
+        """Img2: real-time processing pipeline for the RMS-env view (Available -> Selected).
+        Normalization ops are dropped live (use % MVC for that); the pipeline is a mV envelope."""
+        from gui.processing_dialog import ProcessingDialog
+        from dsp.pipeline import OPS
+        dlg = ProcessingDialog(self.live_pipeline, self.nch, self.muscle_names, "all", parent=self)
+        if dlg.exec_() != QtWidgets.QDialog.Accepted:
+            return
+        keys = [k for k in dlg.selected_keys() if not OPS.get(k, ("", None, False))[2]]
+        self.live_pipeline = keys
+        if keys and not self.do_envelope:
+            self.cb_env.setChecked(True)        # a pipeline implies the processed (envelope) view
+        self.sweep_y = None
+        self._apply_scaling()
+        label = " -> ".join(OPS[k][0].split(":")[-1].strip() for k in keys) if keys else "none (default RMS)"
+        self.lbl_hint.setText(f"Live processing pipeline: {label}")
+
     def _baseline_check(self):
         """Noraxon-style EMG Baseline Check: report per-channel resting RMS AND the electrode
         lead-off state (the SAME latched state that drives the channel dot), so a disconnected
@@ -924,6 +973,20 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
         self._apply_scaling()
 
     # ---------- data path ----------
+    def _smooth(self, base):
+        """Envelope smoothing per the configured Amplitude-Norm algorithm + window.
+        `base` is an AC (N,nch) array; returns a positive envelope in the same units."""
+        if self.smooth_algo == "mean":                  # mean-absolute (moving average of |x|)
+            n = max(1, int(self.fs * self.smooth_ms / 1000.0))
+            if n <= 1:
+                return np.abs(base)
+            k = np.ones(n) / n
+            out = np.empty_like(base, dtype=float)
+            for c in range(base.shape[1]):
+                out[:, c] = np.convolve(np.abs(base[:, c]), k, mode="same")
+            return out
+        return self.filters.rms_envelope(base, win_ms=self.smooth_ms)
+
     def _process(self, data):
         """Absolute volts in -> displayed volts out (coupling + optional filters)."""
         if self._mvc_view_on():
@@ -931,7 +994,7 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             for c in range(self.nch):
                 bp = self.filters.bandpass(data[:, c:c + 1])[:, 0]
                 bp = bp - bp.mean()
-                sig = self.filters.rms_envelope(bp.reshape(-1, 1))[:, 0] if self.do_envelope else bp
+                sig = self._smooth(bp.reshape(-1, 1))[:, 0] if self.do_envelope else bp
                 out[:, c] = sig / self.mvc[c] * 100.0   # % MVC (envelope if RMS env on, else raw EMG)
             return out
         if self.coupling == "GND":
@@ -943,7 +1006,15 @@ td,th{{border:1px solid #ccc;padding:6px 16px;text-align:left}} th{{background:#
             out = self.filters.apply_notch(out, self.do_notch)
         if self.do_envelope and not self.show_raw:      # Show Raw overrides the envelope
             base = out if self.coupling == "AC" else out - out.mean(axis=0)
-            out = self.filters.rms_envelope(base)
+            if self.live_pipeline:                      # real-time processing pipeline (mV ops)
+                from dsp.pipeline import apply_pipeline
+                res = np.empty_like(base, dtype=float)
+                for c in range(self.nch):
+                    ctx = {"fs": self.fs, "filters": self.filters, "smooth_ms": self.smooth_ms}
+                    res[:, c] = apply_pipeline(base[:, c], self.live_pipeline, ctx)
+                out = res
+            else:
+                out = self._smooth(base)
         return out
 
     def _update(self):

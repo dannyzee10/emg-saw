@@ -75,6 +75,44 @@ def test_gui_builds_and_runs_5ch():
     win.close()
 
 
+def test_amp_norm_dialog_reports_config():
+    from PyQt5 import QtWidgets
+    from gui.amp_norm_dialog import AmpNormDialog
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    dlg = AmpNormDialog(algo="mean", window_ms=250.0, amp=150)
+    assert dlg.algo() == "mean" and dlg.window_ms() == 250.0 and dlg.amp() == 150
+
+
+def test_live_smoothing_algorithms_and_pipeline():
+    """Img1/Img3/Img4: the live envelope honors the smoothing algorithm + window, and a
+    real-time processing pipeline (mV ops) applies in the RMS-env path."""
+    import numpy as np
+    from PyQt5 import QtWidgets
+    from communication.sources import SimSource
+    from gui.emg_plotter import EmgScope
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    win = EmgScope(SimSource(2, 2000.0, 12), 2, 2000.0, 3.3, 12, False, coupling="AC")
+
+    data = 1.65 + 0.05 * np.random.RandomState(0).randn(600, 2)   # absolute volts
+    win.do_envelope = True
+    win.smooth_algo, win.smooth_ms = "rms", 100.0
+    env_rms = win._process(data)
+    assert (env_rms >= 0).all()
+    win.smooth_algo, win.smooth_ms = "mean", 50.0
+    env_mean = win._process(data)
+    assert (env_mean >= 0).all() and not np.allclose(env_rms, env_mean)   # algo actually changes it
+
+    # Img2: a live processing pipeline (rectify) applies in the envelope path
+    win.smooth_algo, win.live_pipeline = "rms", ["rectify"]
+    rec = win._process(data)
+    assert (rec >= 0).all()
+    # normalization ops are stripped from a live pipeline (needs MVC -> use % MVC view)
+    from dsp.pipeline import OPS
+    assert not any(OPS[k][2] for k in win.live_pipeline)
+    win.live_pipeline = []
+    win.close()
+
+
 def test_report_generates(tmp_path, monkeypatch):
     """HG4: the HTML report builds (with the M3 analytics columns) without exception."""
     from PyQt5 import QtWidgets

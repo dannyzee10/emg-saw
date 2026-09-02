@@ -217,7 +217,7 @@ class ReviewWindow(QtWidgets.QDialog):
             apply_here = self.pipeline and (self.proc_channels == "all" or self.proc_channels == c)
             if apply_here:
                 ctx = {"fs": self.fs, "filters": self.filters, "mvc": self.mvc[c],
-                       "smooth_ms": 100.0,
+                       "smooth_ms": getattr(self, "smooth_ms", 100.0),
                        "norm_ref": (self._norm_refs[c] if self._norm_refs else None)}
                 sig = apply_pipeline(ac, self.pipeline, ctx)
                 unit = pipeline_unit(self.pipeline)
