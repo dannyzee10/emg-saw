@@ -779,7 +779,7 @@
       "file_type": "code",
       "norm_label": "._apply_normalize()",
       "source_file": "gui/review_window.py",
-      "source_location": "L407"
+      "source_location": "L385"
     },
     {
       "id": "gui_review_window_reviewwindow_build_ui",
@@ -791,7 +791,7 @@
       "file_type": "code",
       "norm_label": "._build_ui()",
       "source_file": "gui/review_window.py",
-      "source_location": "L100"
+      "source_location": "L98"
     },
     {
       "id": "gui_review_window_reviewwindow_channel_env",
@@ -803,7 +803,7 @@
       "file_type": "code",
       "norm_label": "._channel_env()",
       "source_file": "gui/review_window.py",
-      "source_location": "L349"
+      "source_location": "L347"
     },
     {
       "id": "gui_review_window_reviewwindow_closeevent",
@@ -815,7 +815,7 @@
       "file_type": "code",
       "norm_label": ".closeevent()",
       "source_file": "gui/review_window.py",
-      "source_location": "L519"
+      "source_location": "L497"
     },
     {
       "id": "gui_review_window_reviewwindow_init",
@@ -839,19 +839,7 @@
       "file_type": "code",
       "norm_label": "._load()",
       "source_file": "gui/review_window.py",
-      "source_location": "L72"
-    },
-    {
-      "id": "gui_review_window_reviewwindow_load_mvc_from_stack",
-      "label": "._load_mvc_from_stack()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._load_mvc_from_stack()",
-      "source_file": "gui/review_window.py",
-      "source_location": "L357"
+      "source_location": "L70"
     },
     {
       "id": "gui_review_window_reviewwindow_load_other_env",
@@ -863,7 +851,7 @@
       "file_type": "code",
       "norm_label": "._load_other_env()",
       "source_file": "gui/review_window.py",
-      "source_location": "L377"
+      "source_location": "L355"
     },
     {
       "id": "gui_review_window_reviewwindow_on_cursor_drag",
@@ -875,7 +863,7 @@
       "file_type": "code",
       "norm_label": "._on_cursor_drag()",
       "source_file": "gui/review_window.py",
-      "source_location": "L271"
+      "source_location": "L269"
     },
     {
       "id": "gui_review_window_reviewwindow_on_notch",
@@ -887,7 +875,7 @@
       "file_type": "code",
       "norm_label": "._on_notch()",
       "source_file": "gui/review_window.py",
-      "source_location": "L459"
+      "source_location": "L437"
     },
     {
       "id": "gui_review_window_reviewwindow_on_play",
@@ -899,7 +887,7 @@
       "file_type": "code",
       "norm_label": "._on_play()",
       "source_file": "gui/review_window.py",
-      "source_location": "L275"
+      "source_location": "L273"
     },
     {
       "id": "gui_review_window_reviewwindow_on_slider",
@@ -911,7 +899,7 @@
       "file_type": "code",
       "norm_label": "._on_slider()",
       "source_file": "gui/review_window.py",
-      "source_location": "L267"
+      "source_location": "L265"
     },
     {
       "id": "gui_review_window_reviewwindow_on_view",
@@ -923,7 +911,7 @@
       "file_type": "code",
       "norm_label": "._on_view()",
       "source_file": "gui/review_window.py",
-      "source_location": "L293"
+      "source_location": "L291"
     },
     {
       "id": "gui_review_window_reviewwindow_open_normalize",
@@ -935,7 +923,7 @@
       "file_type": "code",
       "norm_label": "._open_normalize()",
       "source_file": "gui/review_window.py",
-      "source_location": "L399"
+      "source_location": "L377"
     },
     {
       "id": "gui_review_window_reviewwindow_open_processing",
@@ -947,7 +935,7 @@
       "file_type": "code",
       "norm_label": "._open_processing()",
       "source_file": "gui/review_window.py",
-      "source_location": "L302"
+      "source_location": "L300"
     },
     {
       "id": "gui_review_window_reviewwindow_picked_window",
@@ -959,7 +947,7 @@
       "file_type": "code",
       "norm_label": "._picked_window()",
       "source_file": "gui/review_window.py",
-      "source_location": "L340"
+      "source_location": "L338"
     },
     {
       "id": "gui_review_window_reviewwindow_recompute",
@@ -971,7 +959,7 @@
       "file_type": "code",
       "norm_label": "._recompute()",
       "source_file": "gui/review_window.py",
-      "source_location": "L207"
+      "source_location": "L205"
     },
     {
       "id": "gui_review_window_reviewwindow_redraw",
@@ -983,7 +971,7 @@
       "file_type": "code",
       "norm_label": "._redraw()",
       "source_file": "gui/review_window.py",
-      "source_location": "L235"
+      "source_location": "L233"
     },
     {
       "id": "gui_review_window_reviewwindow_show_norm_result",
@@ -995,7 +983,7 @@
       "file_type": "code",
       "norm_label": "._show_norm_result()",
       "source_file": "gui/review_window.py",
-      "source_location": "L437"
+      "source_location": "L415"
     },
     {
       "id": "gui_review_window_reviewwindow_sync_pick",
@@ -1007,7 +995,7 @@
       "file_type": "code",
       "norm_label": "._sync_pick()",
       "source_file": "gui/review_window.py",
-      "source_location": "L332"
+      "source_location": "L330"
     },
     {
       "id": "gui_review_window_reviewwindow_tick",
@@ -1019,7 +1007,7 @@
       "file_type": "code",
       "norm_label": "._tick()",
       "source_file": "gui/review_window.py",
-      "source_location": "L285"
+      "source_location": "L283"
     },
     {
       "id": "gui_review_window_reviewwindow_toggle_pick",
@@ -1031,7 +1019,7 @@
       "file_type": "code",
       "norm_label": "._toggle_pick()",
       "source_file": "gui/review_window.py",
-      "source_location": "L318"
+      "source_location": "L316"
     },
     {
       "id": "gui_review_window_reviewwindow_update_cursor",
@@ -1043,7 +1031,7 @@
       "file_type": "code",
       "norm_label": "._update_cursor()",
       "source_file": "gui/review_window.py",
-      "source_location": "L252"
+      "source_location": "L250"
     },
     {
       "id": "tests_test_review_test_processing_dialog_build_and_channel_scope",
@@ -1054,18 +1042,6 @@
       "community_name": "ReviewWindow",
       "file_type": "code",
       "norm_label": "test_processing_dialog_build_and_channel_scope()",
-      "source_file": "tests/test_review.py",
-      "source_location": "L85"
-    },
-    {
-      "id": "tests_test_review_test_review_loads_mvc_from_stack_when_no_live_mvc",
-      "label": "test_review_loads_mvc_from_stack_when_no_live_mvc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "test_review_loads_mvc_from_stack_when_no_live_mvc()",
       "source_file": "tests/test_review.py",
       "source_location": "L68"
     },
@@ -1091,7 +1067,7 @@
       "file_type": "code",
       "norm_label": "test_review_normalize_modes_window_and_result()",
       "source_file": "tests/test_review.py",
-      "source_location": "L129"
+      "source_location": "L112"
     },
     {
       "id": "tests_test_review_write_csv",
@@ -1835,7 +1811,7 @@
       "file_type": "code",
       "norm_label": "._report()",
       "source_file": "gui/review_window.py",
-      "source_location": "L465"
+      "source_location": "L443"
     },
     {
       "id": "scripts_analyze_capture_load",
@@ -4238,6 +4214,42 @@
       "source_location": "L53"
     },
     {
+      "id": "quality_bar",
+      "label": "QUALITY_BAR.md",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "quality_bar.md",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "quality_bar_authority",
+      "label": "Authority",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authority",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "quality_bar_gate_reference",
+      "label": "Gate reference",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "gate reference",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L109"
+    },
+    {
       "id": "quality_bar_hard_gate_rules",
       "label": "Hard gate rules",
       "_origin": "ast",
@@ -4368,6 +4380,162 @@
       "norm_label": "hg9 \u2014 checkpoint discipline",
       "source_file": "QUALITY_BAR.md",
       "source_location": "L82"
+    },
+    {
+      "id": "quality_bar_quality_bar_md",
+      "label": "QUALITY_BAR.md",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quality_bar.md",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "quality_bar_supporting_rules_a_pattern_of_violations_becomes_blocking",
+      "label": "Supporting rules (a pattern of violations becomes blocking)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supporting rules (a pattern of violations becomes blocking)",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap",
+      "label": "EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "emg_saw_retro_and_competitive_roadmap.md",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_emg_saw_retrospective_competitive_roadmap",
+      "label": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "emg saw \u2014 retrospective + competitive roadmap",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_next_stm32_upgrade_all_15_electrodes_deferred_needs_more_faster_adc",
+      "label": "Next STM32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster ADC)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "next stm32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster adc)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L110"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_now_blue_pill_channel_1_3_electrodes_no_mux_reuses_existing_software",
+      "label": "Now \u2014 Blue Pill, Channel 1, 3 electrodes (no mux, reuses existing software)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "now \u2014 blue pill, channel 1, 3 electrodes (no mux, reuses existing software)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_1_what_each_agent_shipped_retro_of_the_build",
+      "label": "Part 1 \u2014 What each agent shipped (retro of the build)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 1 \u2014 what each agent shipped (retro of the build)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_2_remaining_goals_per_agent_near_term",
+      "label": "Part 2 \u2014 Remaining goals per agent (near-term)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 2 \u2014 remaining goals per agent (near-term)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_3_where_we_stand_vs_delsys_noraxon",
+      "label": "Part 3 \u2014 Where we stand vs Delsys & Noraxon",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 3 \u2014 where we stand vs delsys & noraxon",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_4_the_win_roadmap_prioritized",
+      "label": "Part 4 \u2014 The \"win\" roadmap (prioritized)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 4 \u2014 the \"win\" roadmap (prioritized)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L63"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_5_electrode_lead_off_integrity_plan",
+      "label": "Part 5 \u2014 Electrode lead-off / integrity plan",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 5 \u2014 electrode lead-off / integrity plan",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_ultimate_ads1299_m4",
+      "label": "Ultimate \u2014 ADS1299 (M4)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ultimate \u2014 ads1299 (m4)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "handoff",
+      "label": "HANDOFF.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "handoff.md",
+      "source_file": "HANDOFF.md",
+      "source_location": "L1"
     },
     {
       "id": "handoff_0_how_to_use_this_handoff",
@@ -4526,6 +4694,222 @@
       "source_location": "L1"
     },
     {
+      "id": "project_context",
+      "label": "PROJECT_CONTEXT.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "project_context.md",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "project_context_architecture_locked_pipeline",
+      "label": "Architecture (locked pipeline)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "architecture (locked pipeline)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "project_context_current_state_done_as_of_2026_08_26",
+      "label": "Current state \u2014 DONE \u2705 (as of 2026-08-26)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "current state \u2014 done \u2705 (as of 2026-08-26)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
+      "label": "Locked gotchas (each cost hours \u2014 do NOT rediscover)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked gotchas (each cost hours \u2014 do not rediscover)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "project_context_locked_hardware_facts",
+      "label": "Locked hardware facts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked hardware facts",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "project_context_locked_wire_protocol",
+      "label": "Locked wire protocol",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked wire protocol",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "project_context_project_context_md",
+      "label": "PROJECT_CONTEXT.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project_context.md",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "project_context_project_identity",
+      "label": "Project identity",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project identity",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "project_context_roadmap",
+      "label": "Roadmap",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "roadmap",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "project_context_signal_facts",
+      "label": "Signal facts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "signal facts",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L67"
+    },
+    {
+      "id": "project_context_source_of_truth",
+      "label": "Source of truth",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source of truth",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_architecture",
+      "label": "Architecture",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "architecture",
+      "source_file": "README.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "readme_emg_saw_beihang_emg_acquisition_system_gui",
+      "label": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "emg-saw \u2014 beihang emg acquisition system + gui",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "Quick start",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quick start",
+      "source_file": "README.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "readme_repo",
+      "label": "Repo",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "repo",
+      "source_file": "README.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "readme_status",
+      "label": "Status",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "status",
+      "source_file": "README.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "readme_what_it_does",
+      "label": "What it does",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what it does",
+      "source_file": "README.md",
+      "source_location": "L23"
+    },
+    {
       "id": "gui_normalize_dialog",
       "label": "normalize_dialog.py",
       "_origin": "ast",
@@ -4534,6 +4918,17 @@
       "file_type": "code",
       "norm_label": "normalize_dialog.py",
       "source_file": "gui/normalize_dialog.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_processing_dialog",
+      "label": "processing_dialog.py",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "processing_dialog.py",
+      "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
@@ -4559,7 +4954,18 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_review_window_rationale_208",
+      "id": "gui_processing_dialog_rationale_1",
+      "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "rationale",
+      "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_review_window_rationale_206",
       "label": "Run the Signal-Processing pipeline per channel; build display array + per-\u2026",
       "_origin": "ast",
       "community": 2,
@@ -4567,10 +4973,10 @@
       "file_type": "rationale",
       "norm_label": "run the signal-processing pipeline per channel; build display array + per-...",
       "source_file": "gui/review_window.py",
-      "source_location": "L208"
+      "source_location": "L206"
     },
     {
-      "id": "gui_review_window_rationale_303",
+      "id": "gui_review_window_rationale_301",
       "label": "Open the Signal Processing pipeline builder; apply the result to the review.",
       "_origin": "ast",
       "community": 2,
@@ -4578,21 +4984,10 @@
       "file_type": "rationale",
       "norm_label": "open the signal processing pipeline builder; apply the result to the review.",
       "source_file": "gui/review_window.py",
-      "source_location": "L303"
+      "source_location": "L301"
     },
     {
-      "id": "gui_review_window_rationale_358",
-      "label": "Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC\u2026",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "rationale",
-      "norm_label": "populate self.mvc from the latest mvc_store.json entry (the persisted 'mvc...",
-      "source_file": "gui/review_window.py",
-      "source_location": "L358"
-    },
-    {
-      "id": "gui_review_window_rationale_408",
+      "id": "gui_review_window_rationale_386",
       "label": "Compute a per-channel reference (=100 %) from the chosen source/window, then\u2026",
       "_origin": "ast",
       "community": 2,
@@ -4600,10 +4995,10 @@
       "file_type": "rationale",
       "norm_label": "compute a per-channel reference (=100 %) from the chosen source/window, then...",
       "source_file": "gui/review_window.py",
-      "source_location": "L408"
+      "source_location": "L386"
     },
     {
-      "id": "gui_review_window_rationale_438",
+      "id": "gui_review_window_rationale_416",
       "label": "Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak\u2026",
       "_origin": "ast",
       "community": 2,
@@ -4611,7 +5006,7 @@
       "file_type": "rationale",
       "norm_label": "img15: % axis at the chosen range, a 100 % reference line, and the green 'peak...",
       "source_file": "gui/review_window.py",
-      "source_location": "L438"
+      "source_location": "L416"
     },
     {
       "id": "tests_test_review_rationale_1",
@@ -6319,17 +6714,6 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_review_window",
-      "label": "review_window.py",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "review_window.py",
-      "source_file": "gui/review_window.py",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_analyze_capture",
       "label": "analyze_capture.py",
       "_origin": "ast",
@@ -6449,17 +6833,6 @@
       "norm_label": "analyse one raw (un-notched, absolute-volt) single-channel window; return...",
       "source_file": "dsp/dsp.py",
       "source_location": "L63"
-    },
-    {
-      "id": "gui_review_window_rationale_1",
-      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "rationale",
-      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
-      "source_file": "gui/review_window.py",
-      "source_location": "L1"
     },
     {
       "id": "tests_test_dsp_analytics_rationale_1",
@@ -7306,126 +7679,6 @@
       "source_location": "L1"
     },
     {
-      "id": "project_context_architecture_locked_pipeline",
-      "label": "Architecture (locked pipeline)",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "architecture (locked pipeline)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L17"
-    },
-    {
-      "id": "project_context_current_state_done_as_of_2026_08_26",
-      "label": "Current state \u2014 DONE \u2705 (as of 2026-08-26)",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "current state \u2014 done \u2705 (as of 2026-08-26)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
-      "label": "Locked gotchas (each cost hours \u2014 do NOT rediscover)",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked gotchas (each cost hours \u2014 do not rediscover)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L58"
-    },
-    {
-      "id": "project_context_locked_hardware_facts",
-      "label": "Locked hardware facts",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked hardware facts",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L24"
-    },
-    {
-      "id": "project_context_locked_wire_protocol",
-      "label": "Locked wire protocol",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked wire protocol",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L35"
-    },
-    {
-      "id": "project_context_project_context_md",
-      "label": "PROJECT_CONTEXT.md",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "project_context.md",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "project_context_project_identity",
-      "label": "Project identity",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "project identity",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "project_context_roadmap",
-      "label": "Roadmap",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "roadmap",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "project_context_signal_facts",
-      "label": "Signal facts",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "signal facts",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L67"
-    },
-    {
-      "id": "project_context_source_of_truth",
-      "label": "Source of truth",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "source of truth",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L79"
-    },
-    {
       "id": "dsp_dsp_py_ndarray",
       "label": "ndarray",
       "_origin": "ast",
@@ -7448,14 +7701,14 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_processing_dialog",
-      "label": "processing_dialog.py",
+      "id": "gui_review_window",
+      "label": "review_window.py",
       "_origin": "ast",
       "community": 6,
       "community_name": "EmgFilters",
       "file_type": "code",
-      "norm_label": "processing_dialog.py",
-      "source_file": "gui/processing_dialog.py",
+      "norm_label": "review_window.py",
+      "source_file": "gui/review_window.py",
       "source_location": "L1"
     },
     {
@@ -7591,14 +7844,14 @@
       "source_location": "L91"
     },
     {
-      "id": "gui_processing_dialog_rationale_1",
-      "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
+      "id": "gui_review_window_rationale_1",
+      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
       "_origin": "ast",
       "community": 6,
       "community_name": "EmgFilters",
       "file_type": "rationale",
-      "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
-      "source_file": "gui/processing_dialog.py",
+      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
+      "source_file": "gui/review_window.py",
       "source_location": "L1"
     },
     {
@@ -7655,294 +7908,6 @@
       "norm_label": "unit tests for the offline signal-processing pipeline (pure, no qt).",
       "source_file": "tests/test_pipeline.py",
       "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap",
-      "label": "EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "emg_saw_retro_and_competitive_roadmap.md",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "handoff",
-      "label": "HANDOFF.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "handoff.md",
-      "source_file": "HANDOFF.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "project_context",
-      "label": "PROJECT_CONTEXT.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "project_context.md",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar",
-      "label": "QUALITY_BAR.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "quality_bar.md",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar_authority",
-      "label": "Authority",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "authority",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "quality_bar_gate_reference",
-      "label": "Gate reference",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "gate reference",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L109"
-    },
-    {
-      "id": "quality_bar_quality_bar_md",
-      "label": "QUALITY_BAR.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quality_bar.md",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar_supporting_rules_a_pattern_of_violations_becomes_blocking",
-      "label": "Supporting rules (a pattern of violations becomes blocking)",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "supporting rules (a pattern of violations becomes blocking)",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L97"
-    },
-    {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_emg_saw_retrospective_competitive_roadmap",
-      "label": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "emg saw \u2014 retrospective + competitive roadmap",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_next_stm32_upgrade_all_15_electrodes_deferred_needs_more_faster_adc",
-      "label": "Next STM32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster ADC)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "next stm32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster adc)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L110"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_now_blue_pill_channel_1_3_electrodes_no_mux_reuses_existing_software",
-      "label": "Now \u2014 Blue Pill, Channel 1, 3 electrodes (no mux, reuses existing software)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "now \u2014 blue pill, channel 1, 3 electrodes (no mux, reuses existing software)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L102"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_1_what_each_agent_shipped_retro_of_the_build",
-      "label": "Part 1 \u2014 What each agent shipped (retro of the build)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 1 \u2014 what each agent shipped (retro of the build)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_2_remaining_goals_per_agent_near_term",
-      "label": "Part 2 \u2014 Remaining goals per agent (near-term)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 2 \u2014 remaining goals per agent (near-term)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L22"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_3_where_we_stand_vs_delsys_noraxon",
-      "label": "Part 3 \u2014 Where we stand vs Delsys & Noraxon",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 3 \u2014 where we stand vs delsys & noraxon",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L33"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_4_the_win_roadmap_prioritized",
-      "label": "Part 4 \u2014 The \"win\" roadmap (prioritized)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 4 \u2014 the \"win\" roadmap (prioritized)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L63"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_5_electrode_lead_off_integrity_plan",
-      "label": "Part 5 \u2014 Electrode lead-off / integrity plan",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 5 \u2014 electrode lead-off / integrity plan",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L87"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_ultimate_ads1299_m4",
-      "label": "Ultimate \u2014 ADS1299 (M4)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ultimate \u2014 ads1299 (m4)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L119"
-    },
-    {
-      "id": "readme_architecture",
-      "label": "Architecture",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "architecture",
-      "source_file": "README.md",
-      "source_location": "L29"
-    },
-    {
-      "id": "readme_emg_saw_beihang_emg_acquisition_system_gui",
-      "label": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "emg-saw \u2014 beihang emg acquisition system + gui",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_quick_start",
-      "label": "Quick start",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quick start",
-      "source_file": "README.md",
-      "source_location": "L10"
-    },
-    {
-      "id": "readme_repo",
-      "label": "Repo",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "repo",
-      "source_file": "README.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "readme_status",
-      "label": "Status",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "status",
-      "source_file": "README.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "readme_what_it_does",
-      "label": "What it does",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what it does",
-      "source_file": "README.md",
-      "source_location": "L23"
     },
     {
       "id": "firmware_cp4_binary_dma_hal_adc_convhalfcpltcallback",
@@ -11439,7 +11404,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L412",
+      "source_location": "L390",
       "weight": 1.0
     },
     {
@@ -11451,7 +11416,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L414",
+      "source_location": "L392",
       "weight": 1.0
     },
     {
@@ -11463,7 +11428,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L418",
+      "source_location": "L396",
       "weight": 1.0
     },
     {
@@ -11475,7 +11440,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L422",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -11487,7 +11452,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L424",
+      "source_location": "L402",
       "weight": 1.0
     },
     {
@@ -11499,7 +11464,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L433",
+      "source_location": "L411",
       "weight": 1.0
     },
     {
@@ -11511,7 +11476,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L434",
+      "source_location": "L412",
       "weight": 1.0
     },
     {
@@ -11523,7 +11488,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L435",
+      "source_location": "L413",
       "weight": 1.0
     },
     {
@@ -11535,7 +11500,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L173",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -11552,18 +11517,6 @@
     },
     {
       "source": "gui_review_window_reviewwindow_init",
-      "target": "gui_review_window_reviewwindow_load_mvc_from_stack",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "gui/review_window.py",
-      "source_location": "L50",
-      "weight": 1.0
-    },
-    {
-      "source": "gui_review_window_reviewwindow_init",
       "target": "dsp_dsp_emgfilters",
       "relation": "calls",
       "_origin": "ast",
@@ -11571,7 +11524,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L53",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -11583,7 +11536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L67",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -11595,7 +11548,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L68",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -11607,7 +11560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L69",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -11619,7 +11572,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L273",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -11631,7 +11584,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L461",
+      "source_location": "L439",
       "weight": 1.0
     },
     {
@@ -11643,7 +11596,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L462",
+      "source_location": "L440",
       "weight": 1.0
     },
     {
@@ -11655,7 +11608,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L269",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -11667,7 +11620,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L298",
+      "source_location": "L296",
       "weight": 1.0
     },
     {
@@ -11679,7 +11632,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L299",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -11691,7 +11644,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L401",
+      "source_location": "L379",
       "weight": 1.0
     },
     {
@@ -11703,7 +11656,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L401",
+      "source_location": "L379",
       "weight": 1.0
     },
     {
@@ -11715,7 +11668,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L404",
+      "source_location": "L382",
       "weight": 1.0
     },
     {
@@ -11727,7 +11680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L305",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -11739,7 +11692,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L314",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -11751,7 +11704,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L315",
+      "source_location": "L313",
       "weight": 1.0
     },
     {
@@ -11763,7 +11716,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L224",
+      "source_location": "L222",
       "weight": 1.0
     },
     {
@@ -11775,7 +11728,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L225",
+      "source_location": "L223",
       "weight": 1.0
     },
     {
@@ -11787,7 +11740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L249",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -11799,7 +11752,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L478",
+      "source_location": "L456",
       "weight": 1.0
     },
     {
@@ -11811,7 +11764,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L479",
+      "source_location": "L457",
       "weight": 1.0
     },
     {
@@ -11823,7 +11776,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L480",
+      "source_location": "L458",
       "weight": 1.0
     },
     {
@@ -11835,7 +11788,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L481",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -11847,7 +11800,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "gui/review_window.py",
-      "source_location": "L291",
+      "source_location": "L289",
       "weight": 1.0
     },
     {
@@ -13035,7 +12988,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L92",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -13047,7 +13000,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L93",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -13059,31 +13012,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L96",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_review_test_review_loads_mvc_from_stack_when_no_live_mvc",
-      "target": "tests_test_review_write_csv",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "tests/test_review.py",
-      "source_location": "L75",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_review_test_review_loads_mvc_from_stack_when_no_live_mvc",
-      "target": "gui_review_window_reviewwindow",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "tests/test_review.py",
-      "source_location": "L80",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -13119,7 +13048,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L136",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -13131,7 +13060,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L137",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -13143,7 +13072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_review.py",
-      "source_location": "L171",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -13563,7 +13492,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L210",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -13575,7 +13504,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L210",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -13587,7 +13516,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L304",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -13599,7 +13528,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L400",
+      "source_location": "L378",
       "weight": 1.0
     },
     {
@@ -13611,7 +13540,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L410",
+      "source_location": "L388",
       "weight": 1.0
     },
     {
@@ -13623,7 +13552,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "gui/review_window.py",
-      "source_location": "L410",
+      "source_location": "L388",
       "weight": 1.0
     },
     {
@@ -14175,7 +14104,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/test_review.py",
-      "source_location": "L132",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -14199,7 +14128,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/test_review.py",
-      "source_location": "L88",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -18054,7 +17983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_review.py",
-      "source_location": "L129",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -18081,24 +18010,13 @@
     },
     {
       "source": "tests_test_review",
-      "target": "tests_test_review_test_review_loads_mvc_from_stack_when_no_live_mvc",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_review.py",
-      "source_location": "L68",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_review",
       "target": "tests_test_review_test_processing_dialog_build_and_channel_scope",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_review.py",
-      "source_location": "L85",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -19797,24 +19715,13 @@
     },
     {
       "source": "gui_review_window_reviewwindow",
-      "target": "gui_review_window_reviewwindow_build_ui",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "gui/review_window.py",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "gui_review_window_reviewwindow",
       "target": "gui_review_window_reviewwindow_recompute",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L207",
+      "source_location": "L205",
       "weight": 1.0
     },
     {
@@ -19825,7 +19732,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L235",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -19836,7 +19743,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L252",
+      "source_location": "L250",
       "weight": 1.0
     },
     {
@@ -19847,7 +19754,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L267",
+      "source_location": "L265",
       "weight": 1.0
     },
     {
@@ -19858,7 +19765,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L271",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -19869,7 +19776,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L275",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -19880,7 +19787,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L285",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -19891,7 +19798,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L293",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -19902,7 +19809,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L302",
+      "source_location": "L300",
       "weight": 1.0
     },
     {
@@ -19913,7 +19820,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L318",
+      "source_location": "L316",
       "weight": 1.0
     },
     {
@@ -19924,7 +19831,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L332",
+      "source_location": "L330",
       "weight": 1.0
     },
     {
@@ -19935,7 +19842,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L340",
+      "source_location": "L338",
       "weight": 1.0
     },
     {
@@ -19946,23 +19853,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L349",
-      "weight": 1.0
-    },
-    {
-      "source": "gui_review_window_reviewwindow",
-      "target": "gui_review_window_reviewwindow_load_mvc_from_stack",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "gui/review_window.py",
-      "source_location": "L357",
+      "source_location": "L347",
       "weight": 1.0
     },
     {
       "source": "gui_review_window_reviewwindow",
       "target": "gui_review_window_reviewwindow_load_other_env",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "gui/review_window.py",
+      "source_location": "L355",
+      "weight": 1.0
+    },
+    {
+      "source": "gui_review_window_reviewwindow",
+      "target": "gui_review_window_reviewwindow_open_normalize",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -19984,24 +19891,13 @@
     },
     {
       "source": "gui_review_window_reviewwindow",
-      "target": "gui_review_window_reviewwindow_open_normalize",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "gui/review_window.py",
-      "source_location": "L399",
-      "weight": 1.0
-    },
-    {
-      "source": "gui_review_window_reviewwindow",
       "target": "gui_review_window_reviewwindow_apply_normalize",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L407",
+      "source_location": "L385",
       "weight": 1.0
     },
     {
@@ -20012,7 +19908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L437",
+      "source_location": "L415",
       "weight": 1.0
     },
     {
@@ -20023,7 +19919,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L459",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -20034,7 +19930,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L465",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -20045,7 +19941,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L519",
+      "source_location": "L497",
       "weight": 1.0
     },
     {
@@ -20056,7 +19952,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L72",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "gui_review_window_reviewwindow",
+      "target": "gui_review_window_reviewwindow_build_ui",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "gui/review_window.py",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -20951,58 +20858,47 @@
       "weight": 1.0
     },
     {
-      "source": "gui_review_window_rationale_208",
+      "source": "gui_review_window_rationale_206",
       "target": "gui_review_window_reviewwindow_recompute",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L208",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
-      "source": "gui_review_window_rationale_303",
+      "source": "gui_review_window_rationale_301",
       "target": "gui_review_window_reviewwindow_open_processing",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L303",
+      "source_location": "L301",
       "weight": 1.0
     },
     {
-      "source": "gui_review_window_rationale_358",
-      "target": "gui_review_window_reviewwindow_load_mvc_from_stack",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "gui/review_window.py",
-      "source_location": "L358",
-      "weight": 1.0
-    },
-    {
-      "source": "gui_review_window_rationale_408",
+      "source": "gui_review_window_rationale_386",
       "target": "gui_review_window_reviewwindow_apply_normalize",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L408",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
-      "source": "gui_review_window_rationale_438",
+      "source": "gui_review_window_rationale_416",
       "target": "gui_review_window_reviewwindow_show_norm_result",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "gui/review_window.py",
-      "source_location": "L438",
+      "source_location": "L416",
       "weight": 1.0
     },
     {
@@ -21540,7 +21436,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "gui/review_window.py",
-      "source_location": "L305",
+      "source_location": "L303",
       "weight": 0.8
     },
     {
@@ -21551,7 +21447,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "gui/review_window.py",
-      "source_location": "L401",
+      "source_location": "L379",
       "weight": 0.8
     },
     {
@@ -21562,7 +21458,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "gui/review_window.py",
-      "source_location": "L53",
+      "source_location": "L51",
       "weight": 0.8
     },
     {
