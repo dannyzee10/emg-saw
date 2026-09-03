@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肌电小镇 EMG TOWN · 交互原型 v0.2</title>
+<style>
+  /* 缝合像素字体 Fusion Pixel Font 12px（OFL 开源协议，作者 TakWolf） */
+  @font-face{
+    font-family:'FusionPixel';
+    src:url('fonts/fusion-pixel-12px-zh_hans.woff2') format('woff2');
+    font-display:swap;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body {
+    width:100%; height:100%; background:#0d1f16;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"FusionPixel",monospace;
+    -webkit-font-smoothing:none; -moz-osx-font-smoothing:none;
+    user-select:none; -webkit-user-select:none;
+    overflow:hidden;
+  }
+  #stage {
+    position:relative;
+    box-shadow:0 0 0 4px #094421, 0 0 0 8px #45813D, 16px 16px 0 0 rgba(0,0,0,.35);
+  }
+  canvas {
+    display:block;
+    image-rendering:pixelated; image-rendering:crisp-edges;
+    background:#87BD6D;
+  }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="game" width="400" height="240"></canvas></div>
+<script>
+"use strict";
+/* ============================================================
+   肌电小镇 EMG TOWN —— 可交互原型 v0.2
+   街道 = 主菜单 / 医院 = 检测模块 / 游戏厅·空地 = 扩展位
+   方向键·WASD 移动 | 走到门口自动进入 | Enter/E 对话 | T 问白医生
+   ============================================================ */
+const CV = document.getElementById('game');
+const CX = CV.getContext('2d');
+CX.imageSmoothingEnabled = false;
+
+function fit(){
+  const s = Math.max(1, Math.floor(Math.min(innerWidth/400, innerHeight/240)*100)/100);
+  CV.style.width  = (400*s)+'px';
+  CV.style.height = (240*s)+'px';
+}
+addEventListener('resize', fit); fit();
+
+const PAL = {
+  grassA:'#87BD6D', grassB:'#7FB364', tuft:'#568C2C',
+  deep:'#0D6230', darkest:'#094421', brand:'#45813D',
+  cream:'#FFF5E5', sand:'#EEDFB0', roadA:'#C9C0AC', roadB:'#BDB49F',
+  wall:'#FFF5E5', wallShade:'#E8DCC3', wallLine:'#F0E7D3',
+  glass:'#A8D8E8', glassD:'#7FB8CC',
+  red:'#D94F3D', redD:'#B03A2C', redL:'#E86A55',
+  blue:'#3D5A99', blueD:'#2C4477',
+  yellow:'#F2E578', yellowL:'#F9EDB5', yellowD:'#E3D48F', pink:'#FFA7F0',
+  wood:'#8B6B4A', woodD:'#6E5439', dirt:'#C9A36B', dirtD:'#B28A56',
+  skin:'#F2C89B', hair:'#3A2E2A', ink:'#22301F', white:'#FFFFFF',
+  steel:'#B9C0C8', steelD:'#8E959E'
+};
+
+let AC=null;
+function beep(f=660,d=.05,type='square',v=.05){
+  try{
+    AC = AC || new (window.AudioContext||window.webkitAudioContext)();
+    const o=AC.createOscillator(), g=AC.createGain();
+    o.type=type; o.frequency.value=f; g.gain.value=v;
+    o.connect(g); g.connect(AC.destination);
+    o.start(); g.gain.exponentialRampToValueAtTime(.0001, AC.currentTime+d);
+    o.stop(AC.currentTime+d);
+  }catch(e){}
+}
+function jingle(){ [523,659,784,1046].forEach((f,i)=>setTimeout(()=>beep(f,.12,'square',.06), i*90)); }
+
+const FONT = s => s+'px "FusionPixel",monospace';
+
+/* ============================================================
+   地图
+   .草地 ,花 t树 u灌木 p小径 r马路
+   R医院屋顶 B医院墙 W医院窗 C红十字 K雨棚 D医院门
+   M游戏厅屋顶 A游戏厅墙 V游戏厅窗 N霓虹招牌 G游戏厅门(木板封)
+   d泥地 x围栏 s告示牌
+   =内墙 _内地板 -出口 1/2/3诊室门 o办公室门 n护士站 q候诊椅
+   k办公桌 j文件柜 c饮水机
+   ============================================================ */
+const TW=25, TH=15, TS=16;
+
+function makeTown(){
+  const m=[];
+  for(let y=0;y<TH;y++) m.push(new Array(TW).fill('.'));
+  const set=(x,y,c)=>{ if(x>=0&&x<TW&&y>=0&&y<TH) m[y][x]=c; };
+  // 医院 x2..8 y1..6
+  for(let x=2;x<=8;x++){
+    set(x,1,'R'); set(x,2,'B'); set(x,3,'B'); set(x,4,'B'); set(x,6,'B');
+  }
+  set(5,2,'C');                 // 红十字
+  set(3,3,'W'); set(7,3,'W');   // 窗
+  set(4,5,'K'); set(5,5,'K'); set(6,5,'K');  // 雨棚
+  set(2,5,'B'); set(3,5,'B'); set(7,5,'B'); set(8,5,'B');
+  set(5,6,'D');                 // 玻璃门（可踩入）
+  // 游戏厅 x16..22 y1..6
+  for(let x=16;x<=22;x++){
+    set(x,1,'M'); set(x,2,'A'); set(x,3,'A'); set(x,4,'A'); set(x,5,'A'); set(x,6,'A');
+  }
+  set(19,2,'N');                // 霓虹招牌
+  set(17,3,'V'); set(21,3,'V'); // 霓虹窗
+  set(19,6,'G');                // 木板封住的门
+  // 施工空地 x10..14 y2..5
+  for(let y=2;y<=5;y++) for(let x=10;x<=14;x++) set(x,y,'d');
+  for(let x=10;x<=14;x++){ set(x,2,'x'); set(x,5,'x'); }
+  set(10,3,'x'); set(10,4,'x'); set(14,3,'x'); set(14,4,'x');
+  // 小径
+  for(let y=7;y<=8;y++){ set(5,y,'p'); set(19,y,'p'); }
+  for(let x=6;x<=12;x++) set(x,8,'p');
+  for(let x=10;x<=12;x++) set(x,6,'p');
+  set(12,7,'p');
+  set(12,6,'s');   // 告示牌立在围栏外的路边
+  // 马路
+  for(let x=0;x<TW;x++){ set(x,9,'r'); set(x,10,'r'); }
+  // 灌木（医院与游戏厅门前）
+  [[4,7],[6,7],[18,7],[20,7]].forEach(([x,y])=>set(x,y,'u'));
+  // 树
+  [[0,0],[12,0],[24,0],[0,5],[24,5],[0,12],[3,12],[9,13],[15,13],[21,12],[24,12]]
+    .forEach(([x,y])=>set(x,y,'t'));
+  // 花
+  [[2,12],[7,12],[13,12],[17,12],[1,11],[22,11],[8,13],[10,11]]
+    .forEach(([x,y])=>{ if(m[y][x]==='.') set(x,y,','); });
+  return m;
+}
+function makeHospital(){
+  const m=[];
+  for(let y=0;y<TH;y++) m.push(new Array(TW).fill('_'));
+  const set=(x,y,c)=>{ if(x>=0&&x<TW&&y>=0&&y<TH) m[y][x]=c; };
+  // 外墙：上两排 + 左右 + 底
+  for(let x=0;x<TW;x++){ set(x,0,'='); set(x,1,'='); set(x,TH-1,'='); }
+  for(let y=0;y<TH;y++){ set(0,y,'='); set(TW-1,y,'='); }
+  set(11,TH-1,'-'); set(12,TH-1,'-');
+  // 电梯（左上角）
+  set(1,1,'z'); set(2,1,'z');
+  // 诊室门（顶墙）
+  set(4,1,'1'); set(9,1,'2'); set(14,1,'3');
+  // 白医生办公室 x17..23 y2..4，左墙 x=16，下墙 y=5
+  for(let y=0;y<=5;y++) set(16,y,'=');
+  for(let x=16;x<=23;x++) set(x,5,'=');
+  set(16,3,'o');                        // 办公室门
+  set(20,2,'k'); set(21,2,'k');         // 办公桌
+  set(18,2,'T');                        // 盆栽
+  set(22,2,'j'); set(23,2,'j');         // 文件柜
+  // 护士站
+  for(let x=9;x<=14;x++) set(x,10,'n');
+  // 候诊椅 + 小圆桌
+  [[3,6],[4,6],[3,8],[4,8],[18,7],[19,7]].forEach(([x,y])=>set(x,y,'q'));
+  set(3,7,'b'); set(4,7,'b');
+  // 售货机 + 垃圾桶（入口右侧）
+  set(21,12,'v'); set(23,12,'m');
+  // 饮水机 + 盆栽
+  set(1,6,'c'); set(1,3,'T'); set(15,6,'T'); set(1,13,'T'); set(23,13,'T');
+  return m;
+}
+const SOLID = new Set(['B','W','R','C','K','A','V','M','N','G','t','T','x','s','u','=','n','q','j','k','c','2','3','z','v','m','b']);
+const MAPS = { town:makeTown(), hospital:makeHospital() };
+
+/* ============================================================
+   瓦片绘制
+   ============================================================ */
+function px(x,y,w,h,c){ CX.fillStyle=c; CX.fillRect(x,y,w,h); }
+function drawTile(code,tx,ty,frame){
+  const x=tx*TS, y=ty*TS, d=((tx*7+ty*13)%3);
+  switch(code){
+    case '.':
+      px(x,y,TS,TS,(tx+ty)%2? PAL.grassA:PAL.grassB);
+      if(d===0){ px(x+3,y+4,1,3,PAL.tuft); px(x+5,y+3,1,4,PAL.tuft); px(x+4,y+6,1,2,PAL.tuft); }
+      if(d===2){ px(x+11,y+10,1,3,PAL.tuft); px(x+12,y+9,1,4,PAL.tuft); }
+      break;
+    case ',':
+      px(x,y,TS,TS,(tx+ty)%2? PAL.grassA:PAL.grassB);
+      px(x+4,y+5,2,2,PAL.red); px(x+6,y+6,2,2,PAL.yellow); px(x+5,y+8,1,3,PAL.tuft);
+      px(x+10,y+4,2,2,PAL.pink); px(x+11,y+7,1,3,PAL.tuft);
+      break;
+    case 't': {
+      px(x,y,TS,TS,(tx+ty)%2? PAL.grassA:PAL.grassB);
+      px(x+3,y+13,11,2,'rgba(9,68,33,.25)');               // 树荫
+      px(x+7,y+9,3,6,PAL.wood); px(x+7,y+9,1,6,PAL.woodD);
+      const bob=Math.floor(frame/30)%2;
+      px(x+1,y+4+bob,14,6,PAL.deep);                       // 树冠下层
+      px(x+3,y+1+bob,10,4,PAL.deep);                       // 树冠顶层
+      px(x+3,y+2+bob,9,4,PAL.brand);                       // 受光面
+      px(x+4,y+2+bob,3,2,'#6FA24B');                       // 高光
+      px(x+11,y+6+bob,3,2,PAL.darkest);                    // 暗部
+      break; }
+    case 'u': {
+      px(x,y,TS,TS,(tx+ty)%2? PAL.grassA:PAL.grassB);
+      px(x+1,y+7,14,7,PAL.deep); px(x+3,y+4,10,5,PAL.deep);
+      px(x+3,y+5,3,2,PAL.brand); px(x+8,y+8,4,2,PAL.brand);
+      if(((tx+frame>>5)&1)===0) px(x+6,y+6,2,2,PAL.red);
+      break; }
+    case 'p':
+      px(x,y,TS,TS,PAL.sand);
+      px(x,y,1,TS,'#E2CD9C'); px(x+15,y,1,TS,'#E2CD9C');   // 铺装边缘
+      px(x,y,TS,1,'#F4E7C2');                              // 上缘高光
+      if(d===1) px(x+3,y+5,2,1,PAL.dirtD);
+      if(d===2) px(x+10,y+9,2,1,PAL.dirtD);
+      if(d===0) px(x+7,y+12,2,1,'#E2CD9C');
+      break;
+    case 'r':
+      px(x,y,TS,TS,(tx%2)? PAL.roadA:PAL.roadB);
+      px(x+((tx*5)%12),y+((ty*3)%10)+3,3,1,PAL.roadB);
+      if(ty===9){                              // 路肩上缘 + 车道虚线
+        px(x,y,TS,2,'#A39A86'); px(x,y,TS,1,'#8E8574');
+        if(tx%2===0) px(x+2,y+14,5,2,'#E8E2D2');
+      }
+      if(ty===10){ px(x,y+14,TS,2,'#A39A86'); px(x,y+15,TS,1,'#8E8574'); }
+      break;
+    /* ---- 医院外观 ---- */
+    case 'R':
+      px(x,y,TS,TS,PAL.red);
+      px(x,y,TS,2,PAL.redL);
+      px(x,y+5,TS,1,PAL.redD); px(x,y+10,TS,1,PAL.redD);
+      px(x+((ty*8)%16),y+2,1,3,PAL.redD);
+      break;
+    case 'B':
+      px(x,y,TS,TS,PAL.wall);
+      px(x+((ty%2)*8),y,1,TS,PAL.wallLine);
+      px(x,y+14,TS,2,PAL.wallShade);
+      break;
+    case 'W':
+      px(x,y,TS,TS,PAL.wall);
+      px(x+2,y+3,12,9,PAL.blueD); px(x+3,y+4,10,7,PAL.glass);
+      px(x+3,y+4,3,7,PAL.white); px(x+10,y+4,3,7,PAL.white);   // 窗帘
+      px(x+6,y+4,4,7,PAL.glass); px(x+6,y+4,4,2,PAL.glassD);
+      px(x,y+14,TS,2,PAL.wallShade);
+      break;
+    case 'C': {
+      px(x,y,TS,TS,PAL.wall);
+      px(x+6,y-4,4,4,PAL.steelD);                              // 招牌支杆
+      px(x+1,y+1,14,14,PAL.redD); px(x+2,y+2,12,12,PAL.white);
+      px(x+6,y+4,4,8,PAL.red); px(x+4,y+6,8,4,PAL.red);
+      break; }
+    case 'K': {                                                 // 红白条纹雨棚
+      px(x,y,TS,TS,PAL.wall);
+      for(let i=0;i<4;i++) px(x+i*4,y+2,4,10, (i+(tx%2))%2? PAL.red:PAL.white);
+      px(x,y+12,TS,2,PAL.redD);
+      for(let i=0;i<4;i++) px(x+i*4+1,y+12,2,2,(i+(tx%2))%2? PAL.redD:PAL.wallShade);
+      break; }
+    case 'D': {                                                 // 玻璃感应门
+      px(x,y,TS,TS,PAL.wall);
+      px(x+1,y,14,16,PAL.ink);
+      px(x+2,y+1,6,15,PAL.glass); px(x+8,y+1,6,15,PAL.glass);
+      px(x+2,y+1,6,3,PAL.glassD); px(x+8,y+1,6,3,PAL.glassD);
+      px(x+7,y+1,2,15,PAL.steelD);                             // 门缝
+      px(x+4,y+7,2,2,PAL.white); px(x+10,y+7,2,2,PAL.white);   // 把手
+      const g=Math.floor(frame/24)%2;
+      px(x+2,y+15,12,1, g?PAL.yellow:PAL.yellowL);             // 迎宾灯
+      break; }
+    /* ---- 游戏厅外观 ---- */
+    case 'M': {
+      px(x,y,TS,TS,PAL.blue);
+      px(x,y,TS,2,'#5270B8');
+      px(x,y+5,TS,1,PAL.blueD); px(x,y+10,TS,1,PAL.blueD);
+      const on=Math.floor(frame/14)%2;                         // 屋檐霓虹
+      px(x,y+13,TS,3, on?PAL.pink:'#B45EB0');
+      break; }
+    case 'A':
+      px(x,y,TS,TS,PAL.yellowL);
+      px(x+((ty%2)*6),y,2,TS,PAL.yellowD);
+      px(x,y+14,TS,2,PAL.yellowD);
+      break;
+    case 'V': {                                                 // 霓虹窗
+      px(x,y,TS,TS,PAL.yellowL);
+      px(x+2,y+3,12,9,PAL.ink);
+      const t=Math.floor(frame/18)%2;
+      px(x+4,y+5,3,3, t?PAL.pink:'#B45EB0');
+      px(x+9,y+6,3,3, t?'#5B7AC9':PAL.blue);
+      px(x+6,y+9,4,1,PAL.yellow);
+      break; }
+    case 'N': {                                                 // 霓虹招牌
+      px(x,y,TS,TS,PAL.blue);
+      px(x,y+1,16,14,PAL.ink);
+      const on=Math.floor(frame/12)%3>0;
+      const c=on?PAL.pink:'#B45EB0';
+      px(x+2,y+3,12,10,'#1c1430');
+      px(x+2,y+3,12,1,c); px(x+2,y+12,12,1,c);
+      px(x+2,y+3,1,10,c); px(x+13,y+3,1,10,c);
+      px(x+7,y+5,2,4,c); px(x+5,y+9,6,2,c);                    // 摇杆图形
+      px(x+11,y+5,2,2, on?PAL.yellow:'#8f8747');
+      break; }
+    case 'G': {                                                 // 木板封门
+      px(x,y,TS,TS,PAL.yellowL);
+      px(x+2,y,12,16,PAL.woodD);
+      px(x+2,y+2,12,3,PAL.wood); px(x+2,y+11,12,3,PAL.wood);
+      px(x+3,y+5,10,2,PAL.wood); px(x+3,y+8,10,2,PAL.wood);
+      px(x+4,y+3,1,1,PAL.ink); px(x+11,y+12,1,1,PAL.ink);
+      break; }
+    /* ---- 空地 ---- */
+    case 'd':
+      px(x,y,TS,TS,PAL.dirt);
+      if(d===0) px(x+4,y+6,3,2,PAL.dirtD);
+      if(d===1) px(x+9,y+3,2,2,PAL.dirtD);
+      break;
+    case 'x':
+      px(x,y,TS,TS,PAL.dirt);
+      px(x,y+4,TS,3,PAL.wood); px(x,y+10,TS,3,PAL.wood);
+      px(x+2,y+1,3,14,PAL.woodD); px(x+11,y+1,3,14,PAL.woodD);
+      break;
+    case 's':
+      px(x,y,TS,TS,PAL.dirt);
+      px(x+7,y+8,2,7,PAL.woodD);
+      px(x+2,y+1,12,8,PAL.cream); px(x+2,y+1,12,2,PAL.red);
+      px(x+4,y+5,8,1,PAL.ink); px(x+4,y+7,6,1,PAL.ink);
+      break;
+    /* ---- 医院室内 ---- */
+    case '=':
+      px(x,y,TS,TS,'#D8D2C0');
+      px(x,y,TS,2,'#C6BEAA');                        // 顶部压线
+      px(x,y+9,TS,2,'#8FBF9A');                      // 绿色腰线（参考医院走廊）
+      px(x,y+13,TS,3,'#B8B29E');                     // 踢脚线
+      px(x+((ty%2)*8),y+2,1,7,'#CFC8B4');
+      break;
+    case '_':
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      if((tx+ty)%2===0) px(x+7,y+7,2,2,'#D5E3D5');   // 地砖角点
+      px(x,y,TS,1,'#E4EFE4');                        // 上缘光
+      break;
+    case '-': {
+      px(x,y,TS,TS,'#D8D2C0');
+      px(x+2,y,12,16,PAL.ink);
+      px(x+3,y,4,16,PAL.glass); px(x+9,y,4,16,PAL.glass);
+      px(x+7,y,2,16,PAL.steelD);
+      const g=Math.floor(frame/24)%2;
+      px(x+3,y+13,10,2, g?PAL.yellow:PAL.yellowL);
+      break; }
+    case '1': case '2': case '3': {
+      px(x,y,TS,TS,'#D8D2C0');
+      px(x+2,y,12,16,PAL.blueD); px(x+3,y+1,10,15,PAL.blue);
+      px(x+11,y+9,2,2,PAL.yellowL);
+      // 门上编号牌
+      px(x+4,y+2,8,10,PAL.ink); px(x+5,y+3,6,8,PAL.white);
+      CX.fillStyle=PAL.blueD; CX.font=FONT(12); CX.textBaseline='top';
+      CX.fillText(code,x+6,y+2);
+      break; }
+    case 'o': {
+      px(x,y,TS,TS,'#D8D2C0');
+      px(x+2,y,12,16,PAL.woodD); px(x+3,y+1,10,15,PAL.wood);
+      px(x+4,y+2,8,5,PAL.glass); px(x+4,y+2,8,2,PAL.glassD);
+      px(x+11,y+9,2,2,PAL.yellowL);
+      break; }
+    case 'n':
+      px(x,y,TS,TS,'#EAF3EA');
+      px(x,y+2,TS,8,PAL.white); px(x,y+2,TS,2,PAL.red);
+      px(x,y+10,TS,6,PAL.wallShade);
+      px(x+3,y+4,4,4,PAL.glass); px(x+9,y+4,4,2,PAL.ink);
+      break;
+    case 'q':
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+2,y+3,12,4,PAL.red); px(x+2,y+7,12,3,PAL.redD);
+      px(x+2,y+10,2,4,PAL.woodD); px(x+12,y+10,2,4,PAL.woodD);
+      break;
+    case 'k': {                                                 // 办公桌
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+1,y+4,14,8,PAL.wood); px(x+1,y+4,14,2,PAL.woodD);
+      px(x+3,y+1,6,4,PAL.ink); px(x+4,y+2,4,2,'#7CFF6B');      // 显示器
+      px(x+10,y+6,4,3,PAL.white); px(x+10,y+7,4,1,PAL.red);    // 文件
+      break; }
+    case 'j':                                                   // 文件柜
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+3,y+1,10,14,PAL.steel); px(x+3,y+1,10,2,PAL.steelD);
+      px(x+4,y+5,8,3,PAL.steelD); px(x+4,y+10,8,3,PAL.steelD);
+      px(x+7,y+6,2,1,PAL.ink); px(x+7,y+11,2,1,PAL.ink);
+      break;
+    case 'T': {                                                 // 室内盆栽
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      const bob2=Math.floor(frame/36)%2;
+      px(x+5,y+3+bob2,6,5,PAL.deep); px(x+6,y+1+bob2,4,3,PAL.brand);
+      px(x+6,y+4+bob2,2,2,'#6FA24B');
+      px(x+4,y+9,8,5,PAL.redD); px(x+5,y+9,6,1,PAL.redL);
+      px(x+4,y+13,8,1,PAL.woodD);
+      break; }
+    case 'c': {                                                 // 饮水机
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+5,y+2,6,5,PAL.glass); px(x+6,y+3,4,2,'#D8F0F8');
+      px(x+4,y+7,8,8,PAL.white); px(x+6,y+9,4,2,PAL.red);
+      px(x+4,y+14,8,1,PAL.wallShade);
+      break; }
+    case 'z':                                                   // 电梯门
+      px(x,y,TS,TS,'#D8D2C0');
+      px(x,y+9,TS,2,'#8FBF9A');
+      px(x+1,y,14,16,PAL.steelD);
+      px(x+2,y+1,12,15,PAL.steel);
+      px(x+8,y+1,1,15,PAL.ink);                                // 门缝
+      px(x+3,y+3,3,8,'#AEB6BF'); px(x+10,y+3,3,8,'#AEB6BF');
+      break;
+    case 'v': {                                                 // 自动售货机
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+2,y,13,15,PAL.blueD); px(x+3,y,11,14,PAL.blue);
+      px(x+4,y+2,7,8,PAL.ink);                                 // 玻璃橱窗
+      px(x+5,y+3,2,2,PAL.red); px(x+8,y+3,2,2,PAL.yellow);
+      px(x+5,y+6,2,2,'#7CFF6B'); px(x+8,y+6,2,2,PAL.pink);
+      px(x+12,y+2,2,5,PAL.ink); px(x+12,y+3,2,2,'#7CFF6B');    // 选货键
+      px(x+4,y+11,9,3,PAL.ink);                                // 取货口
+      const blink2=Math.floor(frame/20)%2;
+      if(blink2) px(x+13,y+9,1,1,PAL.yellowL);
+      break; }
+    case 'm':                                                   // 垃圾桶
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+4,y+5,8,9,PAL.steelD); px(x+5,y+6,6,7,PAL.steel);
+      px(x+3,y+3,10,3,PAL.steelD); px(x+6,y+2,4,2,PAL.ink);
+      break;
+    case 'b': {                                                 // 小圆桌
+      px(x,y,TS,TS,(tx+ty)%2? '#EAF3EA':'#DDE9DD');
+      px(x+7,y+8,2,6,PAL.woodD);
+      px(x+3,y+4,10,5,PAL.wood); px(x+3,y+4,10,1,'#A8875F');
+      px(x+5,y+5,2,2,PAL.white); px(x+9,y+6,2,2,PAL.white);    // 杯子
+      break; }
+  }
+}
+</script>
+<script>
+"use strict";
+/* ============================================================
+   角色精灵（12x14 像素小人）
+   ============================================================ */
+function drawSprite(x,y,dir,step,o){
+  const f=step?1:0, sy=y-2;
+  px(x+2,y+12,10,2,'rgba(0,0,0,.18)');
+  if(dir==='down'||dir==='up'){ px(x+3,sy+10+f,2,3,o.pants); px(x+7,sy+10+(f?0:1),2,3,o.pants); }
+  else { px(x+3,sy+10,2,3+f,o.pants); px(x+7,sy+10,2,3,o.pants); }
+  px(x+2,sy+5,8,6,o.coat||o.shirt);
+  if(o.coat) px(x+5,sy+5,2,6,o.shirt);
+  px(x+1,sy+5+f,2,4,o.coat||o.shirt); px(x+9,sy+5+(f?0:1),2,4,o.coat||o.shirt);
+  px(x+2,sy-1,8,6,PAL.skin);
+  if(o.cap){ px(x+1,sy-3,10,3,o.cap); px(x+1,sy-1,10,1,o.cap); }
+  else { px(x+2,sy-3,8,3,o.hair); px(x+2,sy-1,2,2,o.hair); px(x+8,sy-1,2,2,o.hair); }
+  if(dir==='down'){ px(x+4,sy+1,1,2,PAL.ink); px(x+7,sy+1,1,2,PAL.ink); }
+  if(dir==='left') px(x+3,sy+1,1,2,PAL.ink);
+  if(dir==='right') px(x+8,sy+1,1,2,PAL.ink);
+}
+const SKIN_PLAYER={cap:PAL.red, shirt:PAL.blue, pants:'#333a44', hair:PAL.hair};
+const SKIN_DOCTOR={coat:PAL.white, shirt:PAL.glass, pants:'#555f6e', hair:'#222'};
+const SKIN_NURSE ={cap:PAL.pink, shirt:'#FFD7F8', pants:'#FFF', hair:'#6B4A2B'};
+
+/* ============================================================
+   对话引擎
+   ============================================================ */
+const DLG={active:false,queue:[],line:null,chars:0,done:false,name:'',onEnd:null};
+function say(name,lines,onEnd){
+  DLG.active=true; DLG.queue=[...lines]; DLG.name=name; DLG.onEnd=onEnd||null;
+  nextLine();
+}
+function nextLine(){
+  if(DLG.queue.length===0){
+    DLG.active=false; DLG.line=null;
+    if(DLG.onEnd){ const f=DLG.onEnd; DLG.onEnd=null; f(); }
+    return;
+  }
+  DLG.line=DLG.queue.shift(); DLG.chars=0; DLG.done=false;
+}
+function dlgUpdate(){
+  if(!DLG.active||!DLG.line) return;
+  if(!DLG.done){
+    DLG.chars+=0.5;
+    if(Math.floor(DLG.chars)%2===0&&Math.random()<.3) beep(880+Math.random()*80,.015,'square',.015);
+    if(DLG.chars>=DLG.line.length){ DLG.chars=DLG.line.length; DLG.done=true; }
+  }
+}
+function dlgAdvance(){
+  if(!DLG.active) return false;
+  beep(660,.04);
+  if(!DLG.done){ DLG.chars=DLG.line.length; DLG.done=true; } else nextLine();
+  return true;
+}
+function drawDialogue(){
+  if(!DLG.active||!DLG.line) return;
+  const bx=8,by=168,bw=384,bh=62;
+  px(bx-2,by-2,bw+4,bh+4,PAL.darkest);
+  px(bx,by,bw,bh,PAL.cream);
+  px(bx+2,by+2,bw-4,1,PAL.wallShade); px(bx+2,by+bh-3,bw-4,1,PAL.wallShade);
+  if(DLG.name){
+    const nw=DLG.name.length*12+16;
+    px(bx+6,by-14,nw,17,PAL.darkest); px(bx+7,by-13,nw-2,15,PAL.brand);
+    CX.fillStyle=PAL.white; CX.font=FONT(12); CX.textBaseline='top';
+    CX.fillText(DLG.name,bx+13,by-11);
+  }
+  CX.fillStyle=PAL.ink; CX.font=FONT(12); CX.textBaseline='top';
+  const txt=DLG.line.slice(0,Math.floor(DLG.chars)), maxC=30;
+  CX.fillText(txt.slice(0,maxC),bx+10,by+9);
+  if(txt.length>maxC) CX.fillText(txt.slice(maxC,maxC*2),bx+10,by+25);
+  if(txt.length>maxC*2) CX.fillText(txt.slice(maxC*2,maxC*3),bx+10,by+41);
+  if(DLG.done&&Math.floor(frame/16)%2){
+    px(bx+bw-16,by+bh-11,7,2,PAL.darkest); px(bx+bw-14,by+bh-9,3,2,PAL.darkest);
+  }
+}
+
+/* ============================================================
+   世界状态
+   ============================================================ */
+const world={
+  scene:'title',
+  map:MAPS.town,
+  player:{tx:12,ty:10,px:12*TS,py:10*TS,dir:'up',moving:0,sx:0,sy:0,step:0},
+  doctor:{tx:20,ty:3,px:20*TS,py:3*TS,dir:'up',mode:'sit',timer:420,path:[],moving:0,sx:0,sy:0,step:0,drops:[]},
+  firstVisit:true,
+};
+function solidAt(map,tx,ty){
+  if(tx<0||ty<0||tx>=TW||ty>=TH) return true;
+  const c=map[ty][tx];
+  if(SOLID.has(c)) return true;
+  // 小镇街道：只能走在小径/马路上，草地不可进入
+  if(map===MAPS.town&&(c==='.'||c===',')) return true;
+  return false;
+}
+
+/* ---------- 白医生（AI 引导员，原型为演示脚本） ---------- */
+const GUIDE_QA=[
+  ['我想测前臂的数据',['诊室一就在走廊左边，门口写着"诊室一"。',
+    '直接走进去就行。先放松，再跟着屏幕的提示做动作。']],
+  ['这个小镇是干什么的',['这里是你的"生理数据中心"。',
+    '戴上贴片、连接设备，我们就能记录你的肌肉电信号。',
+    '每次检测完都会生成一份报告并自动存档。']],
+  ['检测会不会疼',['完全不会。表面肌电只是"听"肌肉的电信号，',
+    '就像用听诊器听心跳一样，没有任何刺激。']],
+];
+let guideQAIdx=0;
+function askGuide(){
+  if(world.scene!=='hospital'){
+    say('系统',['白医生在小镇医院里。','去医院大厅右上角的【办公室】找他吧。']);
+    return;
+  }
+  const p=world.player,d=world.doctor;
+  const near=Math.abs(p.tx-d.tx)+Math.abs(p.ty-d.ty)<=3;
+  if(!near){ say('白医生',['我在这边办公室，过来一点再聊。']); return; }
+  const qa=GUIDE_QA[guideQAIdx%GUIDE_QA.length]; guideQAIdx++;
+  say('白医生',['你问："'+qa[0]+'"？',...qa[1]]);
+}
+function doctorUpdate(){
+  const d=world.doctor;
+  if(d.moving>0){ stepMove(d); return; }
+  if(d.path.length){
+    const [nx,ny]=d.path[0];
+    const dx=Math.sign(nx-d.tx),dy=Math.sign(ny-d.ty);
+    d.dir=dx<0?'left':dx>0?'right':dy<0?'up':'down';
+    d.moving=TS; d.sx=dx*SPD; d.sy=dy*SPD; d.tx=nx; d.ty=ny;
+    d.path.shift(); return;
+  }
+  d.timer--;
+  if(d.timer<=0){
+    if(d.mode==='sit'){ d.mode='water'; d.path=[[19,3],[18,3]]; d.timer=260; }
+    else { d.mode='sit'; d.path=[[19,3],[20,3]]; d.dir='up'; d.timer=460; }
+  }
+  if(d.mode==='water'&&frame%5===0){
+    d.drops.push({x:18*TS+5+Math.random()*6,y:2*TS+2,v:0});
+  }
+  d.drops.forEach(dr=>{dr.v+=.12;dr.y+=dr.v;});
+  d.drops=d.drops.filter(dr=>dr.y<2*TS+15);
+}
+
+/* ============================================================
+   互动（面向格 + 相邻格宽松判定）
+   ============================================================ */
+function adjacentTiles(){
+  const p=world.player;
+  return [[p.tx,p.ty-1,'up'],[p.tx,p.ty+1,'down'],[p.tx-1,p.ty,'left'],[p.tx+1,p.ty,'right']];
+}
+function findInteract(){
+  // 优先面向格，其次其他相邻格
+  const p=world.player;
+  const dirs={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
+  const [dx,dy]=dirs[p.dir];
+  const cand=[[p.tx+dx,p.ty+dy],...adjacentTiles().map(a=>[a[0],a[1]])];
+  for(const [fx,fy] of cand){
+    if(fx<0||fy<0||fx>=TW||fy>=TH) continue;
+    if(world.scene==='hospital'){
+      if(fx===world.doctor.tx&&fy===world.doctor.ty) return {type:'doctor'};
+    }
+    const c=world.map[fy][fx];
+    if(world.scene==='town'){
+      if(c==='G') return {type:'arcade'};
+      if(c==='s') return {type:'sign'};
+    }
+    if(world.scene==='hospital'){
+      if(c==='2') return {type:'room2'};
+      if(c==='3') return {type:'room3'};
+    }
+  }
+  return null;
+}
+function interact(){
+  const t=findInteract();
+  if(!t) return;
+  switch(t.type){
+    case 'doctor':{
+      const d=world.doctor; d.path=[];
+      d.dir={up:'down',down:'up',left:'right',right:'left'}[world.player.dir];
+      say('白医生',['来啦？我是白医生，负责这里的检测工作。',
+        '平时我就在办公室写报告、照顾花草。',
+        '想测前臂数据的话，去走廊的【诊室一】，直接走进门就行。',
+        '有问题随时来找我，或者按 T 问我。']);
+      break; }
+    case 'arcade':
+      say('招牌',['【游戏厅】','正在装修中，敬请期待……']); break;
+    case 'sign':
+      say('施工告示',['【施工预告】','新建筑筹备中，小镇会持续长大！']); break;
+    case 'room2':
+      say('诊室二',['【诊室二】','设备调试中，敬请期待。','（未来：更多部位的检测）']); break;
+    case 'room3':
+      say('诊室三',['【诊室三】','设备调试中，敬请期待。','（未来：疲劳评估专项）']); break;
+  }
+}
+function enterHospital(){
+  beep(392,.08); setTimeout(()=>beep(523,.12),90);
+  world.scene='hospital'; world.map=MAPS.hospital;
+  Object.assign(world.player,{tx:11,ty:13,px:11*TS,py:13*TS,dir:'up',moving:0});
+  if(world.firstVisit){
+    world.firstVisit=false;
+    say('医院广播',['欢迎来到小镇医院。',
+      '测前臂数据请直走，去走廊左边的【诊室一】。',
+      '白医生在右上角的办公室，有问题可以去找他（按 T 提问）。']);
+  }
+}
+function exitHospital(){
+  world.scene='town'; world.map=MAPS.town;
+  Object.assign(world.player,{tx:5,ty:7,px:5*TS,py:7*TS,dir:'down',moving:0});
+}
+</script>
+<script>
+"use strict";
+/* ============================================================
+   诊室一：前臂肌电检测（模拟演示）
+   ============================================================ */
+const exam={phase:'intro',t:0,wave:[],burst:0,progress:0,result:null};
+function enterExam(){
+  world.scene='exam';
+  exam.phase='ready'; exam.t=0; exam.wave=[]; exam.progress=0; exam.result=null; exam.burst=0;
+  say('系统',['进入【诊室一 · 前臂检测】','按提示完成校准，然后按 空格 开始采集。']);
+}
+function examStart(){ exam.phase='sampling'; exam.progress=0; exam.wave=[]; jingle(); }
+function examFinish(){
+  exam.result={
+    rms:(0.8+Math.random()*1.4).toFixed(2),
+    pkpk:(3+Math.random()*4).toFixed(1),
+    mdf:(70+Math.random()*40).toFixed(0),
+    mvc:(55+Math.random()*40).toFixed(0),
+    fatigue:['良好','轻度疲劳','注意恢复'][Math.floor(Math.random()*3)],
+  };
+  exam.phase='report'; jingle();
+}
+function examKey(k){
+  if(exam.phase==='ready'&&(k===' '||k==='Enter')) examStart();
+  else if(exam.phase==='report'&&(k==='Escape'||k==='Enter')){
+    world.scene='hospital';
+    Object.assign(world.player,{tx:4,ty:2,px:4*TS,py:2*TS,dir:'down',moving:0});
+  }
+  else if(k==='Escape'&&exam.phase!=='sampling'){
+    world.scene='hospital';
+    Object.assign(world.player,{tx:4,ty:2,px:4*TS,py:2*TS,dir:'down',moving:0});
+  }
+}
+function examUpdate(){
+  exam.t+=1/60;
+  if(exam.phase==='sampling'){
+    exam.progress+=1/60/5;
+    if(Math.random()<.03) exam.burst=20+Math.random()*20;
+    const amp=4+exam.burst*Math.random();
+    exam.burst*=0.92;
+    exam.wave.push(Math.sin(exam.t*22)*amp+(Math.random()-.5)*amp*1.6);
+    if(exam.wave.length>220) exam.wave.shift();
+    if(exam.progress>=1) examFinish();
+  }
+}
+function drawPixelArm(cx,cy,s,glow){
+  cx=Math.round(cx); cy=Math.round(cy); s=Math.round(s);
+  if(glow>0){ const g=Math.round(glow*6);
+    px(cx-9*s-g,cy-3*s-g,18*s+g*2,7*s+g*2,'rgba(255,167,240,.3)'); }
+  px(cx-9*s,cy-3*s,5*s,5*s,PAL.skin);
+  px(cx-9*s,cy-3*s,5*s,1*s,'#E8B98A');
+  px(cx-4*s,cy-2*s,10*s,3*s,PAL.skin);
+  px(cx+6*s,cy-3*s,3*s,4*s,PAL.skin);
+  px(cx+8*s,cy-2*s,2*s,2*s,PAL.skin);
+  px(cx-1*s,cy-3*s,3*s,2*s,PAL.pink);
+  px(cx-1*s,cy-3*s,3*s,1*s,'#E88BD8');
+  const blink=Math.floor(frame/16)%2;
+  px(cx,cy-3*s,1*s,1*s,blink?PAL.red:PAL.yellowL);
+  px(cx-1*s+1,cy-4*s,1,s,PAL.ink);
+}
+function drawExam(){
+  px(0,0,400,240,'#101c2c');
+  px(0,0,400,22,PAL.darkest);
+  CX.fillStyle=PAL.yellowL; CX.font=FONT(12); CX.textBaseline='top';
+  CX.fillText('诊室一 · 前臂表面肌电检测（演示数据）',10,4);
+  CX.fillStyle='#8fb'; CX.fillText('ESC 返回',334,4);
+
+  if(exam.phase==='ready'){
+    drawPixelArm(200,112,4,0);
+    CX.textAlign='center';
+    CX.fillStyle=PAL.cream; CX.font=FONT(12);
+    CX.fillText('请放松前臂，然后跟随节奏：',200,172);
+    CX.fillText('放松 → 轻握 → 用力握（MVC 校准）',200,188);
+    CX.fillStyle=PAL.yellow; CX.fillText('按 空格 开始采集',200,208);
+    CX.textAlign='left';
+    return;
+  }
+  if(exam.phase==='sampling'){
+    const glow=Math.min(1,exam.burst/30);
+    drawPixelArm(90,120,3,glow);
+    px(180,40,200,110,PAL.darkest);
+    px(184,44,192,102,'#0a1408');
+    CX.strokeStyle='#1d3a1d'; CX.lineWidth=1; CX.beginPath();
+    for(let gx=184;gx<=376;gx+=16){ CX.moveTo(gx,44); CX.lineTo(gx,146); }
+    for(let gy=44;gy<=146;gy+=16){ CX.moveTo(184,gy); CX.lineTo(376,gy); }
+    CX.stroke();
+    CX.strokeStyle='#7CFF6B'; CX.lineWidth=2; CX.beginPath();
+    exam.wave.forEach((v,i)=>{
+      const wx=184+i*(192/220), wy=95+Math.max(-48,Math.min(48,v));
+      i?CX.lineTo(wx,wy):CX.moveTo(wx,wy);
+    });
+    CX.stroke();
+    CX.fillStyle='#7CFF6B'; CX.font=FONT(12);
+    CX.fillText('CH1 前臂肌群 · 2000Hz',186,26);
+    const power=Math.min(1,(Math.abs(exam.wave[exam.wave.length-1]||0))/30);
+    px(40,190,120,10,PAL.darkest);
+    px(42,192,116*power,6,power>.7?PAL.red:power>.35?PAL.yellow:PAL.brand);
+    CX.fillStyle=PAL.cream; CX.font=FONT(12); CX.fillText('激活度',40,174);
+    px(180,190,200,10,PAL.darkest);
+    px(182,192,196*exam.progress,6,PAL.glass);
+    CX.fillStyle=PAL.cream; CX.fillText('采集中… '+(exam.progress*100|0)+'%',180,174);
+    return;
+  }
+  if(exam.phase==='report'){
+    const r=exam.result;
+    px(70,32,260,180,PAL.darkest);
+    px(72,34,256,176,PAL.cream);
+    px(72,34,256,20,PAL.brand);
+    CX.fillStyle=PAL.white; CX.font=FONT(12);
+    CX.fillText('前臂肌电检测报告',152,37);
+    const rows=[['RMS 均方根',r.rms+' mV'],['峰峰值 pk-pk',r.pkpk+' mV'],
+      ['中位频率（疲劳）',r.mdf+' Hz'],['MVC 归一化峰值',r.mvc+' %'],
+      ['疲劳状态评估',r.fatigue]];
+    rows.forEach((row,i)=>{
+      const ry=64+i*22;
+      CX.fillStyle=PAL.ink; CX.font=FONT(12); CX.fillText(row[0],88,ry);
+      CX.fillStyle=PAL.blueD; CX.fillText(String(row[1]),236,ry);
+      px(88,ry+15,224,1,PAL.wallShade);
+    });
+    px(258,170,58,22,PAL.red); CX.fillStyle=PAL.white; CX.font=FONT(12);
+    CX.fillText('已存档',267,174);
+    CX.fillStyle=PAL.ink;
+    CX.fillText('Enter 返回医院大厅',140,197);
+  }
+}
+
+/* ============================================================
+   输入
+   ============================================================ */
+const KEYS={};
+addEventListener('keydown',e=>{
+  const k=e.key.length===1?e.key.toLowerCase():e.key;
+  if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key)) e.preventDefault();
+  if(KEYS[k]) return; KEYS[k]=true;
+  if(world.scene==='title'){
+    if(k==='Enter'||k===' '){ beep(784,.1); world.scene='town';
+      say('小镇广播',['欢迎来到肌电小镇。',
+        '街道左边那栋红屋顶的建筑就是【医院】。',
+        '想了解自己的肌肉状态？去医院找白医生吧。',
+        '（方向键移动 · 走到门口自动进入 · Enter 对话）']); }
+    return;
+  }
+  if(world.scene==='exam'){ if(DLG.active){dlgAdvance();return;} examKey(k==='e'?'Enter':k); return; }
+  if(DLG.active){ if(k==='Enter'||k===' '||k==='e') dlgAdvance(); return; }
+  if(k==='Enter'||k==='e'||k===' ') interact();
+  if(k==='t') askGuide();
+});
+addEventListener('keyup',e=>{ const k=e.key.length===1?e.key.toLowerCase():e.key; KEYS[k]=false; });
+
+/* ============================================================
+   移动（慢速格子移动 + 踩门自动触发）
+   ============================================================ */
+const SPD=1.1;
+function tryMove(ent,map){
+  if(ent.moving>0) return;
+  let dx=0,dy=0,dir=ent.dir;
+  if(KEYS['ArrowUp']||KEYS['w']){dy=-1;dir='up';}
+  else if(KEYS['ArrowDown']||KEYS['s']){dy=1;dir='down';}
+  else if(KEYS['ArrowLeft']||KEYS['a']){dx=-1;dir='left';}
+  else if(KEYS['ArrowRight']||KEYS['d']){dx=1;dir='right';}
+  ent.dir=dir;
+  if(!dx&&!dy) return;
+  const nx=ent.tx+dx,ny=ent.ty+dy;
+  if(solidAt(map,nx,ny)) return;
+  // 不撞 NPC
+  if(world.scene==='hospital'){
+    if(nx===world.doctor.tx&&ny===world.doctor.ty) return;
+  }
+  ent.moving=TS; ent.sx=dx*SPD; ent.sy=dy*SPD; ent.tx=nx; ent.ty=ny;
+}
+function stepMove(ent){
+  if(ent.moving>0){
+    ent.px+=ent.sx; ent.py+=ent.sy; ent.moving-=SPD; ent.step^=1;
+    if(ent.moving<0){
+      ent.moving=0; ent.px=ent.tx*TS; ent.py=ent.ty*TS;
+      if(ent===world.player) onPlayerArrive();
+    }
+  }
+}
+function onPlayerArrive(){
+  const c=world.map[world.player.ty][world.player.tx];
+  if(c==='D') enterHospital();
+  else if(c==='-') exitHospital();
+  else if(c==='1') enterExam();
+}
+</script>
+<script>
+"use strict";
+/* ============================================================
+   场景渲染
+   ============================================================ */
+function drawMap(map){
+  for(let y=0;y<TH;y++) for(let x=0;x<TW;x++) drawTile(map[y][x],x,y,frame);
+}
+function drawPrompt(){
+  if(DLG.active) return;
+  if(!findInteract()) return;
+  const p=world.player;
+  const bob=Math.floor(frame/20)%2;
+  px(p.px+2,p.py-12-bob,12,11,PAL.ink);
+  px(p.px+3,p.py-11-bob,10,9,PAL.white);
+  px(p.px+6,p.py-2-bob,3,3,PAL.ink);
+  CX.fillStyle=PAL.ink; CX.font=FONT(12); CX.textBaseline='top';
+  CX.fillText('E',p.px+5,p.py-10-bob);
+}
+function drawTown(){
+  drawMap(world.map);
+  // ---- 建筑细节叠加 ----
+  // 医院：屋顶护栏 + 屋顶空调机组 + 门口台阶/门灯/地垫
+  for(let x=2;x<=8;x++){ px(x*16+2,1*16-3,2,3,PAL.steelD); px(x*16+12,1*16-3,2,3,PAL.steelD); }
+  px(2*16,1*16-4,7*16,2,PAL.steel);
+  [3,7].forEach(ax=>{
+    px(ax*16+2,1*16+2,12,7,PAL.steel); px(ax*16+2,1*16+2,12,1,PAL.steelD);
+    px(ax*16+4,1*16+4,8,3,'#8E959E'); px(ax*16+6,1*16+5,4,1,PAL.steelD);
+  });
+  px(5*16,7*16,16,3,PAL.steel); px(5*16,7*16,16,1,PAL.steelD);       // 台阶
+  [4,6].forEach(ax=>{                                                 // 门灯
+    px(ax*16+6,5*16+10,4,3,PAL.ink);
+    px(ax*16+7,5*16+11,2,2,Math.floor(frame/30)%2?PAL.yellow:PAL.yellowL);
+  });
+  px(5*16+2,7*16+4,12,4,PAL.redD); px(5*16+4,7*16+5,8,1,PAL.redL);    // 门前地垫
+  // 游戏厅：门口雨棚 + 跑马灯 + 竖招牌 + 海报
+  for(let i=0;i<3;i++) px((18+i)*16,5*16,16,4, i%2?PAL.pink:PAL.white);
+  px(18*16,5*16+4,48,2,'#B45EB0');
+  for(let i=0;i<12;i++){                                              // 屋檐跑马灯
+    const lit=(Math.floor(frame/8)+i)%2===0;
+    px(16*16+2+i*10,2*16-2,3,3, lit?PAL.yellow:'#8f8747');
+  }
+  px(22*16+8,3*16,8,30,PAL.ink);                                      // 竖招牌 VR
+  const sOn=Math.floor(frame/12)%3>0;
+  CX.fillStyle=sOn?PAL.pink:'#B45EB0'; CX.font=FONT(12);
+  CX.fillText('V',22*16+9,3*16+2); CX.fillText('R',22*16+9,3*16+15);
+  [[17,4,'#E86A55'],[21,4,'#5B7AC9']].forEach(([ax,ay,c])=>{
+    px(ax*16+4,ay*16+3,8,10,PAL.ink); px(ax*16+5,ay*16+4,6,8,c);
+    px(ax*16+6,ay*16+6,4,1,PAL.white); px(ax*16+6,ay*16+8,4,1,PAL.white);
+  });
+  // 建筑名称字牌
+  CX.textBaseline='top';
+  CX.font=FONT(12); CX.fillStyle=PAL.white;
+  CX.fillText('医 院', 6*16+6, 1*16+3);
+  const on=Math.floor(frame/12)%3>0;
+  CX.fillStyle=on?PAL.pink:'#B45EB0';
+  CX.fillText('GAME', 17*16+6, 1*16+3);
+  const p=world.player;
+  drawSprite(p.px+2,p.py+2,p.dir,p.moving>0?p.step:0,SKIN_PLAYER);
+  drawPrompt();
+}
+function drawHospital(){
+  drawMap(world.map);
+  // ---- 墙面细节：顶灯 + 宣传海报 ----
+  [5,11,18].forEach(lx=>{
+    px(lx*16+2,2,12,3,PAL.white);
+    px(lx*16+1,5,14,5,'rgba(249,237,181,.25)');
+  });
+  // 视力表海报（致敬经典医院墙）
+  px(7*16+3,5,10,12,PAL.white); px(7*16+3,5,10,1,PAL.red);
+  px(7*16+5,8,6,1,PAL.ink); px(7*16+6,10,4,1,PAL.ink); px(7*16+5,12,5,1,PAL.ink); px(7*16+7,14,3,1,PAL.ink);
+  CX.fillStyle=PAL.ink; CX.font=FONT(12); CX.textBaseline='top';
+  // 健康宣传画
+  px(11*16+3,4,10,14,PAL.white); px(11*16+3,4,10,2,PAL.brand);
+  px(11*16+6,8,4,3,PAL.red); px(11*16+7,7,2,5,PAL.red);
+  px(11*16+4,14,8,1,PAL.wallShade);
+  // 诊室门牌
+  CX.font=FONT(12); CX.textBaseline='top';
+  [['诊室一',4],['诊室二',9],['诊室三',14]].forEach(([t,x])=>{
+    px(x*16-4,2,44,15,PAL.darkest); px(x*16-3,3,42,13,PAL.white);
+    CX.fillStyle=PAL.ink; CX.fillText(t,x*16,3);
+  });
+  // 办公室门牌
+  px(17*16+2,2,52,15,PAL.darkest); px(17*16+3,3,50,13,PAL.yellowL);
+  CX.fillStyle=PAL.ink; CX.fillText('办公室',17*16+9,3);
+  // 电梯楼层指示（红点 + 数字闪动）
+  px(16,2,34,9,PAL.ink);
+  const fl=Math.floor(frame/40)%3+1;
+  CX.fillStyle=PAL.red; CX.fillText(fl+'F',20,0);
+  px(16,11,34,1,PAL.steelD);
+  // 壁挂电视（左墙，播放波形）
+  px(2,5*16,6,34,PAL.ink); px(4,5*16+3,26,22,PAL.ink); px(5,5*16+4,24,20,'#0a1408');
+  CX.strokeStyle='#7CFF6B'; CX.lineWidth=1; CX.beginPath();
+  for(let i=0;i<24;i++){ const wy=5*16+14+Math.sin((frame+i*2)/6)*5*(i%5===0?1.6:.4);
+    i?CX.lineTo(5+i,wy):CX.moveTo(5+i,wy); }
+  CX.stroke();
+  // 挂钟（顶墙，诊室二与三之间）
+  px(12*16+4,1,9,9,PAL.white); px(12*16+4,1,9,1,PAL.ink); px(12*16+4,9,9,1,PAL.ink);
+  px(12*16+8,3,1,3,PAL.ink); px(12*16+8,5,3,1,PAL.ink);
+  // 门口地垫
+  px(10*16,13*16+6,4*16,8,'#3E6B4A');
+  px(10*16+2,13*16+8,4*16-4,1,'#587F62'); px(10*16+2,13*16+11,4*16-4,1,'#587F62');
+  // 灭火器（左墙）
+  px(2,8*16+4,6,9,PAL.red); px(3,8*16+2,4,2,PAL.ink); px(3,8*16+6,4,2,PAL.white);
+  // 护士站前地毯
+  px(9*16,11*16+2,6*16,7,'#C9746A');
+  px(9*16+3,11*16+4,6*16-6,1,'#D98A80'); px(9*16+3,11*16+7,6*16-6,1,'#D98A80');
+  // 宣传展架（大厅中部）
+  px(8*16+3,6*16-2,10,18,PAL.steelD); px(8*16+4,6*16-4,8,18,PAL.white);
+  px(8*16+4,6*16-4,8,3,PAL.brand);
+  px(8*16+5,6*16+2,6,1,PAL.ink); px(8*16+5,6*16+5,6,1,PAL.ink); px(8*16+5,6*16+8,4,1,PAL.ink);
+  px(8*16+4,6*16+13,8,2,PAL.steelD);
+  // 白医生（坐着写报告 / 起身浇花）
+  const d=world.doctor;
+  drawSprite(d.px+2,d.py+2,d.dir,d.moving>0?d.step:0,SKIN_DOCTOR);
+  // 浇花水滴
+  d.drops.forEach(dr=>px(dr.x,dr.y,2,2,PAL.glassD));
+  const p=world.player;
+  drawSprite(p.px+2,p.py+2,p.dir,p.moving>0?p.step:0,SKIN_PLAYER);
+  drawPrompt();
+}
+
+/* ---------- 标题 ---------- */
+function drawTitle(){
+  px(0,0,400,240,PAL.darkest);
+  px(0,180,400,60,PAL.grassB); px(0,180,400,4,PAL.grassA);
+  for(let i=0;i<14;i++){ const gx=(i*31+7)%400; px(gx,190+((i*17)%40),1,3,PAL.tuft); }
+  px(188,44,24,24,PAL.white); px(196,48,8,16,PAL.red); px(192,52,16,8,PAL.red);
+  CX.textBaseline='top'; CX.textAlign='center';
+  CX.fillStyle=PAL.yellowL; CX.font=FONT(24);
+  CX.fillText('肌 电 小 镇',200,84);
+  CX.fillStyle=PAL.grassA; CX.font=FONT(12);
+  CX.fillText('E M G   T O W N',200,118);
+  CX.fillStyle=PAL.cream; CX.font=FONT(12);
+  CX.fillText('你的生理数据中心 · 原型 v0.4',200,140);
+  if(Math.floor(frame/30)%2){
+    CX.fillStyle=PAL.white; CX.font=FONT(12);
+    CX.fillText('按 Enter 开始',200,166);
+  }
+  CX.fillStyle='#568C2C'; CX.font=FONT(12);
+  CX.fillText('方向键移动 · E 对话 · T 问白医生',200,222);
+  CX.textAlign='left';
+}
+
+/* ---------- HUD ---------- */
+function drawHUD(){
+  if(world.scene!=='town'&&world.scene!=='hospital') return;
+  const name=world.scene==='town'?'小镇街道':'小镇医院';
+  const w=name.length*12+18;
+  px(400-w-6,6,w,18,PAL.darkest);
+  px(400-w-5,7,w-2,16,PAL.cream);
+  CX.fillStyle=PAL.brand; CX.font=FONT(12); CX.textBaseline='top';
+  CX.fillText(name,400-w+3,9);
+  if(!DLG.active){
+    px(6,224,204,14,'rgba(9,68,33,.85)');
+    CX.fillStyle=PAL.yellowL; CX.font=FONT(12);
+    CX.fillText('E 对话 · T 问白医生 · 踩门进入',10,225);
+  }
+}
+
+/* ============================================================
+   主循环
+   ============================================================ */
+let frame=0,last=0;
+function loop(t){
+  requestAnimationFrame(loop);
+  const dt=t-last; last=t;
+  if(dt>100) return;
+  frame++;
+  dlgUpdate();
+  if(world.scene==='town'||world.scene==='hospital'){
+    if(!DLG.active) tryMove(world.player,world.map);
+    stepMove(world.player);
+    if(world.scene==='hospital') doctorUpdate();
+  }
+  if(world.scene==='exam') examUpdate();
+
+  CX.clearRect(0,0,400,240);
+  if(world.scene==='title') drawTitle();
+  else if(world.scene==='town') drawTown();
+  else if(world.scene==='hospital') drawHospital();
+  else if(world.scene==='exam') drawExam();
+  drawHUD();
+  drawDialogue();
+}
+requestAnimationFrame(loop);
+
+/* ---------- 调试入口 ---------- */
+if(location.hash==='#town'){ world.scene='town'; DLG.active=false; DLG.queue=[]; }
+if(location.hash==='#hospital'){ world.scene='hospital'; world.map=MAPS.hospital;
+  DLG.active=false; DLG.queue=[]; world.firstVisit=false;
+  Object.assign(world.player,{tx:11,ty:13,px:11*16,py:13*16,dir:'up'}); }
+if(location.hash==='#exam'){ enterExam(); DLG.active=false; DLG.queue=[]; }
+if(location.hash==='#exam2'){ enterExam(); DLG.active=false; DLG.queue=[]; exam.phase='sampling'; }
+</script>
+</body>
+</html>
