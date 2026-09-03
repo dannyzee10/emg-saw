@@ -676,5 +676,29 @@
     "seen": 1788412419.5756252,
     "ast_hash": "01604fbd6fd97ab32426bd895a5558a1",
     "semantic_hash": ""
+  },
+  "michael/__init__.py": {
+    "mtime": 1788416213.2035606,
+    "seen": 1788416925.319058,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "michael/michael.py": {
+    "mtime": 1788416854.3290448,
+    "seen": 1788416925.319058,
+    "ast_hash": "f2dd02c17b7c9b9a9e8a78ba8877766e",
+    "semantic_hash": ""
+  },
+  "scripts/clinic_server.py": {
+    "mtime": 1788416284.5930033,
+    "seen": 1788416925.319058,
+    "ast_hash": "5a1b9519780cab4cf665fc4ddcf096fe",
+    "semantic_hash": ""
+  },
+  "tests/test_michael.py": {
+    "mtime": 1788416302.3291216,
+    "seen": 1788416925.319058,
+    "ast_hash": "6fa99e5e07b41b28bb9336a993033f0e",
+    "semantic_hash": ""
   }
 }

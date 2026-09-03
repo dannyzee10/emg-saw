@@ -27,6 +27,7 @@ KNOWLEDGE = _kb.read_text(encoding="utf-8") if _kb.exists() else ""
 URL = os.environ.get("MICHAEL_URL", "http://localhost:11434").rstrip("/")
 MODEL = os.environ.get("MICHAEL_MODEL", "qwen2.5:7b-instruct")
 TIMEOUT = float(os.environ.get("MICHAEL_TIMEOUT", "30"))
+TOKEN = os.environ.get("MICHAEL_TOKEN", "")   # sent as X-Michael-Token when reaching the shared proxy
 
 SYSTEM = (
     "You are Michael, the friendly AI lab assistant in an EMG (muscle-signal) research-centre. "
@@ -120,8 +121,10 @@ def ask(message, url=None, model=None, timeout=None):
         "stream": False,
         "options": {"temperature": 0.3},
     }).encode("utf-8")
-    req = urllib.request.Request(base + "/api/chat", data=payload,
-                                 headers={"Content-Type": "application/json"})
+    headers = {"Content-Type": "application/json"}
+    if TOKEN:
+        headers["X-Michael-Token"] = TOKEN
+    req = urllib.request.Request(base + "/api/chat", data=payload, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=timeout or TIMEOUT) as r:
             data = json.loads(r.read().decode("utf-8"))
