@@ -658,23 +658,5 @@
     "seen": 1788351193.6236315,
     "ast_hash": "fcf077817c50c1c55b43b446db6cb843",
     "semantic_hash": ""
-  },
-  "graphify-out/converted/EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md": {
-    "mtime": 1788412412.6763084,
-    "seen": 1788412419.5756252,
-    "ast_hash": "1198130fa30d6e7b70c3f35db0aa3168",
-    "semantic_hash": ""
-  },
-  "michael/knowledge.md": {
-    "mtime": 1788412289.5352552,
-    "seen": 1788412419.5756252,
-    "ast_hash": "75ce685a780277ddbe4da29245d1cc49",
-    "semantic_hash": ""
-  },
-  "webapp/README.md": {
-    "mtime": 1788412244.7921116,
-    "seen": 1788412419.5756252,
-    "ast_hash": "01604fbd6fd97ab32426bd895a5558a1",
-    "semantic_hash": ""
   }
 }

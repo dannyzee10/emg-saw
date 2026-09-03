@@ -65,6 +65,23 @@ def test_review_loads_views_playback_and_report(tmp_path, monkeypatch):
     win.close()
 
 
+def test_review_loads_mvc_from_stack_when_no_live_mvc(tmp_path, monkeypatch):
+    from PyQt5 import QtWidgets
+    from gui.review_window import ReviewWindow
+    import json
+    QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv[:1])
+    monkeypatch.chdir(tmp_path)
+    csv = tmp_path / "emg_20260101_120000.csv"
+    _write_csv(csv, n=800, nch=1)
+    (tmp_path / "mvc_store.json").write_text(
+        json.dumps([{"name": "S01 (MVC)", "channels": [{"name": "Ch1", "mvc_v": 0.066}]}]),
+        encoding="utf-8")
+    # opened with no live MVC -> should fall back to the saved stack so MVC-normalize is usable
+    win = ReviewWindow(str(csv), FS, 1, 3.3, 4095.0, ["FCR"], mvc=None)
+    assert abs(win.mvc[0] - 0.066) < 1e-9
+    win.close()
+
+
 def test_processing_dialog_build_and_channel_scope(tmp_path, monkeypatch):
     from PyQt5 import QtCore, QtWidgets
     from gui.review_window import ReviewWindow

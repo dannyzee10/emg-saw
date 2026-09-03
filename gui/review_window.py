@@ -46,6 +46,8 @@ class ReviewWindow(QtWidgets.QDialog):
         self._load(path)                       # -> self.codes (N,nch), self.t, meta, markers, fs
         self.nch = self.codes.shape[1]
         self.mvc = (list(mvc) if mvc else [None] * self.nch)[:self.nch]
+        if not any(v for v in self.mvc):        # no live MVC -> fall back to the saved MVC stack
+            self._load_mvc_from_stack()
         names = list(muscle_names) if muscle_names else []
         self.muscle_names = [names[c] if c < len(names) else f"Ch{c+1}" for c in range(self.nch)]
         self.filters = EmgFilters(self.fs)
@@ -351,6 +353,26 @@ class ReviewWindow(QtWidgets.QDialog):
             ac = self.filters.apply_notch(ac.reshape(-1, 1), self.do_notch)[:, 0]
         bp = self.filters.bandpass(ac.reshape(-1, 1))[:, 0]
         return self.filters.rms_envelope((bp - bp.mean()).reshape(-1, 1))[:, 0]
+
+    def _load_mvc_from_stack(self):
+        """Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC stack'),
+        so offline MVC-normalization works even when the scope was restarted (no live MVC)."""
+        import json
+        path = os.path.abspath("mvc_store.json")
+        if not os.path.exists(path):
+            return
+        try:
+            with open(path, encoding="utf-8") as f:
+                store = json.load(f)
+        except Exception:
+            return
+        if not store:
+            return
+        chans = store[-1].get("channels", [])
+        for c in range(min(self.nch, len(chans))):
+            v = chans[c].get("mvc_v")
+            if v:
+                self.mvc[c] = float(v)
 
     def _load_other_env(self, path):
         rows = []
