@@ -9,8 +9,8 @@ so the host (URL/model) or a cloud swap never touches the game.
 
 Config via env:
     MICHAEL_URL     default http://localhost:11434     (Ollama; use an SSH tunnel to the server)
-    MICHAEL_MODEL   default qwen2.5:7b-instruct
-    MICHAEL_TIMEOUT default 30 (seconds)
+    MICHAEL_MODEL   default qwen2.5:32b-instruct       (needs a ~20 GB pull on the GPU server)
+    MICHAEL_TIMEOUT default 120 (seconds)              (bigger model + fuller answers = allow more time)
 
 Standalone test:  python -m michael.michael "how do I smooth my data?"
 """
@@ -31,16 +31,20 @@ _kb = HERE / "knowledge.md"
 KNOWLEDGE = _kb.read_text(encoding="utf-8") if _kb.exists() else ""
 
 URL = os.environ.get("MICHAEL_URL", "http://localhost:11434").rstrip("/")
-MODEL = os.environ.get("MICHAEL_MODEL", "qwen2.5:7b-instruct")
-TIMEOUT = float(os.environ.get("MICHAEL_TIMEOUT", "30"))
+MODEL = os.environ.get("MICHAEL_MODEL", "qwen2.5:32b-instruct")
+TIMEOUT = float(os.environ.get("MICHAEL_TIMEOUT", "120"))
 TOKEN = os.environ.get("MICHAEL_TOKEN", "")   # sent as X-Michael-Token when reaching the shared proxy
 
 SYSTEM = (
-    "You are Michael, the friendly AI lab assistant in an EMG (muscle-signal) research-centre. "
-    "Answer ONLY about this EMG acquisition system, using the knowledge below. Keep answers to 1-3 "
-    "short, plain sentences and mention the room to visit by name (e.g. 'the Methods room'). Do NOT "
-    "output any code, 'ACTION', or 'goto' path -- just talk naturally. If asked something outside the "
-    "EMG lab, gently say you only help with the lab.\n\n=== SYSTEM KNOWLEDGE ===\n" + KNOWLEDGE
+    "You are Michael, a knowledgeable senior researcher and AI lab assistant in an EMG (muscle-signal) "
+    "research-centre. Answer ONLY about this EMG acquisition system, using the knowledge below. "
+    "Give a COMPLETE, well-structured answer: briefly explain the concept, why it matters, and the "
+    "concrete steps to do it in THIS system, including the relevant settings, typical values, and any "
+    "pitfalls to watch for. Use short paragraphs or a few bullet points when that makes it clearer, and "
+    "keep the language plain enough for a student to follow. Name the room to visit by name (e.g. 'the "
+    "Methods room'). Do NOT output any code, 'ACTION', or 'goto' path -- just talk naturally. If asked "
+    "something outside the EMG lab, briefly say you only help with the EMG lab and point them back to it."
+    "\n\n=== SYSTEM KNOWLEDGE ===\n" + KNOWLEDGE
 )
 
 # scripted fallback: (keyword tuple) -> (answer, action). First match wins.

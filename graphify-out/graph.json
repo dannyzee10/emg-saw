@@ -2535,7 +2535,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "michael/michael.py",
-      "source_location": "L118"
+      "source_location": "L122"
     },
     {
       "id": "michael_michael_chat_chat_answer",
@@ -2691,7 +2691,7 @@
       "file_type": "code",
       "norm_label": "_fallback()",
       "source_file": "michael/michael.py",
-      "source_location": "L95"
+      "source_location": "L99"
     },
     {
       "id": "michael_michael_main",
@@ -2703,7 +2703,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "michael/michael.py",
-      "source_location": "L156"
+      "source_location": "L160"
     },
     {
       "id": "michael_michael_parse_action",
@@ -2715,7 +2715,7 @@
       "file_type": "code",
       "norm_label": "_parse_action()",
       "source_file": "michael/michael.py",
-      "source_location": "L103"
+      "source_location": "L107"
     },
     {
       "id": "scripts_clinic_server_handler_do_get",
@@ -7130,7 +7130,7 @@
       "source_location": "L1"
     },
     {
-      "id": "michael_michael_rationale_104",
+      "id": "michael_michael_rationale_108",
       "label": "Pull any trailing 'ACTION: goto:...' out, and strip stray goto/(room)/(npc)\u2026",
       "_origin": "ast",
       "community": 41,
@@ -7138,10 +7138,10 @@
       "file_type": "rationale",
       "norm_label": "pull any trailing 'action: goto:...' out, and strip stray goto/(room)/(npc)...",
       "source_file": "michael/michael.py",
-      "source_location": "L104"
+      "source_location": "L108"
     },
     {
-      "id": "michael_michael_rationale_119",
+      "id": "michael_michael_rationale_123",
       "label": "Answer a user message. Uses Ollama; falls back to the scripted intents on any\u2026",
       "_origin": "ast",
       "community": 41,
@@ -7149,7 +7149,7 @@
       "file_type": "rationale",
       "norm_label": "answer a user message. uses ollama; falls back to the scripted intents on any...",
       "source_file": "michael/michael.py",
-      "source_location": "L119"
+      "source_location": "L123"
     },
     {
       "id": "tests_test_michael_rationale_1",
@@ -12928,7 +12928,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L140",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -12940,7 +12940,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L143",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -13096,7 +13096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L159",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -18616,7 +18616,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L103",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -18627,7 +18627,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L118",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -18638,7 +18638,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L156",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -18649,7 +18649,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L95",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -23295,25 +23295,25 @@
       "weight": 1.0
     },
     {
-      "source": "michael_michael_rationale_104",
+      "source": "michael_michael_rationale_108",
       "target": "michael_michael_parse_action",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L104",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
-      "source": "michael_michael_rationale_119",
+      "source": "michael_michael_rationale_123",
       "target": "michael_michael_ask",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L119",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -25598,5 +25598,5 @@
       "source_file": ".claude/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "bde49c591c217e6376f4af429f77b2f54ea52e4c"
+  "built_at_commit": "ad768545d58f75f605e961af7222c101df5edc5a"
 }

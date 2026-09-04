@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "michael/michael.py": {
-    "mtime": 1788489302.608838,
-    "seen": 1788489343.3627791,
-    "ast_hash": "14596ec559e81df90cab9162d7c739de",
+    "mtime": 1788491563.468279,
+    "seen": 1788491605.2070293,
+    "ast_hash": "df5db1bc6028ff8363d6f281714084e3",
     "semantic_hash": ""
   },
   "scripts/clinic_server.py": {
