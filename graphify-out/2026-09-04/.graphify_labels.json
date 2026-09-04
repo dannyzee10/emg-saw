@@ -40,7 +40,7 @@
   "38": "RecordingController",
   "39": "dsp.py",
   "40": "MvcDialog",
-  "41": "EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md",
+  "41": "test_leadoff.py",
   "42": "._apply_scaling",
   "43": "AmpNormDialog",
   "44": "._prompt_save_recording",
@@ -61,9 +61,5 @@
   "59": "PROJECT_CONTEXT.md",
   "60": "QUALITY_BAR.md",
   "61": "EMG SAW — Retrospective + Competitive Roadmap",
-  "62": "EMG-SAW — Beihang EMG Acquisition System + GUI",
-  "63": "Main Board — PCB Layout Rules (floorplan, stack-up, keep-outs, guard, vias)",
-  "64": "Main Board — Power Tree, Schematic-Level Design",
-  "65": "Main Board — 5-Channel Schematic (net-by-net) + BOM",
-  "66": "AFE Signal Chain — confirmed topology + values + 5-channel integration"
+  "62": "EMG-SAW — Beihang EMG Acquisition System + GUI"
 }
