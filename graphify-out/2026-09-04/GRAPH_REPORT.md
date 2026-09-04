@@ -1,16 +1,16 @@
-# Graph Report - emg-saw  (2026-09-03)
+# Graph Report - emg-saw  (2026-09-04)
 
 ## Corpus Check
-- 95 files · ~74,325 words
+- 100 files · ~80,051 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 767 nodes · 1196 edges · 63 communities (42 shown, 18 thin omitted)
+- 818 nodes · 1242 edges · 67 communities (46 shown, 18 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 69 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b0e7816e`
+- Built from commit: `916d6f7a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,7 +53,7 @@
 - RecordingController
 - dsp.py
 - MvcDialog
-- test_leadoff.py
+- EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md
 - ._apply_scaling
 - AmpNormDialog
 - ._prompt_save_recording
@@ -75,6 +75,10 @@
 - QUALITY_BAR.md
 - EMG SAW — Retrospective + Competitive Roadmap
 - EMG-SAW — Beihang EMG Acquisition System + GUI
+- Main Board — PCB Layout Rules (floorplan, stack-up, keep-outs, guard, vias)
+- Main Board — Power Tree, Schematic-Level Design
+- Main Board — 5-Channel Schematic (net-by-net) + BOM
+- AFE Signal Chain — confirmed topology + values + 5-channel integration
 
 ## God Nodes (most connected - your core abstractions)
 1. `EmgScope` - 85 edges
@@ -110,7 +114,7 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (63 total, 18 thin omitted)
+## Communities (67 total, 18 thin omitted)
 
 ### Community 1 - "EMG Bring-up Checkpoint Log"
 Cohesion: 0.06
@@ -118,7 +122,7 @@ Nodes (64): Graphify Trigger Config (.claude/CLAUDE.md), EMG SAW Agent Roster (a
 
 ### Community 2 - "ReviewWindow"
 Cohesion: 0.06
-Nodes (15): NormalizeDialog, NormalizeDialog — Noraxon MR offline Amplitude Normalization config: choose the…, ProcessingDialog, Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then…, Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak… (+7 more)
+Nodes (16): NormalizeDialog, NormalizeDialog — Noraxon MR offline Amplitude Normalization config: choose the…, ProcessingDialog, ProcessingDialog — Noraxon MR 'Signal Processing' menu: build an ordered…, Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then… (+8 more)
 
 ### Community 3 - "emg_plotter.py"
 Cohesion: 0.20
@@ -134,7 +138,7 @@ Nodes (14): build_frame(), ADC_HandleTypeDef, crc16_ccitt(), Error_Handler(), HA
 
 ### Community 6 - "EmgFilters"
 Cohesion: 0.05
-Nodes (38): EmgFilters, ndarray, Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window — the…, _ac(), apply_pipeline(), compute_reference(), op_mean(), op_norm_mvc() (+30 more)
+Nodes (37): EmgFilters, ndarray, Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window — the…, _ac(), apply_pipeline(), compute_reference(), op_mean(), op_norm_mvc() (+29 more)
 
 ### Community 7 - "Beihang University Logo (logo.png)"
 Cohesion: 1.00
@@ -209,16 +213,16 @@ Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
 ### Community 39 - "dsp.py"
-Cohesion: 0.09
-Nodes (36): cocontraction_index(), fatigue_trend(), iemg(), leadoff_report(), mean_frequency(), median_frequency(), onset_offset(), Display-side signal processing (done on the laptop, so you can tweak live —… (+28 more)
+Cohesion: 0.06
+Nodes (56): cocontraction_index(), fatigue_trend(), iemg(), leadoff_report(), leadoff_status(), LeadoffTracker, mean_frequency(), median_frequency() (+48 more)
 
 ### Community 40 - "MvcDialog"
 Cohesion: 0.09
 Nodes (15): MvcDialog, MvcSaveDialog, MvcDialog — Noraxon-style MVC calibration with guided steps. Open → live RMS-…, Noraxon-style 'Save Data' step shown right after an MVC capture: name the…, Noraxon-style 'Save Data' shown after stopping a test recording: name the…, SaveRecordingDialog, _style(), _chunk() (+7 more)
 
-### Community 41 - "test_leadoff.py"
-Cohesion: 0.16
-Nodes (20): leadoff_status(), LeadoffTracker, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, _emg_band_signal(), HG3 unit tests for the PC-side electrode lead-off heuristic…, _t(), test_good_connected_low_harmonics_not_flagged() (+12 more)
+### Community 41 - "EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md"
+Cohesion: 0.15
+Nodes (12): 1. Executive Summary, 2. Starting Point (28 August), 3.1  Electrode lead-off & signal integrity, 3.2  Noraxon-parity feature set (15-screen workflow), 3.3  New feature - %MVC target biofeedback, 3.4  UX and layout, 3.5  DSP academic verification, 3. Work Completed (+4 more)
 
 ### Community 42 - "._apply_scaling"
 Cohesion: 0.14
@@ -280,20 +284,36 @@ Nodes (9): EMG SAW — Retrospective + Competitive Roadmap, Next STM32 upgrade �
 Cohesion: 0.33
 Nodes (6): Architecture, EMG-SAW — Beihang EMG Acquisition System + GUI, Quick start, Repo, Status, What it does
 
+### Community 63 - "Main Board — PCB Layout Rules (floorplan, stack-up, keep-outs, guard, vias)"
+Cohesion: 0.17
+Nodes (11): 10. Layout review checklist (I'll check each snapshot against this), 1. Stack-up — YES, 4-layer (2-layer cannot do Wi-Fi + µV EMG), 2. Floorplan — where everything goes, 3. Placement rules per block, 4. Keep-outs, 5. Ground = ONE solid plane, separation by placement, 6. Guard ring (per channel), 7. Decoupling & vias (+3 more)
+
+### Community 64 - "Main Board — Power Tree, Schematic-Level Design"
+Cohesion: 0.18
+Nodes (10): 0. Rail decisions, 1. USB-C input + protection, 2. Charger — MCP73831, 3. Battery + reverse-polarity + power-path mux, 4. Buck-boost pre-regulator — TPS631000 → 3V3_DIG (3.5 V), 5. Analog LDO — TPS7A2033 → 3V3_ANA (3.3 V, fixed), 6. Fuel gauge — MAX17048 (on the battery node), 7. Power-section BOM (subtotal) (+2 more)
+
+### Community 65 - "Main Board — 5-Channel Schematic (net-by-net) + BOM"
+Cohesion: 0.22
+Nodes (8): A. Per-channel AFE  (replicate ×5), B. Shared analog blocks (once for all 5 channels), C. STM32U575AII6Q  (ADC + host; set exact pins in CubeMX), D. ST67W611M1-B  (Wi-Fi/BLE module; pins per ST datasheet / B2413 ref), E. Connectors, F. Consolidated BOM (main board), G. Verify, Main Board — 5-Channel Schematic (net-by-net) + BOM
+
+### Community 66 - "AFE Signal Chain — confirmed topology + values + 5-channel integration"
+Cohesion: 0.33
+Nodes (5): AD8648 amp count — CORRECTION: ×3, not ×2, AFE Signal Chain — confirmed topology + values + 5-channel integration, Open items, Per-channel chain (proven — reuse exactly), Shared blocks on the main board (generate once for all 5 ch)
+
 ## Knowledge Gaps
-- **179 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+174 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 366 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **220 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+215 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 411 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `EmgFilters`, `RecordingController`, `MvcDialog`, `test_leadoff.py`, `._apply_scaling`, `AmpNormDialog`, `._prompt_save_recording`, `._activate_mvc`, `._process`, `ChannelPanel`, `AcquisitionModel`, `._update_status`, `MainController`?**
-  _High betweenness centrality (0.119) - this node is a cross-community bridge._
+- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `EmgFilters`, `dsp.py`, `MvcDialog`, `RecordingController`, `._apply_scaling`, `AmpNormDialog`, `._prompt_save_recording`, `._activate_mvc`, `._process`, `ChannelPanel`, `AcquisitionModel`, `._update_status`, `MainController`?**
+  _High betweenness centrality (0.105) - this node is a cross-community bridge._
 - **Why does `ReviewWindow` connect `ReviewWindow` to `EmgScope`, `emg_plotter.py`, `EmgFilters`, `dsp.py`, `._prompt_save_recording`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
-- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `dsp.py`, `MvcDialog`, `emg_features.py`?**
   _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `dsp.py`, `MvcDialog`, `emg_features.py`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `EmgScope` (e.g. with `EmgFilters` and `LeadoffTracker`) actually correct?**
   _`EmgScope` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `ReviewWindow` (e.g. with `EmgScope` and `EmgFilters`) actually correct?**

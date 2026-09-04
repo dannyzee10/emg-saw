@@ -6,11 +6,14 @@ The new main board **replicates this proven per-channel analog ×5** and adds ST
 
 ## Per-channel chain (proven — reuse exactly)
 
-**Dry electrode board (×5, one per channel) — AD8648 #1:**
-- E1, E2, E3 → 3 unity buffers; each input node biased to VREF via **22 MΩ** (anti-float).
-- 3 buffer outputs each via **100 kΩ → common VCM node** (average) → 4th amp = **VCM buffer**.
-- Va(E1), Vb(E2), Vc(E3), VCM each via **100 Ω** → 13-pin FFC, GND-interleaved:
-  `1 GND·2 Va·3 GND·4 Vb·5 GND·6 Vc·7 GND·8 VCM·9 GND·10 3V3·11 GND·12 VREF·13 GND`
+**Dry electrode board (×5, one per channel) — quad op-amp #1:**
+- E1, E2, E3 → 3 unity buffers; each input node biased to **local VREF** via **22 MΩ** (anti-float).
+- **4th amp = LOCAL VREF buffer** (see "DRL removed" below): FFC VREF → **RC (10 k + 1 µF)** → buffer →
+  the board's local VREF (feeds the three 22 MΩ bias resistors).
+  *(Was the VCM buffer + 3× 100 kΩ averaging — deleted with the DRL.)*
+- Va(E1), Vb(E2), Vc(E3) each via **100 Ω** → 13-pin FFC, GND-interleaved:
+  `1 GND·2 Va·3 GND·4 Vb·5 GND·6 Vc·7 GND·8 GND*·9 GND·10 3V3·11 GND·12 VREF·13 GND`
+  *(pin 8 was VCM → now GND / spare.)*
 - Receives 3V3 (pin 10) + VREF (pin 12) from the main board.
 
 **Main board — per channel (values from the LTspice schematic):**
@@ -28,17 +31,35 @@ The new main board **replicates this proven per-channel analog ×5** and adds ST
 - Two reference nets: **VRf** = static buffered 1.65 V (gain-network return + U3 non-inv); **Vservo** =
   dynamic DC-servo output → AD8237 REF.
 
-## Shared blocks on the main board (generate once for all 5 ch)
-- **VREF buffer:** 3V3 → 100 k/100 k (+100 nF) = **1.65 V** → 1 buffer → all VRf + all electrodes (FFC pin 12).
-- **DRL driver (shared, 1):** sum the **5 VCMs** (FFC pin 8 of each board) via 5 equal resistors → 1 amp
-  (non-inv = VREF, feedback 10 k ‖ 1 nF) → **1 MΩ** → **one DRL electrode** (6th electrode on the body,
-  wired straight to the main board — no DRL pin on the FFC). Bench-tune gain for the deepest 50/60 Hz null.
+## DECISION 2026-09-04 — **DRL REMOVED** (grounded reference instead)
+Evidence: (a) Daniyal's own tests — grounded reference works with **dry** electrodes; DRL saturated /
+added noise; (b) literature — for EMG the RLD "can be omitted", direct grounding matches it with good
+filtering (*Optimizing sEMG Acquisition without Right Leg Drive*); (c) DRL is a body-loop feedback system
+with documented **instability** at high loop gain. The double-differential front end already rejects
+common mode, so the passive reference is the robust choice.
 
-## AD8648 amp count — CORRECTION: ×3, not ×2
-Per channel needs **2 AD8648 amps** (gain U3 + DC servo U9). So: 5 gain + 5 servo + 1 VREF + 1 DRL =
-**12 amps = AD8648 ×3** (the earlier "×2" missed the per-channel DC servo).
-⇒ Main-board AFE = **AD8237 ×5 + AD8648 ×3**. Higher analog load → the **micropower-quad swap matters
-even more** (12 amps × ~2 mA vs × ~0.05 mA).
+**What is deleted:** the DRL amp + its resistors/cap, the electrode-board **VCM node (3× 100 kΩ) and VCM
+buffer**, and the **VCM wire (FFC pin 8)**.
+**What replaces it:** **one shared reference electrode → series R (10 kΩ default, 0 Ω = Daniyal's tested
+config) → GND**, common to all 5 channels (the body has one common-mode; a single reference serves any
+number of differential channels — standard practice in commercial multichannel EMG).
+**Future hedge (free):** leave an **unpopulated DRL footprint + GND↔DRL jumper** on the reference line.
+No VCM circuitry is needed to revive it — Va/Vb/Vc of every channel are already on the main board, so a
+common-mode sense can be resistively summed there if a DRL is ever wanted.
+> Do **not** run a grounded reference and a DRL at the same time — two biases fight (the low-Z ground
+> shorts out the DRL). A *unipolar* system's "REF" is a signal input, a different role; ours is differential.
+
+## Shared blocks on the main board (generate once for all 5 ch)
+- **VREF generation:** 3V3_ANA → 100 k/100 k divider (+100 nF, +10 µF at the divider node) = **1.65 V**.
+- **TWO VREF buffers** (instead of 1 + DRL): buffer A → channels 1–3, buffer B → channels 4–5 + the FFC
+  VREF pins. Splitting the load halves the shared-impedance path between channels ⇒ **less inter-channel
+  crosstalk**, and it uses the amp the DRL freed (no extra cost, nothing left idle).
+
+## Amp count after the change — packs perfectly into 3 quads
+Per channel = **2 amps** (gain + DC servo). Total = 5 gain + 5 servo + **2 VREF buffers = 12 amps =
+exactly 3 quads, all 12 used, none wasted.**
+⇒ Main-board AFE = **AD8237 ×5 + quad ×3** (MCP6404 micropower, or AD8648).
+Electrode board = **quad ×1 per board**: 3 electrode buffers + **1 local VREF buffer** (all 4 used).
 
 ## Open items
 - Confirm the two **"???" nets** in the sim (RG feedback top, VRf line) are properly connected on the board.

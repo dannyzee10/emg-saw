@@ -4238,6 +4238,42 @@
       "source_location": "L53"
     },
     {
+      "id": "quality_bar",
+      "label": "QUALITY_BAR.md",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "quality_bar.md",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "quality_bar_authority",
+      "label": "Authority",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authority",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "quality_bar_gate_reference",
+      "label": "Gate reference",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "gate reference",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L109"
+    },
+    {
       "id": "quality_bar_hard_gate_rules",
       "label": "Hard gate rules",
       "_origin": "ast",
@@ -4368,6 +4404,162 @@
       "norm_label": "hg9 \u2014 checkpoint discipline",
       "source_file": "QUALITY_BAR.md",
       "source_location": "L82"
+    },
+    {
+      "id": "quality_bar_quality_bar_md",
+      "label": "QUALITY_BAR.md",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quality_bar.md",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "quality_bar_supporting_rules_a_pattern_of_violations_becomes_blocking",
+      "label": "Supporting rules (a pattern of violations becomes blocking)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Hard gate rules",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supporting rules (a pattern of violations becomes blocking)",
+      "source_file": "QUALITY_BAR.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap",
+      "label": "EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "emg_saw_retro_and_competitive_roadmap.md",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_emg_saw_retrospective_competitive_roadmap",
+      "label": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "emg saw \u2014 retrospective + competitive roadmap",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_next_stm32_upgrade_all_15_electrodes_deferred_needs_more_faster_adc",
+      "label": "Next STM32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster ADC)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "next stm32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster adc)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L110"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_now_blue_pill_channel_1_3_electrodes_no_mux_reuses_existing_software",
+      "label": "Now \u2014 Blue Pill, Channel 1, 3 electrodes (no mux, reuses existing software)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "now \u2014 blue pill, channel 1, 3 electrodes (no mux, reuses existing software)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_1_what_each_agent_shipped_retro_of_the_build",
+      "label": "Part 1 \u2014 What each agent shipped (retro of the build)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 1 \u2014 what each agent shipped (retro of the build)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_2_remaining_goals_per_agent_near_term",
+      "label": "Part 2 \u2014 Remaining goals per agent (near-term)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 2 \u2014 remaining goals per agent (near-term)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_3_where_we_stand_vs_delsys_noraxon",
+      "label": "Part 3 \u2014 Where we stand vs Delsys & Noraxon",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 3 \u2014 where we stand vs delsys & noraxon",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_4_the_win_roadmap_prioritized",
+      "label": "Part 4 \u2014 The \"win\" roadmap (prioritized)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 4 \u2014 the \"win\" roadmap (prioritized)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L63"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_5_electrode_lead_off_integrity_plan",
+      "label": "Part 5 \u2014 Electrode lead-off / integrity plan",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "part 5 \u2014 electrode lead-off / integrity plan",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "docs_emg_saw_retro_and_competitive_roadmap_ultimate_ads1299_m4",
+      "label": "Ultimate \u2014 ADS1299 (M4)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ultimate \u2014 ads1299 (m4)",
+      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "handoff",
+      "label": "HANDOFF.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "handoff.md",
+      "source_file": "HANDOFF.md",
+      "source_location": "L1"
     },
     {
       "id": "handoff_0_how_to_use_this_handoff",
@@ -4526,6 +4718,222 @@
       "source_location": "L1"
     },
     {
+      "id": "project_context",
+      "label": "PROJECT_CONTEXT.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "project_context.md",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "project_context_architecture_locked_pipeline",
+      "label": "Architecture (locked pipeline)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "architecture (locked pipeline)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "project_context_current_state_done_as_of_2026_08_26",
+      "label": "Current state \u2014 DONE \u2705 (as of 2026-08-26)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "current state \u2014 done \u2705 (as of 2026-08-26)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
+      "label": "Locked gotchas (each cost hours \u2014 do NOT rediscover)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked gotchas (each cost hours \u2014 do not rediscover)",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "project_context_locked_hardware_facts",
+      "label": "Locked hardware facts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked hardware facts",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "project_context_locked_wire_protocol",
+      "label": "Locked wire protocol",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "locked wire protocol",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "project_context_project_context_md",
+      "label": "PROJECT_CONTEXT.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project_context.md",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "project_context_project_identity",
+      "label": "Project identity",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project identity",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "project_context_roadmap",
+      "label": "Roadmap",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "roadmap",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "project_context_signal_facts",
+      "label": "Signal facts",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "signal facts",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L67"
+    },
+    {
+      "id": "project_context_source_of_truth",
+      "label": "Source of truth",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source of truth",
+      "source_file": "PROJECT_CONTEXT.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_architecture",
+      "label": "Architecture",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "architecture",
+      "source_file": "README.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "readme_emg_saw_beihang_emg_acquisition_system_gui",
+      "label": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "emg-saw \u2014 beihang emg acquisition system + gui",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "Quick start",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quick start",
+      "source_file": "README.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "readme_repo",
+      "label": "Repo",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "repo",
+      "source_file": "README.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "readme_status",
+      "label": "Status",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "status",
+      "source_file": "README.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "readme_what_it_does",
+      "label": "What it does",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "EMG SAW \u2014 HANDOFF (read this first)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what it does",
+      "source_file": "README.md",
+      "source_location": "L23"
+    },
+    {
       "id": "gui_normalize_dialog",
       "label": "normalize_dialog.py",
       "_origin": "ast",
@@ -4534,17 +4942,6 @@
       "file_type": "code",
       "norm_label": "normalize_dialog.py",
       "source_file": "gui/normalize_dialog.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "gui_processing_dialog",
-      "label": "processing_dialog.py",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "processing_dialog.py",
-      "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
@@ -4567,17 +4964,6 @@
       "file_type": "rationale",
       "norm_label": "normalizedialog \u2014 noraxon mr offline amplitude normalization config: choose the...",
       "source_file": "gui/normalize_dialog.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "gui_processing_dialog_rationale_1",
-      "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "rationale",
-      "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
-      "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
@@ -7484,124 +7870,112 @@
       "source_location": "L1"
     },
     {
-      "id": "project_context_architecture_locked_pipeline",
-      "label": "Architecture (locked pipeline)",
+      "id": "hardware_05_data_pipeline",
+      "label": "05_data_pipeline.md",
       "_origin": "ast",
       "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
       "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "architecture (locked pipeline)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L17"
-    },
-    {
-      "id": "project_context_current_state_done_as_of_2026_08_26",
-      "label": "Current state \u2014 DONE \u2705 (as of 2026-08-26)",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "current state \u2014 done \u2705 (as of 2026-08-26)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "project_context_locked_gotchas_each_cost_hours_do_not_rediscover",
-      "label": "Locked gotchas (each cost hours \u2014 do NOT rediscover)",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked gotchas (each cost hours \u2014 do not rediscover)",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L58"
-    },
-    {
-      "id": "project_context_locked_hardware_facts",
-      "label": "Locked hardware facts",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked hardware facts",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L24"
-    },
-    {
-      "id": "project_context_locked_wire_protocol",
-      "label": "Locked wire protocol",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "locked wire protocol",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L35"
-    },
-    {
-      "id": "project_context_project_context_md",
-      "label": "PROJECT_CONTEXT.md",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "project_context.md",
-      "source_file": "PROJECT_CONTEXT.md",
+      "node_kind": "page",
+      "norm_label": "05_data_pipeline.md",
+      "source_file": "hardware/05_data_pipeline.md",
       "source_location": "L1"
     },
     {
-      "id": "project_context_project_identity",
-      "label": "Project identity",
+      "id": "hardware_05_data_pipeline_1_the_data_rate_is_tiny",
+      "label": "1. The data rate is tiny",
       "_origin": "ast",
       "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "project identity",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L9"
+      "norm_label": "1. the data rate is tiny",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L7"
     },
     {
-      "id": "project_context_roadmap",
-      "label": "Roadmap",
+      "id": "hardware_05_data_pipeline_2_all_5_at_the_same_time_is_easy_on_the_u575",
+      "label": "2. \"All 5 at the same time\" is easy on the U575",
       "_origin": "ast",
       "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "roadmap",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L71"
+      "norm_label": "2. \"all 5 at the same time\" is easy on the u575",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L14"
     },
     {
-      "id": "project_context_signal_facts",
-      "label": "Signal facts",
+      "id": "hardware_05_data_pipeline_3_what_actually_makes_it_work_well_the_4_keys",
+      "label": "3. What actually makes it \"work well\" (the 4 keys)",
       "_origin": "ast",
       "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "signal facts",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L67"
+      "norm_label": "3. what actually makes it \"work well\" (the 4 keys)",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L19"
     },
     {
-      "id": "project_context_source_of_truth",
-      "label": "Source of truth",
+      "id": "hardware_05_data_pipeline_4_better_option_wi_fi_vs_ble_vs_usb",
+      "label": "4. Better option? Wi-Fi vs BLE vs USB",
       "_origin": "ast",
       "community": 59,
-      "community_name": "PROJECT_CONTEXT.md",
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "source of truth",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L79"
+      "norm_label": "4. better option? wi-fi vs ble vs usb",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "hardware_05_data_pipeline_5_the_one_honest_risk_the_fix",
+      "label": "5. The one honest risk + the fix",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. the one honest risk + the fix",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L42"
+    },
+    {
+      "id": "hardware_05_data_pipeline_6_recommended_optimal_config",
+      "label": "6. Recommended optimal config",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. recommended optimal config",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L48"
+    },
+    {
+      "id": "hardware_05_data_pipeline_7_this_is_exactly_what_the_dev_board_step_step_3_proves",
+      "label": "7. This is exactly what the dev-board step (Step 3) proves",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. this is exactly what the dev-board step (step 3) proves",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L55"
+    },
+    {
+      "id": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "label": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
+      "_origin": "ast",
+      "community": 59,
+      "community_name": "Data Pipeline \u2014 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "data pipeline \u2014 5-channel simultaneous emg streaming (feasibility + optimal design)",
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L1"
     },
     {
       "id": "dsp_dsp_py_ndarray",
@@ -7623,6 +7997,17 @@
       "file_type": "code",
       "norm_label": "pipeline.py",
       "source_file": "dsp/pipeline.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_processing_dialog",
+      "label": "processing_dialog.py",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "processing_dialog.py",
+      "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
@@ -7758,6 +8143,17 @@
       "source_location": "L91"
     },
     {
+      "id": "gui_processing_dialog_rationale_1",
+      "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_test_dsp_rationale_1",
       "label": "Unit tests for EmgFilters DSP functions. Validates: - Notch filter attenuation\u2026",
       "_origin": "ast",
@@ -7811,294 +8207,6 @@
       "norm_label": "unit tests for the offline signal-processing pipeline (pure, no qt).",
       "source_file": "tests/test_pipeline.py",
       "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap",
-      "label": "EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "emg_saw_retro_and_competitive_roadmap.md",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "handoff",
-      "label": "HANDOFF.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "handoff.md",
-      "source_file": "HANDOFF.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "project_context",
-      "label": "PROJECT_CONTEXT.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "project_context.md",
-      "source_file": "PROJECT_CONTEXT.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar",
-      "label": "QUALITY_BAR.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "quality_bar.md",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar_authority",
-      "label": "Authority",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "authority",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "quality_bar_gate_reference",
-      "label": "Gate reference",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "gate reference",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L109"
-    },
-    {
-      "id": "quality_bar_quality_bar_md",
-      "label": "QUALITY_BAR.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quality_bar.md",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "quality_bar_supporting_rules_a_pattern_of_violations_becomes_blocking",
-      "label": "Supporting rules (a pattern of violations becomes blocking)",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "supporting rules (a pattern of violations becomes blocking)",
-      "source_file": "QUALITY_BAR.md",
-      "source_location": "L97"
-    },
-    {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 60,
-      "community_name": "QUALITY_BAR.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_emg_saw_retrospective_competitive_roadmap",
-      "label": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "emg saw \u2014 retrospective + competitive roadmap",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_next_stm32_upgrade_all_15_electrodes_deferred_needs_more_faster_adc",
-      "label": "Next STM32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster ADC)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "next stm32 upgrade \u2014 all 15 electrodes (deferred; needs more/faster adc)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L110"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_now_blue_pill_channel_1_3_electrodes_no_mux_reuses_existing_software",
-      "label": "Now \u2014 Blue Pill, Channel 1, 3 electrodes (no mux, reuses existing software)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "now \u2014 blue pill, channel 1, 3 electrodes (no mux, reuses existing software)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L102"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_1_what_each_agent_shipped_retro_of_the_build",
-      "label": "Part 1 \u2014 What each agent shipped (retro of the build)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 1 \u2014 what each agent shipped (retro of the build)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_2_remaining_goals_per_agent_near_term",
-      "label": "Part 2 \u2014 Remaining goals per agent (near-term)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 2 \u2014 remaining goals per agent (near-term)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L22"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_3_where_we_stand_vs_delsys_noraxon",
-      "label": "Part 3 \u2014 Where we stand vs Delsys & Noraxon",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 3 \u2014 where we stand vs delsys & noraxon",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L33"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_4_the_win_roadmap_prioritized",
-      "label": "Part 4 \u2014 The \"win\" roadmap (prioritized)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 4 \u2014 the \"win\" roadmap (prioritized)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L63"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_part_5_electrode_lead_off_integrity_plan",
-      "label": "Part 5 \u2014 Electrode lead-off / integrity plan",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "part 5 \u2014 electrode lead-off / integrity plan",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L87"
-    },
-    {
-      "id": "docs_emg_saw_retro_and_competitive_roadmap_ultimate_ads1299_m4",
-      "label": "Ultimate \u2014 ADS1299 (M4)",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "EMG SAW \u2014 Retrospective + Competitive Roadmap",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ultimate \u2014 ads1299 (m4)",
-      "source_file": "docs/EMG_SAW_Retro_and_Competitive_Roadmap.md",
-      "source_location": "L119"
-    },
-    {
-      "id": "readme_architecture",
-      "label": "Architecture",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "architecture",
-      "source_file": "README.md",
-      "source_location": "L29"
-    },
-    {
-      "id": "readme_emg_saw_beihang_emg_acquisition_system_gui",
-      "label": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "emg-saw \u2014 beihang emg acquisition system + gui",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_quick_start",
-      "label": "Quick start",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quick start",
-      "source_file": "README.md",
-      "source_location": "L10"
-    },
-    {
-      "id": "readme_repo",
-      "label": "Repo",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "repo",
-      "source_file": "README.md",
-      "source_location": "L34"
-    },
-    {
-      "id": "readme_status",
-      "label": "Status",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "status",
-      "source_file": "README.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "readme_what_it_does",
-      "label": "What it does",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "EMG-SAW \u2014 Beihang EMG Acquisition System + GUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what it does",
-      "source_file": "README.md",
-      "source_location": "L23"
     },
     {
       "id": "hardware_04_layout_rules",
@@ -8401,14 +8509,14 @@
       "source_location": "L9"
     },
     {
-      "id": "hardware_03_mainboard_schematic_b_shared_analog_blocks_once_for_all_5_channels",
-      "label": "B. Shared analog blocks (once for all 5 channels)",
+      "id": "hardware_03_mainboard_schematic_b_shared_analog_blocks_once_for_all_5_channels_drl_free_see_02_decision",
+      "label": "B. Shared analog blocks (once for all 5 channels) \u2014 **DRL-free, see `02` decision**",
       "_origin": "ast",
       "community": 65,
       "community_name": "Main Board \u2014 5-Channel Schematic (net-by-net) + BOM",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "b. shared analog blocks (once for all 5 channels)",
+      "norm_label": "b. shared analog blocks (once for all 5 channels) \u2014 **drl-free, see `02` decision**",
       "source_file": "hardware/03_mainboard_schematic.md",
       "source_location": "L36"
     },
@@ -8422,7 +8530,7 @@
       "node_kind": "heading",
       "norm_label": "c. stm32u575aii6q  (adc + host; set exact pins in cubemx)",
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L51"
+      "source_location": "L61"
     },
     {
       "id": "hardware_03_mainboard_schematic_d_st67w611m1_b_wi_fi_ble_module_pins_per_st_datasheet_b2413_ref",
@@ -8434,7 +8542,7 @@
       "node_kind": "heading",
       "norm_label": "d. st67w611m1-b  (wi-fi/ble module; pins per st datasheet / b2413 ref)",
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L69"
+      "source_location": "L79"
     },
     {
       "id": "hardware_03_mainboard_schematic_e_connectors",
@@ -8446,7 +8554,7 @@
       "node_kind": "heading",
       "norm_label": "e. connectors",
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L83"
+      "source_location": "L93"
     },
     {
       "id": "hardware_03_mainboard_schematic_f_consolidated_bom_main_board",
@@ -8458,7 +8566,7 @@
       "node_kind": "heading",
       "norm_label": "f. consolidated bom (main board)",
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L96"
+      "source_location": "L106"
     },
     {
       "id": "hardware_03_mainboard_schematic_g_verify",
@@ -8470,7 +8578,7 @@
       "node_kind": "heading",
       "norm_label": "g. verify",
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L120"
+      "source_location": "L130"
     },
     {
       "id": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
@@ -8497,18 +8605,6 @@
       "source_location": "L1"
     },
     {
-      "id": "hardware_02_afe_signal_chain_ad8648_amp_count_correction_3_not_2",
-      "label": "AD8648 amp count \u2014 CORRECTION: \u00d73, not \u00d72",
-      "_origin": "ast",
-      "community": 66,
-      "community_name": "AFE Signal Chain \u2014 confirmed topology + values + 5-channel integration",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ad8648 amp count \u2014 correction: \u00d73, not \u00d72",
-      "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L37"
-    },
-    {
       "id": "hardware_02_afe_signal_chain_afe_signal_chain_confirmed_topology_values_5_channel_integration",
       "label": "AFE Signal Chain \u2014 confirmed topology + values + 5-channel integration",
       "_origin": "ast",
@@ -8521,6 +8617,30 @@
       "source_location": "L1"
     },
     {
+      "id": "hardware_02_afe_signal_chain_amp_count_after_the_change_packs_perfectly_into_3_quads",
+      "label": "Amp count after the change \u2014 packs perfectly into 3 quads",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "AFE Signal Chain \u2014 confirmed topology + values + 5-channel integration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "amp count after the change \u2014 packs perfectly into 3 quads",
+      "source_file": "hardware/02_afe_signal_chain.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "hardware_02_afe_signal_chain_decision_2026_09_04_drl_removed_grounded_reference_instead",
+      "label": "DECISION 2026-09-04 \u2014 **DRL REMOVED** (grounded reference instead)",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "AFE Signal Chain \u2014 confirmed topology + values + 5-channel integration",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decision 2026-09-04 \u2014 **drl removed** (grounded reference instead)",
+      "source_file": "hardware/02_afe_signal_chain.md",
+      "source_location": "L34"
+    },
+    {
       "id": "hardware_02_afe_signal_chain_open_items",
       "label": "Open items",
       "_origin": "ast",
@@ -8530,7 +8650,7 @@
       "node_kind": "heading",
       "norm_label": "open items",
       "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L43"
+      "source_location": "L64"
     },
     {
       "id": "hardware_02_afe_signal_chain_per_channel_chain_proven_reuse_exactly",
@@ -8554,7 +8674,7 @@
       "node_kind": "heading",
       "norm_label": "shared blocks on the main board (generate once for all 5 ch)",
       "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L31"
+      "source_location": "L52"
     },
     {
       "id": "firmware_cp4_binary_dma_hal_adc_convhalfcpltcallback",
@@ -17714,24 +17834,35 @@
     },
     {
       "source": "hardware_02_afe_signal_chain_afe_signal_chain_confirmed_topology_values_5_channel_integration",
+      "target": "hardware_02_afe_signal_chain_decision_2026_09_04_drl_removed_grounded_reference_instead",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/02_afe_signal_chain.md",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_02_afe_signal_chain_afe_signal_chain_confirmed_topology_values_5_channel_integration",
       "target": "hardware_02_afe_signal_chain_shared_blocks_on_the_main_board_generate_once_for_all_5_ch",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L31",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
       "source": "hardware_02_afe_signal_chain_afe_signal_chain_confirmed_topology_values_5_channel_integration",
-      "target": "hardware_02_afe_signal_chain_ad8648_amp_count_correction_3_not_2",
+      "target": "hardware_02_afe_signal_chain_amp_count_after_the_change_packs_perfectly_into_3_quads",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L37",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -17742,7 +17873,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/02_afe_signal_chain.md",
-      "source_location": "L43",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -17769,18 +17900,29 @@
     },
     {
       "source": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
+      "target": "hardware_03_mainboard_schematic_f_consolidated_bom_main_board",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/03_mainboard_schematic.md",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
       "target": "hardware_03_mainboard_schematic_g_verify",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L120",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
       "source": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
-      "target": "hardware_03_mainboard_schematic_b_shared_analog_blocks_once_for_all_5_channels",
+      "target": "hardware_03_mainboard_schematic_b_shared_analog_blocks_once_for_all_5_channels_drl_free_see_02_decision",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -17797,7 +17939,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L51",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -17808,18 +17950,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
-      "target": "hardware_03_mainboard_schematic_e_connectors",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L83",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -17835,13 +17966,13 @@
     },
     {
       "source": "hardware_03_mainboard_schematic_main_board_5_channel_schematic_net_by_net_bom",
-      "target": "hardware_03_mainboard_schematic_f_consolidated_bom_main_board",
+      "target": "hardware_03_mainboard_schematic_e_connectors",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/03_mainboard_schematic.md",
-      "source_location": "L96",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -17963,6 +18094,94 @@
       "confidence_score": 1.0,
       "source_file": "hardware/04_layout_rules.md",
       "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline",
+      "target": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_2_all_5_at_the_same_time_is_easy_on_the_u575",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_3_what_actually_makes_it_work_well_the_4_keys",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_4_better_option_wi_fi_vs_ble_vs_usb",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_5_the_one_honest_risk_the_fix",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_6_recommended_optimal_config",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_7_this_is_exactly_what_the_dev_board_step_step_3_proves",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_05_data_pipeline_data_pipeline_5_channel_simultaneous_emg_streaming_feasibility_optimal_design",
+      "target": "hardware_05_data_pipeline_1_the_data_rate_is_tiny",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/05_data_pipeline.md",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -24383,5 +24602,5 @@
       "source_file": ".claude/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "916d6f7a8217ea23723f31a9c2b2eab5a0de0f40"
+  "built_at_commit": "4531c992650f405afd7a7e14174cf4b841bffb88"
 }

@@ -33,18 +33,28 @@ ST67W611M1-B Wi-Fi, on the power tree in `01_power_tree_design.md`. Analog value
 
 ---
 
-## B. Shared analog blocks (once for all 5 channels)
+## B. Shared analog blocks (once for all 5 channels) — **DRL-free, see `02` decision**
 
-**B.1 VREF buffer (one AD8648 amp):** `3V3_ANA → R(100 k)→ node ←R(100 k)→ GND` (+100 nF) = 1.65 V →
-buffer → **VRf** to: all U1_n REF-network R1, all U9_n IN+, all U3_n IN+, and FFC pin 12 (if VREF sent).
+**B.1 VREF generation:** `3V3_ANA → R(100 k) → VDiv ← R(100 k) → GND`, with **100 nF + 10 µF at VDiv**
+(big cap is fine here — it is an *input* node, not an op-amp output) = **1.65 V**.
 
-**B.2 DRL driver (one AD8648 amp) → one DRL electrode:**
-`VCM_1..5 each → R_in (50 k) → DRL amp IN−` (inverting summer, averages the 5 VCMs) ;
-`R_f 10 k ‖ C_f 1 nF : OUT→IN−` ; `IN+ = VRf` ; `OUT → R_drl (1 MΩ) → J_DRL` (reference electrode on body).
-Bench-tune R_in/R_f for deepest 50/60 Hz null without oscillation.
+**B.2 TWO VREF buffers** (unity-gain, `+`=VDiv, `−`=own output; **100 nF only** on each output, no bulk cap):
+- **VRf_A** → channels 1–3 (their R1, servo `+`, gain-stage `+`).
+- **VRf_B** → channels 4–5 + **FFC pin 12** of all 5 electrode boards.
+Splitting the load reduces shared-impedance coupling between channels.
 
-**B.3 Op-amp packing:** 5× AD8237 (U1_1..5) + **3× AD8648** = 12 amps: 5 gain (U3) + 5 servo (U9) +
-1 VREF buffer + 1 DRL. *(Micropower swap: replace the 3 AD8648 with 3× MCP6404/TLV9064.)*
+**B.3 Reference electrode (replaces the DRL):** `J_REF pad → R_ref (10 kΩ default; 0 Ω = tested config)
+→ GND`. **One** reference electrode serves all 5 channels. Keep an **unpopulated DRL footprint + a
+GND↔DRL solder jumper** on this net as a future option (no VCM hardware needed — Va/Vb/Vc are already here).
+
+**B.4 Op-amp packing (perfect fit, nothing idle):** 5× AD8237 (U1_1..5) + **3× quads = 12 amps** =
+5 gain + 5 servo + 2 VREF buffers. Recommended quad = **MCP6404** (micropower) or AD8648.
+| Chip | A | B | C | D |
+|---|---|---|---|---|
+| U2 | ch1 gain | ch1 servo | **VREF buf A** | **VREF buf B** |
+| U3 | ch2 gain | ch2 servo | ch3 gain | ch3 servo |
+| U4 | ch4 gain | ch4 servo | ch5 gain | ch5 servo |
+*(U2 C/D live on the `Analog_Shared` sheet — use Altium multi-part placement.)*
 
 ---
 

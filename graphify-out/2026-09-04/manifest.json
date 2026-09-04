@@ -658,5 +658,35 @@
     "seen": 1788351193.6236315,
     "ast_hash": "fcf077817c50c1c55b43b446db6cb843",
     "semantic_hash": ""
+  },
+  "graphify-out/converted/EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md": {
+    "mtime": 1788520040.7911134,
+    "seen": 1788520060.0105016,
+    "ast_hash": "1198130fa30d6e7b70c3f35db0aa3168",
+    "semantic_hash": ""
+  },
+  "hardware/01_power_tree_design.md": {
+    "mtime": 1788515629.0478876,
+    "seen": 1788520060.0105016,
+    "ast_hash": "506e3a55fc4fd064d0431364a5dcc044",
+    "semantic_hash": ""
+  },
+  "hardware/02_afe_signal_chain.md": {
+    "mtime": 1788518738.772895,
+    "seen": 1788520060.0105016,
+    "ast_hash": "f0a3f771b3e56a1f3090e5ab377dcc5f",
+    "semantic_hash": ""
+  },
+  "hardware/03_mainboard_schematic.md": {
+    "mtime": 1788519147.0191903,
+    "seen": 1788520060.0105016,
+    "ast_hash": "d4fdac3f27c8ba8b82b65e0867008202",
+    "semantic_hash": ""
+  },
+  "hardware/04_layout_rules.md": {
+    "mtime": 1788519975.5941446,
+    "seen": 1788520060.0105016,
+    "ast_hash": "0887503bf283d1f318a4d97e1cde8d75",
+    "semantic_hash": ""
   }
 }

@@ -672,21 +672,27 @@
     "semantic_hash": ""
   },
   "hardware/02_afe_signal_chain.md": {
-    "mtime": 1788518738.772895,
-    "seen": 1788520060.0105016,
-    "ast_hash": "f0a3f771b3e56a1f3090e5ab377dcc5f",
+    "mtime": 1788532567.32637,
+    "seen": 1788532643.4816246,
+    "ast_hash": "7ca354624beb9fad3d7df04aac3557c0",
     "semantic_hash": ""
   },
   "hardware/03_mainboard_schematic.md": {
-    "mtime": 1788519147.0191903,
-    "seen": 1788520060.0105016,
-    "ast_hash": "d4fdac3f27c8ba8b82b65e0867008202",
+    "mtime": 1788532601.0222955,
+    "seen": 1788532643.4816246,
+    "ast_hash": "b9eca926ba3e2a390adaf9fdfebc4130",
     "semantic_hash": ""
   },
   "hardware/04_layout_rules.md": {
     "mtime": 1788519975.5941446,
     "seen": 1788520060.0105016,
     "ast_hash": "0887503bf283d1f318a4d97e1cde8d75",
+    "semantic_hash": ""
+  },
+  "hardware/05_data_pipeline.md": {
+    "mtime": 1788521461.4189725,
+    "seen": 1788532643.4816246,
+    "ast_hash": "4d5d8553227324cf9b2db45a6ebe5d48",
     "semantic_hash": ""
   }
 }
