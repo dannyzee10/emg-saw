@@ -658,5 +658,47 @@
     "seen": 1788351193.6236315,
     "ast_hash": "fcf077817c50c1c55b43b446db6cb843",
     "semantic_hash": ""
+  },
+  "graphify-out/converted/EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md": {
+    "mtime": 1788412412.6763084,
+    "seen": 1788412419.5756252,
+    "ast_hash": "1198130fa30d6e7b70c3f35db0aa3168",
+    "semantic_hash": ""
+  },
+  "michael/knowledge.md": {
+    "mtime": 1788412289.5352552,
+    "seen": 1788412419.5756252,
+    "ast_hash": "75ce685a780277ddbe4da29245d1cc49",
+    "semantic_hash": ""
+  },
+  "webapp/README.md": {
+    "mtime": 1788412244.7921116,
+    "seen": 1788412419.5756252,
+    "ast_hash": "01604fbd6fd97ab32426bd895a5558a1",
+    "semantic_hash": ""
+  },
+  "michael/__init__.py": {
+    "mtime": 1788416213.2035606,
+    "seen": 1788416925.319058,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "michael/michael.py": {
+    "mtime": 1788416854.3290448,
+    "seen": 1788416925.319058,
+    "ast_hash": "f2dd02c17b7c9b9a9e8a78ba8877766e",
+    "semantic_hash": ""
+  },
+  "scripts/clinic_server.py": {
+    "mtime": 1788416284.5930033,
+    "seen": 1788416925.319058,
+    "ast_hash": "5a1b9519780cab4cf665fc4ddcf096fe",
+    "semantic_hash": ""
+  },
+  "tests/test_michael.py": {
+    "mtime": 1788416302.3291216,
+    "seen": 1788416925.319058,
+    "ast_hash": "6fa99e5e07b41b28bb9336a993033f0e",
+    "semantic_hash": ""
   }
 }

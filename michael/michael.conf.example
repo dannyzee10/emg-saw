@@ -1,0 +1,7 @@
+# Michael connection settings.  Copy this file to  michael/michael.conf  and fill in the token.
+#   cp michael/michael.conf.example michael/michael.conf
+# (michael.conf is git-ignored so the token is never committed.)
+# Environment variables MICHAEL_URL / MICHAEL_TOKEN override these if set.
+
+MICHAEL_URL=https://frp-end.com:17860
+MICHAEL_TOKEN=paste-the-shared-token-here
