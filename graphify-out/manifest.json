@@ -712,5 +712,11 @@
     "seen": 1788424979.5988586,
     "ast_hash": "3cd0453a9e745bfa18eec94ac4de0ec1",
     "semantic_hash": ""
+  },
+  "michael/michael_chat.py": {
+    "mtime": 1788490538.6234145,
+    "seen": 1788490866.8770018,
+    "ast_hash": "b862f14d6c0938afbe60ad859913c88e",
+    "semantic_hash": ""
   }
 }

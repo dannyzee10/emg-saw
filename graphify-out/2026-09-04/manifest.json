@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "michael/michael.py": {
-    "mtime": 1788424885.1539836,
-    "seen": 1788424979.5988586,
-    "ast_hash": "51e65d61097c613743fa4139e72404aa",
+    "mtime": 1788489302.608838,
+    "seen": 1788489343.3627791,
+    "ast_hash": "14596ec559e81df90cab9162d7c739de",
     "semantic_hash": ""
   },
   "scripts/clinic_server.py": {
@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "michael/ollama_proxy.py": {
-    "mtime": 1788424789.177039,
-    "seen": 1788424979.5988586,
-    "ast_hash": "28da50354a265e62b9e04f5009ab5ea4",
+    "mtime": 1788489272.6602361,
+    "seen": 1788489343.3627791,
+    "ast_hash": "7a2d8e812e8d25b6853608d08cfe368f",
     "semantic_hash": ""
   },
   "docs/prototype/index.html": {

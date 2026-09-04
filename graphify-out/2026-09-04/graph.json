@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "handler",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L23"
+      "source_location": "L28"
     },
     {
       "id": "gui_emg_plotter_emgscope_add_marker",
@@ -2629,7 +2629,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "michael/michael.py",
-      "source_location": "L112"
+      "source_location": "L118"
     },
     {
       "id": "michael_michael_fallback",
@@ -2641,7 +2641,7 @@
       "file_type": "code",
       "norm_label": "_fallback()",
       "source_file": "michael/michael.py",
-      "source_location": "L89"
+      "source_location": "L95"
     },
     {
       "id": "michael_michael_main",
@@ -2653,7 +2653,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "michael/michael.py",
-      "source_location": "L149"
+      "source_location": "L156"
     },
     {
       "id": "michael_michael_parse_action",
@@ -2665,7 +2665,7 @@
       "file_type": "code",
       "norm_label": "_parse_action()",
       "source_file": "michael/michael.py",
-      "source_location": "L97"
+      "source_location": "L103"
     },
     {
       "id": "scripts_clinic_server_handler_do_get",
@@ -4453,7 +4453,7 @@
       "file_type": "code",
       "norm_label": "._authorized()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L27"
+      "source_location": "L32"
     },
     {
       "id": "michael_ollama_proxy_handler_do_get",
@@ -4465,7 +4465,7 @@
       "file_type": "code",
       "norm_label": ".do_get()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L60"
+      "source_location": "L65"
     },
     {
       "id": "michael_ollama_proxy_handler_do_post",
@@ -4477,7 +4477,7 @@
       "file_type": "code",
       "norm_label": ".do_post()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L63"
+      "source_location": "L68"
     },
     {
       "id": "michael_ollama_proxy_handler_forward",
@@ -4489,7 +4489,7 @@
       "file_type": "code",
       "norm_label": "._forward()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L30"
+      "source_location": "L35"
     },
     {
       "id": "michael_ollama_proxy_handler_log_message",
@@ -4501,7 +4501,7 @@
       "file_type": "code",
       "norm_label": ".log_message()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L24"
+      "source_location": "L29"
     },
     {
       "id": "michael_ollama_proxy_main",
@@ -4513,7 +4513,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L67"
+      "source_location": "L72"
     },
     {
       "id": "quality_bar",
@@ -7335,18 +7335,7 @@
       "source_location": "L1"
     },
     {
-      "id": "michael_michael_rationale_113",
-      "label": "Answer a user message. Uses Ollama; falls back to the scripted intents on any\u2026",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "test_michael.py",
-      "file_type": "rationale",
-      "norm_label": "answer a user message. uses ollama; falls back to the scripted intents on any...",
-      "source_file": "michael/michael.py",
-      "source_location": "L113"
-    },
-    {
-      "id": "michael_michael_rationale_98",
+      "id": "michael_michael_rationale_104",
       "label": "Pull any trailing 'ACTION: goto:...' out, and strip stray goto/(room)/(npc)\u2026",
       "_origin": "ast",
       "community": 41,
@@ -7354,7 +7343,18 @@
       "file_type": "rationale",
       "norm_label": "pull any trailing 'action: goto:...' out, and strip stray goto/(room)/(npc)...",
       "source_file": "michael/michael.py",
-      "source_location": "L98"
+      "source_location": "L104"
+    },
+    {
+      "id": "michael_michael_rationale_119",
+      "label": "Answer a user message. Uses Ollama; falls back to the scripted intents on any\u2026",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "test_michael.py",
+      "file_type": "rationale",
+      "norm_label": "answer a user message. uses ollama; falls back to the scripted intents on any...",
+      "source_file": "michael/michael.py",
+      "source_location": "L119"
     },
     {
       "id": "tests_test_michael_rationale_1",
@@ -12725,7 +12725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L133",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -12737,7 +12737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L136",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -12749,7 +12749,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/michael.py",
-      "source_location": "L152",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -12761,7 +12761,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L61",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -12773,7 +12773,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L64",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -12785,7 +12785,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L31",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -18239,13 +18239,24 @@
     },
     {
       "source": "michael_michael",
+      "target": "michael_michael_parse_action",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "michael/michael.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "michael_michael",
       "target": "michael_michael_ask",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L112",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -18256,7 +18267,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L149",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -18267,18 +18278,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "michael_michael",
-      "target": "michael_michael_parse_action",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "michael/michael.py",
-      "source_location": "L97",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -18289,7 +18289,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -18300,7 +18300,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L67",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -19752,7 +19752,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -21710,7 +21710,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -21721,7 +21721,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L27",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -21732,7 +21732,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L30",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -21743,7 +21743,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L60",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -21754,7 +21754,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/ollama_proxy.py",
-      "source_location": "L63",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -22748,25 +22748,25 @@
       "weight": 1.0
     },
     {
-      "source": "michael_michael_rationale_113",
-      "target": "michael_michael_ask",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "michael/michael.py",
-      "source_location": "L113",
-      "weight": 1.0
-    },
-    {
-      "source": "michael_michael_rationale_98",
+      "source": "michael_michael_rationale_104",
       "target": "michael_michael_parse_action",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "michael/michael.py",
-      "source_location": "L98",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "michael_michael_rationale_119",
+      "target": "michael_michael_ask",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "michael/michael.py",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -25051,5 +25051,5 @@
       "source_file": ".claude/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "b18e7eb4d3ebd8bd6cc32cc85245c292f2267282"
+  "built_at_commit": "61f5d0b4905d20b14abdf66483d1aae45989a3e3"
 }

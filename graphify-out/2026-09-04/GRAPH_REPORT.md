@@ -1,7 +1,7 @@
-# Graph Report - emg-saw  (2026-09-03)
+# Graph Report - emg-saw  (2026-09-04)
 
 ## Corpus Check
-- 103 files · ~80,965 words
+- 103 files · ~81,064 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b18e7eb4`
+- Built from commit: `61f5d0b4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -218,7 +218,7 @@ Nodes (15): MvcDialog, MvcSaveDialog, MvcDialog — Noraxon-style MVC calibratio
 
 ### Community 41 - "test_michael.py"
 Cohesion: 0.13
-Nodes (15): ask(), _fallback(), main(), _parse_action(), Michael — the EMG research-centre AI assistant. ask(message) -> {"answer": str,…, Answer a user message. Uses Ollama; falls back to the scripted intents on any…, Pull any trailing 'ACTION: goto:...' out, and strip stray goto/(room)/(npc)…, Handler (+7 more)
+Nodes (15): ask(), _fallback(), main(), _parse_action(), Michael — the EMG research-centre AI assistant. ask(message) -> {"answer": str,…, Pull any trailing 'ACTION: goto:...' out, and strip stray goto/(room)/(npc)…, Answer a user message. Uses Ollama; falls back to the scripted intents on any…, Handler (+7 more)
 
 ### Community 42 - "._apply_scaling"
 Cohesion: 0.14

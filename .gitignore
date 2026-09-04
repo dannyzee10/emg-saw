@@ -21,6 +21,11 @@ EMG_Debug.spec
 
 # keep the flashing helper even though *.bat is ignored above
 !scripts/flash_run.bat
+# keep the Michael launcher too
+!Michael.bat
+
+# Michael connection secret (has the token) — never commit; copy michael.conf.example
+michael/michael.conf
 
 # per-user MVC references (the 'MVC stack') — not source
 mvc_store.json

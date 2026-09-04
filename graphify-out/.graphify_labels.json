@@ -40,12 +40,12 @@
   "38": "RecordingController",
   "39": "dsp.py",
   "40": "MvcDialog",
-  "41": "test_michael.py",
+  "41": "ask",
   "42": "._apply_scaling",
   "43": "AmpNormDialog",
   "44": "._prompt_save_recording",
   "45": "Tomorrow — Live PA0 EMG data check (CP5 \"signal sanity\")",
-  "46": "emg_features.py",
+  "46": "test_leadoff.py",
   "47": "._activate_mvc",
   "48": "._process",
   "49": "_BufferedSource",
@@ -62,5 +62,9 @@
   "60": "EMG-SAW_Weekly_Report_2026-08-28_to_09-03_da066e19.md",
   "61": "EMG Research-Centre — Web Front-End (webapp/)",
   "62": "Handler",
-  "66": "__init__.py"
+  "63": "PROJECT_CONTEXT.md",
+  "64": "QUALITY_BAR.md",
+  "65": "EMG SAW — Retrospective + Competitive Roadmap",
+  "66": "__init__.py",
+  "67": "EMG-SAW — Beihang EMG Acquisition System + GUI"
 }
