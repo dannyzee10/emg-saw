@@ -12,12 +12,17 @@ env:
     OLLAMA_LOCAL         upstream Ollama (default http://127.0.0.1:11434)
 """
 import os
+import ssl
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 TOKEN = os.environ.get("MICHAEL_TOKEN", "")
 PROXY_PORT = int(os.environ.get("MICHAEL_PROXY_PORT", "11500"))
 OLLAMA = os.environ.get("OLLAMA_LOCAL", "http://127.0.0.1:11434").rstrip("/")
+# Optional TLS: set MICHAEL_CERT + MICHAEL_KEY to serve HTTPS. Needed to tunnel through Chinese
+# frp nodes (SakuraFrp), which block plain HTTP (ICP-beian) but pass HTTPS as opaque bytes.
+CERT = os.environ.get("MICHAEL_CERT", "")
+KEY = os.environ.get("MICHAEL_KEY", "")
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -67,8 +72,15 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     if not TOKEN:
         print("WARNING: MICHAEL_TOKEN is not set -- every request will be rejected. Set it and re-run.")
-    print(f"Michael token-proxy on 127.0.0.1:{PROXY_PORT} -> {OLLAMA}   (expose {PROXY_PORT} via the tunnel)")
-    ThreadingHTTPServer(("127.0.0.1", PROXY_PORT), Handler).serve_forever()
+    httpd = ThreadingHTTPServer(("127.0.0.1", PROXY_PORT), Handler)
+    scheme = "http"
+    if CERT and KEY:
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        ctx.load_cert_chain(CERT, KEY)
+        httpd.socket = ctx.wrap_socket(httpd.socket, server_side=True)
+        scheme = "https"
+    print(f"Michael token-proxy on {scheme}://127.0.0.1:{PROXY_PORT} -> {OLLAMA}   (expose {PROXY_PORT} via the tunnel)")
+    httpd.serve_forever()
 
 
 if __name__ == "__main__":

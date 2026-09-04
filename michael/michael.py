@@ -17,8 +17,14 @@ Standalone test:  python -m michael.michael "how do I smooth my data?"
 import json
 import os
 import re
+import ssl
 import urllib.request
 from pathlib import Path
+
+# the shared proxy uses a self-signed cert (to tunnel HTTPS through Chinese frp nodes), so skip verify
+_NOVERIFY = ssl.create_default_context()
+_NOVERIFY.check_hostname = False
+_NOVERIFY.verify_mode = ssl.CERT_NONE
 
 HERE = Path(__file__).resolve().parent
 _kb = HERE / "knowledge.md"
@@ -125,8 +131,9 @@ def ask(message, url=None, model=None, timeout=None):
     if TOKEN:
         headers["X-Michael-Token"] = TOKEN
     req = urllib.request.Request(base + "/api/chat", data=payload, headers=headers)
+    ctx = _NOVERIFY if base.startswith("https") else None
     try:
-        with urllib.request.urlopen(req, timeout=timeout or TIMEOUT) as r:
+        with urllib.request.urlopen(req, timeout=timeout or TIMEOUT, context=ctx) as r:
             data = json.loads(r.read().decode("utf-8"))
         content = (data.get("message") or {}).get("content", "").strip()
         if not content:
