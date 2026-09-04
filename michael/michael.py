@@ -69,10 +69,16 @@ INTENTS = [
      "Before recording, relax the muscle and run the EMG Baseline check -- it should read green; the channel "
      "dot is green (connected), amber (poor/reference) or red (lead off). The Baseline researcher helps.",
      "goto:liveviz/baseline"),
-    (("fatigue", "tired", "median freq", "target", "sustained"),
+    (("fatigue", "tired", "median freq", "mdf", "mnf", "mean freq", "target", "sustained"),
      "Fatigue shows as the median frequency falling during a sustained hold; use the %MVC Target guide to "
      "keep a constant effort. Set it up with the MVC researcher.",
      "goto:liveviz/mvc"),
+    (("co-contraction", "cocontraction", "co contraction", "coactivation", "co-activation", "antagonist",
+      "onset", "offset", "activation timing", "iemg", "integrated emg", "integral"),
+     "Co-contraction, onset/offset timing and integrated EMG (iEMG) are computed after capture: record the "
+     "muscles during your task, then open the recording in the Review room, which calculates these metrics "
+     "and adds them to the report.",
+     "goto:review/review"),
     (("review", "playback", "replay", "signal processing", "offline", "recorded"),
      "The Review room replays a recording, lets you re-process it, and makes a report; the Normalize "
      "researcher there scales it to a reference.",

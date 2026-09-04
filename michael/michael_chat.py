@@ -4,8 +4,12 @@ Double-click (via Michael.bat, or `python michael/michael_chat.py`) to open a wi
 Michael. Connection settings come from the environment (MICHAEL_URL / MICHAEL_TOKEN) or from
 michael/michael.conf (key=value), so it just works on a double-click. Answers come from the shared
 Ollama/Qwen brain over the tunnel; it falls back to scripted answers if the server is unreachable.
+
+While Michael is composing a reply it shows a live EMG "contraction" trace, so waiting looks alive.
 """
+import math
 import os
+import random
 import ssl
 import sys
 import urllib.request
@@ -38,7 +42,7 @@ def _load_config():
 
 _load_config()
 from michael.michael import ask                      # noqa: E402  (config must be in env first)
-from PyQt5 import QtCore, QtWidgets                   # noqa: E402
+from PyQt5 import QtCore, QtGui, QtWidgets            # noqa: E402
 
 
 def _reachable():
@@ -84,11 +88,62 @@ class Worker(QtCore.QThread):
             self.done.emit({"answer": f"(error: {e})", "action": None, "source": "error"})
 
 
+class Wave(QtWidgets.QWidget):
+    """A small scrolling EMG trace shown while Michael thinks — a relaxed baseline that bursts into
+    'contractions', so the wait looks like live muscle activity."""
+
+    def __init__(self):
+        super().__init__()
+        self.setFixedHeight(44)
+        self.setStyleSheet("background:#0b1a12; border:1px solid #2a4030; border-radius:6px;")
+        self.n = 240
+        self.buf = [0.0] * self.n
+        self.t = 0
+        self.timer = QtCore.QTimer(self)
+        self.timer.timeout.connect(self._tick)
+
+    def start(self):
+        self.t = 0
+        self.timer.start(28)
+        self.show()
+
+    def stop(self):
+        self.timer.stop()
+
+    def _tick(self):
+        self.t += 1
+        phase = (self.t % 55) / 55.0                    # a contraction roughly every ~1.5 s
+        env = math.exp(-((phase - 0.5) ** 2) / 0.015)   # smooth rise-and-fall (contraction envelope)
+        amp = 0.06 + 0.92 * env                         # relaxed baseline -> strong burst -> relax
+        s = amp * (random.random() * 2 - 1)             # EMG = random spikes under the envelope
+        self.buf.append(s)
+        self.buf = self.buf[-self.n:]
+        self.update()
+
+    def paintEvent(self, _):
+        p = QtGui.QPainter(self)
+        p.setRenderHint(QtGui.QPainter.Antialiasing)
+        w, h = self.width(), self.height()
+        mid = h / 2.0
+        p.setPen(QtGui.QPen(QtGui.QColor("#172a1e"), 1))
+        p.drawLine(0, int(mid), w, int(mid))
+        p.setPen(QtGui.QPen(QtGui.QColor("#39d353"), 1.5))
+        path = QtGui.QPainterPath()
+        for i, s in enumerate(self.buf):
+            x = i / (self.n - 1) * w
+            y = mid - s * (h * 0.40)
+            if i == 0:
+                path.moveTo(x, y)
+            else:
+                path.lineTo(x, y)
+        p.drawPath(path)
+
+
 class Chat(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Michael — EMG Lab Assistant")
-        self.resize(560, 640)
+        self.resize(560, 660)
         self.setStyleSheet("background:#0d1f16; color:#e6eefc; font-family:'Segoe UI',Arial;")
         self._threads = []
         v = QtWidgets.QVBoxLayout(self)
@@ -112,6 +167,23 @@ class Chat(QtWidgets.QWidget):
                                 "padding:8px; font-size:13px;")
         v.addWidget(self.view, 1)
 
+        # "thinking" bar — an animated EMG contraction trace while Michael composes a reply
+        self.thinkbar = QtWidgets.QWidget()
+        tb = QtWidgets.QHBoxLayout(self.thinkbar)
+        tb.setContentsMargins(0, 4, 0, 0)
+        self.think_lbl = QtWidgets.QLabel("Michael is thinking")
+        self.think_lbl.setStyleSheet("color:#8fd0a0; font-size:12px;")
+        self.think_lbl.setFixedWidth(150)
+        self.wave = Wave()
+        tb.addWidget(self.think_lbl)
+        tb.addWidget(self.wave, 1)
+        self.thinkbar.hide()
+        v.addWidget(self.thinkbar)
+
+        self._dots = 0
+        self._dot_timer = QtCore.QTimer(self)
+        self._dot_timer.timeout.connect(self._anim_dots)
+
         row = QtWidgets.QHBoxLayout()
         self.inp = QtWidgets.QLineEdit()
         self.inp.setPlaceholderText("Ask Michael…  e.g. how do I set MVC?")
@@ -121,7 +193,8 @@ class Chat(QtWidgets.QWidget):
         self.btn = QtWidgets.QPushButton("Send")
         self.btn.setStyleSheet("QPushButton{background:#2e7d32;color:#fff;font-weight:bold;"
                                "padding:8px 18px;border-radius:6px;border:none;}"
-                               "QPushButton:hover{background:#388e3c;}")
+                               "QPushButton:hover{background:#388e3c;}"
+                               "QPushButton:disabled{background:#1e3a24;color:#6f8f78;}")
         self.btn.clicked.connect(self.send)
         row.addWidget(self.inp, 1)
         row.addWidget(self.btn)
@@ -135,6 +208,10 @@ class Chat(QtWidgets.QWidget):
         self.view.append(f'<p style="margin:6px 0;"><b style="color:{color}">{who}:</b> {text}</p>')
         sb = self.view.verticalScrollBar()
         sb.setValue(sb.maximum())
+
+    def _anim_dots(self):
+        self._dots = (self._dots + 1) % 4
+        self.think_lbl.setText("Michael is thinking" + "." * self._dots)
 
     def _run(self, message):
         w = Worker(message)
@@ -152,6 +229,18 @@ class Chat(QtWidgets.QWidget):
     def _pong(self, res):
         self._set_status(res.get("source") == "llm")
 
+    def _thinking(self, on):
+        if on:
+            self.thinkbar.show()
+            self.wave.start()
+            self._dots = 0
+            self.think_lbl.setText("Michael is thinking")
+            self._dot_timer.start(350)
+        else:
+            self.wave.stop()
+            self._dot_timer.stop()
+            self.thinkbar.hide()
+
     def send(self):
         msg = self.inp.text().strip()
         if not msg:
@@ -160,9 +249,11 @@ class Chat(QtWidgets.QWidget):
         self.inp.clear()
         self.inp.setEnabled(False)
         self.btn.setEnabled(False)
+        self._thinking(True)
         self._run(msg)
 
     def _answer(self, res):
+        self._thinking(False)
         ans = res.get("answer", "")
         hint = ROOM.get(res.get("action"))
         if hint:
