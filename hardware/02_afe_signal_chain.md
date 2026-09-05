@@ -1,5 +1,11 @@
 # AFE Signal Chain — confirmed topology + values + 5-channel integration
 
+> ⚠️ **RAIL CHANGE 2026-09-05:** the analog rail is now **3.00 V** (was 3.3 V) and the mid-supply
+> reference is **1.50 V** (was 1.65 V) — forced by the ST67's 3.63 V absolute maximum. See
+> `00_HANDOFF.md` §5. Everywhere below that says 3.3 V / 1.65 V, read **3.0 V / 1.50 V**.
+> Gain, filter corners and topology are unchanged; clipping headroom is now ±7.3 mV RTI.
+> The **as-built pin-by-pin netlist is in `06_pin_reference.md`.**
+
 Confirmed with Daniyal 2026-09-04 from the working single-channel V3 boards + LTspice schematic.
 The new main board **replicates this proven per-channel analog ×5** and adds STM32U575 + ST67 Wi-Fi
 + power tree. Boards are linked by **FFC flat cable** (electrodes sit at different forearm sites).

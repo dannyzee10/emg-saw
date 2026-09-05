@@ -666,15 +666,15 @@
     "semantic_hash": ""
   },
   "hardware/01_power_tree_design.md": {
-    "mtime": 1788616427.6712127,
-    "seen": 1788616478.864505,
-    "ast_hash": "13c93a6fd008cc1401f9be821607d1bf",
+    "mtime": 1788515629.0478876,
+    "seen": 1788520060.0105016,
+    "ast_hash": "506e3a55fc4fd064d0431364a5dcc044",
     "semantic_hash": ""
   },
   "hardware/02_afe_signal_chain.md": {
-    "mtime": 1788616439.9275422,
-    "seen": 1788616478.864505,
-    "ast_hash": "cb54fb84bbde0ac677d10a1dcf06b5ad",
+    "mtime": 1788532567.32637,
+    "seen": 1788532643.4816246,
+    "ast_hash": "7ca354624beb9fad3d7df04aac3557c0",
     "semantic_hash": ""
   },
   "hardware/03_mainboard_schematic.md": {
@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "hardware/04_layout_rules.md": {
-    "mtime": 1788593428.3971434,
-    "seen": 1788616478.864505,
-    "ast_hash": "a696ce4d2c47475d87e3b449c8764939",
+    "mtime": 1788519975.5941446,
+    "seen": 1788520060.0105016,
+    "ast_hash": "0887503bf283d1f318a4d97e1cde8d75",
     "semantic_hash": ""
   },
   "hardware/05_data_pipeline.md": {
@@ -699,24 +699,6 @@
     "mtime": 1788586069.7074294,
     "seen": 1788586189.2981982,
     "ast_hash": "3ad27cdfb987d443343246f2f93218e1",
-    "semantic_hash": ""
-  },
-  "hardware/00_HANDOFF.md": {
-    "mtime": 1788616401.6716392,
-    "seen": 1788616478.864505,
-    "ast_hash": "f759021f2c43c37e9567b2e5ed04bb62",
-    "semantic_hash": ""
-  },
-  "hardware/06_pin_reference.md": {
-    "mtime": 1788616316.909021,
-    "seen": 1788616478.864505,
-    "ast_hash": "3f654a45f447e88aa5777a66ea647d94",
-    "semantic_hash": ""
-  },
-  "hardware/power_stage2_mux_buck.html": {
-    "mtime": 1788590929.5150356,
-    "seen": 1788616478.864505,
-    "ast_hash": "a2d1aef709c4ee1a43db0080db7d0196",
     "semantic_hash": ""
   }
 }

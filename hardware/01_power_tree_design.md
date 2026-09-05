@@ -6,25 +6,30 @@ dry-electrode boards (each 3.3 V, AD8237 + AD8648, over a Hirose TF31-13S mezzan
 ready to capture in Altium. Companion files: `02_st67_stm32_design.md`, `03_electrode_interface.md`,
 `04_layout_rules.md`, `BOM.md`.
 
-> Status: values below are design-ready; three externals (buck-boost L / Cin / Cout) are marked
-> **[confirm DS]** — copy them from the TPS631000 datasheet typical-application table before layout.
+> ⚠️ **SUPERSEDED IN PLACES — see `06_pin_reference.md` for the AS-BUILT values.** This file keeps the
+> architecture and the design formulas; the rail voltages and several parts changed after the 2026-09-05
+> multi-agent datasheet review (summarised in `00_HANDOFF.md` §5).
 
 ---
 
-## 0. Rail decisions
+## 0. Rail decisions — REVISED 2026-09-05
 
-| Rail | Voltage | Source | Feeds | Why |
-|---|---|---|---|---|
-| **VSYS** | 3.0–5.0 V | power-path mux (battery or USB) | buck-boost input | one input for the converter whether on battery or USB |
-| **3V3_DIG** | **3.5 V** | TPS631000 buck-boost | STM32U575 VDD, ST67 VDD33/VDDIO | must sit ≥140 mV above the analog LDO output so the LDO can regulate |
-| **3V3_ANA** | **3.3 V** | TPS7A2033 LDO (from 3V3_DIG) | 5× electrode boards (via TF31), STM32 VDDA/VREF+ | clean, low-noise rail for the µV analog front ends |
+| Rail | Voltage | Source | Feeds |
+|---|---|---|---|
+| **VSYS** | 3.0–5.0 V | power-path mux (battery or USB) | buck-boost input |
+| **3V3_DIG** | **3.30 V** | TPS631000 buck-boost (RUP_3 560 k / RUP_4 100 k) | STM32U575 VDD, ST67 VDD33/VDDIO |
+| **3V3_ANA** | **3.00 V** | **TPS7A2030** LDO (from 3V3_DIG) | 5× electrode boards (FFC), AFE, STM32 VDDA/VREF+ |
+| **VREF_A / VREF_B** | **1.50 V** | 100 k/100 k divider + 2 buffers | all AD8237 REF networks, servos, gain stages, FFC pin 12 |
 
-**Why 3.5 V digital, not 3.3 V:** the electrodes are designed for 3.3 V, so the analog LDO output must
-be 3.3 V. The TPS7A20 needs ≥140 mV dropout (worst case, 300 mA); running the buck-boost at **3.5 V**
-gives the LDO ~200 mV headroom **across the entire battery discharge** (the buck-boost output is
-regulated regardless of cell voltage), which cleanly removes the end-of-discharge dropout worry in the
-original analysis. 3.5 V is inside spec for both digital parts (STM32U575 ≤3.6 V; ST67 2.97–3.63 V).
-*Lower-margin alternative:* 3V3_DIG = 3.3 V + 3V3_ANA = 3.0 V (electrodes then run at 3.0 V, VCM ≈ 1.5 V).
+**Why 3.30 V digital (was 3.5 V — that was WRONG):** the binding constraint is the **ST67W611M1's
+absolute maximum of 3.63 V** (DS14784 Table 2), not the MCU. At 3.5 V nominal the worst-case DC output
+was 3.617 V, leaving 13 mV — and a 300 mA Wi-Fi load-release transient overshoots 30–80 mV, so the module
+would have been driven past its absolute max on every TX burst. Latent damage, not a functional failure.
+
+**Why 3.00 V analog:** with 3.30 V in, a 3.0 V output gives the TPS7A20 **300 mV of headroom** — exactly
+TI's lowest *characterised* PSRR condition. The previous 200 mV was **outside** the characterised range,
+and any burst dip would have pushed it into dropout where PSRR collapses. Cost: clipping headroom moves
+from ±8.0 mV to ±7.3 mV referred to input — irrelevant for sEMG.
 
 ---
 
@@ -68,7 +73,7 @@ battery tie at `VBAT`. Reverse-polarity via a P-MOSFET; USB-vs-battery selection
 | Ref | Part | Value / PN | Footprint | Connection |
 |---|---|---|---|---|
 | J_BAT | JST-PH 2-pin | — | TH | +→VBAT_RAW, −→GND; **verify polarity vs cell vendor** |
-| Q_RP | P-MOSFET (rev-pol) | e.g. DMG3415U / SI2301 | SOT-23 | source=VBAT_RAW, drain=VBAT, gate=GND (blocks reversed insert) |
+| Q_RP | P-MOSFET (rev-pol) | DMG3415U-7 | SOT-23 | **DRAIN = VBAT_RAW (battery side), SOURCE = VBAT (system side), GATE = GND.** The body diode (anode at drain) must point battery→system so it bootstraps the FET on; reversed cell back-biases it and Vgs=0 ⇒ blocked. *(Do not swap S/D — source-to-battery is a load-switch orientation and does NOT protect against reverse insertion.)* |
 | U_MUX | TPS2116 (auto power mux, 1.6–5.5 V) | — | VSSOP-8 | IN1=VBUS (priority), IN2=VBAT, OUT=VSYS |
 | C_MUX | Cap | 1 µF | 0402 | VSYS → GND |
 

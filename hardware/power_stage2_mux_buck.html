@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Power sheet — TPS2116 mux → TPS631000 buck-boost</title>
+<style>
+ body{margin:0;padding:22px;background:#f7f8fa;font-family:'Segoe UI',Arial,sans-serif;color:#1f2937}
+ h2{margin:22px 0 4px;font-size:18px}.sub{color:#6b7280;font-size:12.5px;margin-bottom:8px}
+ svg{background:#fff;border:1px solid #e5e7eb;border-radius:10px;display:block}
+ table{border-collapse:collapse;background:#fff;font-size:12.5px;margin-top:10px;border:1px solid #e5e7eb;border-radius:8px}
+ th,td{padding:7px 12px;border-bottom:1px solid #eef0f3;text-align:left}
+ th{background:#f3f4f6;font-weight:700}
+ code{background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:12px}
+</style>
+
+<h2>Power sheet — block 2 : TPS2116 power mux → TPS631000 buck-boost</h2>
+<div class="sub">USB priority · output 3.5 V (3V3_DIG) · wire by pin NAME, not number</div>
+
+<svg width="1380" height="640" viewBox="0 0 1380 640">
+ <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#6b7280"/></marker></defs>
+ <style>
+  .ic{fill:#fffbeb;stroke:#b45309;stroke-width:2.5;rx:6}
+  .pin{font-size:12.5px;font-weight:700;fill:#78350f}
+  .w{stroke:#374151;stroke-width:1.8;fill:none}
+  .lbl{font-size:12px;fill:#374151}
+  .net{font-size:12.5px;font-weight:700}
+  .val{font-size:11.5px;fill:#4b5563}
+  .note{font-size:11px;fill:#9ca3af;font-style:italic}
+ </style>
+
+ <!-- rails -->
+ <path d="M30,60 L1340,60" stroke="#7c3aed" stroke-width="3"/>
+ <text x="36" y="52" class="net" fill="#7c3aed">VBUS (5 V from USB-C)</text>
+ <path d="M30,560 L800,560" stroke="#dc2626" stroke-width="3"/>
+ <text x="36" y="581" class="net" fill="#dc2626">VBAT (protected battery)</text>
+
+ <!-- TPS2116 -->
+ <rect x="360" y="175" width="250" height="230" class="ic"/>
+ <text x="485" y="205" font-size="14" font-weight="700" fill="#78350f" text-anchor="middle">TPS2116</text>
+ <text x="485" y="222" font-size="11" fill="#92400e" text-anchor="middle">power mux · VSSOP-8</text>
+ <text x="372" y="255" class="pin">VIN1</text>
+ <text x="372" y="292" class="pin">VIN2</text>
+ <text x="372" y="329" class="pin">MODE</text>
+ <text x="372" y="366" class="pin">PR1</text>
+ <text x="598" y="255" class="pin" text-anchor="end">VOUT</text>
+ <text x="598" y="310" class="pin" text-anchor="end">ST</text>
+ <text x="598" y="366" class="pin" text-anchor="end">GND</text>
+
+ <!-- mux wires -->
+ <path class="w" d="M360,250 L300,250 L300,60"/>
+ <circle cx="300" cy="60" r="4" fill="#7c3aed"/>
+ <path class="w" d="M360,287 L270,287 L270,560"/>
+ <circle cx="270" cy="560" r="4" fill="#dc2626"/>
+ <path class="w" d="M360,324 L240,324 L240,60"/>
+ <circle cx="240" cy="60" r="4" fill="#7c3aed"/>
+ <text x="150" y="318" class="val">MODE → VBUS</text>
+ <text x="150" y="334" class="note">(high = priority mode)</text>
+
+ <!-- PR1 divider -->
+ <path class="w" d="M360,361 L200,361"/>
+ <path class="w" d="M200,361 L200,150 L170,150 L170,60"/>
+ <rect x="188" y="180" width="24" height="52" fill="#fff" stroke="#374151"/>
+ <text x="120" y="212" class="val">R_PR1 330 kΩ</text>
+ <path class="w" d="M200,361 L200,430"/>
+ <rect x="188" y="430" width="24" height="52" fill="#fff" stroke="#374151"/>
+ <text x="118" y="462" class="val">R_PR2 100 kΩ</text>
+ <path class="w" d="M200,482 L200,515"/>
+ <path d="M188,515 L212,515 M192,522 L208,522 M196,529 L204,529" stroke="#374151" stroke-width="1.8"/>
+ <text x="222" y="392" class="note">PR1 &gt; 1 V ⇒ USB selected</text>
+ <text x="222" y="407" class="note">threshold = 5 V × 100/430 → trips at 4.3 V</text>
+
+ <!-- mux input caps -->
+ <path class="w" d="M300,180 L330,180 L330,215"/>
+ <path d="M318,215 L342,215 M318,224 L342,224" stroke="#374151" stroke-width="2"/>
+ <path class="w" d="M330,224 L330,250"/>
+ <path d="M318,250 L342,250 M322,257 L338,257 M326,264 L334,264" stroke="#374151" stroke-width="1.8"/>
+ <text x="252" y="196" class="val">1 µF</text>
+ <path class="w" d="M270,470 L318,470"/>
+ <path d="M330,458 L330,482 M339,458 L339,482" stroke="#374151" stroke-width="2"/>
+ <path class="w" d="M339,470 L360,470 L360,505"/>
+ <path d="M348,505 L372,505 M352,512 L368,512 M356,519 L364,519" stroke="#374151" stroke-width="1.8"/>
+ <text x="272" y="458" class="val">1 µF</text>
+
+ <!-- ST + GND -->
+ <path class="w" d="M610,306 L660,306"/>
+ <text x="666" y="310" class="val">ST → n/c (No-ERC ✗)</text>
+ <path class="w" d="M610,361 L650,361 L650,400"/>
+ <path d="M638,400 L662,400 M642,407 L658,407 M646,414 L654,414" stroke="#374151" stroke-width="1.8"/>
+
+ <!-- VSYS -->
+ <path class="w" d="M610,250 L760,250"/>
+ <path d="M700,250 L700,60" stroke="#0d9488" stroke-width="0" fill="none"/>
+ <text x="628" y="240" class="net" fill="#0d9488">VSYS</text>
+ <text x="628" y="272" class="note">3.0 – 5.0 V</text>
+ <!-- VSYS bulk cap -->
+ <path class="w" d="M700,250 L700,300"/>
+ <path d="M688,300 L712,300 M688,309 L712,309" stroke="#374151" stroke-width="2"/>
+ <path class="w" d="M700,309 L700,340"/>
+ <path d="M688,340 L712,340 M692,347 L708,347 M696,354 L704,354" stroke="#374151" stroke-width="1.8"/>
+ <text x="716" y="290" class="val">C_IN 10 µF</text>
+
+ <!-- TPS631000 -->
+ <rect x="900" y="175" width="250" height="230" class="ic"/>
+ <text x="1025" y="205" font-size="14" font-weight="700" fill="#78350f" text-anchor="middle">TPS631000</text>
+ <text x="1025" y="222" font-size="11" fill="#92400e" text-anchor="middle">buck-boost · SOT-583 · 2 MHz</text>
+ <text x="912" y="255" class="pin">VIN</text>
+ <text x="912" y="292" class="pin">EN</text>
+ <text x="912" y="329" class="pin">MODE</text>
+ <text x="912" y="366" class="pin">GND</text>
+ <text x="1138" y="255" class="pin" text-anchor="end">VOUT</text>
+ <text x="1138" y="292" class="pin" text-anchor="end">L1</text>
+ <text x="1138" y="329" class="pin" text-anchor="end">L2</text>
+ <text x="1138" y="366" class="pin" text-anchor="end">FB</text>
+
+ <path class="w" d="M760,250 L900,250"/>
+ <!-- EN pullup -->
+ <path class="w" d="M900,287 L840,287 L840,250"/>
+ <rect x="828" y="200" width="24" height="50" fill="#fff" stroke="#374151"/>
+ <text x="742" y="196" class="val">R_EN 100 kΩ → VSYS</text>
+ <path class="w" d="M840,200 L840,175 L790,175 L790,250"/>
+ <text x="746" y="316" class="note">EN must never float. Optional:</text>
+ <text x="746" y="331" class="note">SPST switch EN→GND = power OFF</text>
+ <!-- MODE -->
+ <path class="w" d="M900,324 L866,324 L866,440 L1240,440 L1240,250"/>
+ <text x="880" y="460" class="val">MODE → 3V3_DIG  (HIGH = forced PWM, fixed 2 MHz)</text>
+ <path class="w" d="M900,361 L880,361 L880,395"/>
+ <path d="M868,395 L892,395 M872,402 L888,402 M876,409 L884,409" stroke="#374151" stroke-width="1.8"/>
+
+ <!-- inductor -->
+ <path class="w" d="M1150,287 L1195,287 L1195,270"/>
+ <path class="w" d="M1150,324 L1195,324 L1195,341"/>
+ <path d="M1195,270 q12,-11 0,-22 q12,-11 0,-22 q12,-11 0,-22" stroke="#374151" stroke-width="2" fill="none" transform="translate(0,71)"/>
+ <text x="1210" y="312" class="val">L 1 µH shielded</text>
+ <text x="1210" y="327" class="note">Isat ≥ 2 A, 2016</text>
+
+ <!-- VOUT rail -->
+ <path d="M1150,250 L1340,250" stroke="#2563eb" stroke-width="3"/>
+ <text x="1180" y="240" class="net" fill="#2563eb">3V3_DIG = 3.5 V</text>
+ <path class="w" d="M1290,250 L1290,300"/>
+ <path d="M1278,300 L1302,300 M1278,309 L1302,309" stroke="#374151" stroke-width="2"/>
+ <path class="w" d="M1290,309 L1290,340"/>
+ <path d="M1278,340 L1302,340 M1282,347 L1298,347 M1286,354 L1294,354" stroke="#374151" stroke-width="1.8"/>
+ <text x="1306" y="290" class="val">C_OUT 22 µF</text>
+
+ <!-- FB divider -->
+ <path class="w" d="M1150,361 L1190,361"/>
+ <path class="w" d="M1190,361 L1190,500 L1240,500"/>
+ <rect x="1228" y="474" width="52" height="24" fill="#fff" stroke="#374151"/>
+ <text x="1200" y="522" class="val">R1 604 kΩ (VOUT→FB)</text>
+ <path class="w" d="M1280,486 L1330,486 L1330,250"/>
+ <path class="w" d="M1190,361 L1130,361" stroke="none"/>
+ <path class="w" d="M1190,420 L1130,420"/>
+ <rect x="1078" y="408" width="52" height="24" fill="#fff" stroke="#374151"/>
+ <text x="1010" y="404" class="val">R2 100 kΩ</text>
+ <path class="w" d="M1078,420 L1050,420 L1050,455"/>
+ <path d="M1038,455 L1062,455 M1042,462 L1058,462 M1046,469 L1054,469" stroke="#374151" stroke-width="1.8"/>
+ <text x="1180" y="545" class="note">V_FB = 0.5 V ⇒ V_OUT = 0.5 × (604+100)/100 = 3.52 V</text>
+ <text x="1180" y="560" class="note">optional C_ff 10 pF across R1 (high-Z divider)</text>
+</svg>
+
+<h2>Bill of materials for this block</h2>
+<table>
+<tr><th>Ref</th><th>Value / Part</th><th>Pkg</th><th>Connection</th></tr>
+<tr><td>U_MUX</td><td>TPS2116DMWR</td><td>VSSOP-8</td><td>see pin table</td></tr>
+<tr><td>C_M1</td><td>1 µF X7R 16 V</td><td>0402</td><td>VIN1 → GND</td></tr>
+<tr><td>C_M2</td><td>1 µF X7R 16 V</td><td>0402</td><td>VIN2 → GND</td></tr>
+<tr><td>R_PR1</td><td>330 kΩ 1 %</td><td>0402</td><td>VBUS → PR1</td></tr>
+<tr><td>R_PR2</td><td>100 kΩ 1 %</td><td>0402</td><td>PR1 → GND</td></tr>
+<tr><td>U_BB</td><td>TPS631000DRLR</td><td>SOT-583</td><td>see pin table</td></tr>
+<tr><td>C_IN</td><td>10 µF X7R <b>16 V</b></td><td>0805</td><td>VSYS → GND, tight to VIN</td></tr>
+<tr><td>C_OUT</td><td>22 µF X7R <b>16 V</b></td><td>0805</td><td>3V3_DIG → GND, tight to VOUT</td></tr>
+<tr><td>L_BB</td><td>1 µH shielded, Isat ≥ 2 A (e.g. DFE201610E-1R0M)</td><td>2016</td><td>L1 ↔ L2</td></tr>
+<tr><td>R_FB1</td><td>604 kΩ 1 %</td><td>0402</td><td>3V3_DIG → FB</td></tr>
+<tr><td>R_FB2</td><td>100 kΩ 1 %</td><td>0402</td><td>FB → GND</td></tr>
+<tr><td>C_FF</td><td>10 pF (optional but recommended)</td><td>0402</td><td>across R_FB1</td></tr>
+<tr><td>R_EN</td><td>100 kΩ</td><td>0402</td><td>EN → VSYS (pull-up)</td></tr>
+</table>

@@ -112,6 +112,14 @@ with multiple vias.
 ---
 
 ## 8. Routing rules (the big ones)
+> ### ⚠️⚠️ #1 PRIORITY AT LAYOUT — THE BUCK SWITCHING LOOP
+> Keep the loop **C_IN → VIN → L(1 µH) → VOUT → C_OUT → back to GND** as **physically tiny** as possible.
+> This is the **only** fast-switching (2 MHz) current loop on the board and by far the biggest source of
+> radiated noise — loop *area* is what radiates. Place C_IN and C_OUT hard against the TPS631000 pins,
+> put the inductor immediately beside L1/L2, and give each cap its **own GND via right at the pad**.
+> Everything else on this board is slow; get this one loop right and the EMG baseline stays clean.
+> *(Daniyal asked to be reminded of this at layout time — 2026-09-05.)*
+
 - **No electrode/analog trace ever crosses the digital, RF, or power zones** — not even "just a bit." If a
   trace leaves the analog island it is the **already-amplified, low-Z VOUT → ADC**, never a raw input.
 - Keep **VOUT→ADC** runs short and guarded; group each channel.

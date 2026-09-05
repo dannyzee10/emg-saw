@@ -59,14 +59,8 @@
   "57": "Launcher",
   "58": "launchers.md",
   "59": "Data Pipeline — 5-Channel Simultaneous EMG Streaming (feasibility + optimal design)",
-  "60": "Complete Pin-by-Pin Connection Reference — AS BUILT",
-  "61": "5-Channel Wireless Wearable EMG Board — Project Handoff",
-  "62": "PROJECT_CONTEXT.md",
   "63": "Main Board — PCB Layout Rules (floorplan, stack-up, keep-outs, guard, vias)",
   "64": "Main Board — Power Tree, Schematic-Level Design",
   "65": "Main Board — 5-Channel Schematic (net-by-net) + BOM",
-  "66": "AFE Signal Chain — confirmed topology + values + 5-channel integration",
-  "67": "QUALITY_BAR.md",
-  "68": "EMG SAW — Retrospective + Competitive Roadmap",
-  "69": "EMG-SAW — Beihang EMG Acquisition System + GUI"
+  "66": "AFE Signal Chain — confirmed topology + values + 5-channel integration"
 }
