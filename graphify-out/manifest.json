@@ -694,5 +694,11 @@
     "seen": 1788532643.4816246,
     "ast_hash": "4d5d8553227324cf9b2db45a6ebe5d48",
     "semantic_hash": ""
+  },
+  "hardware/power_tree_diagram.html": {
+    "mtime": 1788586069.7074294,
+    "seen": 1788586189.2981982,
+    "ast_hash": "3ad27cdfb987d443343246f2f93218e1",
+    "semantic_hash": ""
   }
 }
