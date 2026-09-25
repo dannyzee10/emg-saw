@@ -1,0 +1,1 @@
+VOUT_1 | no path | Pad Free-TP_VOUT_1(58.25mm,33.75mm) on L1 TOP | Pad R_ADC1-1(62mm,33.665mm) on L1 TOP

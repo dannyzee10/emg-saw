@@ -1,0 +1,13 @@
+ENTER 9/25/2026 5:18:22 PM
+PROJECT|Free Documents
+  OPEN|MODIFIED=True|C:\Users\PMLS\Desktop\emg-saw\hardware\pcb_layout_2026-09-16\MainBoard\EMG_MainBoard_Layout.PcbDoc
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\hardware\pcb_layout_2026-09-23_drl\MainBoard\EMG_MainBoard_Layout.PrjPcb
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\work\show_board.PrjScr
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\MainBoard\EMG_MainBoard_Layout.PrjPcb
+  OPEN|MODIFIED=False|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\MainBoard\EMG_MainBoard_Layout.PcbDoc
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\work\export_geometry.PrjScr
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\work\ap_171624.PrjScr
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\work\run_drc.PrjScr
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\work\probe_open_docs.PrjScr
+SHOWN_WORKTREE_PCB
+COMPLETE

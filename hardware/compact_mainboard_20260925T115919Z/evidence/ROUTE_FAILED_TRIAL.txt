@@ -1,0 +1,13 @@
+ADC_EMG3 | no path | Pad R_ADC3-2(60mm,31.235mm) on L1 TOP | Pad U_MCU1-25(61.262mm,33.5mm) on L1 TOP [Unplated]
+Vb_1 | no path | Pad J_FPC1-4(20.35mm,13.087mm) on L1 TOP | Pad RDD2-1(25.3mm,15mm) on L1 TOP
+Va_1 | no path | Pad J_FPC1-2(19.65mm,13.087mm) on L1 TOP | Pad RDD1-1(25.288mm,16.8mm) on L1 TOP
+Vc_1 | no path | Pad J_FPC1-6(19.3mm,11.313mm) on L1 TOP | Pad RDD3-1(25.288mm,18.6mm) on L1 TOP
+Va_1 | no path | Pad R_DRL_VA1-1(11.775mm,23.5mm) on L4 BOTTOM GND | Pad J_FPC1-2(19.65mm,13.087mm) on L1 TOP
+Vb_1 | no path | Pad R_DRL_VB1-1(11.775mm,25.3mm) on L4 BOTTOM GND | Pad J_FPC1-4(20.35mm,13.087mm) on L1 TOP
+MCU_SPI_MISO | no path | Pad R_SPI_MISO-2(39.488mm,48.2mm) on L1 TOP | Pad U_MCU1-31(65.5mm,31.762mm) on L1 TOP [Unplated]
+NetR_TMR_2 | no path | Pad UP1-14(23.25mm,42.8mm) on L1 TOP | Pad R_TMR-2(27.4mm,44.475mm) on L1 TOP
+USB_PGOOD_N | no path | Pad UP1-7(23.25mm,40mm) on L1 TOP | Pad R_PGOOD-1(27.5mm,38.125mm) on L4 BOTTOM GND
+NetRISET_1 | no path | Pad RISET-1(21mm,47.875mm) on L1 TOP | Pad UP1-16(22.25mm,42.8mm) on L1 TOP
+SYS_EN | no path | Pad UP2-5(33.25mm,40.015mm) on L1 TOP | Pad U_EN1-6(72.1mm,41.325mm) on L4 BOTTOM GND
+USB_PGOOD_N | no path | Pad R_PGOOD-1(27.5mm,38.125mm) on L4 BOTTOM GND | Pad U_MCU1-82(72mm,47.238mm) on L1 TOP [Unplated]
+FG_ALRT | no path | Pad UP4-5(21.275mm,35.525mm) on L4 BOTTOM GND | Pad U_MCU1-81(72.5mm,47.238mm) on L1 TOP [Unplated]

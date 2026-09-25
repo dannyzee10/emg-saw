@@ -1,0 +1,7 @@
+# scratch kept on disk, not versioned: stage backups (hashes in the changelog/evidence) and caches
+evidence/backups/
+work/__pycache__/
+**/History/
+**/Project Logs for */
+**/Project Outputs for */
+*.PrjPcbStructure

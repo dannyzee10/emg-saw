@@ -1,0 +1,17 @@
+metric,unit,baseline_A,candidate_B,method
+board bounding box,mm,80.0 x 45.0,75.0 x 40.0,native BoardOutline readback (APPLY_B_LOG READBACK_OUTLINE)
+board polygon area,mm2,3596.6,2996.6,native outline: rectangle minus 4 x r=2 mm corner areas
+area reduction vs measured baseline,%,-,16.7,(A - B) / A
+area reduction vs 70 x 40 first target,-,-,75 x 40 reached; 70 x 40 not reached,"limiting objects: J_SWD edge header, 6 THT 5021 test points, JP_WIFI_BOOT (see audit)"
+installed XY envelope (all component bboxes incl. overhangs),mm,82.9 x 49.6,77.9 x 44.6,"native component bounding rectangles; includes USB-C, J_SWD and ST67 antenna overhang, not mated flex/cable envelopes"
+components top / bottom,count,209 / 22,187 / 44,native component layer
+components moved to Bottom in B,count,-,22,BOTTOM_MOVE_PLAN.csv
+max model height Top,mm,5.08,5.08,3D body OverallHeight as stored (5021 test points); verify vs datasheets
+max model height Bottom,mm,1.45 (DNP U_DRL1),1.45,3D bodies on Mechanical 23 (Bottom 3D Body)
+parts without 3D body,count,45,45,explicit list in BODIES_B_PLACED.txt
+stack,-,JLC04121H-3313 4L,"unchanged 4L (L1 sig/parts, L2 GND, L3 power+signal, L4 GND+Bottom parts)",STACK.txt; option A of R2 s8
+"electrical preservation (pad-net per component, nets, free pads)",-,reference,"PASS 231/231 comps, 791 pads, 136 nets, 15 free pads",compare_pads.py A vs B
+DRC shorts / clearance / component clearance,count,0 / 0 / 0 (drl DRC07),0 / 0 / 0,native batch DRC_B_CHECKPOINT
+DRC unrouted connections,count,510 (drl placement checkpoint),460,placement checkpoint; 37 trial connections routed in B
+DRC silkscreen (silk-mask / silk-silk / text-edge),count,0 / 0 / 0,40 / 34 / 1,open: legibility pass
+limited routing trial,connections,-,"37 of 50 routed (147 tracks, 33 vias), 13 open","ROUTE_PLAN_TRIAL.csv, ROUTE_FAILED_TRIAL.txt"

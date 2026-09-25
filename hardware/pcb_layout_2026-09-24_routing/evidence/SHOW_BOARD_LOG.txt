@@ -1,0 +1,4 @@
+ENTER 9/25/2026 4:44:54 PM
+PROJECT_OPEN
+SHOWN|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\pcb_layout_2026-09-24_routing\MainBoard\EMG_MainBoard_Layout.PcbDoc|MODIFIED=False
+COMPLETE

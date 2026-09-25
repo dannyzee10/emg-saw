@@ -1,0 +1,9 @@
+sheet,components,top_A,bottom_A,top_B,bottom_B
+AFE_Channel_1,18,18,0,18,0
+AFE_Channel_2,18,18,0,18,0
+AFE_Channel_3,15,15,0,15,0
+AFE_Channel_4,18,18,0,18,0
+AFE_Channel_5,15,15,0,15,0
+Analog_Shared,34,12,22,12,22
+MCU_sheet,59,59,0,57,2
+Power_tree_design,54,54,0,34,20

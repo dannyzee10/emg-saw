@@ -1,0 +1,24 @@
+G1 plan tracks on L2: 0
+G2 L3 track bands over non-GND L4 copper/antipads: 11 nets, 3.222 mm2
+   Vc_3                   1.541 mm2
+   3V0_ANA                0.319 mm2
+   VREF_A                 0.240 mm2
+   INA_OUT_2              0.228 mm2
+   VREF_B_SRC             0.227 mm2
+   Vc_1                   0.158 mm2
+   NetJ_FPC3_8            0.109 mm2
+   NetJ_FPC5_8            0.109 mm2
+   Vc_5                   0.097 mm2
+   Vc_2                   0.097 mm2
+   Vc_4                   0.097 mm2
+R1 plan copper in antenna zone: 0
+P2/M2 vias on switch node / VCAP: 0 []
+vias per class: ANALOG 82, OTHER 0, POWER 16, SPI 16
+analog connections with length/span > 1.8: 6
+   ratio 2.25 VDiv               len 4.11 span 1.83 vias 0
+   ratio 2.22 NetCH_1_2          len 14.0 span 6.3 vias 0
+   ratio 2.10 VREF_A             len 3.47 span 1.66 vias 0
+   ratio 2.10 VREF_A             len 3.47 span 1.66 vias 0
+   ratio 2.00 VDiv               len 7.45 span 3.73 vias 0
+   ratio 1.85 NetCH_2_2          len 5.06 span 2.73 vias 2
+analog length on L3: 303.0 mm; total plan tracks 803 vias 114

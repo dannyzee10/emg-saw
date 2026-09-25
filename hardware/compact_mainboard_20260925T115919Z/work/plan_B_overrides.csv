@@ -1,0 +1,27 @@
+designator,x,y,rot,side,why
+J_SWD,81.0,30.2,,,right-edge service band; pads 4.0 mm inboard of the 85 mm edge as in baseline (mating pins overhang)
+TP_WIFI_UART_RX,80.5,27.2,,,service band column 1 row 3 (5021 THT)
+TP_WIFI_UART_TX,80.5,24.05,,,service band column 1 row 2
+TP_GND,80.5,20.9,,,service band column 1 row 1
+TP_WIFI_BOOT,83.0,27.2,,,service band column 2 row 3
+TP_WIFI_CHIP_EN,83.0,24.05,,,service band column 2 row 2
+TP_MCU_BOOT0,83.0,20.9,,,service band column 2 row 1
+JP_WIFI_BOOT,80.4,17.4,,,bottom-right corner; body toward bottom edge as in baseline
+R_WIFI_UART_RX_LINK,78.5,29.2,90,,MCU lower-right corner gap
+R_WIFI_UART_TX_LINK,78.5,31.0,90,,MCU lower-right corner gap
+R_WIFI_BOOT_OVR,81.2,13.5,,Bottom,beside JP_WIFI_BOOT (same net NetJP_WIFI_BOOT_1)
+C_MCU_BULK,78.75,47.9,,,3V3_DIG bulk at MCU right-side entry inside the new edge
+C_MCU_VDD5,63.0,49.03,0,,rotated to clear the top edge; still at VDD pins 99/100
+R_MCU_BOOT0_PD,66.0,49.06,0,,rotated to clear the top edge; still at BOOT0 pin 94
+J_REF,12.5,19.0,,,keep baseline x: pad 1 must stay inside the left edge
+R_DRL_SEL,11.9,21.7,,,DNP DRL provision (Bottom) nudged inside the left edge
+R_PGOOD,27.5,38.6,,Bottom,USB_PGOOD_N pull-up under the charger (non-critical pull; R2 s6)
+R_EN_PD,34.4,31.6,,Bottom,AFE_EN pull-down under the LDO (non-critical pull; R2 s6)
+C_WIFI_BULK,56.5,43.3,,Bottom,DNP 47uF radio bulk provision kept at the supply entry on Bottom
+R_WIFI_EN_PD,56.7,41.9,,,after C_WIFI_BULK moved to Bottom
+J_Li-Po,12.0,33.3,,,left edge between channel 1 and USB-C (THT)
+R_TH_BAT,20.7,33.9,,,remote-NTC wire pads beside J_Li-Po
+PWR_BTN_N,34.9,47.07,,,moved above the converter into space vacated by the LTC2954 group
+LED_CHG,27.5,48.4,,,charge LED beside the charger (visible Top)
+R_CHG_LED,28.0,46.5,,,LED series resistor next to LED_CHG
+FP:TP_GND_PWR,19.3,32.35,,,power-ground test pad beside J_Li-Po (baseline spot now under CL_1)

@@ -1,0 +1,1164 @@
+<HTML>
+    <HEAD>
+        <style type="text/css">
+            BODY {
+                font:normal 68% verdana,arial,helvetica;
+                color:#E5E5E5;
+                text-decoration: none;
+            }
+            a:link {
+                color:#99CDFF;
+                text-decoration: none;
+            }
+            a:visited {
+                color:#99CDFF;
+                text-decoration: none;
+            }
+            a:hover {
+                color:#DDEAF6;
+                text-decoration: none;
+            }
+            a:active {
+                color:#DDEAF6;
+                text-decoration: none;
+            }
+            TD {
+                FONT-SIZE: 68%;
+            }
+            P {
+                line-height:1.5em;
+                margin-top:0.5em; margin-bottom:1.0em;
+            }
+            H1 {
+                MARGIN: 0px 0px 5px; FONT: 165% verdana,arial,helvetica
+            }
+            H2 {
+                MARGIN-TOP: 1em; MARGIN-BOTTOM: 0.5em; FONT: bold 125% verdana,arial,helvetica
+            }
+            H3 {
+                MARGIN-BOTTOM: 0.5em; FONT: bold 115% verdana,arial,helvetica
+            }
+            H4 {
+                MARGIN-BOTTOM: 0.5em; FONT: bold 100% verdana,arial,helvetica
+            }
+            H5 {
+                MARGIN-BOTTOM: 0.5em; FONT: bold 100% verdana,arial,helvetica
+            }
+            H6 {
+                MARGIN-BOTTOM: 0.5em; FONT: bold 100% verdana,arial,helvetica
+            }
+            .Error {
+                color:#E77878;
+            }
+            .Warning {
+                color:#C88F27;
+            }
+            .Success {
+                background:#367736;
+            }
+            .TableRow {
+            
+            }
+            .NoError {
+            
+            }
+            .Hint {
+                color:#868686;
+            }
+            .Successfull {
+                background:#367736;
+                color:#90E778;
+            }
+            body::-webkit-scrollbar {
+                width: 21px;
+                background-color: transparent;
+            }
+            body::-webkit-scrollbar-thumb {
+                background-color: #C8C8C8;
+                border-radius: 42px;
+            }
+            body::-webkit-scrollbar-track {
+                box-shadow: none;
+                background-color: transparent;
+            }
+            body::-webkit-scrollbar-button {
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            body::-webkit-scrollbar-button:vertical:increment {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDQ5QzkxRkRDRDdGMTFFN0FENTdGNUMxOUIzREMxNTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDQ5QzkxRkVDRDdGMTFFN0FENTdGNUMxOUIzREMxNTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNDlDOTFGQkNEN0YxMUU3QUQ1N0Y1QzE5QjNEQzE1NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNDlDOTFGQ0NEN0YxMUU3QUQ1N0Y1QzE5QjNEQzE1NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkOY+v0AAABMSURBVHjaYsnPz58vKCiYwIAE3r9/v4Tp6dOn2T9+/LgCE/z58+cNoFgm079//749fPgwDEh/hbJDgfQXFqiq60BVGUAmC0w3QIABABOZM/XEpWMQAAAAAElFTkSuQmCC');
+            }
+            body::-webkit-scrollbar-button:vertical:decrement {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDQ5QzkxRjlDRDdGMTFFN0FENTdGNUMxOUIzREMxNTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDQ5QzkxRkFDRDdGMTFFN0FENTdGNUMxOUIzREMxNTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNDlDOTFGN0NEN0YxMUU3QUQ1N0Y1QzE5QjNEQzE1NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNDlDOTFGOENEN0YxMUU3QUQ1N0Y1QzE5QjNEQzE1NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prcb6MUAAABZSURBVHjaYgwKCmIAAUFBwQQg9ef9+/dLQHwWEMHBwaEjLS09Fcj8/+3bt7M/f/68zgQEPPLy8quBNBcQcwPZq0BsZldX17k8PDxODFDAwsIixsrKKg0QYACYPxQLMZT2cwAAAABJRU5ErkJggg==');
+            }
+        </style>
+    </HEAD>
+    <body text="#E5E5E5" bgColor="#404040">
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="100%"><b>Errors and Warnings - 80 Errors 4 Warnings 1 Hint</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938653664">Error : Pad J_FPC5-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938653248">Error : Pad J_FPC5-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652832">Error : Pad J_FPC5-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652416">Error : Pad J_FPC5-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652000">Error : Pad J_FPC5-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938651584">Error : Pad J_FPC5-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938651168">Error : Pad J_FPC5-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938650752">Error : Pad J_FPC5-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938650336">Error : Pad J_FPC5-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649920">Error : Pad J_FPC5-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649504">Error : Pad J_FPC5-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649088">Error : Pad J_FPC5-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938648672">Error : Pad J_FPC5-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938648256">Error : Pad J_FPC5-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938647840">Error : Pad J_FPC5-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938647424">Error : Pad J_FPC5-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938660320">Error : Pad J_FPC4-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659904">Error : Pad J_FPC4-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659488">Error : Pad J_FPC4-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659072">Error : Pad J_FPC4-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938658656">Error : Pad J_FPC4-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938658240">Error : Pad J_FPC4-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938657824">Error : Pad J_FPC4-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938657408">Error : Pad J_FPC4-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656992">Error : Pad J_FPC4-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656576">Error : Pad J_FPC4-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656160">Error : Pad J_FPC4-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938655744">Error : Pad J_FPC4-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938655328">Error : Pad J_FPC4-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654912">Error : Pad J_FPC4-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654496">Error : Pad J_FPC4-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654080">Error : Pad J_FPC4-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666976">Error : Pad J_FPC3-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666560">Error : Pad J_FPC3-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666144">Error : Pad J_FPC3-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938665728">Error : Pad J_FPC3-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938665312">Error : Pad J_FPC3-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664896">Error : Pad J_FPC3-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664480">Error : Pad J_FPC3-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664064">Error : Pad J_FPC3-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938663648">Error : Pad J_FPC3-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938663232">Error : Pad J_FPC3-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938662816">Error : Pad J_FPC3-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938662400">Error : Pad J_FPC3-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661984">Error : Pad J_FPC3-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661568">Error : Pad J_FPC3-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661152">Error : Pad J_FPC3-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938660736">Error : Pad J_FPC3-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382560">Error : Pad J_FPC2-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382144">Error : Pad J_FPC2-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994381728">Error : Pad J_FPC2-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994381312">Error : Pad J_FPC2-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671968">Error : Pad J_FPC2-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671552">Error : Pad J_FPC2-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671136">Error : Pad J_FPC2-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938670720">Error : Pad J_FPC2-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938670304">Error : Pad J_FPC2-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669888">Error : Pad J_FPC2-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669472">Error : Pad J_FPC2-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669056">Error : Pad J_FPC2-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938668640">Error : Pad J_FPC2-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938668224">Error : Pad J_FPC2-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938667808">Error : Pad J_FPC2-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938667392">Error : Pad J_FPC2-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994389216">Error : Pad J_FPC1-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994388800">Error : Pad J_FPC1-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994388384">Error : Pad J_FPC1-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387968">Error : Pad J_FPC1-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387552">Error : Pad J_FPC1-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387136">Error : Pad J_FPC1-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994386720">Error : Pad J_FPC1-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994386304">Error : Pad J_FPC1-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385888">Error : Pad J_FPC1-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385472">Error : Pad J_FPC1-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385056">Error : Pad J_FPC1-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994384640">Error : Pad J_FPC1-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994384224">Error : Pad J_FPC1-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994383808">Error : Pad J_FPC1-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994383392">Error : Pad J_FPC1-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382976">Error : Pad J_FPC1-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090826816">Warning : Rule - WIDTH_EMG_GND</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_GND'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090980032">Warning : Rule - WIDTH_EMG_ANALOG</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090983296">Warning : Rule - WIDTH_EMG_REFERENCE</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_REFERENCE'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090981664">Warning : Rule - WIDTH_EMG_POWER</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_POWER'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5">Hint: no <a Class=Hint href="AddRule://47">default SMDNeckDown</a>  rule exists.</td>
+          </tr>
+        </table>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="100%"><b>Report Contents</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Routing Widths">Routing Widths</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Routing Via Styles">Routing Via Styles</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Electrical Clearances">Electrical Clearances</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Fanout Styles">Fanout Styles</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Layer Directions">Layer Directions</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Drill Pairs">Drill Pairs</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Net Topologies">Net Topologies</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Net Layers">Net Layers</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#SMD Neckdown Rules">SMD Neckdown Rules</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#Unroutable pads">Unroutable pads</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#SMD Neckdown Width Warnings">SMD Neckdown Width Warnings</a></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 1"><a href="#SMD Entry Warnings">SMD Entry Warnings</a></td>
+          </tr>
+        </table>
+        <p/>
+        <p/>
+        <a name="Routing Widths"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>Routing Widths</b></td>
+            <td width="20%"><b>Affected Nets</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7997252960"> Rule - Width</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (All)</span></td>
+        <td style="padding-bottom: 5">4</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7474167744"> Rule - WIDTH_EMG_CRYSTAL</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_CRYSTAL'))</span></td>
+        <td style="padding-bottom: 5">4</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090980576"> Rule - WIDTH_EMG_CONTROL</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_CONTROL'))</span></td>
+        <td style="padding-bottom: 5">38</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090988192"> Rule - WIDTH_EMG_SPI</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.18mm) (InNetClass('EMG_SPI'))</span></td>
+        <td style="padding-bottom: 5">8</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090981664"> Rule - WIDTH_EMG_POWER</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_POWER'))</span></td>
+        <td style="padding-bottom: 5">5</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090980032"> Rule - WIDTH_EMG_ANALOG</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))</span></td>
+        <td style="padding-bottom: 5">56</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090983296"> Rule - WIDTH_EMG_REFERENCE</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_REFERENCE'))</span></td>
+        <td style="padding-bottom: 5">8</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090979488"> Rule - WIDTH_EMG_ADC</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_ADC'))</span></td>
+        <td style="padding-bottom: 5">10</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090827360"> Rule - WIDTH_EMG_SWITCH</a><span style="color:#E5E5E5"> Width Constraint (Min=0.2mm) (Max=1.5mm) (Preferred=0.3mm) (InNetClass('EMG_SWITCH'))</span></td>
+        <td style="padding-bottom: 5">2</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7090826816"> Rule - WIDTH_EMG_GND</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_GND'))</span></td>
+        <td style="padding-bottom: 5">1</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Routing Via Styles"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>Routing Via Styles</b></td>
+            <td width="20%"><b>Affected Nets</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726369440"> Rule - VIA_STD_060_030</a><span style="color:#E5E5E5"> Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.6mm) (MaxWidth=0.6mm) (PreferedWidth=0.6mm) (All)</span></td>
+        <td style="padding-bottom: 5">136</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Electrical Clearances"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="100%"><b>Clearance Rules</b></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985273280"> Rule - CLR_FINE_ESCAPE_C_DRL_DEC</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('C_DRL_DEC')),(IsTrack And InRegionAbsolute(698.8189,1125.9843,797.2441,1251.9685))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985274720"> Rule - CLR_FINE_ESCAPE_U_DRL1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_DRL1')),(IsTrack And InRegionAbsolute(750.0000,1131.8898,982.2835,1309.0551))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985271840"> Rule - CLR_FINE_ESCAPE_UP4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP4')),(IsTrack And InRegionAbsolute(796.6535,1402.1654,982.8740,1550.5906))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985271360"> Rule - CLR_FINE_ESCAPE_UP2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP2')),(IsTrack And InRegionAbsolute(1263.3858,1690.3543,1413.7795,1852.9528))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985270880"> Rule - CLR_FINE_ESCAPE_UP1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP1')),(IsTrack And InRegionAbsolute(799.2126,1665.3543,1011.8110,1877.9528))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985269920"> Rule - CLR_FINE_ESCAPE_U_MCU1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_MCU1')),(IsTrack And InRegionAbsolute(2422.2244,1182.0669,3168.3268,1928.1693))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985266080"> Rule - CLR_ST67_ANTENNA_BOUNDARY_NO_EXTRA_GAP</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0mm) (IsPad And InComponent('U_WIFI1') And ((Name = 'U_WIFI1-25') Or (Name = 'U_WIFI1-26') Or (Name = 'U_WIFI1-27') Or (Name = 'U_WIFI1-28') Or (Name = 'U_WIFI1-29') Or (Name = 'U_WIFI1-30') Or (Name = 'U_WIFI1-31') Or (Name = 'U_WIFI1-32'))),(IsRegion And OnLayer('Keep-Out Layer') And InRegionAbsolute(1739.72440945,2143.26771654,2223.26771654,2340.19685039))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985266560"> Rule - CLR_FINAL_TT_073</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116)),(IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985267040"> Rule - CLR_FINAL_TT_072</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116)),(IsTrack And InNet('NetL1_1') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985267520"> Rule - CLR_FINAL_TP_071</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-4'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985268000"> Rule - CLR_FINAL_TP_070</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1316.929116,1816.929116)),(IsPad And (Name = 'UP2-3'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985270400"> Rule - CLR_FINAL_TP_069</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1360.236284,1792.716484,1448.818916,1815.975616)),(IsPad And (Name = 'UP2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985268960"> Rule - CLR_FINAL_TP_068</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985265600"> Rule - CLR_FINAL_TP_067</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(952.755784,1753.936984,1009.842516,1779.527516)),(IsPad And (Name = 'UP1-9'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985269440"> Rule - CLR_FINAL_TP_066</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VBAT_CELL') And InRegionAbsolute(811.023584,1773.622084,858.267616,1789.370116)),(IsPad And (Name = 'UP1-1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985274240"> Rule - CLR_FINAL_TP_065</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1416.478916,1815.975616)),(IsPad And (Name = 'RUP_3-1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985263680"> Rule - CLR_FINAL_PP_064</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RUP_3-1')),(IsPad And (Name = 'RUP_3-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985278080"> Rule - CLR_FINAL_PP_063</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_KILL_PU-1')),(IsPad And (Name = 'R_KILL_PU-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985276160"> Rule - CLR_FINAL_PP_062</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_INT_PULLUP-1')),(IsPad And (Name = 'R_INT_PULLUP-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985277120"> Rule - CLR_FINAL_PP_061</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_EN1_BIAS-1')),(IsPad And (Name = 'R_EN1_BIAS-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985276640"> Rule - CLR_FINAL_PP_060</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_EN1_1-1')),(IsPad And (Name = 'R_EN1_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985282400"> Rule - CLR_FINAL_PP_059</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_AL-1')),(IsPad And (Name = 'R_AL-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985279040"> Rule - CLR_FINAL_PP_058</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-22'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985278560"> Rule - CLR_FINAL_PP_057</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B4_A9')),(IsPad And (Name = 'J_USB_C-B5'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985279520"> Rule - CLR_FINAL_PP_056</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B1_A12')),(IsPad And (Name = 'J_USB_C-B4_A9'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985280000"> Rule - CLR_FINAL_PP_055</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A4_B9')),(IsPad And (Name = 'J_USB_C-B8'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985284800"> Rule - CLR_FINAL_PP_054</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A1_B12')),(IsPad And (Name = 'J_USB_C-A4_B9'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985282880"> Rule - CLR_FINAL_PP_053</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A4_B9'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985281920"> Rule - CLR_FINAL_PP_052</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B4_A9'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985285280"> Rule - CLR_FINAL_TP_051</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1405.315016,1815.975616)),(IsPad And (Name = 'CUP4-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985280960"> Rule - CLR_FINAL_TP_050</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.566984,1633.858284,1412.992216,1815.975616)),(IsPad And (Name = 'CUP4_FB-1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985280480"> Rule - CLR_FINAL_PP_049</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CUP4_FB-1')),(IsPad And (Name = 'CUP4_FB-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985284320"> Rule - CLR_FINAL_PP_048</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU6_1-1')),(IsPad And (Name = 'CU6_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985283360"> Rule - CLR_FINAL_PP_047</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_14-1')),(IsPad And (Name = 'CU_14-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985281440"> Rule - CLR_FINAL_PP_046</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_12-1')),(IsPad And (Name = 'CU_12-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985283840"> Rule - CLR_FINAL_PP_045</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_11-1')),(IsPad And (Name = 'CU_11-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985285760"> Rule - CLR_FINAL_PP_044</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv-1')),(IsPad And (Name = 'Cdiv-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985290560"> Rule - CLR_FINAL_PP_043</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU8-1')),(IsPad And (Name = 'CCU8-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985288160"> Rule - CLR_FINAL_PP_042</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU6-1')),(IsPad And (Name = 'CCU6-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985286240"> Rule - CLR_FINAL_PP_041</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU4-1')),(IsPad And (Name = 'CCU4-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985286720"> Rule - CLR_FINAL_PP_040</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU1-1')),(IsPad And (Name = 'CCU1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985287200"> Rule - CLR_FINAL_PP_039</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU10-1')),(IsPad And (Name = 'CCU10-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985288640"> Rule - CLR_FINAL_PP_038</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C3_MCU-1')),(IsPad And (Name = 'C3_MCU-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985287680"> Rule - CLR_FINAL_PP_037</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C1_MCU-1')),(IsPad And (Name = 'C1_MCU-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985289120"> Rule - CLR_FINAL_PP_036</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VDDUSB-1')),(IsPad And (Name = 'C_VDDUSB-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985290080"> Rule - CLR_FINAL_PP_035</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VBAT-1')),(IsPad And (Name = 'C_VBAT-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985289600"> Rule - CLR_FINAL_PP_034</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_UV_BYPASS-1')),(IsPad And (Name = 'C_UV_BYPASS-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985291040"> Rule - CLR_FINAL_PP_033</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD5-1')),(IsPad And (Name = 'C_MCU_VDD5-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985291520"> Rule - CLR_FINAL_PP_032</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD4-1')),(IsPad And (Name = 'C_MCU_VDD4-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985292960"> Rule - CLR_FINAL_PP_031</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD3-1')),(IsPad And (Name = 'C_MCU_VDD3-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985292480"> Rule - CLR_FINAL_PP_030</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD2-1')),(IsPad And (Name = 'C_MCU_VDD2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7985292000"> Rule - CLR_FINAL_PP_029</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD1-1')),(IsPad And (Name = 'C_MCU_VDD1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831338976"> Rule - CLR_FINAL_TP_028</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('ADC_EMG5') And InRegionAbsolute(2610.236184,1130.826784,2635.826816,1218.503916)),(IsPad And (Name = 'U_MCU1-30'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831338016"> Rule - CLR_FINAL_TP_027</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831336096"> Rule - CLR_FINAL_TP_026</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831345216"> Rule - CLR_FINAL_PP_025</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_5-1')),(IsPad And (Name = 'RH_5-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831349056"> Rule - CLR_FINAL_PP_024</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_4-1')),(IsPad And (Name = 'RH_4-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831346656"> Rule - CLR_FINAL_PP_023</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_3-1')),(IsPad And (Name = 'RH_3-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831346176"> Rule - CLR_FINAL_PP_022</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_2-1')),(IsPad And (Name = 'RH_2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831336576"> Rule - CLR_FINAL_PP_021</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_1-1')),(IsPad And (Name = 'RH_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831344736"> Rule - CLR_FINAL_PP_020</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC2-1')),(IsPad And (Name = 'R_ADC3-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831344256"> Rule - CLR_FINAL_PP_019</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-24'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831339936"> Rule - CLR_FINAL_PP_018</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-25'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831339456"> Rule - CLR_FINAL_PP_017</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-24'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831337056"> Rule - CLR_FINAL_PP_016</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'R_ADC2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831340416"> Rule - CLR_FINAL_TP_015</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA5_7') And InRegionAbsolute(2892.711784,821.845684,2956.692916,885.826816)),(IsPad And (Name = 'INA5-6'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831341376"> Rule - CLR_FINAL_TP_014</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA1_7') And InRegionAbsolute(845.467684,821.845684,909.448816,885.826816)),(IsPad And (Name = 'INA1-6'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831341856"> Rule - CLR_FINAL_TP_013</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetCL_1_1') And InRegionAbsolute(588.582684,1151.574884,732.283516,1167.322916)),(IsPad And (Name = 'CL_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831342336"> Rule - CLR_FINAL_PP_012</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv_1-1')),(IsPad And (Name = 'Cdiv_1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831342816"> Rule - CLR_FINAL_PP_011</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC5-1')),(IsPad And (Name = 'C_ADC5-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831340896"> Rule - CLR_FINAL_PP_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC4-1')),(IsPad And (Name = 'C_ADC4-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831343296"> Rule - CLR_FINAL_PP_009</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC3-1')),(IsPad And (Name = 'C_ADC3-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7831343776"> Rule - CLR_FINAL_PP_008</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC2-1')),(IsPad And (Name = 'C_ADC2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7002719008"> Rule - CLR_FINAL_PP_007</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC1-1')),(IsPad And (Name = 'C_ADC1-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7002719488"> Rule - CLR_FINAL_TP_006</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-3'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7002718528"> Rule - CLR_FINAL_TP_005</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7058541856"> Rule - CLR_FINAL_VP_004</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsVia And InNet('GND') And InRegionAbsolute(2657.086299,1201.456299,2657.873701,1202.243701)),(IsPad And (Name = 'U_MCU1-31'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7058514976"> Rule - CLR_FINAL_PP_003</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_SHDN_G-1')),(IsPad And (Name = 'R_SHDN_G-2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7892646112"> Rule - CLR_FINAL_PP_002</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A1_B12'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7705821504"> Rule - CLR_FINAL_PP_001</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B1_A12'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726372320"> Rule - CLR_PADS_J_FPC5_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC5')),(IsPad And InComponent('J_FPC5'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726371840"> Rule - CLR_PADS_J_FPC4_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC4')),(IsPad And InComponent('J_FPC4'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726368960"> Rule - CLR_PADS_J_FPC3_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC3')),(IsPad And InComponent('J_FPC3'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726370400"> Rule - CLR_PADS_J_FPC2_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC2')),(IsPad And InComponent('J_FPC2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726370880"> Rule - CLR_PADS_J_FPC1_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC1')),(IsPad And InComponent('J_FPC1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726373760"> Rule - CLR_PADS_UP4_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP4')),(IsPad And InComponent('UP4'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726372800"> Rule - CLR_PADS_UP2_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP2')),(IsPad And InComponent('UP2'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726375680"> Rule - CLR_PADS_UP1_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP1')),(IsPad And InComponent('UP1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726374720"> Rule - CLR_PADS_U_MCU1_010</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('U_MCU1')),(IsPad And InComponent('U_MCU1'))</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726380000"> Rule - CLR_POWER_025</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_POWER')),(All)</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726374240"> Rule - CLR_ANALOG_025</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_ANALOG') Or InNetClass('EMG_ADC') Or InNetClass('EMG_REFERENCE')),(All)</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726376640"> Rule - CLR_GENERAL_020</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.2mm) (All),(All)</span></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7726380480"> Rule - Clearance</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.254mm) (All),(All)</span></td>
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Fanout Styles"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>Fanout Styles</b></td>
+            <td width="20%"><b>Affected Components</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993277952"> Rule - Fanout_Default</a><span style="color:#E5E5E5"> Fanout Control Rule ( (All) )</span></td>
+        <td style="padding-bottom: 5">10</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993278400"> Rule - Fanout_Small</a><span style="color:#E5E5E5"> Fanout Control Rule ( ((CompPinCount < 5)) )</span></td>
+        <td style="padding-bottom: 5">207</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993278848"> Rule - Fanout_SOIC</a><span style="color:#E5E5E5"> Fanout Control Rule ( (IsSOIC) )</span></td>
+        <td style="padding-bottom: 5">11</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993279296"> Rule - Fanout_LCC</a><span style="color:#E5E5E5"> Fanout Control Rule ( (IsLCC) )</span></td>
+        <td style="padding-bottom: 5">3</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Layer Directions"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="50%"><b>Routing Directions<br>Layer Name</b></td>
+            <td width="50%"><b><br>Direction</b></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5">L1 TOP</td>
+        <td style="padding-bottom: 5">Automatic</td> 
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5">L2 GND</td>
+        <td style="padding-bottom: 5">Automatic</td> 
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5">L3 POWER SIGNAL</td>
+        <td style="padding-bottom: 5">Automatic</td> 
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5">L4 BOTTOM GND</td>
+        <td style="padding-bottom: 5">Automatic</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Drill Pairs"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="100%"><b>Drill Layer Pairs</b></td>
+          </tr>
+          <tr valign="top" class="NoError">
+        <td style="padding-left: 2; padding-bottom: 5">L1 TOP - L4 BOTTOM GND</td>
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Net Topologies"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>Net Topologies</b></td>
+            <td width="20%"><b>Affected Nets</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993276160"> Rule - RoutingTopology</a><span style="color:#E5E5E5"> Routing Topology Rule(Topology=Shortest) (All)</span></td>
+        <td style="padding-bottom: 5">136</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Net Layers"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>Net Layers</b></td>
+            <td width="20%"><b>Affected Nets</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993282880"> Rule - RL_BOTTOM_PAD_NETS</a><span style="color:#E5E5E5"> Routing Layers(InNet('3V0_ANA') Or InNet('DRL_AMP_OUT') Or InNet('DRL_LIMITED') Or InNet('DRL_LIMIT_MID') Or InNet('DRL_SUM') Or InNet('NetJ_REF_1') Or InNet('VREF_B_SRC') Or InNet('Va_1') Or InNet('Va_2') Or InNet('Va_3') Or InNet('Va_4') Or InNet('Va_5') Or InNet('Vb_1') Or InNet('Vb_2') Or InNet('Vb_3') Or InNet('Vb_4') Or InNet('Vb_5') Or InNet('Vc_1') Or InNet('Vc_2') Or InNet('Vc_3') Or InNet('Vc_4') Or InNet('Vc_5'))</span></td>
+        <td style="padding-bottom: 5">22</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=NoError href="EditRule://7993275712"> Rule - RoutingLayers</a><span style="color:#E5E5E5"> Routing Layers(All)</span></td>
+        <td style="padding-bottom: 5">114</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="SMD Neckdown Rules"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>SMD Neckdown Rules</b></td>
+            <td width="20%"><b>Affected Pads</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5">Hint: no <a Class=Hint href="AddRule://47">default SMDNeckDown</a>  rule exists.</td>
+        <td style="padding-bottom: 5">781</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="Unroutable pads"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="100%"><b>Unroutable pads</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938653664">Error : Pad J_FPC5-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938653248">Error : Pad J_FPC5-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652832">Error : Pad J_FPC5-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652416">Error : Pad J_FPC5-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938652000">Error : Pad J_FPC5-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938651584">Error : Pad J_FPC5-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938651168">Error : Pad J_FPC5-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938650752">Error : Pad J_FPC5-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938650336">Error : Pad J_FPC5-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649920">Error : Pad J_FPC5-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649504">Error : Pad J_FPC5-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938649088">Error : Pad J_FPC5-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938648672">Error : Pad J_FPC5-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938648256">Error : Pad J_FPC5-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938647840">Error : Pad J_FPC5-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938647424">Error : Pad J_FPC5-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985273760"> Rule - CLR_BK13_ESCAPE_J_FPC5</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938660320">Error : Pad J_FPC4-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659904">Error : Pad J_FPC4-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659488">Error : Pad J_FPC4-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938659072">Error : Pad J_FPC4-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938658656">Error : Pad J_FPC4-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938658240">Error : Pad J_FPC4-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938657824">Error : Pad J_FPC4-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938657408">Error : Pad J_FPC4-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656992">Error : Pad J_FPC4-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656576">Error : Pad J_FPC4-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938656160">Error : Pad J_FPC4-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938655744">Error : Pad J_FPC4-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938655328">Error : Pad J_FPC4-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654912">Error : Pad J_FPC4-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654496">Error : Pad J_FPC4-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938654080">Error : Pad J_FPC4-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985277600"> Rule - CLR_BK13_ESCAPE_J_FPC4</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666976">Error : Pad J_FPC3-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666560">Error : Pad J_FPC3-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938666144">Error : Pad J_FPC3-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938665728">Error : Pad J_FPC3-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938665312">Error : Pad J_FPC3-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664896">Error : Pad J_FPC3-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664480">Error : Pad J_FPC3-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938664064">Error : Pad J_FPC3-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938663648">Error : Pad J_FPC3-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938663232">Error : Pad J_FPC3-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938662816">Error : Pad J_FPC3-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938662400">Error : Pad J_FPC3-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661984">Error : Pad J_FPC3-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661568">Error : Pad J_FPC3-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938661152">Error : Pad J_FPC3-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938660736">Error : Pad J_FPC3-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985275680"> Rule - CLR_BK13_ESCAPE_J_FPC3</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382560">Error : Pad J_FPC2-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382144">Error : Pad J_FPC2-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994381728">Error : Pad J_FPC2-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994381312">Error : Pad J_FPC2-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671968">Error : Pad J_FPC2-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671552">Error : Pad J_FPC2-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938671136">Error : Pad J_FPC2-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938670720">Error : Pad J_FPC2-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938670304">Error : Pad J_FPC2-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669888">Error : Pad J_FPC2-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669472">Error : Pad J_FPC2-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938669056">Error : Pad J_FPC2-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938668640">Error : Pad J_FPC2-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938668224">Error : Pad J_FPC2-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938667808">Error : Pad J_FPC2-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7938667392">Error : Pad J_FPC2-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272320"> Rule - CLR_BK13_ESCAPE_J_FPC2</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994389216">Error : Pad J_FPC1-3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994388800">Error : Pad J_FPC1-4</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994388384">Error : Pad J_FPC1-5</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387968">Error : Pad J_FPC1-2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387552">Error : Pad J_FPC1-1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994387136">Error : Pad J_FPC1-8</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994386720">Error : Pad J_FPC1-9</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994386304">Error : Pad J_FPC1-7</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385888">Error : Pad J_FPC1-6</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385472">Error : Pad J_FPC1-P1_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994385056">Error : Pad J_FPC1-P1_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994384640">Error : Pad J_FPC1-P2_1</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994384224">Error : Pad J_FPC1-P2_2</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994383808">Error : Pad J_FPC1-P2_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994383392">Error : Pad J_FPC1-P1_3</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Error href="JumpTo://7994382976">Error : Pad J_FPC1-10</a>  Appears to be unroutable. Violation against <a Class=Error href="EditRule://7985272800"> Rule - CLR_BK13_ESCAPE_J_FPC1</a><span style="color:#E5E5E5"> Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))</span> Detected.</td>
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="SMD Neckdown Width Warnings"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>SMD Neckdown Width Warnings</b></td>
+            <td width="20%"><b>Affected Pads</b></td>
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+        <a name="SMD Entry Warnings"></a>
+        <table border="0" cellpadding="1" cellspacing="3" width="100%">
+          <tr bgcolor="#4E4E4E" valign="top">
+            <td style="padding-left: 2" width="80%"><b>SMD Entry Warnings</b></td>
+            <td width="20%"><b>Affected Pads</b></td>
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090826816">Warning : Rule - WIDTH_EMG_GND</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_GND'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+        <td style="padding-bottom: 5">45</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090980032">Warning : Rule - WIDTH_EMG_ANALOG</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+        <td style="padding-bottom: 5">15</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090983296">Warning : Rule - WIDTH_EMG_REFERENCE</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_REFERENCE'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+        <td style="padding-bottom: 5">5</td> 
+          </tr>
+          <tr valign="top" class="TableRow">
+        <td style="padding-left: 2; padding-bottom: 5"><a Class=Warning href="EditRule://7090981664">Warning : Rule - WIDTH_EMG_POWER</a><span style="color:#E5E5E5"> Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_POWER'))</span><br>Preferred routing width is greater than some pad dimensions. Consider adding a <a Class=Warning href="AddRule://47">new SMD Neckdown Rule.</a> </td>
+        <td style="padding-bottom: 5">15</td> 
+          </tr>
+        </table>
+        <a href="#top">Back to top</a>
+        <p/>
+        <p/>
+    </body>
+</HTML>

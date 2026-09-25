@@ -1,0 +1,19 @@
+COMP flip: 22
+COMP move: 204
+COMP move+rot: 4
+COMP unchanged: 1
+KEEPOUT move: 1
+MECH delete (owner flipped/rotated/unknown): 31
+MECH move: 136
+RULE translate (AFE): 5
+RULE translate (CHARGER): 2
+RULE translate (CONVERTER): 11
+RULE translate (MCU): 2
+RULE translate (USB_IN): 4
+RULE translate (WIFI): 1
+TRACK MOVE: 91
+TRACK REMOVE: 1
+VIA MOVE: 47
+VIA REMOVE: 1
+near-duplicate merged: 1
+TOTAL OPS 567

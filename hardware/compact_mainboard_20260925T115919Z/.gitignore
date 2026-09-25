@@ -1,0 +1,9 @@
+# scratch kept on disk, not versioned: stage backups (hashes recorded in the audit) and disposable test copies
+evidence/backups/
+evidence/disposable_*/
+work/__pycache__/
+# Altium per-session artefacts
+**/History/
+**/Project Logs for */
+**/Project Outputs for */
+*.PrjPcbStructure

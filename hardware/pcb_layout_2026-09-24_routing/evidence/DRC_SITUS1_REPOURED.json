@@ -1,0 +1,670 @@
+{
+ "total": "175",
+ "summary": [
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_2-1')),(IsPad And (Name = 'RH_2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_1-1')),(IsPad And (Name = 'RH_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC2-1')),(IsPad And (Name = 'R_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_5-1')),(IsPad And (Name = 'RH_5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_4-1')),(IsPad And (Name = 'RH_4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_3-1')),(IsPad And (Name = 'RH_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'R_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA5_7') And InRegionAbsolute(2892.711784,821.845684,2956.692916,885.826816)),(IsPad And (Name = 'INA5-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA1_7') And InRegionAbsolute(845.467684,821.845684,909.448816,885.826816)),(IsPad And (Name = 'INA1-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-25'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VBAT-1')),(IsPad And (Name = 'C_VBAT-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_UV_BYPASS-1')),(IsPad And (Name = 'C_UV_BYPASS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD5-1')),(IsPad And (Name = 'C_MCU_VDD5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C3_MCU-1')),(IsPad And (Name = 'C3_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C1_MCU-1')),(IsPad And (Name = 'C1_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VDDUSB-1')),(IsPad And (Name = 'C_VDDUSB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD1-1')),(IsPad And (Name = 'C_MCU_VDD1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('ADC_EMG5') And InRegionAbsolute(2610.236184,1130.826784,2635.826816,1218.503916)),(IsPad And (Name = 'U_MCU1-30'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD4-1')),(IsPad And (Name = 'C_MCU_VDD4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD3-1')),(IsPad And (Name = 'C_MCU_VDD3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD2-1')),(IsPad And (Name = 'C_MCU_VDD2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetCL_1_1') And InRegionAbsolute(588.582684,1151.574884,732.283516,1167.322916)),(IsPad And (Name = 'CL_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC1')),(IsPad And InComponent('J_FPC1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP4')),(IsPad And InComponent('UP4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP2')),(IsPad And InComponent('UP2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC4')),(IsPad And InComponent('J_FPC4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC3')),(IsPad And InComponent('J_FPC3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC2')),(IsPad And InComponent('J_FPC2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_ANALOG') Or InNetClass('EMG_ADC') Or InNetClass('EMG_REFERENCE')),(All)",
+   14
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (All),(All)",
+   7
+  ],
+  [
+   "Clearance Constraint (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP1')),(IsPad And InComponent('UP1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('U_MCU1')),(IsPad And InComponent('U_MCU1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_POWER')),(All)",
+   26
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC5')),(IsPad And InComponent('J_FPC5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC3-1')),(IsPad And (Name = 'C_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC2-1')),(IsPad And (Name = 'C_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC1-1')),(IsPad And (Name = 'C_ADC1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv_1-1')),(IsPad And (Name = 'Cdiv_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC5-1')),(IsPad And (Name = 'C_ADC5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC4-1')),(IsPad And (Name = 'C_ADC4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_SHDN_G-1')),(IsPad And (Name = 'R_SHDN_G-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A1_B12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B1_A12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsVia And InNet('GND') And InRegionAbsolute(2657.086299,1201.456299,2657.873701,1202.243701)),(IsPad And (Name = 'U_MCU1-31'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1316.929116,1816.929116)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1360.236284,1792.716484,1448.818916,1815.975616)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116)),(IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116)),(IsTrack And InNet('NetL1_1') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RUP_3-1')),(IsPad And (Name = 'RUP_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_KILL_PU-1')),(IsPad And (Name = 'R_KILL_PU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1416.478916,1815.975616)),(IsPad And (Name = 'RUP_3-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(952.755784,1753.936984,1009.842516,1779.527516)),(IsPad And (Name = 'UP1-9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VBAT_CELL') And InRegionAbsolute(811.023584,1773.622084,858.267616,1789.370116)),(IsPad And (Name = 'UP1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0mm) (IsPad And InComponent('U_WIFI1') And ((Name = 'U_WIFI1-25') Or (Name = 'U_WIFI1-26') Or (Name = 'U_WIFI1-27') Or (Name = 'U_WIFI1-28') Or (Name = 'U_WIFI1-29') Or (Name = 'U_WIFI1-30') Or (Name = 'U_WIFI1-31') Or (Name = 'U_WIFI1-32'))),(IsRegion And OnLayer('Keep-Out Layer') And InRegionAbsolute(1739.72440945,2143.26771654,2223.26771654,2340.19685039))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP4')),(IsTrack And InRegionAbsolute(796.6535,1402.1654,982.8740,1550.5906))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_DRL1')),(IsTrack And InRegionAbsolute(750.0000,1131.8898,982.2835,1309.0551))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP2')),(IsTrack And InRegionAbsolute(1263.3858,1690.3543,1413.7795,1852.9528))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_MCU1')),(IsTrack And InRegionAbsolute(2422.2244,1182.0669,3168.3268,1928.1693))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP1')),(IsTrack And InRegionAbsolute(799.2126,1665.3543,1011.8110,1877.9528))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('C_DRL_DEC')),(IsTrack And InRegionAbsolute(698.8189,1125.9843,797.2441,1251.9685))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))",
+   3
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))",
+   3
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))",
+   3
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))",
+   3
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))",
+   3
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_INT_PULLUP-1')),(IsPad And (Name = 'R_INT_PULLUP-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU4-1')),(IsPad And (Name = 'CCU4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CUP4_FB-1')),(IsPad And (Name = 'CUP4_FB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU1-1')),(IsPad And (Name = 'CCU1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.566984,1633.858284,1412.992216,1815.975616)),(IsPad And (Name = 'CUP4_FB-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU10-1')),(IsPad And (Name = 'CCU10-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU6_1-1')),(IsPad And (Name = 'CU6_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv-1')),(IsPad And (Name = 'Cdiv-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU8-1')),(IsPad And (Name = 'CCU8-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_11-1')),(IsPad And (Name = 'CU_11-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_14-1')),(IsPad And (Name = 'CU_14-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_12-1')),(IsPad And (Name = 'CU_12-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU6-1')),(IsPad And (Name = 'CCU6-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-22'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B4_A9')),(IsPad And (Name = 'J_USB_C-B5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_AL-1')),(IsPad And (Name = 'R_AL-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_EN1_BIAS-1')),(IsPad And (Name = 'R_EN1_BIAS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_EN1_1-1')),(IsPad And (Name = 'R_EN1_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B1_A12')),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1405.315016,1815.975616)),(IsPad And (Name = 'CUP4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A4_B9')),(IsPad And (Name = 'J_USB_C-B8'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A1_B12')),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Short-Circuit Constraint (Allowed=No) (All),(All)",
+   29
+  ],
+  [
+   "Un-Routed Net Constraint ( (All) )",
+   75
+  ],
+  [
+   "Modified Polygon (Allow modified: No), (Allow shelved: No)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (All)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_CRYSTAL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.18mm) (InNetClass('EMG_SPI'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_GND'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.2mm) (Max=1.5mm) (Preferred=0.3mm) (InNetClass('EMG_SWITCH'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_POWER'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_CONTROL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_ADC'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_REFERENCE'))",
+   0
+  ],
+  [
+   "Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)",
+   0
+  ],
+  [
+   "Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)",
+   0
+  ],
+  [
+   "Hole To Hole Clearance (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)",
+   0
+  ],
+  [
+   "Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)",
+   1
+  ],
+  [
+   "Silk to Silk (Clearance=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Net Antennae (Tolerance=0mm) (All)",
+   5
+  ],
+  [
+   "Board Clearance Constraint (Gap=0mm) (All)",
+   3
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = 0.5mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)",
+   0
+  ]
+ ],
+ "details": [
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (21.539mm,23.063mm)(24.384mm,23.063mm) on L1 TOP And Track (23.9mm,22.3mm)(23.9mm,25.615mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.325mm,20.396mm)(56.325mm,23.5mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.199mm < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP",
+  "Clearance Constraint: (0.174mm < 0.25mm) Between Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.174mm < 0.25mm) Between Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP And Track (59.789mm,19.678mm)(60.025mm,19.914mm) on L1 TOP",
+  "Clearance Constraint: (0.105mm < 0.25mm) Between Track (57.506mm,20.168mm)(58.598mm,20.168mm) on L1 TOP And Track (57.975mm,20.472mm)(57.975mm,20.8mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (57.506mm,20.168mm)(58.598mm,20.168mm) on L1 TOP And Track (57.975mm,20.472mm)(58.458mm,19.99mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (57.506mm,20.168mm)(58.598mm,20.168mm) on L1 TOP And Track (58.458mm,19.99mm)(60.025mm,19.99mm) on L1 TOP",
+  "Clearance Constraint: (0.025mm < 0.25mm) Between Track (57.975mm,20.472mm)(58.458mm,19.99mm) on L1 TOP And Track (58.598mm,20.168mm)(58.801mm,20.371mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (58.458mm,19.99mm)(60.025mm,19.99mm) on L1 TOP And Track (58.598mm,20.168mm)(58.801mm,20.371mm) on L1 TOP",
+  "Clearance Constraint: (0.181mm < 0.25mm) Between Track (58.458mm,19.99mm)(60.025mm,19.99mm) on L1 TOP And Track (58.801mm,20.371mm)(58.801mm,20.8mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (67.945mm,24.282mm)(74.778mm,24.282mm) on L1 TOP And Track (73.025mm,20.55mm)(73.025mm,26.915mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (16.154mm,52.121mm)(18.059mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (18.059mm,54.026mm)(20.041mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (18.059mm,54.026mm)(20.041mm,54.026mm) on L1 TOP And Track (19.964mm,51.954mm)(19.964mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (0.13mm < 0.2mm) Between Track (19.325mm,51.7mm)(19.71mm,51.7mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (19.71mm,51.7mm)(19.964mm,51.954mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.2mm) Between Track (19.964mm,51.954mm)(19.964mm,54.026mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (22.146mm,30mm)(22.758mm,30mm) on L1 TOP And Track (22.149mm,28.95mm)(22.149mm,31.217mm) on L1 TOP",
+  "Clearance Constraint: (0.196mm < 0.25mm) Between Track (22.15mm,27.65mm)(23.851mm,27.65mm) on L1 TOP And Track (23.165mm,27mm)(23.393mm,27.229mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (22.15mm,27.65mm)(23.851mm,27.65mm) on L1 TOP And Track (23.393mm,27.229mm)(23.393mm,29.365mm) on L1 TOP",
+  "Clearance Constraint: (0.232mm < 0.25mm) Between Track (23.165mm,27mm)(23.393mm,27.229mm) on L1 TOP And Track (23.851mm,26.619mm)(23.851mm,27.65mm) on L1 TOP",
+  "Clearance Constraint: (0.232mm < 0.25mm) Between Track (23.393mm,27.229mm)(23.393mm,29.365mm) on L1 TOP And Track (23.851mm,26.619mm)(23.851mm,27.65mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (24.2mm,42.575mm)(25.452mm,42.575mm) on L1 TOP And Track (25.222mm,41.148mm)(25.222mm,43.129mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (24.384mm,40.31mm)(25.222mm,41.148mm) on L1 TOP And Track (25.452mm,38.8mm)(25.452mm,42.575mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (25.222mm,41.148mm)(25.222mm,43.129mm) on L1 TOP And Track (25.452mm,38.8mm)(25.452mm,42.575mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (35.397mm,39.472mm)(40.513mm,39.472mm) on L1 TOP And Track (36.45mm,37mm)(36.45mm,40.564mm) on L1 TOP",
+  "Clearance Constraint: (0.215mm < 0.25mm) Between Track (54.889mm,21.209mm)(57.455mm,18.644mm) on L1 TOP And Track (56.325mm,20.396mm)(56.325mm,23.5mm) on L1 TOP",
+  "Clearance Constraint: (0.215mm < 0.25mm) Between Track (54.889mm,21.209mm)(57.455mm,18.644mm) on L1 TOP And Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.215mm < 0.25mm) Between Track (54.889mm,21.209mm)(57.455mm,18.644mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.82mm,19.863mm)(56.82mm,22.022mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.163mm < 0.25mm) Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (56.82mm,19.863mm)(56.82mm,22.022mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP And Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.149mm < 0.25mm) Between Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP And Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP",
+  "Clearance Constraint: (0.149mm < 0.25mm) Between Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP And Track (59.789mm,19.678mm)(60.025mm,19.914mm) on L1 TOP",
+  "Clearance Constraint: (Collision < 0.25mm) Between Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP And Track (60.715mm,19.304mm)(61.325mm,19.914mm) on L1 TOP",
+  "Clearance Constraint: (0.235mm < 0.25mm) Between Track (60.715mm,19.304mm)(61.325mm,19.914mm) on L1 TOP And Track (61.366mm,19.304mm)(61.975mm,19.913mm) on L1 TOP",
+  "Clearance Constraint: (0.235mm < 0.25mm) Between Track (61.325mm,19.914mm)(61.325mm,20.55mm) on L1 TOP And Track (61.366mm,19.304mm)(61.975mm,19.913mm) on L1 TOP",
+  "Clearance Constraint: (0.088mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (58.8mm,12.55mm)(58.88mm,12.6mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (59.565mm,11.17mm)(59.565mm,11.267mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (59.565mm,13.133mm)(59.565mm,13.23mm) on L1 TOP",
+  "Clearance Constraint: (0.087mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (71.8mm,12.55mm)(71.88mm,12.6mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (72.565mm,11.17mm)(72.565mm,11.267mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (72.565mm,13.133mm)(72.565mm,13.23mm) on L1 TOP",
+  "Clearance Constraint: (0.087mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (45.8mm,12.55mm)(45.88mm,12.6mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (46.565mm,11.17mm)(46.565mm,11.267mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (46.565mm,13.133mm)(46.565mm,13.23mm) on L1 TOP",
+  "Clearance Constraint: (0.087mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (19.8mm,12.55mm)(19.88mm,12.6mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (20.565mm,11.17mm)(20.565mm,11.267mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (20.565mm,13.133mm)(20.565mm,13.23mm) on L1 TOP",
+  "Clearance Constraint: (0.088mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (32.8mm,12.55mm)(32.88mm,12.6mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (33.565mm,11.17mm)(33.565mm,11.267mm) on L1 TOP",
+  "Clearance Constraint: (0.043mm < 0.13mm) Between Region (0 hole(s)) Keep-Out Layer And Track (33.565mm,13.133mm)(33.565mm,13.23mm) on L1 TOP",
+  "Short-Circuit Constraint: Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (16.154mm,52.121mm)(18.059mm,54.026mm) on L1 TOP Location : [X = 17.987mm][Y = 54.026mm]",
+  "Short-Circuit Constraint: Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (18.059mm,54.026mm)(20.041mm,54.026mm) on L1 TOP Location : [X = 19.012mm][Y = 54.026mm]",
+  "Short-Circuit Constraint: Between Track (15.977mm,54.026mm)(19.964mm,54.026mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP Location : [X = 20.003mm][Y = 54.022mm]",
+  "Short-Circuit Constraint: Between Track (18.059mm,54.026mm)(20.041mm,54.026mm) on L1 TOP And Track (19.964mm,51.954mm)(19.964mm,54.026mm) on L1 TOP Location : [X = 19.964mm][Y = 54.026mm]",
+  "Short-Circuit Constraint: Between Track (19.71mm,51.7mm)(19.964mm,51.954mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP Location : [X = 20.003mm][Y = 51.92mm]",
+  "Short-Circuit Constraint: Between Track (19.964mm,51.954mm)(19.964mm,54.026mm) on L1 TOP And Track (20.041mm,51.41mm)(20.041mm,54.026mm) on L1 TOP Location : [X = 20.003mm][Y = 52.986mm]",
+  "Short-Circuit Constraint: Between Track (21.539mm,23.063mm)(24.384mm,23.063mm) on L1 TOP And Track (23.9mm,22.3mm)(23.9mm,25.615mm) on L1 TOP Location : [X = 23.9mm][Y = 23.063mm]",
+  "Short-Circuit Constraint: Between Track (22.146mm,30mm)(22.758mm,30mm) on L1 TOP And Track (22.149mm,28.95mm)(22.149mm,31.217mm) on L1 TOP Location : [X = 22.149mm][Y = 30mm]",
+  "Short-Circuit Constraint: Between Track (22.15mm,27.65mm)(23.851mm,27.65mm) on L1 TOP And Track (23.393mm,27.229mm)(23.393mm,29.365mm) on L1 TOP Location : [X = 23.393mm][Y = 27.65mm]",
+  "Short-Circuit Constraint: Between Track (24.2mm,42.575mm)(25.452mm,42.575mm) on L1 TOP And Track (25.222mm,41.148mm)(25.222mm,43.129mm) on L1 TOP Location : [X = 25.222mm][Y = 42.575mm]",
+  "Short-Circuit Constraint: Between Track (24.384mm,40.31mm)(25.222mm,41.148mm) on L1 TOP And Track (25.452mm,38.8mm)(25.452mm,42.575mm) on L1 TOP Location : [X = 25.337mm][Y = 41.148mm]",
+  "Short-Circuit Constraint: Between Track (25.222mm,41.148mm)(25.222mm,43.129mm) on L1 TOP And Track (25.452mm,38.8mm)(25.452mm,42.575mm) on L1 TOP Location : [X = 25.337mm][Y = 41.862mm]",
+  "Short-Circuit Constraint: Between Track (35.397mm,39.472mm)(40.513mm,39.472mm) on L1 TOP And Track (36.45mm,37mm)(36.45mm,40.564mm) on L1 TOP Location : [X = 36.45mm][Y = 39.472mm]",
+  "Short-Circuit Constraint: Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.325mm,20.396mm)(56.325mm,23.5mm) on L1 TOP Location : [X = 56.325mm][Y = 20.633mm]",
+  "Short-Circuit Constraint: Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP Location : [X = 56.802mm][Y = 20.037mm]",
+  "Short-Circuit Constraint: Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.82mm,19.863mm)(56.82mm,22.022mm) on L1 TOP Location : [X = 56.82mm][Y = 20.137mm]",
+  "Short-Circuit Constraint: Between Track (55.448mm,21.509mm)(57.278mm,19.678mm) on L1 TOP And Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP Location : [X = 57.054mm][Y = 19.783mm]",
+  "Short-Circuit Constraint: Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (56.82mm,19.863mm)(56.82mm,22.022mm) on L1 TOP Location : [X = 56.82mm][Y = 19.956mm]",
+  "Short-Circuit Constraint: Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP Location : [X = 57.101mm][Y = 19.596mm]",
+  "Short-Circuit Constraint: Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP Location : [X = 57.233mm][Y = 19.632mm]",
+  "Short-Circuit Constraint: Between Track (56.325mm,20.396mm)(57.417mm,19.304mm) on L1 TOP And Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP Location : [X = 57.387mm][Y = 19.317mm]",
+  "Short-Circuit Constraint: Between Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP And Track (57.278mm,19.678mm)(59.789mm,19.678mm) on L1 TOP Location : [X = 57.231mm][Y = 19.631mm]",
+  "Short-Circuit Constraint: Between Track (56.82mm,19.863mm)(57.379mm,19.304mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP Location : [X = 57.411mm][Y = 19.304mm]",
+  "Short-Circuit Constraint: Between Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP And Track (57.417mm,19.304mm)(60.715mm,19.304mm) on L1 TOP Location : [X = 59.066mm][Y = 19.304mm]",
+  "Short-Circuit Constraint: Between Track (57.379mm,19.304mm)(61.366mm,19.304mm) on L1 TOP And Track (60.715mm,19.304mm)(61.325mm,19.914mm) on L1 TOP Location : [X = 60.8mm][Y = 19.317mm]",
+  "Short-Circuit Constraint: Between Track (57.506mm,20.168mm)(58.598mm,20.168mm) on L1 TOP And Track (57.975mm,20.472mm)(58.458mm,19.99mm) on L1 TOP Location : [X = 58.28mm][Y = 20.168mm]",
+  "Short-Circuit Constraint: Between Track (57.506mm,20.168mm)(58.598mm,20.168mm) on L1 TOP And Track (58.458mm,19.99mm)(60.025mm,19.99mm) on L1 TOP Location : [X = 58.528mm][Y = 20.079mm]",
+  "Short-Circuit Constraint: Between Track (58.458mm,19.99mm)(60.025mm,19.99mm) on L1 TOP And Track (58.598mm,20.168mm)(58.801mm,20.371mm) on L1 TOP Location : [X = 58.598mm][Y = 20.079mm]",
+  "Short-Circuit Constraint: Between Track (67.945mm,24.282mm)(74.778mm,24.282mm) on L1 TOP And Track (73.025mm,20.55mm)(73.025mm,26.915mm) on L1 TOP Location : [X = 73.025mm][Y = 24.282mm]",
+  "Un-Routed Net Constraint: Net VBUS Between Pad D_VBUS-1(18.5mm,40.9mm) on L1 TOP And Pad C_VBUS-2(19.1mm,44.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBUS Between Pad J_USB_C-B4_A9(17.155mm,44.6mm) on L1 TOP And Pad C_VBUS-2(19.1mm,44.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C2_MCU-2(59.9mm,37.1mm) on L1 TOP And Pad C1_MCU-1(61.879mm,37.1mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_14-2(59.679mm,24.8mm) on L1 TOP And Pad C4_MCU-2(59.9mm,35.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (19.88mm,13.23mm)(20.565mm,13.23mm) on L1 TOP And Pad CCU2-2(24.15mm,19.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (46.565mm,13.133mm)(46.565mm,13.23mm) on L1 TOP And Pad CCU5-2(50.15mm,19.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_1_2 Between Pad RGN_1-2(19.4mm,29.9mm) on L1 TOP And Pad CH_1-2(19.5mm,28.193mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_4_2 Between Pad RGN_4-2(58.4mm,27.7mm) on L1 TOP And Pad CH_4-2(58.5mm,25.993mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_2 Between Track (33.921mm,21.75mm)(33.921mm,22.171mm) on L1 TOP And Pad CL_2-2(34.05mm,29.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_3 Between Pad INA3-6(48.325mm,20.55mm) on L1 TOP And Pad Cservo_3-2(49.675mm,27.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net Vservo_5 Between Pad U3-14(66.85mm,26.75mm) on L1 TOP And Pad Cservo_5-2(71.675mm,26.1mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_21-1(19.1mm,27mm) on L1 TOP And Pad CU_11-2(20.679mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_24-1(58.1mm,24.8mm) on L1 TOP And Pad CU_14-2(59.679mm,24.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetD_CC_ESD_2 Between Track (19.325mm,51.7mm)(19.71mm,51.7mm) on L1 TOP And Pad D_CC_ESD-2(20.9mm,49.45mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VOUT_2 Between Pad Free-TP_VOUT_2(61.25mm,29.25mm) on L1 TOP And Pad R_ADC2-1(62mm,32.015mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Pad Free-TP_VOUT_3(58.75mm,29.25mm) on L1 TOP And Pad R_ADC3-1(62mm,30.365mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Track (44.85mm,24.05mm)(45.568mm,24.05mm) on L1 TOP And Pad Free-TP_VOUT_3(58.75mm,29.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_5 Between Track (66.85mm,22.85mm)(67.564mm,22.85mm) on L1 TOP And Pad Free-TP_VOUT_5(70.5mm,28.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_1 Between Pad Rservo_1-2(19.775mm,24.2mm) on L1 TOP And Pad INA1-8(21.025mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (72.565mm,13.133mm)(72.565mm,13.23mm) on L1 TOP And Pad INA5-5(74.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SWDIO Between Pad U_MCU1-72(78.738mm,44mm) on L1 TOP [Unplated] And Pad J_SWD-2(86mm,40.54mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net VBUS Between Pad J_USB_C-B4_A9(17.155mm,44.6mm) on L1 TOP And Pad J_USB_C-A4_B9(17.155mm,49.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetLED_CHG_C Between Pad LED_CHG-C(19.1mm,53mm) on L1 TOP And Pad UP1-9(24.4mm,44.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_1 Between Track (58.142mm,33.858mm)(58.25mm,33.75mm) on L1 TOP And Pad R_ADC1-1(62mm,33.665mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net ADC_EMG2 Between Pad R_ADC2-2(62mm,32.885mm) on L1 TOP And Pad U_MCU1-24(63.262mm,34mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_CHG_LED-1(22.3mm,53mm) on L1 TOP And Pad UP1-11(24.4mm,45.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_1 Between Pad R_DRL_VA1-1(13.775mm,23.5mm) on L4 BOTTOM GND And Track (21.65mm,13.23mm)(21.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_2 Between Pad R_DRL_VA2-1(17.125mm,23.5mm) on L4 BOTTOM GND And Track (34.65mm,13.23mm)(34.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_3 Between Pad R_DRL_VA3-1(20.475mm,23.5mm) on L4 BOTTOM GND And Track (47.65mm,13.23mm)(47.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_4 Between Pad R_DRL_VA4-1(23.825mm,23.5mm) on L4 BOTTOM GND And Track (60.65mm,13.23mm)(60.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_5 Between Pad R_DRL_VA5-1(27.175mm,23.5mm) on L4 BOTTOM GND And Track (73.65mm,13.23mm)(73.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vb_1 Between Pad R_DRL_VB1-1(13.775mm,25.3mm) on L4 BOTTOM GND And Track (22.35mm,13.23mm)(22.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vb_2 Between Pad R_DRL_VB2-1(17.125mm,25.3mm) on L4 BOTTOM GND And Track (35.35mm,13.23mm)(35.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vb_3 Between Pad R_DRL_VB3-1(20.475mm,25.3mm) on L4 BOTTOM GND And Track (48.35mm,13.23mm)(48.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vb_4 Between Pad R_DRL_VB4-1(23.825mm,25.3mm) on L4 BOTTOM GND And Track (61.35mm,13.23mm)(61.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vb_5 Between Pad R_DRL_VB5-1(27.175mm,25.3mm) on L4 BOTTOM GND And Track (74.35mm,13.23mm)(74.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_5 Between Pad R_DRL_VC5-1(27.175mm,27.1mm) on L4 BOTTOM GND And Via (71.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_EN1_1-1(31.521mm,53.8mm) on L1 TOP And Pad UP2-4(33.25mm,45.735mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_INT_PULLUP-1(37.376mm,49.3mm) on L1 TOP And Pad R_KILL_PU-2(37.376mm,53mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_PWR_INT_N Between Pad R_INT_PULLUP-2(36.424mm,49.3mm) on L1 TOP And Pad U_MCU1-83(73.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net USB_PGOOD_N Between Pad UP1-7(23.25mm,43.6mm) on L1 TOP And Pad R_PGOOD-1(24.2mm,41.625mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetQ_SHDN_1 Between Pad R_SHDN_G-1(42.324mm,50.8mm) on L1 TOP And Pad R_SHDN_PD-2(43.3mm,52mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SHUTDOWN Between Pad R_SHDN_G-2(43.276mm,50.8mm) on L1 TOP And Pad U_MCU1-86(72mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CS Between Via (60.6mm,51.105mm) from L1 TOP to L4 BOTTOM GND And Pad R_SPI_CS-1(71.4mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_WIFI_CS Between Pad U_MCU1-35(69.5mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_CS-2(71.4mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_SPI_MISO Between Pad R_SPI_MISO-1(43.512mm,53.2mm) on L1 TOP And Pad U_WIFI1-29(49.695mm,54.016mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net MCU_SPI_MISO Between Pad R_SPI_MISO-2(42.488mm,53.2mm) on L1 TOP And Pad U_MCU1-31(67.5mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_MOSI Between Pad U_WIFI1-27(52.235mm,54.016mm) on L1 TOP [Unplated] And Pad R_SPI_MOSI-1(70mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SPI_MOSI Between Pad U_MCU1-32(68mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_MOSI-2(70mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CLK Between Pad U_WIFI1-28(50.965mm,54.016mm) on L1 TOP [Unplated] And Pad R_SPI_SCK-1(68.6mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SPI_SCK Between Pad U_MCU1-30(67mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_SCK-2(68.6mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad R_TH_BAT-2(15.47mm,38.7mm) on Multi-Layer And Pad R_TS_SER-1(22mm,48.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetR_TMR_2 Between Pad UP1-14(23.25mm,46.4mm) on L1 TOP And Pad R_TMR-2(27.4mm,48.075mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad R_TS_TOP-1(22mm,49.175mm) on L1 TOP And Pad R_TS_BOTTOM-2(22.9mm,49.925mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net TS Between Pad UP1-1(21.6mm,45.75mm) on L1 TOP And Pad R_TS_SER-2(23mm,48.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetRISET_1 Between Pad RISET-1(21mm,51.475mm) on L1 TOP And Pad UP1-16(22.25mm,46.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Track (49.682mm,22.606mm)(49.9mm,22.606mm) on L1 TOP And Pad RL_4-2(62.7mm,21.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net GND Between Pad RV1-2(29.7mm,26mm) on L1 TOP And Via (30.279mm,24.35mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Via (28.905mm,22.352mm) from L1 TOP to L4 BOTTOM GND And Pad RV2-1(29.7mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-28(66mm,31.762mm) on L1 TOP [Unplated] And Pad U_MCU1-50(77mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net FG_ALRT Between Pad UP4-5(23.585mm,36.75mm) on L1 TOP And Pad U_MCU1-81(74.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net USB_PGOOD_N Between Pad UP1-7(23.25mm,43.6mm) on L1 TOP And Pad U_MCU1-82(74mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net AFE_EN Between Track (36.805mm,32.69mm)(36.805mm,33.45mm) on L1 TOP And Pad U_MCU1-85(72.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_CHIP_EN Between Track (59.03mm,45.11mm)(59.36mm,44.78mm) on L1 TOP And Pad U_MCU1-87(71.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_RDY Between Pad U_WIFI1-21(56.046mm,48.935mm) on L1 TOP [Unplated] And Pad U_MCU1-89(70.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_BOOT Between Via (43.3mm,46.286mm) from L1 TOP to L4 BOTTOM GND And Pad U_MCU1-91(69.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net I2C_SCL Between Pad UP4-7(23.585mm,37.75mm) on L1 TOP And Pad U_MCU1-95(67.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net I2C_SDA Between Track (24.234mm,38.532mm)(24.548mm,38.532mm) on L1 TOP And Pad U_MCU1-96(67mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U2-10(44.85mm,25.35mm) on L1 TOP And Pad U2-12(44.85mm,26.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_2 Between Track (33.198mm,23.216mm)(34.325mm,24.343mm) on L1 TOP And Pad U2-7(39.15mm,24.05mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_4 Between Pad U3-7(61.15mm,22.85mm) on L1 TOP And Track (61.325mm,19.914mm)(61.325mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad UP2-6(33.75mm,44.265mm) on L1 TOP And Track (35.495mm,41.7mm)(35.495mm,42.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (59.565mm,13.133mm)(59.565mm,13.23mm) on L1 TOP And Track (61.366mm,19.304mm)(61.975mm,19.913mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (59.565mm,13.133mm)(59.565mm,13.23mm) on L1 TOP And Via (71.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Via (28.905mm,22.352mm) from L1 TOP to L4 BOTTOM GND And Via (32.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Silk To Solder Mask Clearance Constraint: (0.1mm < 0.254mm) Between Pad D_VBUS-2(18.5mm,43.1mm) on L1 TOP And Track (18.175mm,43.575mm)(19.225mm,43.575mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.1mm]",
+  "Net Antennae: Via (19.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (32.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (45.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (58.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (71.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Board Outline Clearance(Outline Edge): (0.442mm < 0.5mm) Between Board Edge And Track (59.715mm,54.051mm)(60.122mm,54.458mm) on L1 TOP",
+  "Board Outline Clearance(Outline Edge): (0.442mm < 0.5mm) Between Board Edge And Track (60.122mm,54.458mm)(73.892mm,54.458mm) on L1 TOP",
+  "Board Outline Clearance(Outline Edge): (0.442mm < 0.5mm) Between Board Edge And Track (73.892mm,54.458mm)(81.1mm,47.25mm) on L1 TOP"
+ ]
+}

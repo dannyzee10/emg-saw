@@ -1,0 +1,246 @@
+designator,src_uid,group,old_side,new_side,old_x,old_y,new_x,new_y,old_rot,new_rot,reason,risk
+C1_EN1,\KWJFQQPD,PB_CTRL,Top,Bottom,31.8,52.9,75.6099,43.35,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+C1_MCU,\KNSGXSGY,MCU,Top,Top,61.5,37.1,59.5,37.1,180,180,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C2_EN1,\AUBOOCXZ,PB_CTRL,Top,Bottom,31.9,49.5,75.51,39.95,180,180,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+C2_MCU,\TSGCAGJY,MCU,Top,Top,59.5,37.1,57.5,37.1,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C3_EN1,\BRZQATAL,PB_CTRL,Top,Bottom,37.1,51.5,70.31,41.95,180,180,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+C3_MCU,\TDOPZFWR,MCU,Top,Top,61.5,35.8,59.5,35.8,180,180,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C4_MCU,\WPXKGRZF,MCU,Top,Top,59.5,35.8,57.5,35.8,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+CCU1,\DPDOLLAJ,AFE,Top,Top,24.55,20.55,22.55,20.55,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU10,\PGDJRIFP,AFE,Top,Top,76.55,20.55,74.55,20.55,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU2,\MFMCRQQU,AFE,Top,Top,24.55,19.55,22.55,19.55,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU3,\CIMHMRWX,AFE,Top,Top,37.55,19.55,35.55,19.55,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU4,\PJWUZVFE,AFE,Top,Top,37.55,20.55,35.55,20.55,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU5,\PYTUSSRE,AFE,Top,Top,50.55,19.55,48.55,19.55,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU6,\EIDXTRHR,AFE,Top,Top,50.55,20.55,48.55,20.55,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU7,\KKLEFVPX,AFE,Top,Top,63.55,19.55,61.55,19.55,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU8,\XTYCAQJK,AFE,Top,Top,63.55,20.55,61.55,20.55,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CCU9,\MBHOTVHO,AFE,Top,Top,76.55,19.55,74.55,19.55,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CH_1,\MIJCOZNW,AFE,Top,Top,19.5,28.625,17.5,28.625,270,270,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CH_2,\VTQJFIQM,AFE,Top,Top,36.5,27.625,34.5,27.625,270,270,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CH_3,\BHEIABIF,AFE,Top,Top,47.5,24.375,45.5,24.375,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CH_4,\VBHITULI,AFE,Top,Top,58.5,26.425,56.5,26.425,270,270,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CH_5,\SDBPLGOM,AFE,Top,Top,69.5,23.175,67.5,23.175,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CL_1,\GNLAPLDE,AFE,Top,Top,16.1,30.5,14.1,30.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CL_2,\WSSOZXTJ,AFE,Top,Top,33.1,29.5,31.1,29.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CL_3,\TMGHLPAL,AFE,Top,Top,51.7,23.7,49.7,23.7,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CL_4,\KJVBWSRF,AFE,Top,Top,55.1,28.3,53.1,28.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CL_5,\YBRHADYL,AFE,Top,Top,70.5,20.5,68.5,20.5,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU6_1,\UFCUTPNQ,GAUGE,Top,Bottom,20.2,37.2,24.66,35.975,0,0,"MAX17048 fuel gauge with CELL/VDD bypass, ALRT and I2C pull-ups (R2 s6 Bottom candidate)",battery sense kept short and quiet; not beneath LX/inductor or charger thermal pad
+CUP4,\TDBSYUJF,CONVERTER,Top,Top,36.6,45.0,36.6,40.75,270,270,TPS631000 switching cell,"Top, unchanged internally"
+CUP4_1,\OCTWYPFX,CONVERTER,Top,Top,31.4,45.0,31.4,40.75,270,270,TPS631000 switching cell,"Top, unchanged internally"
+CUP4_FB,\XDRNRJCW,CONVERTER,Top,Top,35.3,41.7,35.3,37.45,0,0,TPS631000 switching cell,"Top, unchanged internally"
+CUP5_1,\KRWEPBDB,LDO,Top,Top,35.9,35.4,33.9,34.6,180,180,TPS7A2030 with its capacitors,"Top, power/analog boundary"
+CUP5_2,\ALYAKZJE,LDO,Top,Top,41.2,35.4,39.2,34.6,180,180,TPS7A2030 with its capacitors,"Top, power/analog boundary"
+CUP5_3,\GUCDCQUU,LDO,Top,Top,42.0,33.8,40.0,33.0,180,180,TPS7A2030 with its capacitors,"Top, power/analog boundary"
+CUP5_5,\ZEQWUVAB,LDO,Top,Top,35.5,37.0,33.5,36.2,180,180,TPS7A2030 with its capacitors,"Top, power/analog boundary"
+CU_11,\QTDZGZYC,AFE,Top,Top,20.3,27.0,18.3,27.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU_12,\KZHXEMRX,AFE,Top,Top,37.3,26.0,35.3,26.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU_14,\HFAFTJTT,AFE,Top,Top,59.3,24.8,57.3,24.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU_21,\HBLBLIXO,AFE,Top,Top,18.7,27.0,16.7,27.0,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU_22,\QFBGIYQT,AFE,Top,Top,35.7,26.0,33.7,26.0,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+CU_24,\PSMZMIOA,AFE,Top,Top,57.7,24.8,55.7,24.8,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+C_ADC1,\CWYZJILP,ADC_RC,Top,Top,60.3,34.1,58.3,34.1,180,180,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+C_ADC2,\ECVYCTDZ,ADC_RC,Top,Top,60.3,32.45,58.3,32.45,180,180,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+C_ADC3,\CNHMIMHQ,ADC_RC,Top,Top,60.3,30.8,58.3,30.8,180,180,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+C_ADC4,\IWHUAAYK,ADC_RC,Top,Top,64.6,29.4,62.6,29.4,270,270,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+C_ADC5,\BBGOTLNQ,ADC_RC,Top,Top,67.5,29.4,65.5,29.4,90,90,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+C_BAT,\IENRODLZ,CHARGER,Top,Top,19.5,45.6,19.5,42.0,180,180,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+C_DRL_DEC,\EDUIKKDR,AFE,Bottom,Bottom,19.0,30.2,17.0,30.2,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+C_DRL_FB,\XCYGPLDA,AFE,Bottom,Bottom,25.45,33.05,23.45,33.05,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+C_IN_,\ZMESUDIN,CHARGER,Top,Top,23.75,47.35,23.75,43.75,180,180,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+C_MCU_BULK,\XNGEFMHP,MCU,Top,Top,82.1,48.9,78.75,47.9,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_MCU_VDD1,\QBPNORLY,MCU,Top,Top,61.2,40.5,59.2,40.5,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_MCU_VDD2,\BIEOJUNV,MCU,Top,Top,66.0,29.7,64.0,29.7,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_MCU_VDD3,\AUVFQSTI,MCU,Top,Top,78.0,29.9,76.0,29.9,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_MCU_VDD4,\ABSRTBCD,MCU,Top,Top,80.7,45.5,78.7,45.5,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_MCU_VDD5,\OOSRRHMX,MCU,Top,Top,65.0,49.1,63.0,49.03,90,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_NRST,\UTOMCBIX,MCU,Top,Top,59.1,39.0,57.1,39.0,180,180,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_OUT_,\PIABGTTK,CHARGER,Top,Top,26.4,45.0,26.4,41.4,0,0,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+C_UV_BYPASS,\PQCLWCZB,SUPERVISOR,Top,Bottom,32.7,39.3,25.9806,45.6,0,0,TPS3808 VSYS supervisor (CT open) with bypass and SYS_EN pull-up (R2 s6 Bottom candidate),sense node away from switching and clock coupling
+C_VBAT,\DLLJRIAK,MCU,Top,Top,61.2,43.0,59.2,43.0,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_VBUS,\IBSDRNQP,USB_IN,Top,Top,18.7,44.2,18.7,40.6,0,0,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+C_VDDUSB,\CFQZTGVX,MCU,Top,Top,80.7,44.1,78.7,44.1,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+C_WIFI_BULK,\MUJTZXJA,WIFI,Top,Bottom,59.5,48.3,56.5,43.3,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_EN,\PPSJUUVA,WIFI,Top,Top,58.2,43.855,55.2,38.855,0,0,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDD33,\PENDZXJR,WIFI,Top,Top,56.8,40.5,53.8,35.5,270,270,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDD33_HF,\VMMAYOTC,WIFI,Top,Top,54.775,41.0,51.775,36.0,270,270,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDDIO1,\IMKSJAJJ,WIFI,Top,Top,44.0,40.5,41.0,35.5,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDDIO1_HF,\GADJTTCJ,WIFI,Top,Top,45.885,41.0,42.885,36.0,270,270,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDDIO2,\CQCYPVDO,WIFI,Top,Top,58.15,51.8,55.15,46.8,180,180,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_VDDIO2_HF,\KDNLJRNG,WIFI,Top,Top,57.7,53.8,54.7,48.8,180,180,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_X32_IN,\HUBJPMZN,WIFI,Top,Top,52.85,37.4,49.85,32.4,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+C_WIFI_X32_OUT,\ETMOXEBV,WIFI,Top,Top,50.35,37.4,47.35,32.4,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+Cdiv,\ETGTIIWG,AFE,Top,Top,20.6,30.0,18.6,30.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cdiv_1,\TXUADNCR,AFE,Top,Top,29.9,25.0,27.9,25.0,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cdiv_10uF,\KISCTGDZ,AFE,Top,Top,32.2,24.8,30.2,24.8,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cservo_1,\UVWABFOM,AFE,Top,Top,18.8,25.7,16.8,25.7,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cservo_2,\DWQPLJLU,AFE,Top,Top,35.8,24.7,33.8,24.7,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cservo_3,\TCDKMOJA,AFE,Top,Top,48.2,27.3,46.2,27.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cservo_4,\BSAHUQLV,AFE,Top,Top,57.8,23.5,55.8,23.5,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Cservo_5,\RHWVFLVY,AFE,Top,Top,70.2,26.1,68.2,26.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+D_CC_ESD,\MGTRVJRM,USB_IN,Top,Top,19.8,48.5,19.8,44.9,180,180,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+D_VBUS,\UMZWIQYE,USB_IN,Top,Top,18.5,42.0,18.5,38.4,90,90,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+FP:TP_3V0_ANA,,FREEPAD_LDO,Top,Top,40.75,36.5,38.75,35.7,0,0,native free test pad moved with its group,same test node and net
+FP:TP_3V3_DIG,,FREEPAD_CONVERTER,Top,Top,36.5,47.5,36.5,43.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_GND_ANA,,FREEPAD_AFE,Top,Top,18.25,28.0,16.25,28.0,0,0,native free test pad moved with its group,same test node and net
+FP:TP_GND_DIG,,FREEPAD_MCU,Top,Top,84.5,43.0,82.5,43.0,0,0,native free test pad moved with its group,same test node and net
+FP:TP_GND_PWR,,FREEPAD_BATTERY,Top,Top,12.0,33.25,19.3,32.35,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VBAT_CELL,,FREEPAD_BATTERY,Top,Top,17.0,33.25,17.0,31.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VBUS,,FREEPAD_CHARGER,Top,Top,26.25,47.5,26.25,43.9,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VOUT_1,,FREEPAD_ADC_RC,Top,Top,58.25,33.75,56.25,33.75,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VOUT_2,,FREEPAD_ADC_RC,Top,Top,61.25,29.25,59.25,29.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VOUT_3,,FREEPAD_ADC_RC,Top,Top,58.75,29.25,56.75,29.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VOUT_4,,FREEPAD_ADC_RC,Top,Top,57.25,31.25,55.25,31.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VOUT_5,,FREEPAD_ADC_RC,Top,Top,70.5,28.5,68.5,28.5,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VREF_A,,FREEPAD_AFE,Top,Top,27.75,23.75,25.75,23.75,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VREF_B_SRC,,FREEPAD_AFE,Top,Top,27.75,30.25,25.75,30.25,0,0,native free test pad moved with its group,same test node and net
+FP:TP_VSYS,,FREEPAD_CHARGER,Top,Top,25.5,43.5,25.5,39.9,0,0,native free test pad moved with its group,same test node and net
+INA1,\DSSHWZCG,AFE,Top,Top,22.0,18.2,20.0,18.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+INA2,\WODSVRPQ,AFE,Top,Top,35.0,18.2,33.0,18.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+INA3,\DEHQBDJR,AFE,Top,Top,48.0,18.2,46.0,18.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+INA4,\XTNWSMDW,AFE,Top,Top,61.0,18.2,59.0,18.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+INA5,\WFMTJBTJ,AFE,Top,Top,74.0,18.2,72.0,18.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+JP_WIFI_BOOT,\MTPFUPUN,SERVICE,Top,Top,82.3,17.4,80.4,17.4,0,0,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+J_FPC1,\HRDNIWOC,AFE,Top,Top,22.0,12.2,20.0,12.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+J_FPC2,\VHZAIESE,AFE,Top,Top,35.0,12.2,33.0,12.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+J_FPC3,\MNABROKH,AFE,Top,Top,48.0,12.2,46.0,12.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+J_FPC4,\WOQIDMIX,AFE,Top,Top,61.0,12.2,59.0,12.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+J_FPC5,\VCZZVCHC,AFE,Top,Top,74.0,12.2,72.0,12.2,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+J_Li-Po,\VQEFQNBX,BATTERY,Top,Top,12.0,34.8,12.0,33.3,0,0,battery header and remote-NTC wire termination,"Top, wire access"
+J_SWD,\KSTMQYKV,SERVICE,Top,Top,86.0,38.0,81.0,30.2,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+J_USB_C,\OOAEFXTY,USB_IN,Top,Top,12.4,47.0,12.4,43.4,270,270,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+L1,\TMEFFVKY,CONVERTER,Top,Top,34.0,47.2,34.0,42.95,180,180,TPS631000 switching cell,"Top, unchanged internally"
+LED_CHG,\EZYWKPBA,CHARGER,Top,Top,20.0,53.0,27.5,48.4,0,0,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+MCU_VCAP,\YNNCTDAI,MCU,Top,Top,75.6,29.4,73.6,29.4,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+PWR_BTN_N,\FPRAKXRU,BUTTON,Top,Top,27.3,51.2,34.9,47.07,0,0,pushbutton actuation,"Top, accessible"
+Q_SHDN,\UKRIVBCR,PB_CTRL,Top,Bottom,40.0,51.5,67.41,41.95,180,180,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+RDD1,\DXKLSNMY,AFE,Top,Top,27.8,16.8,25.8,16.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD10,\EHJREJHQ,AFE,Top,Top,66.8,16.8,64.8,16.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD11,\PLJRMBKM,AFE,Top,Top,66.8,15.0,64.8,15.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD12,\CQWOMJFQ,AFE,Top,Top,66.8,18.6,64.8,18.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD13,\PXMMUANO,AFE,Top,Top,79.4,16.8,77.4,16.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD14,\FDBDAWRR,AFE,Top,Top,79.4,15.0,77.4,15.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD15,\STOXUDFL,AFE,Top,Top,79.4,18.6,77.4,18.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD2,\HMVRSXGQ,AFE,Top,Top,27.8,15.0,25.8,15.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD3,\MJVHHMBB,AFE,Top,Top,27.8,18.6,25.8,18.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD4,\IIVQUIPI,AFE,Top,Top,40.8,16.8,38.8,16.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD5,\WQFXLLGW,AFE,Top,Top,40.8,15.0,38.8,15.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD6,\LLIMCPGT,AFE,Top,Top,40.8,18.6,38.8,18.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD7,\TDEFUSFF,AFE,Top,Top,53.8,16.8,51.8,16.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD8,\SWXJGUAX,AFE,Top,Top,53.8,15.0,51.8,15.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RDD9,\WRVCRTAX,AFE,Top,Top,53.8,18.6,51.8,18.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RGN_1,\GHXDVMLT,AFE,Top,Top,18.9,29.9,16.9,29.9,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RGN_2,\AAUNNEUQ,AFE,Top,Top,35.9,28.9,33.9,28.9,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RGN_3,\HVJKHQAD,AFE,Top,Top,48.9,23.7,46.9,23.7,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RGN_4,\AMATVKYL,AFE,Top,Top,57.9,27.7,55.9,27.7,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RGN_5,\VMZMEQFA,AFE,Top,Top,70.1,21.9,68.1,21.9,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RG_1,\UTRITBAK,AFE,Top,Top,20.5,28.625,18.5,28.625,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RG_2,\SMJLTCCR,AFE,Top,Top,37.5,27.625,35.5,27.625,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RG_3,\IWTKXABD,AFE,Top,Top,46.5,24.375,44.5,24.375,270,270,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RG_4,\LGIUMXWW,AFE,Top,Top,59.5,26.425,57.5,26.425,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RG_5,\LNKDIMXT,AFE,Top,Top,68.5,23.175,66.5,23.175,270,270,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RH_1,\GTEBNYHJ,AFE,Top,Top,21.4,21.75,19.4,21.75,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RH_2,\TENFJOUW,AFE,Top,Top,34.4,21.75,32.4,21.75,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RH_3,\XMOCRDMS,AFE,Top,Top,47.4,21.75,45.4,21.75,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RH_4,\AABTCOUS,AFE,Top,Top,59.2,21.75,57.2,21.75,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RH_5,\BRQYYKEO,AFE,Top,Top,73.4,21.75,71.4,21.75,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RISET,\SSYPHZYI,CHARGER,Top,Top,21.0,51.0,21.0,47.4,270,270,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+RJ1,\ZKMVMVBH,USB_IN,Top,Top,18.9,50.7,18.9,47.1,0,0,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+RJ2,\UZEVJROT,USB_IN,Top,Top,18.9,51.7,18.9,48.1,0,0,charge-only USB-C with VBUS/CC protection,"Top, left edge"
+RL_1,\HHHGPCFY,AFE,Top,Top,23.4,22.3,21.4,22.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RL_2,\TELITLFC,AFE,Top,Top,36.4,22.3,34.4,22.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RL_3,\XBCKMMOI,AFE,Top,Top,49.4,22.3,47.4,22.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RL_4,\BXVEUIPV,AFE,Top,Top,62.2,21.7,60.2,21.7,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RL_5,\DRPDTLDH,AFE,Top,Top,75.4,22.3,73.4,22.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RUP_3,\FVAOALWX,CONVERTER,Top,Top,35.3,42.7,35.3,38.45,0,0,TPS631000 switching cell,"Top, unchanged internally"
+RUP_4,\DIXYKNNS,CONVERTER,Top,Top,33.4,42.7,33.4,38.45,0,0,TPS631000 switching cell,"Top, unchanged internally"
+RV1,\FJSJEKUM,AFE,Top,Top,30.2,26.0,28.2,26.0,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+RV2,\ACJROGAV,AFE,Top,Top,30.2,27.0,28.2,27.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_ADC1,\TKCPYGKF,ADC_RC,Top,Top,62.0,34.1,60.0,34.1,90,90,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+R_ADC2,\CFTIPEZE,ADC_RC,Top,Top,62.0,32.45,60.0,32.45,90,90,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+R_ADC3,\VPQHMOBO,ADC_RC,Top,Top,62.0,30.8,60.0,30.8,90,90,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+R_ADC4,\RNNLSOJY,ADC_RC,Top,Top,62.8,29.4,60.8,29.4,0,0,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+R_ADC5,\CWCXIEPU,ADC_RC,Top,Top,69.0,28.5,67.0,28.5,180,180,five 330R/10nF ADC input networks at the MCU pins,Top with MCU
+R_AL,\KHERGLLP,GAUGE,Top,Bottom,25.2,36.7,19.66,35.475,0,0,"MAX17048 fuel gauge with CELL/VDD bypass, ALRT and I2C pull-ups (R2 s6 Bottom candidate)",battery sense kept short and quiet; not beneath LX/inductor or charger thermal pad
+R_CHG_LED,\DPJOEUUL,CHARGER,Top,Top,22.8,53.0,28.0,46.5,0,0,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_DRL_FB,\EIJHLSNJ,AFE,Bottom,Bottom,25.45,30.2,23.45,30.2,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_OUT1,\SMIJZRZG,AFE,Bottom,Bottom,16.0,29.5,14.0,29.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_OUT2,\QLOEDQON,AFE,Bottom,Bottom,16.0,31.3,14.0,31.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_SEL,\DMIZMQOS,AFE,Bottom,Bottom,13.5,21.7,11.9,21.7,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VA1,\RIFJGQGL,AFE,Bottom,Bottom,14.5,23.5,12.5,23.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VA2,\MVYFQFIQ,AFE,Bottom,Bottom,17.85,23.5,15.85,23.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VA3,\UBNLRAIB,AFE,Bottom,Bottom,21.2,23.5,19.2,23.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VA4,\ADWZPFZU,AFE,Bottom,Bottom,24.55,23.5,22.55,23.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VA5,\SHYIMMPG,AFE,Bottom,Bottom,27.9,23.5,25.9,23.5,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VB1,\LZLPZBNE,AFE,Bottom,Bottom,14.5,25.3,12.5,25.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VB2,\QVAUFHQD,AFE,Bottom,Bottom,17.85,25.3,15.85,25.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VB3,\OJYINECL,AFE,Bottom,Bottom,21.2,25.3,19.2,25.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VB4,\IHMMSDCU,AFE,Bottom,Bottom,24.55,25.3,22.55,25.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VB5,\GLRUZBWG,AFE,Bottom,Bottom,27.9,25.3,25.9,25.3,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VC1,\IHATGGJF,AFE,Bottom,Bottom,14.5,27.1,12.5,27.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VC2,\EAWUJWHA,AFE,Bottom,Bottom,17.85,27.1,15.85,27.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VC3,\XXOACUDZ,AFE,Bottom,Bottom,21.2,27.1,19.2,27.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VC4,\HGWJYRWC,AFE,Bottom,Bottom,24.55,27.1,22.55,27.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_DRL_VC5,\AGXVAPNG,AFE,Bottom,Bottom,27.9,27.1,25.9,27.1,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_EN,\HYXOCZMX,SUPERVISOR,Top,Bottom,31.0,42.5,27.6806,48.8,0,0,TPS3808 VSYS supervisor (CT open) with bypass and SYS_EN pull-up (R2 s6 Bottom candidate),sense node away from switching and clock coupling
+R_EN1_1,\TTIIGMKO,PB_CTRL,Top,Bottom,32.0,53.8,75.41,44.25,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+R_EN1_BIAS,\EAFZMWMK,CHARGER,Top,Top,22.9,42.0,22.9,38.4,90,90,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_EN_PD,\LCJTGOVC,PULLS_PWR,Top,Bottom,35.6,33.1,34.4,31.6,0,0,non-critical USB_PGOOD_N pull-up and AFE_EN pull-down (R2 s6 noncritical pulls),each kept near its IC
+R_INT_PULLUP,\KYNUZFOC,PB_CTRL,Top,Bottom,36.9,49.3,70.51,39.75,180,180,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+R_KILL_PU,\SCZGXJMM,PB_CTRL,Top,Bottom,36.9,53.0,70.51,43.45,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+R_LIM,\XBDBQAEM,CHARGER,Top,Top,26.0,46.3,26.0,42.7,180,180,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_MCU_BOOT0_PD,\VDIEWLTB,MCU,Top,Top,68.0,49.1,66.0,49.06,270,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+R_NRST,\QJKCHWBH,MCU,Top,Top,61.0,39.0,59.0,39.0,180,180,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+R_PGOOD,\EFWQJZYR,PULLS_PWR,Top,Bottom,24.2,42.1,27.5,38.6,90,90,non-critical USB_PGOOD_N pull-up and AFE_EN pull-down (R2 s6 noncritical pulls),each kept near its IC
+R_SCL,\ZJWQWTCI,GAUGE,Top,Bottom,25.0,37.8,19.86,36.575,0,0,"MAX17048 fuel gauge with CELL/VDD bypass, ALRT and I2C pull-ups (R2 s6 Bottom candidate)",battery sense kept short and quiet; not beneath LX/inductor or charger thermal pad
+R_SDA,\VKNWNXOB,GAUGE,Top,Bottom,25.0,38.8,19.86,37.575,0,0,"MAX17048 fuel gauge with CELL/VDD bypass, ALRT and I2C pull-ups (R2 s6 Bottom candidate)",battery sense kept short and quiet; not beneath LX/inductor or charger thermal pad
+R_SHDN_G,\QHLZMLVE,PB_CTRL,Top,Bottom,42.8,50.8,64.6099,41.25,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+R_SHDN_PD,\RXBFSGOA,PB_CTRL,Top,Bottom,42.8,52.0,64.6099,42.45,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+R_SPI_CS,\SNTSEMSL,MCU,Top,Top,71.4,30.05,69.4,30.05,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+R_SPI_MISO,\FDPXAZPM,WIFI,Top,Top,43.0,53.2,40.0,48.2,180,180,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_SPI_MOSI,\SJCHDUPS,MCU,Top,Top,70.0,30.05,68.0,30.05,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+R_SPI_SCK,\OHVPHCBD,MCU,Top,Top,68.6,30.05,66.6,30.05,90,90,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+R_TH_BAT,\ZLRLAHMN,BATTERY,Top,Top,14.2,38.7,20.7,33.9,0,0,battery header and remote-NTC wire termination,"Top, wire access"
+R_TMR,\QYGIVNSS,CHARGER,Top,Top,27.4,47.6,27.4,44.0,90,90,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_TS_BOTTOM,\IGQWSYEF,CHARGER,Top,Top,22.9,49.5,22.9,45.9,90,90,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_TS_SER,\NAFFNVVJ,CHARGER,Top,Top,22.5,48.2,22.5,44.6,0,0,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_TS_TOP,\XVULIBXW,CHARGER,Top,Top,22.0,49.6,22.0,46.0,90,90,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+R_VREF1,\QFKDQFCI,AFE,Top,Top,30.2,30.2,28.2,30.2,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_VREF2,\JMOUPRZI,AFE,Top,Top,32.0,31.4,30.0,31.4,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_VREF3,\JVORZKQG,AFE,Top,Top,33.8,31.4,31.8,31.4,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_VREF4,\AUHMVSOL,AFE,Top,Top,36.1,31.0,34.1,31.0,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_VREF5,\BBZTKGIX,AFE,Top,Top,37.4,30.2,35.4,30.2,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+R_WIFI_BOOT_OVR,\JHBKEAOF,SERVICE,Top,Bottom,80.5,23.0,81.2,13.5,0,0,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+R_WIFI_BOOT_PD,\RVSVFDEJ,WIFI,Top,Top,42.8,48.8,39.8,43.8,0,0,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_WIFI_CS_PD,\QTYCRYBX,WIFI,Top,Top,60.6,52.7,57.6,47.7,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_WIFI_EN_PD,\FVUSOYNM,WIFI,Top,Top,59.7,45.0,56.7,41.9,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_WIFI_UART_RX_LINK,\CIDDSZKB,SERVICE,Top,Top,82.0,29.0,78.5,29.2,0,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+R_WIFI_UART_TX_LINK,\RWADYVLY,SERVICE,Top,Top,82.0,32.0,78.5,31.0,0,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+R_WIFI_X32_IN,\AQDTTYJJ,WIFI,Top,Top,52.235,41.2,49.235,36.2,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_WIFI_X32_OUT,\HWQTGBHH,WIFI,Top,Top,50.965,41.2,47.965,36.2,90,90,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+R_ref,\RHCQBFUS,AFE,Top,Top,16.5,21.4,14.5,21.4,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Rservo_1,\PSZVEKRQ,AFE,Top,Top,20.2,24.2,18.2,24.2,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Rservo_2,\DEQBHYPW,AFE,Top,Top,37.2,23.2,35.2,23.2,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Rservo_3,\DDDUPUBM,AFE,Top,Top,46.8,28.8,44.8,28.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Rservo_4,\CUKOCDYB,AFE,Top,Top,58.4,20.8,56.4,20.8,180,180,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+Rservo_5,\UKEROLLK,AFE,Top,Top,68.8,27.6,66.8,27.6,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+TP_GND,\MHVJUVGG,SERVICE,Top,Top,86.0,26.0,80.5,20.9,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+TP_MCU_BOOT0,\NNKBKDEF,SERVICE,Top,Top,82.0,20.0,83.0,20.9,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+TP_WIFI_BOOT,\EJNJMUWS,SERVICE,Top,Top,86.0,23.0,83.0,27.2,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+TP_WIFI_CHIP_EN,\AWUTTQUS,SERVICE,Top,Top,86.0,20.0,83.0,24.05,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+TP_WIFI_UART_RX,\YLIAAGMA,SERVICE,Top,Top,86.0,32.0,80.5,27.2,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+TP_WIFI_UART_TX,\VIKGRCCI,SERVICE,Top,Top,86.0,29.0,80.5,24.05,90,90,"SWD header, radio boot jumper, UART recovery links and 5021 test points",accessible edge
+U1,\QOKRMXJP,AFE,Top,Top,25.0,27.0,23.0,27.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+U2,\CKMXBZMJ,AFE,Top,Top,42.0,26.0,40.0,26.0,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+U3,\KZGSLJKL,AFE,Top,Top,64.0,24.8,62.0,24.8,0,0,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+UP1,\YKMTSZTB,CHARGER,Top,Top,23.0,45.0,23.0,41.4,0,0,BQ24072T charger cell with ISET/ILIM/TMR/TS network and charge LED,"Top, coherent"
+UP2,\EVAFRUDB,CONVERTER,Top,Top,34.0,45.0,34.0,40.75,270,270,TPS631000 switching cell,"Top, unchanged internally"
+UP3,\ENLJXAQB,LDO,Top,Top,38.5,34.4,36.5,33.6,0,0,TPS7A2030 with its capacitors,"Top, power/analog boundary"
+UP4,\ZDTOIZKI,GAUGE,Top,Bottom,22.6,37.5,22.2599,36.275,0,0,"MAX17048 fuel gauge with CELL/VDD bypass, ALRT and I2C pull-ups (R2 s6 Bottom candidate)",battery sense kept short and quiet; not beneath LX/inductor or charger thermal pad
+U_DRL1,\CFETKXYL,AFE,Bottom,Bottom,22.0,31.0,20.0,31.0,90,90,five AFE channels + shared references + DNP DRL provision (bottom),analog feedback groups unchanged internally
+U_EN1,\DVFTQBLP,PB_CTRL,Top,Bottom,34.0,51.2,73.41,41.65,0,0,"LTC2954 pushbutton controller with its timing caps, kill/interrupt pull-ups and Q_SHDN shutdown switch (R2 s6 Bottom candidate)",timing nodes kept local to U_EN1; keep away from LX/inductor on Bottom; PWR_BTN_N stays Top for actuation
+U_MCU1,\FKRKTDLG,MCU,Top,Top,71.0,39.5,69.0,39.5,0,0,"STM32U575 with VCAP/VDD/VDDA/VREF bypass, NRST, BOOT0, SPI source resistors",Top
+U_UV1,\WHQRJQJM,SUPERVISOR,Top,Bottom,30.0,38.2,28.6806,44.5,0,0,TPS3808 VSYS supervisor (CT open) with bypass and SYS_EN pull-up (R2 s6 Bottom candidate),sense node away from switching and clock coupling
+U_WIFI1,\SHCDGROH,WIFI,Top,Top,50.0,50.8,47.0,45.8,0,0,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"
+X_WIFI_32K,\YXUYAHMA,WIFI,Top,Top,51.6,39.3,48.6,34.3,180,180,"ST67 module, supply decoupling, 32 kHz crystal network","Top, antenna edge"

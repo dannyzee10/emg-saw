@@ -1,0 +1,2 @@
+ADC_EMG3 | no path | Pad R_ADC3-2(62mm,31.235mm) on L1 TOP | Pad U_MCU1-25(63.262mm,33.5mm) on L1 TOP [Unplated]
+VOUT_1 | no path | Pad Free-TP_VOUT_1(58.25mm,33.75mm) on L1 TOP | Pad R_ADC1-1(62mm,33.665mm) on L1 TOP

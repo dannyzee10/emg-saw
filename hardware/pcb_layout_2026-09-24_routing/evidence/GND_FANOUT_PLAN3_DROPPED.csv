@@ -1,0 +1,3 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h
+TRACK,U_WIFI1-32,GND,Top Layer,45.4615,54.016,45.035,54.016,0.3,,
+VIA,U_WIFI1-32,GND,Multi Layer,45.035,54.016,,,,0.6,0.3

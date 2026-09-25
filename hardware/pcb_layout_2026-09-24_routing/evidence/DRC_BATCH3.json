@@ -1,0 +1,850 @@
+{
+ "total": "355",
+ "summary": [
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_2-1')),(IsPad And (Name = 'RH_2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_1-1')),(IsPad And (Name = 'RH_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC2-1')),(IsPad And (Name = 'R_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_5-1')),(IsPad And (Name = 'RH_5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_4-1')),(IsPad And (Name = 'RH_4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_3-1')),(IsPad And (Name = 'RH_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'R_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA5_7') And InRegionAbsolute(2892.711784,821.845684,2956.692916,885.826816)),(IsPad And (Name = 'INA5-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA1_7') And InRegionAbsolute(845.467684,821.845684,909.448816,885.826816)),(IsPad And (Name = 'INA1-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-25'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VBAT-1')),(IsPad And (Name = 'C_VBAT-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_UV_BYPASS-1')),(IsPad And (Name = 'C_UV_BYPASS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD5-1')),(IsPad And (Name = 'C_MCU_VDD5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C3_MCU-1')),(IsPad And (Name = 'C3_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C1_MCU-1')),(IsPad And (Name = 'C1_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VDDUSB-1')),(IsPad And (Name = 'C_VDDUSB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD1-1')),(IsPad And (Name = 'C_MCU_VDD1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('ADC_EMG5') And InRegionAbsolute(2610.236184,1130.826784,2635.826816,1218.503916)),(IsPad And (Name = 'U_MCU1-30'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(674.212584,922.244084,879.921316,937.992116)),(IsPad And (Name = 'Rservo_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD4-1')),(IsPad And (Name = 'C_MCU_VDD4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD3-1')),(IsPad And (Name = 'C_MCU_VDD3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD2-1')),(IsPad And (Name = 'C_MCU_VDD2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetCL_1_1') And InRegionAbsolute(588.582684,1151.574884,732.283516,1167.322916)),(IsPad And (Name = 'CL_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC1')),(IsPad And InComponent('J_FPC1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP4')),(IsPad And InComponent('UP4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP2')),(IsPad And InComponent('UP2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC4')),(IsPad And InComponent('J_FPC4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC3')),(IsPad And InComponent('J_FPC3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC2')),(IsPad And InComponent('J_FPC2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_ANALOG') Or InNetClass('EMG_ADC') Or InNetClass('EMG_REFERENCE')),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (All),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP1')),(IsPad And InComponent('UP1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('U_MCU1')),(IsPad And InComponent('U_MCU1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_POWER')),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC5')),(IsPad And InComponent('J_FPC5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC3-1')),(IsPad And (Name = 'C_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC2-1')),(IsPad And (Name = 'C_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC1-1')),(IsPad And (Name = 'C_ADC1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv_1-1')),(IsPad And (Name = 'Cdiv_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC5-1')),(IsPad And (Name = 'C_ADC5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC4-1')),(IsPad And (Name = 'C_ADC4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_SHDN_G-1')),(IsPad And (Name = 'R_SHDN_G-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A1_B12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B1_A12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsVia And InNet('GND') And InRegionAbsolute(2657.086299,1201.456299,2657.873701,1202.243701)),(IsPad And (Name = 'U_MCU1-31'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1316.929116,1816.929116)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1360.236284,1792.716484,1448.818916,1815.975616)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(1320.866184,1792.716484,1336.614216,1844.488116)),(IsPad And (Name = 'UP2-4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116)),(IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1340.551184,1792.716484,1448.818916,1844.488116))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116)),(IsTrack And InNet('NetL1_1') And InRegionAbsolute(1228.346484,1792.716484,1336.614216,1844.488116))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1340.551184,1792.716484,1356.299216,1844.488116)),(IsPad And (Name = 'UP2-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RUP_3-1')),(IsPad And (Name = 'RUP_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_KILL_PU-1')),(IsPad And (Name = 'R_KILL_PU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1416.478916,1815.975616)),(IsPad And (Name = 'RUP_3-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(952.755784,1753.936984,1009.842516,1779.527516)),(IsPad And (Name = 'UP1-9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VBAT_CELL') And InRegionAbsolute(811.023584,1773.622084,858.267616,1789.370116)),(IsPad And (Name = 'UP1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0mm) (IsPad And InComponent('U_WIFI1') And ((Name = 'U_WIFI1-25') Or (Name = 'U_WIFI1-26') Or (Name = 'U_WIFI1-27') Or (Name = 'U_WIFI1-28') Or (Name = 'U_WIFI1-29') Or (Name = 'U_WIFI1-30') Or (Name = 'U_WIFI1-31') Or (Name = 'U_WIFI1-32'))),(IsRegion And OnLayer('Keep-Out Layer') And InRegionAbsolute(1739.72440945,2143.26771654,2223.26771654,2340.19685039))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP4')),(IsTrack And InRegionAbsolute(796.6535,1402.1654,982.8740,1550.5906))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_DRL1')),(IsTrack And InRegionAbsolute(750.0000,1131.8898,982.2835,1309.0551))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP2')),(IsTrack And InRegionAbsolute(1263.3858,1690.3543,1413.7795,1852.9528))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_MCU1')),(IsTrack And InRegionAbsolute(2422.2244,1182.0669,3168.3268,1928.1693))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP1')),(IsTrack And InRegionAbsolute(799.2126,1665.3543,1011.8110,1877.9528))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('C_DRL_DEC')),(IsTrack And InRegionAbsolute(698.8189,1125.9843,797.2441,1251.9685))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(2244.0945,409.4488,2523.6220,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2755.9055,409.4488,3035.4331,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1732.2835,409.4488,2011.8110,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(708.6614,409.4488,988.1890,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1220.4724,409.4488,1500.0000,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_INT_PULLUP-1')),(IsPad And (Name = 'R_INT_PULLUP-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU4-1')),(IsPad And (Name = 'CCU4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CUP4_FB-1')),(IsPad And (Name = 'CUP4_FB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU1-1')),(IsPad And (Name = 'CCU1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.566984,1633.858284,1412.992216,1815.975616)),(IsPad And (Name = 'CUP4_FB-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU10-1')),(IsPad And (Name = 'CCU10-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU6_1-1')),(IsPad And (Name = 'CU6_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv-1')),(IsPad And (Name = 'Cdiv-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU8-1')),(IsPad And (Name = 'CCU8-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_11-1')),(IsPad And (Name = 'CU_11-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_14-1')),(IsPad And (Name = 'CU_14-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_12-1')),(IsPad And (Name = 'CU_12-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU6-1')),(IsPad And (Name = 'CCU6-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-22'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B4_A9')),(IsPad And (Name = 'J_USB_C-B5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_AL-1')),(IsPad And (Name = 'R_AL-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_EN1_BIAS-1')),(IsPad And (Name = 'R_EN1_BIAS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_EN1_1-1')),(IsPad And (Name = 'R_EN1_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B1_A12')),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1735.826598,633.858402,1737.401402)),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1389.341784,1633.858284,1405.315016,1815.975616)),(IsPad And (Name = 'CUP4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1963.385598,633.858402,1964.960402)),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A4_B9')),(IsPad And (Name = 'J_USB_C-B8'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A1_B12')),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Short-Circuit Constraint (Allowed=No) (All),(All)",
+   0
+  ],
+  [
+   "Un-Routed Net Constraint ( (All) )",
+   344
+  ],
+  [
+   "Modified Polygon (Allow modified: No), (Allow shelved: No)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (All)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_CRYSTAL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.18mm) (InNetClass('EMG_SPI'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_GND'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.2mm) (Max=1.5mm) (Preferred=0.3mm) (InNetClass('EMG_SWITCH'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.25mm) (InNetClass('EMG_POWER'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_CONTROL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_ADC'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_REFERENCE'))",
+   0
+  ],
+  [
+   "Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)",
+   0
+  ],
+  [
+   "Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)",
+   0
+  ],
+  [
+   "Hole To Hole Clearance (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)",
+   0
+  ],
+  [
+   "Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)",
+   1
+  ],
+  [
+   "Silk to Silk (Clearance=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Net Antennae (Tolerance=0mm) (All)",
+   10
+  ],
+  [
+   "Board Clearance Constraint (Gap=0mm) (All)",
+   0
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = 0.5mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)",
+   0
+  ]
+ ],
+ "details": [
+  "Un-Routed Net Constraint: Net ADC_EMG2 Between Pad C_ADC2-1(60.777mm,32.45mm) on L1 TOP And Pad R_ADC2-2(62mm,32.885mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net ADC_EMG3 Between Pad C_ADC3-1(60.777mm,30.8mm) on L1 TOP And Pad R_ADC3-2(62mm,31.235mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net ADC_EMG4 Between Pad R_ADC4-2(63.235mm,29.4mm) on L1 TOP And Pad C_ADC4-1(64.6mm,29.877mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net ADC_EMG4 Between Pad C_ADC4-1(64.6mm,29.877mm) on L1 TOP And Pad U_MCU1-26(65mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C_DRL_DEC-1(19mm,29.8mm) on L4 BOTTOM GND And Pad Cdiv-2(20.979mm,30mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_FB-1(25.45mm,29.475mm) on L4 BOTTOM GND And Pad C_DRL_FB-1(25.45mm,32.65mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad U_DRL1-4(23.4mm,31.95mm) on L4 BOTTOM GND And Pad C_DRL_FB-1(25.45mm,32.65mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_AMP_OUT Between Pad R_DRL_FB-2(25.45mm,30.925mm) on L4 BOTTOM GND And Pad C_DRL_FB-2(25.45mm,33.45mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_MCU_VDD4-1(80.321mm,45.5mm) on L1 TOP And Pad C_MCU_BULK-1(82.1mm,47.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_VDD33-1(56.8mm,41.45mm) on L1 TOP And Pad C_MCU_VDD1-2(61.579mm,40.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_NRST-2(60.5mm,39mm) on L1 TOP And Pad C_MCU_VDD1-2(61.579mm,40.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_MCU_VDD1-2(61.579mm,40.5mm) on L1 TOP And Pad U_MCU1-11(63.262mm,40.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_MCU_VDD2-2(66mm,30.079mm) on L1 TOP And Pad U_MCU1-28(66mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_MCU_VDD3-2(78mm,30.279mm) on L1 TOP And Pad R_WIFI_BOOT_OVR-1(80.065mm,23mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-50(77mm,31.762mm) on L1 TOP [Unplated] And Pad C_MCU_VDD3-2(78mm,30.279mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_VDDUSB-1(80.321mm,44.1mm) on L1 TOP And Pad C_MCU_VDD4-1(80.321mm,45.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-75(78.738mm,45.5mm) on L1 TOP [Unplated] And Pad C_MCU_VDD4-1(80.321mm,45.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_BULK-2(59.5mm,49.226mm) on L1 TOP And Pad C_MCU_VDD5-1(65mm,48.721mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-100(65mm,47.238mm) on L1 TOP [Unplated] And Pad C_MCU_VDD5-1(65mm,48.721mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad C_OUT_-1(25.45mm,45mm) on L1 TOP And Pad Free-TP_VSYS(25.5mm,43.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad U_UV1-6(31.275mm,39.15mm) on L1 TOP And Pad C_UV_BYPASS-1(32.321mm,39.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_VBAT-2(61.579mm,43mm) on L1 TOP And Pad U_MCU1-6(63.262mm,43mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VBUS Between Pad D_VBUS-1(18.5mm,40.9mm) on L1 TOP And Pad C_VBUS-2(19.1mm,44.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBUS Between Pad J_USB_C-B4_A9(17.155mm,44.6mm) on L1 TOP And Pad C_VBUS-2(19.1mm,44.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_VDDUSB-1(80.321mm,44.1mm) on L1 TOP And Pad J_SWD-1(86mm,38mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_VDDIO2-2(57.2mm,51.8mm) on L1 TOP And Pad C_WIFI_BULK-2(59.5mm,49.226mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_CHIP_EN Between Pad C_WIFI_EN-1(57.821mm,43.855mm) on L1 TOP And Pad R_WIFI_EN_PD-1(59.7mm,44.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_CHIP_EN Between Pad U_WIFI1-17(56.046mm,43.855mm) on L1 TOP [Unplated] And Pad C_WIFI_EN-1(57.821mm,43.855mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Track (54.775mm,41.475mm)(54.775mm,42.584mm) on L1 TOP And Pad C_WIFI_VDD33-1(56.8mm,41.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_VDDIO1-2(44mm,41.45mm) on L1 TOP And Pad C_WIFI_VDDIO1_HF-1(45.885mm,41.475mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_VDDIO1_HF-1(45.885mm,41.475mm) on L1 TOP And Track (54.775mm,41.475mm)(54.775mm,42.584mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Track (35.489mm,42.7mm)(35.779mm,42.7mm) on L1 TOP And Pad C_WIFI_VDDIO1-2(44mm,41.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad C_WIFI_VDDIO2-2(57.2mm,51.8mm) on L1 TOP And Pad C_WIFI_VDDIO2_HF-2(57.225mm,53.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetC_WIFI_X32_IN_2 Between Pad C_WIFI_X32_IN-2(52.85mm,37.779mm) on L1 TOP And Pad X_WIFI_32K-1(52.85mm,39.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetC_WIFI_X32_OUT_2 Between Pad C_WIFI_X32_OUT-2(50.35mm,37.779mm) on L1 TOP And Pad X_WIFI_32K-2(50.35mm,39.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetC1_EN1_2 Between Pad C1_EN1-2(32.179mm,52.9mm) on L1 TOP And Pad R_EN1_1-2(32.479mm,53.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetC1_EN1_2 Between Pad C1_EN1-2(32.179mm,52.9mm) on L1 TOP And Pad U_EN1-1(32.69mm,52.175mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C2_MCU-2(59.9mm,37.1mm) on L1 TOP And Pad C1_MCU-1(61.879mm,37.1mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C3_MCU-1(61.879mm,35.8mm) on L1 TOP And Pad C1_MCU-1(61.879mm,37.1mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetC2_EN1_1 Between Pad C2_EN1-1(32.4mm,49.5mm) on L1 TOP And Pad U_EN1-3(32.69mm,50.875mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C4_MCU-2(59.9mm,35.8mm) on L1 TOP And Pad C2_MCU-2(59.9mm,37.1mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetC3_EN1_2 Between Pad U_EN1-7(35.31mm,51.525mm) on L1 TOP And Pad C3_EN1-2(36.6mm,51.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad C3_MCU-1(61.879mm,35.8mm) on L1 TOP And Pad U_MCU1-21(63.262mm,35.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_14-2(59.679mm,24.8mm) on L1 TOP And Pad C4_MCU-2(59.9mm,35.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CCU9-2(76.15mm,19.55mm) on L1 TOP And Pad CCU10-1(76.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CCU2-2(24.15mm,19.55mm) on L1 TOP And Pad CCU1-1(24.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CCU3-2(37.15mm,19.55mm) on L1 TOP And Pad CCU4-1(37.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad INA2-5(35.975mm,20.55mm) on L1 TOP And Pad CCU4-1(37.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CCU5-2(50.15mm,19.55mm) on L1 TOP And Pad CCU6-1(50.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad INA3-5(48.975mm,20.55mm) on L1 TOP And Pad CCU6-1(50.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CCU7-2(63.15mm,19.55mm) on L1 TOP And Pad CCU8-1(63.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad INA4-5(61.975mm,20.55mm) on L1 TOP And Pad CCU8-1(63.171mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VDiv Between Pad Cdiv_1-2(29.521mm,25mm) on L1 TOP And Pad Cdiv_10uF-2(31.25mm,24.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VDiv Between Pad RV1-1(30.7mm,26mm) on L1 TOP And Pad Cdiv_10uF-2(31.25mm,24.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VDiv Between Pad U1-10(27.85mm,26.35mm) on L1 TOP And Pad Cdiv_1-2(29.521mm,25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_11-2(20.679mm,27mm) on L1 TOP And Pad Cdiv-2(20.979mm,30mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad Cdiv-2(20.979mm,30mm) on L1 TOP And Pad U_DRL1-5(23.4mm,30.05mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net NetCH_1_2 Between Pad RGN_1-2(19.4mm,29.9mm) on L1 TOP And Pad CH_1-2(19.5mm,28.193mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_2 Between Pad CH_2-1(36.5mm,28.057mm) on L1 TOP And Pad RG_2-2(37.5mm,28.125mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_2_2 Between Pad CH_2-2(36.5mm,27.193mm) on L1 TOP And Pad RG_2-1(37.5mm,27.125mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_2_2 Between Pad RGN_2-2(36.4mm,28.9mm) on L1 TOP And Pad CH_2-2(36.5mm,27.193mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Pad CH_3-1(47.5mm,23.943mm) on L1 TOP And Pad Free-TP_VOUT_3(58.75mm,29.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Pad RG_3-2(46.5mm,23.875mm) on L1 TOP And Pad CH_3-1(47.5mm,23.943mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_3_2 Between Pad RG_3-1(46.5mm,24.875mm) on L1 TOP And Pad CH_3-2(47.5mm,24.807mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_3_2 Between Pad CH_3-2(47.5mm,24.807mm) on L1 TOP And Pad RGN_3-2(48.4mm,23.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_4 Between Pad Free-TP_VOUT_4(57.25mm,31.25mm) on L1 TOP And Pad CH_4-1(58.5mm,26.857mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_4 Between Pad CH_4-1(58.5mm,26.857mm) on L1 TOP And Pad RG_4-2(59.5mm,26.925mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_4_2 Between Pad CH_4-2(58.5mm,25.993mm) on L1 TOP And Pad RG_4-1(59.5mm,25.925mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_4_2 Between Pad RGN_4-2(58.4mm,27.7mm) on L1 TOP And Pad CH_4-2(58.5mm,25.993mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_5 Between Pad R_ADC5-1(69.435mm,28.5mm) on L1 TOP And Pad CH_5-1(69.5mm,22.743mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_5 Between Pad RG_5-2(68.5mm,22.675mm) on L1 TOP And Pad CH_5-1(69.5mm,22.743mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_5_2 Between Pad RG_5-1(68.5mm,23.675mm) on L1 TOP And Pad CH_5-2(69.5mm,23.607mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_5_2 Between Pad CH_5-2(69.5mm,23.607mm) on L1 TOP And Pad RGN_5-2(69.6mm,21.9mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_1 Between Pad CL_1-2(17.05mm,30.5mm) on L1 TOP And Pad Rservo_1-2(19.775mm,24.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCL_2_1 Between Pad CL_2-1(32.15mm,29.5mm) on L1 TOP And Pad RGN_2-1(35.4mm,28.9mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_2 Between Pad RH_2-1(33.921mm,21.75mm) on L1 TOP And Pad CL_2-2(34.05mm,29.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCL_3_1 Between Pad RGN_3-1(49.4mm,23.7mm) on L1 TOP And Pad CL_3-1(52.65mm,23.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_3 Between Pad RH_3-1(46.921mm,21.75mm) on L1 TOP And Pad CL_3-2(50.75mm,23.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCL_4_1 Between Pad CL_4-1(54.15mm,28.3mm) on L1 TOP And Pad RGN_4-1(57.4mm,27.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_4 Between Pad CL_4-2(56.05mm,28.3mm) on L1 TOP And Pad RH_4-1(58.721mm,21.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCL_5_1 Between Pad RGN_5-1(70.6mm,21.9mm) on L1 TOP And Pad CL_5-1(71.45mm,20.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_5 Between Pad CL_5-2(69.55mm,20.5mm) on L1 TOP And Pad INA5-8(73.025mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_5 Between Pad Rservo_5-2(69.225mm,27.6mm) on L1 TOP And Pad CL_5-2(69.55mm,20.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCservo_2_1 Between Pad Cservo_2-1(37.275mm,24.7mm) on L1 TOP [Unplated] And Pad Rservo_2-1(37.625mm,23.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCservo_2_1 Between Pad Cservo_2-1(37.275mm,24.7mm) on L1 TOP [Unplated] And Pad U2-6(39.15mm,24.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_2 Between Pad Cservo_2-2(34.325mm,24.7mm) on L1 TOP [Unplated] And Pad INA2-6(35.325mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_2 Between Pad Cservo_2-2(34.325mm,24.7mm) on L1 TOP [Unplated] And Pad U2-7(39.15mm,24.05mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCservo_3_1 Between Pad Rservo_3-1(46.375mm,28.8mm) on L1 TOP And Pad Cservo_3-1(46.725mm,27.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetCservo_3_1 Between Pad U2-13(44.85mm,27.3mm) on L1 TOP And Pad Cservo_3-1(46.725mm,27.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net Vservo_3 Between Pad INA3-6(48.325mm,20.55mm) on L1 TOP And Pad Cservo_3-2(49.675mm,27.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net Vservo_3 Between Pad U2-14(44.85mm,27.95mm) on L1 TOP And Pad Cservo_3-2(49.675mm,27.3mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetCservo_4_1 Between Pad Rservo_4-1(58.825mm,20.8mm) on L1 TOP And Pad Cservo_4-1(59.275mm,23.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetCservo_4_1 Between Pad Cservo_4-1(59.275mm,23.5mm) on L1 TOP [Unplated] And Pad U3-6(61.15mm,23.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_4 Between Pad Cservo_4-2(56.325mm,23.5mm) on L1 TOP [Unplated] And Pad U3-7(61.15mm,22.85mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCservo_5_1 Between Pad Rservo_5-1(68.375mm,27.6mm) on L1 TOP And Pad Cservo_5-1(68.725mm,26.1mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetCservo_5_1 Between Pad U3-13(66.85mm,26.1mm) on L1 TOP And Pad Cservo_5-1(68.725mm,26.1mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net Vservo_5 Between Pad Cservo_5-2(71.675mm,26.1mm) on L1 TOP [Unplated] And Pad INA5-6(74.325mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_5 Between Pad U3-14(66.85mm,26.75mm) on L1 TOP And Pad Cservo_5-2(71.675mm,26.1mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_21-1(19.1mm,27mm) on L1 TOP And Pad CU_11-2(20.679mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_11-2(20.679mm,27mm) on L1 TOP And Pad U1-4(22.15mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_22-1(36.1mm,26mm) on L1 TOP And Pad CU_12-2(37.679mm,26mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_12-2(37.679mm,26mm) on L1 TOP And Pad U2-4(39.15mm,26mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_24-1(58.1mm,24.8mm) on L1 TOP And Pad CU_14-2(59.679mm,24.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CU_14-2(59.679mm,24.8mm) on L1 TOP And Pad U3-4(61.15mm,24.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad INA2-5(35.975mm,20.55mm) on L1 TOP And Pad CU_22-1(36.1mm,26mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad RV2-1(29.7mm,27mm) on L1 TOP And Pad CU_22-1(36.1mm,26mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBAT_CELL Between Pad J_Li-Po-3(17.08mm,34.8mm) on Multi-Layer And Pad CU6_1-2(20.579mm,37.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBAT_CELL Between Pad CU6_1-2(20.579mm,37.2mm) on L1 TOP And Pad UP4-3(21.615mm,37.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_EN-1(30.5mm,42.5mm) on L1 TOP And Pad CUP4_1-1(31.4mm,45.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad CUP4_1-1(31.4mm,45.95mm) on L1 TOP And Pad R_EN1_1-1(31.521mm,53.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad CUP5_1-1(36.3mm,35.4mm) on L1 TOP And Pad CUP5_5-1(36.45mm,37mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad CUP5_1-1(36.3mm,35.4mm) on L1 TOP And Pad UP3-1(37.45mm,35.35mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad CUP5_2-2(40.8mm,35.4mm) on L1 TOP And Pad CUP5_3-2(41.05mm,33.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad Free-TP_3V0_ANA(40.75mm,36.5mm) on L1 TOP And Pad CUP5_2-2(40.8mm,35.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad UP3-5(39.55mm,35.35mm) on L1 TOP And Pad CUP5_2-2(40.8mm,35.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad U2-4(39.15mm,26mm) on L1 TOP And Pad CUP5_3-2(41.05mm,33.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_AL-2(25.676mm,36.7mm) on L1 TOP And Pad CUP5_5-1(36.45mm,37mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Track (35.489mm,42.7mm)(35.779mm,42.7mm) on L1 TOP And Pad CUP5_5-1(36.45mm,37mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetD_CC_ESD_1 Between Pad J_USB_C-A5(17.155mm,48.25mm) on L1 TOP And Pad D_CC_ESD-1(20.9mm,47.55mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetD_CC_ESD_2 Between Pad J_USB_C-B5(17.155mm,45.25mm) on L1 TOP And Pad D_CC_ESD-2(20.9mm,49.45mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net NetD_CC_ESD_2 Between Pad RJ2-2(19.325mm,51.7mm) on L1 TOP And Pad D_CC_ESD-2(20.9mm,49.45mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad Free-TP_3V3_DIG(36.5mm,47.5mm) on L1 TOP And Pad R_INT_PULLUP-1(37.376mm,49.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad UP2-1(34.75mm,45.735mm) on L1 TOP And Pad Free-TP_3V3_DIG(36.5mm,47.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBAT_CELL Between Pad Free-TP_VBAT_CELL(17mm,33.25mm) on L1 TOP And Pad J_Li-Po-3(17.08mm,34.8mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net VBUS Between Track (24.017mm,47.033mm)(24.15mm,47.35mm) on L1 TOP And Pad Free-TP_VBUS(26.25mm,47.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_1 Between Pad Free-TP_VOUT_1(58.25mm,33.75mm) on L1 TOP And Pad R_ADC1-1(62mm,33.665mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_1 Between Pad U1-1(22.15mm,28.95mm) on L1 TOP And Pad Free-TP_VOUT_1(58.25mm,33.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_2 Between Pad Free-TP_VOUT_2(61.25mm,29.25mm) on L1 TOP And Pad R_ADC2-1(62mm,32.015mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_2 Between Pad U2-1(39.15mm,27.95mm) on L1 TOP And Pad Free-TP_VOUT_2(61.25mm,29.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Pad Free-TP_VOUT_3(58.75mm,29.25mm) on L1 TOP And Pad R_ADC3-1(62mm,30.365mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_5 Between Pad R_ADC5-1(69.435mm,28.5mm) on L1 TOP And Pad Free-TP_VOUT_5(70.5mm,28.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad RL_1-2(23.9mm,22.3mm) on L1 TOP And Pad Free-TP_VREF_A(27.75mm,23.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad Free-TP_VREF_A(27.75mm,23.75mm) on L1 TOP And Pad RL_2-2(36.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad Free-TP_VREF_A(27.75mm,23.75mm) on L1 TOP And Pad U1-8(27.85mm,25.05mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad Free-TP_VREF_B_SRC(27.75mm,30.25mm) on L1 TOP And Pad R_VREF1-1(30.2mm,29.688mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad U_DRL1-3(20.6mm,31.95mm) on L4 BOTTOM GND And Pad Free-TP_VREF_B_SRC(27.75mm,30.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad Free-TP_VREF_B_SRC(27.75mm,30.25mm) on L1 TOP And Pad U1-14(27.85mm,28.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad Free-TP_VSYS(25.5mm,43.5mm) on L1 TOP And Pad R_EN-1(30.5mm,42.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_EN1_BIAS-1(22.9mm,41.524mm) on L1 TOP And Pad Free-TP_VSYS(25.5mm,43.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA1_2 Between Pad INA1-2(21.675mm,15.85mm) on L1 TOP And Pad RDD2-2(28.3mm,15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA1_3 Between Pad INA1-3(22.325mm,15.85mm) on L1 TOP And Pad RDD1-2(28.312mm,16.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad U1-4(22.15mm,27mm) on L1 TOP And Pad INA1-5(22.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (19.88mm,13.23mm)(20.565mm,13.23mm) on L1 TOP And Pad INA1-5(22.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_1 Between Pad U1-7(22.15mm,25.05mm) on L1 TOP And Pad INA1-6(22.325mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA2_2 Between Pad INA2-2(34.675mm,15.85mm) on L1 TOP And Pad RDD5-2(41.3mm,15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA2_3 Between Pad INA2-3(35.325mm,15.85mm) on L1 TOP And Pad RDD4-2(41.312mm,16.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (32.88mm,13.23mm)(33.565mm,13.23mm) on L1 TOP And Pad INA2-5(35.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA2_7 Between Pad INA2-7(34.675mm,20.55mm) on L1 TOP And Pad RH_2-2(34.879mm,21.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_2 Between Pad RH_2-1(33.921mm,21.75mm) on L1 TOP And Pad INA2-8(34.025mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA3_2 Between Pad INA3-2(47.675mm,15.85mm) on L1 TOP And Pad RDD8-2(54.3mm,15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA3_3 Between Pad INA3-3(48.325mm,15.85mm) on L1 TOP And Pad RDD7-2(54.312mm,16.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (45.88mm,13.23mm)(46.565mm,13.23mm) on L1 TOP And Pad INA3-5(48.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA3_7 Between Pad INA3-7(47.675mm,20.55mm) on L1 TOP And Pad RH_3-2(47.879mm,21.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_3 Between Pad RH_3-1(46.921mm,21.75mm) on L1 TOP And Pad INA3-8(47.025mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA4_2 Between Pad INA4-2(60.675mm,15.85mm) on L1 TOP And Pad RDD11-2(67.3mm,15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA4_3 Between Pad INA4-3(61.325mm,15.85mm) on L1 TOP And Pad RDD10-2(67.312mm,16.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad U3-4(61.15mm,24.8mm) on L1 TOP And Pad INA4-5(61.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (58.88mm,13.23mm)(59.565mm,13.23mm) on L1 TOP And Pad INA4-5(61.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vservo_4 Between Pad U3-7(61.15mm,22.85mm) on L1 TOP And Pad INA4-6(61.325mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA4_7 Between Pad INA4-7(60.675mm,20.55mm) on L1 TOP And Pad RL_4-1(61.7mm,21.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_4 Between Pad Rservo_4-2(57.975mm,20.8mm) on L1 TOP And Pad INA4-8(60.025mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA5_2 Between Pad INA5-2(73.675mm,15.85mm) on L1 TOP And Pad RDD14-2(79.9mm,15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA5_3 Between Pad INA5-3(74.325mm,15.85mm) on L1 TOP And Pad RDD13-2(79.912mm,16.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (71.88mm,13.23mm)(72.565mm,13.23mm) on L1 TOP And Pad INA5-5(74.975mm,20.55mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad J_Li-Po-2(14.54mm,34.8mm) on Multi-Layer And Pad R_TH_BAT-2(15.47mm,38.7mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net NetJ_REF_1 Between Pad J_REF-1(12.5mm,19mm) on Multi-Layer And Pad J_REF-2(15.04mm,19mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net NetJ_REF_1 Between Pad R_DRL_SEL-2(14.225mm,21.7mm) on L4 BOTTOM GND And Pad J_REF-2(15.04mm,19mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net MCU_SWDIO Between Pad U_MCU1-72(78.738mm,44mm) on L1 TOP [Unplated] And Pad J_SWD-2(86mm,40.54mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net MCU_SWCLK Between Pad U_MCU1-76(77mm,47.238mm) on L1 TOP [Unplated] And Pad J_SWD-4(86mm,45.62mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net MCU_NRST Between Pad R_NRST-1(61.5mm,39mm) on L1 TOP And Pad J_SWD-5(86mm,48.16mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net VBUS Between Pad J_USB_C-B4_A9(17.155mm,44.6mm) on L1 TOP And Pad J_USB_C-A4_B9(17.155mm,49.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBUS Between Pad J_USB_C-A4_B9(17.155mm,49.4mm) on L1 TOP And Pad R_TS_TOP-2(22mm,50.025mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetD_CC_ESD_1 Between Pad J_USB_C-A5(17.155mm,48.25mm) on L1 TOP And Pad RJ1-2(19.325mm,50.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetJP_WIFI_BOOT_1 Between Pad R_WIFI_BOOT_OVR-2(80.935mm,23mm) on L1 TOP And Pad JP_WIFI_BOOT-1(82.3mm,17.4mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net WIFI_BOOT Between Pad JP_WIFI_BOOT-2(84.84mm,17.4mm) on Multi-Layer And Pad TP_WIFI_BOOT-TP(86mm,23mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net NetLED_CHG_A Between Pad LED_CHG-A(20.9mm,53mm) on L1 TOP And Pad R_CHG_LED-2(23.3mm,53mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetLED_CHG_C Between Pad LED_CHG-C(19.1mm,53mm) on L1 TOP And Pad UP1-9(24.4mm,44.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetPWR_BTN_N_A Between Pad PWR_BTN_N-A(24.3mm,53.075mm) on L1 TOP And Pad PWR_BTN_N-B(30.3mm,53.075mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetPWR_BTN_N_A Between Pad PWR_BTN_N-B(30.3mm,53.075mm) on L1 TOP And Pad U_EN1-2(32.69mm,51.525mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetQ_SHDN_1 Between Pad Q_SHDN-1(40.91mm,50.55mm) on L1 TOP And Pad R_SHDN_G-1(42.324mm,50.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net KILL_CTRL Between Pad R_KILL_PU-1(36.424mm,53mm) on L1 TOP And Pad Q_SHDN-3(39.09mm,51.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net ADC_EMG2 Between Pad R_ADC2-2(62mm,32.885mm) on L1 TOP And Pad U_MCU1-24(63.262mm,34mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net ADC_EMG3 Between Pad R_ADC3-2(62mm,31.235mm) on L1 TOP And Pad U_MCU1-25(63.262mm,33.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VOUT_4 Between Pad U3-1(61.15mm,26.75mm) on L1 TOP And Pad R_ADC4-1(62.365mm,29.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net FG_ALRT Between Pad R_AL-1(24.724mm,36.7mm) on L1 TOP And Pad U_MCU1-81(74.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net FG_ALRT Between Pad UP4-5(23.585mm,36.75mm) on L1 TOP And Pad R_AL-1(24.724mm,36.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_SCL-2(25.452mm,37.8mm) on L1 TOP And Pad R_AL-2(25.676mm,36.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_CHG_LED-1(22.3mm,53mm) on L1 TOP And Pad UP1-11(24.4mm,45.25mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VC4-2(25.275mm,27.1mm) on L4 BOTTOM GND And Pad R_DRL_FB-1(25.45mm,29.475mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_AMP_OUT Between Pad U_DRL1-1(20.6mm,30.05mm) on L4 BOTTOM GND And Pad R_DRL_FB-2(25.45mm,30.925mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_AMP_OUT Between Pad R_DRL_OUT1-1(15.275mm,29.5mm) on L4 BOTTOM GND And Pad U_DRL1-1(20.6mm,30.05mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_LIMIT_MID Between Pad R_DRL_OUT2-1(15.275mm,31.3mm) on L4 BOTTOM GND And Pad R_DRL_OUT1-2(16.725mm,29.5mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_LIMITED Between Pad R_DRL_SEL-1(12.775mm,21.7mm) on L4 BOTTOM GND And Pad R_DRL_OUT2-2(16.725mm,31.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net NetJ_REF_1 Between Pad R_DRL_SEL-2(14.225mm,21.7mm) on L4 BOTTOM GND And Pad R_ref-1(16mm,21.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Va_1 Between Pad R_DRL_VA1-1(13.775mm,23.5mm) on L4 BOTTOM GND And Track (21.65mm,13.23mm)(21.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA1-2(15.225mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VA2-2(18.575mm,23.5mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA1-2(15.225mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VB1-2(15.225mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Va_2 Between Pad R_DRL_VA2-1(17.125mm,23.5mm) on L4 BOTTOM GND And Track (34.65mm,13.23mm)(34.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA2-2(18.575mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VA3-2(21.925mm,23.5mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA2-2(18.575mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VB2-2(18.575mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Va_3 Between Pad R_DRL_VA3-1(20.475mm,23.5mm) on L4 BOTTOM GND And Track (47.65mm,13.23mm)(47.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA3-2(21.925mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VA4-2(25.275mm,23.5mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA3-2(21.925mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VB3-2(21.925mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Va_4 Between Pad R_DRL_VA4-1(23.825mm,23.5mm) on L4 BOTTOM GND And Track (60.65mm,13.23mm)(60.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA4-2(25.275mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VB4-2(25.275mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Va_5 Between Pad R_DRL_VA5-1(27.175mm,23.5mm) on L4 BOTTOM GND And Track (73.65mm,13.23mm)(73.65mm,14.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VA5-2(28.625mm,23.5mm) on L4 BOTTOM GND And Pad R_DRL_VB5-2(28.625mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vb_1 Between Pad R_DRL_VB1-1(13.775mm,25.3mm) on L4 BOTTOM GND And Track (22.35mm,13.23mm)(22.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB1-2(15.225mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VC1-2(15.225mm,27.1mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vb_2 Between Pad R_DRL_VB2-1(17.125mm,25.3mm) on L4 BOTTOM GND And Track (35.35mm,13.23mm)(35.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB2-2(18.575mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VC2-2(18.575mm,27.1mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vb_3 Between Pad R_DRL_VB3-1(20.475mm,25.3mm) on L4 BOTTOM GND And Track (48.35mm,13.23mm)(48.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB3-2(21.925mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VC3-2(21.925mm,27.1mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vb_4 Between Pad R_DRL_VB4-1(23.825mm,25.3mm) on L4 BOTTOM GND And Track (61.35mm,13.23mm)(61.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB4-2(25.275mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VB5-2(28.625mm,25.3mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB4-2(25.275mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VC4-2(25.275mm,27.1mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vb_5 Between Pad R_DRL_VB5-1(27.175mm,25.3mm) on L4 BOTTOM GND And Track (74.35mm,13.23mm)(74.35mm,13.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net DRL_SUM Between Pad R_DRL_VB5-2(28.625mm,25.3mm) on L4 BOTTOM GND And Pad R_DRL_VC5-2(28.625mm,27.1mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vc_1 Between Pad R_DRL_VC1-1(13.775mm,27.1mm) on L4 BOTTOM GND And Via (19.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vc_2 Between Pad R_DRL_VC2-1(17.125mm,27.1mm) on L4 BOTTOM GND And Via (32.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vc_3 Between Pad R_DRL_VC3-1(20.475mm,27.1mm) on L4 BOTTOM GND And Via (45.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vc_4 Between Pad R_DRL_VC4-1(23.825mm,27.1mm) on L4 BOTTOM GND And Via (58.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net Vc_5 Between Pad R_DRL_VC5-1(27.175mm,27.1mm) on L4 BOTTOM GND And Via (71.3mm,11.2mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net AFE_EN Between Pad R_EN_PD-1(35.121mm,33.1mm) on L1 TOP And Pad UP3-3(37.45mm,33.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad R_EN-1(30.5mm,42.5mm) on L1 TOP And Pad U_UV1-6(31.275mm,39.15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetR_EN1_BIAS_2 Between Pad UP1-6(22.75mm,43.6mm) on L1 TOP And Pad R_EN1_BIAS-2(22.9mm,42.476mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net SYS_EN Between Pad U_UV1-1(28.725mm,39.15mm) on L1 TOP And Pad R_EN-2(31.5mm,42.5mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net SYS_EN Between Pad R_EN-2(31.5mm,42.5mm) on L1 TOP And Pad UP2-5(33.25mm,44.265mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_INT_PULLUP-1(37.376mm,49.3mm) on L1 TOP And Pad R_KILL_PU-2(37.376mm,53mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_PWR_INT_N Between Pad U_EN1-5(35.31mm,50.225mm) on L1 TOP And Pad R_INT_PULLUP-2(36.424mm,49.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_PWR_INT_N Between Pad R_INT_PULLUP-2(36.424mm,49.3mm) on L1 TOP And Pad U_MCU1-83(73.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net KILL_CTRL Between Pad U_EN1-8(35.31mm,52.175mm) on L1 TOP And Pad R_KILL_PU-1(36.424mm,53mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetR_LIM_2 Between Pad UP1-12(24.4mm,45.75mm) on L1 TOP And Pad R_LIM-2(25.5mm,46.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_BOOT0 Between Pad U_MCU1-94(68mm,47.238mm) on L1 TOP [Unplated] And Pad R_MCU_BOOT0_PD-2(68mm,48.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net USB_PGOOD_N Between Pad UP1-7(23.25mm,43.6mm) on L1 TOP And Pad R_PGOOD-1(24.2mm,41.625mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_PGOOD-2(24.2mm,42.575mm) on L1 TOP And Pad R_SDA-2(25.452mm,38.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad R_ref-2(17mm,21.4mm) on L1 TOP And Pad U_DRL1-3(20.6mm,31.95mm) on L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net I2C_SCL Between Pad R_SCL-1(24.548mm,37.8mm) on L1 TOP And Pad U_MCU1-95(67.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net I2C_SCL Between Pad UP4-7(23.585mm,37.75mm) on L1 TOP And Pad R_SCL-1(24.548mm,37.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad R_SCL-2(25.452mm,37.8mm) on L1 TOP And Pad R_SDA-2(25.452mm,38.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net I2C_SDA Between Pad R_SDA-1(24.548mm,38.8mm) on L1 TOP And Pad U_MCU1-96(67mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net I2C_SDA Between Pad UP4-8(23.585mm,38.25mm) on L1 TOP And Pad R_SDA-1(24.548mm,38.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetQ_SHDN_1 Between Pad R_SHDN_G-1(42.324mm,50.8mm) on L1 TOP And Pad R_SHDN_PD-2(43.3mm,52mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SHUTDOWN Between Pad R_SHDN_G-2(43.276mm,50.8mm) on L1 TOP And Pad U_MCU1-86(72mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CS Between Pad R_WIFI_CS_PD-1(60.6mm,52.2mm) on L1 TOP And Pad R_SPI_CS-1(71.4mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_WIFI_CS Between Pad U_MCU1-35(69.5mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_CS-2(71.4mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_SPI_MISO Between Pad R_SPI_MISO-1(43.512mm,53.2mm) on L1 TOP And Pad U_WIFI1-29(49.695mm,54.016mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net MCU_SPI_MISO Between Pad R_SPI_MISO-2(42.488mm,53.2mm) on L1 TOP And Pad U_MCU1-31(67.5mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_MOSI Between Pad U_WIFI1-27(52.235mm,54.016mm) on L1 TOP [Unplated] And Pad R_SPI_MOSI-1(70mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SPI_MOSI Between Pad U_MCU1-32(68mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_MOSI-2(70mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CLK Between Pad U_WIFI1-28(50.965mm,54.016mm) on L1 TOP [Unplated] And Pad R_SPI_SCK-1(68.6mm,29.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_SPI_SCK Between Pad U_MCU1-30(67mm,31.762mm) on L1 TOP [Unplated] And Pad R_SPI_SCK-2(68.6mm,30.562mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad R_TH_BAT-2(15.47mm,38.7mm) on Multi-Layer And Pad R_TS_TOP-1(22mm,49.175mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetR_TMR_2 Between Pad UP1-14(23.25mm,46.4mm) on L1 TOP And Pad R_TMR-2(27.4mm,48.075mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad R_TS_TOP-1(22mm,49.175mm) on L1 TOP And Pad R_TS_BOTTOM-2(22.9mm,49.925mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net BAT_TEMP Between Pad R_TS_TOP-1(22mm,49.175mm) on L1 TOP And Pad R_TS_SER-1(22mm,48.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net TS Between Pad UP1-1(21.6mm,45.75mm) on L1 TOP And Pad R_TS_SER-2(23mm,48.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBUS Between Pad R_TS_TOP-2(22mm,50.025mm) on L1 TOP And Track (24.017mm,47.033mm)(24.15mm,47.35mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad R_VREF1-1(30.2mm,29.688mm) on L1 TOP And Pad R_VREF2-1(32mm,30.888mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetJ_FPC1_8 Between Via (24.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND And Pad R_VREF1-2(30.2mm,30.712mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad R_VREF2-1(32mm,30.888mm) on L1 TOP And Pad R_VREF3-1(33.8mm,30.888mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetJ_FPC2_8 Between Pad R_VREF2-2(32mm,31.912mm) on L1 TOP And Track (35mm,10.85mm)(35mm,11.17mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad R_VREF3-1(33.8mm,30.888mm) on L1 TOP And Pad R_VREF4-1(36.1mm,30.488mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetJ_FPC3_8 Between Pad R_VREF3-2(33.8mm,31.912mm) on L1 TOP And Via (50.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad R_VREF4-1(36.1mm,30.488mm) on L1 TOP And Pad R_VREF5-1(37.4mm,29.688mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetJ_FPC4_8 Between Pad R_VREF4-2(36.1mm,31.512mm) on L1 TOP And Via (63.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net NetJ_FPC5_8 Between Pad R_VREF5-2(37.4mm,30.712mm) on L1 TOP And Via (76.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net WIFI_BOOT Between Pad R_WIFI_BOOT_PD-2(43.3mm,48.8mm) on L1 TOP And Pad U_MCU1-91(69.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_BOOT Between Pad R_WIFI_BOOT_PD-2(43.3mm,48.8mm) on L1 TOP And Pad U_WIFI1-3(44.614mm,50.205mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CS Between Pad U_WIFI1-24(56.046mm,52.745mm) on L1 TOP [Unplated] And Pad R_WIFI_CS_PD-1(60.6mm,52.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_CHIP_EN Between Pad R_WIFI_EN_PD-1(59.7mm,44.5mm) on L1 TOP And Pad U_MCU1-87(71.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_UART_TX Between Pad R_WIFI_UART_RX_LINK-1(81.6mm,29mm) on L1 TOP And Pad TP_WIFI_UART_TX-TP(86mm,29mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net WIFI_UART_TX Between Pad U_WIFI1-22(56.046mm,50.205mm) on L1 TOP [Unplated] And Pad R_WIFI_UART_RX_LINK-1(81.6mm,29mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_WIFI_UART_RX Between Pad U_MCU1-69(78.738mm,42.5mm) on L1 TOP [Unplated] And Pad R_WIFI_UART_RX_LINK-2(82.4mm,29mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_UART_RX Between Pad R_WIFI_UART_TX_LINK-1(81.6mm,32mm) on L1 TOP And Pad TP_WIFI_UART_RX-TP(86mm,32mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net WIFI_UART_RX Between Pad U_WIFI1-23(56.046mm,51.475mm) on L1 TOP [Unplated] And Pad R_WIFI_UART_TX_LINK-1(81.6mm,32mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_WIFI_UART_TX Between Pad U_MCU1-68(78.738mm,42mm) on L1 TOP [Unplated] And Pad R_WIFI_UART_TX_LINK-2(82.4mm,32mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA4_3 Between Pad RDD10-2(67.312mm,16.8mm) on L1 TOP And Pad RDD12-2(67.312mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA1_3 Between Pad RDD1-2(28.312mm,16.8mm) on L1 TOP And Pad RDD3-2(28.312mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_4 Between Track (60.3mm,10.88mm)(60.3mm,11.17mm) on L1 TOP And Pad RDD12-1(66.288mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA5_3 Between Pad RDD13-2(79.912mm,16.8mm) on L1 TOP And Pad RDD15-2(79.912mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_5 Between Track (73.3mm,10.88mm)(73.3mm,11.17mm) on L1 TOP And Pad RDD15-1(78.888mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_1 Between Track (21.3mm,10.88mm)(21.3mm,11.17mm) on L1 TOP And Pad RDD3-1(27.288mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA2_3 Between Pad RDD4-2(41.312mm,16.8mm) on L1 TOP And Pad RDD6-2(41.312mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_2 Between Track (34.3mm,10.88mm)(34.3mm,11.17mm) on L1 TOP And Pad RDD6-1(40.288mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA3_3 Between Pad RDD7-2(54.312mm,16.8mm) on L1 TOP And Pad RDD9-2(54.312mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net Vc_3 Between Track (47.3mm,10.88mm)(47.3mm,11.17mm) on L1 TOP And Pad RDD9-1(53.288mm,18.6mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_2_2 Between Pad RG_2-1(37.5mm,27.125mm) on L1 TOP And Pad U2-2(39.15mm,27.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_2 Between Pad RG_2-2(37.5mm,28.125mm) on L1 TOP And Pad U2-1(39.15mm,27.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_3_2 Between Pad U2-9(44.85mm,24.7mm) on L1 TOP And Pad RG_3-1(46.5mm,24.875mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_3 Between Pad U2-8(44.85mm,24.05mm) on L1 TOP And Pad RG_3-2(46.5mm,23.875mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_4_2 Between Pad RG_4-1(59.5mm,25.925mm) on L1 TOP And Pad U3-2(61.15mm,26.1mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_4 Between Pad RG_4-2(59.5mm,26.925mm) on L1 TOP And Pad U3-1(61.15mm,26.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetCH_5_2 Between Pad U3-9(66.85mm,23.5mm) on L1 TOP And Pad RG_5-1(68.5mm,23.675mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VOUT_5 Between Pad U3-8(66.85mm,22.85mm) on L1 TOP And Pad RG_5-2(68.5mm,22.675mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_1 Between Pad Rservo_1-2(19.775mm,24.2mm) on L1 TOP And Pad RH_1-1(20.921mm,21.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_2 Between Pad RH_2-1(33.921mm,21.75mm) on L1 TOP And Pad Rservo_2-2(36.775mm,23.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA2_7 Between Pad RH_2-2(34.879mm,21.75mm) on L1 TOP And Pad RL_2-1(35.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_3 Between Pad RH_3-1(46.921mm,21.75mm) on L1 TOP And Pad Rservo_3-2(47.225mm,28.8mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA3_7 Between Pad RH_3-2(47.879mm,21.75mm) on L1 TOP And Pad RL_3-1(48.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net INA_OUT_4 Between Pad Rservo_4-2(57.975mm,20.8mm) on L1 TOP And Pad RH_4-1(58.721mm,21.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetINA4_7 Between Pad RH_4-2(59.679mm,21.75mm) on L1 TOP And Pad RL_4-1(61.7mm,21.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net NetRISET_1 Between Pad RISET-1(21mm,51.475mm) on L1 TOP And Pad UP1-16(22.25mm,46.4mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U1-5(22.15mm,26.35mm) on L1 TOP And Pad RL_1-2(23.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad RL_2-2(36.9mm,22.3mm) on L1 TOP And Pad U2-5(39.15mm,25.35mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U2-10(44.85mm,25.35mm) on L1 TOP And Pad RL_3-2(49.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad RL_3-2(49.9mm,22.3mm) on L1 TOP And Pad U3-5(61.15mm,24.15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U3-5(61.15mm,24.15mm) on L1 TOP And Pad RL_4-2(62.7mm,21.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U3-10(66.85mm,24.15mm) on L1 TOP And Pad RL_5-2(75.9mm,22.3mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VDiv Between Pad RV1-1(30.7mm,26mm) on L1 TOP And Pad RV2-2(30.7mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net GND Between Pad RV1-2(29.7mm,26mm) on L1 TOP And Track (30.279mm,24.35mm)(30.279mm,24.764mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad U1-4(22.15mm,27mm) on L1 TOP And Pad RV2-1(29.7mm,27mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_BOOT0 Between Pad U_MCU1-94(68mm,47.238mm) on L1 TOP [Unplated] And Pad TP_MCU_BOOT0-TP(82mm,20mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net WIFI_BOOT Between Pad U_MCU1-91(69.5mm,47.238mm) on L1 TOP [Unplated] And Pad TP_WIFI_BOOT-TP(86mm,23mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net WIFI_CHIP_EN Between Pad U_MCU1-87(71.5mm,47.238mm) on L1 TOP [Unplated] And Pad TP_WIFI_CHIP_EN-TP(86mm,20mm) on Multi-Layer",
+  "Un-Routed Net Constraint: Net SYS_EN Between Pad UP2-5(33.25mm,44.265mm) on L1 TOP And Pad U_EN1-6(35.31mm,50.875mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-6(63.262mm,43mm) on L1 TOP [Unplated] And Pad U_MCU1-100(65mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-11(63.262mm,40.5mm) on L1 TOP [Unplated] And Pad U_MCU1-28(66mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-11(63.262mm,40.5mm) on L1 TOP [Unplated] And Pad U_MCU1-6(63.262mm,43mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Pad U_MCU1-22(63.262mm,35mm) on L1 TOP [Unplated] And Pad U_MCU1-21(63.262mm,35.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-28(66mm,31.762mm) on L1 TOP [Unplated] And Pad U_MCU1-50(77mm,31.762mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-50(77mm,31.762mm) on L1 TOP [Unplated] And Pad U_MCU1-73(78.738mm,44.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad U_MCU1-73(78.738mm,44.5mm) on L1 TOP [Unplated] And Pad U_MCU1-75(78.738mm,45.5mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net USB_PGOOD_N Between Pad UP1-7(23.25mm,43.6mm) on L1 TOP And Pad U_MCU1-82(74mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net AFE_EN Between Pad UP3-3(37.45mm,33.45mm) on L1 TOP And Pad U_MCU1-85(72.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_SPI_RDY Between Pad U_WIFI1-21(56.046mm,48.935mm) on L1 TOP [Unplated] And Pad U_MCU1-89(70.5mm,47.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net VSYS Between Pad U_UV1-3(28.725mm,37.25mm) on L1 TOP And Pad U_UV1-5(31.275mm,38.2mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VSYS Between Pad U_UV1-5(31.275mm,38.2mm) on L1 TOP And Pad U_UV1-6(31.275mm,39.15mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VDiv Between Pad U1-10(27.85mm,26.35mm) on L1 TOP And Pad U1-12(27.85mm,27.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_B_SRC Between Pad U1-13(27.85mm,28.3mm) on L1 TOP And Pad U1-14(27.85mm,28.95mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U1-5(22.15mm,26.35mm) on L1 TOP And Pad U1-3(22.15mm,27.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U1-8(27.85mm,25.05mm) on L1 TOP And Pad U1-9(27.85mm,25.7mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U2-10(44.85mm,25.35mm) on L1 TOP And Pad U2-12(44.85mm,26.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U2-3(39.15mm,26.65mm) on L1 TOP And Pad U2-12(44.85mm,26.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U2-5(39.15mm,25.35mm) on L1 TOP And Pad U2-3(39.15mm,26.65mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U3-10(66.85mm,24.15mm) on L1 TOP And Pad U3-12(66.85mm,25.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U3-3(61.15mm,25.45mm) on L1 TOP And Pad U3-12(66.85mm,25.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Pad U3-5(61.15mm,24.15mm) on L1 TOP And Pad U3-3(61.15mm,25.45mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBAT_CELL Between Pad UP1-3(21.6mm,44.75mm) on L1 TOP And Pad UP4-2(21.615mm,37.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V3_DIG Between Pad UP2-6(33.75mm,44.265mm) on L1 TOP And Pad UP2-1(34.75mm,45.735mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VBAT_CELL Between Pad UP4-3(21.615mm,37.25mm) on L1 TOP And Pad UP4-2(21.615mm,37.75mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (32.88mm,13.23mm)(33.565mm,13.23mm) on L1 TOP And Via (45.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (45.88mm,13.23mm)(46.565mm,13.23mm) on L1 TOP And Via (58.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Un-Routed Net Constraint: Net 3V0_ANA Between Track (58.88mm,13.23mm)(59.565mm,13.23mm) on L1 TOP And Via (71.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Silk To Solder Mask Clearance Constraint: (0.1mm < 0.254mm) Between Pad D_VBUS-2(18.5mm,43.1mm) on L1 TOP And Track (18.175mm,43.575mm)(19.225mm,43.575mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.1mm]",
+  "Net Antennae: Via (19.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (24.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (32.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (37.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (45.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (50.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (58.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (63.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (71.25mm,12.55mm) from L1 TOP to L4 BOTTOM GND",
+  "Net Antennae: Via (76.6mm,10.85mm) from L1 TOP to L4 BOTTOM GND"
+ ]
+}

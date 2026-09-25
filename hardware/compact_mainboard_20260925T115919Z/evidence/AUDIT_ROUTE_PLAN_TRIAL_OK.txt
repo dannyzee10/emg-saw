@@ -1,0 +1,10 @@
+G1 plan tracks on L2: 0
+G2 L3 track bands over non-GND L4 copper/antipads: 3 nets, 0.671 mm2
+   Vc_1                   0.445 mm2
+   WIFI_SPI_CS            0.218 mm2
+   NetPWR_BTN_N_A         0.008 mm2
+R1 plan copper in antenna zone: 0
+P2/M2 vias on switch node / VCAP: 0 []
+vias per class: ANALOG 2, OTHER 17, SPI 14
+analog connections with length/span > 1.8: 0
+analog length on L3: 15.2 mm; total plan tracks 147 vias 33
