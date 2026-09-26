@@ -1,0 +1,6 @@
+C2 pad-level verification (native export after save/reopen)
+components 231, pads 812 (compared to plan 812), worst position error 0.0001 mm
+placement issues: 0
+electrical: net issues 0; nets B 136 / C2 136, only-in-B [], only-in-C2 []
+free pads: 15
+free copper tracks left: 0; vias: 25 (nets ['GND'])

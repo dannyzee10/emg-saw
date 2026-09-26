@@ -1,0 +1,32 @@
+C2_OPS summary
+ops by kind: COMP 231, KMOVE 1, MDEL 126, MMOVE 10, OUTLINE 1, PMOVE 15, POLY 2, RULE 27, RULE_PASTE 1, TDEL 237, VDEL 55, VMOVE 25
+components flipped: 78
+thermal vias kept with their part: UP1 5, U_WIFI1 20
+mechanical: 10 socket marker lines moved, 126 assembly leader lines removed
+CLR_ST67_ANTENNA_BOUNDARY_NO_EXTRA_GAP scope2 anchor U_WIFI1 (same side)
+CLR_FINAL_TT_073 scope1 anchor UP2 (flipped)
+CLR_FINAL_TT_073 scope2 anchor UP2 (flipped)
+CLR_FINAL_TT_072 scope1 anchor UP2 (flipped)
+CLR_FINAL_TT_072 scope2 anchor UP2 (flipped)
+CLR_FINAL_TP_071 scope1 anchor UP2 (flipped)
+CLR_FINAL_TP_070 scope1 anchor UP2 (flipped)
+CLR_FINAL_TP_069 scope1 anchor UP2 (flipped)
+CLR_FINAL_TP_068 scope1 anchor UP2 (flipped)
+CLR_FINAL_TP_067 scope1 anchor UP1 (flipped)
+CLR_FINAL_TP_066 scope1 anchor UP1 (flipped)
+CLR_FINAL_TP_065 scope1 anchor RUP_3 (flipped)
+CLR_FINAL_PP_053 scope1 anchor J_USB_C (same side)
+CLR_FINAL_PP_052 scope1 anchor J_USB_C (same side)
+CLR_FINAL_TP_051 scope1 anchor RUP_3 (flipped)
+CLR_FINAL_TP_050 scope1 anchor RUP_3 (flipped)
+CLR_FINAL_TP_028 scope1 anchor C_ADC5 (same side)
+CLR_FINAL_TP_027 scope1 anchor U1 (flipped)
+CLR_FINAL_TP_026 scope1 anchor U1 (flipped)
+CLR_FINAL_TP_015 scope1 anchor RH_5 (same side)
+CLR_FINAL_TP_014 scope1 anchor RH_1 (same side)
+CLR_FINAL_TP_013 scope1 anchor RGN_1 (flipped)
+CLR_FINAL_TP_006 scope1 anchor UP2 (flipped)
+CLR_FINAL_TP_005 scope1 anchor UP2 (flipped)
+CLR_FINAL_VP_004 scope1 anchor C_ADC5 (same side)
+CLR_FINAL_PP_002 scope1 anchor J_USB_C (same side)
+CLR_FINAL_PP_001 scope1 anchor J_USB_C (same side)

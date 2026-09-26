@@ -1,0 +1,5 @@
+ENTER 9/25/2026 11:49:11 PM
+OTHER_CLOSED_UNMODIFIED|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\evidence\disposable_c2api2\MainBoard\EMG_MainBoard_Layout.PcbDoc
+PROJECT_OPEN|DOCS=62
+PCB_OPEN|MODIFIED=False
+COMPLETE

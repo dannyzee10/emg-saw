@@ -1,0 +1,44 @@
+C2 separation evidence (x-ray, component extents, saved native geometry)
+  converter cell -> any analog part                    10.98 mm  (CUP4_FB .. Rservo_4)
+  converter cell -> electrode inputs (RDD/INA/BK13)    15.56 mm  (CUP4_FB .. INA4)
+  converter cell -> references (divider/VREF/U1)       23.62 mm  (CUP4_FB .. R_VREF3)
+  converter L1/UP2 -> ST67 32 kHz crystal              11.31 mm  (UP2 .. X_WIFI_32K)
+  charger UP1 -> references                             9.16 mm  (UP1 .. Cdiv_10uF)
+  charger UP1 -> electrode inputs                      15.75 mm  (UP1 .. INA1)
+  USB-C -> electrode inputs                             9.65 mm  (J_USB_C .. INA1)
+  button -> electrode inputs (ESD)                      3.65 mm  (PWR_BTN_N .. INA1)
+Nets joining Top analog input-stage pads and Bottom op-amp-module pads (cross the board through vias):
+  3V0_ANA          span  51.0 x 21.8 mm  parts C1_MCU C2_MCU C3_MCU C4_MCU CCU1 CCU10 CCU2 CCU3 CCU4 CCU5 CCU6 CCU7 CCU8 CCU9 CUP5_2 CUP5_3 CU_11 CU_12 CU_14
+  GND              span  57.3 x 33.8 mm  parts C1_EN1 C1_MCU C2_EN1 C2_MCU C3_EN1 C3_MCU C4_MCU CCU1 CCU10 CCU2 CCU3 CCU4 CCU5 CCU6 CCU7 CCU8 CCU9 CU6_1 CUP4
+  INA_OUT_1        span   4.5 x  9.2 mm  parts CL_1 INA1 RH_1 Rservo_1
+  INA_OUT_2        span   0.3 x  9.2 mm  parts CL_2 INA2 RH_2 Rservo_2
+  INA_OUT_3        span   4.4 x  9.2 mm  parts CL_3 INA3 RH_3 Rservo_3
+  INA_OUT_4        span   1.5 x  9.2 mm  parts CL_4 INA4 RH_4 Rservo_4
+  INA_OUT_5        span   4.4 x  9.2 mm  parts CL_5 INA5 RH_5 Rservo_5
+  VOUT_1           span  31.6 x  8.2 mm  parts CH_1 RG_1 R_ADC1 U1
+  VOUT_2           span  18.5 x  9.7 mm  parts CH_2 RG_2 R_ADC2 U2
+  VOUT_3           span  10.1 x  4.9 mm  parts CH_3 RG_3 R_ADC3 U2
+  VOUT_4           span   5.4 x  7.0 mm  parts CH_4 RG_4 R_ADC4 U3
+  VOUT_5           span   6.7 x  3.1 mm  parts CH_5 RG_5 R_ADC5 U3
+  VREF_A           span  52.0 x  3.9 mm  parts RL_1 RL_2 RL_3 RL_4 RL_5 U1 U2 U3
+  VREF_B_SRC       span  54.0 x 10.5 mm  parts R_VREF1 R_VREF2 R_VREF3 R_VREF4 R_VREF5 R_ref U1 U_DRL1
+  Va_1             span   7.5 x  5.4 mm  parts J_FPC1 RDD1 R_DRL_VA1
+  Va_2             span   8.5 x  5.4 mm  parts J_FPC2 RDD4 R_DRL_VA2
+  Va_3             span   9.3 x  5.4 mm  parts J_FPC3 RDD7 R_DRL_VA3
+  Va_4             span   9.3 x  5.4 mm  parts J_FPC4 RDD10 R_DRL_VA4
+  Va_5             span   8.9 x  5.4 mm  parts J_FPC5 RDD13 R_DRL_VA5
+  Vb_1             span   4.9 x  3.6 mm  parts J_FPC1 RDD2 R_DRL_VB1
+  Vb_2             span   5.2 x  3.6 mm  parts J_FPC2 RDD5 R_DRL_VB2
+  Vb_3             span   6.0 x  3.6 mm  parts J_FPC3 RDD8 R_DRL_VB3
+  Vb_4             span   6.0 x  3.6 mm  parts J_FPC4 RDD11 R_DRL_VB4
+  Vb_5             span   5.6 x  3.6 mm  parts J_FPC5 RDD14 R_DRL_VB5
+  Vc_1             span   6.0 x  7.3 mm  parts J_FPC1 RDD3 R_DRL_VC1
+  Vc_2             span   6.0 x  7.3 mm  parts J_FPC2 RDD6 R_DRL_VC2
+  Vc_3             span   6.0 x  7.3 mm  parts J_FPC3 RDD9 R_DRL_VC3
+  Vc_4             span   6.0 x  7.3 mm  parts J_FPC4 RDD12 R_DRL_VC4
+  Vc_5             span   5.6 x  7.3 mm  parts J_FPC5 RDD15 R_DRL_VC5
+  Vservo_1         span   5.7 x  2.9 mm  parts Cservo_1 INA1 U1
+  Vservo_2         span   5.7 x  2.6 mm  parts Cservo_2 INA2 U2
+  Vservo_3         span   5.7 x  2.9 mm  parts Cservo_3 INA3 U2
+  Vservo_4         span   5.7 x  2.6 mm  parts Cservo_4 INA4 U3
+  Vservo_5         span   5.7 x  2.9 mm  parts Cservo_5 INA5 U3

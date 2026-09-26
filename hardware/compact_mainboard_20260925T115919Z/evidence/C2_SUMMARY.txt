@@ -1,0 +1,3 @@
+C2 summary (saved native state)
+components 231: top 109, bottom 122; side changed vs B 78; footprints changed 8
+max height top 3.31 mm (J_USB_C), bottom 1.45 mm

@@ -1,0 +1,52 @@
+{
+ "L": 59.1,
+ "H": 36.0,
+ "PITCH": 10.8,
+ "outline": [
+  10.0,
+  10.0,
+  69.1,
+  46.0
+ ],
+ "log": [
+  "service column x 21.70..29.16",
+  "ST67 thermal vias carried: 20",
+  "bottom analog band up to y 26.28",
+  "Tag-Connect face 22.38,23.95-28.48,33.85",
+  "UP1 at 13.60,39.40 (USB-C shell interior)",
+  "group CUP4   -> centre 50.59,40.37 rot 0 (F)",
+  "group C_UV_BYPASS -> centre 43.58,41.04 rot 180 (T)",
+  "group CUP5_1 -> centre 35.00,29.28 rot 0 (F)",
+  "group CU6_1  -> centre 19.50,32.50 rot 0 (T)"
+ ],
+ "problems": [
+  [
+   "PAD",
+   "U3",
+   "RG_5",
+   0.25,
+   "U3.10/RG_5.2"
+  ],
+  [
+   "PAD",
+   "U3",
+   "RG_5",
+   0.25,
+   "U3.9/RG_5.2"
+  ],
+  [
+   "PAD",
+   "U3",
+   "RG_5",
+   0.25,
+   "U3.8/RG_5.1"
+  ],
+  [
+   "PADBODY",
+   "RUP_3",
+   "CUP4",
+   -0.189,
+   "2"
+  ]
+ ]
+}

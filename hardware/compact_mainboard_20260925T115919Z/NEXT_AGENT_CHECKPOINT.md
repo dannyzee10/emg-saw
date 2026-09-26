@@ -1,5 +1,32 @@
 # Next-agent checkpoint — compact main board (R2)
 
+## Update 26 Sep 2026: candidate C2 (59.1 × 36.0 mm) — PLACEMENT CHECKPOINT
+
+- **Open:** `C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PrjPcb`, inside the project. Variant `PROTO_1_REMOTE_NTC`.
+- **Board:** 2,124 mm², −40.9 % vs A and −29.1 % vs B; 109 top / 122 bottom parts; BK13 pitch 10.8 mm; 4 layers for now.
+- **Saved hashes:**
+  - PcbDoc `437EB0C2C1B8AD24F52ADE360B708D0CD2B9BD844E0E8DB94A0D859BB3036D18`
+  - PrjPcb `E66412978005A6C78836DDE1EB8A6AD040C17A3E86C817791358DBA996641310`
+  - MCU_sheet `96D188767B3842FDFACBC41A8D321DC0E0D25719BDF4B544B7A58D7833370707`
+  - EMG_Service_C2B.PcbLib `6486E4FF7EE4871D5A5DE9C3AC7434CD7B175E08BF74ABF5E5185249929AFDB5`
+- **Verified:**
+  - readback 246/246; pads 812/812 (worst 0.1 µm); 0 net changes vs B;
+  - DRC 0 short / clearance / component / sliver / antennae;
+  - 535 unrouted and 262 silkscreen items open.
+- **Full audit:** `evidence/C2_COMPACT_AUDIT.md`.
+- **Tooling added:**
+  - offline: `work/c2lib.py` (kernel, validated against native flips), `c2audit.py`, `c2fit.py`, `plan_C2.py`, `gen_C2_ops.py`, `gen_C2_fix_ops.py`;
+  - native templates: `*_T.pas` via `mkvariant.py` (`apply_C2_T`, `svc_swap3_T`, `variant_svc_T`, `export_geometry_T`, `export_bodies_T`, `run_drc_T`).
+- **Lessons:**
+  - PcbLib primitives must be placed relative to `Lib.Board.X/YOrigin`.
+  - Only `Lib.Board.AddPCBObject` persists in a library.
+  - Adding children to an existing board component does not persist; build a new component and set the source UID after `AddPCBObject`.
+  - FlipComponent drags vias lying in the part's pads.
+  - Write progress logs to `.part` files, never the file the launcher polls.
+- **Next:** limited routing trial on C2, which decides 4 vs 6 layers; silkscreen pass; mechanical inputs (flex width ≤ ~7–8 mm at 10.8 pitch, battery/enclosure).
+
+---
+
 **Status:** COMPACT TWO-SIDED PLACEMENT READY FOR REVIEW — ROUTING/MECHANICAL QUALIFICATION STILL OPEN.
 Stop point reached: COMPACT PLACEMENT REVIEW. Unrestricted full-board routing and fabrication release are NOT authorized yet.
 
