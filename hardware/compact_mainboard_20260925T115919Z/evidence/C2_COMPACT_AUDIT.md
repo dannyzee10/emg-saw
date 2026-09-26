@@ -1,7 +1,6 @@
 # Compact candidate C2 — change audit (26 Sep 2026)
 
-**Status:** C2 PLACEMENT CHECKPOINT — native, saved, read back, DRC-clean except unrouted/silkscreen. Routing and mechanical
-qualification still open. No fabrication or ordering approval.
+**Status:** C2 PLACEMENT CHECKPOINT + 4-LAYER ROUTING TRIAL (2 rounds). The trial found the board 85 % routable DRC-clean on 4 layers, but only by breaking the P0 rule G2 on 32 connections (§7). **Recommendation: 6 layers** (the user's pre-approved fallback); awaiting go-ahead. Mechanical qualification still open. No fabrication or ordering approval.
 
 ## 1. Result
 
@@ -15,7 +14,7 @@ qualification still open. No fabrication or ordering approval.
 | Tallest part, top / bottom | 5.08 mm (5021 TP) | 5.08 / 1.45 mm | **3.31 mm (USB-C) / 1.45 mm** |
 | BK13 pitch | 13.0 mm | 13.0 mm | **10.8 mm** |
 
-Layers: 4 (JLC04121H-3313) for the placement stage; 6 layers remain the approved fallback if the routing trial fails.
+Layers: 4 (JLC04121H-3313) for the placement stage and the routing trial. The trial fails G2 on 4 layers (§7), so the approved 6-layer fallback is recommended.
 
 ## 2. User decisions this change rests on (26 Sep)
 
@@ -99,9 +98,77 @@ Layers: 4 (JLC04121H-3313) for the placement stage; 6 layers remain the approved
 | Native batch DRC (`DRC_C2_CHECKPOINT.*`) | **0 short, 0 clearance, 0 component clearance, 0 mask sliver, 0 net antennae**; 535 unrouted (placement checkpoint); 257 silkscreen + 5 silkscreen-to-edge (legibility pass open) |
 | Heights (3D bodies) | Top 3.31 mm (USB-C), Bottom 1.45 mm; 51 parts without a 3D body (incl. the flat service footprints) |
 
-## 7. Open issues (ranked)
+## 7. Routing trial on 4 layers (26 Sep)
 
-1. **Routing.** Run the limited trial next: converter/charger loops, analog cross-side vias, MCU/ST67 escapes, BK13 fanouts. That trial decides between 4 and 6 layers. Via-in-pad (filled + capped) is needed for the UP1 and ST67 thermal vias and is to be named in the fab notes.
+**Scope.**
+- 283 signal connections Altium listed as unrouted after placement.
+- Excluded on purpose: GND (to be closed by pours and stitching), 3V3_DIG and 3V0_ANA (supply pass), and BK13 socket escapes.
+- Router: `router5.py`, 0.05 mm grid, layers Top / L3 / Bottom, never L2.
+- Every route is exact-checked (`build_ops.py --drop-bad`) and topology-audited (`audit_plan.py`) before it is written natively.
+- Altium's own DRC is the judge.
+
+**Preparation (round 1).**
+- Converter hot loop restored from B's designed copper (16 tracks + 2 cap GND vias, mirrored with the flipped cell).
+- Six CLR_FINE_ESCAPE rules re-anchored to C2 part positions.
+- DNP DRL input resistors stood upright; TP_WIFI_CHIP_EN moved clear of C_WIFI_EN.
+- Catch-all Width rule set to 0.15 / 0.2 / 0.5 mm.
+
+| | Round 1 | Round 2 | Total |
+|---|---|---|---|
+| Router result (pass 1) | 243 / 283 | 48 / 77 (849 s) | |
+| Kept by exact check | 205 | 35 | **240 (+1 already joined) = 241 / 283 = 85 %** |
+| Written natively (saved, reopened) | 773 tracks, 112 vias | +176 tracks, +37 vias | 939 tracks, 173 vias |
+| Altium DRC: short / clearance / width / component / antenna | 0 / 0 / 0 / 0 / 0 | 0 / 0 / 0 / 0 / 0 | |
+| Unrouted (Altium) | 335 = 258 excluded + 77 trial | 302 = 260 excluded + 42 trial | |
+| G1 (no copper on L2) / R1 (antenna zone bare) / P2-M2 (no via on LX, VCAP) | pass / pass / pass | pass / pass / pass | |
+| **G2 (solid L4 under every L3 trace)** | 15 nets, 11.0 mm² | 9 nets, 14.2 mm² | **32 connections fail, 12 of them analog** |
+
+**Round-2 drops.** The exact check dropped 13 connections:
+- Vc_1…5: the router ran 0.19 mm from the BK13 socket keep-outs; 0.25 mm is required.
+- VOUT_3/5: 0.227 mm from the RG_n pads.
+- Four vias landed on pads.
+- One crossing: MCU_SPI_MISO / WIFI_UART_TX.
+
+**G2 per connection** (`C2_G2_BY_CONNECTION.txt`, judged on the native state after both rounds):
+- 208 / 240 routed connections are G2-clean.
+- 32 fail. The analog ones:
+  - VREF_A ×5;
+  - VOUT_1/2/3/4 ×7.
+- Also failing: power (VSYS, VBUS, VBAT_CELL), WIFI_SPI_CS and WIFI_SPI_CLK (the report names the SPI corridor explicitly), MCU control lines, DRL_AMP_OUT/DRL_SUM.
+
+**Why G2 fails on 4 layers.**
+- In the JLC04121H-3313 stack, L3 is 0.099 mm from L4 but 0.865 mm (core) from L2, so L4 is L3's reference.
+- In C2, L4 carries 122 bottom parts, their pads and the bottom routing. It can no longer be a solid ground under L3.
+- Round 2 also began splitting the L4 pour: two new GND unrouted pairs on L4, beside UP2 and R_SHDN_PD.
+- Each routing round made G2 worse (11.0 → 25.1 mm² in total).
+
+**The 42 still unrouted** (`C2_TRIAL_UNROUTED.txt`):
+- 18 long control/digital lines. Most are cross-board runs, 30–41 mm, from the left service/charger/gauge column to the STM32: SWDIO, I2C, FG_ALRT, PGOOD, PWR_BTN, WIFI_BOOT/SPI/UART.
+- 12 analog cross-side lines: Vservo_2–5 from the Top INA to the Bottom op-amp, INA_OUT_3/5, VOUT_3/5.
+- 5 charger-local lines (TS, BAT_TEMP, TMR, EN1_BIAS).
+- 5 DNP DRL provisions (Vc_n).
+- 2 other.
+
+The supply nets (3V3_DIG 39, 3V0_ANA 52) are not routed yet and also need L3.
+
+**Verdict.** 4 layers do not qualify for C2.
+- The copper fits DRC-clean to 85 %.
+- But every route through the dense middle needs L3. L3 has no solid reference, because two-sided placement uses L4 for parts.
+- The remaining connections and the supply pass would need still more L3.
+
+**Recommendation.** 6 layers, the fallback the user approved on 25 Sep:
+- L1 parts/signal;
+- L2 GND;
+- L3 signal;
+- L4 power/signal;
+- L5 GND;
+- L6 parts/signal.
+
+Both inner signal layers then sit next to a solid GND, and the remaining 42 connections plus the supply nets get the room they need. The placement stays unchanged. The trial copper is disposable: re-route after the stack change. Cost and stack template (JLC 6-layer impedance stack) are to be confirmed before the switch.
+
+## 8. Open issues (ranked)
+
+1. **Layer count: needs the user's go-ahead.** Switch C2 to 6 layers (§7), then route supplies, GND stitching and the remaining connections. Via-in-pad (filled + capped) is needed for the UP1 and ST67 thermal vias and is to be named in the fab notes.
 2. **Silkscreen legibility pass.** 262 items. Proposal: designators on an assembly layer; silk only for polarity, connectors and test labels.
 3. **Mechanical.**
    - The 10.8 mm BK13 pitch limits each DEB flex end to roughly 7–8 mm wide, including stiffener, so that it still unplugs with tweezers.
@@ -114,7 +181,15 @@ Layers: 4 (JLC04121H-3313) for the placement stage; 6 layers remain the approved
    - The TP part comments still read "5021". They are Not Fitted, so they are not in the BOM.
 6. **Fabrication.** From the routing requirements report: F1 stack, F2 0.5 mm edge, F3 panel (the board is below the 70 × 70 mm minimum), F4 via-in-pad.
 
-## 8. Evidence (this folder)
+## 9. Evidence (this folder)
+
+- **Routing trial:**
+  - plans: `ROUTE_PLAN_C2TRIAL_PASS1.csv` / `_OK.csv`, `ROUTE_PLAN_C2R2_PASS1.csv` / `_OK.csv`;
+  - audits: `AUDIT_ROUTE_PLAN_C2TRIAL_OK.txt`, `AUDIT_ROUTE_PLAN_C2R2_OK.txt`, `C2_G2_BY_CONNECTION.txt`;
+  - native logs: `APPLY_OPS_C2_*_LOG.txt`;
+  - DRC: `DRC_C2_TRIAL5.*` (round 1), `DRC_C2_R2.*` (round 2);
+  - geometry: `GEOMETRY_C2_R2.txt` (native export after round 2);
+  - unrouted list: `C2_TRIAL_UNROUTED.txt`.
 
 - **Plan:** `PLAN_C2_COMPONENTS.csv`, `PLAN_C2_AUDIT.json`, `PLAN_C2_TOP.png`, `PLAN_C2_BOTTOM_xray.png`.
 - **Native logs:** `SVC_SWAP3_C2_LOG.txt`, `VARIANT_SVC_C2_LOG.txt`, `APPLY_C2_LOG.txt`, `APPLY_C2_SVC_LOG.txt`, `APPLY_C2_FIX_LOG.txt`, `APPLY_C2_FIX2_LOG.txt`, `C2_OPS_SUMMARY.txt`.

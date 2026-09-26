@@ -1,5 +1,30 @@
 # Next-agent checkpoint — compact main board (R2)
 
+## Update 26 Sep 2026 (later): C2 4-layer routing trial — 2 rounds, LAYER DECISION PENDING
+
+- **Board state:** the C2 PcbDoc now carries the trial copper: 939 tracks, 173 vias, saved and reopened.
+  - PcbDoc SHA-256 `3D46F784EE92897D634BD2E9C0933CC17108AAF5FD0BF35BCE7C1ABA080C733E`; PrjPcb unchanged.
+- **Result:**
+  - 241 / 283 trial signal connections routed (85 %).
+  - Altium DRC: 0 short / clearance / width / component / antenna.
+  - 302 unrouted = 260 deliberately excluded (GND, 3V3_DIG, 3V0_ANA, BK13 escapes) + 42 trial signals.
+- **Blocking finding: G2** (P0: solid L4 under every L3 trace).
+  - 32 of 240 routed connections fail, 12 of them analog (VREF_A, VOUT_n), plus SPI_CS/CLK.
+  - Cause: on the 3313 stack, L3's reference is L4, and L4 hosts the 122 bottom parts. Each round made it worse.
+  - Evidence: `evidence/C2_G2_BY_CONNECTION.txt`.
+- **Recommendation: 6 layers**, the user's pre-approved fallback: L1 parts / L2 GND / L3 sig / L4 pwr+sig / L5 GND / L6 parts.
+  - The placement is kept; the trial copper is disposable.
+  - Confirm the stack template and cost, then change the stack natively and re-route.
+- **Do not** start the 6-layer switch before the user's go-ahead.
+- **Full detail:** `evidence/C2_COMPACT_AUDIT.md` §7.
+- **Tools added:**
+  - `work/g2_by_connection.py` (G2 per connection on the native state);
+  - `work/compare_drc_rounds.py`;
+  - `work/make_c2_round_input.py`, `trial_summary.py`, `prune_from_antennae.py` (the dangling-copper cleanup seeded from Altium's antenna list; do not use `find_dangling.py`).
+- **Round-2 inputs worth re-using on 6 layers:**
+  - Vc_1…5 fail only on 0.19 vs 0.25 mm to the BK13 keep-outs.
+  - VOUT_3/5 fail on 0.227 vs 0.25 mm to RG_n.
+
 ## Update 26 Sep 2026: candidate C2 (59.1 × 36.0 mm) — PLACEMENT CHECKPOINT
 
 - **Open:** `C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PrjPcb`, inside the project. Variant `PROTO_1_REMOTE_NTC`.
