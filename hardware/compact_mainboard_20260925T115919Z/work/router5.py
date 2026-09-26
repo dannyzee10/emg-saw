@@ -31,7 +31,7 @@ LAYERS = ['Top Layer', 'Mid Layer 2', 'Mid Layer 4', 'Bottom Layer']
 # inside them.  env L5_RESERVED="NET:x0,y0,x1,y1;NET:x0,y0,x1,y1"
 L5_RESERVED = [(t.split(':')[0], box(*[float(v) for v in t.split(':')[1].split(',')]))
                for t in os.environ.get('L5_RESERVED', '').split(';') if t.strip()]
-MARGIN = 0.06
+MARGIN = float(os.environ.get('MARGIN', '0.06'))   # raster safety margin; lower it only with an exact check behind (repair.py EXACT=1)
 VIA_D, VIA_H = 0.6, 0.3
 VIA_COST = 1.5
 TURN = 0.06
