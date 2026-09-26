@@ -3,7 +3,16 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 06:05 (27 Sep) - SUPERSEDES everything below
+## State at 06:55 (27 Sep) - SUPERSEDES everything below
+- C2 = state AH, committed aee3750 (pushed): **21 unrouted** (6 GND, 1 3V0_ANA, 14 signals), copper clean.
+  Charger nudge (R_LIM, R_PGOOD off the USB-C VBUS pins) -> all VBUS links routed. PLANS include REP_AI_ADDS_OK.
+- repair.py: victims of one net whose copper touches are merged into one cluster (set_ends / touch_points_multi); the
+  shared touch point vanished when both were ripped and made every reconnect fail ("victim-first ... " failures).
+- Running: REP_AJ on AH (clusters + reorder + plane), log tmp/rep_aj.log.
+- Known: new Top copper can cut the L1 GND pour away from a pad (D_CC_ESD-3 at AH) - pours are not modelled; plane mode
+  gives such pads their own via in the next round.
+
+## State at 06:05 (27 Sep)
 - Last commit fc11aef = state AF (22 unrouted). Written since (NOT committed yet): charger nudge
   R_LIM (17.047,37.536,0) -> (18.90,37.55,180) and R_PGOOD (17.60,42.35,0) -> (18.85,42.40,90), attached copper ripped
   (RIP_CHG2.csv, 55 objects; rip_attached.py) so the USB-C VBUS pins B4_A9 / A4_B9 can take via-in-pad.

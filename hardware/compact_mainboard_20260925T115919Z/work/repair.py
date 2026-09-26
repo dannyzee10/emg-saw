@@ -262,12 +262,19 @@ def pt_end(p):
 
 
 def touch_points(name):
-    """points where a group's copper touches same-net copper outside the group: every row end that lands on other copper
-    AND every place where other copper touches the group anywhere along it (T-junctions onto a track's middle, pads the
-    track passes over) -- a branched group must be reconnected at every one of them"""
-    g = groups[name]
-    own_ids = {id(e) for e in g['entries']}
-    others = [e for e in R.copper_objs if e[1] == g['net'] and id(e) not in own_ids]
+    return touch_points_multi([name])
+
+
+def touch_points_multi(names):
+    """points where the copper of one group (or of a cluster of touching same-net groups ripped together) touches same-net
+    copper outside it: every row end that lands on other copper AND every place where other copper touches it anywhere
+    along it (T-junctions onto a track's middle, pads the track passes over) -- every one must be reconnected"""
+    ents = [e for nm in names for e in groups[nm]['entries']]
+    rows_ = [r for nm in names for r in groups[nm]['rows']]
+    net_ = groups[names[0]]['net']
+    own_ids = {id(e) for e in ents}
+    others = [e for e in R.copper_objs if e[1] == net_ and id(e) not in own_ids]
+    g = {'entries': ents, 'rows': rows_}
     pts = []
     for r in g['rows']:
         cand = [(float(r['x1']), float(r['y1']))] + ([(float(r['x2']), float(r['y2']))] if r['kind'] == 'TRACK' else [])
@@ -295,11 +302,32 @@ def touch_points(name):
     return uniq                 # ALL touch points: a branched group must be reconnected at every branch end
 
 
-def reconnect(nm, tag):
+def _route_checked(net_, ea, eb, tag, key, rem):
+    """route_one, then (when rem is given) exact-check the rows; on failure retry at SAFE_MARGIN, then at the net's
+    minimum width (route ends are forced free, so a wide track ending next to other copper can break clearance)"""
+    r2, w2 = R.route_one(net_, ea, eb)
+    if rem is None or not r2 or w2 == 'already connected' or exact_ok(rows_for(net_, r2, tag, key), rem):
+        return r2, w2
+    m0, wf = R.MARGIN, R.widths
+    try:
+        R.MARGIN = SAFE_MARGIN
+        r3, w3 = R.route_one(net_, ea, eb)
+        if r3 and exact_ok(rows_for(net_, r3, tag, key), rem):
+            return r3, w3
+        R.widths = lambda n, _f=wf: _f(n)[-1:]
+        r3, w3 = R.route_one(net_, ea, eb)
+        if r3 and exact_ok(rows_for(net_, r3, tag, key), rem):
+            return r3, w3
+    finally:
+        R.MARGIN, R.widths = m0, wf
+    return r2, w2
+
+
+def reconnect(nm, tag, rem=None):
     """re-route a ripped group: join every touch point to the first one; returns (ok, blocks)"""
     pts, net_, blocks_ = ends_cache[nm], groups[nm]['net'], []
     for q in pts[1:]:
-        r2, w2 = R.route_one(net_, pt_end(pts[0]), pt_end(q))
+        r2, w2 = _route_checked(net_, pt_end(pts[0]), pt_end(q), tag, 'repair|' + nm, rem)
         if not r2:
             return False, blocks_
         if w2 != 'already connected':
@@ -309,6 +337,32 @@ def reconnect(nm, tag):
 
 
 ends_cache = {}
+
+
+def set_ends(vl):
+    """touch points for a victim list: same-net victims whose copper touches are merged into one cluster (the touch point
+    between them disappears when both are ripped); the cluster's external touch points go to its first member, the other
+    members get none (they are reconnected through the first)"""
+    parent = {nm: nm for nm in vl}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]; x = parent[x]
+        return x
+    for i, a in enumerate(vl):
+        for b in vl[i + 1:]:
+            if groups[a]['net'] != groups[b]['net'] or find(a) == find(b):
+                continue
+            if any(ea[2] & eb[2] and ea[0].distance(eb[0]) < 0.002 for ea in groups[a]['entries'] for eb in groups[b]['entries']):
+                parent[find(b)] = find(a)
+    cl = {}
+    for nm in vl:
+        cl.setdefault(find(nm), []).append(nm)
+    for members in cl.values():
+        members.sort(key=vl.index)
+        ends_cache[members[0]] = touch_points_multi(members)
+        for m in members[1:]:
+            ends_cache[m] = []
 
 
 
@@ -450,8 +504,7 @@ def region_pass(box_, first):
     inside = [c for c in conns if any(rb.buffer(0.3).contains(Point(e_['pts'][0])) for e_ in c[1:])]
     rank = lambda c: next((i for i, p in enumerate(first) if c[0].startswith(p)), len(first))
     inside.sort(key=rank)
-    for nm in vl:
-        ends_cache[nm] = touch_points(nm)
+    set_ends(vl)
     saved = {nm: list(groups[nm]['entries']) for nm in vl}
     vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
     for nm in vl:
@@ -479,7 +532,7 @@ def region_pass(box_, first):
         if len(ends_cache[nm]) < 2:
             continue
         k += 1
-        okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+        okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}', ())
         vrows = [r for ents, hs, rows in bl for r in rows]
         if okv and exact_ok(vrows):
             blocks += bl; commit_exact(vrows, [])
@@ -562,8 +615,7 @@ for ps in range(PASSES):
         vl = sorted(vict, key=vict.get)[:MAXV]
         if not vl:
             conns.append((net, a, b)); continue
-        for nm in vl:
-            ends_cache[nm] = touch_points(nm)
+        set_ends(vl)
         saved = {nm: list(groups[nm]['entries']) for nm in vl}
         vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
         for nm in vl:
@@ -578,7 +630,7 @@ for ps in range(PASSES):
         while True:
             new_blocks, ok, fail_at, failed_v = [], True, '', None
             for nm in first_v:
-                okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+                okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}', _rem)
                 new_blocks += bl
                 if not okv:
                     ok = False; fail_at = f'victim-first {nm}'; break
@@ -592,7 +644,7 @@ for ps in range(PASSES):
                 for nm in vl:
                     if nm in first_v or len(ends_cache[nm]) < 2:
                         continue            # dangling piece: simply dropped
-                    okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+                    okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}', _rem)
                     new_blocks += bl
                     if not okv:
                         ok = False; failed_v = nm; fail_at = f'victim {nm} ({len(ends_cache[nm])} touch points)'; break
