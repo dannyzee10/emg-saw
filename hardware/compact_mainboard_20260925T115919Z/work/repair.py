@@ -382,6 +382,7 @@ def route_conn(net, a, b):
 
 
 SAFE_MARGIN = float(os.environ.get('SAFE_MARGIN', '0.06'))
+REORDER = int(os.environ.get('REORDER', '2'))
 
 
 def route_conn_safe(net, a, b, rows_check):
@@ -410,6 +411,34 @@ dead_groups = set()
 t0 = time.time()
 
 
+def restore_group(nm, saved_entries, vias):
+    """put a ripped group's ORIGINAL copper back if it is still legal against everything now in the exact model
+    (new routes included); returns True when restored"""
+    own = objs_of_group(nm)
+    own_ids = {id(o) for o in own}
+    for o in own:
+        for other, d, req in EX.violations(o):
+            if id(other) in own_ids or (id(other) in removed_ids and not any(other is q for q in EX.extra)):
+                continue
+            return False
+        if o.kind == 'HOLE':
+            c = o.geom.centroid
+            for h in EX_HOLES:
+                if h is o or id(h) in own_ids or (id(h) in removed_ids):
+                    continue
+                if abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and h.geom.distance(o.geom) < 0.254 - 1e-6:
+                    return False
+    removed_ids.difference_update(own_ids)
+    for e in saved_entries:
+        R.stamp(e[0], e[1], e[2]); R.copper_objs.append(e)
+    for (x, y, h) in vias:
+        hg = Point(x, y).buffer(h / 2, 12); hole_geoms.append(hg)
+        win, m = R.patch(hg)
+        if win:
+            R.holes[win[0]:win[1], win[2]:win[3]] |= m
+    return True
+
+
 def region_pass(box_, first):
     """rip every routed group touching box_, route the unrouted connections with an end in box_ (FIRST_NETS order) and then
     the ripped groups; keep only if more unrouted connections were closed than ripped groups were lost"""
@@ -431,6 +460,7 @@ def region_pass(box_, first):
             for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                 hole_geoms.remove(g)
     blocks, won, lost, closed = [], 0, 0, []
+    restored = set()
     # tentative exact model: victims removed now, each new route exact-checked and committed as it is made
     snap = (len(EX.extra), len(EX_HOLES), set(removed_ids))
     removed_o = [o for nm in vl for o in objs_of_group(nm)]
@@ -456,13 +486,22 @@ def region_pass(box_, first):
         else:
             for ents, hs, rows in reversed(bl):
                 remove_rows(ents, hs)
-            lost += 1
-    print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}', flush=True)
+            if restore_group(nm, saved[nm], vias_of[nm]):
+                restored.add(nm)
+            else:
+                lost += 1
+    for nm in vl:                   # dangling pieces / groups without two ends: keep them when still legal
+        if len(ends_cache[nm]) < 2 and nm not in restored and restore_group(nm, saved[nm], vias_of[nm]):
+            restored.add(nm)
+    print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}, '
+          f'restored as they were {len(restored)}', flush=True)
     if won <= lost:                 # roll the tentative exact model back
         del EX.extra[snap[0]:]; del EX_HOLES[snap[1]:]
         removed_ids.clear(); removed_ids.update(snap[2])
     if won > lost:
         for nm in vl:
+            if nm in restored:
+                continue
             dels.extend(groups[nm]['rows']); dead_groups.add(nm)
         for ents, hs, rows in blocks:
             adds.extend(rows)
@@ -474,6 +513,8 @@ def region_pass(box_, first):
     for ents, hs, rows in reversed(blocks):
         remove_rows(ents, hs)
     for nm in vl:
+        if nm in restored:
+            continue                # already back in the raster
         for e in saved[nm]:
             R.stamp(e[0], e[1], e[2]); R.copper_objs.append(e)
         for (x, y, h) in vias_of[nm]:
@@ -531,22 +572,43 @@ for ps in range(PASSES):
                 for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                     hole_geoms.remove(g)
         _rem = [o for nm in vl for o in objs_of_group(nm)]
-        res, why = route_conn_safe(net, a, b, lambda r_: exact_ok(rows_for(net, r_, 'chk', ck), _rem))
-        new_blocks, ok = [], bool(res)
-        if res and why != 'already connected':
-            rows = rows_for(net, res, f'P{k}:{net}', ck); new_blocks.append(stamp_rows(rows) + (rows,))
-        if ok:
-            for nm in vl:
-                if len(ends_cache[nm]) < 2:
-                    continue            # dangling piece: simply dropped
+        # attempt order: target first, then the victims; when a victim cannot be reconnected, undo and retry with that
+        # victim routed BEFORE the target (it keeps its corridor and the target finds another way), up to REORDER times
+        first_v, tries = [], 0
+        while True:
+            new_blocks, ok, fail_at, failed_v = [], True, '', None
+            for nm in first_v:
                 okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
                 new_blocks += bl
                 if not okv:
-                    ok = False; break
-        if ok:
-            all_rows = [r for ents, hs, rows in new_blocks for r in rows]
-            removed_o = [o for nm in vl for o in objs_of_group(nm)]
-            ok = exact_ok(all_rows, removed_o)
+                    ok = False; fail_at = f'victim-first {nm}'; break
+            if ok:
+                res, why = route_conn_safe(net, a, b, lambda r_: exact_ok(rows_for(net, r_, 'chk', ck), _rem))
+                if not res:
+                    ok = False; fail_at = f'target ({why})'
+                elif why != 'already connected':
+                    rows = rows_for(net, res, f'P{k}:{net}', ck); new_blocks.append(stamp_rows(rows) + (rows,))
+            if ok:
+                for nm in vl:
+                    if nm in first_v or len(ends_cache[nm]) < 2:
+                        continue            # dangling piece: simply dropped
+                    okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+                    new_blocks += bl
+                    if not okv:
+                        ok = False; failed_v = nm; fail_at = f'victim {nm} ({len(ends_cache[nm])} touch points)'; break
+            if ok:
+                all_rows = [r for ents, hs, rows in new_blocks for r in rows]
+                removed_o = [o for nm in vl for o in objs_of_group(nm)]
+                ok = exact_ok(all_rows, removed_o)
+                if not ok:
+                    fail_at = 'exact: ' + LAST_FAIL[0]
+            if ok or failed_v is None or tries >= REORDER:
+                break
+            for ents, hs, rows in reversed(new_blocks):
+                remove_rows(ents, hs)
+            first_v.append(failed_v); tries += 1
+        if DEBUG and not ok:
+            print(f'  repair fail {net} {ck[:70]}: victims {[groups[v]["net"] for v in vl]} -> {fail_at}', flush=True)
         if ok:
             for nm in vl:
                 dels += groups[nm]['rows']; dead_groups.add(nm)

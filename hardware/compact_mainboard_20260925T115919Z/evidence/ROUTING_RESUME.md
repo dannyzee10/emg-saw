@@ -3,7 +3,27 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 05:10 (27 Sep) - SUPERSEDES everything below
+## State at 06:05 (27 Sep) - SUPERSEDES everything below
+- Last commit fc11aef = state AF (22 unrouted). Written since (NOT committed yet): charger nudge
+  R_LIM (17.047,37.536,0) -> (18.90,37.55,180) and R_PGOOD (17.60,42.35,0) -> (18.85,42.40,90), attached copper ripped
+  (RIP_CHG2.csv, 55 objects; rip_attached.py) so the USB-C VBUS pins B4_A9 / A4_B9 can take via-in-pad.
+  State AG: 25 unrouted (+3 ripped), copper clean, 0 component clearance. GEOMETRY/DRC _AG.
+- Running: REP_AI on AG (VBUS / NetR_LIM_2 / 3V3_DIG / USB_PGOOD_N first, REORDER 3), log tmp/rep_ai.log.
+  If it does not get below 22: restore fc11aef's PcbDoc (git checkout fc11aef -- <PcbDoc>) or keep and continue.
+- REP_AG (regions) and REP_AH (reorder) on AF gained 0; diagnostics: most failures are "target (no path)" after ripping
+  12 victims -> fixed copper / placement blocks (see tmp/rep_ah.log "repair fail" lines).
+
+## State at 05:45 (27 Sep)
+- C2 = state AF, committed fc11aef (pushed): **22 unrouted** (5 GND, 1 3V0_ANA, 16 signals), copper clean, 0 antennae.
+  Geometry GEOMETRY_C2_6L_AF.txt, DRC DRC_C2_6L_AF.json. PLANS in run_repair.py include REP_AE_ADDS_OK.
+- repair.py now: safe-margin retry (SAFE_MARGIN 0.06) when the exact check fails; plane mode falls back to the partner;
+  region_pass restores a victim's ORIGINAL copper when it cannot be re-routed but is still legal (restore_group).
+- Running: REP_AG = regions (MCU bottom-left; ch2 INA; ch4 INA; charger; DRL corner) + 1 pass on AF,
+  log tmp/rep_ag.log.
+- Nudge candidates if regions stall: U1 +0.25 mm x (opens a 0.6 mm edge channel for U1-11 GND to the edge GND via);
+  TP_VREF_B_SRC relocation; ch2/ch4 INA pin-3 (Vc_2 via / y=17.15 track box in the pin).
+
+## State at 05:10 (27 Sep)
 - C2 = state AC, committed f8465cf (pushed): **24 unrouted** (5 GND, 2 3V0_ANA, 17 signals), copper clean, 0 antennae.
   Geometry GEOMETRY_C2_6L_AC.txt, DRC DRC_C2_6L_AC.json. Offline prediction now matches Altium (touch-point fix).
 - Round = `python run_repair.py <STATE> <TAG> PLANE=1 DEBUG=1 PASSES=2 CORRIDOR=.. MAXV=..` -> consistent_repair.py
