@@ -279,8 +279,14 @@ def parse_conn(s):
     return m.group(1), ends[0], ends[1]
 
 
+DRC_LAYER = {'L1 TOP': 'Top Layer', 'L2 GND': 'Mid Layer 1', 'L3 SIGNAL': 'Mid Layer 2', 'L4 GND': 'Mid Layer 3',
+             'L5 POWER SIGNAL': 'Mid Layer 4', 'L6 BOTTOM': 'Bottom Layer', 'Top Layer': 'Top Layer', 'Bottom Layer': 'Bottom Layer'}
+
+
 def end_copper(end, net):
     probe = LineString(end['pts']) if end['kind'] == 'Track' and len(end['pts']) == 2 else Point(end['pts'][0])
+    m = re.search(r' on (.+?)(?: \[|$)', end.get('text', ''))
+    want = DRC_LAYER.get(m.group(1).strip()) if m else None      # None: via / multi-layer end -> any layer
     best = None
     for g, n, ls in copper_objs:
         if n != net:
@@ -289,8 +295,9 @@ def end_copper(end, net):
         if b[0] > probe.bounds[2] + 0.3 or b[2] < probe.bounds[0] - 0.3 or b[1] > probe.bounds[3] + 0.3 or b[3] < probe.bounds[1] - 0.3:
             continue
         d = g.distance(probe)
-        if best is None or d < best[0]:
-            best = (d, g, ls)
+        key = (d > 1e-6, want is not None and want not in ls, d)    # touching first, then the DRC's layer, then distance
+        if best is None or key < best[3]:
+            best = (d, g, ls, key)
     if best is None or best[0] > 0.2:
         return None, set()
     return best[1], best[2]

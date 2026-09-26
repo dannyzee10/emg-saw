@@ -1,0 +1,4 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,P1:3V3_DIG,3V3_DIG,Top Layer,48.675,42.575,48.675,42.275,0.4,,,"3V3_DIG|Track (48.605mm,42.725mm)(51.575mm,42.725mm) on L1 TOP|Pad Free-TP_3V3_DIG(48.695mm,41.786mm) on L1 TOP",0
+TRACK,P2:3V3_DIG,3V3_DIG,Top Layer,48.425,37.975,48.6045,37.7955,0.4,,,"3V3_DIG|Via (48.175mm,38.075mm) from L1 TOP to L6 BOTTOM|Track (48.605mm,37.175mm)(48.625mm,37.175mm) on L1 TOP",0
+TRACK,P2:3V3_DIG,3V3_DIG,Top Layer,48.6045,37.7955,48.625,37.775,0.4,,,"3V3_DIG|Via (48.175mm,38.075mm) from L1 TOP to L6 BOTTOM|Track (48.605mm,37.175mm)(48.625mm,37.175mm) on L1 TOP",0

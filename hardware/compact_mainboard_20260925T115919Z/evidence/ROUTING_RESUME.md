@@ -3,7 +3,21 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 03:45 (27 Sep) - SUPERSEDES everything below
+## Update 04:35 (27 Sep)
+- C2 on disk = state Z (committed d652812, pushed): 28 unrouted.
+- Running: REP_Y = `python run_repair.py Z REP_Y DEBUG=1 PASSES=2 CORRIDOR=1.0 MAXV=10 REGIONS="46.0,25.0,55.5,32.5"
+  FIRST_NETS=ADC_EMG,3V3_DIG,3V0_ANA` (log tmp/rep_y.log). ADC region accepted (+1). Then consistent_repair -> write -> DRC.
+- New: `run_repair.py STATE TAG [K=V]` (standard env + full plan list; add each *_ADDS_OK to PLANS).
+- Fixed: router5.end_copper now prefers copper on the DRC-named layer (TP_3V3_DIG was matched to CUP4-1 on Bottom ->
+  false "already connected").
+- New repair modes: DEBUG=1 (prints why each direct route fails, incl. exact-check object + distance), ONLY_NETS,
+  PLANE=1 (GND/3V0_ANA end without plane access routes to the nearest legal via site, with victims),
+  PLANE_DEAD (L2/L4 pour fragment 10.87,10.5-15.66,11.51 is cut off by the corner TH pads: a via there is NOT plane
+  access -> the J_FPC1 pin-7 GND island needs a via in the main plane).
+- Finding: raster can be one cell (0.05) optimistic at a via edge; MARGIN 0.025 lets such paths through and the exact
+  check rejects them (VBUS x3 fail by 0.025 vs NetR_LIM_2 / 3V3_DIG vias) -> VBUS needs victims, not a margin change.
+
+## State at 03:45 (27 Sep)
 - C2 = state Z: **28 unrouted** (5 GND, 4 3V3_DIG, 1 3V0_ANA, 18 signals), copper DRC clean, 0 antennae.
   Geometry GEOMETRY_C2_6L_Z.txt, DRC DRC_C2_6L_Z.json. Channels 3 and 5 now route after the RG_3/RG_5 rotation
   (REP_X +20, exact-clean, 60 rows); two antenna prune passes (OPS_PRUNE_X/Y).

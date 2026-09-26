@@ -101,6 +101,14 @@ def objs_of_group(nm):
     return out
 
 
+LAST_FAIL = ['']
+
+
+def _fail(msg):
+    LAST_FAIL[0] = msg
+    return False
+
+
 def exact_ok(rows, extra_removed=()):
     """rows: new plan rows of one repair (all of them); extra_removed: model objects deleted by this repair"""
     if not EXACT:
@@ -116,32 +124,32 @@ def exact_ok(rows, extra_removed=()):
     for r, o in new:
         for other, d, req in EX.violations(o):
             if id(other) not in rem:
-                return False
+                return _fail(f'clearance {r["net"]} {r["kind"]} {r["layer"]} ({r["x1"]},{r["y1"]})-({r["x2"]},{r["y2"]}) w{r["w"]} d{r["d"]} vs {other.net} {other.kind} {other.comp} {other.name} at ({other.geom.centroid.x:.3f},{other.geom.centroid.y:.3f}) d={d:.3f} req={req}')
         if not G.edge_ok(o.geom) or any(k.intersects(o.geom) for k in R.keepouts):
-            return False
+            return _fail('edge/keepout')
         if r['kind'] == 'TRACK' and r['layer'] == 'Mid Layer 4':
             for rnet, rg in R.L5_RESERVED:
                 if rnet != r['net'] and rg.intersects(o.geom):
-                    return False
+                    return _fail('L5 reserved')
         if r['kind'] == 'VIA':
             near = [q for q in EX_PADS if q.geom.distance(o.geom) < 0.1 - 1e-6]
             vip = r['group'].endswith(' VIP') and all(q.net == r['net'] for q in near)
             if near and not vip:
-                return False
+                return _fail('via near pad')
             c = Point(float(r['x1']), float(r['y1'])); hr = float(r['h']) / 2
             for h in EX_HOLES:
                 if id(h) not in rem and abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and \
                         h.geom.distance(c.buffer(hr)) < 0.254 - 1e-6:
-                    return False
+                    return _fail('hole-hole')
     for i, (ra, a) in enumerate(new):
         for rb, b in new[i + 1:]:
             if a.net != b.net and a.layers & b.layers and a.geom.distance(b.geom) < G.required(a, b) - 1e-6:
-                return False
+                return _fail('new-new clearance')
         if ra['kind'] == 'VIA':
             for rb, b in new[i + 1:]:
                 if rb['kind'] == 'VIA' and Point(float(ra['x1']), float(ra['y1'])).distance(Point(float(rb['x1']), float(rb['y1']))) \
                         < float(ra['h']) / 2 + float(rb['h']) / 2 + 0.254 - 1e-6:
-                    return False
+                    return _fail('new hole-hole')
     return True
 
 
@@ -254,7 +262,9 @@ def pt_end(p):
 
 
 def touch_points(name):
-    """points where a group's copper touches same-net copper outside the group (its two logical ends)"""
+    """points where a group's copper touches same-net copper outside the group: every row end that lands on other copper
+    AND every place where other copper touches the group anywhere along it (T-junctions onto a track's middle, pads the
+    track passes over) -- a branched group must be reconnected at every one of them"""
     g = groups[name]
     own_ids = {id(e) for e in g['entries']}
     others = [e for e in R.copper_objs if e[1] == g['net'] and id(e) not in own_ids]
@@ -266,9 +276,21 @@ def touch_points(name):
             P = Point(c).buffer(0.01)
             if any(ls & lay and ge.intersects(P) for ge, n, ls in others):
                 pts.append(c)
+    for mg, mn, ml in g['entries']:
+        mb = mg.bounds
+        for ge, n, ls in others:
+            if not (ls & ml):
+                continue
+            b = ge.bounds
+            if b[0] > mb[2] + 0.01 or b[2] < mb[0] - 0.01 or b[1] > mb[3] + 0.01 or b[3] < mb[1] - 0.01:
+                continue
+            if ge.distance(mg) < 0.002:
+                inter = ge.intersection(mg.buffer(0.003))
+                p = inter.representative_point() if not inter.is_empty else ge.representative_point()
+                pts.append((p.x, p.y))
     uniq = []
     for p in pts:
-        if all(abs(p[0] - q[0]) > 0.02 or abs(p[1] - q[1]) > 0.02 for q in uniq):
+        if all(abs(p[0] - q[0]) > 0.05 or abs(p[1] - q[1]) > 0.05 for q in uniq):
             uniq.append(p)
     return uniq                 # ALL touch points: a branched group must be reconnected at every branch end
 
@@ -289,8 +311,78 @@ def reconnect(nm, tag):
 ends_cache = {}
 
 
+
+# ---------------------------------------------------------------- plane access (PLANE=1): GND / 3V0_ANA ends reach a via site
+PLANE = os.environ.get('PLANE') == '1'
+R_ANA = None
+if PLANE:
+    from shapely.geometry import Polygon as _Poly
+    R_ANA = _Poly([tuple(map(float, p_.split(','))) for p_ in os.environ['R_ANA'].split(';')])
+    _ANA_IN = R_ANA.buffer(-0.225 - 0.05)
+PLANE_WIN = float(os.environ.get('PLANE_WIN', '3.0'))
+# isolated plane-pour fragments (x0,y0,x1,y1;...): a GND via inside one does not reach the main L2/L4 plane
+PLANE_DEAD = [tuple(map(float, b_.split(','))) for b_ in os.environ.get('PLANE_DEAD', '').split(';') if b_]
+
+
+def _dead(x, y):
+    return any(b_[0] <= x <= b_[2] and b_[1] <= y <= b_[3] for b_ in PLANE_DEAD)
+
+
+def _has_access(net, comp):
+    for g, ls in comp:
+        c_ = g.centroid
+        if len(ls) >= len(R.LAYERS) and (net == 'GND' or R_ANA.contains(c_)) and not (net == 'GND' and _dead(c_.x, c_.y)):
+            return True
+    return False
+
+
+def plane_end(net, a, b):
+    """the end (dict) of a GND / 3V0_ANA connection whose copper island has no plane access, or None"""
+    for end in (a, b):
+        g, ls = R.end_copper(end, net)
+        if g is not None and not _has_access(net, R.component(net, g)):
+            return end
+    return None
+
+
+def route_plane(net, end):
+    g, ls = R.end_copper(end, net)
+    comp = R.component(net, g)
+    for w in R.widths(net):
+        W = R.window(g, g, PLANE_WIN)
+        free, via_ok = R.maps(net, w, W, 0.45, 0.2)
+        if net == '3V0_ANA' or PLANE_DEAD:
+            iy0, iy1, ix0, ix1 = W
+            ys, xs = np.nonzero(via_ok)
+            for y, x in zip(ys, xs):
+                cx, cy = R.cell_xy(x + ix0, y + iy0)
+                if (net == '3V0_ANA' and not _ANA_IN.contains(Point(cx, cy))) or (net == 'GND' and _dead(cx, cy)):
+                    via_ok[y, x] = False
+        for L in [L for L in R.LAYERS if L in ls]:
+            s = R.comp_nodes([(gg, lls) for gg, lls in comp if L in lls], free, W, [L])
+            goals = [(R.LAYERS.index(L), int(x), int(y)) for y, x in zip(*np.nonzero(via_ok & free[L]))]
+            if not s or not goals:
+                continue
+            path = R.astar(free, via_ok, s, goals, R.layer_cost(net), [L], 400000)
+            if not path:
+                continue
+            segs, _ = R.to_segments(path, W) if len(path) > 1 else ([], [])
+            return (segs, [R.cell_xy(path[-1][1] + W[2], path[-1][2] + W[0])], w, 0.45, 0.2, False), 'ok plane'
+    return None, 'no plane via site'
+
+
+def route_conn(net, a, b):
+    if PLANE and net in ('GND', '3V0_ANA'):
+        e = plane_end(net, a, b)
+        if e is not None:
+            return route_plane(net, e)
+    return R.route_one(net, a, b)
+
 # ---------------------------------------------------------------- main loop
 conns = [c for c in (R.parse_conn(d) for d in json.load(open(drc))['details'] if d.startswith('Un-Routed')) if c]
+if os.environ.get('ONLY_NETS'):
+    conns = [c for c in conns if c[0] in os.environ['ONLY_NETS'].split(',')]
+DEBUG = os.environ.get('DEBUG') == '1'
 adds, dels, gained, k = [], [], 0, 0
 dead_groups = set()
 t0 = time.time()
@@ -323,7 +415,7 @@ def region_pass(box_, first):
     removed_ids.update(id(o) for o in removed_o)
     for net, a, b in inside:
         k += 1
-        res, why = R.route_one(net, a, b)
+        res, why = route_conn(net, a, b)
         if res:
             if why == 'already connected':
                 won += 1; closed.append((net, a, b)); continue
@@ -383,7 +475,7 @@ for ps in range(PASSES):
     for net, a, b in todo:
         k += 1
         ck = '|'.join(R.key((net, a, b)))
-        res, why = R.route_one(net, a, b)
+        res, why = route_conn(net, a, b)
         if res and why == 'already connected':
             gained += 1; gain_pass += 1; continue
         if res:
@@ -391,8 +483,11 @@ for ps in range(PASSES):
             if exact_ok(rows):
                 stamp_rows(rows); commit_exact(rows, []); adds += rows; gained += 1; gain_pass += 1
                 print(f'  [{time.time() - t0:.0f}s] direct {net}', flush=True); continue
+        if DEBUG:
+            print(f'  direct fail {net} {R.key((net, a, b))}: {why if not res else "exact check: " + LAST_FAIL[0]}', flush=True)
         # victims in the corridor / near the ends
-        pa, pb = a['pts'][0], b['pts'][0]
+        pe = plane_end(net, a, b) if PLANE and net in ('GND', '3V0_ANA') else None
+        pa, pb = (pe['pts'][0], pe['pts'][0]) if pe else (a['pts'][0], b['pts'][0])
         zone = LineString([pa, pb]).buffer(CORRIDOR) if pa != pb else Point(pa).buffer(CORRIDOR)
         zone = zone.union(Point(pa).buffer(CORRIDOR)).union(Point(pb).buffer(CORRIDOR))
         vict = {}
@@ -413,7 +508,7 @@ for ps in range(PASSES):
             for (x, y, h) in vias_of[nm]:
                 for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                     hole_geoms.remove(g)
-        res, why = R.route_one(net, a, b)
+        res, why = route_conn(net, a, b)
         new_blocks, ok = [], bool(res)
         if res and why != 'already connected':
             rows = rows_for(net, res, f'P{k}:{net}', ck); new_blocks.append(stamp_rows(rows) + (rows,))
