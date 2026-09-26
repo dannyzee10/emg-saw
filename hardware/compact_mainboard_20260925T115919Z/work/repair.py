@@ -375,8 +375,30 @@ def route_conn(net, a, b):
     if PLANE and net in ('GND', '3V0_ANA'):
         e = plane_end(net, a, b)
         if e is not None:
-            return route_plane(net, e)
+            res, why = route_plane(net, e)
+            if res:
+                return res, why
     return R.route_one(net, a, b)
+
+
+SAFE_MARGIN = float(os.environ.get('SAFE_MARGIN', '0.06'))
+
+
+def route_conn_safe(net, a, b, rows_check):
+    """route; if the raster path fails the exact check (raster can be one cell optimistic at a copper edge), re-route the
+    same connection at SAFE_MARGIN.  rows_check(res) -> bool.  Returns (res, why)."""
+    res, why = route_conn(net, a, b)
+    if not res or why == 'already connected' or rows_check(res):
+        return res, why
+    m0 = R.MARGIN
+    R.MARGIN = SAFE_MARGIN
+    try:
+        res2, why2 = route_conn(net, a, b)
+    finally:
+        R.MARGIN = m0
+    if res2 and rows_check(res2):
+        return res2, why2 + ' (safe margin)'
+    return res, why
 
 # ---------------------------------------------------------------- main loop
 conns = [c for c in (R.parse_conn(d) for d in json.load(open(drc))['details'] if d.startswith('Un-Routed')) if c]
@@ -475,7 +497,7 @@ for ps in range(PASSES):
     for net, a, b in todo:
         k += 1
         ck = '|'.join(R.key((net, a, b)))
-        res, why = route_conn(net, a, b)
+        res, why = route_conn_safe(net, a, b, lambda r_: exact_ok(rows_for(net, r_, 'chk', ck)))
         if res and why == 'already connected':
             gained += 1; gain_pass += 1; continue
         if res:
@@ -508,7 +530,8 @@ for ps in range(PASSES):
             for (x, y, h) in vias_of[nm]:
                 for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                     hole_geoms.remove(g)
-        res, why = route_conn(net, a, b)
+        _rem = [o for nm in vl for o in objs_of_group(nm)]
+        res, why = route_conn_safe(net, a, b, lambda r_: exact_ok(rows_for(net, r_, 'chk', ck), _rem))
         new_blocks, ok = [], bool(res)
         if res and why != 'already connected':
             rows = rows_for(net, res, f'P{k}:{net}', ck); new_blocks.append(stamp_rows(rows) + (rows,))

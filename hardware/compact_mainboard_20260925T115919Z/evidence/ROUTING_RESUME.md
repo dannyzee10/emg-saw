@@ -3,6 +3,17 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
+## State at 05:10 (27 Sep) - SUPERSEDES everything below
+- C2 = state AC, committed f8465cf (pushed): **24 unrouted** (5 GND, 2 3V0_ANA, 17 signals), copper clean, 0 antennae.
+  Geometry GEOMETRY_C2_6L_AC.txt, DRC DRC_C2_6L_AC.json. Offline prediction now matches Altium (touch-point fix).
+- Round = `python run_repair.py <STATE> <TAG> PLANE=1 DEBUG=1 PASSES=2 CORRIDOR=.. MAXV=..` -> consistent_repair.py
+  (geometry of STATE) -> build_ops (--del DELS_OK) -> write (open_proj/apply_ops) -> DRC/export -> parse_drc ->
+  unrouted_summary -> prune antennae if any -> commit/push; add <TAG>_ADDS_OK to run_repair.PLANS.
+- Running: REP_AD on AC (MAXV 16, CORRIDOR 1.5, PLANE_WIN 4), log tmp/rep_ad.log.
+- Remaining: GND x5 / 3V0_ANA x2 (enclosed, no via site), VBUS x3, VBAT_CELL x2, USB_PGOOD_N, NetINA2_3 / NetINA4_3
+  (INA pin 3 boxed in on Top), ADC_EMG5, FG_ALRT, VOUT_2, Vc_1, DRL_LIMITED, ST67 SPI/UART x4.
+- Avoid REGIONS for now: region acceptance allows victim losses (net +1 only).
+
 ## Update 04:35 (27 Sep)
 - C2 on disk = state Z (committed d652812, pushed): 28 unrouted.
 - Running: REP_Y = `python run_repair.py Z REP_Y DEBUG=1 PASSES=2 CORRIDOR=1.0 MAXV=10 REGIONS="46.0,25.0,55.5,32.5"
