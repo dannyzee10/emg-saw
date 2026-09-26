@@ -1,0 +1,8 @@
+G1 plan tracks on the GND plane layer(s) Mid Layer 1/Mid Layer 3: 0
+G2 L3 track bands over non-GND L4 copper/antipads: 1 nets, 0.214 mm2
+   GND                    0.214 mm2
+R1 plan copper in antenna zone: 0
+P2/M2 vias on switch node / VCAP: 0 []
+vias per class: ANALOG 1, OTHER 3, POWER 0
+analog connections with length/span > 1.8: 0
+analog length on L3: 0.0 mm; total plan tracks 59 vias 4
