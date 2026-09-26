@@ -7,6 +7,7 @@ tpl, prefix, target, logname = sys.argv[1:5]
 ROOTS = {'C2': os.path.join(root, 'C2_COMPACT_4L_2SIDE', 'MainBoard') + '\\',
          'DISP': os.path.join(root, 'evidence', 'disposable_c2api', 'MainBoard') + '\\',
          'DISP2': os.path.join(root, 'evidence', 'disposable_c2api2', 'MainBoard') + '\\',
+         'DISP3': os.path.join(root, 'evidence', 'disposable_c2stack6', 'MainBoard') + '\\',
          'B': os.path.join(root, 'B_COMPACT_4L_2SIDE', 'MainBoard') + '\\'}
 pcb = 'EMG_MainBoard_Layout.PcbDoc'
 others = ';'.join(v + pcb for k, v in ROOTS.items() if k != target)

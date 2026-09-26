@@ -18,7 +18,9 @@ for l in open(G.CLASSES, encoding='utf-8', errors='replace'):
         classes[f[2]].add(f[1])
 ANALOG = {n for n, c in classes.items() if c & {'EMG_ANALOG', 'EMG_ADC', 'EMG_REFERENCE'}}
 
-l4 = [o for o in objs if 'Bottom Layer' in o.layers and o.net != 'GND' and o.kind in ('PAD', 'TRACK', 'ARC', 'REGION', 'FILL', 'VIA')]
+# STACK=6: L3's reference is Mid Layer 3 (the L4 GND plane of JLC06121H-3313); 4-layer: the Bottom layer
+REF_L3 = 'Mid Layer 3' if os.environ.get('STACK', '4') == '6' else 'Bottom Layer'
+l4 = [o for o in objs if REF_L3 in o.layers and o.net != 'GND' and o.kind in ('PAD', 'TRACK', 'ARC', 'REGION', 'FILL', 'VIA')]
 tree = STRtree([o.geom for o in l4])
 
 

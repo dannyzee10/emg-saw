@@ -768,15 +768,15 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/audit_plan.py": {
-    "mtime": 1790388987.4883566,
-    "seen": 1790392774.1249235,
-    "ast_hash": "73f9354afe8b0efd4d125041a8728b02",
+    "mtime": 1790397635.6326118,
+    "seen": 1790407109.8312879,
+    "ast_hash": "9b202a45786a915c8d88c27278ce1126",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/build_ops.py": {
-    "mtime": 1790388987.4893467,
-    "seen": 1790392774.1249235,
-    "ast_hash": "8d1eda5778693d1d6f72237837e09063",
+    "mtime": 1790400561.214759,
+    "seen": 1790407109.8312879,
+    "ast_hash": "3f73158e897175af259c10a992d313b3",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/classify_copper.py": {
@@ -900,9 +900,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/geom.py": {
-    "mtime": 1790388987.4843328,
-    "seen": 1790392774.1249235,
-    "ast_hash": "315362acb6b6c84811e512d7072b38e0",
+    "mtime": 1790397563.0914643,
+    "seen": 1790407109.8312879,
+    "ast_hash": "d2b12af52d33c756aeb0963b378eebe6",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/list_sheet.py": {
@@ -1014,9 +1014,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/router5.py": {
-    "mtime": 1790388987.4863365,
-    "seen": 1790392774.125946,
-    "ast_hash": "8749ab212a3081ca07e968cb47859699",
+    "mtime": 1790397599.788403,
+    "seen": 1790407109.8312879,
+    "ast_hash": "52d1e1dac85dc7bc63319b77ca308015",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/run_drc.pas": {
@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/RUN_DISPATCH_LOG.txt": {
-    "mtime": 1790394002.8650582,
-    "seen": 1790394328.8985739,
-    "ast_hash": "6fceb944b0dfbe76e6cd429b27aac65b",
+    "mtime": 1790400765.2128408,
+    "seen": 1790407109.8329022,
+    "ast_hash": "19ad15caf843220b58ce4377ed00159b",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/trial_nets.txt": {
@@ -2532,9 +2532,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/mkvariant.py": {
-    "mtime": 1790351989.8318372,
-    "seen": 1790388813.3140595,
-    "ast_hash": "5cb46cfe641f9d2e34cfa62f3d7d8bb7",
+    "mtime": 1790395384.4922464,
+    "seen": 1790407109.8312879,
+    "ast_hash": "55afe1e5aed4c84babeca79c636ac9dc",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/oc_234902.pas": {
@@ -3030,9 +3030,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/apply_ops_T.pas": {
-    "mtime": 1790389060.1072037,
-    "seen": 1790392774.1249235,
-    "ast_hash": "6343e70e2642da643bf91f29d1503a23",
+    "mtime": 1790397140.12932,
+    "seen": 1790407109.8312879,
+    "ast_hash": "4b55acfa376d83163f5c0c6694925be8",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/at_105742.pas": {
@@ -3156,9 +3156,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/make_ops_template.py": {
-    "mtime": 1790389057.435276,
-    "seen": 1790392774.1249235,
-    "ast_hash": "5481a43b3b2c8ea18016d9bd06f748e4",
+    "mtime": 1790397138.807725,
+    "seen": 1790407109.8312879,
+    "ast_hash": "43e1e22e763390dfc4b900fa2d68c306",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/patch_tools_c2.py": {
@@ -3456,9 +3456,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/g2_by_connection.py": {
-    "mtime": 1790394037.8350677,
-    "seen": 1790394328.891961,
-    "ast_hash": "dad8a5370ca6dbc3ce3709e1d041c8e4",
+    "mtime": 1790397643.5882006,
+    "seen": 1790407109.8312879,
+    "ast_hash": "4bcd169d26491a66f26d1358030d3c96",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/gr3_113947.pas": {
@@ -3480,9 +3480,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/C2_G2_BY_CONNECTION.txt": {
-    "mtime": 1790394044.3908708,
-    "seen": 1790394328.8970497,
-    "ast_hash": "b2d80557ca2e4e7ab081dc2da19331c0",
+    "mtime": 1790397645.4677963,
+    "seen": 1790407109.8329022,
+    "ast_hash": "51287ff40f7b7e7370967dde57d97965",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_R2.txt": {
@@ -3507,6 +3507,246 @@
     "mtime": 1790393766.5321558,
     "seen": 1790394328.8985739,
     "ast_hash": "9f36edfb702529e624b0b60c1e951d8e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_A.json": {
+    "mtime": 1790400730.3962576,
+    "seen": 1790407109.8312879,
+    "ast_hash": "68bea16a5118a102042de7b4dd358000",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_PROBE6L.json": {
+    "mtime": 1790397268.1970334,
+    "seen": 1790407109.8312879,
+    "ast_hash": "962c0741d20f4fcb393f709716102868",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTE_IN_C2_6L1.json": {
+    "mtime": 1790400807.5399323,
+    "seen": 1790407109.8312879,
+    "ast_hash": "0020982636cfa52244ebccf5d75a78f8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/a6a_133022.pas": {
+    "mtime": 1790400622.2695253,
+    "seen": 1790407109.8312879,
+    "ast_hash": "8f6981be14c5a3a33aead8c464731f12",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/d6a_133148.pas": {
+    "mtime": 1790400708.6881683,
+    "seen": 1790407109.8312879,
+    "ast_hash": "f4355537f404104663cc204cf4bd12c0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/d6p_123402.pas": {
+    "mtime": 1790397246.3521264,
+    "seen": 1790407109.8312879,
+    "ast_hash": "217beec8d091ff70889e472d392be2a3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/dru_123247.pas": {
+    "mtime": 1790397172.0437467,
+    "seen": 1790407109.8312879,
+    "ast_hash": "f10ef5eaa606e29effd2fc98a78058b4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/dump_rules_T.pas": {
+    "mtime": 1790397166.7566628,
+    "seen": 1790407109.8312879,
+    "ast_hash": "112466a70d8acc548cca29ab19fdb501",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/g6_123554.pas": {
+    "mtime": 1790397354.943547,
+    "seen": 1790407109.8312879,
+    "ast_hash": "b0ea67119955271cf26efcc81f832788",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/g6a_133240.pas": {
+    "mtime": 1790400760.4655688,
+    "seen": 1790407109.8312879,
+    "ast_hash": "b40a7b4cedee8932acb3e1ce371061ab",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/make_router_input_6l.py": {
+    "mtime": 1790400805.9085352,
+    "seen": 1790407109.8312879,
+    "ast_hash": "e00032908991a7f38d50420f7315e5cd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/nudge_stitch.py": {
+    "mtime": 1790400560.936278,
+    "seen": 1790407109.8312879,
+    "ast_hash": "4e538b0bcfb47eb5dfb9ce0ab8226b4f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/op6_123441.pas": {
+    "mtime": 1790397281.2911248,
+    "seen": 1790407109.8312879,
+    "ast_hash": "c213effb37b5b37945ff554e41b335aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/p6c_123528.pas": {
+    "mtime": 1790397328.9149115,
+    "seen": 1790407109.8312879,
+    "ast_hash": "20ff2ddd496e910f459d58071d320e80",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/p6p_123322.pas": {
+    "mtime": 1790397207.272877,
+    "seen": 1790407109.8312879,
+    "ast_hash": "1a34d1e1e151f7020d970b76936af17b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/plan_bk13_escape_c2.py": {
+    "mtime": 1790398126.589499,
+    "seen": 1790407109.8312879,
+    "ast_hash": "3f93e803fffaa0da6cd813ab357614d6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/rip_conflicts.py": {
+    "mtime": 1790397830.660258,
+    "seen": 1790407109.8312879,
+    "ast_hash": "e0742e3f1cdea5a2421f2fb1c7ed7f59",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/s6c_123459.pas": {
+    "mtime": 1790397299.166935,
+    "seen": 1790407109.8312879,
+    "ast_hash": "55f3bd0338a34098d378037a5973a5b5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/s6d_120322.pas": {
+    "mtime": 1790395402.124437,
+    "seen": 1790407109.8312879,
+    "ast_hash": "810f29e0fd30591fc2b5277686972943",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/s6e_121023.pas": {
+    "mtime": 1790395823.069755,
+    "seen": 1790407109.8312879,
+    "ast_hash": "631e36a23bafd64f92cd765133866dd2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/s6f_122250.pas": {
+    "mtime": 1790396593.8754096,
+    "seen": 1790407109.8312879,
+    "ast_hash": "1576decde52fc424b36f46e1391dd9d9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/s6g_123036.pas": {
+    "mtime": 1790397041.563039,
+    "seen": 1790407109.8312879,
+    "ast_hash": "f6433f622088b393872724174b83ea73",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/stack6_T.pas": {
+    "mtime": 1790395807.686345,
+    "seen": 1790407109.8312879,
+    "ast_hash": "2da50860e3017a182e25d93af9b5d18b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/stitch.py": {
+    "mtime": 1790400786.074216,
+    "seen": 1790407109.8312879,
+    "ast_hash": "139e6996983e3a772bca92b52e85f087",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/unrouted_summary.py": {
+    "mtime": 1790400740.3519804,
+    "seen": 1790407109.8312879,
+    "ast_hash": "d9ff3cd27e86e29efee422e943b96d5f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/APPLY_6L_PREP_C2_LOG.txt": {
+    "mtime": 1790397346.9990866,
+    "seen": 1790407109.8329022,
+    "ast_hash": "494714e6940231e630dac58a12fc4e34",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/APPLY_6L_PREP_PROBE_LOG.txt": {
+    "mtime": 1790397222.4667249,
+    "seen": 1790407109.8329022,
+    "ast_hash": "e81252c41d6e5a7ad767393d22730649",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/APPLY_OPS_C2_6L_A_LOG.txt": {
+    "mtime": 1790400699.2041123,
+    "seen": 1790407109.8329022,
+    "ast_hash": "f04a33257ae2d85ba971f6e5ac1f12f9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_A.txt": {
+    "mtime": 1790400723.8943648,
+    "seen": 1790407109.8329022,
+    "ast_hash": "979b28e9ac5b54392fb6512db374f516",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_A.txt.html": {
+    "mtime": 1790400723.8117218,
+    "seen": 1790407109.8329022,
+    "ast_hash": "59ab02c7af7d7f5484c665824d915d36",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_PROBE6L.txt": {
+    "mtime": 1790397262.8006165,
+    "seen": 1790407109.8329022,
+    "ast_hash": "8150090f9ec0af9376ff131c21570669",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_PROBE6L.txt.html": {
+    "mtime": 1790397262.7165582,
+    "seen": 1790407109.8329022,
+    "ast_hash": "36c12ab527a1bd5d19ffa463bee6e73d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L.txt": {
+    "mtime": 1790397362.9323103,
+    "seen": 1790407109.8329022,
+    "ast_hash": "ed52481184a34a453a80dad936d5d6a9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_A.txt": {
+    "mtime": 1790400768.6978316,
+    "seen": 1790407109.8329022,
+    "ast_hash": "c411f2173927a2cec5dbc342bda7bc52",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/OPEN_PROJ_C2_6L_LOG.txt": {
+    "mtime": 1790397292.5393498,
+    "seen": 1790407109.8329022,
+    "ast_hash": "1503980681eb3089222ebeb0cf22b220",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/RULES_PROBE6L.txt": {
+    "mtime": 1790397177.2974553,
+    "seen": 1790407109.8329022,
+    "ast_hash": "b9517e4d861d6e356dcde392107dee9c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/STACK6_C2_LOG.txt": {
+    "mtime": 1790397312.318066,
+    "seen": 1790407109.8329022,
+    "ast_hash": "1b3b4e07aa85d80fc1d487f935e6a15a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/STACK6_DISP3_LOG.txt": {
+    "mtime": 1790397055.9503071,
+    "seen": 1790407109.8329022,
+    "ast_hash": "2077afae743f2addd8de7971fac4693e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_6L_PREP.txt": {
+    "mtime": 1790397201.39308,
+    "seen": 1790407109.8329022,
+    "ast_hash": "55521fbc4ec3c0d5005e2cc44980cd0f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_C2_6L_A.txt": {
+    "mtime": 1790400600.9939039,
+    "seen": 1790407109.8329022,
+    "ast_hash": "3ba686ec7e0d1399e77434fd4abe4798",
     "semantic_hash": ""
   }
 }

@@ -18,7 +18,7 @@ GEOM = os.environ.get('GEOM_FILE', HERE + 'evidence/GEOMETRY.txt')
 CLASSES = HERE + 'evidence/inputs/CLASSES.txt'
 BOARD = box(*[float(v) for v in os.environ.get('BOARD_BOX', '12,12,83,48').split(',')]).buffer(2, 16)   # default: candidate B 75 x 40, r = 2
 EDGE = 0.5
-COPPER = ('Top Layer', 'Mid Layer 1', 'Mid Layer 2', 'Bottom Layer')
+COPPER = ('Top Layer', 'Mid Layer 1', 'Mid Layer 2', 'Mid Layer 3', 'Mid Layer 4', 'Bottom Layer')   # C2 6L: L1..L6 (Mid3 = L4 GND, Mid4 = L5)
 PAD_PAIR_010 = {'J_FPC1', 'J_FPC2', 'J_FPC3', 'J_FPC4', 'J_FPC5', 'UP4', 'UP2', 'UP1', 'U_MCU1'}
 
 WIDE = set()

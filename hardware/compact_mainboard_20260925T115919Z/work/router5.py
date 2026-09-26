@@ -24,7 +24,13 @@ RES = 0.05
 _g = [float(v) for v in os.environ.get('GRID', '9.5,9.5,90.5,55.5').split(',')]
 X0, Y1 = _g[0], _g[3]
 NX, NY = int(round((_g[2] - X0) / RES)), int(round((Y1 - _g[1]) / RES))
-LAYERS = ['Top Layer', 'Mid Layer 2', 'Bottom Layer']
+# C2 6-layer (JLC06121H-3313): L1 Top, L3 Mid Layer 2 (over solid L4 GND), L5 Mid Layer 4, L6 Bottom are routable;
+# L2 (Mid Layer 1) and L4 (Mid Layer 3) are solid GND planes and never routed.
+LAYERS = ['Top Layer', 'Mid Layer 2', 'Mid Layer 4', 'Bottom Layer']
+# L5 pour regions reserved for one net (e.g. the 3V0_ANA plane): other nets may pass through with vias but not route on L5
+# inside them.  env L5_RESERVED="NET:x0,y0,x1,y1;NET:x0,y0,x1,y1"
+L5_RESERVED = [(t.split(':')[0], box(*[float(v) for v in t.split(':')[1].split(',')]))
+               for t in os.environ.get('L5_RESERVED', '').split(';') if t.strip()]
 MARGIN = 0.06
 VIA_D, VIA_H = 0.6, 0.3
 VIA_COST = 1.5
@@ -63,16 +69,18 @@ def widths(net):
 
 
 def layer_cost(net):
+    """6L costs: analog/ADC/reference/crystal stay on L1/L3 (L3 is referenced to the solid L4 GND) and avoid L5;
+    SPI on L1/L3; supplies prefer L5 (power layer); slow control/digital may use L5 to cross the board."""
     c = cls(net)
     if net in DRL_TAPS:
-        return {'Top Layer': 1.3, 'Mid Layer 2': 1.0, 'Bottom Layer': 2.0}
+        return {'Top Layer': 1.3, 'Mid Layer 2': 1.0, 'Mid Layer 4': 2.2, 'Bottom Layer': 2.0}
     if c & {'EMG_ANALOG', 'EMG_ADC', 'EMG_REFERENCE', 'EMG_CRYSTAL'}:
-        return {'Top Layer': 1.0, 'Mid Layer 2': 1.8, 'Bottom Layer': 3.0}
+        return {'Top Layer': 1.0, 'Mid Layer 2': 1.4, 'Mid Layer 4': 3.0, 'Bottom Layer': 2.0}
     if 'EMG_SPI' in c:
-        return {'Top Layer': 1.0, 'Mid Layer 2': 1.0, 'Bottom Layer': 3.0}
+        return {'Top Layer': 1.0, 'Mid Layer 2': 1.0, 'Mid Layer 4': 2.5, 'Bottom Layer': 3.0}
     if 'EMG_POWER' in c:
-        return {'Top Layer': 1.0, 'Mid Layer 2': 1.1, 'Bottom Layer': 2.5}
-    return {'Top Layer': 1.0, 'Mid Layer 2': 1.2, 'Bottom Layer': 3.0}
+        return {'Top Layer': 1.3, 'Mid Layer 2': 1.6, 'Mid Layer 4': 1.0, 'Bottom Layer': 2.0}
+    return {'Top Layer': 1.0, 'Mid Layer 2': 1.1, 'Mid Layer 4': 1.1, 'Bottom Layer': 3.0}
 
 
 NO_VIA = {'NetL1_1', 'NetL1_2', 'MCU_VCAP'}   # report P2 (LX: no vias) and M2 (VCAP: no via)
@@ -81,7 +89,7 @@ NO_VIA = {'NetL1_1', 'NetL1_2', 'MCU_VCAP'}   # report P2 (LX: no vias) and M2 (
 def allowed_layers(net):
     if net in NO_VIA:
         return {'Top Layer'}
-    return set(LAYERS) if net in bottom_nets else {'Top Layer', 'Mid Layer 2'}
+    return set(LAYERS) if net in bottom_nets else {'Top Layer', 'Mid Layer 2', 'Mid Layer 4'}
 
 
 # ------------------------------------------------------------------ rasters
@@ -154,6 +162,13 @@ inside = np.zeros((NY, NX), bool)
 win, m = patch(G.BOARD, grow=0)
 inside[win[0]:win[1], win[2]:win[3]] |= m
 D_EDGE = ndimage.distance_transform_edt(inside) * RES
+RESERVED = []   # (net, raster mask) of the L5 reserved regions
+for rnet, rg in L5_RESERVED:
+    win, m = patch(rg, grow=0)
+    rm = np.zeros((NY, NX), bool)
+    if win:
+        rm[win[0]:win[1], win[2]:win[3]] |= m
+    RESERVED.append((rnet, rm))
 INIT = ({L: own[L].copy() for L in LAYERS}, holes.copy(), len(copper_objs))
 
 
@@ -190,6 +205,10 @@ def maps(net, w, W, vd=VIA_D, vh=VIA_H, relax=False):
         dn, dw, df = edt(nm), edt(wd), edt(fp)
         ok = (dn >= c + hw + MARGIN) & (dw >= cw + hw + MARGIN) & (df >= (cf if cf is not None else np.where(fr, 0.15, 0.25)) + hw + MARGIN)
         ok &= (D_KEEP[iy0:iy1, ix0:ix1] >= c + hw + MARGIN) & (D_EDGE[iy0:iy1, ix0:ix1] >= 0.5 + hw + MARGIN)
+        if L == 'Mid Layer 4':
+            for rnet, rm in RESERVED:
+                if rnet != net:
+                    ok &= ~rm[iy0:iy1, ix0:ix1]
         free[L] = ok
         r = vd / 2
         via_ok &= (dn >= c + r + MARGIN) & (dw >= cw + r + MARGIN) & (df >= (cf if cf is not None else 0.25) + r + MARGIN)
@@ -250,7 +269,7 @@ def end_nodes(g, layers, free, W, allowed, relax=False):
 
 
 DIRS = [(1, 0, 1.0), (-1, 0, 1.0), (0, 1, 1.0), (0, -1, 1.0), (1, 1, 1.4142), (1, -1, 1.4142), (-1, 1, 1.4142), (-1, -1, 1.4142)]
-IDX_BITS = 24                      # 3 layers x full-board window (1620 x 920) = 4.47 M cells < 2**24
+IDX_BITS = 24                      # C2 6L: 4 routable layers x full-board window (1202 x 740) = 3.56 M cells < 2**24
 IDX_MASK = (1 << IDX_BITS) - 1
 FQ = 100000                        # f quantum 1e-5 cost units in the packed heap key
 

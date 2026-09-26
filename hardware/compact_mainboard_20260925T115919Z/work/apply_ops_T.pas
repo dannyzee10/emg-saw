@@ -42,6 +42,8 @@ Begin
  If S='Top Layer' Then Result:=eTopLayer
  Else If S='Mid Layer 1' Then Result:=eMidLayer1
  Else If S='Mid Layer 2' Then Result:=eMidLayer2
+ Else If S='Mid Layer 3' Then Result:=eMidLayer3
+ Else If S='Mid Layer 4' Then Result:=eMidLayer4
  Else If S='Bottom Layer' Then Result:=eBottomLayer
  Else Raise('Unknown layer '+S);
 End;
@@ -101,11 +103,29 @@ Begin
  Finally B.BoardIterator_Destroy(It);End;
 End;
 
+Function CountPolys(Name:String):Integer;
+Var It:IPCB_BoardIterator;P:IPCB_Polygon;
+Begin
+ Result:=0;
+ It:=B.BoardIterator_Create;It.SetState_FilterAll;It.AddFilter_LayerSet(AllLayers);It.AddFilter_ObjectSet(MkSet(ePolyObject));
+ Try P:=It.FirstPCBObject;While P<>Nil Do Begin If P.Name=Name Then Inc(Result);P:=It.NextPCBObject;End;
+ Finally B.BoardIterator_Destroy(It);End;
+End;
+
+Procedure RenamePoly(OldName,NewName:String);
+Var It:IPCB_BoardIterator;P:IPCB_Polygon;
+Begin
+ It:=B.BoardIterator_Create;It.SetState_FilterAll;It.AddFilter_LayerSet(AllLayers);It.AddFilter_ObjectSet(MkSet(ePolyObject));
+ Try P:=It.FirstPCBObject;While P<>Nil Do Begin If P.Name=OldName Then Begin P.BeginModify;P.Name:=NewName;P.EndModify;Say('POLY_RENAMED|'+OldName+'|'+NewName);End;P:=It.NextPCBObject;End;
+ Finally B.BoardIterator_Destroy(It);End;
+End;
+
 Procedure SetLayers(RL:IPCB_RoutingLayersRule;S:String;F:Integer);
 Begin
  RL.RoutingLayers(eTopLayer):=Fld(S,F)='1';RL.RoutingLayers(eMidLayer1):=Fld(S,F+1)='1';
  RL.RoutingLayers(eMidLayer2):=Fld(S,F+2)='1';RL.RoutingLayers(eBottomLayer):=Fld(S,F+3)='1';
- Say('RL|'+RL.Name+'|TOP='+BoolToStr(RL.RoutingLayers(eTopLayer),True)+'|MID1='+BoolToStr(RL.RoutingLayers(eMidLayer1),True)+'|MID2='+BoolToStr(RL.RoutingLayers(eMidLayer2),True)+'|BOT='+BoolToStr(RL.RoutingLayers(eBottomLayer),True)+'|PRIORITY='+IntToStr(RL.Priority));
+ If Fld(S,F+4)<>'' Then RL.RoutingLayers(eMidLayer3):=Fld(S,F+4)='1';If Fld(S,F+5)<>'' Then RL.RoutingLayers(eMidLayer4):=Fld(S,F+5)='1';
+ Say('RL|'+RL.Name+'|TOP='+BoolToStr(RL.RoutingLayers(eTopLayer),True)+'|MID1='+BoolToStr(RL.RoutingLayers(eMidLayer1),True)+'|MID2='+BoolToStr(RL.RoutingLayers(eMidLayer2),True)+'|BOT='+BoolToStr(RL.RoutingLayers(eBottomLayer),True)+'|MID3='+BoolToStr(RL.RoutingLayers(eMidLayer3),True)+'|MID4='+BoolToStr(RL.RoutingLayers(eMidLayer4),True)+'|PRIORITY='+IntToStr(RL.Priority));
 End;
 
 Procedure Counts(Tag:String);
@@ -192,6 +212,7 @@ Begin
    Else If Kind='DEL_VIA' Then Begin V:=FindVia(Fld(S,1),Num(S,2),Num(S,3));If MatchCount<>1 Then Begin Fail('line '+IntToStr(I)+' del via match '+IntToStr(MatchCount));Continue;End;Inc(NDel);End
    Else If Kind='TENT_VIA' Then Begin V:=FindVia('*',Num(S,1),Num(S,2));If MatchCount<>1 Then Begin Fail('line '+IntToStr(I)+' tent via match '+IntToStr(MatchCount));Continue;End;End
    Else If Kind='POLY' Then Begin If FindNet(Fld(S,2))=Nil Then Begin Fail('poly net '+Fld(S,2));Continue;End;LayerOf(Fld(S,3));If CountItems(Fld(S,4),';')<3 Then Begin Fail('poly vertices');Continue;End;End
+   Else If Kind='RENAME_POLY' Then Begin If CountPolys(Fld(S,1))<>1 Then Begin Fail('rename source count '+Fld(S,1));Continue;End;If CountPolys(Fld(S,2))<>0 Then Begin Fail('rename target exists '+Fld(S,2));Continue;End;End
    Else If Kind='CUTOUT' Then Begin LayerOf(Fld(S,1));If CountItems(Fld(S,2),';')<3 Then Begin Fail('cutout vertices');Continue;End;End
    Else If Kind='WIDEN_TRACK' Then Begin T:=FindTrack(Fld(S,1),Fld(S,2),Num(S,3),Num(S,4),Num(S,5),Num(S,6));Cnt:=MatchCount;If Cnt<>1 Then Begin Fail('line '+IntToStr(I)+' widen match count '+IntToStr(Cnt));Continue;End;Num(S,7);End
    Else Begin Fail('line '+IntToStr(I)+' unknown op '+Kind);Continue;End;
@@ -225,6 +246,8 @@ Begin
      V:=FindVia('*',Num(S,1),Num(S,2));V.IsTenting_Top:=Fld(S,3)='1';V.IsTenting_Bottom:=Fld(S,4)='1';Inc(NTent);
     End Else If Kind='POLY' Then Begin
      AddPoly(S);
+    End Else If Kind='RENAME_POLY' Then Begin
+     RenamePoly(Fld(S,1),Fld(S,2));
     End Else If Kind='CUTOUT' Then Begin
      AddCutout(S);
     End Else If Kind='WIDEN_TRACK' Then Begin
@@ -239,8 +262,8 @@ Begin
      RL:=FindRule(Fld(S,1));SetLayers(RL,S,2);
     End Else If Kind='SET_WIDTH' Then Begin
      WR:=FindRule(Fld(S,1));
-     For K:=0 To 3 Do Begin
-      If K=0 Then Lay:=eTopLayer Else If K=1 Then Lay:=eMidLayer1 Else If K=2 Then Lay:=eMidLayer2 Else Lay:=eBottomLayer;
+     For K:=0 To 5 Do Begin
+      If K=0 Then Lay:=eTopLayer Else If K=1 Then Lay:=eMidLayer1 Else If K=2 Then Lay:=eMidLayer2 Else If K=3 Then Lay:=eMidLayer3 Else If K=4 Then Lay:=eMidLayer4 Else Lay:=eBottomLayer;
       WR.MinWidth(Lay):=MMsToCoord(Num(S,2));WR.MaxWidth(Lay):=MMsToCoord(Num(S,4));WR.FavoredWidth(Lay):=MMsToCoord(Num(S,3));
      End;
      Say('WIDTH|'+WR.Name+'|TOP_MIN='+FloatToStr(CoordToMMs(WR.MinWidth(eTopLayer)))+'|FAV='+FloatToStr(CoordToMMs(WR.FavoredWidth(eTopLayer)))+'|MAX='+FloatToStr(CoordToMMs(WR.MaxWidth(eTopLayer))));

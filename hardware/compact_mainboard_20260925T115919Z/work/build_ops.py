@@ -28,14 +28,28 @@ def same(r, o):
     return (o.kind == 'TRACK' and s[2] == r['net'] and s[1] == r['layer'] and
             ((abs(float(s[3]) - float(r['x1'])) < .002 and abs(float(s[4]) - float(r['y1'])) < .002 and abs(float(s[5]) - float(r['x2'])) < .002 and abs(float(s[6]) - float(r['y2'])) < .002) or
              (abs(float(s[3]) - float(r['x2'])) < .002 and abs(float(s[4]) - float(r['y2'])) < .002 and abs(float(s[5]) - float(r['x1'])) < .002 and abs(float(s[6]) - float(r['y1'])) < .002)))
+def same_via(r, o):
+    s = o.src
+    return (o.kind in ('VIA', 'HOLE') and s is not None and s[0] == 'VIA' and s[1] == r['net'] and
+            abs(float(s[2]) - float(r['x1'])) < .002 and abs(float(s[3]) - float(r['y1'])) < .002)
+
+
 problems = []
 for r in dels:
-    m = [o for o in objs if same(r, o)]
-    if len(m) != 1:
-        problems.append(f"delete match {len(m)} for {r}")
+    if r['kind'] == 'VIA':        # a via is two model objects (copper + hole)
+        m = [o for o in objs if same_via(r, o)]
+        if len([o for o in m if o.kind == 'VIA']) != 1:
+            problems.append(f"via delete match {len(m)} for {r}")
+    else:
+        m = [o for o in objs if same(r, o)]
+        if len(m) != 1:
+            problems.append(f"delete match {len(m)} for {r}")
     objs = [o for o in objs if o not in m]
 idx = G.Index(objs)
 pads = [o for o in objs if o.kind == 'PAD']
+# C2 6L: L5 regions reserved for one net's pour (same env format as router5.py)
+L5_RESERVED = [(t.split(':')[0], box(*[float(v) for v in t.split(':')[1].split(',')]))
+               for t in os.environ.get('L5_RESERVED', '').split(';') if t.strip()]
 rows = []
 for p in plans:
     rows += list(csv.DictReader(open(p)))
@@ -54,9 +68,15 @@ for r, o in new:
         problems.append(f'{o.name} edge setback'); bad.add(r['group'])
     if any(k.intersects(o.geom) for k in keepouts):
         problems.append(f'{o.name} keepout'); bad.add(r['group'])
+    if r['kind'] == 'TRACK' and r['layer'] == 'Mid Layer 4':
+        for rnet, rg in L5_RESERVED:
+            if rnet != r['net'] and rg.intersects(o.geom):
+                problems.append(f'{o.name} on L5 inside the {rnet} reserved pour region'); bad.add(r['group'])
     if r['kind'] == 'VIA':
         onpads = [f'{q.comp}.{q.name}' for q in pads if q.geom.distance(o.geom) < 0.1 - 1e-6]
-        if onpads and not r['group'].endswith('EP via'):
+        # 'VIP' = planned via-in-pad (filled + capped, POFV): allowed only inside its own same-net pad
+        vip_ok = r['group'].endswith(' VIP') and all(q.net == r['net'] for q in pads if q.geom.distance(o.geom) < 0.1 - 1e-6)
+        if onpads and not r['group'].endswith('EP via') and not vip_ok:
             problems.append(f'{o.name} via on pad {onpads}'); bad.add(r['group'])
 # new vs new (spatially indexed)
 from shapely.strtree import STRtree
@@ -84,8 +104,9 @@ for p in problems[:60]:
     print(' ', p)
 if drop_out:
     keep = [r for r in rows if r['group'] not in bad]
+    fields = list(dict.fromkeys(k for r in rows for k in r.keys()))   # plans may carry different extra columns
     with open(drop_out, 'w', newline='') as f:
-        wr = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        wr = csv.DictWriter(f, fieldnames=fields, restval='')
         wr.writeheader(); wr.writerows(keep)
     print('DROPPED_GROUPS', len(bad), 'kept rows', len(keep), 'of', len(rows))
     for g in sorted(bad):
@@ -103,7 +124,10 @@ with open(os.environ.get('OPS_OUT', G.HERE + 'work/OPS.txt'), 'w') as f:
             sc = f"{reg} And (InComponent('{z['ref']}') Or {nets})"
             f.write(f"RULE_CLR|CLR_BK13_ESCAPE_{z['ref']}|0.13|{sc}|{sc}\n")
     for r in dels:
-        f.write(f"DEL_TRACK|{r['net']}|{r['layer']}|{r['x1']}|{r['y1']}|{r['x2']}|{r['y2']}\n")
+        if r['kind'] == 'VIA':
+            f.write(f"DEL_VIA|{r['net']}|{r['x1']}|{r['y1']}\n")
+        else:
+            f.write(f"DEL_TRACK|{r['net']}|{r['layer']}|{r['x1']}|{r['y1']}|{r['x2']}|{r['y2']}\n")
     for r in rows:
         if r['kind'] == 'TRACK':
             f.write(f"TRACK|{r['net']}|{r['layer']}|{r['x1']}|{r['y1']}|{r['x2']}|{r['y2']}|{r['w']}\n")

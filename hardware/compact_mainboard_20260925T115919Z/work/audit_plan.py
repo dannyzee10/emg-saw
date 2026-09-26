@@ -19,6 +19,11 @@ import geom as G
 ANT = box(*[float(v) for v in os.environ.get('ANT_BOX', '41.19,49.44,53.47,54.44').split(',')])   # default: B's antenna keep-out
 NO_VIA = {'NetL1_1', 'NetL1_2', 'MCU_VCAP'}
 G2_BAND = 0.2          # half-width margin around an L3 track that must see solid L4 (derived: ~2x L3-L4 prepreg)
+# STACK=6 (C2 JLC06121H-3313): the planes are L2 = Mid Layer 1 and L4 = Mid Layer 3; L3 (Mid Layer 2) references L4 across
+# the 0.1164 mm 2116 prepreg, so G2 is judged against Mid Layer 3 (only non-GND vias / through-hole pads make voids there).
+SIX = os.environ.get('STACK', '4') == '6'
+PLANES = ('Mid Layer 1', 'Mid Layer 3') if SIX else ('Mid Layer 1',)
+REF_L3 = 'Mid Layer 3' if SIX else 'Bottom Layer'
 
 objs, comps, keepouts = G.load()
 classes = defaultdict(set)
@@ -41,12 +46,12 @@ def seg(r):
 
 
 # G1
-g1 = [r for r in tracks if r['layer'] == 'Mid Layer 1']
-out.append(f'G1 plan tracks on L2: {len(g1)}')
+g1 = [r for r in tracks if r['layer'] in PLANES]
+out.append(f'G1 plan tracks on the GND plane layer(s) {"/".join(PLANES)}: {len(g1)}')
 
-# G2: non-GND copper on Bottom (existing pads/tracks/vias are through-all, so vias count as L4 antipads too)
-l4_other = [o.geom for o in objs if 'Bottom Layer' in o.layers and o.net not in ('GND',) and o.kind in ('PAD', 'TRACK', 'ARC', 'REGION', 'FILL', 'VIA')]
-l4_other += [seg(r).buffer(float(r['w']) / 2) for r in tracks if r['layer'] == 'Bottom Layer' and r['net'] != 'GND']
+# G2: non-GND copper on L3's reference layer (existing pads/tracks/vias are through-all, so vias count as antipads too)
+l4_other = [o.geom for o in objs if REF_L3 in o.layers and o.net not in ('GND',) and o.kind in ('PAD', 'TRACK', 'ARC', 'REGION', 'FILL', 'VIA')]
+l4_other += [seg(r).buffer(float(r['w']) / 2) for r in tracks if r['layer'] == REF_L3 and r['net'] != 'GND']
 l4_other += [G.via(r['net'], float(r['x1']), float(r['y1']), float(r['d']), float(r['h'])).geom for r in vias if r['net'] != 'GND']
 L4 = unary_union(l4_other)
 g2 = defaultdict(float)
