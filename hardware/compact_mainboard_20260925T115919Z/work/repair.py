@@ -317,28 +317,37 @@ def region_pass(box_, first):
             for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                 hole_geoms.remove(g)
     blocks, won, lost, closed = [], 0, 0, []
+    # tentative exact model: victims removed now, each new route exact-checked and committed as it is made
+    snap = (len(EX.extra), len(EX_HOLES), set(removed_ids))
+    removed_o = [o for nm in vl for o in objs_of_group(nm)]
+    removed_ids.update(id(o) for o in removed_o)
     for net, a, b in inside:
         k += 1
         res, why = R.route_one(net, a, b)
         if res:
-            won += 1; closed.append((net, a, b))
-            if why != 'already connected':
-                rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b)))); blocks.append(stamp_rows(rows) + (rows,))
+            if why == 'already connected':
+                won += 1; closed.append((net, a, b)); continue
+            rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b))))
+            if exact_ok(rows):
+                blocks.append(stamp_rows(rows) + (rows,)); commit_exact(rows, [])
+                won += 1; closed.append((net, a, b))
     for nm in vl:
         if len(ends_cache[nm]) < 2:
             continue
         k += 1
         okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
-        blocks += bl
-        if not okv:
+        vrows = [r for ents, hs, rows in bl for r in rows]
+        if okv and exact_ok(vrows):
+            blocks += bl; commit_exact(vrows, [])
+        else:
+            for ents, hs, rows in reversed(bl):
+                remove_rows(ents, hs)
             lost += 1
     print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}', flush=True)
-    all_rows = [r for ents, hs, rows in blocks for r in rows]
-    removed_o = [o for nm in vl for o in objs_of_group(nm)]
-    if won > lost and not exact_ok(all_rows, removed_o):
-        print('  exact check failed', flush=True); won = lost
+    if won <= lost:                 # roll the tentative exact model back
+        del EX.extra[snap[0]:]; del EX_HOLES[snap[1]:]
+        removed_ids.clear(); removed_ids.update(snap[2])
     if won > lost:
-        commit_exact(all_rows, removed_o)
         for nm in vl:
             dels.extend(groups[nm]['rows']); dead_groups.add(nm)
         for ents, hs, rows in blocks:

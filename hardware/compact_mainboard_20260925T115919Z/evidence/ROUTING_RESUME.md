@@ -3,7 +3,34 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 23:05 (26 Sep) - SUPERSEDES everything below
+## State at 03:45 (27 Sep) - SUPERSEDES everything below
+- C2 = state Z: **28 unrouted** (5 GND, 4 3V3_DIG, 1 3V0_ANA, 18 signals), copper DRC clean, 0 antennae.
+  Geometry GEOMETRY_C2_6L_Z.txt, DRC DRC_C2_6L_Z.json. Channels 3 and 5 now route after the RG_3/RG_5 rotation
+  (REP_X +20, exact-clean, 60 rows); two antenna prune passes (OPS_PRUNE_X/Y).
+- Plan list for repair/rip tools: previous list + REP_X_ADDS_OK.csv.
+- Next: ADC_EMG2/3 region rip (46,25.5)-(53.5,32.5) so the 3V0_ANA L5 track at x=51.62 is re-routed and
+  pin 24/25 can use inner fan-out vias (R_ADC pads are only ~0.22 mm from the MCU pads - no left escape);
+  then ST67 SPI/UART (4), charger VBUS x3 / VBAT_CELL x2 / USB_PGOOD, INA_OUT_3 / NetINA2_3 / NetINA4_3, Vc_1, DRL_LIMITED.
+
+## State at 02:55 (27 Sep)
+- REP_W (regions on V) gained 0 write-safe rows -> not applied.
+- Nudge written to C2 (not committed yet): RG_3 and RG_5 rotated 270 -> 90 in place (VOUT/NetCH pad-order crossing
+  removed), attached copper ripped (RIP_RG35.csv, 38 objects). State W: 46 unrouted, copper DRC clean, 3 antennae.
+  Geometry GEOMETRY_C2_6L_W.txt, DRC DRC_C2_6L_W.json.
+- Running: REP_X = repair.py on W (MARGIN 0.025, FIRST_NETS channel nets, 2 passes), log tmp/rep_x.log,
+  outputs REP_X_ADDS/DELS.csv -> consistent_repair -> write -> DRC. If it does not beat 36, restore by re-routing.
+- Next nudge clusters: MCU ADC fan-in (ADC_EMG2/3), ST67 SPI/UART (4), charger VBUS x3 / VBAT_CELL x2 / USB_PGOOD.
+
+## State at 01:40 (27 Sep)
+- C2 = state V, committed db59c86: 36 unrouted (6 GND, 4 3V3_DIG, 2 3V0_ANA, 24 signals), copper DRC clean, 0 antennae.
+  Geometry GEOMETRY_C2_6L_V.txt, DRC DRC_C2_6L_V.json.
+- Loop per round: repair.py (EXACT=1, MARGIN=0.02-0.025, BK13_ZONES set) -> consistent_repair.py -> build_ops -> write -> DRC
+  -> commit. Add each round's *_ADDS_OK.csv to the plan list (latest: REP_V_ADDS_OK.csv).
+- Running: REP_W (regions analog/MCU-ADC/charger + 2 passes, MARGIN 0.02), log tmp/rep_w.log.
+- Pinches still open: MCU ADC fan-in (R_ADC2/3 vs pins 24/25, needs inner-layer via path), SPI/UART to ST67,
+  VBUS/VBAT at the charger, VOUT_3/5 back-ends.
+
+## State at 23:05 (26 Sep)
 - C2 = state R, committed 63bfefb: 44 unrouted (7 GND, 5 3V0_ANA, 4 3V3_DIG, 28 signals), 5 antennae, copper DRC clean.
   Geometry GEOMETRY_C2_6L_R.txt, DRC DRC_C2_6L_R.json.
 - Working method now: repair.py (corridor rip + strict acceptance) -> consistent_repair.py (exact check, drop repairs
