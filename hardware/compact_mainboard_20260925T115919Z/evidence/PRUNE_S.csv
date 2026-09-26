@@ -1,0 +1,8 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn
+VIA,PRUNE,Vservo_2,Multi Layer,32.1750,22.9250,,,,,,
+VIA,PRUNE,NetCH_1_2,Multi Layer,16.1250,21.7750,,,,,,
+TRACK,PRUNE,Vservo_2,Mid Layer 2,32.0250,22.7750,32.1750,22.9250,,,,
+TRACK,PRUNE,Vservo_2,Bottom Layer,32.1750,22.9250,32.5750,22.5250,,,,
+TRACK,PRUNE,NetCH_1_2,Bottom Layer,16.1250,21.7750,16.6250,21.7750,,,,
+TRACK,PRUNE,NetCH_5_2,Top Layer,59.4250,21.9750,60.6750,23.2250,,,,
+TRACK,PRUNE,NetCH_1_2,Top Layer,16.1250,21.7750,16.2250,21.7750,,,,

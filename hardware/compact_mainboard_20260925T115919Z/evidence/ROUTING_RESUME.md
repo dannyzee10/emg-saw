@@ -3,7 +3,17 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 22:10 (26 Sep) - SUPERSEDES everything below
+## State at 23:05 (26 Sep) - SUPERSEDES everything below
+- C2 = state R, committed 63bfefb: 44 unrouted (7 GND, 5 3V0_ANA, 4 3V3_DIG, 28 signals), 5 antennae, copper DRC clean.
+  Geometry GEOMETRY_C2_6L_R.txt, DRC DRC_C2_6L_R.json.
+- Working method now: repair.py (corridor rip + strict acceptance) -> consistent_repair.py (exact check, drop repairs
+  with their victims) -> write -> DRC. Plan CSV list for repair/rip tools must include every routed plan written so far:
+  TRIAL_OK, C2R2_OK, 6L1_OK, BATCH_C_OK, 6L3_OK, 6L5_OK, 6L6A_OK, 6L7B_OK, REPAIR_ADDS_N3_OK, REG_MCU_ADDS_OK,
+  ROUTE_PLAN_C2_6L8A_OK, REG_ANA_ADDS_OK.
+- Known pinches: USB-C CC2 (B5) + VBUS (B4_A9) blocked by the NetR_LIM_2 via at (18.325,37.575) -> repair should rip it;
+  analog band = via-site limited (L3 38 %, L5 19 % used).
+
+## State at 22:10 (26 Sep)
 - User chose (21:52): KEEP RULES, NUDGE PARTS.
 - Written to C2 (not yet committed; last commit 466af2d = state O, 57 unrouted): MCU-edge region re-route (+2) and the
   charger-box rip; charger nudges C_BAT -0.30 x, R_TS_TOP -0.40 x, C_IN_ -> (14.85,36.75), R_PGOOD -> (17.60,42.35)

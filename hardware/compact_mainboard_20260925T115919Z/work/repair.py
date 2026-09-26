@@ -74,6 +74,90 @@ for name, g in groups.items():
 print(f'routed groups mapped: {len(groups)}', flush=True)
 
 
+# ---------------------------------------------------------------- exact validation (same checks as build_ops.py)
+EXACT = os.environ.get('EXACT', '1') == '1'
+if os.environ.get('BK13_ZONES'):
+    from shapely.geometry import box as _bx
+    for z in csv.DictReader(open(os.environ['BK13_ZONES'])):
+        G.ZONES.append((_bx(float(z['x0']), float(z['y0']), float(z['x1']), float(z['y1'])), set(z['nets'].split(';')), z['ref']))
+EX = G.Index([o for o in R.objs])
+EX_PADS = [o for o in R.objs if o.kind == 'PAD']
+EX_HOLES = [o for o in R.objs if o.kind == 'HOLE']
+removed_ids = set()                 # ids of Obj (initial model objects) deleted by accepted repairs
+entry_obj = {id(R.copper_objs[i]): cu_src[i] for i in range(len(cu_src))}
+hole_obj = {}
+for o in EX_HOLES:
+    if o.src is not None and o.src[0] == 'VIA':
+        hole_obj[('V', o.src[1], round(float(o.src[2]), 3), round(float(o.src[3]), 3))] = o
+
+
+def objs_of_group(nm):
+    out = [entry_obj[id(e)] for e in groups[nm]['entries'] if id(e) in entry_obj]
+    for r in groups[nm]['rows']:
+        if r['kind'] == 'VIA':
+            h = hole_obj.get(('V', r['net'], round(float(r['x1']), 3), round(float(r['y1']), 3)))
+            if h is not None:
+                out.append(h)
+    return out
+
+
+def exact_ok(rows, extra_removed=()):
+    """rows: new plan rows of one repair (all of them); extra_removed: model objects deleted by this repair"""
+    if not EXACT:
+        return True
+    rem = removed_ids | {id(o) for o in extra_removed}
+    new = []
+    for r in rows:
+        if r['kind'] == 'TRACK':
+            o = G.track(r['net'], r['layer'], [(float(r['x1']), float(r['y1'])), (float(r['x2']), float(r['y2']))], float(r['w']))
+        else:
+            o = G.via(r['net'], float(r['x1']), float(r['y1']), float(r['d']), float(r['h']))
+        new.append((r, o))
+    for r, o in new:
+        for other, d, req in EX.violations(o):
+            if id(other) not in rem:
+                return False
+        if not G.edge_ok(o.geom) or any(k.intersects(o.geom) for k in R.keepouts):
+            return False
+        if r['kind'] == 'TRACK' and r['layer'] == 'Mid Layer 4':
+            for rnet, rg in R.L5_RESERVED:
+                if rnet != r['net'] and rg.intersects(o.geom):
+                    return False
+        if r['kind'] == 'VIA':
+            near = [q for q in EX_PADS if q.geom.distance(o.geom) < 0.1 - 1e-6]
+            vip = r['group'].endswith(' VIP') and all(q.net == r['net'] for q in near)
+            if near and not vip:
+                return False
+            c = Point(float(r['x1']), float(r['y1'])); hr = float(r['h']) / 2
+            for h in EX_HOLES:
+                if id(h) not in rem and abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and \
+                        h.geom.distance(c.buffer(hr)) < 0.254 - 1e-6:
+                    return False
+    for i, (ra, a) in enumerate(new):
+        for rb, b in new[i + 1:]:
+            if a.net != b.net and a.layers & b.layers and a.geom.distance(b.geom) < G.required(a, b) - 1e-6:
+                return False
+        if ra['kind'] == 'VIA':
+            for rb, b in new[i + 1:]:
+                if rb['kind'] == 'VIA' and Point(float(ra['x1']), float(ra['y1'])).distance(Point(float(rb['x1']), float(rb['y1']))) \
+                        < float(ra['h']) / 2 + float(rb['h']) / 2 + 0.254 - 1e-6:
+                    return False
+    return True
+
+
+def commit_exact(rows, removed_objs):
+    """make accepted rows / removals part of the exact model"""
+    for o in removed_objs:
+        removed_ids.add(id(o))
+    for r in rows:
+        if r['kind'] == 'TRACK':
+            o = G.track(r['net'], r['layer'], [(float(r['x1']), float(r['y1'])), (float(r['x2']), float(r['y2']))], float(r['w']))
+        else:
+            o = G.via(r['net'], float(r['x1']), float(r['y1']), float(r['d']), float(r['h']))
+            EX_HOLES.append(G.Obj(Point(float(r['x1']), float(r['y1'])).buffer(float(r['h']) / 2), r['net'], 'HOLE', set()))
+        EX.add(o)
+
+
 # ---------------------------------------------------------------- stamping helpers
 def restamp_window(win, net=None):
     """re-stamp every live copper object touching the window (after cells were cleared)"""
@@ -238,7 +322,12 @@ def region_pass(box_, first):
             rows = rows_for(groups[nm]['net'], r2, f'P{k}v:{groups[nm]["net"]}', 'repair|' + nm)
             blocks.append(stamp_rows(rows) + (rows,))
     print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}', flush=True)
+    all_rows = [r for ents, hs, rows in blocks for r in rows]
+    removed_o = [o for nm in vl for o in objs_of_group(nm)]
+    if won > lost and not exact_ok(all_rows, removed_o):
+        print('  exact check failed', flush=True); won = lost
     if won > lost:
+        commit_exact(all_rows, removed_o)
         for nm in vl:
             dels.extend(groups[nm]['rows']); dead_groups.add(nm)
         for ents, hs, rows in blocks:
@@ -278,8 +367,10 @@ for ps in range(PASSES):
         if res and why == 'already connected':
             gained += 1; gain_pass += 1; continue
         if res:
-            rows = rows_for(net, res, f'P{k}:{net}', ck); stamp_rows(rows); adds += rows; gained += 1; gain_pass += 1
-            print(f'  [{time.time() - t0:.0f}s] direct {net}', flush=True); continue
+            rows = rows_for(net, res, f'P{k}:{net}', ck)
+            if exact_ok(rows):
+                stamp_rows(rows); commit_exact(rows, []); adds += rows; gained += 1; gain_pass += 1
+                print(f'  [{time.time() - t0:.0f}s] direct {net}', flush=True); continue
         # victims in the corridor / near the ends
         pa, pb = a['pts'][0], b['pts'][0]
         zone = LineString([pa, pb]).buffer(CORRIDOR) if pa != pb else Point(pa).buffer(CORRIDOR)
@@ -317,10 +408,15 @@ for ps in range(PASSES):
                     rows = rows_for(groups[nm]['net'], r2, f'P{k}v:{groups[nm]["net"]}', 'repair|' + nm)
                     new_blocks.append(stamp_rows(rows) + (rows,))
         if ok:
+            all_rows = [r for ents, hs, rows in new_blocks for r in rows]
+            removed_o = [o for nm in vl for o in objs_of_group(nm)]
+            ok = exact_ok(all_rows, removed_o)
+        if ok:
             for nm in vl:
                 dels += groups[nm]['rows']; dead_groups.add(nm)
             for ents, hs, rows in new_blocks:
                 adds += rows
+            commit_exact(all_rows, removed_o)
             gained += 1; gain_pass += 1
             print(f'  [{time.time() - t0:.0f}s] repaired {net} (victims {len(vl)})', flush=True)
         else:
