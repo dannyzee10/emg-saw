@@ -21,8 +21,9 @@ from shapely.geometry import LineString, Point, box
 import geom as G
 
 RES = 0.05
-X0, Y1 = 9.5, 55.5
-NX, NY = int(round((90.5 - X0) / RES)), int(round((Y1 - 9.5) / RES))
+_g = [float(v) for v in os.environ.get('GRID', '9.5,9.5,90.5,55.5').split(',')]
+X0, Y1 = _g[0], _g[3]
+NX, NY = int(round((_g[2] - X0) / RES)), int(round((Y1 - _g[1]) / RES))
 LAYERS = ['Top Layer', 'Mid Layer 2', 'Bottom Layer']
 MARGIN = 0.06
 VIA_D, VIA_H = 0.6, 0.3

@@ -295,7 +295,9 @@ for d, tgt, rots in (('RV1', (X0 + 2.0, UY + 4.4), (0, 180)), ('RV2', (X0 + 4.1,
 # DNP DRL provisions: the 15 input resistors under their own sockets, the DRL amplifier chain by J_REF
 for n in range(1, 6):
     for k, s in enumerate(('A', 'B', 'C')):
-        near('R_DRL_V%s%d' % (s, n), (JX[n - 1] - 3.3 + 3.3 * k, Y0 + 1.4), 'Bottom', rots=(0, 180), rmax=4)
+        # upright, pad 1 (electrode input) up and pad 2 (DRL_SUM) down: the 15 DRL_SUM pads form one row -> one straight bus
+        d_ = 'R_DRL_V%s%d' % (s, n)
+        near(d_, (JX[n - 1] - 1.75 + 1.75 * k, Y0 + 1.7), 'Bottom', rots=(rot_for(d_, False, 'Bottom', 'U'),), rmax=4, step=0.1)
 for d in ('U_DRL1', 'C_DRL_DEC', 'R_DRL_FB', 'C_DRL_FB', 'R_DRL_OUT1', 'R_DRL_OUT2', 'R_DRL_SEL'):
     near(d, (X0 + 4.5, JY + 3.0), 'Bottom', rmax=12)
 
@@ -359,7 +361,7 @@ for d, tgt in (('JP_WIFI_BOOT', (wb[0] + 0.5, wb[1] - 2.0)), ('R_WIFI_BOOT_OVR',
                ('TP_WIFI_BOOT', (wb[0] + 2.5, wb[1] - 2.0)),
                ('R_WIFI_UART_TX_LINK', (wtx[0] + 1.5, wtx[1])), ('R_WIFI_UART_RX_LINK', (wtx[0] + 1.5, wtx[1] + 1.5)),
                ('TP_WIFI_UART_RX', (wtx[0] + 3.5, wtx[1] - 1.0)), ('TP_WIFI_UART_TX', (wtx[0] + 3.5, wtx[1] + 1.0)),
-               ('TP_WIFI_CHIP_EN', (wen[0] + 1.5, wen[1])), ('TP_MCU_BOOT0', (mb[0], mb[1] - 2.0)), ('TP_GND', (wtx[0] + 3.5, wtx[1] + 3.0))):
+               ('TP_WIFI_CHIP_EN', (wen[0] + 2.8, wen[1] - 1.2)), ('TP_MCU_BOOT0', (mb[0], mb[1] - 2.0)), ('TP_GND', (wtx[0] + 3.5, wtx[1] + 3.0))):
     near(d, tgt, 'Bottom', rmax=8)
 
 # native free test pads keep their Top layer: nearest legal Top spot to their own circuit

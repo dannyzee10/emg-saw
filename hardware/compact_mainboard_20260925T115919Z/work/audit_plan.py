@@ -16,7 +16,7 @@ from shapely.geometry import LineString, box
 from shapely.ops import unary_union
 import geom as G
 
-ANT = box(41.19, 49.44, 53.47, 54.44)   # antenna keep-out moved with the ST67 (-3, -5)
+ANT = box(*[float(v) for v in os.environ.get('ANT_BOX', '41.19,49.44,53.47,54.44').split(',')])   # default: B's antenna keep-out
 NO_VIA = {'NetL1_1', 'NetL1_2', 'MCU_VCAP'}
 G2_BAND = 0.2          # half-width margin around an L3 track that must see solid L4 (derived: ~2x L3-L4 prepreg)
 

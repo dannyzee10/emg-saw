@@ -16,7 +16,7 @@ HERE = __file__.rsplit('work', 1)[0]
 import os
 GEOM = os.environ.get('GEOM_FILE', HERE + 'evidence/GEOMETRY.txt')
 CLASSES = HERE + 'evidence/inputs/CLASSES.txt'
-BOARD = box(12, 12, 83, 48).buffer(2, 16)   # candidate B outline: 75 x 40 mm, r = 2 mm corners
+BOARD = box(*[float(v) for v in os.environ.get('BOARD_BOX', '12,12,83,48').split(',')]).buffer(2, 16)   # default: candidate B 75 x 40, r = 2
 EDGE = 0.5
 COPPER = ('Top Layer', 'Mid Layer 1', 'Mid Layer 2', 'Bottom Layer')
 PAD_PAIR_010 = {'J_FPC1', 'J_FPC2', 'J_FPC3', 'J_FPC4', 'J_FPC5', 'UP4', 'UP2', 'UP1', 'U_MCU1'}

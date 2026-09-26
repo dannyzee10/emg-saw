@@ -4,7 +4,7 @@ usage: python build_ops.py plan1.csv [plan2.csv ...] [--rules bk13] [--del del.c
 Refuses to write OPS.txt if any check fails.  --drop-bad instead writes OUT.csv = the plan minus every
 connection (group) involved in a problem, lists the dropped groups, and exits without writing OPS.txt.
 """
-import csv, sys
+import csv, os, sys
 from shapely.geometry import Point, box
 import geom as G
 
@@ -20,7 +20,7 @@ if '--del' in args:
     plans = [p for p in plans if p != args[args.index('--del') + 1]]
 
 objs, comps, keepouts = G.load()
-for z in csv.DictReader(open(G.HERE + 'evidence/BK13_ZONES.csv')):
+for z in csv.DictReader(open(os.environ.get('BK13_ZONES', G.HERE + 'evidence/BK13_ZONES.csv'))):
     G.ZONES.append((box(float(z['x0']), float(z['y0']), float(z['x1']), float(z['y1'])), set(z['nets'].split(';')), z['ref']))
 # deletions: drop matching existing tracks from the model before checking
 def same(r, o):
@@ -94,9 +94,9 @@ if drop_out:
 if problems:
     sys.exit(1)
 MIL = 1 / 0.0254
-with open(G.HERE + 'work/OPS.txt', 'w') as f:
+with open(os.environ.get('OPS_OUT', G.HERE + 'work/OPS.txt'), 'w') as f:
     if with_rules:
-        for z in csv.DictReader(open(G.HERE + 'evidence/BK13_ZONES.csv')):
+        for z in csv.DictReader(open(os.environ.get('BK13_ZONES', G.HERE + 'evidence/BK13_ZONES.csv'))):
             n = z['ref'][-1]
             reg = f"InRegionAbsolute({float(z['x0'])*MIL:.4f},{float(z['y0'])*MIL:.4f},{float(z['x1'])*MIL:.4f},{float(z['y1'])*MIL:.4f})"
             nets = ' Or '.join(f"InNet('{x}')" for x in sorted(z['nets'].split(';')))
