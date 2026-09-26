@@ -1,0 +1,54 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,R0:Vservo_1,Vservo_1,Bottom Layer,18.275,18.525,18.775,18.525,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad INA1-6(19.025mm,20.55mm) on L1 TOP",0
+TRACK,R0:Vservo_1,Vservo_1,Top Layer,18.775,18.525,18.775,19.625,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad INA1-6(19.025mm,20.55mm) on L1 TOP",0
+TRACK,R0:Vservo_1,Vservo_1,Top Layer,18.775,19.625,18.975,19.825,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad INA1-6(19.025mm,20.55mm) on L1 TOP",0
+TRACK,R0:Vservo_1,Vservo_1,Top Layer,18.975,19.825,18.975,20.025,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad INA1-6(19.025mm,20.55mm) on L1 TOP",0
+VIA,R0:Vservo_1,Vservo_1,Multi Layer,18.775,18.525,,,,0.6,0.3,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad INA1-6(19.025mm,20.55mm) on L1 TOP",0
+TRACK,R1:Vservo_3,Vservo_3,Bottom Layer,39.775,18.525,40.275,18.525,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad INA3-6(40.625mm,20.55mm) on L1 TOP",0
+TRACK,R1:Vservo_3,Vservo_3,Top Layer,40.275,18.525,40.275,19.525,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad INA3-6(40.625mm,20.55mm) on L1 TOP",0
+TRACK,R1:Vservo_3,Vservo_3,Top Layer,40.275,19.525,40.575,19.825,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad INA3-6(40.625mm,20.55mm) on L1 TOP",0
+TRACK,R1:Vservo_3,Vservo_3,Top Layer,40.575,19.825,40.575,20.025,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad INA3-6(40.625mm,20.55mm) on L1 TOP",0
+VIA,R1:Vservo_3,Vservo_3,Multi Layer,40.275,18.525,,,,0.6,0.3,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad INA3-6(40.625mm,20.55mm) on L1 TOP",0
+TRACK,R2:Vservo_5,Vservo_5,Bottom Layer,61.375,18.525,61.875,18.525,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad INA5-6(62.225mm,20.55mm) on L1 TOP",0
+TRACK,R2:Vservo_5,Vservo_5,Top Layer,61.875,18.525,61.875,19.525,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad INA5-6(62.225mm,20.55mm) on L1 TOP",0
+TRACK,R2:Vservo_5,Vservo_5,Top Layer,61.875,19.525,62.175,19.825,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad INA5-6(62.225mm,20.55mm) on L1 TOP",0
+TRACK,R2:Vservo_5,Vservo_5,Top Layer,62.175,19.825,62.175,20.025,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad INA5-6(62.225mm,20.55mm) on L1 TOP",0
+VIA,R2:Vservo_5,Vservo_5,Multi Layer,61.875,18.525,,,,0.6,0.3,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad INA5-6(62.225mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Bottom Layer,49.275,22.375,49.275,20.775,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,49.275,20.775,49.475,20.575,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,49.475,20.575,49.475,19.825,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,49.475,19.825,49.725,19.575,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,49.725,19.575,51.125,19.575,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,51.125,19.575,51.375,19.825,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R3:Vservo_4,Vservo_4,Top Layer,51.375,19.825,51.375,20.025,0.2,,,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+VIA,R3:Vservo_4,Vservo_4,Multi Layer,49.275,20.775,,,,0.6,0.3,"Vservo_4|Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA4-6(51.425mm,20.55mm) on L1 TOP",0
+TRACK,R4:Vservo_2 VIP,Vservo_2,Top Layer,27.575,22.625,27.575,20.125,0.2,,,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+TRACK,R4:Vservo_2 VIP,Vservo_2,Top Layer,27.575,20.125,28.125,19.575,0.2,,,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+TRACK,R4:Vservo_2 VIP,Vservo_2,Top Layer,28.125,19.575,29.525,19.575,0.2,,,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+TRACK,R4:Vservo_2 VIP,Vservo_2,Top Layer,29.525,19.575,29.775,19.825,0.2,,,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+TRACK,R4:Vservo_2 VIP,Vservo_2,Top Layer,29.775,19.825,29.775,20.025,0.2,,,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+VIA,R4:Vservo_2 VIP,Vservo_2,Multi Layer,27.575,22.625,,,,0.6,0.3,"Vservo_2|Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated]|Pad INA2-6(29.825mm,20.55mm) on L1 TOP",0
+TRACK,R5:Vservo_2,Vservo_2,Top Layer,27.825,22.775,29.625,22.775,0.2,,,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,R5:Vservo_2,Vservo_2,Top Layer,29.625,22.775,29.925,23.075,0.2,,,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,R5:Vservo_2,Vservo_2,Top Layer,29.925,23.075,32.025,23.075,0.2,,,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,R5:Vservo_2,Vservo_2,Top Layer,32.025,23.075,32.175,22.925,0.2,,,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,R5:Vservo_2,Vservo_2,Bottom Layer,32.175,22.925,32.575,22.525,0.2,,,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+VIA,R5:Vservo_2,Vservo_2,Multi Layer,32.175,22.925,,,,0.6,0.3,"Vservo_2|Pad INA2-6(29.825mm,20.55mm) on L1 TOP|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,R6:Vservo_4 VIP,Vservo_4,Top Layer,49.375,22.875,53.725,22.875,0.2,,,"Vservo_4|Pad INA4-6(51.425mm,20.55mm) on L1 TOP|Pad U3-7(54.85mm,22.35mm) on L6 BOTTOM",0
+TRACK,R6:Vservo_4 VIP,Vservo_4,Bottom Layer,53.725,22.875,54.075,22.525,0.2,,,"Vservo_4|Pad INA4-6(51.425mm,20.55mm) on L1 TOP|Pad U3-7(54.85mm,22.35mm) on L6 BOTTOM",0
+VIA,R6:Vservo_4 VIP,Vservo_4,Multi Layer,49.375,22.875,,,,0.6,0.3,"Vservo_4|Pad INA4-6(51.425mm,20.55mm) on L1 TOP|Pad U3-7(54.85mm,22.35mm) on L6 BOTTOM",0
+VIA,R6:Vservo_4 VIP,Vservo_4,Multi Layer,53.725,22.875,,,,0.6,0.3,"Vservo_4|Pad INA4-6(51.425mm,20.55mm) on L1 TOP|Pad U3-7(54.85mm,22.35mm) on L6 BOTTOM",0
+TRACK,R7:Vservo_3 VIP,Vservo_3,Top Layer,40.525,18.425,43.725,18.425,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad Cservo_3-2(44.675mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R7:Vservo_3 VIP,Vservo_3,Top Layer,43.725,18.425,44.375,17.775,0.2,,,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad Cservo_3-2(44.675mm,17.65mm) on L6 BOTTOM [Unplated]",0
+VIA,R7:Vservo_3 VIP,Vservo_3,Multi Layer,44.375,17.775,,,,0.6,0.3,"Vservo_3|Pad U2-14(38.95mm,18.45mm) on L6 BOTTOM|Pad Cservo_3-2(44.675mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R8:Vservo_1 VIP,Vservo_1,Top Layer,19.025,18.425,21.525,18.425,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad Cservo_1-2(23.175mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R8:Vservo_1 VIP,Vservo_1,Top Layer,21.525,18.425,22.175,17.775,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad Cservo_1-2(23.175mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R8:Vservo_1 VIP,Vservo_1,Top Layer,22.175,17.775,22.875,17.775,0.2,,,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad Cservo_1-2(23.175mm,17.65mm) on L6 BOTTOM [Unplated]",0
+VIA,R8:Vservo_1 VIP,Vservo_1,Multi Layer,22.875,17.775,,,,0.6,0.3,"Vservo_1|Pad U1-7(17.45mm,18.45mm) on L6 BOTTOM|Pad Cservo_1-2(23.175mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R9:Vservo_5 VIP,Vservo_5,Top Layer,62.125,18.425,65.325,18.425,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad Cservo_5-2(66.275mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R9:Vservo_5 VIP,Vservo_5,Top Layer,65.325,18.425,65.975,17.775,0.2,,,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad Cservo_5-2(66.275mm,17.65mm) on L6 BOTTOM [Unplated]",0
+VIA,R9:Vservo_5 VIP,Vservo_5,Multi Layer,65.975,17.775,,,,0.6,0.3,"Vservo_5|Pad U3-14(60.55mm,18.45mm) on L6 BOTTOM|Pad Cservo_5-2(66.275mm,17.65mm) on L6 BOTTOM [Unplated]",0
+TRACK,R10:INA_OUT_2,INA_OUT_2,Top Layer,28.425,21.475,28.425,21.075,0.2,,,"INA_OUT_2|Pad RH_2-1(28.421mm,21.75mm) on L1 TOP|Pad INA2-8(28.525mm,20.55mm) on L1 TOP",0
+TRACK,R11:INA_OUT_5,INA_OUT_5,Top Layer,60.825,21.475,60.825,21.075,0.2,,,"INA_OUT_5|Pad RH_5-1(60.821mm,21.75mm) on L1 TOP|Pad INA5-8(60.925mm,20.55mm) on L1 TOP",0
+TRACK,R12:INA_OUT_1,INA_OUT_1,Top Layer,17.625,21.475,17.625,21.075,0.2,,,"INA_OUT_1|Pad RH_1-1(17.621mm,21.75mm) on L1 TOP|Pad INA1-8(17.725mm,20.55mm) on L1 TOP",0
+TRACK,R13:INA_OUT_3,INA_OUT_3,Top Layer,39.225,21.475,39.225,21.075,0.2,,,"INA_OUT_3|Pad RH_3-1(39.221mm,21.75mm) on L1 TOP|Pad INA3-8(39.325mm,20.55mm) on L1 TOP",0

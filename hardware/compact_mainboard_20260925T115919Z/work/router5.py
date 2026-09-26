@@ -162,6 +162,17 @@ inside = np.zeros((NY, NX), bool)
 win, m = patch(G.BOARD, grow=0)
 inside[win[0]:win[1], win[2]:win[3]] |= m
 D_EDGE = ndimage.distance_transform_edt(inside) * RES
+# env MCU_FANOUT=1: the L1 interior of the U_MCU1 pad ring is the LQFP fan-out area -> only nets of MCU pins may route on
+# Top there (through-traffic goes on inner layers)
+MCU_INNER, MCU_NETS = None, set()
+if os.environ.get('MCU_FANOUT'):
+    _mp = [o for o in objs if o.kind == 'PAD' and o.comp == 'U_MCU1']
+    _b = (min(p.geom.bounds[0] for p in _mp) + 1.6, min(p.geom.bounds[1] for p in _mp) + 1.6,
+          max(p.geom.bounds[2] for p in _mp) - 1.6, max(p.geom.bounds[3] for p in _mp) - 1.6)
+    MCU_NETS = {p.net for p in _mp}
+    _w, _m = patch(box(*_b), grow=0)
+    MCU_INNER = np.zeros((NY, NX), bool)
+    MCU_INNER[_w[0]:_w[1], _w[2]:_w[3]] |= _m
 RESERVED = []   # (net, raster mask) of the L5 reserved regions
 for rnet, rg in L5_RESERVED:
     win, m = patch(rg, grow=0)
@@ -179,6 +190,36 @@ def reset_state():
     del copper_objs[INIT[2]:]
 D_KEEP = ndimage.distance_transform_edt(~keep) * RES
 D_ANYPAD = ndimage.distance_transform_edt(~anypad) * RES
+# env VIP=1: via-in-pad allowed inside a net's own SMD pads that are >= 0.5 mm in both directions (0.45/0.2 via fully inside).
+# D_OTHERPAD is computed per net lazily (distance to pads of OTHER components / pads, excluding the host pad itself).
+VIP = bool(os.environ.get('VIP'))
+VIP_PADS, D_OTHERPAD = {}, D_ANYPAD
+if VIP:
+    from shapely import affinity as _aff
+    for o in objs:
+        if o.kind != 'PAD' or len(o.layers) != 1 or o.net in ('', '-', 'GND'):
+            continue
+        mr = o.geom.minimum_rotated_rectangle.exterior.coords
+        e = sorted(Point(mr[i]).distance(Point(mr[i + 1])) for i in range(4))
+        if e[0] < 0.5:
+            continue
+        core = o.geom.buffer(-0.225 - 0.02)          # via centre region: 0.45 via fully inside the pad
+        if core.is_empty:
+            continue
+        w_, m_ = patch(core, grow=0)
+        if w_ is None:
+            continue
+        mm = VIP_PADS.setdefault(o.net, np.zeros((NY, NX), bool))
+        mm[w_[0]:w_[1], w_[2]:w_[3]] |= m_
+    # other-pad distance: pads minus the VIP host pads themselves is approximated by removing every VIP-capable pad core
+    _host = np.zeros((NY, NX), bool)
+    for o in objs:
+        if o.kind == 'PAD' and len(o.layers) == 1 and o.net in VIP_PADS:
+            w_, m_ = patch(o.geom, grow=1)
+            if w_ is not None:
+                _host[w_[0]:w_[1], w_[2]:w_[3]] |= m_
+    D_OTHERPAD = ndimage.distance_transform_edt(~(anypad & ~_host)) * RES
+    print('VIP: via-in-pad candidates for', len(VIP_PADS), 'nets', flush=True)
 
 
 def edt(mask):
@@ -209,11 +250,19 @@ def maps(net, w, W, vd=VIA_D, vh=VIA_H, relax=False):
             for rnet, rm in RESERVED:
                 if rnet != net:
                     ok &= ~rm[iy0:iy1, ix0:ix1]
+        if L == 'Top Layer' and MCU_INNER is not None and net not in MCU_NETS:
+            ok &= ~MCU_INNER[iy0:iy1, ix0:ix1]
         free[L] = ok
         r = vd / 2
         via_ok &= (dn >= c + r + MARGIN) & (dw >= cw + r + MARGIN) & (df >= (cf if cf is not None else 0.25) + r + MARGIN)
     via_ok &= (D_KEEP[iy0:iy1, ix0:ix1] >= c + vd / 2 + MARGIN) & (D_EDGE[iy0:iy1, ix0:ix1] >= 0.5 + vd / 2 + MARGIN)
-    via_ok &= D_ANYPAD[iy0:iy1, ix0:ix1] >= vd / 2 + 0.05 + MARGIN
+    vip_ok = via_ok.copy()                                             # before the pad-distance test (via-in-pad candidates)
+    via_ok &= D_ANYPAD[iy0:iy1, ix0:ix1] >= vd / 2 + 0.1 + MARGIN     # build_ops: no via within 0.1 mm of any pad
+    if VIP and net in VIP_PADS:
+        # via-in-pad (POFV, filled + capped): the via lies fully inside one of this net's own pads (>= 0.5 mm wide); other
+        # nets' copper on every layer still needs full clearance (vip_ok), and no other pad may come within 0.1 mm
+        m = VIP_PADS[net][iy0:iy1, ix0:ix1] & (D_OTHERPAD[iy0:iy1, ix0:ix1] >= vd / 2 + 0.1 + MARGIN)
+        via_ok |= vip_ok & m
     via_ok &= edt(holes[iy0:iy1, ix0:ix1]) >= vh / 2 + 0.254 + MARGIN
     return free, via_ok
 
@@ -439,6 +488,10 @@ def route_one(net, a, b):
     plan += [(wm, 0.45, 0.2, 15.0, False, 600000)]
     if wide:
         plan += [(wm, 0.45, 0.2, 15.0, True, 600000)]
+    if os.environ.get('BIG'):    # C2 6L completion: last resort for long cross-board lines
+        plan += [(wm, 0.45, 0.2, 30.0, False, 2500000)]
+    if os.environ.get('NO_RELAX'):   # relaxed (0.2 mm) paths never pass build_ops' 0.25 mm class rule: skip them
+        plan = [p for p in plan if not p[4]]
     last = 'no path'
     for w, vd, vh, pad, relax, budget in plan:
         W = window(ga, gb, pad)
@@ -522,6 +575,9 @@ def run_pass(conns, partial_path, preload=()):
                     new.append({'kind': 'TRACK', 'group': f'R{k}:{net}', 'net': net, 'layer': L, 'x1': round(pp[0], 4), 'y1': round(pp[1], 4), 'x2': round(qq[0], 4), 'y2': round(qq[1], 4), 'w': w, 'd': '', 'h': '', 'conn': ck, 'relax': rx})
         for x, y in vias:
             new.append({'kind': 'VIA', 'group': f'R{k}:{net}', 'net': net, 'layer': 'Multi Layer', 'x1': round(x, 4), 'y1': round(y, 4), 'x2': '', 'y2': '', 'w': '', 'd': vd, 'h': vh, 'conn': ck, 'relax': rx})
+        if VIP and any(_in_own_pad(net, x, y, vd) for x, y in vias):
+            for r in new:
+                r['group'] = f'R{k}:{net} VIP'      # build_ops accepts a via-in-pad only in groups tagged ' VIP'
         stamp_rows(new)
         rows += new
         pw.writerows(new); pf.flush()
@@ -535,6 +591,15 @@ def key(c):
     return (c[0], c[1]['text'], c[2]['text'])
 
 
+_PADS = [o for o in objs if o.kind == 'PAD']
+
+
+def _in_own_pad(net, x, y, vd):
+    """True when a via at (x, y) lies on / within 0.1 mm of a pad (i.e. is a via-in-pad of that pad)."""
+    v = Point(x, y).buffer(vd / 2, 16)
+    return any(p.net == net and p.geom.distance(v) < 0.1 for p in _PADS if abs(p.geom.centroid.x - x) < 2 and abs(p.geom.centroid.y - y) < 2)
+
+
 def main():
     data = json.load(open(sys.argv[1]))
     only = set(sys.argv[2].split(',')) if len(sys.argv) > 2 and sys.argv[2] else None
@@ -543,6 +608,21 @@ def main():
     if only:
         conns = [c for c in conns if c[0] in only]
     conns.sort(key=prio)
+    if os.environ.get('SHUFFLE'):    # alternative routing order (sequential routing is order-sensitive)
+        import random
+        random.Random(int(os.environ['SHUFFLE'])).shuffle(conns)
+    if os.environ.get('FIRST_NETS'):  # net-name priority, e.g. "Vservo_,VOUT_" (prefix match, in this order)
+        pre = os.environ['FIRST_NETS'].split(',')
+        rank = lambda c: next((i for i, p in enumerate(pre) if c[0].startswith(p)), len(pre))
+        conns.sort(key=rank)          # stable: keeps prio order inside each rank
+    if os.environ.get('FIRST'):      # rip-up rounds: the previously blocked connections route before the ripped ones
+        fk = set()
+        for l in open(os.environ['FIRST']):
+            c = parse_conn(l)
+            if c:
+                fk.add(key(c))
+        conns = [c for c in conns if key(c) in fk] + [c for c in conns if key(c) not in fk]
+        print(f'FIRST: {sum(1 for c in conns if key(c) in fk)} connections routed first', flush=True)
     best = None
     hard = []
     tag = os.environ.get('OUT_TAG', '')

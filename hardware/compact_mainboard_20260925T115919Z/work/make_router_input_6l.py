@@ -11,6 +11,8 @@ for s in json.load(open(os.path.join(EV, sys.argv[1])))['details']:
     if not m:
         continue
     net = m.group(1)
+    if os.environ.get('ALL'):      # completion rounds: GND / 3V0_ANA leftovers are short links the router can close
+        keep.append(s); continue
     if net == 'GND':
         skip += 1; continue
     if net == '3V0_ANA':

@@ -1,16 +1,16 @@
 # Graph Report - pcb-routing-0925  (2026-09-26)
 
 ## Corpus Check
-- 394 files · ~1,771,298 words
+- 424 files · ~2,032,337 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2900 nodes · 4914 edges · 321 communities (173 shown, 88 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.86)
+- 3122 nodes · 5414 edges · 345 communities (186 shown, 91 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b2eccdf0`
+- Built from commit: `8c86ca46`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,7 +18,7 @@
 - EmgScope
 - EMG Bring-up Checkpoint Log
 - ReviewWindow
-- SimSource
+- emg_plotter.py
 - graphify query
 - emg_bluepill/main.c
 - pipeline.py
@@ -51,7 +51,7 @@
 - GUI Architecture Proposal (EMG Instrument)
 - EmgPlotWidget
 - RecordingController
-- emg_plotter.py
+- dsp.py
 - MvcDialog
 - Cited Findings
 - s3_000002.pas
@@ -62,7 +62,7 @@
 - svc_swap3_T.pas
 - sc_234902.pas
 - a6a_133022.pas
-- run_emg.py
+- ChannelPanel
 - svc_swap2_T.pas
 - Handler
 - sx_233624.pas
@@ -258,9 +258,9 @@
 - trial_summary.py
 - p6p_123322.pas
 - ._prompt_save_recording
-- leadoff_report
+- a6b_155432.pas
 - stitch.py
-- ._process
+- a6c_163445.pas
 - s6c_123459.pas
 - s6d_120322.pas
 - s6e_121023.pas
@@ -276,6 +276,22 @@
 - make_router_input_6l.py
 - nudge_stitch.py
 - unrouted_summary.py
+- ddl_155255.pas
+- kop_154628.pas
+- p6c2_155904.pas
+- p6e_163638.pas
+- md2_155729.pas
+- mdl_155321.pas
+- NormalizeDialog
+- ProcessingDialog
+- AcquisitionModel
+- relocate_drl.py
+- g6b_155350.pas
+- g6c_155819.pas
+- g6d_155951.pas
+- g6e_163611.pas
+- g6f_163746.pas
+- render_bk13_band.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `EmgScope` - 85 edges
@@ -287,7 +303,7 @@
 7. `RunFixed()` - 19 edges
 8. `RunFixed()` - 19 edges
 9. `RunFixed()` - 19 edges
-10. `SimSource` - 17 edges
+10. `RunFixed()` - 19 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Test Engineer (team note)` --semantically_similar_to--> `Test Engineer Agent`  [INFERRED] [semantically similar]
@@ -311,23 +327,23 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (321 total, 88 thin omitted)
+## Communities (345 total, 91 thin omitted)
 
 ### Community 0 - "EmgScope"
-Cohesion: 0.08
-Nodes (6): EmgScope, EMG median frequency (Hz), 20-450 Hz band — delegates to the canonical…, Persist the current per-channel MVC to mvc_store.json (the reusable 'MVC…, #6: after MVC, switch the scope to %MVC (y-axis becomes %) and confirm., Img2: real-time processing pipeline for the RMS-env view (Available ->…, % MVC target line + tolerance band (hold-a-target fatigue biofeedback). Only…
+Cohesion: 0.06
+Nodes (10): EmgScope, Envelope smoothing per the configured Amplitude-Norm algorithm + window. `base`…, Absolute volts in -> displayed volts out (coupling + optional filters)., EMG median frequency (Hz), 20-450 Hz band — delegates to the canonical…, #6: after MVC, switch the scope to %MVC (y-axis becomes %) and confirm., Img2: real-time processing pipeline for the RMS-env view (Available ->…, % MVC target line + tolerance band (hold-a-target fatigue biofeedback). Only…, Noraxon-style EMG Baseline Check: report per-channel resting RMS AND the… (+2 more)
 
 ### Community 1 - "EMG Bring-up Checkpoint Log"
 Cohesion: 0.06
 Nodes (64): Graphify Trigger Config (.claude/CLAUDE.md), EMG SAW Agent Roster (agents/), Round Table Collaboration, SAFe Methodology (Epic/Feature/Story), Graphify Project Instructions (CLAUDE.md), DSP Engineer Agent, Firmware Engineer Agent, GUI Engineer Agent (+56 more)
 
 ### Community 2 - "ReviewWindow"
-Cohesion: 0.06
-Nodes (15): NormalizeDialog, NormalizeDialog — Noraxon MR offline Amplitude Normalization config: choose the…, ProcessingDialog, Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then…, Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak… (+7 more)
+Cohesion: 0.11
+Nodes (12): Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then…, Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak…, ReviewWindow, HG4 tests for the offline View/Review window: it loads a saved recording,…, test_processing_dialog_build_and_channel_scope() (+4 more)
 
-### Community 3 - "SimSource"
-Cohesion: 0.10
-Nodes (15): AsciiSource, _BufferedSource, _open_serial(), ndarray, Data sources for the plotter. Every source runs a background thread that fills…, Fallback for a quick STM32 `printf("%d,%d\\n", ...)` bring-up., Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise…, Open the serial port exactly like a plain read that is known to work here. Open… (+7 more)
+### Community 3 - "emg_plotter.py"
+Cohesion: 0.07
+Nodes (21): AsciiSource, _BufferedSource, _open_serial(), ndarray, Data sources for the plotter. Every source runs a background thread that fills…, Fallback for a quick STM32 `printf("%d,%d\\n", ...)` bring-up., Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise…, Open the serial port exactly like a plain read that is known to work here. Open… (+13 more)
 
 ### Community 4 - "graphify query"
 Cohesion: 0.09
@@ -338,8 +354,8 @@ Cohesion: 0.25
 Nodes (14): build_frame(), ADC_HandleTypeDef, crc16_ccitt(), Error_Handler(), HAL_ADC_ConvCpltCallback(), HAL_ADC_ConvHalfCpltCallback(), main(), MX_ADC1_Init() (+6 more)
 
 ### Community 6 - "pipeline.py"
-Cohesion: 0.12
-Nodes (12): _ac(), op_mean(), op_norm_mvc(), op_normalize(), op_rectify(), op_rms(), Offline signal-processing pipeline (Noraxon MR 'Signal Processing' menu). A…, RMS smoothing (linear envelope) over smooth_ms. (+4 more)
+Cohesion: 0.13
+Nodes (11): _ac(), op_mean(), op_norm_mvc(), op_normalize(), op_rectify(), op_rms(), Offline signal-processing pipeline (Noraxon MR 'Signal Processing' menu). A…, RMS smoothing (linear envelope) over smooth_ms. (+3 more)
 
 ### Community 7 - "Beihang University Logo (logo.png)"
 Cohesion: 1.00
@@ -413,13 +429,13 @@ Nodes (6): EmgPlotWidget, Holds the GraphicsLayoutWidget, per-channel plots, cur
 Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
-### Community 39 - "emg_plotter.py"
-Cohesion: 0.12
+### Community 39 - "dsp.py"
+Cohesion: 0.11
 Nodes (30): cocontraction_index(), fatigue_trend(), iemg(), mean_frequency(), median_frequency(), onset_offset(), Display-side signal processing (done on the laptop, so you can tweak live —…, Integrated EMG (iEMG): area under the full-wave-rectified signal, ∫|EMG| dt… (+22 more)
 
 ### Community 40 - "MvcDialog"
-Cohesion: 0.10
-Nodes (13): MvcDialog, MvcSaveDialog, MvcDialog — Noraxon-style MVC calibration with guided steps. Open → live RMS-…, Noraxon-style 'Save Data' step shown right after an MVC capture: name the…, Noraxon-style 'Save Data' shown after stopping a test recording: name the…, SaveRecordingDialog, _style(), _chunk() (+5 more)
+Cohesion: 0.09
+Nodes (14): Persist the current per-channel MVC to mvc_store.json (the reusable 'MVC…, MvcDialog, MvcSaveDialog, MvcDialog — Noraxon-style MVC calibration with guided steps. Open → live RMS-…, Noraxon-style 'Save Data' step shown right after an MVC capture: name the…, Noraxon-style 'Save Data' shown after stopping a test recording: name the…, SaveRecordingDialog, _style() (+6 more)
 
 ### Community 41 - "Cited Findings"
 Cohesion: 0.06
@@ -457,9 +473,9 @@ Nodes (24): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary()
 Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
-### Community 50 - "run_emg.py"
-Cohesion: 0.09
-Nodes (11): ChannelPanel, ChannelPanel – left sidebar with per-channel information cards and MVC controls., Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,…, Set the per-channel electrode status dot: 'good' | 'poor' | 'open'., MainController, MainController — coordinates the AcquisitionModel and high-level start/stop.…, AcquisitionModel, AcquisitionModel — wraps a data source (SerialSource / SimSource / AsciiSource)… (+3 more)
+### Community 50 - "ChannelPanel"
+Cohesion: 0.38
+Nodes (3): ChannelPanel, Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,…, Set the per-channel electrode status dot: 'good' | 'poor' | 'open'.
 
 ### Community 51 - "svc_swap2_T.pas"
 Cohesion: 0.22
@@ -750,8 +766,8 @@ Cohesion: 0.22
 Nodes (23): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary(), CopyFootprint(), CountPads(), FindComp() (+15 more)
 
 ### Community 201 - "test_leadoff.py"
-Cohesion: 0.22
-Nodes (17): leadoff_status(), Back-compatible wrapper: just the state string from :func:`leadoff_report`., _emg_band_signal(), HG3 unit tests for the PC-side electrode lead-off heuristic…, _t(), test_good_connected_low_harmonics_not_flagged(), test_good_emg_like(), test_good_quiet_baseline() (+9 more)
+Cohesion: 0.13
+Nodes (25): leadoff_report(), leadoff_status(), LeadoffTracker, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, Analyse one RAW (un-notched, absolute-volt) single-channel window; return…, load(), main() (+17 more)
 
 ### Community 202 - "test_pipeline.py"
 Cohesion: 0.16
@@ -946,20 +962,20 @@ Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 299 - "._prompt_save_recording"
-Cohesion: 0.11
-Nodes (7): #9 Save Data step after a test recording: name it (Save & View / Save /…, Open a saved recording in the View/Review window (playback + Operations +…, Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +…, Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off)., Guide the Record -> Pause -> Stop activity with a contextual step hint., Noraxon-style EMG Baseline Check: report per-channel resting RMS AND the…, Big in-window banner below the toolbar (child widget -> safe teardown, no modal…
+Cohesion: 0.15
+Nodes (5): #9 Save Data step after a test recording: name it (Save & View / Save /…, Open a saved recording in the View/Review window (playback + Operations +…, Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +…, Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off)., Guide the Record -> Pause -> Stop activity with a contextual step hint.
 
-### Community 300 - "leadoff_report"
-Cohesion: 0.19
-Nodes (9): leadoff_report(), LeadoffTracker, Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, Analyse one RAW (un-notched, absolute-volt) single-channel window; return…, median_freq(), load(), main(), median_freq() (+1 more)
+### Community 300 - "a6b_155432.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 301 - "stitch.py"
 Cohesion: 0.22
 Nodes (8): near_pad(), ok(), Plane stitching for C2 6L: every copper group of GND that reaches no via /…, 0.45/0.2 via at the pad centre (filled + capped, POFV); the pad must be >= 0.5…, any pad (any net, own pad included) within 0.1 mm of g - build_ops' 'via on…, tkey(), try_pad(), via_in_pad()
 
-### Community 302 - "._process"
-Cohesion: 0.28
-Nodes (3): Envelope smoothing per the configured Amplitude-Norm algorithm + window. `base`…, Absolute volts in -> displayed volts out (coupling + optional filters)., Highlight active (contraction) samples in white on top of the trace.
+### Community 302 - "a6c_163445.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 303 - "s6c_123459.pas"
 Cohesion: 0.62
@@ -1005,20 +1021,72 @@ Nodes (3): LName(), RunFixed(), Say()
 Cohesion: 0.83
 Nodes (3): LName(), RunFixed(), Say()
 
+### Community 321 - "ddl_155255.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 322 - "kop_154628.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 323 - "p6c2_155904.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 324 - "p6e_163638.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 325 - "md2_155729.pas"
+Cohesion: 0.22
+Nodes (19): CloseTo(), Fail(), FindComp(), FindFreePad(), FindKeepout(), FindPoly(), FindRule(), FindTrack() (+11 more)
+
+### Community 326 - "mdl_155321.pas"
+Cohesion: 0.22
+Nodes (19): CloseTo(), Fail(), FindComp(), FindFreePad(), FindKeepout(), FindPoly(), FindRule(), FindTrack() (+11 more)
+
+### Community 329 - "AcquisitionModel"
+Cohesion: 0.29
+Nodes (3): AcquisitionModel, Read new samples from the underlying source and update ring buffer., QObject
+
+### Community 330 - "relocate_drl.py"
+Cohesion: 0.33
+Nodes (4): legal(), local_pads(), Move the 15 DNP DRL input resistors (R_DRL_VAn/VBn/VCn) out of the BK13 socket…, pad copper polygons in the component frame (origin at the component centre,…
+
+### Community 331 - "g6b_155350.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 332 - "g6c_155819.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 333 - "g6d_155951.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 334 - "g6e_163611.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 335 - "g6f_163746.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
 ## Knowledge Gaps
 - **444 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+439 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 986 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **88 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1008 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **91 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `SimSource`, `EmgPlotWidget`, `RecordingController`, `emg_plotter.py`, `MvcDialog`, `AmpNormDialog`, `leadoff_report`, `._prompt_save_recording`, `._process`, `EmgFilters`, `run_emg.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `MvcDialog`, `test_pipeline.py`, `emg_features.py`?**
+- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `RecordingController`, `MvcDialog`, `test_leadoff.py`, `AcquisitionModel`, `AmpNormDialog`, `._prompt_save_recording`, `ProcessingDialog`, `EmgFilters`, `ChannelPanel`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `dsp.py`, `MvcDialog`, `test_pipeline.py`, `emg_features.py`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `ReviewWindow` connect `ReviewWindow` to `EmgScope`, `emg_plotter.py`, `test_pipeline.py`, `._prompt_save_recording`, `leadoff_report`, `EmgFilters`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `ReviewWindow` connect `ReviewWindow` to `EmgScope`, `emg_plotter.py`, `NormalizeDialog`, `ProcessingDialog`, `dsp.py`, `test_pipeline.py`, `._prompt_save_recording`, `EmgFilters`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `EmgScope` (e.g. with `EmgFilters` and `LeadoffTracker`) actually correct?**
   _`EmgScope` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `ReviewWindow` (e.g. with `EmgScope` and `EmgFilters`) actually correct?**
