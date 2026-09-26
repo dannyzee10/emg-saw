@@ -270,10 +270,23 @@ def touch_points(name):
     for p in pts:
         if all(abs(p[0] - q[0]) > 0.02 or abs(p[1] - q[1]) > 0.02 for q in uniq):
             uniq.append(p)
-    if len(uniq) < 2:
-        return uniq
-    best = max(((a, b) for i, a in enumerate(uniq) for b in uniq[i + 1:]), key=lambda t: (t[0][0] - t[1][0]) ** 2 + (t[0][1] - t[1][1]) ** 2)
-    return list(best)
+    return uniq                 # ALL touch points: a branched group must be reconnected at every branch end
+
+
+def reconnect(nm, tag):
+    """re-route a ripped group: join every touch point to the first one; returns (ok, blocks)"""
+    pts, net_, blocks_ = ends_cache[nm], groups[nm]['net'], []
+    for q in pts[1:]:
+        r2, w2 = R.route_one(net_, pt_end(pts[0]), pt_end(q))
+        if not r2:
+            return False, blocks_
+        if w2 != 'already connected':
+            rows = rows_for(net_, r2, tag, 'repair|' + nm)
+            blocks_.append(stamp_rows(rows) + (rows,))
+    return True, blocks_
+
+
+ends_cache = {}
 
 
 # ---------------------------------------------------------------- main loop
@@ -294,7 +307,8 @@ def region_pass(box_, first):
     inside = [c for c in conns if any(rb.buffer(0.3).contains(Point(e_['pts'][0])) for e_ in c[1:])]
     rank = lambda c: next((i for i, p in enumerate(first) if c[0].startswith(p)), len(first))
     inside.sort(key=rank)
-    ends = {nm: touch_points(nm) for nm in vl}
+    for nm in vl:
+        ends_cache[nm] = touch_points(nm)
     saved = {nm: list(groups[nm]['entries']) for nm in vl}
     vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
     for nm in vl:
@@ -311,16 +325,13 @@ def region_pass(box_, first):
             if why != 'already connected':
                 rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b)))); blocks.append(stamp_rows(rows) + (rows,))
     for nm in vl:
-        e2 = ends[nm]
-        if len(e2) < 2:
+        if len(ends_cache[nm]) < 2:
             continue
         k += 1
-        r2, w2 = R.route_one(groups[nm]['net'], pt_end(e2[0]), pt_end(e2[1]))
-        if not r2:
-            lost += 1; continue
-        if w2 != 'already connected':
-            rows = rows_for(groups[nm]['net'], r2, f'P{k}v:{groups[nm]["net"]}', 'repair|' + nm)
-            blocks.append(stamp_rows(rows) + (rows,))
+        okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+        blocks += bl
+        if not okv:
+            lost += 1
     print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}', flush=True)
     all_rows = [r for ents, hs, rows in blocks for r in rows]
     removed_o = [o for nm in vl for o in objs_of_group(nm)]
@@ -384,7 +395,8 @@ for ps in range(PASSES):
         vl = sorted(vict, key=vict.get)[:MAXV]
         if not vl:
             conns.append((net, a, b)); continue
-        ends = {nm: touch_points(nm) for nm in vl}
+        for nm in vl:
+            ends_cache[nm] = touch_points(nm)
         saved = {nm: list(groups[nm]['entries']) for nm in vl}
         vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
         for nm in vl:
@@ -398,15 +410,12 @@ for ps in range(PASSES):
             rows = rows_for(net, res, f'P{k}:{net}', ck); new_blocks.append(stamp_rows(rows) + (rows,))
         if ok:
             for nm in vl:
-                e2 = ends[nm]
-                if len(e2) < 2:
+                if len(ends_cache[nm]) < 2:
                     continue            # dangling piece: simply dropped
-                r2, w2 = R.route_one(groups[nm]['net'], pt_end(e2[0]), pt_end(e2[1]))
-                if not r2:
+                okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}')
+                new_blocks += bl
+                if not okv:
                     ok = False; break
-                if w2 != 'already connected':
-                    rows = rows_for(groups[nm]['net'], r2, f'P{k}v:{groups[nm]["net"]}', 'repair|' + nm)
-                    new_blocks.append(stamp_rows(rows) + (rows,))
         if ok:
             all_rows = [r for ents, hs, rows in new_blocks for r in rows]
             removed_o = [o for nm in vl for o in objs_of_group(nm)]

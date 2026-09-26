@@ -1,0 +1,21 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,P4:NetCH_2_2,NetCH_2_2,Bottom Layer,30.875,18.175,30.875,17.775,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Top Layer,30.875,17.775,32.025,18.925,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Top Layer,32.025,18.925,33.175,18.925,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Top Layer,33.175,18.925,34.175,19.925,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Top Layer,34.175,19.925,35.125,19.925,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Bottom Layer,35.125,19.925,35.025,19.925,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Bottom Layer,35.025,19.925,34.325,19.225,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P4:NetCH_2_2,NetCH_2_2,Bottom Layer,34.325,19.225,32.075,19.225,0.15,,,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+VIA,P4:NetCH_2_2,NetCH_2_2,Multi Layer,30.875,17.775,,,,0.45,0.2,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+VIA,P4:NetCH_2_2,NetCH_2_2,Multi Layer,35.125,19.925,,,,0.45,0.2,"NetCH_2_2|Pad CH_2-2(30.6mm,18.418mm) on L6 BOTTOM|Pad RG_2-1(31.8mm,19.35mm) on L6 BOTTOM",0
+TRACK,P31:Vservo_2 VIP,Vservo_2,Mid Layer 2,27.725,23.725,28.325,23.725,0.2,,,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,P31:Vservo_2 VIP,Vservo_2,Mid Layer 2,28.325,23.725,28.875,24.275,0.2,,,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,P31:Vservo_2 VIP,Vservo_2,Mid Layer 2,28.875,24.275,34.175,24.275,0.2,,,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,P31:Vservo_2 VIP,Vservo_2,Bottom Layer,34.175,24.275,34.175,23.275,0.2,,,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,P31:Vservo_2 VIP,Vservo_2,Bottom Layer,34.175,23.275,33.425,22.525,0.2,,,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+VIA,P31:Vservo_2 VIP,Vservo_2,Multi Layer,27.725,23.725,,,,0.6,0.3,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+VIA,P31:Vservo_2 VIP,Vservo_2,Multi Layer,34.175,24.275,,,,0.6,0.3,"Vservo_2|Track (26.725mm,21.975mm)(27.125mm,22.375mm) on L6 BOTTOM|Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM",0
+TRACK,P35:VREF_A,VREF_A,Top Layer,34.725,21.425,34.725,21.325,0.2,,,"VREF_A|Via (34.625mm,21.575mm) from L1 TOP to L6 BOTTOM|Track (34.775mm,20.875mm)(36.475mm,20.875mm) on L1 TOP",0
+TRACK,P35:VREF_A,VREF_A,Top Layer,34.725,21.325,35.125,20.925,0.2,,,"VREF_A|Via (34.625mm,21.575mm) from L1 TOP to L6 BOTTOM|Track (34.775mm,20.875mm)(36.475mm,20.875mm) on L1 TOP",0
+TRACK,P35:VREF_A,VREF_A,Top Layer,35.125,20.925,36.425,20.925,0.2,,,"VREF_A|Via (34.625mm,21.575mm) from L1 TOP to L6 BOTTOM|Track (34.775mm,20.875mm)(36.475mm,20.875mm) on L1 TOP",0
