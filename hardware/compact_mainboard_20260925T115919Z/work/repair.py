@@ -197,6 +197,77 @@ conns = [c for c in (R.parse_conn(d) for d in json.load(open(drc))['details'] if
 adds, dels, gained, k = [], [], 0, 0
 dead_groups = set()
 t0 = time.time()
+
+
+def region_pass(box_, first):
+    """rip every routed group touching box_, route the unrouted connections with an end in box_ (FIRST_NETS order) and then
+    the ripped groups; keep only if more unrouted connections were closed than ripped groups were lost"""
+    global k, gained, conns
+    from shapely.geometry import box as _box
+    rb = _box(*box_)
+    vl = sorted({entry_group[id(e)] for e in R.copper_objs if id(e) in entry_group and entry_group[id(e)] not in dead_groups
+                 and e[0].intersects(rb)})
+    inside = [c for c in conns if any(rb.buffer(0.3).contains(Point(e_['pts'][0])) for e_ in c[1:])]
+    rank = lambda c: next((i for i, p in enumerate(first) if c[0].startswith(p)), len(first))
+    inside.sort(key=rank)
+    ends = {nm: touch_points(nm) for nm in vl}
+    saved = {nm: list(groups[nm]['entries']) for nm in vl}
+    vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
+    for nm in vl:
+        unstamp(saved[nm]); unstamp_holes(vias_of[nm])
+        for (x, y, h) in vias_of[nm]:
+            for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
+                hole_geoms.remove(g)
+    blocks, won, lost, closed = [], 0, 0, []
+    for net, a, b in inside:
+        k += 1
+        res, why = R.route_one(net, a, b)
+        if res:
+            won += 1; closed.append((net, a, b))
+            if why != 'already connected':
+                rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b)))); blocks.append(stamp_rows(rows) + (rows,))
+    for nm in vl:
+        e2 = ends[nm]
+        if len(e2) < 2:
+            continue
+        k += 1
+        r2, w2 = R.route_one(groups[nm]['net'], pt_end(e2[0]), pt_end(e2[1]))
+        if not r2:
+            lost += 1; continue
+        if w2 != 'already connected':
+            rows = rows_for(groups[nm]['net'], r2, f'P{k}v:{groups[nm]["net"]}', 'repair|' + nm)
+            blocks.append(stamp_rows(rows) + (rows,))
+    print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}', flush=True)
+    if won > lost:
+        for nm in vl:
+            dels.extend(groups[nm]['rows']); dead_groups.add(nm)
+        for ents, hs, rows in blocks:
+            adds.extend(rows)
+        cs = {R.key(c) for c in closed}
+        conns = [c for c in conns if R.key(c) not in cs]
+        gained += won - lost
+        print(f'  accepted: net gain {won - lost}', flush=True)
+        return won - lost
+    for ents, hs, rows in reversed(blocks):
+        remove_rows(ents, hs)
+    for nm in vl:
+        for e in saved[nm]:
+            R.stamp(e[0], e[1], e[2]); R.copper_objs.append(e)
+        for (x, y, h) in vias_of[nm]:
+            hg = Point(x, y).buffer(h / 2, 12); hole_geoms.append(hg)
+            win, m = R.patch(hg)
+            if win:
+                R.holes[win[0]:win[1], win[2]:win[3]] |= m
+    print('  rejected (rolled back)', flush=True)
+    return 0
+
+
+if os.environ.get('REGIONS'):
+    first = [p for p in os.environ.get('FIRST_NETS', '').split(',') if p]
+    for bx in os.environ['REGIONS'].split(';'):
+        region_pass(tuple(map(float, bx.split(','))), first)
+    if os.environ.get('REGION_ONLY'):
+        PASSES = 0
 for ps in range(PASSES):
     todo, gain_pass = list(conns), 0
     conns = []
