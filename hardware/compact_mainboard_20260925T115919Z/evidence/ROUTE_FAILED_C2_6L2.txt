@@ -1,0 +1,35 @@
+Vservo_3 | no path | Via (40.225mm,18.425mm) from L1 TOP to L6 BOTTOM | Pad INA3-6(40.625mm,20.55mm) on L1 TOP
+Vservo_5 | no path | Via (61.825mm,18.425mm) from L1 TOP to L6 BOTTOM | Pad INA5-6(62.225mm,20.55mm) on L1 TOP
+ADC_EMG3 | no path | Track (48.605mm,27.175mm)(48.825mm,27.175mm) on L1 TOP | Pad U_MCU1-25(50.342mm,29.5mm) on L1 TOP [Unplated]
+Vservo_4 | no path | Pad Cservo_4-2(49.125mm,23.15mm) on L6 BOTTOM [Unplated] | Pad INA4-6(51.425mm,20.55mm) on L1 TOP
+Vservo_2 | no path | Pad Cservo_2-2(27.525mm,23.15mm) on L6 BOTTOM [Unplated] | Pad INA2-6(29.825mm,20.55mm) on L1 TOP
+Vservo_2 | no path | Pad INA2-6(29.825mm,20.55mm) on L1 TOP | Pad U2-7(33.25mm,22.35mm) on L6 BOTTOM
+Vservo_4 | no path | Pad INA4-6(51.425mm,20.55mm) on L1 TOP | Pad U3-7(54.85mm,22.35mm) on L6 BOTTOM
+3V3_DIG | no path | Via (49.025mm,42.625mm) from L1 TOP to L6 BOTTOM | Track (51.975mm,43.975mm)(51.975mm,44.325mm) on L1 TOP
+3V3_DIG | no path | Pad R_PGOOD-2(11.927mm,42.299mm) on L6 BOTTOM | Track (16.775mm,32.825mm)(16.775mm,33.325mm) on L6 BOTTOM
+INA_OUT_5 | no path | Track (60.825mm,21.075mm)(60.825mm,21.475mm) on L1 TOP | Track (65.725mm,19.475mm)(65.725mm,24.025mm) on L6 BOTTOM
+INA_OUT_3 | no path | Track (39.225mm,21.075mm)(39.225mm,21.475mm) on L1 TOP | Via (45.275mm,23.075mm) from L1 TOP to L6 BOTTOM
+NetINA2_2 | no path | Pad INA2-2(29.175mm,15.85mm) on L1 TOP | Pad RDD5-2(35.8mm,15mm) on L1 TOP
+NetINA4_2 | no path | Pad INA4-2(50.775mm,15.85mm) on L1 TOP | Pad RDD11-2(57.4mm,15mm) on L1 TOP
+Vc_1 | no path | Track (18mm,10.88mm)(18mm,11.17mm) on L1 TOP | Pad RDD3-1(23.988mm,18.6mm) on L1 TOP
+TS | no path | Pad R_TS_SER-2(10.8mm,38.15mm) on L6 BOTTOM | Pad UP1-1(12.2mm,38.65mm) on L6 BOTTOM
+WIFI_UART_RX | no path | Pad U_WIFI1-23(42.126mm,42.475mm) on L1 TOP [Unplated] | Pad R_WIFI_UART_TX_LINK-1(43.226mm,40.805mm) on L6 BOTTOM
+BAT_TEMP | no path | Pad R_TS_BOTTOM-2(10.903mm,37.098mm) on L6 BOTTOM | Track (11.075mm,39.375mm)(11.075mm,39.675mm) on L6 BOTTOM
+NetR_TMR_2 | no path | Pad UP1-14(13.85mm,38mm) on L6 BOTTOM | Pad R_TMR-2(14.15mm,35.303mm) on L6 BOTTOM
+USB_PGOOD_N | no path | Pad R_PGOOD-1(10.977mm,42.299mm) on L6 BOTTOM | Pad UP1-7(13.85mm,40.8mm) on L6 BOTTOM
+NetR_EN1_BIAS_2 | no path | Pad UP1-6(13.35mm,40.8mm) on L6 BOTTOM | Pad R_EN1_BIAS-2(14.231mm,44.672mm) on L6 BOTTOM
+DRL_LIMITED | no path | Pad R_DRL_OUT2-2(19.896mm,15.724mm) on L6 BOTTOM | Pad R_DRL_SEL-1(22.142mm,12.108mm) on L6 BOTTOM
+WIFI_UART_RX | no path | Pad R_WIFI_UART_TX_LINK-1(43.226mm,40.805mm) on L6 BOTTOM | Pad TP_WIFI_UART_RX-TP(47.268mm,37.227mm) on L6 BOTTOM
+NetD_CC_ESD_2 | no path | Pad J_USB_C-B5(17.155mm,37.65mm) on L1 TOP | Track (20.725mm,42.125mm)(20.725mm,42.825mm) on L1 TOP
+SYS_EN | no path | Track (43.975mm,38.075mm)(43.975mm,38.175mm) on L6 BOTTOM | Pad UP2-5(51.562mm,39.699mm) on L6 BOTTOM
+SYS_EN | no path | Pad UP2-5(51.562mm,39.699mm) on L6 BOTTOM | Pad U_EN1-6(61.18mm,37.325mm) on L6 BOTTOM
+BAT_TEMP | no path | Pad R_TS_BOTTOM-2(10.903mm,37.098mm) on L6 BOTTOM | Pad J_Li-Po-2(24.369mm,37.994mm) on Multi-Layer
+WIFI_SPI_RDY | no path | Pad U_WIFI1-21(42.126mm,39.935mm) on L1 TOP [Unplated] | Pad U_MCU1-89(57.58mm,43.238mm) on L1 TOP [Unplated]
+MCU_WIFI_UART_TX | no path | Pad R_WIFI_UART_TX_LINK-2(44.026mm,40.805mm) on L6 BOTTOM | Pad U_MCU1-68(65.818mm,38mm) on L1 TOP [Unplated]
+WIFI_BOOT | no path | Via (31.675mm,41.425mm) from L1 TOP to L6 BOTTOM | Pad U_MCU1-91(56.58mm,43.238mm) on L1 TOP [Unplated]
+I2C_SDA | no path | Track (18.275mm,33.275mm)(18.425mm,33.125mm) on L6 BOTTOM | Pad U_MCU1-96(54.08mm,43.238mm) on L1 TOP [Unplated]
+I2C_SCL | no path | Track (18.075mm,32.575mm)(18.425mm,32.575mm) on L6 BOTTOM | Pad U_MCU1-95(54.58mm,43.238mm) on L1 TOP [Unplated]
+MCU_SWDIO | no path | Pad J_SWD-2(24.793mm,27.63mm) on L1 TOP | Pad U_MCU1-72(65.818mm,40mm) on L1 TOP [Unplated]
+FG_ALRT | no path | Track (17.975mm,31.475mm)(18.425mm,31.475mm) on L6 BOTTOM | Pad U_MCU1-81(61.58mm,43.238mm) on L1 TOP [Unplated]
+USB_PGOOD_N | no path | Pad UP1-7(13.85mm,40.8mm) on L6 BOTTOM | Pad U_MCU1-82(61.08mm,43.238mm) on L1 TOP [Unplated]
+NetPWR_BTN_N_A | no path | Track (12.175mm,29.525mm)(17.225mm,29.525mm) on L1 TOP | Pad U_EN1-2(63.8mm,37.975mm) on L6 BOTTOM

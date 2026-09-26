@@ -6,8 +6,10 @@ import json, os, re, sys
 from collections import defaultdict
 from shapely.geometry import LineString, Point, box
 geo = [l.rstrip('\n').split('|') for l in open(os.environ['GEOM_FILE'], encoding='utf-8', errors='replace')]
-CU = {'Top Layer', 'Mid Layer 2', 'Bottom Layer', 'Mid Layer 1'}
-LAY = {'L1 TOP': 'Top Layer', 'L3 POWER SIGNAL': 'Mid Layer 2', 'L4 BOTTOM GND': 'Bottom Layer', 'L2 GND': 'Mid Layer 1'}
+CU = {'Top Layer', 'Mid Layer 2', 'Bottom Layer', 'Mid Layer 1', 'Mid Layer 3', 'Mid Layer 4'}
+LAY = {'L1 TOP': 'Top Layer', 'L3 POWER SIGNAL': 'Mid Layer 2', 'L4 BOTTOM GND': 'Bottom Layer', 'L2 GND': 'Mid Layer 1',
+       # C2 6-layer names (JLC06121H-3313)
+       'L3 SIGNAL': 'Mid Layer 2', 'L4 GND': 'Mid Layer 3', 'L5 POWER SIGNAL': 'Mid Layer 4', 'L6 BOTTOM': 'Bottom Layer'}
 items = []
 for f in geo:
     if f[0] == 'TRACK' and f[1] in CU and 'INCOMP=False' in f:
