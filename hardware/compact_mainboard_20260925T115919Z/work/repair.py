@@ -324,8 +324,31 @@ def _route_checked(net_, ea, eb, tag, key, rem):
 
 
 def reconnect(nm, tag, rem=None):
-    """re-route a ripped group: join every touch point to the first one; returns (ok, blocks)"""
+    """re-route a ripped group: join every touch point to the first one; returns (ok, blocks).
+    PLANE=1 and a plane net (GND / 3V0_ANA): each touch point only needs plane access -- an island that has none gets a
+    stub + via to the nearest legal via site; only when that fails is it joined to the first point by copper"""
     pts, net_, blocks_ = ends_cache[nm], groups[nm]['net'], []
+    if PLANE and net_ in ('GND', '3V0_ANA'):
+        for q in pts:
+            e = pt_end(q)
+            g, ls = R.end_copper(e, net_)
+            if g is None:
+                return False, blocks_
+            if _has_access(net_, R.component(net_, g)):
+                continue
+            r2, w2 = route_plane(net_, e)
+            rows = rows_for(net_, r2, tag, 'repair|' + nm) if r2 else None
+            if r2 and (rem is None or exact_ok(rows, rem)):
+                blocks_.append(stamp_rows(rows) + (rows,)); continue
+            if q == pts[0]:
+                return False, blocks_
+            r2, w2 = _route_checked(net_, pt_end(pts[0]), e, tag, 'repair|' + nm, rem)
+            if not r2:
+                return False, blocks_
+            if w2 != 'already connected':
+                rows = rows_for(net_, r2, tag, 'repair|' + nm)
+                blocks_.append(stamp_rows(rows) + (rows,))
+        return True, blocks_
     for q in pts[1:]:
         r2, w2 = _route_checked(net_, pt_end(pts[0]), pt_end(q), tag, 'repair|' + nm, rem)
         if not r2:
@@ -507,67 +530,84 @@ def region_pass(box_, first):
     set_ends(vl)
     saved = {nm: list(groups[nm]['entries']) for nm in vl}
     vias_of = {nm: [(float(r['x1']), float(r['y1']), float(r['h'] or 0.3)) for r in groups[nm]['rows'] if r['kind'] == 'VIA'] for nm in vl}
-    for nm in vl:
+
+    def rip(nm):
         unstamp(saved[nm]); unstamp_holes(vias_of[nm])
         for (x, y, h) in vias_of[nm]:
             for g in [g for g in hole_geoms if abs(g.centroid.x - x) < 1e-6 and abs(g.centroid.y - y) < 1e-6]:
                 hole_geoms.remove(g)
-    blocks, won, lost, closed = [], 0, 0, []
-    restored = set()
+    for nm in vl:
+        rip(nm)
     # tentative exact model: victims removed now, each new route exact-checked and committed as it is made
     snap = (len(EX.extra), len(EX_HOLES), set(removed_ids))
     removed_o = [o for nm in vl for o in objs_of_group(nm)]
-    removed_ids.update(id(o) for o in removed_o)
-    for net, a, b in inside:
-        k += 1
-        res, why = route_conn(net, a, b)
-        if res:
-            if why == 'already connected':
-                won += 1; closed.append((net, a, b)); continue
-            rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b))))
-            if exact_ok(rows):
-                blocks.append(stamp_rows(rows) + (rows,)); commit_exact(rows, [])
-                won += 1; closed.append((net, a, b))
-    for nm in vl:
-        if len(ends_cache[nm]) < 2:
-            continue
-        k += 1
-        okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}', ())
-        vrows = [r for ents, hs, rows in bl for r in rows]
-        if okv and exact_ok(vrows):
-            blocks += bl; commit_exact(vrows, [])
-        else:
-            for ents, hs, rows in reversed(bl):
-                remove_rows(ents, hs)
-            if restore_group(nm, saved[nm], vias_of[nm]):
-                restored.add(nm)
+    pre = []                        # groups routed BEFORE the targets (lost in an earlier try)
+    for attempt in range(REORDER + 1):
+        removed_ids.update(id(o) for o in removed_o)
+        st = {'blocks': [], 'lost': 0}
+        won, closed, restored, lost_names = 0, [], set(), []
+
+        def do_victim(nm):
+            global k
+            if len(ends_cache[nm]) < 2:
+                return
+            k += 1
+            okv, bl = reconnect(nm, f'P{k}v:{groups[nm]["net"]}', ())
+            vrows = [r for ents, hs, rows in bl for r in rows]
+            if okv and exact_ok(vrows):
+                st['blocks'] += bl; commit_exact(vrows, [])
             else:
-                lost += 1
-    for nm in vl:                   # dangling pieces / groups without two ends: keep them when still legal
-        if len(ends_cache[nm]) < 2 and nm not in restored and restore_group(nm, saved[nm], vias_of[nm]):
-            restored.add(nm)
-    print(f'REGION {box_}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not re-routed {lost}, '
-          f'restored as they were {len(restored)}', flush=True)
-    if won <= lost:                 # roll the tentative exact model back
+                for ents, hs, rows in reversed(bl):
+                    remove_rows(ents, hs)
+                if restore_group(nm, saved[nm], vias_of[nm]):
+                    restored.add(nm)
+                else:
+                    st['lost'] += 1; lost_names.append(nm)
+        for nm in pre:
+            do_victim(nm)
+        for net, a, b in inside:
+            k += 1
+            res, why = route_conn(net, a, b)
+            if res:
+                if why == 'already connected':
+                    won += 1; closed.append((net, a, b)); continue
+                rows = rows_for(net, res, f'P{k}:{net}', '|'.join(R.key((net, a, b))))
+                if exact_ok(rows):
+                    st['blocks'].append(stamp_rows(rows) + (rows,)); commit_exact(rows, [])
+                    won += 1; closed.append((net, a, b))
+        for nm in vl:
+            if nm not in pre:
+                do_victim(nm)
+        for nm in vl:               # dangling pieces / groups without two ends: keep them when still legal
+            if len(ends_cache[nm]) < 2 and nm not in restored and restore_group(nm, saved[nm], vias_of[nm]):
+                restored.add(nm)
+        blocks, lost = st['blocks'], st['lost']
+        print(f'REGION {box_} try {attempt}: ripped {len(vl)}, unrouted inside {len(inside)} -> closed {won}, ripped not '
+              f're-routed {lost}, restored as they were {len(restored)}'
+              + (f'; lost {[groups[n]["net"] for n in lost_names]}' if DEBUG else ''), flush=True)
+        if won > lost:
+            for nm in vl:
+                if nm in restored:
+                    continue
+                dels.extend(groups[nm]['rows']); dead_groups.add(nm)
+            for ents, hs, rows in blocks:
+                adds.extend(rows)
+            cs = {R.key(c) for c in closed}
+            conns = [c for c in conns if R.key(c) not in cs]
+            gained += won - lost
+            print(f'  accepted: net gain {won - lost}', flush=True)
+            return won - lost
+        # undo this try completely: new copper, tentative exact model, groups restored in this try
+        for ents, hs, rows in reversed(blocks):
+            remove_rows(ents, hs)
         del EX.extra[snap[0]:]; del EX_HOLES[snap[1]:]
         removed_ids.clear(); removed_ids.update(snap[2])
-    if won > lost:
-        for nm in vl:
-            if nm in restored:
-                continue
-            dels.extend(groups[nm]['rows']); dead_groups.add(nm)
-        for ents, hs, rows in blocks:
-            adds.extend(rows)
-        cs = {R.key(c) for c in closed}
-        conns = [c for c in conns if R.key(c) not in cs]
-        gained += won - lost
-        print(f'  accepted: net gain {won - lost}', flush=True)
-        return won - lost
-    for ents, hs, rows in reversed(blocks):
-        remove_rows(ents, hs)
-    for nm in vl:
-        if nm in restored:
-            continue                # already back in the raster
+        for nm in restored:
+            rip(nm)
+        if not lost_names or attempt == REORDER:
+            break
+        pre = pre + [n for n in lost_names if n not in pre]
+    for nm in vl:                   # roll back: every ripped group as it was
         for e in saved[nm]:
             R.stamp(e[0], e[1], e[2]); R.copper_objs.append(e)
         for (x, y, h) in vias_of[nm]:

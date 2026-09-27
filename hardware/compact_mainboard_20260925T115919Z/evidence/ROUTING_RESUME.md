@@ -3,7 +3,27 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 06:55 (27 Sep) - SUPERSEDES everything below
+## State at 08:45 (27 Sep) - SUPERSEDES everything below
+- User (08:1x): "do it and solve the unrouted and complete it" -> keep going to zero.
+- Last commit 261e3b1 = state AI (19). On disk now (not committed): state AK = REP_AM written (ch2 NetINA2_3 closed by
+  region, +1 -> 18) then an antenna prune that over-deleted a live VOUT_2 chain (prune_from_antennae misses a via
+  contact) -> 19. ALWAYS DRC-verify a prune; VOUT_2 corridor (via 32.425,17.875 -> via 47.025,22.225) is free again.
+- repair.py region_pass: retries with lost groups routed first (REORDER); GND/3V0_ANA victims only need plane access
+  (reconnect gives each island a via) -> ch2 region accepted on try 1.
+- Running: REP_AN on AK = 9 focused regions (ch4, DRL corner x4, MCU x2, charger x2) + 2 passes, log tmp/rep_an.log.
+  PLANS include REP_AM_ADDS_OK.
+
+## State at 07:45 (27 Sep)
+- C2 = state AI, committed 261e3b1 (pushed): **19 unrouted** (6 GND, 1 3V0_ANA, 12 signals), copper clean.
+  PLANS include REP_AJ_ADDS_OK. Offline prediction = Altium count for the last 4 rounds.
+- repair.py: victim clusters + exact-checked reconnects (safe margin, then min width).
+- Running: REP_AK = regions ch2 (29.0,15.0-36.5,18.9) and ch4 (50.6,15.0-58.1,18.9) + 1 pass; log tmp/rep_ak.log.
+  Evidence: with the ch2 window's routed copper removed (scratch GEOMETRY_C2_6L_CH2TEST.txt), NetINA2_3 routes cleanly
+  on Top -> not a placement block, only a re-route problem.
+- Remaining after that: GND x6 (C_DRL_DEC-2, CU_14-1, D_CC_ESD-3, INA1-4, U1-11, J_FPC1 pin-7 pour fragment),
+  3V0_ANA U1-4, USB_PGOOD_N x2, ADC_EMG5, VOUT_2, DRL_LIMITED, Vc_1, ST67 SPI/UART x4.
+
+## State at 06:55 (27 Sep)
 - C2 = state AH, committed aee3750 (pushed): **21 unrouted** (6 GND, 1 3V0_ANA, 14 signals), copper clean.
   Charger nudge (R_LIM, R_PGOOD off the USB-C VBUS pins) -> all VBUS links routed. PLANS include REP_AI_ADDS_OK.
 - repair.py: victims of one net whose copper touches are merged into one cluster (set_ends / touch_points_multi); the
