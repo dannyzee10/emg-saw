@@ -139,7 +139,7 @@ def exact_ok(rows, extra_removed=()):
             c = Point(float(r['x1']), float(r['y1'])); hr = float(r['h']) / 2
             for h in EX_HOLES:
                 if id(h) not in rem and abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and \
-                        h.geom.distance(c.buffer(hr)) < 0.254 - 1e-6:
+                        h.geom.distance(c.buffer(hr)) < G.hole_gap(h) - 1e-6:
                     return _fail('hole-hole')
     for i, (ra, a) in enumerate(new):
         for rb, b in new[i + 1:]:
@@ -425,8 +425,11 @@ def plane_end(net, a, b):
 def route_plane(net, end):
     g, ls = R.end_copper(end, net)
     comp = R.component(net, g)
+    isl = unary_union([gg for gg, _ in comp])       # search around the whole island when it is small (its vias count)
+    ib = isl.bounds
+    anchor = isl if (ib[2] - ib[0]) < 12 and (ib[3] - ib[1]) < 12 else g
     for w in R.widths(net):
-        W = R.window(g, g, PLANE_WIN)
+        W = R.window(anchor, anchor, PLANE_WIN)
         free, via_ok = R.maps(net, w, W, 0.45, 0.2)
         if net == '3V0_ANA' or PLANE_DEAD:
             iy0, iy1, ix0, ix1 = W
@@ -435,7 +438,7 @@ def route_plane(net, end):
                 cx, cy = R.cell_xy(x + ix0, y + iy0)
                 if (net == '3V0_ANA' and not _ANA_IN.contains(Point(cx, cy))) or (net == 'GND' and _dead(cx, cy)):
                     via_ok[y, x] = False
-        for L in [L for L in R.LAYERS if L in ls]:
+        for L in [L for L in R.LAYERS if any(L in lls for gg, lls in comp)]:   # any layer the island has copper on (its vias reach all)
             s = R.comp_nodes([(gg, lls) for gg, lls in comp if L in lls], free, W, [L])
             goals = [(R.LAYERS.index(L), int(x), int(y)) for y, x in zip(*np.nonzero(via_ok & free[L]))]
             if not s or not goals:
@@ -503,7 +506,7 @@ def restore_group(nm, saved_entries, vias):
             for h in EX_HOLES:
                 if h is o or id(h) in own_ids or (id(h) in removed_ids):
                     continue
-                if abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and h.geom.distance(o.geom) < 0.254 - 1e-6:
+                if abs(h.geom.centroid.x - c.x) < 1.2 and abs(h.geom.centroid.y - c.y) < 1.2 and h.geom.distance(o.geom) < max(G.hole_gap(h), G.hole_gap(o)) - 1e-6:
                     return False
     removed_ids.difference_update(own_ids)
     for e in saved_entries:
@@ -514,6 +517,14 @@ def restore_group(nm, saved_entries, vias):
         if win:
             R.holes[win[0]:win[1], win[2]:win[3]] |= m
     return True
+
+
+def save_outputs():
+    """write ADDS / DELS now (called after every accepted gain: a killed run keeps its exact-checked progress)"""
+    fl = ['kind', 'group', 'net', 'layer', 'x1', 'y1', 'x2', 'y2', 'w', 'd', 'h', 'conn', 'relax']
+    for path_, rows_ in ((out_adds, adds), (out_dels, dels)):
+        with open(path_, 'w', newline='') as f_:
+            w_ = csv.DictWriter(f_, fieldnames=fl, extrasaction='ignore', restval=''); w_.writeheader(); w_.writerows(rows_)
 
 
 def region_pass(box_, first):
@@ -596,6 +607,7 @@ def region_pass(box_, first):
             conns = [c for c in conns if R.key(c) not in cs]
             gained += won - lost
             print(f'  accepted: net gain {won - lost}', flush=True)
+            save_outputs()
             return won - lost
         # undo this try completely: new copper, tentative exact model, groups restored in this try
         for ents, hs, rows in reversed(blocks):
@@ -637,7 +649,7 @@ for ps in range(PASSES):
         if res:
             rows = rows_for(net, res, f'P{k}:{net}', ck)
             if exact_ok(rows):
-                stamp_rows(rows); commit_exact(rows, []); adds += rows; gained += 1; gain_pass += 1
+                stamp_rows(rows); commit_exact(rows, []); adds += rows; gained += 1; gain_pass += 1; save_outputs()
                 print(f'  [{time.time() - t0:.0f}s] direct {net}', flush=True); continue
         if DEBUG:
             print(f'  direct fail {net} {R.key((net, a, b))}: {why if not res else "exact check: " + LAST_FAIL[0]}', flush=True)
@@ -707,7 +719,7 @@ for ps in range(PASSES):
             for ents, hs, rows in new_blocks:
                 adds += rows
             commit_exact(all_rows, removed_o)
-            gained += 1; gain_pass += 1
+            gained += 1; gain_pass += 1; save_outputs()
             print(f'  [{time.time() - t0:.0f}s] repaired {net} (victims {len(vl)})', flush=True)
         else:
             for ents, hs, rows in reversed(new_blocks):

@@ -1,0 +1,8 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,P164:GND VIP,GND,Mid Layer 2,15.325,10.775,15.525,10.575,0.15,,,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+TRACK,P164:GND VIP,GND,Mid Layer 2,15.525,10.575,20.225,10.575,0.15,,,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+TRACK,P164:GND VIP,GND,Mid Layer 2,20.225,10.575,20.875,11.225,0.15,,,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+TRACK,P164:GND VIP,GND,Mid Layer 2,20.875,11.225,20.875,11.375,0.15,,,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+TRACK,P164:GND VIP,GND,Mid Layer 2,20.875,11.375,21.125,11.625,0.15,,,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+VIA,P164:GND VIP,GND,Multi Layer,21.125,11.625,,,,0.45,0.2,"GND|Track (18.35mm,10.6mm)(18.35mm,11.17mm) on L1 TOP|Track (19.05mm,11.17mm)(20.135mm,11.17mm) on L1 TOP",0
+VIA,S14:GND,GND,Multi Layer,15.4119,36.0144,,,,0.6,0.3,,

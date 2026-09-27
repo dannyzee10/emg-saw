@@ -3,7 +3,45 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 10:00 (27 Sep) - SUPERSEDES everything below
+## Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written
+1. Write REP_AQ (+2 so far) together with: C_MCU_BULK (67.83,43.90,90) -> (67.55,43.60,90) (was 0.169 mm from the board
+   corner, JLC >= 0.2; rip RIP_CBULK.csv incl. its stitch via) and removal of the S0:GND stitch via (15.4865,42.7668)
+   (0.336 mm hole-to-hole to the USB-C NPTH peg, JLC pad holes >= 0.45) -> plane mode re-stitches UP1-8 / C_MCU_BULK-2.
+   Tools now enforce JLC pad-hole spacing 0.45 (geom.hole_gap / router pad-hole growth); fab_check.py = JLC audit.
+2. Width strategy (user): FIRST size nets that must be wide (VBUS / VBAT_CELL / VSYS charger path ~1 A, 3V3_DIG MCU+WiFi,
+   3V0_ANA feeds, GND stubs) from real currents (IPC, 1 oz outer / 0.5 oz inner), wide trunks + neck-down only in the last
+   <= 1 mm at fine-pitch pins; THEN thin digital/control signals 0.15 -> 0.10 mm (JLC standard 0.09). Analog EMG widths and
+   all clearances (0.2 / 0.25) unchanged. Apply as Altium width rules per class, then gloss/straighten with the new widths.
+3. Gloss pass (gloss.py written, not run yet) -> before/after renders -> DRC.
+4. Remaining unrouted with the freed space; UP1 pins 6/7: taller region incl. R_EN1_BIAS copper (0.4 mm vias dropped:
+   JLC charges extra for 0.2 holes < 0.45 dia).
+5. Final JLC standard-price audit (fab_check + mask dams + drill/annular + order options); via-style rule 0.6/0.3 vs
+   123 x 0.45/0.2 vias -> user decision to widen the rule.
+
+## State at 12:40 (27 Sep)
+- REP_AP (on AN) was KILLED by the system for low memory (not a tool failure) before writing its outputs; it had found
+  +3 (D_CC_ESD region, C_DRL_DEC region, Va_1 repair) - lost. Board unchanged = state AN = commit 4c5a2b6, 17 unrouted.
+  Rule from the harness: do not restart killed jobs without the user's go-ahead.
+- repair.py now checkpoints ADDS/DELS after every accepted gain (save_outputs) -> a killed run keeps its progress
+  (consistent_repair + write can use the partial files).
+- Also new: plane routing starts on any layer of the island (vias) and searches around the whole small island (J_FPC1
+  pin-7 GND via sits in the dead L2/L4 pour strip -> can now reach the main plane via L3 between the corner TH pads);
+  SMALL_VIA_NETS prefer 0.4/0.2 vias for UP1 pins 6/7.
+- User (12:3x) asked why traces are not "professional" (straight, clean 45 deg, into pads, via when needed). Plan agreed
+  in chat: after the next write, build a straightening/gloss pass (fewest octilinear segments, straight pad entries,
+  remove needless vias; every change exact-checked; before/after renders; Altium DRC) and run it on all router copper.
+
+## State at 11:10 (27 Sep)
+- C2 = state AN, committed 4c5a2b6 (pushed): **17 unrouted** (4 GND, 1 3V0_ANA, 12 signals). PLANS incl. REP_AO_ADDS_OK.
+- FINDING for the final report (needs user decision): via-style rule VIA_STD_060_030 is min = max = 0.6/0.3 mm, but the
+  board has 123 vias 0.45/0.2 and 5 vias 0.5/0.3 (router secondary size); batch DRC does not test Routing Via Style so
+  they never showed. JLC 6-layer can make them. Options: widen the rule to 0.45-0.6 / 0.2-0.3, or rework (not possible in
+  the dense areas).
+- router5: SMALL_VIA_NETS env allows 0.4/0.2 vias for named nets only (UP1 pins 6/7: USB_PGOOD_N, NetR_EN1_BIAS_2).
+- Running: REP_AP on AN = 9 regions (UP1 top, D_CC_ESD, ch4, C_DRL_DEC, CU_14, R_ADC2/VOUT_2, ADC_EMG5, U1 right, Va_1)
+  + 2 passes, log tmp/rep_ap.log.
+
+## State at 10:00 (27 Sep)
 - Last commit 0601824 = state AL: **18 unrouted** (pushed).
 - On disk (not committed): TP_VREF_B_SRC free pad moved (12.5,20.2) -> (11.4,22.95) (PMOVE, OPS_TPVB_MOVE.txt; legal by
   chk_tp.py), its attached Top copper ripped (RIP_TPVB.csv) -> state AM 21 (+3 VREF_B_SRC). Goal: free U1-11 GND via site

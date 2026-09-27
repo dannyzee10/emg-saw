@@ -34,6 +34,14 @@ FINE_ESC = {'U_MCU1', 'UP1', 'UP2', 'UP4', 'U_DRL1', 'C_DRL_DEC'}
 FINE_REGIONS = {}
 
 
+PAD_HOLE_GAP = 0.45     # JLCPCB: pad (PTH / NPTH) hole to hole; via hole to via hole stays 0.254 (JLC 0.2)
+
+
+def hole_gap(h):
+    """required edge distance from a new via hole to existing hole h"""
+    return PAD_HOLE_GAP if (h.src is not None and h.src[0] == 'PAD') else 0.254
+
+
 def base_clr(net):
     return 0.25 if net in WIDE else 0.2
 
@@ -139,7 +147,8 @@ def required(a, b):
     """clearance between two objects of different nets (rule-priority order); keepouts included."""
     for poly, nets, comp in ZONES:
         if all((o.net in nets or o.comp == comp) and _inside(poly, o) for o in (a, b)):
-            return 0.13
+            # JLCPCB via-to-track / via-to-via minimum is 0.2 mm even inside the BK13 escape zones
+            return 0.2 if 'VIA' in (a.kind, b.kind) else 0.13
     if a.kind == 'PAD' and b.kind == 'PAD' and a.comp and a.comp == b.comp and a.comp in PAD_PAIR_010:
         return 0.10
     for p, t in ((a, b), (b, a)):
@@ -190,7 +199,7 @@ class Index:
 
     def hole_ok(self, center, hole_r, hh=0.254):
         for o in self.holes:
-            if o.geom.distance(center.buffer(hole_r)) < hh - 1e-6:
+            if o.geom.distance(center.buffer(hole_r)) < max(hh, hole_gap(o)) - 1e-6:
                 return False
         return True
 

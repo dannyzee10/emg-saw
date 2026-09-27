@@ -1,0 +1,4 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,R43:3V3_DIG,3V3_DIG,Top Layer,67.325,41.725,67.325,42.625,0.4,,,"3V3_DIG|Pad C_MCU_VDD4-1(67.401mm,41.5mm) on L1 TOP|Pad C_MCU_BULK-1(67.83mm,42.95mm) on L1 TOP",0
+TRACK,ORPHAN,GND,Top Layer,67.8039,44.0880,67.8300,44.8500,0.2500,,,,
+VIA,STITCH_MANUAL,GND,Multi Layer,67.8039,44.088,,,,0.6,0.3,,

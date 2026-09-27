@@ -32,6 +32,7 @@ LAYERS = ['Top Layer', 'Mid Layer 2', 'Mid Layer 4', 'Bottom Layer']
 L5_RESERVED = [(t.split(':')[0], box(*[float(v) for v in t.split(':')[1].split(',')]))
                for t in os.environ.get('L5_RESERVED', '').split(';') if t.strip()]
 MARGIN = float(os.environ.get('MARGIN', '0.06'))   # raster safety margin; lower it only with an exact check behind (repair.py EXACT=1)
+SMALL_VIA_NETS = set(n for n in os.environ.get("SMALL_VIA_NETS", "").split(",") if n)   # nets allowed a 0.4/0.2 via
 VIA_D, VIA_H = 0.6, 0.3
 VIA_COST = 1.5
 TURN = 0.06
@@ -147,8 +148,8 @@ for o in objs:
     if o.kind in ('PAD', 'TRACK', 'VIA', 'ARC', 'REGION', 'FILL'):
         stamp(o.geom, o.net, o.layers, is_fine=(o.kind == 'PAD' and o.comp in G.FINE_REGIONS), is_pad=(o.kind == 'PAD'))
         copper_objs.append((o.geom, o.net, set(o.layers) & set(LAYERS) if o.kind != 'VIA' else set(LAYERS)))
-    elif o.kind == 'HOLE':
-        win, m = patch(o.geom)
+    elif o.kind == 'HOLE':         # pad (PTH / NPTH) holes need 0.45 to a via hole (JLC): grow them by the difference
+        win, m = patch(o.geom.buffer(G.PAD_HOLE_GAP - 0.254) if (o.src is not None and o.src[0] == 'PAD') else o.geom)
         if win:
             holes[win[0]:win[1], win[2]:win[3]] |= m
     elif o.kind == 'KEEPOUT':
@@ -497,6 +498,9 @@ def route_one(net, a, b):
         plan += [(wm, 0.45, 0.2, 15.0, True, 600000)]
     if os.environ.get('BIG'):    # C2 6L completion: last resort for long cross-board lines
         plan += [(wm, 0.45, 0.2, 30.0, False, 2500000)]
+    if net in SMALL_VIA_NETS:        # named nets only: PREFER a 0.4/0.2 via (pin-pitch escapes that must share a gap, UP1 6/7)
+        plan = [(w0, 0.4, 0.2, 2.0, False, 150000), (wm, 0.4, 0.2, 2.0, False, 150000),
+                (wm, 0.4, 0.2, 6.0, False, 400000)] + plan
     if os.environ.get('NO_RELAX'):   # relaxed (0.2 mm) paths never pass build_ops' 0.25 mm class rule: skip them
         plan = [p for p in plan if not p[4]]
     last = 'no path'
