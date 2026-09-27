@@ -6,8 +6,8 @@ import geom as G
 
 out_del, refs, plans = sys.argv[1], set(sys.argv[2].split(',')), sys.argv[3:]
 objs, comps, keepouts = G.load()
-# REF or FREE:NAME (a free pad such as a test point)
-pads = [o for o in objs if o.kind == 'PAD' and (o.comp in refs or f'{o.comp}:{o.name}' in refs)]
+# REF, FREE:NAME (a free pad such as a test point) or REF.PIN (one pad of a part, e.g. U_MCU1.69 for a pin swap)
+pads = [o for o in objs if o.kind == 'PAD' and (o.comp in refs or f'{o.comp}:{o.name}' in refs or f'{o.comp}.{o.name}' in refs)]
 face = {l for p in pads for l in p.layers}
 
 

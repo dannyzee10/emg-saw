@@ -67,6 +67,7 @@ GND↔DRL solder jumper** on this net as a future option (no VCM hardware needed
 | USB detect | GPIO PB2 | VBUS-sense → disable acquisition on USB |
 | SPI→ST67 | SPI1: SCK PA5→(use PB3), MISO PB4, MOSI PB5, CS PA15 | ≤40 MHz full-duplex |
 | ST67 ctrl | CHIP_EN PB1, SPI_RDY PB0 (EXTI), BOOT PB10 | CHIP_EN high ≥3.3 ms after ST67 power |
+| UART↔ST67 | **USART1: TX = PB6, RX = PB7** (AF7) | Moved from PA9/PA10 (LQFP100 pins 68/69) to PB6/PB7 (pins 92/93) on 2026-09-27 for C2 PCB routing - same USART1, only the pin mux changes. PA9/PA10 (system-bootloader UART) are now unused; program via SWD (Tag-Connect). |
 | I²C→gauge | I2C1: SCL PB8, SDA PB9 | MAX17048 @0x36; ALRT→PB6 |
 | Clock | HSE 16–32 MHz (or HSI); **LSE 32.768 kHz** | LSE can also feed ST67 32 kHz |
 | SWD | SWDIO PA13, SWCLK PA14, NRST | 5 test pads |

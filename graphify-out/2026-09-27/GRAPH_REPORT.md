@@ -1,16 +1,16 @@
 # Graph Report - pcb-routing-0925  (2026-09-27)
 
 ## Corpus Check
-- 646 files · ~3,863,496 words
+- 659 files · ~3,938,347 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4634 nodes · 8699 edges · 514 communities (277 shown, 102 thin omitted)
+- 4706 nodes · 8828 edges · 524 communities (283 shown, 103 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f1d564ca`
+- Built from commit: `ef917d84`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -388,17 +388,24 @@
 - mr2_125917.pas
 - mrn_125439.pas
 - gav_151610.pas
-- pipeline.py
-- ChannelPanel
+- ProcessingDialog
+- msk_161919.pas
 - gar_125439.pas
 - gas_125917.pas
 - gat_135637.pas
 - gau_135846.pas
+- pinswap_T.pas
+- psw_161601.pas
+- psw_161614.pas
+- gaw_161651.pas
+- gax_161919.pas
+- sch_dump_T.pas
+- sdm_155058.pas
 
 ## God Nodes (most connected - your core abstractions)
 1. `EmgScope` - 85 edges
 2. `ReviewWindow` - 36 edges
-3. `C2 6-layer routing completion — resume note (keep this file current)` - 24 edges
+3. `C2 6-layer routing completion — resume note (keep this file current)` - 25 edges
 4. `EmgFilters` - 23 edges
 5. `EMG main-board PCB implementation brief — Astra` - 20 edges
 6. `MvcDialog` - 19 edges
@@ -429,7 +436,7 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (514 total, 102 thin omitted)
+## Communities (524 total, 103 thin omitted)
 
 ### Community 0 - "EmgScope"
 Cohesion: 0.05
@@ -440,12 +447,12 @@ Cohesion: 0.06
 Nodes (64): Graphify Trigger Config (.claude/CLAUDE.md), EMG SAW Agent Roster (agents/), Round Table Collaboration, SAFe Methodology (Epic/Feature/Story), Graphify Project Instructions (CLAUDE.md), DSP Engineer Agent, Firmware Engineer Agent, GUI Engineer Agent (+56 more)
 
 ### Community 2 - "ReviewWindow"
-Cohesion: 0.06
-Nodes (15): NormalizeDialog, NormalizeDialog — Noraxon MR offline Amplitude Normalization config: choose the…, ProcessingDialog, Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then…, Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak… (+7 more)
+Cohesion: 0.08
+Nodes (14): NormalizeDialog, NormalizeDialog — Noraxon MR offline Amplitude Normalization config: choose the…, Run the Signal-Processing pipeline per channel; build display array + per-…, Open the Signal Processing pipeline builder; apply the result to the review., Populate self.mvc from the latest mvc_store.json entry (the persisted 'MVC…, Compute a per-channel reference (=100 %) from the chosen source/window, then…, Img15: % axis at the chosen range, a 100 % reference line, and the green 'peak…, ReviewWindow (+6 more)
 
 ### Community 3 - "emg_plotter.py"
-Cohesion: 0.07
-Nodes (22): AsciiSource, _BufferedSource, _open_serial(), ndarray, Data sources for the plotter. Every source runs a background thread that fills…, Fallback for a quick STM32 `printf("%d,%d\\n", ...)` bring-up., Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise…, Open the serial port exactly like a plain read that is known to work here. Open… (+14 more)
+Cohesion: 0.06
+Nodes (25): AsciiSource, _BufferedSource, _open_serial(), ndarray, Data sources for the plotter. Every source runs a background thread that fills…, Fallback for a quick STM32 `printf("%d,%d\\n", ...)` bring-up., Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise…, Open the serial port exactly like a plain read that is known to work here. Open… (+17 more)
 
 ### Community 4 - "graphify query"
 Cohesion: 0.09
@@ -532,8 +539,8 @@ Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
 ### Community 39 - "dsp.py"
-Cohesion: 0.09
-Nodes (37): cocontraction_index(), fatigue_trend(), iemg(), leadoff_report(), mean_frequency(), median_frequency(), onset_offset(), Display-side signal processing (done on the laptop, so you can tweak live —… (+29 more)
+Cohesion: 0.10
+Nodes (31): cocontraction_index(), fatigue_trend(), iemg(), mean_frequency(), median_frequency(), onset_offset(), Display-side signal processing (done on the laptop, so you can tweak live —…, Integrated EMG (iEMG): area under the full-wave-rectified signal, ∫|EMG| dt… (+23 more)
 
 ### Community 40 - "MvcDialog"
 Cohesion: 0.09
@@ -868,12 +875,12 @@ Cohesion: 0.22
 Nodes (23): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary(), CopyFootprint(), CountPads(), FindComp() (+15 more)
 
 ### Community 201 - "test_leadoff.py"
-Cohesion: 0.16
-Nodes (20): leadoff_status(), LeadoffTracker, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, _emg_band_signal(), HG3 unit tests for the PC-side electrode lead-off heuristic…, _t(), test_good_connected_low_harmonics_not_flagged() (+12 more)
+Cohesion: 0.13
+Nodes (25): leadoff_report(), leadoff_status(), LeadoffTracker, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, Analyse one RAW (un-notched, absolute-volt) single-channel window; return…, load(), main() (+17 more)
 
 ### Community 202 - "EmgFilters"
-Cohesion: 0.08
-Nodes (26): EmgFilters, ndarray, Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window — the…, apply_pipeline(), compute_reference(), peak_index(), pipeline_unit(), Apply the ordered op keys to a 1-D signal; unknown keys are skipped. (+18 more)
+Cohesion: 0.05
+Nodes (38): EmgFilters, ndarray, Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window — the…, _ac(), apply_pipeline(), compute_reference(), op_mean(), op_norm_mvc() (+30 more)
 
 ### Community 203 - "ac_235440.pas"
 Cohesion: 0.22
@@ -1213,7 +1220,7 @@ Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Count
 
 ### Community 353 - "C2 6-layer routing completion — resume note (keep this file current)"
 Cohesion: 0.08
-Nodes (24): C2 6-layer routing completion — resume note (keep this file current), How to run things (work/), Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written, Remaining after routing, State at 01:40 (27 Sep), State at 02:55 (27 Sep), State at 03:45 (27 Sep), State at 05:10 (27 Sep) (+16 more)
+Nodes (25): C2 6-layer routing completion — resume note (keep this file current), How to run things (work/), Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written, Remaining after routing, State at 01:40 (27 Sep), State at 02:55 (27 Sep), State at 03:45 (27 Sep), State at 05:10 (27 Sep) (+17 more)
 
 ### Community 354 - "g6g_171149.pas"
 Cohesion: 0.80
@@ -1515,13 +1522,9 @@ Nodes (19): CloseTo(), Fail(), FindComp(), FindFreePad(), FindKeepout(), FindPol
 Cohesion: 0.80
 Nodes (4): MM(), NetOf(), RectS(), RunFixed()
 
-### Community 502 - "pipeline.py"
-Cohesion: 0.12
-Nodes (12): _ac(), op_mean(), op_norm_mvc(), op_normalize(), op_rectify(), op_rms(), Offline signal-processing pipeline (Noraxon MR 'Signal Processing' menu). A…, RMS smoothing (linear envelope) over smooth_ms. (+4 more)
-
-### Community 506 - "ChannelPanel"
-Cohesion: 0.38
-Nodes (3): ChannelPanel, Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,…, Set the per-channel electrode status dot: 'good' | 'poor' | 'open'.
+### Community 506 - "msk_161919.pas"
+Cohesion: 0.22
+Nodes (19): CloseTo(), Fail(), FindComp(), FindFreePad(), FindKeepout(), FindPoly(), FindRule(), FindTrack() (+11 more)
 
 ### Community 507 - "gar_125439.pas"
 Cohesion: 0.80
@@ -1539,15 +1542,43 @@ Nodes (4): MM(), NetOf(), RectS(), RunFixed()
 Cohesion: 0.80
 Nodes (4): MM(), NetOf(), RectS(), RunFixed()
 
+### Community 514 - "pinswap_T.pas"
+Cohesion: 0.53
+Nodes (8): FindComp(), FindNet(), Mi(), PadNet(), RunFixed(), Say(), SwapPads(), SwapSchematic()
+
+### Community 515 - "psw_161601.pas"
+Cohesion: 0.53
+Nodes (8): FindComp(), FindNet(), Mi(), PadNet(), RunFixed(), Say(), SwapPads(), SwapSchematic()
+
+### Community 516 - "psw_161614.pas"
+Cohesion: 0.53
+Nodes (8): FindComp(), FindNet(), Mi(), PadNet(), RunFixed(), Say(), SwapPads(), SwapSchematic()
+
+### Community 517 - "gaw_161651.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 518 - "gax_161919.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 519 - "sch_dump_T.pas"
+Cohesion: 0.83
+Nodes (3): Mi(), RunFixed(), Say()
+
+### Community 520 - "sdm_155058.pas"
+Cohesion: 0.83
+Nodes (3): Mi(), RunFixed(), Say()
+
 ## Knowledge Gaps
-- **467 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+462 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1227 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **102 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **468 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+463 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1234 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **103 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `RecordingController`, `dsp.py`, `MvcDialog`, `test_leadoff.py`, `EmgFilters`, `AmpNormDialog`, `ChannelPanel`?**
+- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `RecordingController`, `dsp.py`, `MvcDialog`, `test_leadoff.py`, `EmgFilters`, `AmpNormDialog`, `ProcessingDialog`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `SaveRecordingDialog` connect `MvcDialog` to `EmgScope`, `emg_plotter.py`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
@@ -1560,4 +1591,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 4 inferred relationships involving `EmgFilters` (e.g. with `EmgScope` and `MvcDialog`) actually correct?**
   _`EmgFilters` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope` to the rest of the system?**
-  _467 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _468 weakly-connected nodes found - possible documentation gaps or missing edges._

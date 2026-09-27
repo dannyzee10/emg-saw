@@ -126,19 +126,6 @@
       "source_location": "L11"
     },
     {
-      "id": "gui_processing_dialog_processingdialog",
-      "label": "ProcessingDialog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "processingdialog",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L12"
-    },
-    {
       "id": "gui_review_window_reviewwindow",
       "label": "ReviewWindow",
       "_callable": true,
@@ -241,6 +228,19 @@
       "norm_label": "simsource",
       "source_file": "communication/sources.py",
       "source_location": "L168"
+    },
+    {
+      "id": "gui_channel_panel_channelpanel",
+      "label": "ChannelPanel",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "channelpanel",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L13"
     },
     {
       "id": "gui_controller_maincontroller",
@@ -360,17 +360,17 @@
       "source_location": "L12"
     },
     {
-      "id": "gui_channel_panel_channelpanel",
-      "label": "ChannelPanel",
+      "id": "gui_processing_dialog_processingdialog",
+      "label": "ProcessingDialog",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 506,
-      "community_name": "ChannelPanel",
+      "community": 502,
+      "community_name": "ProcessingDialog",
       "file_type": "code",
-      "norm_label": "channelpanel",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L13"
+      "norm_label": "processingdialog",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L12"
     },
     {
       "id": "scripts_emg_map_server_handler",
@@ -1857,102 +1857,6 @@
       "source_location": "L103"
     },
     {
-      "id": "gui_processing_dialog_processingdialog_add_selected",
-      "label": "._add_selected()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._add_selected()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L89"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_channels",
-      "label": ".channels()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": ".channels()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L128"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L13"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_insert",
-      "label": "._insert()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._insert()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L96"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_move",
-      "label": "._move()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._move()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L115"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_remove",
-      "label": "._remove()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._remove()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L101"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_remove_all",
-      "label": "._remove_all()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": "._remove_all()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L106"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_selected_keys",
-      "label": ".selected_keys()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ReviewWindow",
-      "file_type": "code",
-      "norm_label": ".selected_keys()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L125"
-    },
-    {
       "id": "gui_review_window_reviewwindow_apply_normalize",
       "label": "._apply_normalize()",
       "_callable": true,
@@ -2325,6 +2229,18 @@
       "source_location": "L33"
     },
     {
+      "id": "dsp_dsp_leadoff_report",
+      "label": "leadoff_report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "code",
+      "norm_label": "leadoff_report()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L60"
+    },
+    {
       "id": "dsp_dsp_leadoff_status",
       "label": "leadoff_status()",
       "_callable": true,
@@ -2359,6 +2275,42 @@
       "norm_label": ".update()",
       "source_file": "dsp/dsp.py",
       "source_location": "L160"
+    },
+    {
+      "id": "scripts_analyze_capture_load",
+      "label": "load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "code",
+      "norm_label": "load()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "scripts_analyze_capture_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L50"
+    },
+    {
+      "id": "scripts_analyze_capture_median_freq",
+      "label": "median_freq()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "code",
+      "norm_label": "median_freq()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L40"
     },
     {
       "id": "tests_test_leadoff_emg_band_signal",
@@ -2601,6 +2553,18 @@
       "source_location": "L46"
     },
     {
+      "id": "dsp_pipeline_ac",
+      "label": "_ac()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "_ac()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L12"
+    },
+    {
       "id": "dsp_pipeline_apply_pipeline",
       "label": "apply_pipeline()",
       "_callable": true,
@@ -2623,6 +2587,138 @@
       "norm_label": "compute_reference()",
       "source_file": "dsp/pipeline.py",
       "source_location": "L72"
+    },
+    {
+      "id": "dsp_pipeline_op_bandpass",
+      "label": "op_bandpass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_bandpass()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "dsp_pipeline_op_label",
+      "label": "op_label()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_label()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L122"
+    },
+    {
+      "id": "dsp_pipeline_op_mean",
+      "label": "op_mean()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_mean()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "dsp_pipeline_op_norm_mean",
+      "label": "op_norm_mean()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_norm_mean()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L59"
+    },
+    {
+      "id": "dsp_pipeline_op_norm_mvc",
+      "label": "op_norm_mvc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_norm_mvc()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L47"
+    },
+    {
+      "id": "dsp_pipeline_op_norm_peak",
+      "label": "op_norm_peak()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_norm_peak()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "dsp_pipeline_op_normalize",
+      "label": "op_normalize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_normalize()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L63"
+    },
+    {
+      "id": "dsp_pipeline_op_notch50",
+      "label": "op_notch50()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_notch50()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "dsp_pipeline_op_notch60",
+      "label": "op_notch60()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_notch60()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "dsp_pipeline_op_rectify",
+      "label": "op_rectify()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_rectify()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "dsp_pipeline_op_rms",
+      "label": "op_rms()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "op_rms()",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L32"
     },
     {
       "id": "dsp_pipeline_peak_index",
@@ -3825,6 +3921,54 @@
       "source_location": "L180"
     },
     {
+      "id": "gui_channel_panel_channelpanel_build_ui",
+      "label": "._build_ui()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._build_ui()",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "gui_channel_panel_channelpanel_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "gui_channel_panel_channelpanel_on_muscle_edit",
+      "label": "._on_muscle_edit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._on_muscle_edit()",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L109"
+    },
+    {
+      "id": "gui_channel_panel_channelpanel_set_status",
+      "label": ".set_status()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".set_status()",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L98"
+    },
+    {
       "id": "gui_controller_maincontroller_init",
       "label": ".__init__()",
       "_callable": true,
@@ -4977,18 +5121,6 @@
       "source_location": "L175"
     },
     {
-      "id": "dsp_dsp_leadoff_report",
-      "label": "leadoff_report()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "leadoff_report()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L60"
-    },
-    {
       "id": "dsp_dsp_mean_frequency",
       "label": "mean_frequency()",
       "_callable": true,
@@ -5071,42 +5203,6 @@
       "norm_label": "._report()",
       "source_file": "gui/review_window.py",
       "source_location": "L465"
-    },
-    {
-      "id": "scripts_analyze_capture_load",
-      "label": "load()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "load()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L21"
-    },
-    {
-      "id": "scripts_analyze_capture_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L50"
-    },
-    {
-      "id": "scripts_analyze_capture_median_freq",
-      "label": "median_freq()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "median_freq()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L40"
     },
     {
       "id": "tests_test_dsp_analytics_test_cci_disjoint_is_0",
@@ -6057,196 +6153,100 @@
       "source_location": "L169"
     },
     {
-      "id": "dsp_pipeline_ac",
-      "label": "_ac()",
+      "id": "gui_processing_dialog_processingdialog_add_selected",
+      "label": "._add_selected()",
       "_callable": true,
       "_origin": "ast",
       "community": 502,
-      "community_name": "pipeline.py",
+      "community_name": "ProcessingDialog",
       "file_type": "code",
-      "norm_label": "_ac()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L12"
+      "norm_label": "._add_selected()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L89"
     },
     {
-      "id": "dsp_pipeline_op_bandpass",
-      "label": "op_bandpass()",
+      "id": "gui_processing_dialog_processingdialog_channels",
+      "label": ".channels()",
       "_callable": true,
       "_origin": "ast",
       "community": 502,
-      "community_name": "pipeline.py",
+      "community_name": "ProcessingDialog",
       "file_type": "code",
-      "norm_label": "op_bandpass()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L20"
+      "norm_label": ".channels()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L128"
     },
     {
-      "id": "dsp_pipeline_op_label",
-      "label": "op_label()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_label()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L122"
-    },
-    {
-      "id": "dsp_pipeline_op_mean",
-      "label": "op_mean()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_mean()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L38"
-    },
-    {
-      "id": "dsp_pipeline_op_norm_mean",
-      "label": "op_norm_mean()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_norm_mean()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L59"
-    },
-    {
-      "id": "dsp_pipeline_op_norm_mvc",
-      "label": "op_norm_mvc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_norm_mvc()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L47"
-    },
-    {
-      "id": "dsp_pipeline_op_norm_peak",
-      "label": "op_norm_peak()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_norm_peak()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L55"
-    },
-    {
-      "id": "dsp_pipeline_op_normalize",
-      "label": "op_normalize()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_normalize()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L63"
-    },
-    {
-      "id": "dsp_pipeline_op_notch50",
-      "label": "op_notch50()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_notch50()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L24"
-    },
-    {
-      "id": "dsp_pipeline_op_notch60",
-      "label": "op_notch60()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_notch60()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L28"
-    },
-    {
-      "id": "dsp_pipeline_op_rectify",
-      "label": "op_rectify()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_rectify()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L16"
-    },
-    {
-      "id": "dsp_pipeline_op_rms",
-      "label": "op_rms()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "op_rms()",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L32"
-    },
-    {
-      "id": "gui_channel_panel_channelpanel_build_ui",
-      "label": "._build_ui()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 506,
-      "community_name": "ChannelPanel",
-      "file_type": "code",
-      "norm_label": "._build_ui()",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L27"
-    },
-    {
-      "id": "gui_channel_panel_channelpanel_init",
+      "id": "gui_processing_dialog_processingdialog_init",
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 506,
-      "community_name": "ChannelPanel",
+      "community": 502,
+      "community_name": "ProcessingDialog",
       "file_type": "code",
       "norm_label": ".__init__()",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L17"
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L13"
     },
     {
-      "id": "gui_channel_panel_channelpanel_on_muscle_edit",
-      "label": "._on_muscle_edit()",
+      "id": "gui_processing_dialog_processingdialog_insert",
+      "label": "._insert()",
       "_callable": true,
       "_origin": "ast",
-      "community": 506,
-      "community_name": "ChannelPanel",
+      "community": 502,
+      "community_name": "ProcessingDialog",
       "file_type": "code",
-      "norm_label": "._on_muscle_edit()",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L109"
+      "norm_label": "._insert()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L96"
     },
     {
-      "id": "gui_channel_panel_channelpanel_set_status",
-      "label": ".set_status()",
+      "id": "gui_processing_dialog_processingdialog_move",
+      "label": "._move()",
       "_callable": true,
       "_origin": "ast",
-      "community": 506,
-      "community_name": "ChannelPanel",
+      "community": 502,
+      "community_name": "ProcessingDialog",
       "file_type": "code",
-      "norm_label": ".set_status()",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L98"
+      "norm_label": "._move()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_remove",
+      "label": "._remove()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 502,
+      "community_name": "ProcessingDialog",
+      "file_type": "code",
+      "norm_label": "._remove()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_remove_all",
+      "label": "._remove_all()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 502,
+      "community_name": "ProcessingDialog",
+      "file_type": "code",
+      "norm_label": "._remove_all()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_selected_keys",
+      "label": ".selected_keys()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 502,
+      "community_name": "ProcessingDialog",
+      "file_type": "code",
+      "norm_label": ".selected_keys()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L125"
     },
     {
       "id": "scripts_emg_map_server_handler_do_get",
@@ -12217,6 +12217,17 @@
       "source_location": "L63"
     },
     {
+      "id": "scripts_analyze_capture",
+      "label": "analyze_capture.py",
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "code",
+      "norm_label": "analyze_capture.py",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_test_leadoff",
       "label": "test_leadoff.py",
       "_origin": "ast",
@@ -12250,6 +12261,17 @@
       "source_location": "L145"
     },
     {
+      "id": "dsp_dsp_rationale_63",
+      "label": "Analyse one RAW (un-notched, absolute-volt) single-channel window; return\u2026",
+      "_origin": "ast",
+      "community": 201,
+      "community_name": "test_leadoff.py",
+      "file_type": "rationale",
+      "norm_label": "analyse one raw (un-notched, absolute-volt) single-channel window; return...",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L63"
+    },
+    {
       "id": "tests_test_leadoff_rationale_1",
       "label": "HG3 unit tests for the PC-side electrode lead-off heuristic\u2026",
       "_origin": "ast",
@@ -12270,6 +12292,28 @@
       "norm_label": "ndarray",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "dsp_pipeline",
+      "label": "pipeline.py",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "pipeline.py",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_review_window",
+      "label": "review_window.py",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "review_window.py",
+      "source_file": "gui/review_window.py",
+      "source_location": "L1"
     },
     {
       "id": "tests_test_dsp",
@@ -12305,6 +12349,17 @@
       "source_location": "L47"
     },
     {
+      "id": "dsp_pipeline_rationale_1",
+      "label": "Offline signal-processing pipeline (Noraxon MR 'Signal Processing' menu). A\u2026",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "offline signal-processing pipeline (noraxon mr 'signal processing' menu). a...",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L1"
+    },
+    {
       "id": "dsp_pipeline_rationale_127",
       "label": "Apply the ordered op keys to a 1-D signal; unknown keys are skipped.",
       "_origin": "ast",
@@ -12327,6 +12382,50 @@
       "source_location": "L136"
     },
     {
+      "id": "dsp_pipeline_rationale_33",
+      "label": "RMS smoothing (linear envelope) over smooth_ms.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "rms smoothing (linear envelope) over smooth_ms.",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "dsp_pipeline_rationale_39",
+      "label": "Mean-absolute smoothing: moving average of the rectified signal over smooth_ms.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "mean-absolute smoothing: moving average of the rectified signal over smooth_ms.",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "dsp_pipeline_rationale_48",
+      "label": "Normalize to the set MVC reference (V). Falls back to the signal's own peak.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "normalize to the set mvc reference (v). falls back to the signal's own peak.",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "dsp_pipeline_rationale_64",
+      "label": "Normalize to an externally-computed per-channel reference ``ctx['norm_ref']``\u2026",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "normalize to an externally-computed per-channel reference ``ctx['norm_ref']``...",
+      "source_file": "dsp/pipeline.py",
+      "source_location": "L64"
+    },
+    {
       "id": "dsp_pipeline_rationale_73",
       "label": "Reference amplitude (=100 %) for offline normalization, from an RMS envelope\u2026",
       "_origin": "ast",
@@ -12347,6 +12446,17 @@
       "norm_label": "sample index of the envelope peak (within ``window`` if given) \u2014 for the green...",
       "source_file": "dsp/pipeline.py",
       "source_location": "L91"
+    },
+    {
+      "id": "gui_review_window_rationale_1",
+      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
+      "source_file": "gui/review_window.py",
+      "source_location": "L1"
     },
     {
       "id": "tests_test_dsp_rationale_1",
@@ -20537,6 +20647,28 @@
       "source_location": "L1"
     },
     {
+      "id": "gui_channel_panel_rationale_14",
+      "label": "Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,\u2026",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "encapsulates channel cards with muscle name, rms/pk-pk labels, progress bars,...",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "gui_channel_panel_rationale_99",
+      "label": "Set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
+      "source_file": "gui/channel_panel.py",
+      "source_location": "L99"
+    },
+    {
       "id": "gui_controller_rationale_1",
       "label": "MainController \u2014 coordinates the AcquisitionModel and high-level start/stop.\u2026",
       "_origin": "ast",
@@ -26948,7 +27080,7 @@
       "node_kind": "heading",
       "norm_label": "how to run things (work/)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L220"
+      "source_location": "L227"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_plan_agreed_with_the_user_13_xx_27_sep_do_in_this_order_after_the_current_round_is_written",
@@ -26960,7 +27092,7 @@
       "node_kind": "heading",
       "norm_label": "plan agreed with the user (13:xx 27 sep) - do in this order after the current round is written",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L31"
+      "source_location": "L38"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_remaining_after_routing",
@@ -26972,7 +27104,7 @@
       "node_kind": "heading",
       "norm_label": "remaining after routing",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L229"
+      "source_location": "L236"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_01_40_27_sep",
@@ -26984,7 +27116,7 @@
       "node_kind": "heading",
       "norm_label": "state at 01:40 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L173"
+      "source_location": "L180"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_02_55_27_sep",
@@ -26996,7 +27128,7 @@
       "node_kind": "heading",
       "norm_label": "state at 02:55 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L164"
+      "source_location": "L171"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_03_45_27_sep",
@@ -27008,7 +27140,7 @@
       "node_kind": "heading",
       "norm_label": "state at 03:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L155"
+      "source_location": "L162"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_05_10_27_sep",
@@ -27020,7 +27152,7 @@
       "node_kind": "heading",
       "norm_label": "state at 05:10 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L130"
+      "source_location": "L137"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_05_45_27_sep",
@@ -27032,7 +27164,7 @@
       "node_kind": "heading",
       "norm_label": "state at 05:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L120"
+      "source_location": "L127"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_05_27_sep",
@@ -27044,7 +27176,7 @@
       "node_kind": "heading",
       "norm_label": "state at 06:05 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L110"
+      "source_location": "L117"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_55_27_sep",
@@ -27056,7 +27188,7 @@
       "node_kind": "heading",
       "norm_label": "state at 06:55 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L101"
+      "source_location": "L108"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_07_45_27_sep",
@@ -27068,7 +27200,7 @@
       "node_kind": "heading",
       "norm_label": "state at 07:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L91"
+      "source_location": "L98"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_08_45_27_sep",
@@ -27080,7 +27212,7 @@
       "node_kind": "heading",
       "norm_label": "state at 08:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L81"
+      "source_location": "L88"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_10_00_27_sep",
@@ -27092,7 +27224,7 @@
       "node_kind": "heading",
       "norm_label": "state at 10:00 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L69"
+      "source_location": "L76"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_11_10_27_sep",
@@ -27104,7 +27236,7 @@
       "node_kind": "heading",
       "norm_label": "state at 11:10 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L59"
+      "source_location": "L66"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_40_27_sep",
@@ -27116,7 +27248,7 @@
       "node_kind": "heading",
       "norm_label": "state at 12:40 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L46"
+      "source_location": "L53"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_50_27_sep",
@@ -27128,7 +27260,7 @@
       "node_kind": "heading",
       "norm_label": "state at 12:50 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L23"
+      "source_location": "L30"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep",
@@ -27140,17 +27272,29 @@
       "node_kind": "heading",
       "norm_label": "state at 13:20 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L13"
+      "source_location": "L20"
     },
     {
-      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
-      "label": "State at 14:05 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)",
+      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep",
+      "label": "State at 14:05 (27 Sep)",
       "_origin": "ast",
       "community": 353,
       "community_name": "C2 6-layer routing completion \u2014 resume note (keep this file current)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "state at 14:05 (27 sep) - supersedes the older state notes below (the plan below still applies)",
+      "norm_label": "state at 14:05 (27 sep)",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_15_30_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
+      "label": "State at 15:30 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)",
+      "_origin": "ast",
+      "community": 353,
+      "community_name": "C2 6-layer routing completion \u2014 resume note (keep this file current)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "state at 15:30 (27 sep) - supersedes the older state notes below (the plan below still applies)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
       "source_location": "L6"
     },
@@ -27164,7 +27308,7 @@
       "node_kind": "heading",
       "norm_label": "state at 19:55 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L208"
+      "source_location": "L215"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_21_50_26_sep",
@@ -27176,7 +27320,7 @@
       "node_kind": "heading",
       "norm_label": "state at 21:50 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L200"
+      "source_location": "L207"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_22_10_26_sep",
@@ -27188,7 +27332,7 @@
       "node_kind": "heading",
       "norm_label": "state at 22:10 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L192"
+      "source_location": "L199"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_23_05_26_sep",
@@ -27200,7 +27344,7 @@
       "node_kind": "heading",
       "norm_label": "state at 23:05 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L182"
+      "source_location": "L189"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_update_04_35_27_sep",
@@ -27212,7 +27356,7 @@
       "node_kind": "heading",
       "norm_label": "update 04:35 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L141"
+      "source_location": "L148"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_g6g_171149",
@@ -29589,28 +29733,6 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_review_window",
-      "label": "review_window.py",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "review_window.py",
-      "source_file": "gui/review_window.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_analyze_capture",
-      "label": "analyze_capture.py",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "code",
-      "norm_label": "analyze_capture.py",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L1"
-    },
-    {
       "id": "tests_test_dsp_analytics",
       "label": "test_dsp_analytics.py",
       "_origin": "ast",
@@ -29710,17 +29832,6 @@
       "source_location": "L265"
     },
     {
-      "id": "dsp_dsp_rationale_63",
-      "label": "Analyse one RAW (un-notched, absolute-volt) single-channel window; return\u2026",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "rationale",
-      "norm_label": "analyse one raw (un-notched, absolute-volt) single-channel window; return...",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L63"
-    },
-    {
       "id": "gui_emg_plotter_rationale_656",
       "label": "EMG median frequency (Hz), 20-450 Hz band \u2014 delegates to the canonical\u2026",
       "_origin": "ast",
@@ -29730,17 +29841,6 @@
       "norm_label": "emg median frequency (hz), 20-450 hz band \u2014 delegates to the canonical...",
       "source_file": "gui/emg_plotter.py",
       "source_location": "L656"
-    },
-    {
-      "id": "gui_review_window_rationale_1",
-      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "dsp.py",
-      "file_type": "rationale",
-      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
-      "source_file": "gui/review_window.py",
-      "source_location": "L1"
     },
     {
       "id": "tests_test_dsp_analytics_rationale_1",
@@ -42462,88 +42562,22 @@
       "source_location": "L10"
     },
     {
-      "id": "dsp_pipeline",
-      "label": "pipeline.py",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "code",
-      "norm_label": "pipeline.py",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L1"
-    },
-    {
       "id": "gui_processing_dialog",
       "label": "processing_dialog.py",
       "_origin": "ast",
       "community": 502,
-      "community_name": "pipeline.py",
+      "community_name": "ProcessingDialog",
       "file_type": "code",
       "norm_label": "processing_dialog.py",
       "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
-      "id": "dsp_pipeline_rationale_1",
-      "label": "Offline signal-processing pipeline (Noraxon MR 'Signal Processing' menu). A\u2026",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "rationale",
-      "norm_label": "offline signal-processing pipeline (noraxon mr 'signal processing' menu). a...",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "dsp_pipeline_rationale_33",
-      "label": "RMS smoothing (linear envelope) over smooth_ms.",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "rationale",
-      "norm_label": "rms smoothing (linear envelope) over smooth_ms.",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L33"
-    },
-    {
-      "id": "dsp_pipeline_rationale_39",
-      "label": "Mean-absolute smoothing: moving average of the rectified signal over smooth_ms.",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "rationale",
-      "norm_label": "mean-absolute smoothing: moving average of the rectified signal over smooth_ms.",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L39"
-    },
-    {
-      "id": "dsp_pipeline_rationale_48",
-      "label": "Normalize to the set MVC reference (V). Falls back to the signal's own peak.",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "rationale",
-      "norm_label": "normalize to the set mvc reference (v). falls back to the signal's own peak.",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L48"
-    },
-    {
-      "id": "dsp_pipeline_rationale_64",
-      "label": "Normalize to an externally-computed per-channel reference ``ctx['norm_ref']``\u2026",
-      "_origin": "ast",
-      "community": 502,
-      "community_name": "pipeline.py",
-      "file_type": "rationale",
-      "norm_label": "normalize to an externally-computed per-channel reference ``ctx['norm_ref']``...",
-      "source_file": "dsp/pipeline.py",
-      "source_location": "L64"
-    },
-    {
       "id": "gui_processing_dialog_rationale_1",
       "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
       "_origin": "ast",
       "community": 502,
-      "community_name": "pipeline.py",
+      "community_name": "ProcessingDialog",
       "file_type": "rationale",
       "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
       "source_file": "gui/processing_dialog.py",
@@ -42616,26 +42650,224 @@
       "source_location": "L6"
     },
     {
-      "id": "gui_channel_panel_rationale_14",
-      "label": "Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "label": "msk_161919.pas",
       "_origin": "ast",
       "community": 506,
-      "community_name": "ChannelPanel",
-      "file_type": "rationale",
-      "norm_label": "encapsulates channel cards with muscle name, rms/pk-pk labels, progress bars,...",
-      "source_file": "gui/channel_panel.py",
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "msk_161919.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "label": "CloseTo()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "closeto()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L24"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fail",
+      "label": "Fail()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "fail()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
       "source_location": "L14"
     },
     {
-      "id": "gui_channel_panel_rationale_99",
-      "label": "Set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findcomp",
+      "label": "FindComp()",
       "_origin": "ast",
       "community": 506,
-      "community_name": "ChannelPanel",
-      "file_type": "rationale",
-      "norm_label": "set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
-      "source_file": "gui/channel_panel.py",
-      "source_location": "L99"
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findcomp()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L32"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findfreepad",
+      "label": "FindFreePad()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findfreepad()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L64"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findkeepout",
+      "label": "FindKeepout()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findkeepout()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L74"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findpoly",
+      "label": "FindPoly()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findpoly()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L93"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findrule",
+      "label": "FindRule()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findrule()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L85"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findtrack",
+      "label": "FindTrack()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findtrack()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L40"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findvia",
+      "label": "FindVia()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "findvia()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L54"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fld",
+      "label": "Fld()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "fld()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L16"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_layerof",
+      "label": "LayerOf()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "layerof()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L25"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_mm",
+      "label": "MM()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "mm()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L15"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_num",
+      "label": "Num()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "num()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L23"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_opn",
+      "label": "OpN()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "opn()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L113"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_queue",
+      "label": "Queue()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "queue()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L116"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L124"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L13"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setpolyseg",
+      "label": "SetPolySeg()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "setpolyseg()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L109"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setseg",
+      "label": "SetSeg()",
+      "_origin": "ast",
+      "community": 506,
+      "community_name": "msk_161919.pas",
+      "file_type": "code",
+      "norm_label": "setseg()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L101"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_gar_125439",
@@ -43199,6 +43431,457 @@
       "source_location": "L6"
     },
     {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "label": "pinswap_T.pas",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "pinswap_t.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findcomp",
+      "label": "FindComp()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "findcomp()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L53"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findnet",
+      "label": "FindNet()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "findnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L62"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_mi",
+      "label": "Mi()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "mi()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L12"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_padnet",
+      "label": "PadNet()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "padnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L69"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L108"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L11"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "label": "SwapPads()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "swappads()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L77"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swapschematic",
+      "label": "SwapSchematic()",
+      "_origin": "ast",
+      "community": 514,
+      "community_name": "pinswap_T.pas",
+      "file_type": "code",
+      "norm_label": "swapschematic()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L14"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "label": "psw_161601.pas",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "psw_161601.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findcomp",
+      "label": "FindComp()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "findcomp()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L53"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findnet",
+      "label": "FindNet()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "findnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L62"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_mi",
+      "label": "Mi()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "mi()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L12"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_padnet",
+      "label": "PadNet()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "padnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L69"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L108"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L11"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "label": "SwapPads()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "swappads()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L77"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swapschematic",
+      "label": "SwapSchematic()",
+      "_origin": "ast",
+      "community": 515,
+      "community_name": "psw_161601.pas",
+      "file_type": "code",
+      "norm_label": "swapschematic()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L14"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "label": "psw_161614.pas",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "psw_161614.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findcomp",
+      "label": "FindComp()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "findcomp()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L53"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findnet",
+      "label": "FindNet()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "findnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L62"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_mi",
+      "label": "Mi()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "mi()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L12"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_padnet",
+      "label": "PadNet()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "padnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L69"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L108"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L11"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "label": "SwapPads()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "swappads()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L77"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swapschematic",
+      "label": "SwapSchematic()",
+      "_origin": "ast",
+      "community": 516,
+      "community_name": "psw_161614.pas",
+      "file_type": "code",
+      "norm_label": "swapschematic()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L14"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651",
+      "label": "gaw_161651.pas",
+      "_origin": "ast",
+      "community": 517,
+      "community_name": "gaw_161651.pas",
+      "file_type": "code",
+      "norm_label": "gaw_161651.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_mm",
+      "label": "MM()",
+      "_origin": "ast",
+      "community": 517,
+      "community_name": "gaw_161651.pas",
+      "file_type": "code",
+      "norm_label": "mm()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_netof",
+      "label": "NetOf()",
+      "_origin": "ast",
+      "community": 517,
+      "community_name": "gaw_161651.pas",
+      "file_type": "code",
+      "norm_label": "netof()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L5"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_rects",
+      "label": "RectS()",
+      "_origin": "ast",
+      "community": 517,
+      "community_name": "gaw_161651.pas",
+      "file_type": "code",
+      "norm_label": "rects()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L7"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 517,
+      "community_name": "gaw_161651.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L10"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gax_161919",
+      "label": "gax_161919.pas",
+      "_origin": "ast",
+      "community": 518,
+      "community_name": "gax_161919.pas",
+      "file_type": "code",
+      "norm_label": "gax_161919.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_mm",
+      "label": "MM()",
+      "_origin": "ast",
+      "community": 518,
+      "community_name": "gax_161919.pas",
+      "file_type": "code",
+      "norm_label": "mm()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_netof",
+      "label": "NetOf()",
+      "_origin": "ast",
+      "community": 518,
+      "community_name": "gax_161919.pas",
+      "file_type": "code",
+      "norm_label": "netof()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L5"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_rects",
+      "label": "RectS()",
+      "_origin": "ast",
+      "community": 518,
+      "community_name": "gax_161919.pas",
+      "file_type": "code",
+      "norm_label": "rects()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L7"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 518,
+      "community_name": "gax_161919.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L10"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t",
+      "label": "sch_dump_T.pas",
+      "_origin": "ast",
+      "community": 519,
+      "community_name": "sch_dump_T.pas",
+      "file_type": "code",
+      "norm_label": "sch_dump_t.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_mi",
+      "label": "Mi()",
+      "_origin": "ast",
+      "community": 519,
+      "community_name": "sch_dump_T.pas",
+      "file_type": "code",
+      "norm_label": "mi()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L9"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 519,
+      "community_name": "sch_dump_T.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L11"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 519,
+      "community_name": "sch_dump_T.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L8"
+    },
+    {
       "id": "scripts_emg_map_server",
       "label": "emg_map_server.py",
       "_origin": "ast",
@@ -43219,6 +43902,116 @@
       "norm_label": "simplehttprequesthandler",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058",
+      "label": "sdm_155058.pas",
+      "_origin": "ast",
+      "community": 520,
+      "community_name": "sdm_155058.pas",
+      "file_type": "code",
+      "norm_label": "sdm_155058.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_mi",
+      "label": "Mi()",
+      "_origin": "ast",
+      "community": 520,
+      "community_name": "sdm_155058.pas",
+      "file_type": "code",
+      "norm_label": "mi()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L9"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 520,
+      "community_name": "sdm_155058.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L11"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 520,
+      "community_name": "sdm_155058.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L8"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_daw_161722",
+      "label": "daw_161722.pas",
+      "_origin": "ast",
+      "community": 521,
+      "community_name": "daw_161722.pas",
+      "file_type": "code",
+      "norm_label": "daw_161722.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/daw_161722.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_daw_161722_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 521,
+      "community_name": "daw_161722.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/daw_161722.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_dax_161919",
+      "label": "dax_161919.pas",
+      "_origin": "ast",
+      "community": 522,
+      "community_name": "dax_161919.pas",
+      "file_type": "code",
+      "norm_label": "dax_161919.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dax_161919.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_dax_161919_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 522,
+      "community_name": "dax_161919.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dax_161919.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opx2_161601",
+      "label": "opx2_161601.pas",
+      "_origin": "ast",
+      "community": 523,
+      "community_name": "opx2_161601.pas",
+      "file_type": "code",
+      "norm_label": "opx2_161601.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opx2_161601.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opx2_161601_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 523,
+      "community_name": "opx2_161601.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opx2_161601.pas",
+      "source_location": "L6"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_sx_233624",
@@ -77764,6 +78557,102 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_rects",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_netof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_rects",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_rects",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_netof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_rects",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_gd_110815_rects",
       "target": "hardware_compact_mainboard_20260925t115919z_work_gd_110815_mm",
       "relation": "calls",
@@ -81640,6 +82529,282 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fail",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findfreepad",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findkeepout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findtrack",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_layerof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findtrack",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findvia",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_num",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fail",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findtrack",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_num",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_opn",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_queue",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findvia",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findkeepout",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findrule",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findpoly",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findfreepad",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setseg",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setpolyseg",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_mtp_095144_fail",
       "target": "hardware_compact_mainboard_20260925t115919z_work_mtp_095144_say",
       "relation": "calls",
@@ -85096,6 +86261,138 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swapschematic",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_mi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_place_part_local",
       "target": "hardware_compact_mainboard_20260925t115919z_work_place_part_body_abs",
       "relation": "calls",
@@ -87313,6 +88610,270 @@
       "context": "call",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pry_033832.pas",
       "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swapschematic",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_mi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swapschematic",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findcomp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_padnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_mi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swapschematic",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -92797,6 +94358,54 @@
       "context": "call",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sc_234902.pas",
       "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_mi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_mi",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -110672,7 +112281,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L101",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -110683,7 +112292,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L110",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -110694,12 +112303,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L120",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
       "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -110716,7 +112325,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L130",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -110727,7 +112336,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L141",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -110738,7 +112347,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L155",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -110749,7 +112358,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L164",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -110760,7 +112369,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L173",
+      "source_location": "L180",
       "weight": 1.0
     },
     {
@@ -110771,7 +112380,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L182",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -110782,7 +112391,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L192",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -110793,7 +112413,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L200",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -110804,7 +112424,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L208",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -110815,7 +112435,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L220",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -110826,7 +112446,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L229",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -110837,7 +112457,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L23",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -110848,7 +112468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L31",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -110859,23 +112479,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L46",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
       "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_11_10_27_sep",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L59",
-      "weight": 1.0
-    },
-    {
-      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_15_30_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -110886,13 +112495,24 @@
     },
     {
       "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_11_10_27_sep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
       "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_10_00_27_sep",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L69",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -110903,7 +112523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L81",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -110914,7 +112534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L91",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -121819,6 +123439,28 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_daw_161722",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_daw_161722_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/daw_161722.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_dax_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_dax_161919_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dax_161919.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_db_212322",
       "target": "hardware_compact_mainboard_20260925t115919z_work_db_212322_opn",
       "relation": "contains",
@@ -125471,6 +127113,94 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_netof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_mm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gaw_161651_rects",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gaw_161651.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_netof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_mm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gax_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gax_161919_rects",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gax_161919.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_gd_110815",
       "target": "hardware_compact_mainboard_20260925t115919z_work_gd_110815_runfixed",
       "relation": "contains",
@@ -128529,6 +130259,215 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setseg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_setpolyseg",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_opn",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_queue",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_mm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_fld",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_num",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_closeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_layerof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findcomp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findtrack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findvia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findfreepad",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findkeepout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findrule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_msk_161919",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_msk_161919_findpoly",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/msk_161919.pas",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_mtp_095144",
       "target": "hardware_compact_mainboard_20260925t115919z_work_mtp_095144_setseg",
       "relation": "contains",
@@ -129416,6 +131355,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opw_151609.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_opx2_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_opx2_161601_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opx2_161601.pas",
       "source_location": "L6",
       "weight": 1.0
     },
@@ -130927,6 +132877,94 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_mi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swapschematic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findcomp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_findnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_padnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_pinswap_t_swappads",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pinswap_T.pas",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_place_part",
       "target": "hardware_compact_mainboard_20260925t115919z_work_place_part_gone",
       "relation": "contains",
@@ -132365,6 +134403,182 @@
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/pry_033832.pas",
       "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_mi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swapschematic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findcomp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_findnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_padnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161601",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161601_swappads",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161601.pas",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_mi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swapschematic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findcomp",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_findnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_padnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_psw_161614",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_psw_161614_swappads",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/psw_161614.pas",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -135698,6 +137912,72 @@
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sc_234902.pas",
       "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sch_dump_t_mi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sch_dump_T.pas",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_sdm_155058_mi",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/sdm_155058.pas",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -153141,5 +155421,5 @@
       "source_file": ".claude/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "f1d564ca35d1d64bf448da8ccbdecb378b0df914"
+  "built_at_commit": "ef917d84504e77432896611a1d3073699fe64f76"
 }

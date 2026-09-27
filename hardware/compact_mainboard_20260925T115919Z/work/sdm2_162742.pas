@@ -1,8 +1,8 @@
-// Read-only dump of MCU_sheet.SchDoc around U_MCU1 (template: @ROOT@ / @LOG@ substituted by mkvariant.py).
+// Read-only dump of MCU_sheet.SchDoc around U_MCU1 (template: C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\C2_COMPACT_4L_2SIDE\MainBoard\ / C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\evidence\SCH_DUMP_MCU2.txt substituted by mkvariant.py).
 // Lists every U_MCU1 pin (designator, name, connection point), and every net label, wire, no-ERC marker and power port
 // with its location (mils), so a pin swap can be planned exactly.  Nothing is modified or saved.
-Const Root='@ROOT@';
-Const OutFile='@LOG@';
+Const Root='C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\C2_COMPACT_4L_2SIDE\MainBoard\';
+Const OutFile='C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\evidence\SCH_DUMP_MCU2.txt';
 Var Log:TStringList;
 
 Procedure Say(S:String);Begin Log.Add(S);Log.SaveToFile(OutFile+'.part');End;
