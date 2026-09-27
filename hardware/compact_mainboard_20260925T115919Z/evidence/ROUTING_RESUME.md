@@ -3,7 +3,14 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 13:20 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+## State at 14:05 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+- User (14:0x): "yes restart and relocate C_BAT, edge is closed" -> routing restarts approved.
+- C2 = state AU, committed f1d564c (pushed): C_BAT -> (14.25,44.20,90), R_EN1_BIAS -> (12.95,42.25,0); UP1 pins 6/7
+  escapes hand-routed (evidence/UP1_ESCAPE_PLAN.csv, deliberately NOT in run_repair.PLANS so it stays fixed copper).
+  21 unrouted = 17 real + 4 opened by the move (VBAT_CELL x2, C_BAT GND, R_EN1_BIAS VSYS).
+- Running: REP_AS on AU (regions ch4, U1-right, VOUT_2, ADC_EMG5 + 2 passes), log tmp/rep_as.log.
+
+## State at 13:20 (27 Sep)
 - REP_AR was KILLED by the system for low memory (2nd time) - it had no gains yet (UP1 + ch4 regions rejected).
   Harness rule: do not restart killed jobs without the user's go-ahead -> asked the user. Edge uses ~0.6 GB; the user can
   also start Claude Code with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1.

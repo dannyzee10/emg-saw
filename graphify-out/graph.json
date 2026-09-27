@@ -113,6 +113,32 @@
       "source_location": "L5"
     },
     {
+      "id": "gui_normalize_dialog_normalizedialog",
+      "label": "NormalizeDialog",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "normalizedialog",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog",
+      "label": "ProcessingDialog",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "processingdialog",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L12"
+    },
+    {
       "id": "gui_review_window_reviewwindow",
       "label": "ReviewWindow",
       "_callable": true,
@@ -139,6 +165,32 @@
       "source_location": "L144"
     },
     {
+      "id": "dsp_dsp_emgfilters",
+      "label": "EmgFilters",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "emgfilters",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_test_dsp_testemgfilters",
+      "label": "TestEmgFilters",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "testemgfilters",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L25"
+    },
+    {
       "id": "communication_sources_asciisource",
       "label": "AsciiSource",
       "_callable": true,
@@ -152,6 +204,19 @@
       "source_location": "L122"
     },
     {
+      "id": "communication_sources_bufferedsource",
+      "label": "_BufferedSource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "_bufferedsource",
+      "source_file": "communication/sources.py",
+      "source_location": "L46"
+    },
+    {
       "id": "communication_sources_serialsource",
       "label": "SerialSource",
       "_callable": true,
@@ -163,6 +228,19 @@
       "norm_label": "serialsource",
       "source_file": "communication/sources.py",
       "source_location": "L87"
+    },
+    {
+      "id": "communication_sources_simsource",
+      "label": "SimSource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "simsource",
+      "source_file": "communication/sources.py",
+      "source_location": "L168"
     },
     {
       "id": "gui_controller_maincontroller",
@@ -256,17 +334,17 @@
       "source_location": "L241"
     },
     {
-      "id": "communication_sources_simsource",
-      "label": "SimSource",
+      "id": "gui_mvc_dialog_saverecordingdialog",
+      "label": "SaveRecordingDialog",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
+      "community": 40,
+      "community_name": "MvcDialog",
       "file_type": "code",
-      "norm_label": "simsource",
-      "source_file": "communication/sources.py",
-      "source_location": "L168"
+      "norm_label": "saverecordingdialog",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L295"
     },
     {
       "id": "gui_amp_norm_dialog_ampnormdialog",
@@ -275,88 +353,10 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "ampnormdialog",
       "source_file": "gui/amp_norm_dialog.py",
-      "source_location": "L12"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog",
-      "label": "SaveRecordingDialog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "saverecordingdialog",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L295"
-    },
-    {
-      "id": "dsp_dsp_emgfilters",
-      "label": "EmgFilters",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": "emgfilters",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L16"
-    },
-    {
-      "id": "tests_test_dsp_testemgfilters",
-      "label": "TestEmgFilters",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": "testemgfilters",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L25"
-    },
-    {
-      "id": "communication_sources_bufferedsource",
-      "label": "_BufferedSource",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "_bufferedsource",
-      "source_file": "communication/sources.py",
-      "source_location": "L46"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog",
-      "label": "NormalizeDialog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": "normalizedialog",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L11"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog",
-      "label": "ProcessingDialog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "processingdialog",
-      "source_file": "gui/processing_dialog.py",
       "source_location": "L12"
     },
     {
@@ -366,7 +366,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "code",
       "norm_label": "channelpanel",
       "source_file": "gui/channel_panel.py",
@@ -633,6 +633,18 @@
       "source_location": "L1325"
     },
     {
+      "id": "gui_emg_plotter_emgscope_finalize_recording_name",
+      "label": "._finalize_recording_name()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._finalize_recording_name()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1286"
+    },
+    {
       "id": "gui_emg_plotter_emgscope_flash_banner",
       "label": "._flash_banner()",
       "_callable": true,
@@ -669,6 +681,18 @@
       "source_location": "L569"
     },
     {
+      "id": "gui_emg_plotter_emgscope_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L108"
+    },
+    {
       "id": "gui_emg_plotter_emgscope_keypressevent",
       "label": ".keyPressEvent()",
       "_callable": true,
@@ -691,18 +715,6 @@
       "norm_label": "._make_ticks()",
       "source_file": "gui/emg_plotter.py",
       "source_location": "L639"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_median_freq",
-      "label": "._median_freq()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "EmgScope",
-      "file_type": "code",
-      "norm_label": "._median_freq()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L655"
     },
     {
       "id": "gui_emg_plotter_emgscope_mvc_view_on",
@@ -813,6 +825,30 @@
       "source_location": "L599"
     },
     {
+      "id": "gui_emg_plotter_emgscope_on_pause",
+      "label": "._on_pause()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._on_pause()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L602"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_on_record",
+      "label": "._on_record()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._on_record()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1231"
+    },
+    {
       "id": "gui_emg_plotter_emgscope_on_show_raw",
       "label": "._on_show_raw()",
       "_callable": true,
@@ -921,6 +957,30 @@
       "source_location": "L774"
     },
     {
+      "id": "gui_emg_plotter_emgscope_open_review",
+      "label": "._open_review()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._open_review()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1272"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_open_review_dialog",
+      "label": "._open_review_dialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._open_review_dialog()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1280"
+    },
+    {
       "id": "gui_emg_plotter_emgscope_process",
       "label": "._process()",
       "_callable": true,
@@ -933,16 +993,40 @@
       "source_location": "L1039"
     },
     {
-      "id": "gui_emg_plotter_emgscope_report",
-      "label": "._report()",
+      "id": "gui_emg_plotter_emgscope_prompt_save_recording",
+      "label": "._prompt_save_recording()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "EmgScope",
       "file_type": "code",
-      "norm_label": "._report()",
+      "norm_label": "._prompt_save_recording()",
       "source_file": "gui/emg_plotter.py",
-      "source_location": "L902"
+      "source_location": "L1246"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_recording_summary",
+      "label": "._recording_summary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._recording_summary()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1301"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_save_mvc_record",
+      "label": "._save_mvc_record()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._save_mvc_record()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L685"
     },
     {
       "id": "gui_emg_plotter_emgscope_scroll_redraw",
@@ -967,6 +1051,18 @@
       "norm_label": "._set_muscle()",
       "source_file": "gui/emg_plotter.py",
       "source_location": "L497"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_set_mvc",
+      "label": "._set_mvc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._set_mvc()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L660"
     },
     {
       "id": "gui_emg_plotter_emgscope_smooth",
@@ -1005,6 +1101,18 @@
       "source_location": "L1112"
     },
     {
+      "id": "gui_emg_plotter_emgscope_tick_clock",
+      "label": "._tick_clock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._tick_clock()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L560"
+    },
+    {
       "id": "gui_emg_plotter_emgscope_update",
       "label": "._update()",
       "_callable": true,
@@ -1015,6 +1123,18 @@
       "norm_label": "._update()",
       "source_file": "gui/emg_plotter.py",
       "source_location": "L1069"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_update_rec_hint",
+      "label": "._update_rec_hint()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "code",
+      "norm_label": "._update_rec_hint()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L613"
     },
     {
       "id": "gui_emg_plotter_emgscope_update_status",
@@ -1641,6 +1761,198 @@
       "source_location": "L18"
     },
     {
+      "id": "gui_normalize_dialog_normalizedialog_amp_range",
+      "label": ".amp_range()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".amp_range()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_browse",
+      "label": "._browse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._browse()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L84"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_manual_mv",
+      "label": ".manual_mv()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".manual_mv()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L94"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_mode",
+      "label": ".mode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".mode()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L91"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_other_path",
+      "label": ".other_path()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".other_path()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L100"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_sync_enabled",
+      "label": "._sync_enabled()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._sync_enabled()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L78"
+    },
+    {
+      "id": "gui_normalize_dialog_normalizedialog_use_window",
+      "label": ".use_window()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".use_window()",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L103"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_add_selected",
+      "label": "._add_selected()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._add_selected()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L89"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_channels",
+      "label": ".channels()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".channels()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L128"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_insert",
+      "label": "._insert()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._insert()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L96"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_move",
+      "label": "._move()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._move()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_remove",
+      "label": "._remove()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._remove()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_remove_all",
+      "label": "._remove_all()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "._remove_all()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "gui_processing_dialog_processingdialog_selected_keys",
+      "label": ".selected_keys()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": ".selected_keys()",
+      "source_file": "gui/processing_dialog.py",
+      "source_location": "L125"
+    },
+    {
       "id": "gui_review_window_reviewwindow_apply_normalize",
       "label": "._apply_normalize()",
       "_callable": true,
@@ -2013,18 +2325,6 @@
       "source_location": "L33"
     },
     {
-      "id": "dsp_dsp_leadoff_report",
-      "label": "leadoff_report()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "code",
-      "norm_label": "leadoff_report()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L60"
-    },
-    {
       "id": "dsp_dsp_leadoff_status",
       "label": "leadoff_status()",
       "_callable": true,
@@ -2059,42 +2359,6 @@
       "norm_label": ".update()",
       "source_file": "dsp/dsp.py",
       "source_location": "L160"
-    },
-    {
-      "id": "scripts_analyze_capture_load",
-      "label": "load()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "code",
-      "norm_label": "load()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L21"
-    },
-    {
-      "id": "scripts_analyze_capture_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L50"
-    },
-    {
-      "id": "scripts_analyze_capture_median_freq",
-      "label": "median_freq()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "code",
-      "norm_label": "median_freq()",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L40"
     },
     {
       "id": "tests_test_leadoff_emg_band_signal",
@@ -2277,12 +2541,72 @@
       "source_location": "L104"
     },
     {
+      "id": "dsp_dsp_emgfilters_apply_notch",
+      "label": ".apply_notch()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".apply_notch()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "dsp_dsp_emgfilters_bandpass",
+      "label": ".bandpass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".bandpass()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "dsp_dsp_emgfilters_design",
+      "label": "._design()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "._design()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "dsp_dsp_emgfilters_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "dsp_dsp_emgfilters_rms_envelope",
+      "label": ".rms_envelope()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".rms_envelope()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L46"
+    },
+    {
       "id": "dsp_pipeline_apply_pipeline",
       "label": "apply_pipeline()",
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "apply_pipeline()",
       "source_file": "dsp/pipeline.py",
@@ -2294,7 +2618,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "compute_reference()",
       "source_file": "dsp/pipeline.py",
@@ -2306,7 +2630,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "peak_index()",
       "source_file": "dsp/pipeline.py",
@@ -2318,11 +2642,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "pipeline_unit()",
       "source_file": "dsp/pipeline.py",
       "source_location": "L135"
+    },
+    {
+      "id": "tests_test_dsp_testemgfilters_setup",
+      "label": ".setUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".setup()",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "tests_test_dsp_testemgfilters_test_multichannel_rms_envelope",
+      "label": ".test_multichannel_rms_envelope()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".test_multichannel_rms_envelope()",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "tests_test_dsp_testemgfilters_test_notch_50hz_attenuation",
+      "label": ".test_notch_50hz_attenuation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".test_notch_50hz_attenuation()",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "tests_test_dsp_testemgfilters_test_rms_envelope_amplitude",
+      "label": ".test_rms_envelope_amplitude()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": ".test_rms_envelope_amplitude()",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L47"
     },
     {
       "id": "tests_test_pipeline_ctx",
@@ -2330,7 +2702,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "_ctx()",
       "source_file": "tests/test_pipeline.py",
@@ -2342,7 +2714,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_compute_reference_modes_and_window()",
       "source_file": "tests/test_pipeline.py",
@@ -2354,7 +2726,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_norm_mvc_maps_reference_to_100pct()",
       "source_file": "tests/test_pipeline.py",
@@ -2366,7 +2738,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_norm_peak_tops_at_100pct()",
       "source_file": "tests/test_pipeline.py",
@@ -2378,7 +2750,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_op_normalize_uses_reference()",
       "source_file": "tests/test_pipeline.py",
@@ -2390,7 +2762,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_pipeline_unit_switches_on_normalization()",
       "source_file": "tests/test_pipeline.py",
@@ -2402,7 +2774,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_presets_reference_real_ops()",
       "source_file": "tests/test_pipeline.py",
@@ -2414,7 +2786,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_rectify_is_nonnegative()",
       "source_file": "tests/test_pipeline.py",
@@ -2426,7 +2798,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_rms_smoothing_positive_and_smoother()",
       "source_file": "tests/test_pipeline.py",
@@ -2438,7 +2810,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_unknown_keys_skipped()",
       "source_file": "tests/test_pipeline.py",
@@ -3309,6 +3681,102 @@
       "source_location": "L125"
     },
     {
+      "id": "communication_sources_asciisource_run",
+      "label": "._run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._run()",
+      "source_file": "communication/sources.py",
+      "source_location": "L130"
+    },
+    {
+      "id": "communication_sources_bufferedsource_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "communication/sources.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "communication_sources_bufferedsource_push",
+      "label": "._push()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._push()",
+      "source_file": "communication/sources.py",
+      "source_location": "L79"
+    },
+    {
+      "id": "communication_sources_bufferedsource_read_new",
+      "label": ".read_new()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".read_new()",
+      "source_file": "communication/sources.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "communication_sources_bufferedsource_run",
+      "label": "._run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._run()",
+      "source_file": "communication/sources.py",
+      "source_location": "L83"
+    },
+    {
+      "id": "communication_sources_bufferedsource_start",
+      "label": ".start()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".start()",
+      "source_file": "communication/sources.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "communication_sources_bufferedsource_stop",
+      "label": ".stop()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": ".stop()",
+      "source_file": "communication/sources.py",
+      "source_location": "L65"
+    },
+    {
+      "id": "communication_sources_open_serial",
+      "label": "_open_serial()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "_open_serial()",
+      "source_file": "communication/sources.py",
+      "source_location": "L29"
+    },
+    {
       "id": "communication_sources_serialsource_init",
       "label": ".__init__()",
       "_callable": true,
@@ -3321,6 +3789,18 @@
       "source_location": "L88"
     },
     {
+      "id": "communication_sources_serialsource_run",
+      "label": "._run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._run()",
+      "source_file": "communication/sources.py",
+      "source_location": "L94"
+    },
+    {
       "id": "communication_sources_simsource_init",
       "label": ".__init__()",
       "_callable": true,
@@ -3331,6 +3811,18 @@
       "norm_label": ".__init__()",
       "source_file": "communication/sources.py",
       "source_location": "L173"
+    },
+    {
+      "id": "communication_sources_simsource_run",
+      "label": "._run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "._run()",
+      "source_file": "communication/sources.py",
+      "source_location": "L180"
     },
     {
       "id": "gui_controller_maincontroller_init",
@@ -4485,6 +4977,18 @@
       "source_location": "L175"
     },
     {
+      "id": "dsp_dsp_leadoff_report",
+      "label": "leadoff_report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "leadoff_report()",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L60"
+    },
+    {
       "id": "dsp_dsp_mean_frequency",
       "label": "mean_frequency()",
       "_callable": true,
@@ -4521,6 +5025,30 @@
       "source_location": "L232"
     },
     {
+      "id": "gui_emg_plotter_emgscope_median_freq",
+      "label": "._median_freq()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "._median_freq()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L655"
+    },
+    {
+      "id": "gui_emg_plotter_emgscope_report",
+      "label": "._report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "._report()",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L902"
+    },
+    {
       "id": "gui_review_window_median_freq",
       "label": "median_freq()",
       "_callable": true,
@@ -4543,6 +5071,42 @@
       "norm_label": "._report()",
       "source_file": "gui/review_window.py",
       "source_location": "L465"
+    },
+    {
+      "id": "scripts_analyze_capture_load",
+      "label": "load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "load()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "scripts_analyze_capture_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L50"
+    },
+    {
+      "id": "scripts_analyze_capture_median_freq",
+      "label": "median_freq()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "median_freq()",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L40"
     },
     {
       "id": "tests_test_dsp_analytics_test_cci_disjoint_is_0",
@@ -4761,30 +5325,6 @@
       "source_location": "L61"
     },
     {
-      "id": "gui_emg_plotter_emgscope_save_mvc_record",
-      "label": "._save_mvc_record()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "MvcDialog",
-      "file_type": "code",
-      "norm_label": "._save_mvc_record()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L685"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_set_mvc",
-      "label": "._set_mvc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "MvcDialog",
-      "file_type": "code",
-      "norm_label": "._set_mvc()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L660"
-    },
-    {
       "id": "gui_mvc_dialog_mvcdialog_buffer",
       "label": "._buffer()",
       "_callable": true,
@@ -4965,6 +5505,66 @@
       "source_location": "L300"
     },
     {
+      "id": "gui_mvc_dialog_saverecordingdialog_name",
+      "label": ".name()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": ".name()",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L350"
+    },
+    {
+      "id": "gui_mvc_dialog_saverecordingdialog_on_discard",
+      "label": "._on_discard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "._on_discard()",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L342"
+    },
+    {
+      "id": "gui_mvc_dialog_saverecordingdialog_on_view",
+      "label": "._on_view()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "._on_view()",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L346"
+    },
+    {
+      "id": "gui_mvc_dialog_saverecordingdialog_subject",
+      "label": ".subject()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": ".subject()",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L353"
+    },
+    {
+      "id": "gui_mvc_dialog_saverecordingdialog_trial",
+      "label": ".trial()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": ".trial()",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L356"
+    },
+    {
       "id": "gui_mvc_dialog_style",
       "label": "_style()",
       "_callable": true,
@@ -4975,6 +5575,54 @@
       "norm_label": "_style()",
       "source_file": "gui/mvc_dialog.py",
       "source_location": "L22"
+    },
+    {
+      "id": "tests_test_mvc_chunk",
+      "label": "_chunk()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "_chunk()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "tests_test_mvc_test_finalize_and_summarize_recording",
+      "label": "test_finalize_and_summarize_recording()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "test_finalize_and_summarize_recording()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L100"
+    },
+    {
+      "id": "tests_test_mvc_test_mvc_dialog_captures_hold_not_rest",
+      "label": "test_mvc_dialog_captures_hold_not_rest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "test_mvc_dialog_captures_hold_not_rest()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_test_mvc_test_mvc_peak_ge_best1s",
+      "label": "test_mvc_peak_ge_best1s()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "test_mvc_peak_ge_best1s()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L42"
     },
     {
       "id": "tests_test_mvc_test_mvc_save_dialog_defaults",
@@ -4989,16 +5637,28 @@
       "source_location": "L59"
     },
     {
-      "id": "communication_sources_simsource_run",
-      "label": "._run()",
+      "id": "tests_test_mvc_test_save_mvc_record_writes_stack",
+      "label": "test_save_mvc_record_writes_stack()",
       "_callable": true,
       "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
+      "community": 40,
+      "community_name": "MvcDialog",
       "file_type": "code",
-      "norm_label": "._run()",
-      "source_file": "communication/sources.py",
-      "source_location": "L180"
+      "norm_label": "test_save_mvc_record_writes_stack()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L69"
+    },
+    {
+      "id": "tests_test_mvc_test_save_recording_dialog_defaults",
+      "label": "test_save_recording_dialog_defaults()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "code",
+      "norm_label": "test_save_recording_dialog_defaults()",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L90"
     },
     {
       "id": "gui_amp_norm_dialog_ampnormdialog_algo",
@@ -5006,7 +5666,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": ".algo()",
       "source_file": "gui/amp_norm_dialog.py",
@@ -5018,7 +5678,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": ".amp()",
       "source_file": "gui/amp_norm_dialog.py",
@@ -5030,7 +5690,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "gui/amp_norm_dialog.py",
@@ -5042,7 +5702,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": ".window_ms()",
       "source_file": "gui/amp_norm_dialog.py",
@@ -5054,7 +5714,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "test_amp_norm_dialog_reports_config()",
       "source_file": "tests/test_gui_smoke.py",
@@ -5066,7 +5726,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "test_gui_builds_and_runs_5ch()",
       "source_file": "tests/test_gui_smoke.py",
@@ -5078,7 +5738,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "test_live_smoothing_algorithms_and_pipeline()",
       "source_file": "tests/test_gui_smoke.py",
@@ -5090,71 +5750,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "test_report_generates()",
       "source_file": "tests/test_gui_smoke.py",
       "source_location": "L124"
-    },
-    {
-      "id": "tests_test_mvc_chunk",
-      "label": "_chunk()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "_chunk()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L20"
-    },
-    {
-      "id": "tests_test_mvc_test_finalize_and_summarize_recording",
-      "label": "test_finalize_and_summarize_recording()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "test_finalize_and_summarize_recording()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L100"
-    },
-    {
-      "id": "tests_test_mvc_test_mvc_dialog_captures_hold_not_rest",
-      "label": "test_mvc_dialog_captures_hold_not_rest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "test_mvc_dialog_captures_hold_not_rest()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L25"
-    },
-    {
-      "id": "tests_test_mvc_test_mvc_peak_ge_best1s",
-      "label": "test_mvc_peak_ge_best1s()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "test_mvc_peak_ge_best1s()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L42"
-    },
-    {
-      "id": "tests_test_mvc_test_save_mvc_record_writes_stack",
-      "label": "test_save_mvc_record_writes_stack()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "test_save_mvc_record_writes_stack()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L69"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_plane_route_ana_mask",
@@ -5287,174 +5887,6 @@
       "norm_label": "note()",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/fab_check.py",
       "source_location": "L17"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_finalize_recording_name",
-      "label": "._finalize_recording_name()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._finalize_recording_name()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1286"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_on_pause",
-      "label": "._on_pause()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._on_pause()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L602"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_on_record",
-      "label": "._on_record()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._on_record()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1231"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_open_review",
-      "label": "._open_review()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._open_review()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1272"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_open_review_dialog",
-      "label": "._open_review_dialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._open_review_dialog()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1280"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_prompt_save_recording",
-      "label": "._prompt_save_recording()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._prompt_save_recording()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1246"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_recording_summary",
-      "label": "._recording_summary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._recording_summary()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1301"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_update_rec_hint",
-      "label": "._update_rec_hint()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._update_rec_hint()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L613"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog_name",
-      "label": ".name()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": ".name()",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L350"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog_on_discard",
-      "label": "._on_discard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._on_discard()",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L342"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog_on_view",
-      "label": "._on_view()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "._on_view()",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L346"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog_subject",
-      "label": ".subject()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": ".subject()",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L353"
-    },
-    {
-      "id": "gui_mvc_dialog_saverecordingdialog_trial",
-      "label": ".trial()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": ".trial()",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L356"
-    },
-    {
-      "id": "tests_test_mvc_test_save_recording_dialog_defaults",
-      "label": "test_save_recording_dialog_defaults()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "code",
-      "norm_label": "test_save_recording_dialog_defaults()",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L90"
     },
     {
       "id": "firmware_emg_bluepill_main_assert_failed",
@@ -5625,114 +6057,6 @@
       "source_location": "L169"
     },
     {
-      "id": "dsp_dsp_emgfilters_apply_notch",
-      "label": ".apply_notch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".apply_notch()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L40"
-    },
-    {
-      "id": "dsp_dsp_emgfilters_bandpass",
-      "label": ".bandpass()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".bandpass()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L35"
-    },
-    {
-      "id": "dsp_dsp_emgfilters_design",
-      "label": "._design()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": "._design()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L21"
-    },
-    {
-      "id": "dsp_dsp_emgfilters_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L17"
-    },
-    {
-      "id": "dsp_dsp_emgfilters_rms_envelope",
-      "label": ".rms_envelope()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".rms_envelope()",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L46"
-    },
-    {
-      "id": "tests_test_dsp_testemgfilters_setup",
-      "label": ".setUp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".setup()",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L26"
-    },
-    {
-      "id": "tests_test_dsp_testemgfilters_test_multichannel_rms_envelope",
-      "label": ".test_multichannel_rms_envelope()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".test_multichannel_rms_envelope()",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L62"
-    },
-    {
-      "id": "tests_test_dsp_testemgfilters_test_notch_50hz_attenuation",
-      "label": ".test_notch_50hz_attenuation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".test_notch_50hz_attenuation()",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L30"
-    },
-    {
-      "id": "tests_test_dsp_testemgfilters_test_rms_envelope_amplitude",
-      "label": ".test_rms_envelope_amplitude()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": ".test_rms_envelope_amplitude()",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L47"
-    },
-    {
       "id": "dsp_pipeline_ac",
       "label": "_ac()",
       "_callable": true,
@@ -5877,312 +6201,12 @@
       "source_location": "L32"
     },
     {
-      "id": "communication_sources_asciisource_run",
-      "label": "._run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "._run()",
-      "source_file": "communication/sources.py",
-      "source_location": "L130"
-    },
-    {
-      "id": "communication_sources_bufferedsource_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "communication/sources.py",
-      "source_location": "L49"
-    },
-    {
-      "id": "communication_sources_bufferedsource_push",
-      "label": "._push()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "._push()",
-      "source_file": "communication/sources.py",
-      "source_location": "L79"
-    },
-    {
-      "id": "communication_sources_bufferedsource_read_new",
-      "label": ".read_new()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": ".read_new()",
-      "source_file": "communication/sources.py",
-      "source_location": "L70"
-    },
-    {
-      "id": "communication_sources_bufferedsource_run",
-      "label": "._run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "._run()",
-      "source_file": "communication/sources.py",
-      "source_location": "L83"
-    },
-    {
-      "id": "communication_sources_bufferedsource_start",
-      "label": ".start()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": ".start()",
-      "source_file": "communication/sources.py",
-      "source_location": "L60"
-    },
-    {
-      "id": "communication_sources_bufferedsource_stop",
-      "label": ".stop()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": ".stop()",
-      "source_file": "communication/sources.py",
-      "source_location": "L65"
-    },
-    {
-      "id": "communication_sources_open_serial",
-      "label": "_open_serial()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "_open_serial()",
-      "source_file": "communication/sources.py",
-      "source_location": "L29"
-    },
-    {
-      "id": "communication_sources_serialsource_run",
-      "label": "._run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "._run()",
-      "source_file": "communication/sources.py",
-      "source_location": "L94"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_amp_range",
-      "label": ".amp_range()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".amp_range()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L106"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_browse",
-      "label": "._browse()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": "._browse()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L84"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L12"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_manual_mv",
-      "label": ".manual_mv()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".manual_mv()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L94"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_mode",
-      "label": ".mode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".mode()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L91"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_other_path",
-      "label": ".other_path()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".other_path()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L100"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_sync_enabled",
-      "label": "._sync_enabled()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": "._sync_enabled()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L78"
-    },
-    {
-      "id": "gui_normalize_dialog_normalizedialog_use_window",
-      "label": ".use_window()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": ".use_window()",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L103"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_add_selected",
-      "label": "._add_selected()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "._add_selected()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L89"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_channels",
-      "label": ".channels()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": ".channels()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L128"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L13"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_insert",
-      "label": "._insert()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "._insert()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L96"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_move",
-      "label": "._move()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "._move()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L115"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_remove",
-      "label": "._remove()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "._remove()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L101"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_remove_all",
-      "label": "._remove_all()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "._remove_all()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L106"
-    },
-    {
-      "id": "gui_processing_dialog_processingdialog_selected_keys",
-      "label": ".selected_keys()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": ".selected_keys()",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L125"
-    },
-    {
       "id": "gui_channel_panel_channelpanel_build_ui",
       "label": "._build_ui()",
       "_callable": true,
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "code",
       "norm_label": "._build_ui()",
       "source_file": "gui/channel_panel.py",
@@ -6194,7 +6218,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "gui/channel_panel.py",
@@ -6206,7 +6230,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "code",
       "norm_label": "._on_muscle_edit()",
       "source_file": "gui/channel_panel.py",
@@ -6218,35 +6242,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "code",
       "norm_label": ".set_status()",
       "source_file": "gui/channel_panel.py",
       "source_location": "L98"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 506,
-      "community_name": ".__init__",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L108"
-    },
-    {
-      "id": "gui_emg_plotter_emgscope_tick_clock",
-      "label": "._tick_clock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 506,
-      "community_name": ".__init__",
-      "file_type": "code",
-      "norm_label": "._tick_clock()",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L560"
     },
     {
       "id": "scripts_emg_map_server_handler_do_get",
@@ -8131,15 +8131,70 @@
       "source_location": "L1040"
     },
     {
-      "id": "gui_emg_plotter_rationale_656",
-      "label": "EMG median frequency (Hz), 20-450 Hz band \u2014 delegates to the canonical\u2026",
+      "id": "gui_emg_plotter_rationale_1247",
+      "label": "#9 Save Data step after a test recording: name it (Save & View / Save /\u2026",
       "_origin": "ast",
       "community": 0,
       "community_name": "EmgScope",
       "file_type": "rationale",
-      "norm_label": "emg median frequency (hz), 20-450 hz band \u2014 delegates to the canonical...",
+      "norm_label": "#9 save data step after a test recording: name it (save & view / save /...",
       "source_file": "gui/emg_plotter.py",
-      "source_location": "L656"
+      "source_location": "L1247"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_1273",
+      "label": "Open a saved recording in the View/Review window (playback + Operations +\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "rationale",
+      "norm_label": "open a saved recording in the view/review window (playback + operations +...",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1273"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_1287",
+      "label": "Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "rationale",
+      "norm_label": "rename the just-saved csv to include the user's name (keeps the emg_ prefix +...",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1287"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_1302",
+      "label": "Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off).",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "rationale",
+      "norm_label": "quick numeric 'view' of a saved recording (per-channel rms / pk-pk / lead-off).",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L1302"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_614",
+      "label": "Guide the Record -> Pause -> Stop activity with a contextual step hint.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "rationale",
+      "norm_label": "guide the record -> pause -> stop activity with a contextual step hint.",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L614"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_686",
+      "label": "Persist the current per-channel MVC to mvc_store.json (the reusable 'MVC\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "EmgScope",
+      "file_type": "rationale",
+      "norm_label": "persist the current per-channel mvc to mvc_store.json (the reusable 'mvc...",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L686"
     },
     {
       "id": "gui_emg_plotter_rationale_707",
@@ -11788,6 +11843,17 @@
       "source_location": "L1"
     },
     {
+      "id": "gui_normalize_dialog",
+      "label": "normalize_dialog.py",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "code",
+      "norm_label": "normalize_dialog.py",
+      "source_file": "gui/normalize_dialog.py",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_test_review",
       "label": "test_review.py",
       "_origin": "ast",
@@ -11796,6 +11862,17 @@
       "file_type": "code",
       "norm_label": "test_review.py",
       "source_file": "tests/test_review.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_normalize_dialog_rationale_1",
+      "label": "NormalizeDialog \u2014 Noraxon MR offline Amplitude Normalization config: choose the\u2026",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "ReviewWindow",
+      "file_type": "rationale",
+      "norm_label": "normalizedialog \u2014 noraxon mr offline amplitude normalization config: choose the...",
+      "source_file": "gui/normalize_dialog.py",
       "source_location": "L1"
     },
     {
@@ -12140,17 +12217,6 @@
       "source_location": "L63"
     },
     {
-      "id": "scripts_analyze_capture",
-      "label": "analyze_capture.py",
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "code",
-      "norm_label": "analyze_capture.py",
-      "source_file": "scripts/analyze_capture.py",
-      "source_location": "L1"
-    },
-    {
       "id": "tests_test_leadoff",
       "label": "test_leadoff.py",
       "_origin": "ast",
@@ -12184,17 +12250,6 @@
       "source_location": "L145"
     },
     {
-      "id": "dsp_dsp_rationale_63",
-      "label": "Analyse one RAW (un-notched, absolute-volt) single-channel window; return\u2026",
-      "_origin": "ast",
-      "community": 201,
-      "community_name": "test_leadoff.py",
-      "file_type": "rationale",
-      "norm_label": "analyse one raw (un-notched, absolute-volt) single-channel window; return...",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L63"
-    },
-    {
       "id": "tests_test_leadoff_rationale_1",
       "label": "HG3 unit tests for the PC-side electrode lead-off heuristic\u2026",
       "_origin": "ast",
@@ -12206,14 +12261,25 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_review_window",
-      "label": "review_window.py",
+      "id": "dsp_dsp_py_ndarray",
+      "label": "ndarray",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
-      "norm_label": "review_window.py",
-      "source_file": "gui/review_window.py",
+      "norm_label": "ndarray",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_test_dsp",
+      "label": "test_dsp.py",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "code",
+      "norm_label": "test_dsp.py",
+      "source_file": "tests/test_dsp.py",
       "source_location": "L1"
     },
     {
@@ -12221,18 +12287,29 @@
       "label": "test_pipeline.py",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "code",
       "norm_label": "test_pipeline.py",
       "source_file": "tests/test_pipeline.py",
       "source_location": "L1"
     },
     {
+      "id": "dsp_dsp_rationale_47",
+      "label": "Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window \u2014 the\u2026",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "moving-rms linear envelope, sqrt(mean(x^2)) over a `win_ms` window \u2014 the...",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L47"
+    },
+    {
       "id": "dsp_pipeline_rationale_127",
       "label": "Apply the ordered op keys to a 1-D signal; unknown keys are skipped.",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
       "norm_label": "apply the ordered op keys to a 1-d signal; unknown keys are skipped.",
       "source_file": "dsp/pipeline.py",
@@ -12243,7 +12320,7 @@
       "label": "Display unit after the pipeline: '%' if it ends in a normalization, else 'mV'.",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
       "norm_label": "display unit after the pipeline: '%' if it ends in a normalization, else 'mv'.",
       "source_file": "dsp/pipeline.py",
@@ -12254,7 +12331,7 @@
       "label": "Reference amplitude (=100 %) for offline normalization, from an RMS envelope\u2026",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
       "norm_label": "reference amplitude (=100 %) for offline normalization, from an rms envelope...",
       "source_file": "dsp/pipeline.py",
@@ -12265,29 +12342,62 @@
       "label": "Sample index of the envelope peak (within ``window`` if given) \u2014 for the green\u2026",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
       "norm_label": "sample index of the envelope peak (within ``window`` if given) \u2014 for the green...",
       "source_file": "dsp/pipeline.py",
       "source_location": "L91"
     },
     {
-      "id": "gui_review_window_rationale_1",
-      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
+      "id": "tests_test_dsp_rationale_1",
+      "label": "Unit tests for EmgFilters DSP functions. Validates: - Notch filter attenuation\u2026",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
-      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
-      "source_file": "gui/review_window.py",
+      "norm_label": "unit tests for emgfilters dsp functions. validates: - notch filter attenuation...",
+      "source_file": "tests/test_dsp.py",
       "source_location": "L1"
+    },
+    {
+      "id": "tests_test_dsp_rationale_31",
+      "label": "50 Hz sine should be attenuated by more than 20 dB.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "50 hz sine should be attenuated by more than 20 db.",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "tests_test_dsp_rationale_48",
+      "label": "RMS envelope of a 100 Hz sine (amplitude 1) should be ~0.707 V.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "rms envelope of a 100 hz sine (amplitude 1) should be ~0.707 v.",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "tests_test_dsp_rationale_63",
+      "label": "RMS envelope should preserve number of channels.",
+      "_origin": "ast",
+      "community": 202,
+      "community_name": "EmgFilters",
+      "file_type": "rationale",
+      "norm_label": "rms envelope should preserve number of channels.",
+      "source_file": "tests/test_dsp.py",
+      "source_location": "L63"
     },
     {
       "id": "tests_test_pipeline_rationale_1",
       "label": "Unit tests for the offline signal-processing pipeline (pure, no Qt).",
       "_origin": "ast",
       "community": 202,
-      "community_name": "test_pipeline.py",
+      "community_name": "EmgFilters",
       "file_type": "rationale",
       "norm_label": "unit tests for the offline signal-processing pipeline (pure, no qt).",
       "source_file": "tests/test_pipeline.py",
@@ -20240,6 +20350,17 @@
       "source_location": "L1"
     },
     {
+      "id": "communication_sources_py_ndarray",
+      "label": "ndarray",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "code",
+      "norm_label": "ndarray",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "emg_1ch",
       "label": "emg_1ch.py",
       "_origin": "ast",
@@ -20359,6 +20480,50 @@
       "norm_label": "fallback for a quick stm32 `printf(\"%d,%d\\\\n\", ...)` bring-up.",
       "source_file": "communication/sources.py",
       "source_location": "L123"
+    },
+    {
+      "id": "communication_sources_rationale_169",
+      "label": "Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise\u2026",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "synthetic semg: baseline noise + intermittent bursts (band-limited noise...",
+      "source_file": "communication/sources.py",
+      "source_location": "L169"
+    },
+    {
+      "id": "communication_sources_rationale_30",
+      "label": "Open the serial port exactly like a plain read that is known to work here. Open\u2026",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "open the serial port exactly like a plain read that is known to work here. open...",
+      "source_file": "communication/sources.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "communication_sources_rationale_47",
+      "label": "Common ring-collection + thread plumbing.",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "common ring-collection + thread plumbing.",
+      "source_file": "communication/sources.py",
+      "source_location": "L47"
+    },
+    {
+      "id": "communication_sources_rationale_71",
+      "label": "Return all sample-sets collected since the last call, shape (n, nch).",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "emg_plotter.py",
+      "file_type": "rationale",
+      "norm_label": "return all sample-sets collected since the last call, shape (n, nch).",
+      "source_file": "communication/sources.py",
+      "source_location": "L71"
     },
     {
       "id": "gui_channel_panel_rationale_1",
@@ -26783,7 +26948,7 @@
       "node_kind": "heading",
       "norm_label": "how to run things (work/)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L213"
+      "source_location": "L220"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_plan_agreed_with_the_user_13_xx_27_sep_do_in_this_order_after_the_current_round_is_written",
@@ -26795,7 +26960,7 @@
       "node_kind": "heading",
       "norm_label": "plan agreed with the user (13:xx 27 sep) - do in this order after the current round is written",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L24"
+      "source_location": "L31"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_remaining_after_routing",
@@ -26807,7 +26972,7 @@
       "node_kind": "heading",
       "norm_label": "remaining after routing",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L222"
+      "source_location": "L229"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_01_40_27_sep",
@@ -26819,7 +26984,7 @@
       "node_kind": "heading",
       "norm_label": "state at 01:40 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L166"
+      "source_location": "L173"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_02_55_27_sep",
@@ -26831,7 +26996,7 @@
       "node_kind": "heading",
       "norm_label": "state at 02:55 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L157"
+      "source_location": "L164"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_03_45_27_sep",
@@ -26843,7 +27008,7 @@
       "node_kind": "heading",
       "norm_label": "state at 03:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L148"
+      "source_location": "L155"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_05_10_27_sep",
@@ -26855,7 +27020,7 @@
       "node_kind": "heading",
       "norm_label": "state at 05:10 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L123"
+      "source_location": "L130"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_05_45_27_sep",
@@ -26867,7 +27032,7 @@
       "node_kind": "heading",
       "norm_label": "state at 05:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L113"
+      "source_location": "L120"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_05_27_sep",
@@ -26879,7 +27044,7 @@
       "node_kind": "heading",
       "norm_label": "state at 06:05 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L103"
+      "source_location": "L110"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_55_27_sep",
@@ -26891,7 +27056,7 @@
       "node_kind": "heading",
       "norm_label": "state at 06:55 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L94"
+      "source_location": "L101"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_07_45_27_sep",
@@ -26903,7 +27068,7 @@
       "node_kind": "heading",
       "norm_label": "state at 07:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L84"
+      "source_location": "L91"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_08_45_27_sep",
@@ -26915,7 +27080,7 @@
       "node_kind": "heading",
       "norm_label": "state at 08:45 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L74"
+      "source_location": "L81"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_10_00_27_sep",
@@ -26927,7 +27092,7 @@
       "node_kind": "heading",
       "norm_label": "state at 10:00 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L62"
+      "source_location": "L69"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_11_10_27_sep",
@@ -26939,7 +27104,7 @@
       "node_kind": "heading",
       "norm_label": "state at 11:10 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L52"
+      "source_location": "L59"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_40_27_sep",
@@ -26951,7 +27116,7 @@
       "node_kind": "heading",
       "norm_label": "state at 12:40 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L39"
+      "source_location": "L46"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_50_27_sep",
@@ -26963,17 +27128,29 @@
       "node_kind": "heading",
       "norm_label": "state at 12:50 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L16"
+      "source_location": "L23"
     },
     {
-      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
-      "label": "State at 13:20 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)",
+      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep",
+      "label": "State at 13:20 (27 Sep)",
       "_origin": "ast",
       "community": 353,
       "community_name": "C2 6-layer routing completion \u2014 resume note (keep this file current)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "state at 13:20 (27 sep) - supersedes the older state notes below (the plan below still applies)",
+      "norm_label": "state at 13:20 (27 sep)",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
+      "label": "State at 14:05 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)",
+      "_origin": "ast",
+      "community": 353,
+      "community_name": "C2 6-layer routing completion \u2014 resume note (keep this file current)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "state at 14:05 (27 sep) - supersedes the older state notes below (the plan below still applies)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
       "source_location": "L6"
     },
@@ -26987,7 +27164,7 @@
       "node_kind": "heading",
       "norm_label": "state at 19:55 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L201"
+      "source_location": "L208"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_21_50_26_sep",
@@ -26999,7 +27176,7 @@
       "node_kind": "heading",
       "norm_label": "state at 21:50 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L193"
+      "source_location": "L200"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_22_10_26_sep",
@@ -27011,7 +27188,7 @@
       "node_kind": "heading",
       "norm_label": "state at 22:10 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L185"
+      "source_location": "L192"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_23_05_26_sep",
@@ -27023,7 +27200,7 @@
       "node_kind": "heading",
       "norm_label": "state at 23:05 (26 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L175"
+      "source_location": "L182"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_update_04_35_27_sep",
@@ -27035,7 +27212,7 @@
       "node_kind": "heading",
       "norm_label": "update 04:35 (27 sep)",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L134"
+      "source_location": "L141"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_g6g_171149",
@@ -29412,6 +29589,28 @@
       "source_location": "L1"
     },
     {
+      "id": "gui_review_window",
+      "label": "review_window.py",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "review_window.py",
+      "source_file": "gui/review_window.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_analyze_capture",
+      "label": "analyze_capture.py",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "code",
+      "norm_label": "analyze_capture.py",
+      "source_file": "scripts/analyze_capture.py",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_test_dsp_analytics",
       "label": "test_dsp_analytics.py",
       "_origin": "ast",
@@ -29509,6 +29708,39 @@
       "norm_label": "myoelectric fatigue index: least-squares linear slope of the median/mean-...",
       "source_file": "dsp/dsp.py",
       "source_location": "L265"
+    },
+    {
+      "id": "dsp_dsp_rationale_63",
+      "label": "Analyse one RAW (un-notched, absolute-volt) single-channel window; return\u2026",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "rationale",
+      "norm_label": "analyse one raw (un-notched, absolute-volt) single-channel window; return...",
+      "source_file": "dsp/dsp.py",
+      "source_location": "L63"
+    },
+    {
+      "id": "gui_emg_plotter_rationale_656",
+      "label": "EMG median frequency (Hz), 20-450 Hz band \u2014 delegates to the canonical\u2026",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "rationale",
+      "norm_label": "emg median frequency (hz), 20-450 hz band \u2014 delegates to the canonical...",
+      "source_file": "gui/emg_plotter.py",
+      "source_location": "L656"
+    },
+    {
+      "id": "gui_review_window_rationale_1",
+      "label": "ReviewWindow \u2014 offline View/Review of a saved EMG recording (Noraxon MR 'View'\u2026",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "dsp.py",
+      "file_type": "rationale",
+      "norm_label": "reviewwindow \u2014 offline view/review of a saved emg recording (noraxon mr 'view'...",
+      "source_file": "gui/review_window.py",
+      "source_location": "L1"
     },
     {
       "id": "tests_test_dsp_analytics_rationale_1",
@@ -30083,15 +30315,15 @@
       "source_location": "L1"
     },
     {
-      "id": "gui_emg_plotter_rationale_686",
-      "label": "Persist the current per-channel MVC to mvc_store.json (the reusable 'MVC\u2026",
+      "id": "tests_test_mvc",
+      "label": "test_mvc.py",
       "_origin": "ast",
       "community": 40,
       "community_name": "MvcDialog",
-      "file_type": "rationale",
-      "norm_label": "persist the current per-channel mvc to mvc_store.json (the reusable 'mvc...",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L686"
+      "file_type": "code",
+      "norm_label": "test_mvc.py",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L1"
     },
     {
       "id": "gui_mvc_dialog_rationale_1",
@@ -30114,6 +30346,28 @@
       "norm_label": "noraxon-style 'save data' step shown right after an mvc capture: name the...",
       "source_file": "gui/mvc_dialog.py",
       "source_location": "L242"
+    },
+    {
+      "id": "gui_mvc_dialog_rationale_296",
+      "label": "Noraxon-style 'Save Data' shown after stopping a test recording: name the\u2026",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "rationale",
+      "norm_label": "noraxon-style 'save data' shown after stopping a test recording: name the...",
+      "source_file": "gui/mvc_dialog.py",
+      "source_location": "L296"
+    },
+    {
+      "id": "tests_test_mvc_rationale_1",
+      "label": "HG4 tests for the MVC calibration dialog: it must capture the held MAX (not the\u2026",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "MvcDialog",
+      "file_type": "rationale",
+      "norm_label": "hg4 tests for the mvc calibration dialog: it must capture the held max (not the...",
+      "source_file": "tests/test_mvc.py",
+      "source_location": "L1"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_a6t_001212",
@@ -33729,7 +33983,7 @@
       "label": "amp_norm_dialog.py",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "amp_norm_dialog.py",
       "source_file": "gui/amp_norm_dialog.py",
@@ -33740,40 +33994,18 @@
       "label": "test_gui_smoke.py",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "code",
       "norm_label": "test_gui_smoke.py",
       "source_file": "tests/test_gui_smoke.py",
       "source_location": "L1"
     },
     {
-      "id": "tests_test_mvc",
-      "label": "test_mvc.py",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "code",
-      "norm_label": "test_mvc.py",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "communication_sources_rationale_169",
-      "label": "Synthetic sEMG: baseline noise + intermittent bursts (band-limited noise\u2026",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "rationale",
-      "norm_label": "synthetic semg: baseline noise + intermittent bursts (band-limited noise...",
-      "source_file": "communication/sources.py",
-      "source_location": "L169"
-    },
-    {
       "id": "gui_amp_norm_dialog_rationale_1",
       "label": "AmpNormDialog \u2014 Noraxon MR real-time Amplitude Normalization + Smoothing\u2026",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "rationale",
       "norm_label": "ampnormdialog \u2014 noraxon mr real-time amplitude normalization + smoothing...",
       "source_file": "gui/amp_norm_dialog.py",
@@ -33784,7 +34016,7 @@
       "label": "Headless GUI smoke test (HG4): build the branded MVC instrument at 5 channels,\u2026",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "rationale",
       "norm_label": "headless gui smoke test (hg4): build the branded mvc instrument at 5 channels,...",
       "source_file": "tests/test_gui_smoke.py",
@@ -33795,7 +34027,7 @@
       "label": "HG4: the HTML report builds (with the M3 analytics columns) without exception.",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "rationale",
       "norm_label": "hg4: the html report builds (with the m3 analytics columns) without exception.",
       "source_file": "tests/test_gui_smoke.py",
@@ -33806,22 +34038,11 @@
       "label": "Img1/Img3/Img4: the live envelope honors the smoothing algorithm + window, and\u2026",
       "_origin": "ast",
       "community": 43,
-      "community_name": "SimSource",
+      "community_name": "AmpNormDialog",
       "file_type": "rationale",
       "norm_label": "img1/img3/img4: the live envelope honors the smoothing algorithm + window, and...",
       "source_file": "tests/test_gui_smoke.py",
       "source_location": "L95"
-    },
-    {
-      "id": "tests_test_mvc_rationale_1",
-      "label": "HG4 tests for the MVC calibration dialog: it must capture the held MAX (not the\u2026",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "SimSource",
-      "file_type": "rationale",
-      "norm_label": "hg4 tests for the mvc calibration dialog: it must capture the held max (not the...",
-      "source_file": "tests/test_mvc.py",
-      "source_location": "L1"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_d6w_024217",
@@ -41020,70 +41241,246 @@
       "source_location": "L123"
     },
     {
-      "id": "gui_emg_plotter_rationale_1247",
-      "label": "#9 Save Data step after a test recording: name it (Save & View / Save /\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "label": "apw_151610.pas",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "#9 save data step after a test recording: name it (save & view / save /...",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1247"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "apw_151610.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L1"
     },
     {
-      "id": "gui_emg_plotter_rationale_1273",
-      "label": "Open a saved recording in the View/Review window (playback + Operations +\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "label": "AddCutout()",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "open a saved recording in the view/review window (playback + operations +...",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1273"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "addcutout()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L161"
     },
     {
-      "id": "gui_emg_plotter_rationale_1287",
-      "label": "Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "label": "AddPoly()",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "rename the just-saved csv to include the user's name (keeps the emg_ prefix +...",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1287"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "addpoly()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L144"
     },
     {
-      "id": "gui_emg_plotter_rationale_1302",
-      "label": "Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off).",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_closeto",
+      "label": "CloseTo()",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "quick numeric 'view' of a saved recording (per-channel rms / pk-pk / lead-off).",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L1302"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "closeto()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L60"
     },
     {
-      "id": "gui_emg_plotter_rationale_614",
-      "label": "Guide the Record -> Pause -> Stop activity with a contextual step hint.",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countitems",
+      "label": "CountItems()",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "guide the record -> pause -> stop activity with a contextual step hint.",
-      "source_file": "gui/emg_plotter.py",
-      "source_location": "L614"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "countitems()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L36"
     },
     {
-      "id": "gui_mvc_dialog_rationale_296",
-      "label": "Noraxon-style 'Save Data' shown after stopping a test recording: name the\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countpolys",
+      "label": "CountPolys()",
       "_origin": "ast",
       "community": 497,
-      "community_name": "SaveRecordingDialog",
-      "file_type": "rationale",
-      "norm_label": "noraxon-style 'save data' shown after stopping a test recording: name the...",
-      "source_file": "gui/mvc_dialog.py",
-      "source_location": "L296"
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "countpolys()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L106"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_counts",
+      "label": "Counts()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "counts()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L131"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fail",
+      "label": "Fail()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "fail()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L16"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findnet",
+      "label": "FindNet()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "findnet()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L51"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findrule",
+      "label": "FindRule()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "findrule()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L97"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findtrack",
+      "label": "FindTrack()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "findtrack()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L62"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findvia",
+      "label": "FindVia()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "findvia()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L74"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "label": "Fld()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "fld()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L18"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_item",
+      "label": "Item()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "item()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L28"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "label": "LayerOf()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "layerof()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L40"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_num",
+      "label": "Num()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "num()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L26"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_rebuildpolys",
+      "label": "RebuildPolys()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "rebuildpolys()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L170"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_renamepoly",
+      "label": "RenamePoly()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "renamepoly()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L115"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_ruleexists",
+      "label": "RuleExists()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "ruleexists()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L88"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L187"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "label": "Say()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "say()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L15"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_setlayers",
+      "label": "SetLayers()",
+      "_origin": "ast",
+      "community": 497,
+      "community_name": "apw_151610.pas",
+      "file_type": "code",
+      "norm_label": "setlayers()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L123"
     },
     {
       "id": "hardware_compact_mainboard_20260925t115919z_work_mcbt_135637",
@@ -42010,81 +42407,59 @@
       "source_location": "L101"
     },
     {
-      "id": "dsp_dsp_py_ndarray",
-      "label": "ndarray",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gav_151610",
+      "label": "gav_151610.pas",
       "_origin": "ast",
       "community": 501,
-      "community_name": "EmgFilters",
+      "community_name": "gav_151610.pas",
       "file_type": "code",
-      "norm_label": "ndarray",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_test_dsp",
-      "label": "test_dsp.py",
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "code",
-      "norm_label": "test_dsp.py",
-      "source_file": "tests/test_dsp.py",
+      "norm_label": "gav_151610.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
       "source_location": "L1"
     },
     {
-      "id": "dsp_dsp_rationale_47",
-      "label": "Moving-RMS linear envelope, sqrt(mean(x^2)) over a `win_ms` window \u2014 the\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_mm",
+      "label": "MM()",
       "_origin": "ast",
       "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "rationale",
-      "norm_label": "moving-rms linear envelope, sqrt(mean(x^2)) over a `win_ms` window \u2014 the...",
-      "source_file": "dsp/dsp.py",
-      "source_location": "L47"
+      "community_name": "gav_151610.pas",
+      "file_type": "code",
+      "norm_label": "mm()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L6"
     },
     {
-      "id": "tests_test_dsp_rationale_1",
-      "label": "Unit tests for EmgFilters DSP functions. Validates: - Notch filter attenuation\u2026",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_netof",
+      "label": "NetOf()",
       "_origin": "ast",
       "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "rationale",
-      "norm_label": "unit tests for emgfilters dsp functions. validates: - notch filter attenuation...",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L1"
+      "community_name": "gav_151610.pas",
+      "file_type": "code",
+      "norm_label": "netof()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L5"
     },
     {
-      "id": "tests_test_dsp_rationale_31",
-      "label": "50 Hz sine should be attenuated by more than 20 dB.",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_rects",
+      "label": "RectS()",
       "_origin": "ast",
       "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "rationale",
-      "norm_label": "50 hz sine should be attenuated by more than 20 db.",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L31"
+      "community_name": "gav_151610.pas",
+      "file_type": "code",
+      "norm_label": "rects()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L7"
     },
     {
-      "id": "tests_test_dsp_rationale_48",
-      "label": "RMS envelope of a 100 Hz sine (amplitude 1) should be ~0.707 V.",
+      "id": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_runfixed",
+      "label": "RunFixed()",
       "_origin": "ast",
       "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "rationale",
-      "norm_label": "rms envelope of a 100 hz sine (amplitude 1) should be ~0.707 v.",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L48"
-    },
-    {
-      "id": "tests_test_dsp_rationale_63",
-      "label": "RMS envelope should preserve number of channels.",
-      "_origin": "ast",
-      "community": 501,
-      "community_name": "EmgFilters",
-      "file_type": "rationale",
-      "norm_label": "rms envelope should preserve number of channels.",
-      "source_file": "tests/test_dsp.py",
-      "source_location": "L63"
+      "community_name": "gav_151610.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L10"
     },
     {
       "id": "dsp_pipeline",
@@ -42095,6 +42470,17 @@
       "file_type": "code",
       "norm_label": "pipeline.py",
       "source_file": "dsp/pipeline.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gui_processing_dialog",
+      "label": "processing_dialog.py",
+      "_origin": "ast",
+      "community": 502,
+      "community_name": "pipeline.py",
+      "file_type": "code",
+      "norm_label": "processing_dialog.py",
+      "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
@@ -42153,99 +42539,88 @@
       "source_location": "L64"
     },
     {
-      "id": "communication_sources_py_ndarray",
-      "label": "ndarray",
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "code",
-      "norm_label": "ndarray",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "communication_sources_rationale_30",
-      "label": "Open the serial port exactly like a plain read that is known to work here. Open\u2026",
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "rationale",
-      "norm_label": "open the serial port exactly like a plain read that is known to work here. open...",
-      "source_file": "communication/sources.py",
-      "source_location": "L30"
-    },
-    {
-      "id": "communication_sources_rationale_47",
-      "label": "Common ring-collection + thread plumbing.",
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "rationale",
-      "norm_label": "common ring-collection + thread plumbing.",
-      "source_file": "communication/sources.py",
-      "source_location": "L47"
-    },
-    {
-      "id": "communication_sources_rationale_71",
-      "label": "Return all sample-sets collected since the last call, shape (n, nch).",
-      "_origin": "ast",
-      "community": 503,
-      "community_name": "_BufferedSource",
-      "file_type": "rationale",
-      "norm_label": "return all sample-sets collected since the last call, shape (n, nch).",
-      "source_file": "communication/sources.py",
-      "source_location": "L71"
-    },
-    {
-      "id": "gui_normalize_dialog",
-      "label": "normalize_dialog.py",
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "code",
-      "norm_label": "normalize_dialog.py",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "gui_normalize_dialog_rationale_1",
-      "label": "NormalizeDialog \u2014 Noraxon MR offline Amplitude Normalization config: choose the\u2026",
-      "_origin": "ast",
-      "community": 504,
-      "community_name": "NormalizeDialog",
-      "file_type": "rationale",
-      "norm_label": "normalizedialog \u2014 noraxon mr offline amplitude normalization config: choose the...",
-      "source_file": "gui/normalize_dialog.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "gui_processing_dialog",
-      "label": "processing_dialog.py",
-      "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
-      "file_type": "code",
-      "norm_label": "processing_dialog.py",
-      "source_file": "gui/processing_dialog.py",
-      "source_location": "L1"
-    },
-    {
       "id": "gui_processing_dialog_rationale_1",
       "label": "ProcessingDialog \u2014 Noraxon MR 'Signal Processing' menu: build an ordered\u2026",
       "_origin": "ast",
-      "community": 505,
-      "community_name": "ProcessingDialog",
+      "community": 502,
+      "community_name": "pipeline.py",
       "file_type": "rationale",
       "norm_label": "processingdialog \u2014 noraxon mr 'signal processing' menu: build an ordered...",
       "source_file": "gui/processing_dialog.py",
       "source_location": "L1"
     },
     {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_dav_151610",
+      "label": "dav_151610.pas",
+      "_origin": "ast",
+      "community": 503,
+      "community_name": "dav_151610.pas",
+      "file_type": "code",
+      "norm_label": "dav_151610.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dav_151610.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_dav_151610_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 503,
+      "community_name": "dav_151610.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dav_151610.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opv2_140349",
+      "label": "opv2_140349.pas",
+      "_origin": "ast",
+      "community": 504,
+      "community_name": "opv2_140349.pas",
+      "file_type": "code",
+      "norm_label": "opv2_140349.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opv2_140349.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opv2_140349_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 504,
+      "community_name": "opv2_140349.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opv2_140349.pas",
+      "source_location": "L6"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opw_151609",
+      "label": "opw_151609.pas",
+      "_origin": "ast",
+      "community": 505,
+      "community_name": "opw_151609.pas",
+      "file_type": "code",
+      "norm_label": "opw_151609.pas",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opw_151609.pas",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_compact_mainboard_20260925t115919z_work_opw_151609_runfixed",
+      "label": "RunFixed()",
+      "_origin": "ast",
+      "community": 505,
+      "community_name": "opw_151609.pas",
+      "file_type": "code",
+      "norm_label": "runfixed()",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opw_151609.pas",
+      "source_location": "L6"
+    },
+    {
       "id": "gui_channel_panel_rationale_14",
       "label": "Encapsulates channel cards with muscle name, RMS/pk-pk labels, progress bars,\u2026",
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "rationale",
       "norm_label": "encapsulates channel cards with muscle name, rms/pk-pk labels, progress bars,...",
       "source_file": "gui/channel_panel.py",
@@ -42256,7 +42631,7 @@
       "label": "Set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
       "_origin": "ast",
       "community": 506,
-      "community_name": ".__init__",
+      "community_name": "ChannelPanel",
       "file_type": "rationale",
       "norm_label": "set the per-channel electrode status dot: 'good' | 'poor' | 'open'.",
       "source_file": "gui/channel_panel.py",
@@ -70057,6 +70432,474 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countitems",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_item",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countitems",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_item",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_counts",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fail",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findtrack",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findtrack",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findvia",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_closeto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_num",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_rebuildpolys",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_renamepoly",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L190",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_counts",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fail",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findnet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_num",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findtrack",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_ruleexists",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findrule",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findvia",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countitems",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countpolys",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_renamepoly",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L248",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_setlayers",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L256",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_rebuildpolys",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_setlayers",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_setlayers",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_apx_033252_addcutout",
       "target": "hardware_compact_mainboard_20260925t115919z_work_apx_033252_countitems",
       "relation": "calls",
@@ -76869,6 +77712,54 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gau_135846.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_rects",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_mm",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_netof",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_runfixed",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_rects",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
       "source_location": "L21",
       "weight": 1.0
     },
@@ -109775,13 +110666,24 @@
     },
     {
       "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_55_27_sep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
       "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_05_27_sep",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L103",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -109792,7 +110694,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L113",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -109803,7 +110716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L123",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -109814,7 +110727,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L134",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -109825,7 +110738,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L148",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -109836,18 +110749,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L157",
-      "weight": 1.0
-    },
-    {
-      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_50_27_sep",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L16",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -109858,7 +110760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L166",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -109869,7 +110771,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L175",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -109880,7 +110782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L185",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -109891,7 +110793,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L193",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -109902,7 +110804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L201",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -109913,7 +110815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L213",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -109924,7 +110826,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L222",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_12_50_27_sep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -109935,7 +110848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L24",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -109946,7 +110859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L39",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -109957,12 +110870,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L52",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
       "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_13_20_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
+      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_14_05_27_sep_supersedes_the_older_state_notes_below_the_plan_below_still_applies",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -109979,7 +110892,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L62",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -109990,7 +110903,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L74",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -110001,18 +110914,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L84",
-      "weight": 1.0
-    },
-    {
-      "source": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_c2_6_layer_routing_completion_resume_note_keep_this_file_current",
-      "target": "hardware_compact_mainboard_20260925t115919z_evidence_routing_resume_state_at_06_55_27_sep",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md",
-      "source_location": "L94",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -118310,6 +119212,237 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countpolys",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_renamepoly",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_setlayers",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_counts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addpoly",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_say",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_addcutout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_rebuildpolys",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_fld",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_num",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_item",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_countitems",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_layerof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_closeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findtrack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findvia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_ruleexists",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_apw_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_apw_151610_findrule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/apw_151610.pas",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_apx_033252",
       "target": "hardware_compact_mainboard_20260925t115919z_work_apx_033252_countpolys",
       "relation": "contains",
@@ -120671,6 +121804,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dau_135846.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_dav_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_dav_151610_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/dav_151610.pas",
       "source_location": "L6",
       "weight": 1.0
     },
@@ -124279,6 +125423,50 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gau_135846.pas",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_netof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_mm",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_gav_151610",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_gav_151610_rects",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/gav_151610.pas",
       "source_location": "L7",
       "weight": 1.0
     },
@@ -128199,6 +129387,17 @@
       "weight": 1.0
     },
     {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_opv2_140349",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_opv2_140349_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opv2_140349.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "hardware_compact_mainboard_20260925t115919z_work_opv_114728",
       "target": "hardware_compact_mainboard_20260925t115919z_work_opv_114728_runfixed",
       "relation": "contains",
@@ -128206,6 +129405,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opv_114728.pas",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_compact_mainboard_20260925t115919z_work_opw_151609",
+      "target": "hardware_compact_mainboard_20260925t115919z_work_opw_151609_runfixed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "hardware/compact_mainboard_20260925T115919Z/work/opw_151609.pas",
       "source_location": "L6",
       "weight": 1.0
     },
@@ -151931,5 +153141,5 @@
       "source_file": ".claude/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "9bbd96cf487ee0da85f5c8213905d0ebe46fa3ab"
+  "built_at_commit": "f1d564ca35d1d64bf448da8ccbdecb378b0df914"
 }
