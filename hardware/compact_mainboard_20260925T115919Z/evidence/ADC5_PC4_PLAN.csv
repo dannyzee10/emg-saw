@@ -1,0 +1,2 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,H3:ADC_EMG5,ADC_EMG5,Top Layer,55.58,27.3,55.58,24.5,0.2,,,hand|U_MCU1-33 (PC4) to R_ADC5-2,0

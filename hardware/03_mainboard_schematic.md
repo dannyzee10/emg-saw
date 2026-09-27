@@ -62,7 +62,7 @@ GND↔DRL solder jumper** on this net as a future option (no VCM hardware needed
 
 | Function | Peripheral / pins (suggested) | Notes |
 |---|---|---|
-| EMG in ×5 | ADC1_IN[] on PA0–PA4 | VOUT_1..5; DMA, ~1–2 kS/s/ch, 14-bit |
+| EMG in ×5 | ADC1: EMG1–4 = PA0–PA3 (ADC1_IN5–IN8), **EMG5 = PC4 (ADC1_IN13)** | VOUT_1..5; DMA, ~1–2 kS/s/ch, 14-bit. EMG5 moved PA4 (IN9) → PC4 (IN13) on 2026-09-27 for C2 PCB routing (LQFP100 pin 29 → 33; same ADC1). Firmware scan list: IN5, IN6, IN7, IN8, IN13 |
 | VBAT sense | ADC1_IN on PA5 | from fuel-gauge node or divider |
 | USB detect | GPIO PB2 | VBUS-sense → disable acquisition on USB |
 | SPI→ST67 | SPI1: SCK PA5→(use PB3), MISO PB4, MOSI PB5, CS PA15 | ≤40 MHz full-duplex |

@@ -3,7 +3,14 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 14:05 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+## State at 15:30 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+- C2 = state AV, committed ef917d8 (pushed): **11 unrouted** (GND C_DRL_DEC-2, GND CU_14-1, 3V0_ANA U1-4, NetINA4_3,
+  NetLED_CHG_C, VOUT_2, ADC_EMG5, Vc_1, WIFI_UART_RX, WIFI_SPI_CS, MCU_WIFI_UART_TX); copper clean; JLC geometry clean.
+  PLANS include REP_AS_ADDS_OK. Edge + background apps closed by the user's request (2.6 GB free without Altium).
+- Running: REP_AT on AV (regions WIFI_UART_RX, ch4 big box, CU_14, U1-right + 2 passes, MAXV 14, CORRIDOR 1.5),
+  log tmp/rep_at.log.
+
+## State at 14:05 (27 Sep)
 - User (14:0x): "yes restart and relocate C_BAT, edge is closed" -> routing restarts approved.
 - C2 = state AU, committed f1d564c (pushed): C_BAT -> (14.25,44.20,90), R_EN1_BIAS -> (12.95,42.25,0); UP1 pins 6/7
   escapes hand-routed (evidence/UP1_ESCAPE_PLAN.csv, deliberately NOT in run_repair.PLANS so it stays fixed copper).
