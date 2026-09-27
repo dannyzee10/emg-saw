@@ -3,7 +3,73 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 15:30 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+## HANDOFF 21:xx (27 Sep): work paused by the user and handed to Astra -> read `HANDOFF_ASTRA_2026-09-27.md` first
+- State AZ in Altium (9 unrouted); MERGE_I_ADDS_OK/DELS_OK ready (-> 6); 3V0_ANA U1-4 solved by seeded negotiation
+  (NEG_C9). NetINA4_3 sweep (NEG_B8) stopped after tries 0-1; Vc_1, Wi-Fi x4 still open. Commands in the handoff.
+
+## Update 19:30 (27 Sep) - on top of the 17:50 state below
+- Wins on AZ (not written yet, exact-checked together as MERGE_H: 177 add / 132 del rows, 0 problems):
+  REP_FC3 NetLED_CHG_C (partial rip-up PARTIAL=0.35 + cascade, 24 partial victims), REP_FA GND CU_14-1,
+  PRUNE_AZ (dead VREF_A stub, 3 L1 tracks from the via at 15.125,23.025; prune_chain.py).  -> writing gives 7 left.
+- New repair.py modes: PARTIAL=<mm> (rip only the part of a victim near the path; split groups renamed '#p<k>');
+  plane islands without a via site now join ANY other touch point by copper; RIP_BK13 loads only escape VIAS (+stub)
+  as groups (in-socket tracks use the 0.13 zone clearance the router cannot redo); NEGOTIATE=<box>: PathFinder
+  negotiated-congestion re-route of a dense box (exact-zone penalties via distance transforms, own copper excluded,
+  pres capped 40, history 1.0/pass); prints the last conflict cells when it does not converge.
+- router5: astar(pen=...) (per-cell penalty, pen['VIA']); ALLOW_BOTTOM=<nets> policy override (Bottom is normally
+  only for nets with a Bottom pad).
+- Findings: NetINA4_3 (IN+ node of INA4) may only use L1/L3 here (L5 reserved for the 3V0_ANA pour, no Bottom pad)
+  and must cross Vc_4 (socket -> RDD12-1) -> negotiation stuck on exactly NetINA4_3 vs Vc_4; retry with
+  ALLOW_BOTTOM=NetINA4_3,NetINA4_2 and a larger box.  Vc_1: the J_FPC1 corner via is sealed (J_REF pad copper, 3V0_ANA
+  socket via, socket keep-out incl. L3, NetJ_REF_1 L3 track at y 13.7-13.85) -> NEGOTIATE over 14.6-24.8 x 10.6-19.8.
+  WIFI_SPI_CS (22 mm across the MCU fan-out): if routing fails, propose moving CS to a free MCU pin next to the ST67
+  (software NSS = any GPIO; like the approved UART swap) - needs the user's OK (schematic change).
+
+## State at 17:50 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+- C2 = state AZ (written + saved, Altium DRC): **9 unrouted** (3V0_ANA U1-4, GND CU_14-1, NetINA4_3, NetLED_CHG_C, Vc_1,
+  WIFI_SPI_CS, WIFI_UART_RX, MCU_WIFI_UART_TX, MCU_WIFI_UART_RX); copper clean; 1 Net Antennae = dangling VREF_A stub
+  L1 (14.725,21.275)-(15.725,20.275) left by a victim re-route -> prune it (check the chain) in the next write.
+  AZ = AY + MERGE_G (REP_CB3 VOUT_2 + REP_DA4 GND C_DRL_DEC-2), OPS_AZ.txt. PLANS include MERGE_G_ADDS_OK.
+- User asked (27 Sep) to solve the unrouted IN PARALLEL: one repair process per problem area on the same state
+  (ONLY_NETS / ONLY_BOX), then merge_rounds.py (priority order, ids renamed P<ROUND><k>) -> consistent_repair -> write.
+  Parallel wins on one base can collide (two victims re-routed into the same gap) -> the exact check drops both; write
+  the compatible subset, re-run the rest on the new state (that is why 3V0_ANA U1-4 and GND CU_14 are open again).
+- repair.py upgrades (27 Sep evening), all env-gated:
+  - ONLY_BOX: keep connections with an end in the box(es).  DIAG_FIXED=box: route each connection against FIXED copper
+    only (every routed group of other nets in the box ripped) -> 'no path' = needs placement/pin change, else lists the
+    groups the path collides with.
+  - GUIDED=<margin>: victims = exactly the groups the fixed-copper path collides with (verified by re-routing with only
+    them ripped, tolerance widened 0.12 -> 0.7).  CASCADE=<max victims>: a victim that cannot be re-routed pulls in its
+    own blockers (measured with the target in place); reverse cascade when victim-first ordering blocks the target.
+  - Exact rollbacks: snap()/restore() of the router rasters + copper/hole lists (piecewise undo leaked: one net id per
+    raster cell, holes re-stamped from approximate circles).  unstamp_holes no longer re-stamps the ripped holes.
+  - STRICT_VICTIMS (default on): a victim route failing the exact check after retries is a failed victim (reorder /
+    cascade react) instead of failing the whole repair at the final check.
+  - RIP_BK13=1 + EXTRA_PLANS=BK13_ESCAPE_PLAN_C2: hand-placed socket escapes become rippable, one group per socket+net.
+    Needed for Vc_1: its escape via (15.9,11.2) is sealed by the mounting hole, the J_FPC1 3V0_ANA via (15.95,12.55),
+    the socket body keep-out (16.79-20.61 x 11.39-13.02, all layers) and L3/GND copper; with escapes rippable an
+    all-L3 path exists (6 victims incl. the J_FPC1 3V0_ANA escape).
+- Round launch pattern: `python run_repair.py AZ REP_Fx PLANE=1 DEBUG=1 PASSES=2 MAXV=12 REORDER=10 GUIDED=2.0
+  CASCADE=20 [RIP_BK13=1 EXTRA_PLANS=BK13_ESCAPE_PLAN_C2] ONLY_NETS=...`; merge: `python merge_rounds.py OUT_A OUT_D
+  TAG1 TAG2 ...` then consistent_repair (AZ geometry) -> build_ops OPS_OUT=... -> open_proj/apply_ops/run_drc/export.
+- Width reference for the later width pass (research notes): VBUS <=0.5 A -> >=0.3 mm outer; VSYS / VBAT_CELL ~1 A on
+  battery -> 0.4-0.5 mm, >=2 vias per layer change; LX 0.8-1.0 A peak -> ~0.4 mm; 3V3_DIG 0.6 A -> ~0.3 mm; inner
+  0.5 oz ~2x.
+
+## State at 16:50 (27 Sep)
+- User-approved MCU pin swaps (schematic MCU_sheet + PCB pads + hardware/03_mainboard_schematic.md, each verified):
+  ADC_EMG5 PA4(29, ADC1_IN9) -> PC4(33, ADC1_IN13) [commit 715f580, pinswap_T.pas; R_SPI_SCK nudged -0.06 y];
+  Wi-Fi UART USART1 PA9/PA10(68/69) -> PB6/PB7(92/93) [commit 506d6d4, uartswap_T.pas].
+- C2 = state AY, committed 506d6d4 (pushed): **11 unrouted** (GND C_DRL_DEC-2, GND CU_14-1, 3V0_ANA U1-4, NetINA4_3,
+  NetLED_CHG_C, VOUT_2, Vc_1, WIFI_SPI_CS, WIFI_UART_RX, MCU_WIFI_UART_TX, MCU_WIFI_UART_RX); copper clean.
+  PLANS include REP_AU_ADDS_OK. rip_attached.py accepts REF.PIN.
+- Running: REP_AV on AY (region around ST67 pins + passes, UART nets first), log tmp/rep_av.log.
+- Corner x 51-56 / y 19-22 (channel 4 meets MCU bottom): NetINA4_3 blocked by 3V0_ANA group R56 (L5 feed to a pad near
+  52.2,20.5) and GND CU_14-1 there -> needs a small part nudge (CU_14) next.
+- Memory: user closed Edge and WeChat; laptop is Lenovo V14 G3 IAP (8 GB soldered + empty SO-DIMM slot -> 8 GB DDR4-3200
+  SO-DIMM gives 16 GB dual-channel; answered in chat).
+
+## State at 15:30 (27 Sep)
 - C2 = state AV, committed ef917d8 (pushed): **11 unrouted** (GND C_DRL_DEC-2, GND CU_14-1, 3V0_ANA U1-4, NetINA4_3,
   NetLED_CHG_C, VOUT_2, ADC_EMG5, Vc_1, WIFI_UART_RX, WIFI_SPI_CS, MCU_WIFI_UART_TX); copper clean; JLC geometry clean.
   PLANS include REP_AS_ADDS_OK. Edge + background apps closed by the user's request (2.6 GB free without Altium).

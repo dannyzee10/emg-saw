@@ -87,10 +87,13 @@ def layer_cost(net):
 NO_VIA = {'NetL1_1', 'NetL1_2', 'MCU_VCAP'}   # report P2 (LX: no vias) and M2 (VCAP: no via)
 
 
+ALLOW_BOTTOM = {n for n in os.environ.get('ALLOW_BOTTOM', '').split(',') if n}   # policy override for named nets
+
+
 def allowed_layers(net):
     if net in NO_VIA:
         return {'Top Layer'}
-    return set(LAYERS) if net in bottom_nets else {'Top Layer', 'Mid Layer 2', 'Mid Layer 4'}
+    return set(LAYERS) if (net in bottom_nets or net in ALLOW_BOTTOM) else {'Top Layer', 'Mid Layer 2', 'Mid Layer 4'}
 
 
 # ------------------------------------------------------------------ rasters
@@ -331,7 +334,82 @@ IDX_MASK = (1 << IDX_BITS) - 1
 FQ = 100000                        # f quantum 1e-5 cost units in the packed heap key
 
 
-def astar(free, via_ok, starts, goals, lcost, allowed, max_expand=None):
+def astar(free, via_ok, starts, goals, lcost, allowed, max_expand=None, pen=None):
+    """pen (optional, negotiated routing): per-layer float arrays of the window; a step onto a cell costs
+    (1 + pen) times its normal cost, a via at a cell (1 + max pen over the layers) times VIA_COST."""
+    if pen is not None:
+        return _astar_pen(free, via_ok, starts, goals, lcost, allowed, max_expand, pen)
+    return _astar(free, via_ok, starts, goals, lcost, allowed, max_expand)
+
+
+def _astar_pen(free, via_ok, starts, goals, lcost, allowed, max_expand, pen):
+    ny, nx = via_ok.shape
+    plane = ny * nx
+    if max_expand is None:
+        max_expand = min(1200000, 8 * plane)
+    gx = sum(g[1] for g in goals) / len(goals); gy = sum(g[2] for g in goals) / len(goals)
+    lc = [lcost[L] for L in LAYERS]
+    minc = min(lc[i] for i, L in enumerate(LAYERS) if L in allowed)
+    hk = RES * minc * 0.95
+    frees = [free[L] for L in LAYERS]
+    pens = [pen[L] for L in LAYERS]
+    penv = pen['VIA'] if 'VIA' in pen else np.max(np.stack([pen[L] for L in LAYERS if L in allowed]), axis=0)
+    lays = [i for i, L in enumerate(LAYERS) if L in allowed]
+    best = np.full(len(LAYERS) * plane, np.inf, np.float32)
+    parent = np.full(len(LAYERS) * plane, -1, np.int32)
+    dirs = np.full(len(LAYERS) * plane, -1, np.int8)
+    closed = np.zeros(len(LAYERS) * plane, bool)
+    goal = np.zeros(len(LAYERS) * plane, bool)
+    for L, ix, iy in goals:
+        goal[L * plane + iy * nx + ix] = True
+    openq = []
+    for L, ix, iy in starts:
+        i = L * plane + iy * nx + ix
+        best[i] = 0.0
+        heapq.heappush(openq, (int(math.hypot(ix - gx, iy - gy) * hk * FQ) << IDX_BITS) | i)
+    n = 0
+    while openq:
+        i = heapq.heappop(openq) & IDX_MASK
+        if closed[i]:
+            continue
+        closed[i] = True
+        g = float(best[i]); d_in = int(dirs[i])
+        if goal[i]:
+            path = []
+            while i >= 0:
+                L, r = divmod(int(i), plane); iy, ix = divmod(r, nx)
+                path.append((L, ix, iy)); i = parent[i]
+            return path[::-1]
+        n += 1
+        if n > max_expand:
+            return None
+        L, r = divmod(int(i), plane); iy, ix = divmod(r, nx)
+        fr = frees[L]; pl = pens[L]; mult = lc[L]; base = L * plane
+        for k, (dx, dy, c) in enumerate(DIRS):
+            jx, jy = ix + dx, iy + dy
+            if 0 <= jx < nx and 0 <= jy < ny and fr[jy, jx]:
+                if dx and dy and not (fr[iy, jx] and fr[jy, ix]):
+                    continue
+                j = base + jy * nx + jx
+                if closed[j]:
+                    continue
+                ng = g + c * RES * mult * (1.0 + float(pl[jy, jx])) + (TURN if (d_in >= 0 and k != d_in) else 0.0)
+                if ng < best[j]:
+                    best[j] = ng; parent[j] = i; dirs[j] = k
+                    heapq.heappush(openq, (int((ng + math.hypot(jx - gx, jy - gy) * hk) * FQ) << IDX_BITS) | j)
+        if via_ok[iy, ix]:
+            vc = VIA_COST * (1.0 + float(penv[iy, ix]))
+            for L2 in lays:
+                if L2 != L and frees[L2][iy, ix]:
+                    j = L2 * plane + iy * nx + ix
+                    ng = g + vc
+                    if not closed[j] and ng < best[j]:
+                        best[j] = ng; parent[j] = i; dirs[j] = -1
+                        heapq.heappush(openq, (int((ng + math.hypot(ix - gx, iy - gy) * hk) * FQ) << IDX_BITS) | j)
+    return None
+
+
+def _astar(free, via_ok, starts, goals, lcost, allowed, max_expand=None):
     """A* over (layer, x, y) cells of the window.  State lives in flat numpy arrays; each heap entry is one
     int, (quantised f << IDX_BITS) | idx, so a full-budget search stays small.  g and the arrival direction
     are read back from best[] / dirs[]: an entry is only pushed on improvement, so the first pop of a cell
