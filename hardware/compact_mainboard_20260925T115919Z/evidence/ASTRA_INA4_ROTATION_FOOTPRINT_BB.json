@@ -1,0 +1,1893 @@
+{
+  "geometry": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BB.txt",
+  "geometry_sha256": "d6b3e7e6b9644da4ffd6cd6dee91448fbbaa359a87abf68fbe75ce70816e0373",
+  "body_geometry": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CL4_BODY_OBSTACLES_BB.txt",
+  "orientations": [
+    {
+      "rotation_deg": 90,
+      "center": {
+        "x_mm": 51.1,
+        "y_mm": 18.2,
+        "rotation_deg": 90,
+        "footprint_clear": false,
+        "body_bounds_mm": [
+          48.650000000000006,
+          16.7,
+          53.55,
+          19.7
+        ],
+        "fixed_footprint_blockers": [
+          {
+            "kind": "body",
+            "ref": "CCU7",
+            "distance_mm": 0.0,
+            "overlap_mm2": 0.2025,
+            "required_mm": 0.2
+          },
+          {
+            "kind": "pad",
+            "pin": "4",
+            "net": "GND",
+            "ref": "CCU7",
+            "other_pin": "2",
+            "other_net": "3V0_ANA",
+            "distance_mm": 0.0,
+            "required_mm": 0.27
+          }
+        ],
+        "free_copper_conflicts": [
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "8",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.143529,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.1501,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.239928,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "TRACK",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "VOUT_4",
+              "47.7250",
+              "20.3250",
+              "48.9750",
+              "19.0750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "TRACK",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "VOUT_4",
+              "48.9750",
+              "19.0750",
+              "52.1750",
+              "19.0750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "3V0_ANA",
+            "distance_mm": 0.2246,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "3V0_ANA",
+              "53.0750",
+              "19.7750",
+              "53.0750",
+              "20.3750",
+              "0.4000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0749,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.112203,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "VIA",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "NetINA4_2",
+              "53.9750",
+              "16.8750",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.1004,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "TRACK",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0746,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetINA4_2",
+              "51.0250",
+              "16.8750",
+              "53.9750",
+              "16.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ],
+        "free_copper_conflict_nets": [
+          "3V0_ANA",
+          "INA_OUT_4",
+          "NetCH_4_2",
+          "NetINA4_2",
+          "VOUT_4",
+          "Vc_4"
+        ],
+        "pads": [
+          {
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "center_mm": [
+              48.74999999999999,
+              17.224600000000002
+            ],
+            "bounds_mm": [
+              48.2,
+              17.0496,
+              49.3,
+              17.399599999999996
+            ]
+          },
+          {
+            "pin": "7",
+            "net": "NetINA4_7",
+            "center_mm": [
+              48.74999999999999,
+              17.8749
+            ],
+            "bounds_mm": [
+              48.2,
+              17.699900000000003,
+              49.3,
+              18.049899999999997
+            ]
+          },
+          {
+            "pin": "6",
+            "net": "Vservo_4",
+            "center_mm": [
+              48.74999999999999,
+              18.525100000000002
+            ],
+            "bounds_mm": [
+              48.2,
+              18.3501,
+              49.3,
+              18.700099999999996
+            ]
+          },
+          {
+            "pin": "5",
+            "net": "3V0_ANA",
+            "center_mm": [
+              48.74999999999999,
+              19.1754
+            ],
+            "bounds_mm": [
+              48.2,
+              19.000400000000003,
+              49.3,
+              19.350399999999997
+            ]
+          },
+          {
+            "pin": "4",
+            "net": "GND",
+            "center_mm": [
+              53.45,
+              19.1754
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              19.000400000000003,
+              54.0,
+              19.350399999999997
+            ]
+          },
+          {
+            "pin": "3",
+            "net": "NetINA4_3",
+            "center_mm": [
+              53.45,
+              18.525100000000002
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              18.3501,
+              54.0,
+              18.700099999999996
+            ]
+          },
+          {
+            "pin": "2",
+            "net": "NetINA4_2",
+            "center_mm": [
+              53.45,
+              17.8749
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.699900000000003,
+              54.0,
+              18.049899999999997
+            ]
+          },
+          {
+            "pin": "1",
+            "net": "GND",
+            "center_mm": [
+              53.45,
+              17.224600000000002
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.0496,
+              54.0,
+              17.399599999999996
+            ]
+          }
+        ]
+      },
+      "first_footprint_clear": {
+        "x_mm": 51.1,
+        "y_mm": 17.55,
+        "rotation_deg": 90,
+        "footprint_clear": true,
+        "body_bounds_mm": [
+          48.650000000000006,
+          16.05,
+          53.55,
+          19.05
+        ],
+        "fixed_footprint_blockers": [],
+        "free_copper_conflicts": [
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.143242,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.1499,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.24022,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0746,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.112061,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.1001,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "VIA",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "NetINA4_2",
+              "53.9750",
+              "16.8750",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "TRACK",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetINA4_2",
+              "51.0250",
+              "16.8750",
+              "53.9750",
+              "16.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ],
+        "free_copper_conflict_nets": [
+          "INA_OUT_4",
+          "NetCH_4_2",
+          "NetINA4_2",
+          "VOUT_4",
+          "Vc_4"
+        ],
+        "pads": [
+          {
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "center_mm": [
+              48.74999999999999,
+              16.574599999999997
+            ],
+            "bounds_mm": [
+              48.2,
+              16.399600000000003,
+              49.3,
+              16.749599999999997
+            ]
+          },
+          {
+            "pin": "7",
+            "net": "NetINA4_7",
+            "center_mm": [
+              48.74999999999999,
+              17.2249
+            ],
+            "bounds_mm": [
+              48.2,
+              17.049900000000004,
+              49.3,
+              17.3999
+            ]
+          },
+          {
+            "pin": "6",
+            "net": "Vservo_4",
+            "center_mm": [
+              48.74999999999999,
+              17.875099999999996
+            ],
+            "bounds_mm": [
+              48.2,
+              17.700100000000003,
+              49.3,
+              18.050099999999997
+            ]
+          },
+          {
+            "pin": "5",
+            "net": "3V0_ANA",
+            "center_mm": [
+              48.74999999999999,
+              18.5254
+            ],
+            "bounds_mm": [
+              48.2,
+              18.350400000000004,
+              49.3,
+              18.7004
+            ]
+          },
+          {
+            "pin": "4",
+            "net": "GND",
+            "center_mm": [
+              53.45,
+              18.5254
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              18.350400000000004,
+              54.0,
+              18.7004
+            ]
+          },
+          {
+            "pin": "3",
+            "net": "NetINA4_3",
+            "center_mm": [
+              53.45,
+              17.875099999999996
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.700100000000003,
+              54.0,
+              18.050099999999997
+            ]
+          },
+          {
+            "pin": "2",
+            "net": "NetINA4_2",
+            "center_mm": [
+              53.45,
+              17.2249
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.049900000000004,
+              54.0,
+              17.3999
+            ]
+          },
+          {
+            "pin": "1",
+            "net": "GND",
+            "center_mm": [
+              53.45,
+              16.574599999999997
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              16.399600000000003,
+              54.0,
+              16.749599999999997
+            ]
+          }
+        ]
+      },
+      "tested_positions": 308,
+      "search_radius_mm": 1.5,
+      "radial_step_mm": 0.05,
+      "angular_step_deg": 15
+    },
+    {
+      "rotation_deg": 270,
+      "center": {
+        "x_mm": 51.1,
+        "y_mm": 18.2,
+        "rotation_deg": 270,
+        "footprint_clear": false,
+        "body_bounds_mm": [
+          48.650000000000006,
+          16.7,
+          53.55,
+          19.7
+        ],
+        "fixed_footprint_blockers": [
+          {
+            "kind": "body",
+            "ref": "CCU7",
+            "distance_mm": 0.0,
+            "overlap_mm2": 0.2025,
+            "required_mm": 0.2
+          },
+          {
+            "kind": "pad",
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "ref": "CCU7",
+            "other_pin": "1",
+            "other_net": "GND",
+            "distance_mm": 0.0,
+            "required_mm": 0.27
+          },
+          {
+            "kind": "pad",
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "ref": "CCU7",
+            "other_pin": "2",
+            "other_net": "3V0_ANA",
+            "distance_mm": 0.0,
+            "required_mm": 0.27
+          }
+        ],
+        "free_copper_conflicts": [
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "3V0_ANA",
+            "distance_mm": 0.2246,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "3V0_ANA",
+              "53.0750",
+              "19.7750",
+              "53.0750",
+              "20.3750",
+              "0.4000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0749,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.112203,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "NetINA4_2",
+              "53.9750",
+              "16.8750",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.1004,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "TRACK",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0746,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetINA4_2",
+              "51.0250",
+              "16.8750",
+              "53.9750",
+              "16.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.143529,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.1501,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.239928,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "TRACK",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "VOUT_4",
+              "47.7250",
+              "20.3250",
+              "48.9750",
+              "19.0750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "TRACK",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "VOUT_4",
+              "48.9750",
+              "19.0750",
+              "52.1750",
+              "19.0750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ],
+        "free_copper_conflict_nets": [
+          "3V0_ANA",
+          "INA_OUT_4",
+          "NetCH_4_2",
+          "NetINA4_2",
+          "VOUT_4",
+          "Vc_4"
+        ],
+        "pads": [
+          {
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "center_mm": [
+              53.45,
+              19.1754
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              19.000400000000003,
+              54.0,
+              19.350399999999997
+            ]
+          },
+          {
+            "pin": "7",
+            "net": "NetINA4_7",
+            "center_mm": [
+              53.45,
+              18.525100000000002
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              18.3501,
+              54.0,
+              18.700099999999996
+            ]
+          },
+          {
+            "pin": "6",
+            "net": "Vservo_4",
+            "center_mm": [
+              53.45,
+              17.8749
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.699900000000003,
+              54.0,
+              18.049899999999997
+            ]
+          },
+          {
+            "pin": "5",
+            "net": "3V0_ANA",
+            "center_mm": [
+              53.45,
+              17.224600000000002
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.0496,
+              54.0,
+              17.399599999999996
+            ]
+          },
+          {
+            "pin": "4",
+            "net": "GND",
+            "center_mm": [
+              48.74999999999999,
+              17.224600000000002
+            ],
+            "bounds_mm": [
+              48.2,
+              17.0496,
+              49.3,
+              17.399599999999996
+            ]
+          },
+          {
+            "pin": "3",
+            "net": "NetINA4_3",
+            "center_mm": [
+              48.74999999999999,
+              17.8749
+            ],
+            "bounds_mm": [
+              48.2,
+              17.699900000000003,
+              49.3,
+              18.049899999999997
+            ]
+          },
+          {
+            "pin": "2",
+            "net": "NetINA4_2",
+            "center_mm": [
+              48.74999999999999,
+              18.525100000000002
+            ],
+            "bounds_mm": [
+              48.2,
+              18.3501,
+              49.3,
+              18.700099999999996
+            ]
+          },
+          {
+            "pin": "1",
+            "net": "GND",
+            "center_mm": [
+              48.74999999999999,
+              19.1754
+            ],
+            "bounds_mm": [
+              48.2,
+              19.000400000000003,
+              49.3,
+              19.350399999999997
+            ]
+          }
+        ]
+      },
+      "first_footprint_clear": {
+        "x_mm": 51.1,
+        "y_mm": 17.55,
+        "rotation_deg": 270,
+        "footprint_clear": true,
+        "body_bounds_mm": [
+          48.650000000000006,
+          16.05,
+          53.55,
+          19.05
+        ],
+        "fixed_footprint_blockers": [],
+        "free_copper_conflicts": [
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0746,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "53.4250",
+              "18.8750",
+              "55.4750",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "8",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "7",
+            "kind": "TRACK",
+            "net": "NetCH_4_2",
+            "distance_mm": 0.112061,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetCH_4_2",
+              "52.3750",
+              "17.8250",
+              "53.4250",
+              "18.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "NetINA4_2",
+              "53.9750",
+              "16.8750",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "VIA",
+            "net": "VOUT_4",
+            "distance_mm": 0.1001,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "VOUT_4",
+              "53.6750",
+              "17.7250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "6",
+            "kind": "TRACK",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0749,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetINA4_2",
+              "51.0250",
+              "16.8750",
+              "53.9750",
+              "16.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "GND",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "GND",
+              "53.4750",
+              "16.1750",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "VIA",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "NetINA4_2",
+              "53.9750",
+              "16.8750",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "TRACK",
+            "net": "GND",
+            "distance_mm": 0.1496,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "GND",
+              "52.4250",
+              "16.1750",
+              "53.4750",
+              "16.1750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "5",
+            "kind": "TRACK",
+            "net": "NetINA4_2",
+            "distance_mm": 0.0254,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "NetINA4_2",
+              "51.0250",
+              "16.8750",
+              "53.9750",
+              "16.8750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "4",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "3",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.143242,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "TRACK",
+            "net": "Vc_4",
+            "distance_mm": 0.025,
+            "required_mm": 0.27,
+            "source": [
+              "TRACK",
+              "Top Layer",
+              "Vc_4",
+              "49.4250",
+              "14.8250",
+              "49.4250",
+              "17.8250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "2",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.1499,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "VIA",
+            "net": "Vc_4",
+            "distance_mm": 0.24022,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "Vc_4",
+              "49.4250",
+              "17.8250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "pin": "1",
+            "kind": "VIA",
+            "net": "INA_OUT_4",
+            "distance_mm": 0.0,
+            "required_mm": 0.27,
+            "source": [
+              "VIA",
+              "INA_OUT_4",
+              "48.7250",
+              "18.4250",
+              "0.4500",
+              "0.2000"
+            ]
+          }
+        ],
+        "free_copper_conflict_nets": [
+          "GND",
+          "INA_OUT_4",
+          "NetCH_4_2",
+          "NetINA4_2",
+          "VOUT_4",
+          "Vc_4"
+        ],
+        "pads": [
+          {
+            "pin": "8",
+            "net": "INA_OUT_4",
+            "center_mm": [
+              53.45,
+              18.5254
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              18.350400000000004,
+              54.0,
+              18.7004
+            ]
+          },
+          {
+            "pin": "7",
+            "net": "NetINA4_7",
+            "center_mm": [
+              53.45,
+              17.875099999999996
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.700100000000003,
+              54.0,
+              18.050099999999997
+            ]
+          },
+          {
+            "pin": "6",
+            "net": "Vservo_4",
+            "center_mm": [
+              53.45,
+              17.2249
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              17.049900000000004,
+              54.0,
+              17.3999
+            ]
+          },
+          {
+            "pin": "5",
+            "net": "3V0_ANA",
+            "center_mm": [
+              53.45,
+              16.574599999999997
+            ],
+            "bounds_mm": [
+              52.900000000000006,
+              16.399600000000003,
+              54.0,
+              16.749599999999997
+            ]
+          },
+          {
+            "pin": "4",
+            "net": "GND",
+            "center_mm": [
+              48.74999999999999,
+              16.574599999999997
+            ],
+            "bounds_mm": [
+              48.2,
+              16.399600000000003,
+              49.3,
+              16.749599999999997
+            ]
+          },
+          {
+            "pin": "3",
+            "net": "NetINA4_3",
+            "center_mm": [
+              48.74999999999999,
+              17.2249
+            ],
+            "bounds_mm": [
+              48.2,
+              17.049900000000004,
+              49.3,
+              17.3999
+            ]
+          },
+          {
+            "pin": "2",
+            "net": "NetINA4_2",
+            "center_mm": [
+              48.74999999999999,
+              17.875099999999996
+            ],
+            "bounds_mm": [
+              48.2,
+              17.700100000000003,
+              49.3,
+              18.050099999999997
+            ]
+          },
+          {
+            "pin": "1",
+            "net": "GND",
+            "center_mm": [
+              48.74999999999999,
+              18.5254
+            ],
+            "bounds_mm": [
+              48.2,
+              18.350400000000004,
+              49.3,
+              18.7004
+            ]
+          }
+        ]
+      },
+      "tested_positions": 308,
+      "search_radius_mm": 1.5,
+      "radial_step_mm": 0.05,
+      "angular_step_deg": 15
+    }
+  ],
+  "limits": [
+    "No CAD mutations or deletion files; this tests rotation on the same Top Layer only.",
+    "All other component bodies, pads and component holes remain fixed.",
+    "Footprint pass uses 0.2 mm body gap and modeled pad clearance plus 0.02 mm guard.",
+    "Existing free copper conflicts are reported separately, not removed; all moved INA4 pins need reconnection.",
+    "Via drill conflicts, track routing, silkscreen and polygon repour are not solved by this footprint-only test.",
+    "Bodies use previously validated matching native exports, conservative current COMP boxes otherwise.",
+    "Native placement and copper DRC must validate any accepted candidate."
+  ]
+}

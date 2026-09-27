@@ -1,8 +1,9 @@
 """Gloss / straighten router copper (the "professional look" pass).
 
 For every net and copper layer, the tracks that belong to routed plan groups (never BK13 escapes, stitches or placement
-copper) are split into CHAINS between anchors: pads, vias, branch points, chain ends, and any point where other copper of
-the net (fixed copper, other layers' pads, pours are not modelled) touches.  Each chain is replaced by the simplest
+copper) are split into CHAINS between endpoint anchors: pads, vias, branch points and chain ends. Chains with other
+same-net copper contacts that are not preserved at these endpoints are conservatively skipped (pours are not modelled).
+Each eligible chain is replaced by the simplest
 octilinear path between its two anchors that passes the exact checks (clearance by rule class incl. BK13 escape zones,
 board edge, keep-outs, L5 reservation):  1 segment (straight / 45 deg), 2 segments (straight + 45 deg, both orders),
 3 segments (straight - 45 - straight, several splits).  Longer chains are string-pulled: from each anchor the farthest
@@ -11,7 +12,7 @@ segments than the original (or is >= 5 % shorter with the same count).  Width = 
 
 usage: GEOM_FILE=... BOARD_BOX=... [BK13_ZONES=...] [L5_RESERVED=...] [WINDOW=x0,y0,x1,y1]
        python gloss.py OUT_ADDS.csv OUT_DELS.csv PLAN.csv [PLAN.csv ...]
-Writes build_ops-format ADDS (new tracks, groups 'G<k>:<net>') and DELS (the replaced native tracks)."""
+Writes build_ops-format ADDS and DELS with the same per-chain group 'G<k>:<net>'."""
 import csv, math, os, sys
 from collections import defaultdict
 from shapely.geometry import LineString, Point, box
@@ -55,6 +56,34 @@ print(f'router tracks: {len(tracks)} of {sum(1 for o in objs if o.kind == "TRACK
 
 EX = G.Index(objs)
 removed = set()
+CONTACT_TOL = 1e-6  # mm; roundoff allowance for copper touching at a boundary
+
+
+def has_unpreserved_contact(chain, pts, net, layer, ignore_ids):
+    """Reject body contacts unless the other object also covers a retained endpoint.
+
+    Check actual copper envelopes, not just centerlines or fixed objects: a pad,
+    via or movable branch can touch a segment between its graph vertices. A
+    retained endpoint center inside the other copper guarantees that contact
+    survives any replacement path. Near-endpoint contacts are skipped too when
+    that guarantee cannot be made. EX includes earlier additions in this batch;
+    its stale deleted objects must not be treated as surviving copper.
+    """
+    endpoints = (Point(pts[0]), Point(pts[-1]))
+    preserved = set()
+    for c in chain:
+        for other in EX.near(c.geom, CONTACT_TOL):
+            oid = id(other)
+            if (oid in ignore_ids or oid in removed or oid in preserved
+                    or other.net != net or layer not in other.layers
+                    or other.kind not in ('PAD', 'VIA', 'TRACK', 'ARC', 'FILL', 'REGION')):
+                continue
+            if c.geom.distance(other.geom) > CONTACT_TOL:
+                continue
+            if not any(other.geom.covers(p) for p in endpoints):
+                return True
+            preserved.add(oid)
+    return False
 
 
 def legal(net, layer, w, pts, ignore_ids):
@@ -112,7 +141,7 @@ for o in objs:
     if o.kind in ('PAD', 'VIA', 'TRACK', 'ARC', 'FILL', 'REGION') and id(o) not in movable:
         anchors_other[o.net].append(o)
 
-adds, dels, k, gain_seg = [], [], 0, 0
+adds, dels, k, gain_seg, skipped_contacts = [], [], 0, 0, 0
 for (net, layer), tl in sorted(by_nl.items()):
     adj = defaultdict(list)
     ends = {}
@@ -162,6 +191,9 @@ for (net, layer), tl in sorted(by_nl.items()):
                 continue
             w = widths.pop()
             ign = {id(c) for c in chain}
+            if has_unpreserved_contact(chain, pts, net, layer, ign):
+                skipped_contacts += 1
+                continue
             # string pulling over the chain's own vertices with octilinear candidates
             new, i = [pts[0]], 0
             ok_all = True
@@ -190,13 +222,14 @@ for (net, layer), tl in sorted(by_nl.items()):
             if not (n_new < n_old or (n_new == n_old and plen(simp) < 0.95 * plen(pts))):
                 continue
             k += 1; gain_seg += n_old - n_new
+            group = f'G{k}:{net}'
             for c in chain:
                 s = c.src
-                dels.append({'kind': 'TRACK', 'group': 'GLOSS_DEL', 'net': net, 'layer': layer, 'x1': s[3], 'y1': s[4],
+                dels.append({'kind': 'TRACK', 'group': group, 'net': net, 'layer': layer, 'x1': s[3], 'y1': s[4],
                              'x2': s[5], 'y2': s[6], 'w': s[7]})
                 removed.add(id(c))
             for a_, b_ in zip(simp, simp[1:]):
-                adds.append({'kind': 'TRACK', 'group': f'G{k}:{net}', 'net': net, 'layer': layer, 'x1': round(a_[0], 4),
+                adds.append({'kind': 'TRACK', 'group': group, 'net': net, 'layer': layer, 'x1': round(a_[0], 4),
                              'y1': round(a_[1], 4), 'x2': round(b_[0], 4), 'y2': round(b_[1], 4), 'w': w, 'd': '', 'h': '',
                              'conn': 'gloss', 'relax': 0})
                 EX.add(G.track(net, layer, [a_, b_], w))
@@ -205,3 +238,4 @@ for path_, rows_ in ((out_adds, adds), (out_dels, dels)):
     with open(path_, 'w', newline='') as f:
         wr = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore', restval=''); wr.writeheader(); wr.writerows(rows_)
 print(f'glossed chains {k}: segments removed {gain_seg}; adds {len(adds)} rows, dels {len(dels)} rows')
+print(f'skipped chains with unpreserved same-net contacts: {skipped_contacts}')

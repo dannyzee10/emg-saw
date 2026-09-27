@@ -1,0 +1,59 @@
+{
+  "planning_only": true,
+  "status": "signal topology connected; requires exact full clearance check and native DRC",
+  "signal_partitions": {
+    "NetINA4_3": [
+      [
+        "INA4.3",
+        "RDD10.2",
+        "RDD12.2"
+      ]
+    ],
+    "INA_OUT_4": [
+      [
+        "CL_4.2",
+        "INA4.8",
+        "RH_4.1",
+        "Rservo_4.2"
+      ]
+    ],
+    "NetCL_4_1": [
+      [
+        "CL_4.1",
+        "RGN_4.1"
+      ]
+    ]
+  },
+  "adds": {
+    "VIA": 4,
+    "TRACK": 19
+  },
+  "deletes": {
+    "VIA": 3,
+    "TRACK": 18
+  },
+  "move": {
+    "component": "CL_4",
+    "from": [
+      51.3,
+      16.05
+    ],
+    "to": [
+      48.2,
+      16.05
+    ],
+    "side": "Bottom",
+    "rotation": 180
+  },
+  "L5_exception": {
+    "net": "NetINA4_3",
+    "copper_envelope_mm": [
+      51.2,
+      15.1,
+      57.6,
+      17.35
+    ],
+    "native_rule_change": false,
+    "ground_layers_changed": false
+  }
+}

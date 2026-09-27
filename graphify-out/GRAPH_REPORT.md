@@ -1,16 +1,16 @@
 # Graph Report - pcb-routing-0925  (2026-09-27)
 
 ## Corpus Check
-- 677 files · ~4,022,954 words
+- 942 files · ~5,435,691 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4854 nodes · 9111 edges · 540 communities (291 shown, 106 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.86)
+- 6135 nodes · 11253 edges · 675 communities (364 shown, 133 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 111 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `506d6d4a`
+- Built from commit: `39b95e40`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -51,7 +51,7 @@
 - GUI Architecture Proposal (EMG Instrument)
 - EmgPlotWidget
 - RecordingController
-- dsp.py
+- test_dsp_analytics.py
 - MvcDialog
 - Cited Findings
 - s3_000002.pas
@@ -146,12 +146,12 @@
 - compact_mainboard_20260925T115919Z/work/audit_plan.py
 - compact_mainboard_20260925T115919Z/work/build_ops.py
 - compare_pads.py
-- eb_201019.pas
+- h
 - export_baseline.pas
-- export_bodies.pas
+- repair_guided_fix.py
 - flip_probe2.pas
 - fp_210726.pas
-- xb2_214149.pas
+- router_command
 - xb_205224.pas
 - pcb_layout_2026-09-24_routing/work/audit_plan.py
 - pcb_layout_2026-09-24_routing/work/build_ops.py
@@ -179,7 +179,7 @@
 - render_plan.py
 - render_zoom.py
 - sy_234341.pas
-- test_leadoff.py
+- dsp.py
 - EmgFilters
 - ac_235440.pas
 - ad_235603.pas
@@ -189,8 +189,8 @@
 - as_000004.pas
 - plan_C2.py
 - ape_052111.pas
-- svc_swap_T.pas
-- sw_233109.pas
+- router_command
+- routed_plans
 - c2lib.py
 - emg_features.py
 - c2audit.py
@@ -210,8 +210,8 @@
 - exists
 - probe_libread_T.pas
 - exists
-- bw_001620.pas
-- bx_235734.pas
+- routed_plans
+- preserved
 - export_bodies_T.pas
 - make_apply_c2.py
 - make_svc_swap3.py
@@ -329,7 +329,7 @@
 - render_parts.py
 - a6t_001212.pas
 - g6r_225457.pas
-- consistent_repair.py
+- ConsistentRepairTests
 - a6u_004421.pas
 - g6s_232727.pas
 - g6t_001212.pas
@@ -405,25 +405,125 @@
 - apz_173925.pas
 - Handoff to Astra — C2 6-layer EMG main board: finish the routing (27 Sep 2026, 21:xx)
 - uartswap_T.pas
-- usw_163913.pas
+- router_command
 - gaz_173925.pas
 - merge_rounds.py
 - prune_chain.py
 - gay_163913.pas
 - sdm2_162742.pas
 - neg_sweep.py
+- astra_verify_routing_delta.py
+- .check
+- astra_verify_via_rule_delta.py
+- astra_apba_185646.pas
+- astra_apbb_191935.pas
+- astra_apbc_200754.pas
+- astra_apbd_202424.pas
+- astra_apbe_204152.pas
+- astra_apbe_ready_205633.pas
+- astra_apbf_final_211832.pas
+- astra_apbf_ready_211056.pas
+- astra_apbg_220654.pas
+- astra_apbg_final_222332.pas
+- astra_apbg_rebased_223912.pas
+- astra_apbh_225024.pas
+- astra_apbh_centered_225113.pas
+- astra_apbj_230930.pas
+- drc
+- GlossContactTests
+- astra_audit_trace_rules.py
+- NativeTraceRuleTests
+- inventory
+- explicit_seed
+- ASTRA_BF_CS_BOTTOM_PLANNING_ONLY/MANIFEST.json
+- ASTRA_BF_CS_SEEDED_PLANNING_ONLY/MANIFEST.json
+- ASTRA_BF_TX_SEEDED_PLANNING_ONLY/MANIFEST.json
+- astra_verify_pcb_structure.py
+- ASTRA_CH4_LOCAL2_PLANNING_ONLY/MANIFEST.json
+- astra_align_via_rule_T.pas
+- astra_viabi_225318.pas
+- All free trace audit and via evidence — 2026-09-27
+- Channel 4 routing correction — native checkpoint BC
+- Routing completion and all-trace check — BJ, 27 September 2026
+- SeedPlansTests
+- BF testpad relocation and MCU92 escape: planning evidence
+- All-trace verification coverage review
+- Gloss contact guard: code and synthetic test evidence, 27 September 2026
+- Guided partial-rip corridor and seed plan inputs, 27 September 2026
+- MCU UART RX routed — native checkpoint BF
+- Radio UART RX routed — native checkpoint BE
+- Vc_1 native routing checkpoint BD — 27 September 2026
+- astra_gaz_185646.pas
+- astra_gba_185646.pas
+- astra_gbb_191935.pas
+- astra_gbc_200755.pas
+- astra_gbd_202424.pas
+- astra_gbe_204152.pas
+- astra_gbf_210912.pas
+- astra_gbfs_223242.pas
+- astra_gbg_220655.pas
+- astra_gbgm_224135.pas
+- astra_gbh_225024.pas
+- astra_gbi_225714.pas
+- astra_gbj_230930.pas
+- astra_move_cl4_T.pas
+- astra_mvcl4_200754.pas
+- astra_tp_gnd_dig_move_scan.py
+- astra_unsavedbf_222959.pas
+- Combined bounded cleanup of all ten BH antenna warnings
+- astra_ch4_trial.py
+- astra_check_mcu_rx_power_graph.py
+- astra_check_mcu_rx_reinforced_graph.py
+- astra_check_uart_partial_graph.py
+- astra_check_uart_rx1_graph.py
+- astra_cl4_feasibility.py
+- astra_cs_tx_local_detour.py
+- astra_finalize_bj.py
+- astra_mcu92_inward_seed_check.py
+- astra_move_gnd_tp_T.pas
+- astra_mvbgm_224135.pas
+- MCU_WIFI_UART_RX candidate review
+- Two remaining BF opens: independent routing constraints
+- astra_check_ch4_candidate.py
+- astra_check_vc1_l5_paths.py
+- astra_cs_ground_stitch_sites.py
+- astra_cs_source_seed_check.py
+- astra_final_escape_sites.py
+- astra_ina4_rotation_feasibility.py
+- astra_scan_ina4_via.py
+- astra_tx_final_junction_review.py
+- astra_tx_link_seed_check.py
+- ASTRA_BC_TRANSLATION_VERIFIER.md
+- ASTRA_BD_INDEPENDENT_REVIEW.md
+- ASTRA_BE_INDEPENDENT_REVIEW.md
+- ASTRA_BF_FINAL_ESCAPE_REVIEW.md
+- ASTRA_BF_INDEPENDENT_REVIEW.md
+- ASTRA_BG_ANTENNA_BOUNDED_REVIEW.md
+- ASTRA_BG_CS_RETURN_REVIEW.md
+- ASTRA_BH_BI_RULE_OPTIONS_REVIEW.md
+- ASTRA_BH_INDEPENDENT_REVIEW.md
+- ASTRA_BJ_INDEPENDENT_REVIEW.md
+- ASTRA_FREE_PAD_DELTA_ALLOWANCE.md
+- ASTRA_INA4_VIA_SCAN_BB.md
+- ASTRA_NETINA4_3_ROUTING_LAYERS_REVIEW.md
+- ASTRA_VC1_L5_REVIEW_BC.md
+- ASTRA_VC1_NATIVE_RULE_REVIEW_BC.md
+- ASTRA_WIFI_UART_RX_NATIVE_RULE_REVIEW_BD.md
+- astra_route_seed.py
+- clearance_diff.py
+- clearance_scan.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `EmgScope` - 85 edges
-2. `ReviewWindow` - 36 edges
-3. `C2 6-layer routing completion — resume note (keep this file current)` - 29 edges
-4. `EmgFilters` - 23 edges
-5. `EMG main-board PCB implementation brief — Astra` - 20 edges
-6. `MvcDialog` - 19 edges
-7. `RunFixed()` - 19 edges
-8. `RunFixed()` - 19 edges
-9. `RunFixed()` - 19 edges
-10. `RunFixed()` - 19 edges
+2. `router_command` - 38 edges
+3. `router_command` - 38 edges
+4. `router_command` - 38 edges
+5. `ReviewWindow` - 36 edges
+6. `routed_plans` - 34 edges
+7. `routed_plans` - 34 edges
+8. `C2 6-layer routing completion — resume note (keep this file current)` - 34 edges
+9. `EmgFilters` - 23 edges
+10. `EMG main-board PCB implementation brief — Astra` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Test Engineer (team note)` --semantically_similar_to--> `Test Engineer Agent`  [INFERRED] [semantically similar]
@@ -447,11 +547,11 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (540 total, 106 thin omitted)
+## Communities (675 total, 133 thin omitted)
 
 ### Community 0 - "EmgScope"
 Cohesion: 0.05
-Nodes (16): EmgScope, Envelope smoothing per the configured Amplitude-Norm algorithm + window. `base`…, Absolute volts in -> displayed volts out (coupling + optional filters)., #9 Save Data step after a test recording: name it (Save & View / Save /…, Open a saved recording in the View/Review window (playback + Operations +…, Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +…, Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off)., Guide the Record -> Pause -> Stop activity with a contextual step hint. (+8 more)
+Nodes (17): EmgScope, Envelope smoothing per the configured Amplitude-Norm algorithm + window. `base`…, Absolute volts in -> displayed volts out (coupling + optional filters)., #9 Save Data step after a test recording: name it (Save & View / Save /…, Open a saved recording in the View/Review window (playback + Operations +…, Rename the just-saved CSV to include the user's name (keeps the emg_ prefix +…, Quick numeric 'view' of a saved recording (per-channel RMS / pk-pk / lead-off)., Guide the Record -> Pause -> Stop activity with a contextual step hint. (+9 more)
 
 ### Community 1 - "EMG Bring-up Checkpoint Log"
 Cohesion: 0.06
@@ -549,9 +649,9 @@ Nodes (6): EmgPlotWidget, Holds the GraphicsLayoutWidget, per-channel plots, cur
 Cohesion: 0.17
 Nodes (6): RecordingController – manages CSV recording independent of the GUI., Open a new CSV file and write metadata header., Write a chunk of raw samples to the file. `new_data` shape (n_samples, nch)., Write a marker line (preceded by #) to the file., Handles opening, writing, and closing a CSV file for raw EMG data., RecordingController
 
-### Community 39 - "dsp.py"
+### Community 39 - "test_dsp_analytics.py"
 Cohesion: 0.10
-Nodes (31): cocontraction_index(), fatigue_trend(), iemg(), mean_frequency(), median_frequency(), onset_offset(), Display-side signal processing (done on the laptop, so you can tweak live —…, Integrated EMG (iEMG): area under the full-wave-rectified signal, ∫|EMG| dt… (+23 more)
+Nodes (29): cocontraction_index(), fatigue_trend(), iemg(), mean_frequency(), median_frequency(), onset_offset(), Integrated EMG (iEMG): area under the full-wave-rectified signal, ∫|EMG| dt…, Mean power-frequency MNF (Hz): the spectral centroid MNF = Σ f·P(f) / Σ P(f)… (+21 more)
 
 ### Community 40 - "MvcDialog"
 Cohesion: 0.09
@@ -602,8 +702,8 @@ Cohesion: 0.22
 Nodes (24): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary(), CopyFootprint(), CountPads(), FindComp() (+16 more)
 
 ### Community 53 - "sx_233624.pas"
-Cohesion: 0.22
-Nodes (23): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary(), CopyFootprint(), CountPads(), FindComp() (+15 more)
+Cohesion: 0.08
+Nodes (58): layer, AddLibToProject(), AddNpth(), AddSmd(), BuildLibrary(), FindComp(), FindNet(), Line() (+50 more)
 
 ### Community 54 - "router4.py"
 Cohesion: 0.11
@@ -694,8 +794,8 @@ Cohesion: 0.10
 Nodes (20): 10. STM32 and ADC details, 11. ST67, SPI, crystal, and antenna, 12. USB, charger, converter, gauge, and remote NTC, 13. Copper pours, vias, and return paths, 14. Test access and connector serviceability, 15. BK13 mechanical contract, 16. Following routing stage: sequence and checks, 17. Verification and honest acceptance criteria (+12 more)
 
 ### Community 78 - "compact_mainboard_20260925T115919Z/work/geom.py"
-Cohesion: 0.13
-Nodes (15): base_clr(), hole_gap(), in_zone(), Index, _inside(), load(), Obj, pad_poly() (+7 more)
+Cohesion: 0.11
+Nodes (17): main(), Small fixed via-site/stub checks for WIFI_UART_RX; no router or CAD writes., base_clr(), hole_gap(), in_zone(), Index, _inside(), load() (+9 more)
 
 ### Community 79 - "pcb_layout_2026-09-24_routing/work/geom.py"
 Cohesion: 0.14
@@ -881,13 +981,25 @@ Nodes (3): Counts(), RunFixed(), Say()
 Cohesion: 0.18
 Nodes (10): R(), world point of part p (B state) -> part-local coordinates, to_local(), to_world(), Where should each kept thermal via be (owner part transform), and where is it…, C2 fix pass: ops from the SAVED NATIVE state (GEOMETRY_C2_PLACED.txt) to the…, Generate work/C2_OPS.txt for apply_C2.pas from the audited plan (plan_C2.pkl)…, load() (+2 more)
 
+### Community 134 - "h"
+Cohesion: 0.17
+Nodes (11): h, MM(), RunFixed(), MM(), RunFixed(), MM(), RunFixed(), MM() (+3 more)
+
+### Community 136 - "repair_guided_fix.py"
+Cohesion: 0.05
+Nodes (63): access_mask(), bk13_groups(), commit_exact(), _dead(), disk(), exact_ok(), _fail(), fixed_path_victims() (+55 more)
+
+### Community 139 - "router_command"
+Cohesion: 0.04
+Nodes (47): allowed_move, component, delta_x_mm, delta_y_mm, base_sha256, explicit_seeds, initial_deletions, C:\\Users\\PMLS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe (+39 more)
+
 ### Community 200 - "sy_234341.pas"
 Cohesion: 0.22
 Nodes (23): AddLibToProject(), AddNpth(), AddSmd(), AssignNets(), BuildLibrary(), CopyFootprint(), CountPads(), FindComp() (+15 more)
 
-### Community 201 - "test_leadoff.py"
-Cohesion: 0.13
-Nodes (25): leadoff_report(), leadoff_status(), LeadoffTracker, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, Analyse one RAW (un-notched, absolute-volt) single-channel window; return…, load(), main() (+17 more)
+### Community 201 - "dsp.py"
+Cohesion: 0.12
+Nodes (26): leadoff_report(), leadoff_status(), LeadoffTracker, Display-side signal processing (done on the laptop, so you can tweak live —…, Back-compatible wrapper: just the state string from :func:`leadoff_report`., Per-channel electrode lead-off with temporal hysteresis (no flicker) and a…, Analyse one RAW (un-notched, absolute-volt) single-channel window; return…, load() (+18 more)
 
 ### Community 202 - "EmgFilters"
 Cohesion: 0.05
@@ -925,13 +1037,13 @@ Nodes (16): at(), at2(), chan_left(), chan_right(), outward(), pin_xy(), put(), 
 Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
-### Community 211 - "svc_swap_T.pas"
-Cohesion: 0.27
-Nodes (17): AddLibToProject(), AddNpth(), AddSmd(), BuildLibrary(), FindComp(), FindNet(), Line(), MM() (+9 more)
+### Community 211 - "router_command"
+Cohesion: 0.04
+Nodes (47): allowed_move, component, delta_x_mm, delta_y_mm, base_sha256, explicit_seeds, initial_deletions, C:\\Users\\PMLS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe (+39 more)
 
-### Community 212 - "sw_233109.pas"
-Cohesion: 0.27
-Nodes (17): AddLibToProject(), AddNpth(), AddSmd(), BuildLibrary(), FindComp(), FindNet(), Line(), MM() (+9 more)
+### Community 212 - "routed_plans"
+Cohesion: 0.05
+Nodes (43): hashes, ..\\evidence\\ASTRA_BF_FINAL_BOTH_SEEDS.csv, ..\\evidence\\DRC_C2_6L_BF.json, ..\\evidence\\GEOMETRY_C2_6L_BF.txt, ASTRA_MCU_RX_REINFORCED_ADDS, ASTRA_REP_BA1_ADDS_OK, ASTRA_UART_READY_ADDS, BATCH_C_OK (+35 more)
 
 ### Community 213 - "c2lib.py"
 Cohesion: 0.15
@@ -1008,6 +1120,14 @@ Nodes (3): CountPrims(), RunFixed(), Say()
 ### Community 231 - "exists"
 Cohesion: 0.67
 Nodes (3): exists, RunFixed(), Say()
+
+### Community 232 - "routed_plans"
+Cohesion: 0.05
+Nodes (43): hashes, ..\\evidence\\ASTRA_BGM_TX_SEED_ADDS.csv, ..\\evidence\\DRC_C2_6L_BGM.json, ..\\evidence\\GEOMETRY_C2_6L_BGM.txt, ASTRA_MCU_RX_REINFORCED_ADDS, ASTRA_REP_BA1_ADDS_OK, ASTRA_UART_READY_ADDS, BATCH_C_OK (+35 more)
+
+### Community 233 - "preserved"
+Cohesion: 0.10
+Nodes (27): detail(), main(), Check only the four BG antenna branches, preserving the L5 interior junction., row(), desc(), main(), Bounded read-only contact and removal review of four new BG antenna tracks., desc() (+19 more)
 
 ### Community 261 - "apply_ops_T.pas"
 Cohesion: 0.26
@@ -1230,8 +1350,8 @@ Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 353 - "C2 6-layer routing completion — resume note (keep this file current)"
-Cohesion: 0.07
-Nodes (29): C2 6-layer routing completion — resume note (keep this file current), HANDOFF 21:xx (27 Sep): work paused by the user and handed to Astra -> read `HANDOFF_ASTRA_2026-09-27.md` first, How to run things (work/), Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written, Remaining after routing, State at 01:40 (27 Sep), State at 02:55 (27 Sep), State at 03:45 (27 Sep) (+21 more)
+Cohesion: 0.05
+Nodes (36): Astra update — 27 Sep 2026, 19:10 local (actual native timestamps), Astra update — 27 September 2026, state BB, C2 6-layer routing completion — resume note (keep this file current), CURRENT — Astra BF, 27 Sep2026, native DRC completed21:22:37local, CURRENT: BJ — routing complete and all-trace checks, 27 September 2026, HANDOFF 21:xx (27 Sep): work paused by the user and handed to Astra -> read `HANDOFF_ASTRA_2026-09-27.md` first, How to run things (work/), Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written (+28 more)
 
 ### Community 354 - "g6g_171149.pas"
 Cohesion: 0.80
@@ -1320,6 +1440,10 @@ Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Count
 ### Community 401 - "g6r_225457.pas"
 Cohesion: 0.80
 Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 402 - "ConsistentRepairTests"
+Cohesion: 0.10
+Nodes (19): checked_drops(), main(), make_consistent(), Check repair.py output, dropping failed repairs together with victim reroutes.…, --drop-bad deliberately returns 0 for removable geometric problems., read_rows(), repair_id(), RepairCheckError (+11 more)
 
 ### Community 405 - "a6u_004421.pas"
 Cohesion: 0.26
@@ -1426,8 +1550,8 @@ Cohesion: 0.22
 Nodes (19): CloseTo(), Fail(), FindComp(), FindFreePad(), FindKeepout(), FindPoly(), FindRule(), FindTrack() (+11 more)
 
 ### Community 454 - "gloss.py"
-Cohesion: 0.22
-Nodes (3): octi_paths(), Gloss / straighten router copper (the "professional look" pass). For every net…, simple octilinear candidates from a to b (lists of points), fewest segments…
+Cohesion: 0.18
+Nodes (5): has_unpreserved_contact(), octi_paths(), Gloss / straighten router copper (the "professional look" pass). For every net…, simple octilinear candidates from a to b (lists of points), fewest segments…, Reject body contacts unless the other object also covers a retained endpoint.…
 
 ### Community 455 - "gag_055739.pas"
 Cohesion: 0.80
@@ -1590,16 +1714,16 @@ Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 526 - "Handoff to Astra — C2 6-layer EMG main board: finish the routing (27 Sep 2026, 21:xx)"
-Cohesion: 0.18
-Nodes (10): 0. Prompt for Astra (read this first), 1. Paths, 2. Board facts (locked), 3. Where we are right now, 4. Next step: write MERGE_I -> state BA (one process at a time), 5. How the remaining 6 were being attacked (and the commands), 6. What was done today and WHY (short), 7. After the routing is complete (agreed with the user) (+2 more)
+Cohesion: 0.08
+Nodes (22): Finishing-tool readiness — read-only review, 27 September 2026, Gloss: usable generator, with specific limitations, Repair-checker failure handling fixed separately from CAD, Silk: no ready cleanup writer in this project, Via rule and batch-category API readiness, Width pass: native setter exists; automatic sizing planner does not, Repair-checker regression evidence, BA inventory and DRC coverage (+14 more)
 
 ### Community 527 - "uartswap_T.pas"
-Cohesion: 0.33
-Nodes (14): AddLabel(), At(), FindComp(), FindNet(), Mi(), Nets(), PadNet(), RunFixed() (+6 more)
+Cohesion: 0.15
+Nodes (29): w, AddLabel(), At(), FindComp(), FindNet(), Mi(), Nets(), PadNet() (+21 more)
 
-### Community 528 - "usw_163913.pas"
-Cohesion: 0.33
-Nodes (14): AddLabel(), At(), FindComp(), FindNet(), Mi(), Nets(), PadNet(), RunFixed() (+6 more)
+### Community 528 - "router_command"
+Cohesion: 0.05
+Nodes (38): C:\\Users\\PMLS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe, ..\\evidence\\ASTRA_REP_BA1_ADDS_OK.csv, ..\\evidence\\BATCH_C_OK.csv, ..\\evidence\\MERGE_G_ADDS_OK.csv, ..\\evidence\\MERGE_I_ADDS_OK.csv, ..\\evidence\\REG_ANA_ADDS_OK.csv, ..\\evidence\\REG_MCU_ADDS_OK.csv, ..\\evidence\\REP_AC_ADDS_OK.csv (+30 more)
 
 ### Community 529 - "gaz_173925.pas"
 Cohesion: 0.80
@@ -1613,25 +1737,293 @@ Nodes (4): MM(), NetOf(), RectS(), RunFixed()
 Cohesion: 0.83
 Nodes (3): Mi(), RunFixed(), Say()
 
+### Community 540 - "astra_verify_routing_delta.py"
+Cohesion: 0.14
+Nodes (21): Four short exact-collision alternatives for the CS candidate's thin 3V3 feed., Read-only proof before pruning two obsolete power-stub tracks in a proposal., check_free_pad_translations(), check_translations(), counter_difference(), counts(), geometry(), key() (+13 more)
+
+### Community 541 - ".check"
+Cohesion: 0.13
+Nodes (3): FreePadTranslationVerification, Small native-export fixtures exercise the authorized translation boundary., TranslationVerification
+
+### Community 542 - "astra_verify_via_rule_delta.py"
+Cohesion: 0.20
+Nodes (13): byte_diagnostic(), compare(), framed_binary_records(), main(), masked(), Read-only saved-board verification of the authorized BH-to-BI rule edit. Allows…, Diagnostic only: accept observed tag/u32-length framing iff header agrees., selection() (+5 more)
+
+### Community 543 - "astra_apba_185646.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 544 - "astra_apbb_191935.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 545 - "astra_apbc_200754.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 546 - "astra_apbd_202424.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 547 - "astra_apbe_204152.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 548 - "astra_apbe_ready_205633.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 549 - "astra_apbf_final_211832.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 550 - "astra_apbf_ready_211056.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 551 - "astra_apbg_220654.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 552 - "astra_apbg_final_222332.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 553 - "astra_apbg_rebased_223912.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 554 - "astra_apbh_225024.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 555 - "astra_apbh_centered_225113.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 556 - "astra_apbj_230930.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 557 - "drc"
+Cohesion: 0.15
+Nodes (16): main(), Read-only verification of the bounded BI-to-BJ antenna cleanup., sha(), main(), Read-only native BFS-to-BG verification preserving the saved user trace edit., sha(), main(), Read-only native BE-to-BF review of the final reinforced MCU RX candidate. (+8 more)
+
+### Community 558 - "GlossContactTests"
+Cohesion: 0.27
+Nodes (5): dogleg(), GlossContactTests, pad(), Small synthetic regressions; never load board geometry or launch native CAD., track()
+
+### Community 559 - "astra_audit_trace_rules.py"
+Cohesion: 0.23
+Nodes (14): audit(), choose_rule(), main(), mm(), net_classes(), Read-only audit of every exported free copper track and via against saved…, scope_matches(), text_records() (+6 more)
+
+### Community 560 - "NativeTraceRuleTests"
+Cohesion: 0.28
+Nodes (5): NativeTraceRuleTests, Small rule-selection regressions; no PCB file, CAD, router or geometry engine., rule(), track(), via()
+
+### Community 561 - "inventory"
+Cohesion: 0.29
+Nodes (7): copper_layer(), inventory(), main(), Informational inventory of exported free copper tracks; never edits CAD.…, Focused cases for an informational, export-precision copper inventory., track(), TrackShapeInventoryTests
+
+### Community 562 - "explicit_seed"
+Cohesion: 0.18
+Nodes (11): explicit_seed, conn, d, group, kind, net, relax, x1 (+3 more)
+
+### Community 563 - "ASTRA_BF_CS_BOTTOM_PLANNING_ONLY/MANIFEST.json"
+Cohesion: 0.20
+Nodes (9): hashes, ..\\evidence\\ASTRA_BF_CS_ESCAPE_SEED_ADDS.csv, ..\\evidence\\DRC_C2_6L_BF.json, ..\\evidence\\GEOMETRY_C2_6L_BF.txt, native_base, native_drc, seed, seed_rows (+1 more)
+
+### Community 564 - "ASTRA_BF_CS_SEEDED_PLANNING_ONLY/MANIFEST.json"
+Cohesion: 0.20
+Nodes (9): hashes, ..\\evidence\\ASTRA_BF_CS_ESCAPE_SEED_ADDS.csv, ..\\evidence\\DRC_C2_6L_BF.json, ..\\evidence\\GEOMETRY_C2_6L_BF.txt, native_base, native_drc, seed, seed_rows (+1 more)
+
+### Community 565 - "ASTRA_BF_TX_SEEDED_PLANNING_ONLY/MANIFEST.json"
+Cohesion: 0.20
+Nodes (9): hashes, ..\\evidence\\ASTRA_BF_TX_LINK_ESCAPE_SEED_ADDS.csv, ..\\evidence\\DRC_C2_6L_BF.json, ..\\evidence\\GEOMETRY_C2_6L_BF.txt, native_base, native_drc, seed, seed_rows (+1 more)
+
+### Community 566 - "astra_verify_pcb_structure.py"
+Cohesion: 0.36
+Nodes (9): board_group(), body_diagnostic(), compare(), main(), Read-only protected-stream comparison for a saved Altium routing-only edit.…, Explain model metadata differences without waiving raw-byte failures., sha(), snapshot() (+1 more)
+
+### Community 567 - "ASTRA_CH4_LOCAL2_PLANNING_ONLY/MANIFEST.json"
+Cohesion: 0.22
+Nodes (8): allowed_move, component, delta_x_mm, delta_y_mm, base_sha256, initial_deletions, native_base, status
+
+### Community 568 - "astra_align_via_rule_T.pas"
+Cohesion: 0.50
+Nodes (8): AuditVias(), CheckPreserved(), FindExactRule(), LogRule(), NearMM(), RuleCount(), RunFixed(), Say()
+
+### Community 569 - "astra_viabi_225318.pas"
+Cohesion: 0.50
+Nodes (8): AuditVias(), CheckPreserved(), FindExactRule(), LogRule(), NearMM(), RuleCount(), RunFixed(), Say()
+
+### Community 570 - "All free trace audit and via evidence — 2026-09-27"
+Cohesion: 0.29
+Nodes (6): All free trace audit and via evidence — 2026-09-27, Five outline findings, Informational shape inventory, JLCPCB primary sources, Native DRC coverage, Saved rule audit
+
+### Community 571 - "Channel 4 routing correction — native checkpoint BC"
+Cohesion: 0.29
+Nodes (6): Actual DRC disposition, Applied correction, Channel 4 routing correction — native checkpoint BC, Native evidence, Next work, Preservation limitations
+
+### Community 572 - "Routing completion and all-trace check — BJ, 27 September 2026"
+Cohesion: 0.29
+Nodes (6): Actual final checks, Changes actually made, Evidence and next operation, Open this project, Remaining work and limits, Routing completion and all-trace check — BJ, 27 September 2026
+
+### Community 574 - "BF testpad relocation and MCU92 escape: planning evidence"
+Cohesion: 0.33
+Nodes (5): BF testpad relocation and MCU92 escape: planning evidence, Exact sources, Joint pending-CS result, Limits, Saved-BF pad-only move
+
+### Community 575 - "All-trace verification coverage review"
+Cohesion: 0.40
+Nodes (4): All-trace verification coverage review, Gloss and finishing are not all-trace electrical verification, Native coverage: width and clearance present; categories 9 and 11 absent, Offline checks cover different, narrower questions
+
+### Community 576 - "Gloss contact guard: code and synthetic test evidence, 27 September 2026"
+Cohesion: 0.40
+Nodes (4): Changes, Focused test result, Gloss contact guard: code and synthetic test evidence, 27 September 2026, Limits and integration
+
+### Community 577 - "Guided partial-rip corridor and seed plan inputs, 27 September 2026"
+Cohesion: 0.40
+Nodes (4): Guided partial-rip corridor and seed plan inputs, 27 September 2026, Planner correction, Seed wrapper correction, Test evidence
+
+### Community 578 - "MCU UART RX routed — native checkpoint BF"
+Cohesion: 0.40
+Nodes (4): Actual applied change, Current checkpoint, MCU UART RX routed — native checkpoint BF, Measured evidence
+
+### Community 579 - "Radio UART RX routed — native checkpoint BE"
+Cohesion: 0.40
+Nodes (4): Applied change, Continuation, Radio UART RX routed — native checkpoint BE, Verification
+
+### Community 580 - "Vc_1 native routing checkpoint BD — 27 September 2026"
+Cohesion: 0.40
+Nodes (4): Applied change, Limits and continuation, Native results, Vc_1 native routing checkpoint BD — 27 September 2026
+
+### Community 581 - "astra_gaz_185646.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 582 - "astra_gba_185646.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 583 - "astra_gbb_191935.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 584 - "astra_gbc_200755.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 585 - "astra_gbd_202424.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 586 - "astra_gbe_204152.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 587 - "astra_gbf_210912.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 588 - "astra_gbfs_223242.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 589 - "astra_gbg_220655.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 590 - "astra_gbgm_224135.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 591 - "astra_gbh_225024.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 592 - "astra_gbi_225714.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 593 - "astra_gbj_230930.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 594 - "astra_move_cl4_T.pas"
+Cohesion: 0.80
+Nodes (4): FindCap(), PadNet(), RunFixed(), Say()
+
+### Community 595 - "astra_mvcl4_200754.pas"
+Cohesion: 0.80
+Nodes (4): FindCap(), PadNet(), RunFixed(), Say()
+
+### Community 596 - "astra_tp_gnd_dig_move_scan.py"
+Cohesion: 0.70
+Nodes (4): describe(), hits(), main(), Tiny BF planning scan: translate only TP_GND_DIG, retaining every track.
+
+### Community 597 - "astra_unsavedbf_222959.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 598 - "Combined bounded cleanup of all ten BH antenna warnings"
+Cohesion: 0.50
+Nodes (3): Combined bounded cleanup of all ten BH antenna warnings, Proof and limits, Ten warnings and bounded treatment
+
+### Community 600 - "astra_check_mcu_rx_power_graph.py"
+Cohesion: 0.67
+Nodes (3): main(), partitions(), Small read-only connectivity check for the final UART partial reroutes.
+
+### Community 601 - "astra_check_mcu_rx_reinforced_graph.py"
+Cohesion: 0.67
+Nodes (3): main(), partitions(), Small read-only connectivity check for the final UART partial reroutes.
+
+### Community 602 - "astra_check_uart_partial_graph.py"
+Cohesion: 0.67
+Nodes (3): main(), partitions(), Small read-only connectivity check for the final UART partial reroutes.
+
+### Community 603 - "astra_check_uart_rx1_graph.py"
+Cohesion: 0.67
+Nodes (3): main(), partitions(), Small read-only connectivity check for the final UART partial reroutes.
+
+### Community 604 - "astra_cl4_feasibility.py"
+Cohesion: 0.67
+Nodes (3): main(), Offline CL_4 placement feasibility using place_part.py; never edits CAD., records()
+
+### Community 605 - "astra_cs_tx_local_detour.py"
+Cohesion: 0.67
+Nodes (3): describe(), main(), Small exact local CS detour trials with moved testpad and fixed TX escape.
+
+### Community 607 - "astra_mcu92_inward_seed_check.py"
+Cohesion: 0.67
+Nodes (3): details(), main(), Small fixed-BF inward MCU92 escape scan; no router or CAD writes.
+
+### Community 608 - "astra_move_gnd_tp_T.pas"
+Cohesion: 0.83
+Nodes (3): FindPad(), RunFixed(), Say()
+
+### Community 609 - "astra_mvbgm_224135.pas"
+Cohesion: 0.83
+Nodes (3): FindPad(), RunFixed(), Say()
+
 ## Knowledge Gaps
-- **481 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+476 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1274 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **106 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **803 isolated node(s):** `native_base`, `native_drc`, `seed`, `seed_rows`, `..\\evidence\\GEOMETRY_C2_6L_BF.txt` (+798 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1797 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **133 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `RecordingController`, `dsp.py`, `MvcDialog`, `test_leadoff.py`, `EmgFilters`, `AmpNormDialog`, `ProcessingDialog`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `SaveRecordingDialog` connect `MvcDialog` to `EmgScope`, `emg_plotter.py`?**
+- **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgPlotWidget`, `RecordingController`, `MvcDialog`, `dsp.py`, `EmgFilters`, `AmpNormDialog`, `ProcessingDialog`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `dsp.py`, `MvcDialog`, `emg_features.py`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `explicit_seed` connect `explicit_seed` to `uartswap_T.pas`, `sx_233624.pas`, `h`, `ASTRA_CH4_LOCAL2_PLANNING_ONLY/MANIFEST.json`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `layer` connect `sx_233624.pas` to `sy_234341.pas`, `s3_000002.pas`, `svc_swap3_T.pas`, `sc_234902.pas`, `explicit_seed`, `svc_swap2_T.pas`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `EmgScope` (e.g. with `EmgFilters` and `LeadoffTracker`) actually correct?**
   _`EmgScope` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `ReviewWindow` (e.g. with `EmgScope` and `EmgFilters`) actually correct?**
   _`ReviewWindow` has 4 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 4 inferred relationships involving `EmgFilters` (e.g. with `EmgScope` and `MvcDialog`) actually correct?**
-  _`EmgFilters` has 4 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope` to the rest of the system?**
-  _481 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `native_base`, `native_drc`, `seed` to the rest of the system?**
+  _803 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `EmgScope` be split into smaller, more focused modules?**
+  _Cohesion score 0.04750512645249488 - nodes in this community are weakly interconnected._

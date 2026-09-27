@@ -1,0 +1,445 @@
+{
+  "observed_scope_passed": true,
+  "unchanged_exported_groups": {
+    "pads": true,
+    "comps": true,
+    "fixed": true
+  },
+  "exported_group_counts": {
+    "pads": 812,
+    "comps": 231,
+    "fixed": 1629
+  },
+  "free_counts_before": {
+    "TRACK": 2236,
+    "VIA": 460
+  },
+  "free_counts_after": {
+    "TRACK": 2237,
+    "VIA": 460
+  },
+  "removed_free_copper": [
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.925,
+        12.425,
+        22.375,
+        12.875,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.9250|12.4250|22.3750|12.8750|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.925,
+        12.375,
+        21.925,
+        12.425,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.9250|12.3750|21.9250|12.4250|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.875,
+        12.325,
+        21.925,
+        12.375,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.8750|12.3250|21.9250|12.3750|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.875,
+        12.175,
+        21.875,
+        12.325,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.8750|12.1750|21.8750|12.3250|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.625,
+        11.925,
+        21.875,
+        12.175,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.6250|11.9250|21.8750|12.1750|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.625,
+        11.125,
+        21.625,
+        11.925,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.6250|11.1250|21.6250|11.9250|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    }
+  ],
+  "added_free_copper": [
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        22.6,
+        12.694,
+        22.6,
+        12.912,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|22.6000|12.6940|22.6000|12.9120|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        22.4593,
+        12.5533,
+        22.6,
+        12.694,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|22.4593|12.5533|22.6000|12.6940|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        22.0533,
+        12.5533,
+        22.4593,
+        12.5533,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|22.0533|12.5533|22.4593|12.5533|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.9386,
+        12.4386,
+        21.9386,
+        12.4386,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.9386|12.4386|21.9386|12.4386|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.9386,
+        12.4386,
+        22.0533,
+        12.5533,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.9386|12.4386|22.0533|12.5533|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.625,
+        12.125,
+        21.9386,
+        12.4386,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.6250|12.1250|21.9386|12.4386|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    },
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.625,
+        11.125,
+        21.625,
+        12.125,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.6250|11.1250|21.6250|12.1250|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    }
+  ],
+  "zero_length_added_tracks": [
+    {
+      "kind": "TRACK",
+      "net": "NetJ_FPC1_8",
+      "layer": "Top Layer",
+      "values": [
+        21.9386,
+        12.4386,
+        21.9386,
+        12.4386,
+        0.2
+      ],
+      "source": "TRACK|Top Layer|NetJ_FPC1_8|21.9386|12.4386|21.9386|12.4386|0.2000|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    }
+  ],
+  "user_net_graph": {
+    "before_component_count": 1,
+    "after_component_count": 1,
+    "retained_connections_preserved": true,
+    "pad_components_before": {
+      "J_FPC1.8": 1,
+      "R_VREF1.2": 1
+    },
+    "pad_components_after": {
+      "J_FPC1.8": 1,
+      "R_VREF1.2": 1
+    },
+    "j_fpc1_pin8_r_vref1_pin2_connected": true
+  },
+  "cs_rebase": {
+    "all_48_deletions_still_match_uniquely": true,
+    "candidate_never_touches_user_edited_net": true,
+    "deletion_matches": [
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:2",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:3",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:4",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:5",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:6",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:7",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:8",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:9",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:10",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:11",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:12",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:13",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:14",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:15",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:16",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:17",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:18",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:19",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:20",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:21",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:22",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:23",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:24",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:25",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:26",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:27",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:28",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:29",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:30",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:31",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:32",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:33",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:34",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:35",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:36",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:37",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:38",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:39",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:40",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:41",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:42",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:43",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:44",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:45",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:46",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:47",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:48",
+        "match_count": 1
+      },
+      {
+        "row": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv:49",
+        "match_count": 1
+      }
+    ],
+    "note": "Candidate CSVs remain unchanged. Run full geometric checks and graph checks against the newly saved user-state native export before any native apply."
+  },
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BF.txt",
+      "sha256": "95662332096e888b7d20b3e8bcd4df59af21af8ed7dd5d67409cce30bda61151"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_UNSAVED_BEFORE_BG.txt",
+      "sha256": "8ed480b997440c17ada12e3b917aa796bbc805dcf147afaa8c00520c7122d638"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_ADDS.csv",
+      "sha256": "b713babdb147ff524d17168a47eff48c87f4089c44e58c4744d79bb6a185ff2e"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_CS_FINAL_DELS.csv",
+      "sha256": "e204cb66ca68241bea0044e2f687120cc8e1f680b081883882b0517d55793e97"
+    }
+  ],
+  "limits": [
+    "Unsaved native export is evidence of the live state, not proof of a saved PCB document.",
+    "This script does not change, clean, or remove the user edit, including its zero-length track.",
+    "No routing or native calls. Native save/reopen, DRC and rule/stack comparison remain separate."
+  ]
+}

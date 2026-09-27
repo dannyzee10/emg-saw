@@ -1,0 +1,4 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+VIA,ASTRA_TX_PADMOVE_SEED_FILLED_CAPPED_VIP,MCU_WIFI_UART_TX,Multi Layer,44.026,40.805,,,,0.45,0.2,"requires TP_GND_DIG to 56.871,44.829 and CS local detour",0
+VIA,ASTRA_TX_PADMOVE_SEED_FILLED_CAPPED_VIP,MCU_WIFI_UART_TX,Multi Layer,56.08,44.3,,,,0.45,0.2,"requires TP_GND_DIG to 56.871,44.829 and CS local detour",0
+TRACK,ASTRA_TX_PADMOVE_SEED,MCU_WIFI_UART_TX,Top Layer,56.08,43.238,56.08,44.3,0.2,,,"requires TP_GND_DIG to 56.871,44.829 and CS local detour",0

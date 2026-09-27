@@ -1,0 +1,17 @@
+PROJECT|Free Documents
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\C2_COMPACT_4L_2SIDE\MainBoard\EMG_MainBoard_Layout.PrjPcb
+PROJECT_MODIFIED=False
+OPEN|MODIFIED=False|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\C2_COMPACT_4L_2SIDE\MainBoard\EMG_MainBoard_Layout.PcbDoc
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\work\astra_opbf_210912.PrjScr
+PROJECT_MODIFIED=False
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\work\astra_apbf_final_211832.PrjScr
+PROJECT_MODIFIED=False
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\work\astra_dbf_210912.PrjScr
+PROJECT_MODIFIED=False
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\work\astra_gbf_210912.PrjScr
+PROJECT_MODIFIED=False
+PROJECT|C:\Users\PMLS\Desktop\emg-saw\.claude\worktrees\pcb-routing-0925\hardware\compact_mainboard_20260925T115919Z\work\astra_closebf_router.PrjScr
+PROJECT_MODIFIED=False
+C2_MODIFIED=False
+UNSAVED_COUNT=0
+COMPLETE

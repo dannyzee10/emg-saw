@@ -1,0 +1,495 @@
+{
+  "source": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BG.txt",
+  "sha256": "ba080942deda31faef5a140d7f9bb6989cda330e8ae56bfa5364b420f0ceb749",
+  "passed": true,
+  "deletions": [
+    [
+      "TRACK",
+      "Top Layer",
+      "3V3_DIG",
+      "44.7750",
+      "41.6250",
+      "46.2250",
+      "41.6250",
+      "0.1500",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 2",
+      "WIFI_CHIP_EN",
+      "45.9750",
+      "34.9750",
+      "48.6045",
+      "34.9750",
+      "0.2000",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 2",
+      "WIFI_CHIP_EN",
+      "44.8750",
+      "36.0750",
+      "45.9750",
+      "34.9750",
+      "0.2000",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 2",
+      "WIFI_UART_TX",
+      "48.6045",
+      "41.9250",
+      "48.9019",
+      "41.9250",
+      "0.1500",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 2",
+      "WIFI_UART_TX",
+      "48.9019",
+      "41.9250",
+      "49.2250",
+      "41.9250",
+      "0.1500",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 4",
+      "3V3_DIG",
+      "51.0250",
+      "33.6750",
+      "51.0250",
+      "37.0750",
+      "0.1500",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ]
+  ],
+  "additions": [
+    [
+      "TRACK",
+      "Mid Layer 4",
+      "3V3_DIG",
+      "51.025",
+      "33.675",
+      "51.025",
+      "35.025",
+      "0.15",
+      "BOUNDED_ANTENNA_REPLACEMENT"
+    ],
+    [
+      "TRACK",
+      "Mid Layer 4",
+      "3V3_DIG",
+      "51.025",
+      "35.025",
+      "50.725",
+      "35.025",
+      "0.15",
+      "BOUNDED_ANTENNA_REPLACEMENT"
+    ]
+  ],
+  "l5_contact_preservation": [
+    {
+      "kind": "TRACK",
+      "net": "3V3_DIG",
+      "ref": "",
+      "pin": "",
+      "record": [
+        "TRACK",
+        "Mid Layer 4",
+        "3V3_DIG",
+        "51.0250",
+        "33.6750",
+        "53.4250",
+        "31.2750",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "old_contact_area_mm2": 0.017767650890254345,
+      "replacement_contact_area_mm2": 0.017767650890254345,
+      "lost_original_contact_area_mm2": 0.0,
+      "all_original_contact_area_preserved": true
+    },
+    {
+      "kind": "TRACK",
+      "net": "3V3_DIG",
+      "ref": "",
+      "pin": "",
+      "record": [
+        "TRACK",
+        "Mid Layer 4",
+        "3V3_DIG",
+        "50.1750",
+        "35.5750",
+        "50.9750",
+        "34.7750",
+        "0.4000",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "old_contact_area_mm2": 0.06314810950078928,
+      "replacement_contact_area_mm2": 0.10557246587283581,
+      "lost_original_contact_area_mm2": 0.0,
+      "all_original_contact_area_preserved": true
+    }
+  ],
+  "new_copper_blockers": [],
+  "edge_clear": true,
+  "keepout": false,
+  "graphs": {
+    "3V3_DIG": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    },
+    "WIFI_CHIP_EN": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    },
+    "WIFI_UART_TX": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    }
+  },
+  "power_thresholds": [
+    {
+      "threshold_mm": 0.15,
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    },
+    {
+      "threshold_mm": 0.2,
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    },
+    {
+      "threshold_mm": 0.3,
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    },
+    {
+      "threshold_mm": 0.4,
+      "retained_connections_preserved": true,
+      "split_group_count": 0
+    }
+  ],
+  "surviving_branch_contacts": {
+    "Top_3V3": [
+      {
+        "kind": "TRACK",
+        "net": "3V3_DIG",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Top Layer",
+          "3V3_DIG",
+          "44.7750",
+          "41.5750",
+          "45.6250",
+          "40.7250",
+          "0.4000",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ],
+        "remaining_other_contacts": [
+          {
+            "kind": "VIA",
+            "net": "3V3_DIG",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "VIA",
+              "3V3_DIG",
+              "45.6250",
+              "40.7250",
+              "0.6000",
+              "0.3000"
+            ]
+          },
+          {
+            "kind": "TRACK",
+            "net": "3V3_DIG",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Top Layer",
+              "3V3_DIG",
+              "44.2250",
+              "42.1750",
+              "44.7750",
+              "41.6250",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "TRACK",
+        "net": "3V3_DIG",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Top Layer",
+          "3V3_DIG",
+          "44.2250",
+          "42.1750",
+          "44.7750",
+          "41.6250",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ],
+        "remaining_other_contacts": [
+          {
+            "kind": "TRACK",
+            "net": "3V3_DIG",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Top Layer",
+              "3V3_DIG",
+              "44.7750",
+              "41.5750",
+              "45.6250",
+              "40.7250",
+              "0.4000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "kind": "TRACK",
+            "net": "3V3_DIG",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Top Layer",
+              "3V3_DIG",
+              "43.5750",
+              "42.1750",
+              "44.2250",
+              "42.1750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ]
+      }
+    ],
+    "WIFI_CHIP_EN": [
+      {
+        "kind": "VIA",
+        "net": "WIFI_CHIP_EN",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "VIA",
+          "WIFI_CHIP_EN",
+          "44.8750",
+          "36.0750",
+          "0.6000",
+          "0.3000"
+        ],
+        "remaining_other_contacts": [
+          {
+            "kind": "TRACK",
+            "net": "WIFI_CHIP_EN",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Top Layer",
+              "WIFI_CHIP_EN",
+              "44.6750",
+              "36.0750",
+              "44.8750",
+              "36.0750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "kind": "TRACK",
+            "net": "WIFI_CHIP_EN",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Top Layer",
+              "WIFI_CHIP_EN",
+              "43.9750",
+              "35.4750",
+              "45.6750",
+              "37.1750",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ]
+      }
+    ],
+    "WIFI_UART_TX": [
+      {
+        "kind": "TRACK",
+        "net": "WIFI_UART_TX",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 2",
+          "WIFI_UART_TX",
+          "48.9019",
+          "42.3481",
+          "49.2250",
+          "42.0250",
+          "0.2000",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ],
+        "remaining_other_contacts": [
+          {
+            "kind": "TRACK",
+            "net": "WIFI_UART_TX",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Mid Layer 2",
+              "WIFI_UART_TX",
+              "49.2250",
+              "41.9250",
+              "49.7985",
+              "42.4985",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "kind": "TRACK",
+            "net": "WIFI_UART_TX",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Mid Layer 2",
+              "WIFI_UART_TX",
+              "48.6045",
+              "42.6455",
+              "48.9019",
+              "42.3481",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "TRACK",
+        "net": "WIFI_UART_TX",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 2",
+          "WIFI_UART_TX",
+          "49.2250",
+          "41.9250",
+          "49.7985",
+          "42.4985",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ],
+        "remaining_other_contacts": [
+          {
+            "kind": "TRACK",
+            "net": "WIFI_UART_TX",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Mid Layer 2",
+              "WIFI_UART_TX",
+              "48.9019",
+              "42.3481",
+              "49.2250",
+              "42.0250",
+              "0.2000",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          },
+          {
+            "kind": "TRACK",
+            "net": "WIFI_UART_TX",
+            "ref": "",
+            "pin": "",
+            "record": [
+              "TRACK",
+              "Mid Layer 2",
+              "WIFI_UART_TX",
+              "49.7985",
+              "42.4985",
+              "49.9750",
+              "42.6750",
+              "0.1500",
+              "INCOMP=False",
+              "INPOLY=False",
+              "KEEPOUT=False"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "seconds": 0.375,
+  "limits": [
+    "Bounded six-track deletion/two-track replacement only.",
+    "All existing pads/vias retained. Exported copper contact graphs omit full poured geometry.",
+    "Fresh current-state exact check and native DRC remain required before/after applying."
+  ]
+}

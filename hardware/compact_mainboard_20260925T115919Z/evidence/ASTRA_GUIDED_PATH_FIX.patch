@@ -1,0 +1,24 @@
+﻿diff --git a/hardware/compact_mainboard_20260925T115919Z/work/repair.py b/hardware/compact_mainboard_20260925T115919Z/work/repair.py
+index 9e87903..8d24789 100644
+--- a/hardware/compact_mainboard_20260925T115919Z/work/repair.py
++++ b/hardware/compact_mainboard_20260925T115919Z/work/repair.py
+@@ -775,7 +775,6 @@ def fixed_path_victims(net, a, b, box_):
+             cands = [G.track(net, r['layer'], [(r['x1'], r['y1']), (r['x2'], r['y2'])], float(r['w'])) if r['kind'] == 'TRACK'
+                      else G.via(net, r['x1'], r['y1'], float(r['d']), float(r['h'])) for r in rows]
+             gob = {nm: objs_of_group(nm) for nm in vl}
+-            LAST_PATH[0] = unary_union([c.geom for c in cands])
+             dmin = {nm: min([c.geom.distance(o.geom) - G.required(c, o) for o in gob[nm] for c in cands if o.layers & c.layers]
+                             or [9e9]) for nm in vl}
+             for tol in (0.12, 0.25, 0.4, 0.7):
+@@ -783,6 +782,11 @@ def fixed_path_victims(net, a, b, box_):
+                 restore(s0); rip_names(hits)
+                 r2, w2 = route_conn(net, a, b)
+                 if r2:
++                    # Partial rip-up must follow the route verified with only hits removed.
++                    rows = rows_for(net, r2, 'diag', 'diag')
++                    cands = [G.track(net, r['layer'], [(r['x1'], r['y1']), (r['x2'], r['y2'])], float(r['w'])) if r['kind'] == 'TRACK'
++                             else G.via(net, r['x1'], r['y1'], float(r['d']), float(r['h'])) for r in rows]
++                    LAST_PATH[0] = unary_union([c.geom for c in cands]) if cands else None
+                     why = f'{why} [{LAST_PLANE[0]}]; verified with {len(hits)} ripped (tol {tol}): {w2}'
+                     break
+             else:

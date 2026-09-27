@@ -1,0 +1,1 @@
+Stopped only the task-owned offline routing search after broad cascading stalled. No native CAD writes. Candidate must not be applied.

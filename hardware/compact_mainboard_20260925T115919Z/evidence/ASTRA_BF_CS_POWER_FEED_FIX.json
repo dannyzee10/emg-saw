@@ -1,0 +1,239 @@
+{
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BF.txt",
+      "sha256": "95662332096e888b7d20b3e8bcd4df59af21af8ed7dd5d67409cce30bda61151"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_RAW_ADDS.csv",
+      "sha256": "8db91fac8531bacc73016ed47bd6c42e7e896fac07682a1f93a47c56793e8bea"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_DELS.csv",
+      "sha256": "a57a22a64436100f5de7cf431484f25aee274c3f2e82e0fdd8eb872af3516b5d"
+    }
+  ],
+  "trials": [
+    {
+      "name": "same_coordinates",
+      "points": [
+        [
+          48.975,
+          38.925
+        ],
+        [
+          49.625,
+          38.925
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": false,
+      "blockers": [
+        {
+          "net": "-",
+          "kind": "PAD",
+          "ref": "U_MCU1",
+          "pin": "7",
+          "gap": 0.075,
+          "required": 0.15,
+          "native_record": [
+            "PAD",
+            "U_MCU1",
+            "7",
+            "-",
+            "Top Layer",
+            "50.3420",
+            "38.5000",
+            "49.5645",
+            "38.3100",
+            "51.1195",
+            "38.6900",
+            "HOLE=0.0000",
+            "ROT=0",
+            "SX=1.4750",
+            "SY=0.3000",
+            "SHAPE=2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "centered_on_mcu_pad6",
+      "points": [
+        [
+          48.975,
+          39.0
+        ],
+        [
+          49.625,
+          39.0
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    },
+    {
+      "name": "extend_existing_vertical",
+      "points": [
+        [
+          48.825,
+          38.825
+        ],
+        [
+          48.825,
+          39.0
+        ],
+        [
+          49.625,
+          39.0
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    },
+    {
+      "name": "diagonal_from_existing_endpoint",
+      "points": [
+        [
+          48.825,
+          38.825
+        ],
+        [
+          49.0,
+          39.0
+        ],
+        [
+          49.625,
+          39.0
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    }
+  ],
+  "chosen": {
+    "name": "extend_existing_vertical",
+    "points": [
+      [
+        48.825,
+        38.825
+      ],
+      [
+        48.825,
+        39.0
+      ],
+      [
+        49.625,
+        39.0
+      ]
+    ],
+    "width_mm": 0.4,
+    "passed": true,
+    "blockers": []
+  },
+  "bridge_trials": [
+    {
+      "name": "direct",
+      "points": [
+        [
+          47.075,
+          42.375
+        ],
+        [
+          48.675,
+          42.575
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    },
+    {
+      "name": "diagonal_then_horizontal",
+      "points": [
+        [
+          47.075,
+          42.375
+        ],
+        [
+          47.275,
+          42.575
+        ],
+        [
+          48.675,
+          42.575
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    },
+    {
+      "name": "upper_to_testpad",
+      "points": [
+        [
+          47.075,
+          42.375
+        ],
+        [
+          47.075,
+          41.825
+        ],
+        [
+          48.675,
+          41.825
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    },
+    {
+      "name": "around_old_feed",
+      "points": [
+        [
+          47.075,
+          42.375
+        ],
+        [
+          47.425,
+          42.725
+        ],
+        [
+          48.675,
+          42.725
+        ]
+      ],
+      "width_mm": 0.4,
+      "passed": true,
+      "blockers": []
+    }
+  ],
+  "chosen_bridge": {
+    "name": "diagonal_then_horizontal",
+    "points": [
+      [
+        47.075,
+        42.375
+      ],
+      [
+        47.275,
+        42.575
+      ],
+      [
+        48.675,
+        42.575
+      ]
+    ],
+    "width_mm": 0.4,
+    "passed": true,
+    "blockers": []
+  },
+  "limits": [
+    "Short feed/bridge alternatives only; all retained and candidate copper included.",
+    "No router/CAD operation. Full candidate precheck, graph and native DRC remain required."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "requested_nets": [
+    "MCU_WIFI_UART_TX",
+    "WIFI_SPI_CS"
+  ],
+  "graphs": {
+    "MCU_WIFI_UART_TX": {
+      "before_component_count": 2,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_UART_TX_LINK",
+          "pin": "2",
+          "component_after": 22
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "92",
+          "component_after": 22
+        }
+      ],
+      "requested_endpoints_connected_after": true
+    },
+    "WIFI_SPI_CS": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_CS_PD",
+          "pin": "1",
+          "component_after": 1
+        },
+        {
+          "ref": "R_SPI_CS",
+          "pin": "1",
+          "component_after": 1
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "24",
+          "component_after": 1
+        }
+      ],
+      "requested_endpoints_connected_after": true
+    }
+  },
+  "power_width_path_preservation": {},
+  "deletions_matched": 0,
+  "additions": 27,
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BGM.txt",
+      "sha256": "98bc299ee8f9b5d85d78f9f71b458fb649597d03f8c21d4541c2c7d32cc9f207"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BGM_TX_LAST_WITH_SEED_ADDS.csv",
+      "sha256": "5e20a102c0252371ff86a1e80af8f43db287c0df7551ca18cb66d867c13c126e"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_EMPTY_COPPER.csv",
+      "sha256": "4de6e2e2463ae254b293be284d4c005ee10d7eb8507293c634ee8c7c3b33b79d"
+    }
+  ],
+  "limits": [
+    "No router/native operation; affected-net copper graphs only.",
+    "Exported copper shapes use 0.00015 mm contact tolerance; pour geometry is incomplete.",
+    "Power threshold comparison detects newly required thin tracks, not effective junction widths or current capacity.",
+    "Native exact geometry, DRC and protected structure checks remain required."
+  ]
+}

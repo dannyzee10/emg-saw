@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "errors": [],
+  "tolerance_mm": 0.00015,
+  "counts": {
+    "before": {
+      "TRACK": 2302,
+      "VIA": 470
+    },
+    "after": {
+      "TRACK": 2291,
+      "VIA": 470
+    },
+    "expected_after": {
+      "TRACK": 2291,
+      "VIA": 470
+    },
+    "planned_adds": {
+      "TRACK": 8
+    },
+    "planned_deletes": {
+      "TRACK": 19
+    },
+    "matched_deletes": {
+      "TRACK": 19
+    }
+  },
+  "unchanged": {
+    "pads": {
+      "passed": true,
+      "comparison_scope": "all records",
+      "before_count": 812,
+      "after_count": 812,
+      "removed": [],
+      "added": []
+    },
+    "comps": {
+      "passed": true,
+      "comparison_scope": "all records",
+      "before_count": 231,
+      "after_count": 231,
+      "removed": [],
+      "added": []
+    },
+    "fixed": {
+      "passed": true,
+      "comparison_scope": "all records",
+      "before_count": 1629,
+      "after_count": 1629,
+      "removed": [],
+      "added": []
+    }
+  },
+  "missing": [],
+  "unexpected": [],
+  "allowed_component_translations": {},
+  "allowed_free_pad_translations": {},
+  "raw_native_record_changes": {
+    "pads": {
+      "removed": [],
+      "added": []
+    },
+    "comps": {
+      "removed": [],
+      "added": []
+    },
+    "fixed": {
+      "removed": [],
+      "added": []
+    }
+  },
+  "deletion_checks": {
+    "width_and_hole_checked_when_provided": true,
+    "ambiguous_matches_allowed": false
+  },
+  "ignored_polygon_records": {
+    "before": 115,
+    "after": 115
+  },
+  "limitations": [
+    "Native exports omit net objects, rules, layer stack and via spans; verify separately.",
+    "Only the pad/primitive fields present in the native export are compared.",
+    "Allowed moves translate centers and bounding boxes only; all exported net, layer, rotation, size and other fields stay exact.",
+    "Polygon-generated primitives may change after repour.",
+    "This verifies the requested copper delta, not electrical completion or DRC."
+  ],
+  "inputs": {
+    "..\\evidence\\GEOMETRY_C2_6L_BI.txt": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BI.txt",
+      "sha256": "d3a094dc5ccabc24051e295fdc2878f064df6e4070c22d0490e69668f5c1689b"
+    },
+    "..\\evidence\\GEOMETRY_C2_6L_BJ.txt": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BJ.txt",
+      "sha256": "f666b33c4d9caa5d36192a83e12bc37a6c6218bba34af554142512a5adf0536a"
+    },
+    "..\\evidence\\ASTRA_BH_ALL_ANTENNA_BOUNDED_ADDS.csv": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BH_ALL_ANTENNA_BOUNDED_ADDS.csv",
+      "sha256": "f24dd4dfefbdf815dfcf2d79d92ae562c9ca41320474c86ef86c65c633e494d0"
+    },
+    "..\\evidence\\ASTRA_BH_ALL_ANTENNA_BOUNDED_DELS.csv": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BH_ALL_ANTENNA_BOUNDED_DELS.csv",
+      "sha256": "a39e559cdb35abd7f5beddd1e76a865f999363c9c36a5b0d50a086531f3ed057"
+    }
+  }
+}

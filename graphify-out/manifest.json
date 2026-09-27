@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/RUN_DISPATCH_LOG.txt": {
-    "mtime": 1790502179.4836762,
-    "seen": 1790506091.7771637,
-    "ast_hash": "ba9d2bbe725de38c596f81b0fb174e51",
+    "mtime": 1790522280.9680276,
+    "seen": 1790522707.4800296,
+    "ast_hash": "995f77668982428c8d3563c697312425",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/trial_nets.txt": {
@@ -2970,9 +2970,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/altium_current.png": {
-    "mtime": 1790351099.7673035,
-    "seen": 1790388813.3150313,
-    "ast_hash": "6b230cfbef76ff1738c89f1aa85ab559",
+    "mtime": 1790521000.745161,
+    "seen": 1790522707.5304635,
+    "ast_hash": "d4e74fa402da000e443b55ca436290ec",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_HOTLOOP.json": {
@@ -4746,9 +4746,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/ROUTING_RESUME.md": {
-    "mtime": 1790505995.6483138,
-    "seen": 1790506091.7771637,
-    "ast_hash": "14561a31e1f3b333392a9b75a8201a31",
+    "mtime": 1790522251.400695,
+    "seen": 1790522707.4265075,
+    "ast_hash": "9cbb96735c2f59be33a7a8f24c04896d",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/OPS_C2_6L_G.txt": {
@@ -4896,9 +4896,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/repair.py": {
-    "mtime": 1790505453.7804537,
-    "seen": 1790506091.7755213,
-    "ast_hash": "39727868a9882b873ab5a9a6a99f306d",
+    "mtime": 1790517449.3645165,
+    "seen": 1790522707.1511455,
+    "ast_hash": "b382337d15ed33cdad016dc4cfdc9eb3",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/APPLY_OPS_C2_6L_O_LOG.txt": {
@@ -5190,9 +5190,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/consistent_repair.py": {
-    "mtime": 1790434479.320855,
-    "seen": 1790434718.897162,
-    "ast_hash": "f8b5287ec2304a281d47d1cd926eaee1",
+    "mtime": 1790509324.688016,
+    "seen": 1790522706.9972224,
+    "ast_hash": "ba632bcfc8a623e8962b42a8d5284a49",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/d6r_225457.pas": {
@@ -5940,9 +5940,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/run_repair.py": {
-    "mtime": 1790502206.7352157,
-    "seen": 1790506091.7755213,
-    "ast_hash": "8c8c8d059ac0cec0ec0b65513fa93095",
+    "mtime": 1790508532.3670478,
+    "seen": 1790522707.1598504,
+    "ast_hash": "6c862616f0a7f1f71eaab2a000a5a050",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/evidence/APPLY_C2_6L_AA_LOG.txt": {
@@ -6744,9 +6744,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/gloss.py": {
-    "mtime": 1790480740.4860952,
-    "seen": 1790484480.536343,
-    "ast_hash": "896a604c01e6e82e11a2b278dc89a59e",
+    "mtime": 1790508832.6447568,
+    "seen": 1790522707.0923748,
+    "ast_hash": "d5739ba130d240ee85dd9cc070dc6b66",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/mcb_123711.pas": {
@@ -7446,9 +7446,9 @@
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/neg_sweep.py": {
-    "mtime": 1790505386.1366005,
-    "seen": 1790506091.774574,
-    "ast_hash": "d8efe304ae5fe3c479fa65c815cdb06e",
+    "mtime": 1790507410.664889,
+    "seen": 1790522707.108239,
+    "ast_hash": "837eb07545cda33bd651bff532743d2b",
     "semantic_hash": ""
   },
   "hardware/compact_mainboard_20260925T115919Z/work/ocz_174250.pas": {
@@ -7515,6 +7515,2220 @@
     "mtime": 1790501320.9488652,
     "seen": 1790506091.7771637,
     "ast_hash": "12beda9c2268ec5c6d1443cd1ef47ec9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BA_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790506576.0528705,
+    "seen": 1790522706.9222982,
+    "ast_hash": "9783a36b2e1ce78fa258abe2eaf2a6b0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BA_DELTA.json": {
+    "mtime": 1790507316.4899354,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f19eef86b2f7418d3b26fe84c464628a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BA_STRUCTURE.json": {
+    "mtime": 1790507446.635664,
+    "seen": 1790522706.9222982,
+    "ast_hash": "ded663b10d3203b3a2710fa5879c830d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BB_BEFORE_20260927/HASH.json": {
+    "mtime": 1790507975.7045274,
+    "seen": 1790522706.9222982,
+    "ast_hash": "86d87bf3ca55f9ae3278140e658e29fb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BB_DELTA.json": {
+    "mtime": 1790508414.7281382,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f9ce15c6e0f6f50ffb8744f210bd9980",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BB_STRUCTURE.json": {
+    "mtime": 1790508415.3834977,
+    "seen": 1790522706.9222982,
+    "ast_hash": "3d25b393faaa36245bc184e8e019a0c4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_AFTER_HASH.json": {
+    "mtime": 1790511221.8715868,
+    "seen": 1790522706.9222982,
+    "ast_hash": "8f9350b9886a3e6267dbc66d101e3a02",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_BEFORE_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790510850.4207933,
+    "seen": 1790522706.9222982,
+    "ast_hash": "373ecd14171cbb33d20b9636e5e4493d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_DELTA.json": {
+    "mtime": 1790511128.31618,
+    "seen": 1790522706.9222982,
+    "ast_hash": "2ed2510ec1609e19c92b56bdf1907706",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_SCHEMATIC_PROJECT_PRESERVATION.json": {
+    "mtime": 1790511221.7787178,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e8caa89a0ad83ad9b9876b01614568df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_STRUCTURE.json": {
+    "mtime": 1790511178.5094342,
+    "seen": 1790522706.9222982,
+    "ast_hash": "747e67916a2132330d5cc2b7634c5d84",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_AFTER_HASH.json": {
+    "mtime": 1790512465.68902,
+    "seen": 1790522706.9222982,
+    "ast_hash": "35a83461045a7b129eddfd5b744a77c7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_BEFORE_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790511857.8979783,
+    "seen": 1790522706.9222982,
+    "ast_hash": "79cec2e32f4891a36facae6439867a18",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_DELTA.json": {
+    "mtime": 1790512382.4765787,
+    "seen": 1790522706.9222982,
+    "ast_hash": "39a6360e6a38a7cf52d3c564ff1057ff",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790512447.1378672,
+    "seen": 1790522706.9222982,
+    "ast_hash": "57c615c9821204ecac3e056317574d71",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_SCHEMATIC_PROJECT_PRESERVATION.json": {
+    "mtime": 1790512465.6300015,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e8caa89a0ad83ad9b9876b01614568df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_STRUCTURE.json": {
+    "mtime": 1790512382.959088,
+    "seen": 1790522706.9222982,
+    "ast_hash": "7d59c92b1446824f2c1f1b3811bd0eb7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_AFTER_HASH.json": {
+    "mtime": 1790514207.407011,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1d0f1196ef2b771df09be79a4ec664cc",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_BEFORE_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790512796.396929,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e49027b528caf0f223e5477ed3529872",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_DELTA.json": {
+    "mtime": 1790514153.5351243,
+    "seen": 1790522706.9222982,
+    "ast_hash": "662b7976dc429da6cd41e681c6987e5e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790514061.86724,
+    "seen": 1790522706.9222982,
+    "ast_hash": "43c87cde213edd131ccb9689e6a46a33",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_SCHEMATIC_PROJECT_PRESERVATION.json": {
+    "mtime": 1790514207.369414,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e8caa89a0ad83ad9b9876b01614568df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_STRUCTURE.json": {
+    "mtime": 1790514154.147702,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1cc461c3e140ecff7432e364f3f90932",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_UART_RX1_GRAPH_REVIEW.json": {
+    "mtime": 1790514589.160182,
+    "seen": 1790522706.9222982,
+    "ast_hash": "d1e4cf41140598c0258a5cbcaf39dd70",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BFS_BEFORE_BG_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790519879.0270085,
+    "seen": 1790522706.9222982,
+    "ast_hash": "a23d2c55b3a3dece051fac68dd590a89",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BFS_CS_FINAL_GRAPH.json": {
+    "mtime": 1790519951.9226365,
+    "seen": 1790522706.9222982,
+    "ast_hash": "6ffc2eea90eb637cb82614d1d7937fbf",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BFS_DRC_COVERAGE.json": {
+    "mtime": 1790520096.9166155,
+    "seen": 1790522706.9222982,
+    "ast_hash": "5b3834fd5eca8b861bff371155af932f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BFS_DRC_COVERAGE_REQUIRED.json": {
+    "mtime": 1790520728.5490673,
+    "seen": 1790522706.9222982,
+    "ast_hash": "4500607a81325c2673552cda480386d5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_AFTER_HASH.json": {
+    "mtime": 1790515482.4742844,
+    "seen": 1790522706.9222982,
+    "ast_hash": "19b2ec4bc31ece6194581c5adc0d711f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_BEFORE_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790514296.593118,
+    "seen": 1790522706.9222982,
+    "ast_hash": "373ff6cd7f2b0c8b656937d43658d9f4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_BOTTOM_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790517130.8159823,
+    "seen": 1790522706.9222982,
+    "ast_hash": "483eb9694b5068646bc3f6f07858db6f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_INSPECT_POWER_PRESERVED_GRAPH.json": {
+    "mtime": 1790518740.7596047,
+    "seen": 1790522706.9222982,
+    "ast_hash": "a53abaa91139f5ac1c0e4d3b8d1c5863",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_INSPECT_RAW_GRAPH.json": {
+    "mtime": 1790517977.2984443,
+    "seen": 1790522706.9222982,
+    "ast_hash": "a2836ebeb4da0e4d8af38f815aeeabbe",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_INSPECT_WIDE_GRAPH.json": {
+    "mtime": 1790518430.8030953,
+    "seen": 1790522706.9222982,
+    "ast_hash": "0b975a06f355b78879f3488d54f743c6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_POWER_FEED_FIX.json": {
+    "mtime": 1790518550.6128433,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f2a44e57eaeb5d2554115e2f6fdb71eb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_SEEDED_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790516847.241677,
+    "seen": 1790522706.9222982,
+    "ast_hash": "483eb9694b5068646bc3f6f07858db6f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_SOURCE_SEED_CHECK.json": {
+    "mtime": 1790517269.885524,
+    "seen": 1790522706.9222982,
+    "ast_hash": "53a47d8e0fca7692871c550e14792972",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_STUB_REVIEW.json": {
+    "mtime": 1790518737.8559895,
+    "seen": 1790522706.9222982,
+    "ast_hash": "44a1ba22e56a2b1f2494712466cbbbc0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_TP_GND_DIG_MOVE_SCAN.json": {
+    "mtime": 1790518724.0029266,
+    "seen": 1790522706.9222982,
+    "ast_hash": "26d8956711d300c12ffa941117537069",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_TX_DETOUR_CHECK.json": {
+    "mtime": 1790519012.1167219,
+    "seen": 1790522706.9222982,
+    "ast_hash": "ac9e45a0fa0d0c79502ede4222b87d38",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_DELTA.json": {
+    "mtime": 1790515395.79136,
+    "seen": 1790522706.9222982,
+    "ast_hash": "11013ba4ada60c949059b5d380848e3e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL_ESCAPE_SITES.json": {
+    "mtime": 1790516392.3287444,
+    "seen": 1790522706.9222982,
+    "ast_hash": "a6280606a312c443734acee849ce5558",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL_LOCAL_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790517542.8676093,
+    "seen": 1790522706.9222982,
+    "ast_hash": "11106aca9de55be9cace5834d8be815b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790515445.8265252,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f9680b6c722136f1a155224711e121aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_SCHEMATIC_PROJECT_PRESERVATION.json": {
+    "mtime": 1790515482.4524543,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e8caa89a0ad83ad9b9876b01614568df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_STRUCTURE.json": {
+    "mtime": 1790515396.271432,
+    "seen": 1790522706.9222982,
+    "ast_hash": "7febd66e60fb30dc93c658ea149ad4e3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_TP_GND_DIG_MOVE_SCAN.json": {
+    "mtime": 1790518572.2590442,
+    "seen": 1790522706.9222982,
+    "ast_hash": "392a3dd059c4c17544370ea651ebce22",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_TX_LINK_SEED_CHECK.json": {
+    "mtime": 1790516780.3248084,
+    "seen": 1790522706.9222982,
+    "ast_hash": "87201f728e46e04fef3c399deb9839e4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_TX_SEEDED_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790517003.896959,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e98838fe5f8ab738f5b2a1b577f7e3b1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_BEFORE_BH_20260927/BEFORE_HASH.json": {
+    "mtime": 1790520470.5700343,
+    "seen": 1790522706.9222982,
+    "ast_hash": "c42997200b4d60a5b78ab5247c980084",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_DELTA.json": {
+    "mtime": 1790520364.3632958,
+    "seen": 1790522706.9222982,
+    "ast_hash": "73cfac13dcbc0df7786401907d3f8681",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_TX_CENTERED_GRAPH.json": {
+    "mtime": 1790520673.608205,
+    "seen": 1790522706.9222982,
+    "ast_hash": "757c67e54889dfe5d661c56c3412747f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_TX_GRAPH.json": {
+    "mtime": 1790520453.435453,
+    "seen": 1790522706.9222982,
+    "ast_hash": "7b968b4ff313032b11cbc4898802b7d5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_TX_JUNCTION_REVIEW.json": {
+    "mtime": 1790520623.8386528,
+    "seen": 1790522706.9222982,
+    "ast_hash": "e52fc7bf2b76577e0632670e9e742912",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_TX_LAST_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790520391.9918625,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1d327f27506299703dea0fdfdf8c89ef",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_ALL_FREE_TRACE_RULES.json": {
+    "mtime": 1790520657.2639518,
+    "seen": 1790522706.9222982,
+    "ast_hash": "464ef803f6f9e385b8233133bd8888fa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_ANTENNA_BOUNDED_CHECK.json": {
+    "mtime": 1790520622.8823936,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1fdc928a9403e7e2cc3067fc57023bbf",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_ANTENNA_CONTACTS.json": {
+    "mtime": 1790520407.2089748,
+    "seen": 1790522706.9222982,
+    "ast_hash": "8123b18c977d468858cad152269fa667",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_BEFORE_20260927/BEFORE_HASHES.json": {
+    "mtime": 1790515917.9720342,
+    "seen": 1790522706.9222982,
+    "ast_hash": "c5ff7f18aa3be4fa733d5cba02b16c0a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_BEFORE_BGM_20260927/BEFORE_HASH.json": {
+    "mtime": 1790520276.6677356,
+    "seen": 1790522706.9222982,
+    "ast_hash": "dcf1fefc2e80feefc30d997b95b6f976",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_CS_FINAL_GRAPH.json": {
+    "mtime": 1790519012.6820147,
+    "seen": 1790522706.9222982,
+    "ast_hash": "06f4c783b300609fa2d7a81964094e9c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790520252.221277,
+    "seen": 1790522706.9222982,
+    "ast_hash": "7e2aa481fd89bc37cf00b01bc074ed00",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_ALL_ANTENNA_BOUNDED_CHECK.json": {
+    "mtime": 1790521307.3171976,
+    "seen": 1790522706.9222982,
+    "ast_hash": "5074f3ba19eedfd6c17c928f75cdb786",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_BEFORE_BI_20260927/BEFORE_HASH.json": {
+    "mtime": 1790520834.8044167,
+    "seen": 1790522706.9222982,
+    "ast_hash": "938c52f8d6326898c047c408f1953f54",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_BI_RULE_OPTIONS_DELTA.json": {
+    "mtime": 1790522185.0106182,
+    "seen": 1790522706.9222982,
+    "ast_hash": "0555c76c4b183458ef94013593419207",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_DELTA.json": {
+    "mtime": 1790520798.6532948,
+    "seen": 1790522706.9222982,
+    "ast_hash": "65100d425ad5ea3a4d1fc83fe226c5ed",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790520841.9073882,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f4d2f07437ef48f03d2aaa1dd9c931fb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_LEGACY_ANTENNA_CONTACTS.json": {
+    "mtime": 1790520992.1944685,
+    "seen": 1790522706.9222982,
+    "ast_hash": "6157ca85cc5d5579be0c7d3d7159d089",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_TRACE_SHAPE_INVENTORY.json": {
+    "mtime": 1790521013.8952944,
+    "seen": 1790522706.9222982,
+    "ast_hash": "2096680fbb5d19d1b4a4ce3a4242fdaf",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BI_ALL_FREE_TRACE_RULES.json": {
+    "mtime": 1790521437.5539236,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1d424928d6d867f0111f6faf8ad4d38b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BI_ANTENNA_GRAPH.json": {
+    "mtime": 1790521770.0375361,
+    "seen": 1790522706.9222982,
+    "ast_hash": "0155317ef28abf340b5d76f346464c10",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BI_BEFORE_BJ_20260927/BEFORE_HASH.json": {
+    "mtime": 1790521908.463561,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f8e7acc2c59e51a9035045877542abf3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BI_DRC_COVERAGE.json": {
+    "mtime": 1790521437.2433567,
+    "seen": 1790522706.9222982,
+    "ast_hash": "847c18047ac7f389f812359c1ede06c3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BI_GEOMETRY_PRESERVATION.json": {
+    "mtime": 1790521437.0562956,
+    "seen": 1790522706.9222982,
+    "ast_hash": "a119d3085ebee04aa926dc5762f8210c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_ALL_FREE_TRACE_RULES.json": {
+    "mtime": 1790522014.956879,
+    "seen": 1790522706.9222982,
+    "ast_hash": "4c7514b9ed83323eb7273a06dbed84d9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_DELTA.json": {
+    "mtime": 1790522014.6983092,
+    "seen": 1790522706.9222982,
+    "ast_hash": "d6841f2748a4e2fe305c18e0e6684845",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_DRC_COVERAGE.json": {
+    "mtime": 1790522015.1022775,
+    "seen": 1790522706.9222982,
+    "ast_hash": "6818e2e4fdd93a3233827ae901ae2c0a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_FINAL_HASHES.json": {
+    "mtime": 1790522251.3679621,
+    "seen": 1790522706.9222982,
+    "ast_hash": "db1fc66093d9f39218b6166bc8130b6c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_INDEPENDENT_REVIEW.json": {
+    "mtime": 1790522170.5001655,
+    "seen": 1790522706.9222982,
+    "ast_hash": "388cdb1c59c1c2754c0fe8197bfb877b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_TRACE_SHAPE_INVENTORY.json": {
+    "mtime": 1790522015.2483826,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1f0c1fdf70c3daa8effbdcd61f555833",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_CANDIDATE_PROOF.json": {
+    "mtime": 1790510529.5515475,
+    "seen": 1790522706.9222982,
+    "ast_hash": "d02fd61ec3374bfcf13d666a0cc9f465",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_L5_TRIAL_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790510392.3245304,
+    "seen": 1790522706.9222982,
+    "ast_hash": "119d966bef7ade46ad4e72725ad040ec",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_L5_TRIAL_PLANNING_ONLY/PLANNING_CONNECTION_REQUESTS.json": {
+    "mtime": 1790510392.321537,
+    "seen": 1790522706.9222982,
+    "ast_hash": "97531f4d9111581050ac29e6a716e4e3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL2_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790509790.4043517,
+    "seen": 1790522706.9222982,
+    "ast_hash": "89bdf568b62624c7ed8e574aa1c50148",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL2_PLANNING_ONLY/PLANNING_CONNECTION_REQUESTS.json": {
+    "mtime": 1790509790.39573,
+    "seen": 1790522706.9222982,
+    "ast_hash": "97531f4d9111581050ac29e6a716e4e3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL3_PLANNING_ONLY/MANIFEST.json": {
+    "mtime": 1790510143.9815729,
+    "seen": 1790522706.9222982,
+    "ast_hash": "8df0201e397ee5869092aab1d25839ff",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL3_PLANNING_ONLY/PLANNING_CONNECTION_REQUESTS.json": {
+    "mtime": 1790510143.975975,
+    "seen": 1790522706.9222982,
+    "ast_hash": "97531f4d9111581050ac29e6a716e4e3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_TARGET_VIA_SCAN_LOCAL2.json": {
+    "mtime": 1790510041.6188266,
+    "seen": 1790522706.9222982,
+    "ast_hash": "668a2aa3c5bae006e37ed454b950350b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CL4_FEASIBILITY_BB.json": {
+    "mtime": 1790509564.1027188,
+    "seen": 1790522706.9222982,
+    "ast_hash": "b90d7815a5e83b88508eac4f2460c6c1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_INA4_ROTATION_FOOTPRINT_BB.json": {
+    "mtime": 1790510392.3499787,
+    "seen": 1790522706.9222982,
+    "ast_hash": "2d067586bd580b5a3d83b24ba885ee84",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_INA4_VIA_SCAN_BB.json": {
+    "mtime": 1790509211.6937082,
+    "seen": 1790522706.9222982,
+    "ast_hash": "f40c308ee1b46b629cdff121129c8849",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_MCU_RX_POWER_READY_GRAPH_REVIEW.json": {
+    "mtime": 1790514878.5619822,
+    "seen": 1790522706.9222982,
+    "ast_hash": "c760505498d8b4859a4a267cca36bb5c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_MCU_RX_REINFORCED_GRAPH_REVIEW.json": {
+    "mtime": 1790515115.439714,
+    "seen": 1790522706.9222982,
+    "ast_hash": "98757148b5cb695a8fbf68c759a5cc96",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_UART_READY_GRAPH_REVIEW.json": {
+    "mtime": 1790513899.820314,
+    "seen": 1790522706.9222982,
+    "ast_hash": "1b197b5da38e6adcb1760a40fd663295",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_USER_EDIT_BEFORE_BG_REVIEW.json": {
+    "mtime": 1790519581.323619,
+    "seen": 1790522706.9222982,
+    "ast_hash": "fc2ace0d3c40367d91feb853e10a0b2f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_VC1_L5_MANUAL_PATH_BC.json": {
+    "mtime": 1790511388.060555,
+    "seen": 1790522706.9222982,
+    "ast_hash": "002a9975fbb396c961a3889b21814b47",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BA.json": {
+    "mtime": 1790507243.1579502,
+    "seen": 1790522706.9349258,
+    "ast_hash": "fd5f406ad17d775662d6250567048dc2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BB.json": {
+    "mtime": 1790508414.137115,
+    "seen": 1790522706.9349258,
+    "ast_hash": "8251337287e6196106998fbc5ae9168f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BC.json": {
+    "mtime": 1790511100.7526042,
+    "seen": 1790522706.9349258,
+    "ast_hash": "ab4493a1dd64242760a22d5e24368176",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BD.json": {
+    "mtime": 1790512327.1269991,
+    "seen": 1790522706.9349258,
+    "ast_hash": "5e9eee1b74651c51967710bb90d14c4b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BE.json": {
+    "mtime": 1790514059.1532848,
+    "seen": 1790522706.9349258,
+    "ast_hash": "8221c4b53b08e2bdc3317dab3db8befa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BF.json": {
+    "mtime": 1790515395.5084639,
+    "seen": 1790522706.9349258,
+    "ast_hash": "509a148ec1549f7e68106b0b4c0c8c88",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BFS.json": {
+    "mtime": 1790519992.3362265,
+    "seen": 1790522706.9349258,
+    "ast_hash": "509a148ec1549f7e68106b0b4c0c8c88",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BG.json": {
+    "mtime": 1790520095.3370192,
+    "seen": 1790522706.9349258,
+    "ast_hash": "1c02ebde42f9b830a3231c36f4ad5031",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BGM.json": {
+    "mtime": 1790520364.213902,
+    "seen": 1790522706.9349258,
+    "ast_hash": "1c02ebde42f9b830a3231c36f4ad5031",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BH.json": {
+    "mtime": 1790520798.4730308,
+    "seen": 1790522706.9349258,
+    "ast_hash": "d79ef6a4ee965c99e1a93408f1bbe1cb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BI.json": {
+    "mtime": 1790521436.881402,
+    "seen": 1790522706.9349258,
+    "ast_hash": "d0d0fcc76d4cad3438f68ebf8504b55f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BJ.json": {
+    "mtime": 1790522014.521685,
+    "seen": 1790522706.9349258,
+    "ast_hash": "d118ea52b80a86129ace5396064f08ad",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_align_via_rule_T.pas": {
+    "mtime": 1790508566.2515762,
+    "seen": 1790522706.986583,
+    "ast_hash": "c40c6f2d4e84b9746d26a4433987e694",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apba_185646.pas": {
+    "mtime": 1790506606.0737386,
+    "seen": 1790522706.986583,
+    "ast_hash": "3a1205492f4480ac02129dddfe7baf4d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbb_191935.pas": {
+    "mtime": 1790507975.83458,
+    "seen": 1790522706.986583,
+    "ast_hash": "5d1cd2c8a5ddb2c3d79626de0feecf0c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbc_200754.pas": {
+    "mtime": 1790510874.9493234,
+    "seen": 1790522706.986583,
+    "ast_hash": "3bf457fcdd793c4484a99f106dd96f99",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbd_202424.pas": {
+    "mtime": 1790511864.1553903,
+    "seen": 1790522706.986583,
+    "ast_hash": "fa7f55a1493d1bf6c5fad0a46aee7982",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbe_204152.pas": {
+    "mtime": 1790512912.3654783,
+    "seen": 1790522706.9875681,
+    "ast_hash": "109fbf144f40e78857d8ba8b17f10aa8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbe_ready_205633.pas": {
+    "mtime": 1790513793.8076978,
+    "seen": 1790522706.9875681,
+    "ast_hash": "c2ca53b16a82326e0ca0dd060d94e36f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbf_final_211832.pas": {
+    "mtime": 1790515112.9841685,
+    "seen": 1790522706.9875681,
+    "ast_hash": "acd18c628165ef2a10b6e2ebe179876a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbf_ready_211056.pas": {
+    "mtime": 1790514656.027771,
+    "seen": 1790522706.9875681,
+    "ast_hash": "fc0d7b5fd756fd358f8aee58dc140b54",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbg_220654.pas": {
+    "mtime": 1790518014.9700203,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b898a0742a6d4cf10ce94ce1e75979bd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbg_final_222332.pas": {
+    "mtime": 1790519012.7931204,
+    "seen": 1790522706.9875681,
+    "ast_hash": "6a875b12b64cb2dd79f24f5cff127ada",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbg_rebased_223912.pas": {
+    "mtime": 1790519952.0035398,
+    "seen": 1790522706.9875681,
+    "ast_hash": "6891c7f61d3258fcc3412e058f23ac08",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbh_225024.pas": {
+    "mtime": 1790520624.764051,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5419db3f797b063c1ae61cc7c7cd969c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbh_centered_225113.pas": {
+    "mtime": 1790520673.6692824,
+    "seen": 1790522706.9875681,
+    "ast_hash": "2bcb4c0515c9e96dda44cdfbddaa02cb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_apbj_230930.pas": {
+    "mtime": 1790521770.1117203,
+    "seen": 1790522706.9875681,
+    "ast_hash": "cb5534172640a252b0c0fc4d1e3c40bf",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_audit_trace_rules.py": {
+    "mtime": 1790520637.8705587,
+    "seen": 1790522706.9875681,
+    "ast_hash": "49b1192c4ffcf4d9b6e4faf2a49966f6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_bg_antenna_cleanup_check.py": {
+    "mtime": 1790520512.0244071,
+    "seen": 1790522706.9875681,
+    "ast_hash": "13dbc01f4b6846cd1d588a2d57d18ff9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_bg_antenna_contacts.py": {
+    "mtime": 1790520406.3056936,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b220ca69c1a261422d67bf5289dd3211",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_bh_all_antennas_check.py": {
+    "mtime": 1790521191.4282804,
+    "seen": 1790522706.9875681,
+    "ast_hash": "4d33322386e00d131925d958ba63f481",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_bh_legacy_antenna_contacts.py": {
+    "mtime": 1790520991.3036654,
+    "seen": 1790522706.9875681,
+    "ast_hash": "37e34de39001aa186e9d3686c8e1ac81",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_ch4_trial.py": {
+    "mtime": 1790510128.019419,
+    "seen": 1790522706.9875681,
+    "ast_hash": "e8e92abb7a1cf8e5304c936d03ae7df2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_ch4_candidate.py": {
+    "mtime": 1790510520.2874422,
+    "seen": 1790522706.9875681,
+    "ast_hash": "837b4fc3c1ddd5be3bca75e33c8e58a9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_clean_close.pas": {
+    "mtime": 1790507444.251752,
+    "seen": 1790522706.9875681,
+    "ast_hash": "446914fcc014922a62e0cffba457d23e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_final_opens_graph.py": {
+    "mtime": 1790518429.4860792,
+    "seen": 1790522706.9875681,
+    "ast_hash": "97056d2ee570f0ac8cde0aaa727339ed",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_mcu_rx_power_graph.py": {
+    "mtime": 1790514867.5639472,
+    "seen": 1790522706.9875681,
+    "ast_hash": "52f0e1fd4dac0f567a40b77079b0d68a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_mcu_rx_reinforced_graph.py": {
+    "mtime": 1790514987.2870922,
+    "seen": 1790522706.9875681,
+    "ast_hash": "f08ca745a35dd9451645e715ea3bdc4f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_uart_partial_graph.py": {
+    "mtime": 1790513999.1827157,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b6445851292734ab8a0cef54877afab1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_uart_rx1_graph.py": {
+    "mtime": 1790514579.6836922,
+    "seen": 1790522706.9875681,
+    "ast_hash": "af7126258821705b3501020b6fdf9a2c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_check_vc1_l5_paths.py": {
+    "mtime": 1790511386.844201,
+    "seen": 1790522706.9875681,
+    "ast_hash": "60795cbbc472cfc033ff143550106c34",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cl4_feasibility.py": {
+    "mtime": 1790509457.9908037,
+    "seen": 1790522706.9875681,
+    "ast_hash": "2bb1b06b56d65570ef76d8bfbca8a39a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_clean_bgm_T.pas": {
+    "mtime": 1790520314.5999126,
+    "seen": 1790522706.9875681,
+    "ast_hash": "51ee1d8c4e9c1a853757b893d0ce0f66",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cleanbgm_224604.pas": {
+    "mtime": 1790520364.995187,
+    "seen": 1790522706.9875681,
+    "ast_hash": "692903a0e7d9507dccc35a84257614ed",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_closebb.pas": {
+    "mtime": 1790508446.1849358,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5f5054b844bd506d07ab75b347b4cd04",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_closebd_router.pas": {
+    "mtime": 1790513339.4442418,
+    "seen": 1790522706.9875681,
+    "ast_hash": "3d6505f3bf6eed3f12317fdf6eaa2b4b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_closebe_router.pas": {
+    "mtime": 1790514296.6123443,
+    "seen": 1790522706.9875681,
+    "ast_hash": "cef6245f0352ae104ce988009fde3ea8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_closebf_router.pas": {
+    "mtime": 1790515850.4029982,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b97985a27648b81e6997f8bdb7f3152e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cs_ground_stitch_sites.py": {
+    "mtime": 1790517171.3666942,
+    "seen": 1790522706.9875681,
+    "ast_hash": "4d80f676b0b49530a66d5328cfaf6311",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cs_power_feed_fix.py": {
+    "mtime": 1790518549.224239,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5ab4b5f438a06950360c85788c757e41",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cs_source_seed_check.py": {
+    "mtime": 1790517268.970999,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b62217aade7a4e2804afbab7e751d55e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cs_stub_review.py": {
+    "mtime": 1790518736.9219444,
+    "seen": 1790522706.9875681,
+    "ast_hash": "0418b97836c4a0bd2ba106334752358f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_cs_tx_local_detour.py": {
+    "mtime": 1790519004.7745113,
+    "seen": 1790522706.9875681,
+    "ast_hash": "82f2c89aadd9a7f24db31ab8f472bf13",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dba_185646.pas": {
+    "mtime": 1790506606.1268609,
+    "seen": 1790522706.9875681,
+    "ast_hash": "abb1ba9adbd51c816947b0e7cd072be8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbb_191935.pas": {
+    "mtime": 1790507975.9024763,
+    "seen": 1790522706.9875681,
+    "ast_hash": "0e01bd23e32665f1016106e96d8d8f41",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbc_200755.pas": {
+    "mtime": 1790510875.0994499,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5b3cfa6eb77c3afdf9c68d0ff7ef1e6b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbd_202424.pas": {
+    "mtime": 1790511864.2705724,
+    "seen": 1790522706.9875681,
+    "ast_hash": "7c88dabb60cc9f8451face2b50515070",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbe_204152.pas": {
+    "mtime": 1790512912.48271,
+    "seen": 1790522706.9875681,
+    "ast_hash": "6404e40ac776a6201de8a40d814090fd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbf_210912.pas": {
+    "mtime": 1790514552.1363065,
+    "seen": 1790522706.9875681,
+    "ast_hash": "ed02f3c28d749df1b35dd119493f9230",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbfs_223241.pas": {
+    "mtime": 1790519561.939967,
+    "seen": 1790522706.9875681,
+    "ast_hash": "3ca105d253d815f9d19fc84995f359a5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbg_220655.pas": {
+    "mtime": 1790518015.0258133,
+    "seen": 1790522706.9875681,
+    "ast_hash": "9c5a6da9d7044582bab542d38e3b3880",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbgm_224135.pas": {
+    "mtime": 1790520095.4585319,
+    "seen": 1790522706.9875681,
+    "ast_hash": "0c0c2da1592860a877317ae738e0e41b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbh_225024.pas": {
+    "mtime": 1790520624.8107414,
+    "seen": 1790522706.9875681,
+    "ast_hash": "05353216522fe996ffa82749eee03fa9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbi_225714.pas": {
+    "mtime": 1790521034.6979382,
+    "seen": 1790522706.9875681,
+    "ast_hash": "63b53241cbeddaef95ae21b003cc82a5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_dbj_230930.pas": {
+    "mtime": 1790521770.164132,
+    "seen": 1790522706.9875681,
+    "ast_hash": "51a2ba12a9ab5c4603dfe6fc01a23928",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_final_escape_sites.py": {
+    "mtime": 1790516351.8305688,
+    "seen": 1790522706.9875681,
+    "ast_hash": "87184cbdb5199871357dc38b503d8093",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_finalize_bj.py": {
+    "mtime": 1790522205.0688355,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5c5365c592d5874bdb40696f1095dbe4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_finalstate_231731.pas": {
+    "mtime": 1790522251.5047784,
+    "seen": 1790522706.9875681,
+    "ast_hash": "ebb6ccefba24a79e32e1a58ba459b1f1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gaz_185646.pas": {
+    "mtime": 1790506606.223554,
+    "seen": 1790522706.9875681,
+    "ast_hash": "2bd088d1079fe2ada21e1e7d8150f9e3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gba_185646.pas": {
+    "mtime": 1790506606.1772325,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b91a84b24fb4240987656bcf02925d5c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbb_191935.pas": {
+    "mtime": 1790507975.9721513,
+    "seen": 1790522706.9875681,
+    "ast_hash": "06e02159096495a9fb509c3bde2c6b44",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbc_200755.pas": {
+    "mtime": 1790510875.200723,
+    "seen": 1790522706.9875681,
+    "ast_hash": "068b5ad3f469dd51a4e97e9e471e35e5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbd_202424.pas": {
+    "mtime": 1790511864.3958318,
+    "seen": 1790522706.9875681,
+    "ast_hash": "d707e182b2a5979539f515b75324bafe",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbe_204152.pas": {
+    "mtime": 1790512912.6205938,
+    "seen": 1790522706.9875681,
+    "ast_hash": "38320b9174bba1462165420c718ebe35",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbf_210912.pas": {
+    "mtime": 1790514552.2268262,
+    "seen": 1790522706.9875681,
+    "ast_hash": "53677fe9db37b834e732235b2a6bbfdd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbfs_223242.pas": {
+    "mtime": 1790519562.0119307,
+    "seen": 1790522706.9875681,
+    "ast_hash": "4c9ade4e771b7e7851fa6db8806a4b75",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbg_220655.pas": {
+    "mtime": 1790518015.0767097,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b7a2c965e04285a0d56d18ed44a17aa4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbgm_224135.pas": {
+    "mtime": 1790520095.520483,
+    "seen": 1790522706.9875681,
+    "ast_hash": "9413dddd41bb96ee9c6177420bb05119",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbh_225024.pas": {
+    "mtime": 1790520624.8718872,
+    "seen": 1790522706.9875681,
+    "ast_hash": "9f3c6fca833e777c44133d9779b11d37",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbi_225714.pas": {
+    "mtime": 1790521034.748896,
+    "seen": 1790522706.9875681,
+    "ast_hash": "08087d8a0da7314a76e937f2a6fb48ec",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_gbj_230930.pas": {
+    "mtime": 1790521770.2109993,
+    "seen": 1790522706.9875681,
+    "ast_hash": "47cc2441c2a801ba1ae5bd5915901b93",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_ina4_rotation_feasibility.py": {
+    "mtime": 1790510318.0796578,
+    "seen": 1790522706.9875681,
+    "ast_hash": "4f5bf57f8c8c1f369aa35ef0860a755d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_mcu92_inward_seed_check.py": {
+    "mtime": 1790517170.7075088,
+    "seen": 1790522706.9875681,
+    "ast_hash": "bded8965521b06d8e23ba0bcf6385722",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_move_cl4_T.pas": {
+    "mtime": 1790509557.1506793,
+    "seen": 1790522706.9875681,
+    "ast_hash": "bfd9c0d54e48fb661168ebd25e6a7714",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_move_gnd_tp_T.pas": {
+    "mtime": 1790518898.8854306,
+    "seen": 1790522706.9875681,
+    "ast_hash": "eb4ed49069763db62821ee5eeba8324b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_mvbgm_224135.pas": {
+    "mtime": 1790520095.3979795,
+    "seen": 1790522706.9875681,
+    "ast_hash": "ec55828ce595b99387f2483c41c61c2d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_mvcl4_200754.pas": {
+    "mtime": 1790510874.8791509,
+    "seen": 1790522706.9875681,
+    "ast_hash": "2b082e1bfa47995941132607fee19afd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_native_checked.ps1": {
+    "mtime": 1790506574.6516328,
+    "seen": 1790522706.9875681,
+    "ast_hash": "44922162ea515c14c586422aaea44a05",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opba_185646.pas": {
+    "mtime": 1790506606.0224915,
+    "seen": 1790522706.9875681,
+    "ast_hash": "86b7c74a1492665291788c4df1b47675",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbb_191935.pas": {
+    "mtime": 1790507975.7618494,
+    "seen": 1790522706.9875681,
+    "ast_hash": "3f80953f8f7c513d3af92d1238d4fbe2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbc_200754.pas": {
+    "mtime": 1790510874.7904518,
+    "seen": 1790522706.9875681,
+    "ast_hash": "14a01700401f89530a27b57447913b22",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbe_205633.pas": {
+    "mtime": 1790513793.9201925,
+    "seen": 1790522706.9875681,
+    "ast_hash": "6d77ce2d89e5b2efeb1d7bbe9543a6c3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbf_210912.pas": {
+    "mtime": 1790514552.06335,
+    "seen": 1790522706.9875681,
+    "ast_hash": "dac750cb45ebf839ed7c6b6c82ac1dc0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbg_220654.pas": {
+    "mtime": 1790518014.9281113,
+    "seen": 1790522706.9875681,
+    "ast_hash": "e01d9f24e0cc91e57743e651d0720a55",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_opbh_224733.pas": {
+    "mtime": 1790520453.5090907,
+    "seen": 1790522706.9875681,
+    "ast_hash": "09bedeba28872defaf1193d63d977524",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_read_drc_coverage.py": {
+    "mtime": 1790520441.1625884,
+    "seen": 1790522706.9875681,
+    "ast_hash": "d3ad23902d6501fbb9a230c0fc796a2e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_read_via_rule_T.pas": {
+    "mtime": 1790520639.4159727,
+    "seen": 1790522706.9875681,
+    "ast_hash": "d1b1c768d4741408228dc53473241a2d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_readbi_225318.pas": {
+    "mtime": 1790520798.775732,
+    "seen": 1790522706.9875681,
+    "ast_hash": "dd430f635ce73bcb37c06f60d149ee20",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_cleanup_bj.py": {
+    "mtime": 1790522169.6769068,
+    "seen": 1790522706.9875681,
+    "ast_hash": "d7571207a776608aef4d0a3ea6d853f5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_cs_bg.py": {
+    "mtime": 1790520251.518196,
+    "seen": 1790522706.9875681,
+    "ast_hash": "a56753b8ca497893bb91b08be836c407",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_mcu_rx_bf.py": {
+    "mtime": 1790514988.797097,
+    "seen": 1790522706.9875681,
+    "ast_hash": "1f6f184427d51e61a5b36d5b5af3d7a0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_tx_bh.py": {
+    "mtime": 1790520836.8867247,
+    "seen": 1790522706.9875681,
+    "ast_hash": "e2054d424766c4672ca3aab098e874c0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_uart_be.py": {
+    "mtime": 1790514000.7220259,
+    "seen": 1790522706.9875681,
+    "ast_hash": "a5e7c94afce4ba8f0c29dd669ec2709b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_unsaved_user_edit.py": {
+    "mtime": 1790519610.5328996,
+    "seen": 1790522706.9875681,
+    "ast_hash": "7be77b5ebf2ab53465829e3710180fae",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_review_vc1_bd.py": {
+    "mtime": 1790512446.1252775,
+    "seen": 1790522706.9875681,
+    "ast_hash": "52cd524df88a277b1959dd2ff856209d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_route_seed.py": {
+    "mtime": 1790517465.8357916,
+    "seen": 1790522706.9875681,
+    "ast_hash": "463a49373b77f254cbecea531064f703",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_save_drc_options_T.pas": {
+    "mtime": 1790521034.601971,
+    "seen": 1790522706.9875681,
+    "ast_hash": "2459f4d38ddfa9106b2d53012e45c05b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_save_user_edit_T.pas": {
+    "mtime": 1790519558.9350128,
+    "seen": 1790522706.9875681,
+    "ast_hash": "1ecc6aa5506a5479a459e882a1e45346",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_savebfs_223241.pas": {
+    "mtime": 1790519561.8482533,
+    "seen": 1790522706.9875681,
+    "ast_hash": "89db34cda1daed01dcdc6bfdaeb0f1c1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_savebi_225714.pas": {
+    "mtime": 1790521034.6455176,
+    "seen": 1790522706.9875681,
+    "ast_hash": "14c5d506523e604ea559508697d85d4d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_scan_ina4_via.py": {
+    "mtime": 1790509983.0615451,
+    "seen": 1790522706.9875681,
+    "ast_hash": "075c336f68b8ef388f15c74023a8321c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_tp_gnd_dig_move_scan.py": {
+    "mtime": 1790518711.7614133,
+    "seen": 1790522706.9875681,
+    "ast_hash": "795394a5b5c895f0a3fca2733263ba41",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_trace_shape_inventory.py": {
+    "mtime": 1790520998.712262,
+    "seen": 1790522706.9875681,
+    "ast_hash": "7bdb9a3c1cd32f94910c788242c0e805",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_tx_final_junction_review.py": {
+    "mtime": 1790520530.144843,
+    "seen": 1790522706.9875681,
+    "ast_hash": "b18d4f124c9ff10098492191fa0a1e05",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_tx_link_seed_check.py": {
+    "mtime": 1790516575.6542003,
+    "seen": 1790522706.9875681,
+    "ast_hash": "5864c15159f7cfaed513c72abfa43ba1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_unsavedbf_222959.pas": {
+    "mtime": 1790519399.26138,
+    "seen": 1790522706.9875681,
+    "ast_hash": "82301dd60fa43835cfbf2c93fded6aa1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_verify_pcb_structure.py": {
+    "mtime": 1790507435.352904,
+    "seen": 1790522706.9875681,
+    "ast_hash": "baba112dd750f99662c73c9f2a957c94",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_verify_routing_delta.py": {
+    "mtime": 1790518978.7989101,
+    "seen": 1790522706.9875681,
+    "ast_hash": "11e73587df84fe28086782c34c6c4ca3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_verify_via_rule_delta.py": {
+    "mtime": 1790522184.0414288,
+    "seen": 1790522706.9875681,
+    "ast_hash": "d74cf835a0d216807e5e35a074017352",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_viabi_225318.pas": {
+    "mtime": 1790520798.728102,
+    "seen": 1790522706.9875681,
+    "ast_hash": "685e35f8ecf02aa780512fed8621ac9b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/astra_wifi_rx_local.py": {
+    "mtime": 1790512927.1325445,
+    "seen": 1790522706.9875681,
+    "ast_hash": "ee237d311489fc159331b399ea518d16",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/clearance_diff.py": {
+    "mtime": 1790522515.522962,
+    "seen": 1790522706.994176,
+    "ast_hash": "caf120c5d667ff1e1783378000917828",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/clearance_scan.py": {
+    "mtime": 1790522492.1241517,
+    "seen": 1790522706.994176,
+    "ast_hash": "e21955bcbebda17664b94fa2bb423206",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/repair_guided_fix.py": {
+    "mtime": 1790517247.7438097,
+    "seen": 1790522707.1511455,
+    "ast_hash": "b382337d15ed33cdad016dc4cfdc9eb3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_audit_trace_rules.py": {
+    "mtime": 1790520638.6909611,
+    "seen": 1790522707.1707096,
+    "ast_hash": "ea6662a8ddb844cc1d9a7849f25d5543",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_final_opens_graph.py": {
+    "mtime": 1790517641.6488008,
+    "seen": 1790522707.1707096,
+    "ast_hash": "ce1b5788699ce7987786650a38fd2ac9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_route_seed_plans.py": {
+    "mtime": 1790517502.6414645,
+    "seen": 1790522707.1707096,
+    "ast_hash": "807dc43bd0dff8664c8fca816bfa8519",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_trace_shape_inventory.py": {
+    "mtime": 1790520999.3565607,
+    "seen": 1790522707.1707096,
+    "ast_hash": "b426268504a843ba66823edcf70168af",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_verify_routing_delta.py": {
+    "mtime": 1790519043.1832893,
+    "seen": 1790522707.1707096,
+    "ast_hash": "d8bb0060defd120d483cda8c840e3251",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_astra_verify_via_rule_delta.py": {
+    "mtime": 1790522129.7453403,
+    "seen": 1790522707.1707096,
+    "ast_hash": "3603c1591a97dfc60ff016b943b9db97",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_consistent_repair.py": {
+    "mtime": 1790509618.475667,
+    "seen": 1790522707.1707096,
+    "ast_hash": "c2bf046c9a812383aa417f93e61aa8be",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_gloss_contacts.py": {
+    "mtime": 1790508981.5795784,
+    "seen": 1790522707.1707096,
+    "ast_hash": "d77fef80db3fdeb08e82565b4734c75b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/test_repair_guided_path.py": {
+    "mtime": 1790517613.2151523,
+    "seen": 1790522707.1707096,
+    "ast_hash": "e1dfced85716a5b07fb77fda1b9de3f8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_ALIGN_VIA_BI.txt": {
+    "mtime": 1790520851.504048,
+    "seen": 1790522707.2944753,
+    "ast_hash": "9b580ef4658555bebfec1d91f41b4164",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_ALL_FREE_TRACE_AUDIT.md": {
+    "mtime": 1790521115.0499744,
+    "seen": 1790522707.2944753,
+    "ast_hash": "165be74c8bf3d842d6df4e121d27d94b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_ALL_TRACE_CHECK_GAPS.md": {
+    "mtime": 1790520067.4556277,
+    "seen": 1790522707.2944753,
+    "ast_hash": "6c57e6d230b9cb0e97f132cf7c08b751",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BA.txt": {
+    "mtime": 1790507074.2479448,
+    "seen": 1790522707.2944753,
+    "ast_hash": "f062f6d5272d7b661a1b8f1030f3188e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BB.txt": {
+    "mtime": 1790508247.0758004,
+    "seen": 1790522707.2944753,
+    "ast_hash": "af78b1b8a29b7798743a20d466fc6324",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BC.txt": {
+    "mtime": 1790511011.0657167,
+    "seen": 1790522707.2944753,
+    "ast_hash": "4844d102ef38d7ef5b8b8f5d02d0ba91",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BD.txt": {
+    "mtime": 1790511891.1435816,
+    "seen": 1790522707.2944753,
+    "ast_hash": "2e849ae1be4d771785468b813a5e561c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BE.txt": {
+    "mtime": 1790513908.4885788,
+    "seen": 1790522707.2944753,
+    "ast_hash": "882ce996092578cbc19371787e27830c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BF.txt": {
+    "mtime": 1790515163.965628,
+    "seen": 1790522707.2944753,
+    "ast_hash": "b18e849c0c1f8f330cca98e83fb4c3e9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BG.txt": {
+    "mtime": 1790519060.4436202,
+    "seen": 1790522707.2944753,
+    "ast_hash": "86a682bae3801e5fa1721c09d36356eb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BG_REBASED.txt": {
+    "mtime": 1790520014.852223,
+    "seen": 1790522707.2944753,
+    "ast_hash": "3167b93c497280b8d887fc5c9b0fac50",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BH_CENTERED.txt": {
+    "mtime": 1790520739.016587,
+    "seen": 1790522707.2944753,
+    "ast_hash": "848e38bb7ad0efec67a7c296d5ceb9df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_APPLY_BJ.txt": {
+    "mtime": 1790521929.2111762,
+    "seen": 1790522707.2944753,
+    "ast_hash": "6b55dd651c43b51ad589bf158921319e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BC_TRANSLATION_VERIFIER.md": {
+    "mtime": 1790511092.4131484,
+    "seen": 1790522707.2944753,
+    "ast_hash": "26be1d93c361a3717f16e462bf7118d3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BD_INDEPENDENT_REVIEW.md": {
+    "mtime": 1790512483.6142974,
+    "seen": 1790522707.2944753,
+    "ast_hash": "d7d1976e60bbb5381692fb7f9b848b78",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_INDEPENDENT_REVIEW.md": {
+    "mtime": 1790514132.0344343,
+    "seen": 1790522707.2944753,
+    "ast_hash": "167737678557c7ba9597885ddabbc8cf",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BE_UART_RX1_INDEPENDENT_PREWRITE.md": {
+    "mtime": 1790515302.5868924,
+    "seen": 1790522707.2944753,
+    "ast_hash": "46b8a3c1c32a813bd115833ff63c6057",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_BOTTOM_PLANNING_ONLY/PLANNING_GEOMETRY_NOT_NATIVE.txt": {
+    "mtime": 1790517130.8129826,
+    "seen": 1790522707.2944753,
+    "ast_hash": "0f5dba651afeea7047094030a8312b19",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_CS_SEEDED_PLANNING_ONLY/PLANNING_GEOMETRY_NOT_NATIVE.txt": {
+    "mtime": 1790516847.236684,
+    "seen": 1790522707.2944753,
+    "ast_hash": "0f5dba651afeea7047094030a8312b19",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL2B_STOP.txt": {
+    "mtime": 1790516781.748109,
+    "seen": 1790522707.2944753,
+    "ast_hash": "d4de09165c3d03a2ad04c01d591652a6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL_ESCAPE_REVIEW.md": {
+    "mtime": 1790517404.975206,
+    "seen": 1790522707.2944753,
+    "ast_hash": "532f2438a2ff26ecd946611f214d4904",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL_LOCAL_PLANNING_ONLY/PLANNING_GEOMETRY_NOT_NATIVE.txt": {
+    "mtime": 1790517542.8655996,
+    "seen": 1790522707.2944753,
+    "ast_hash": "51707b4c883ff557f321bc81dcd468a1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_FINAL_OPENS_CONSTRAINT_REVIEW.md": {
+    "mtime": 1790516122.1878526,
+    "seen": 1790522707.2944753,
+    "ast_hash": "7b3c5e7b2215fdec1b81368964fcf8ab",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_INDEPENDENT_REVIEW.md": {
+    "mtime": 1790515488.7438867,
+    "seen": 1790522707.2944753,
+    "ast_hash": "f8729e0579d7d233b8b2fdab8931576f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_TP_GND_DIG_MOVE_REVIEW.md": {
+    "mtime": 1790518819.498934,
+    "seen": 1790522707.2944753,
+    "ast_hash": "e07b840cb71af38f4a9a7b5e05d413f7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BF_TX_SEEDED_PLANNING_ONLY/PLANNING_GEOMETRY_NOT_NATIVE.txt": {
+    "mtime": 1790517003.893956,
+    "seen": 1790522707.2944753,
+    "ast_hash": "494de21ffbc0b21da92249a1667764ff",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BGM_TX_LAST_PLANNING_ONLY/PLANNING_GEOMETRY_NOT_NATIVE.txt": {
+    "mtime": 1790520391.971628,
+    "seen": 1790522707.2944753,
+    "ast_hash": "740125b8918d5edf3b301ee317129b12",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_ANTENNA_BOUNDED_REVIEW.md": {
+    "mtime": 1790520716.2930198,
+    "seen": 1790522707.2944753,
+    "ast_hash": "fd116270228006d00c90c41d5b47cf02",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BG_CS_RETURN_REVIEW.md": {
+    "mtime": 1790519156.7856197,
+    "seen": 1790522707.2944753,
+    "ast_hash": "5c06522a8fc9366f53d43ed5cacb31b0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_ALL_ANTENNA_BOUNDED_REVIEW.md": {
+    "mtime": 1790521398.0849004,
+    "seen": 1790522707.2944753,
+    "ast_hash": "767771ec92f04240357f4d5a5642b959",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_BI_RULE_OPTIONS_REVIEW.md": {
+    "mtime": 1790522242.5622685,
+    "seen": 1790522707.2944753,
+    "ast_hash": "9b9f4df3503fb9d450ac95297112fb13",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BH_INDEPENDENT_REVIEW.md": {
+    "mtime": 1790520887.3314612,
+    "seen": 1790522707.2944753,
+    "ast_hash": "78ff16a9545ec6900a5fd66750aced4f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_BJ_INDEPENDENT_REVIEW.md": {
+    "mtime": 1790522170.501284,
+    "seen": 1790522707.2944753,
+    "ast_hash": "139fd52d86c0f0875d3b800d57cbb8ba",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_L5_TRIAL_PLANNING_ONLY/MOVED_ONLY_GEOMETRY.txt": {
+    "mtime": 1790510392.3097465,
+    "seen": 1790522707.2944753,
+    "ast_hash": "cb927b84358ceef24fa363eda67e14aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_L5_TRIAL_PLANNING_ONLY/PREPARED_GEOMETRY_WITH_SEED.txt": {
+    "mtime": 1790510392.315921,
+    "seen": 1790522707.2944753,
+    "ast_hash": "a4800e36dccb8e81d51865fccce99ff0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL1_PLANNING_ONLY/MOVED_ONLY_GEOMETRY.txt": {
+    "mtime": 1790509731.6249013,
+    "seen": 1790522707.2944753,
+    "ast_hash": "cb927b84358ceef24fa363eda67e14aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL1_PLANNING_ONLY/PREPARED_GEOMETRY_WITH_SEED.txt": {
+    "mtime": 1790509731.627452,
+    "seen": 1790522707.2944753,
+    "ast_hash": "11f8dc19ea423f4acb7802e869ad9992",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL2_PLANNING_ONLY/MOVED_ONLY_GEOMETRY.txt": {
+    "mtime": 1790509790.387095,
+    "seen": 1790522707.2944753,
+    "ast_hash": "cb927b84358ceef24fa363eda67e14aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL2_PLANNING_ONLY/PREPARED_GEOMETRY_WITH_SEED.txt": {
+    "mtime": 1790509790.389663,
+    "seen": 1790522707.2944753,
+    "ast_hash": "11f8dc19ea423f4acb7802e869ad9992",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL2_STOP.txt": {
+    "mtime": 1790510063.3562086,
+    "seen": 1790522707.2944753,
+    "ast_hash": "b4d49df13d07470069f520eda2206b89",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL3_PLANNING_ONLY/MOVED_ONLY_GEOMETRY.txt": {
+    "mtime": 1790510143.967813,
+    "seen": 1790522707.2944753,
+    "ast_hash": "cb927b84358ceef24fa363eda67e14aa",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_LOCAL3_PLANNING_ONLY/PREPARED_GEOMETRY_WITH_SEED.txt": {
+    "mtime": 1790510143.9716065,
+    "seen": 1790522707.2944753,
+    "ast_hash": "a4800e36dccb8e81d51865fccce99ff0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CHANNEL4_RESOLUTION_BC.md": {
+    "mtime": 1790511289.641312,
+    "seen": 1790522707.2944753,
+    "ast_hash": "ba75d365c373386ec9e29971e14483f3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CL4_BODY_OBSTACLES_BB.txt": {
+    "mtime": 1790509552.262547,
+    "seen": 1790522707.2944753,
+    "ast_hash": "dcaec40667f04b798d5c59403418186b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BA.txt": {
+    "mtime": 1790507448.683296,
+    "seen": 1790522707.2944753,
+    "ast_hash": "3e1016cde1ba2db5001e552bcb33be8b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BB.txt": {
+    "mtime": 1790508449.0170639,
+    "seen": 1790522707.2944753,
+    "ast_hash": "9a69b040214c47c83bd883e896b59ac7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BD_ROUTER.txt": {
+    "mtime": 1790513343.6611614,
+    "seen": 1790522707.2944753,
+    "ast_hash": "55226854becbfc0dc07c1a70bcb9872e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BE_ROUTER.txt": {
+    "mtime": 1790514301.1556304,
+    "seen": 1790522707.2944753,
+    "ast_hash": "7706f611b5f61d04d0e400208fdf07f7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BF_ROUTER.txt": {
+    "mtime": 1790515851.265771,
+    "seen": 1790522707.2944753,
+    "ast_hash": "fe8f02f4238d79029324a7f2f76a4be5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CLEAN_CLOSE_BGM.txt": {
+    "mtime": 1790520386.9483514,
+    "seen": 1790522707.2944753,
+    "ast_hash": "4e3822231b17ba49cffb522dc771ccab",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_FINAL_SAVED_STATE_BJ.txt": {
+    "mtime": 1790522281.4042652,
+    "seen": 1790522707.2944753,
+    "ast_hash": "3ae57d3beb413434f447c5ba0a138741",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_FINAL_TWO_PROGRESS_20260927.md": {
+    "mtime": 1790518717.6082418,
+    "seen": 1790522707.2944753,
+    "ast_hash": "9e1e4b21604b12761549cf8e35933652",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_FINISH_TOOLS.md": {
+    "mtime": 1790509637.407929,
+    "seen": 1790522707.2944753,
+    "ast_hash": "6b51faea42be7f9fafdc727a87fc5414",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_FREE_PAD_DELTA_ALLOWANCE.md": {
+    "mtime": 1790519109.6267626,
+    "seen": 1790522707.2944753,
+    "ast_hash": "bd36aebf21b1f12d3cb49132ce636db2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_GLOSS_CONTACT_GUARD.md": {
+    "mtime": 1790509033.5025623,
+    "seen": 1790522707.2944753,
+    "ast_hash": "80736013a0d5fbcf5b6b8bbdd814c775",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_GUIDED_PATH_FIX.md": {
+    "mtime": 1790517614.414786,
+    "seen": 1790522707.2944753,
+    "ast_hash": "d3eddc72a8a8c58ad99624192ad99079",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_INA4_VIA_SCAN_BB.md": {
+    "mtime": 1790509329.4757707,
+    "seen": 1790522707.2944753,
+    "ast_hash": "f50925712d6a9f0569d9b085727b839c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_MCU_RX_RESOLUTION_BF.md": {
+    "mtime": 1790515483.5009656,
+    "seen": 1790522707.2944753,
+    "ast_hash": "a1951487b1e1e82a6a018a9d40a64b5c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_MOVE_CL4.txt": {
+    "mtime": 1790510959.6070786,
+    "seen": 1790522707.2944753,
+    "ast_hash": "be2e0bff984b091fbc464e08b34667f3",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_MOVE_TP_BGM.txt": {
+    "mtime": 1790520286.599239,
+    "seen": 1790522707.2944753,
+    "ast_hash": "dc1ab0564db6aa401462e9a92486e77c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_NETINA4_3_ROUTING_LAYERS_REVIEW.md": {
+    "mtime": 1790510454.126609,
+    "seen": 1790522707.2944753,
+    "ast_hash": "4af391c98352e1787ccb529a3abc9a91",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BB.txt": {
+    "mtime": 1790508179.606169,
+    "seen": 1790522707.2944753,
+    "ast_hash": "00baf53a679e6f7e40894a33950d016f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BC.txt": {
+    "mtime": 1790510937.0426984,
+    "seen": 1790522707.2944753,
+    "ast_hash": "0c6617ecc7c1ac7cdae6ee7a4ab82b69",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BE.txt": {
+    "mtime": 1790513849.5404334,
+    "seen": 1790522707.2944753,
+    "ast_hash": "0166a2b8fc4e472ddd40ac0f19a86ef1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BF.txt": {
+    "mtime": 1790514706.8832562,
+    "seen": 1790522707.2944753,
+    "ast_hash": "58ef0a46bd18e707f50fcbed9c2cde58",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BG.txt": {
+    "mtime": 1790518048.9632556,
+    "seen": 1790522707.2944753,
+    "ast_hash": "5eaa1e39d3a86d9548afee5468b138bd",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_BH.txt": {
+    "mtime": 1790520503.9204726,
+    "seen": 1790522707.2944753,
+    "ast_hash": "e438547ecb234235e4db716a877917ec",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_OPEN_PROJ_BA.txt": {
+    "mtime": 1790506666.2363904,
+    "seen": 1790522707.2944753,
+    "ast_hash": "bbb3cf5d37f986bf9b91856fff03daee",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_READ_VIA_BI.txt": {
+    "mtime": 1790520853.550187,
+    "seen": 1790522707.2944753,
+    "ast_hash": "6a7eacbdcccf3168c6d5c81c5c6bc477",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_ROUTING_COMPLETE_BJ_20260927.md": {
+    "mtime": 1790522251.3855414,
+    "seen": 1790522707.2944753,
+    "ast_hash": "7420188af76d556a0a4c62cff70b22d9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_SAVE_DRC_BI.txt": {
+    "mtime": 1790521311.6634374,
+    "seen": 1790522707.2944753,
+    "ast_hash": "6c8e58937571872d3f84b0a2be2fae33",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_SAVE_USER_BFS.txt": {
+    "mtime": 1790519826.7414947,
+    "seen": 1790522707.2944753,
+    "ast_hash": "af89b495f96e5a926fef236477c39d38",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_TOOL_FIX_TESTS.md": {
+    "mtime": 1790509635.863374,
+    "seen": 1790522707.2944753,
+    "ast_hash": "03bff2099df6585b8907aaf1fa3307a8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_UART_RESOLUTION_BE.md": {
+    "mtime": 1790514208.6643858,
+    "seen": 1790522707.2944753,
+    "ast_hash": "9cb4a2702958d748d6a664ef63dfab86",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_VC1_L5_REVIEW_BC.md": {
+    "mtime": 1790511442.335477,
+    "seen": 1790522707.2944753,
+    "ast_hash": "03ecf3b5a6a75e9fa240d09c4cbe3788",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_VC1_NATIVE_RULE_REVIEW_BC.md": {
+    "mtime": 1790512465.0204985,
+    "seen": 1790522707.2944753,
+    "ast_hash": "e40044758872abf248c70da8de586e9d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_VC1_RESOLUTION_BD.md": {
+    "mtime": 1790512467.4315069,
+    "seen": 1790522707.2944753,
+    "ast_hash": "ae9b3e1e90d21aaffbe4561a133155a6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_VIA_RULE_REVIEW.md": {
+    "mtime": 1790508651.9350362,
+    "seen": 1790522707.2944753,
+    "ast_hash": "226dc838ef6e3e1a9afb7dacbb19b38c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_WIFI_UART_RX_NATIVE_RULE_REVIEW_BD.md": {
+    "mtime": 1790513397.3888,
+    "seen": 1790522707.2944753,
+    "ast_hash": "a4eaeb0a4f18f8f2b1953fd9ceee74d8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BA.txt": {
+    "mtime": 1790507177.0547562,
+    "seen": 1790522707.3274722,
+    "ast_hash": "b286e276150358383b42028a07163cd8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BA.txt.html": {
+    "mtime": 1790507176.9659252,
+    "seen": 1790522707.3274722,
+    "ast_hash": "bc11c49da36f88931727a52a956dc04e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BB.txt": {
+    "mtime": 1790508309.1390636,
+    "seen": 1790522707.3274722,
+    "ast_hash": "552bd764ff811539474d0f613d81da64",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BB.txt.html": {
+    "mtime": 1790508309.03868,
+    "seen": 1790522707.3274722,
+    "ast_hash": "b65bc8a2e18539f89da2a9f4335debff",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BC.txt": {
+    "mtime": 1790511052.6351335,
+    "seen": 1790522707.3274722,
+    "ast_hash": "b9932b76120f7e77ff03632b9843c64b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BC.txt.html": {
+    "mtime": 1790511052.5146935,
+    "seen": 1790522707.3274722,
+    "ast_hash": "bf229e6fcbe5563a9635b924cd581cfe",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BD.txt": {
+    "mtime": 1790511932.3627856,
+    "seen": 1790522707.3274722,
+    "ast_hash": "3ee49c2086f3884802f4e3ffaff1b232",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BD.txt.html": {
+    "mtime": 1790511932.2561755,
+    "seen": 1790522707.3274722,
+    "ast_hash": "0affdc902d7ed29b713faf422e357db7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BE.txt": {
+    "mtime": 1790513958.397322,
+    "seen": 1790522707.3274722,
+    "ast_hash": "6b29a664088a28148bd1954599f74486",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BE.txt.html": {
+    "mtime": 1790513958.2826753,
+    "seen": 1790522707.3274722,
+    "ast_hash": "b6311c6d8009caaa7a4839cbc2fac60b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BF.txt": {
+    "mtime": 1790515357.071907,
+    "seen": 1790522707.3274722,
+    "ast_hash": "680083c0e57a5efefbecb3c6dc8c7ed9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BF.txt.html": {
+    "mtime": 1790515356.93516,
+    "seen": 1790522707.3274722,
+    "ast_hash": "8dbed60fb097d9a0f6be03a54c50da60",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BFS.txt": {
+    "mtime": 1790519892.2720878,
+    "seen": 1790522707.3274722,
+    "ast_hash": "d4396086f89cab729a723ac6a01227b0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BFS.txt.html": {
+    "mtime": 1790519892.2370942,
+    "seen": 1790522707.3274722,
+    "ast_hash": "562c6c48086df20e99cd6f63b3a7aa8f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BG.txt": {
+    "mtime": 1790520027.3274632,
+    "seen": 1790522707.3274722,
+    "ast_hash": "bba7ce9250dd3d6dda9b4056969492bc",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BG.txt.html": {
+    "mtime": 1790520027.2954137,
+    "seen": 1790522707.3274722,
+    "ast_hash": "0be2fb145a4d7c76d9b5c268237924e5",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BGM.txt": {
+    "mtime": 1790520297.6486275,
+    "seen": 1790522707.3274722,
+    "ast_hash": "da719a20055c0bbb134a558af029254d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BGM.txt.html": {
+    "mtime": 1790520297.612643,
+    "seen": 1790522707.3274722,
+    "ast_hash": "e5b8b0785a70210db0b0d7518164a48f",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BH.txt": {
+    "mtime": 1790520753.5239356,
+    "seen": 1790522707.3274722,
+    "ast_hash": "f33a4bb2d9a86c1cfe9dd3d97f8241d4",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BH.txt.html": {
+    "mtime": 1790520753.4871404,
+    "seen": 1790522707.3274722,
+    "ast_hash": "af562d7e0df1283e4b49d3a9f3591e1e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BI.txt": {
+    "mtime": 1790521327.201075,
+    "seen": 1790522707.3274722,
+    "ast_hash": "5abdf90cbb5c06072fb0e5e2efbc9218",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BI.txt.html": {
+    "mtime": 1790521327.1177342,
+    "seen": 1790522707.3274722,
+    "ast_hash": "54e64fcdac1d1323eb925750b7fa5425",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BJ.txt": {
+    "mtime": 1790521945.4404602,
+    "seen": 1790522707.3274722,
+    "ast_hash": "988d392a0774916329da3b23d012a4ef",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/DRC_C2_6L_BJ.txt.html": {
+    "mtime": 1790521945.391845,
+    "seen": 1790522707.3274722,
+    "ast_hash": "bf39f35fe4f785b2a0d3828152f02f1d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_AZ_READBACK_ASTRA.txt": {
+    "mtime": 1790506857.5150237,
+    "seen": 1790522707.3796656,
+    "ast_hash": "3dea8a7c0b87bdec86877bdb2f5886a7",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BA.txt": {
+    "mtime": 1790507238.6805427,
+    "seen": 1790522707.3796656,
+    "ast_hash": "7b76003a0df1a34de57f0dda2f4e729e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BB.txt": {
+    "mtime": 1790508322.247511,
+    "seen": 1790522707.3796656,
+    "ast_hash": "cd6742a7ce580b998418589ed3028aeb",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BC.txt": {
+    "mtime": 1790511094.8183908,
+    "seen": 1790522707.3796656,
+    "ast_hash": "2aa2f0da3827332374318b448d78bbd8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BD.txt": {
+    "mtime": 1790511967.93149,
+    "seen": 1790522707.3796656,
+    "ast_hash": "d0edded8b0a6338eeabd833190c6b137",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BE.txt": {
+    "mtime": 1790514000.030305,
+    "seen": 1790522707.3796656,
+    "ast_hash": "c453fe6abaf917145b8fb96230b60eb6",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BF.txt": {
+    "mtime": 1790515363.1843965,
+    "seen": 1790522707.3796656,
+    "ast_hash": "e2a714f2ba2d548899bbfd4463869165",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BFS.txt": {
+    "mtime": 1790519897.2007105,
+    "seen": 1790522707.3796656,
+    "ast_hash": "1b10315f26e66a4690e2034d4751a71b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BG.txt": {
+    "mtime": 1790520030.8338137,
+    "seen": 1790522707.3796656,
+    "ast_hash": "3849d0306586a23d257ebb32d17fbe47",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BGM.txt": {
+    "mtime": 1790520302.8196487,
+    "seen": 1790522707.3796656,
+    "ast_hash": "b8cea7496f4372563dbc1040c5c36a8d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BH.txt": {
+    "mtime": 1790520758.7559667,
+    "seen": 1790522707.3796656,
+    "ast_hash": "2798514f72dc0c895d236f49f7ad7e1b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BI.txt": {
+    "mtime": 1790521337.2631698,
+    "seen": 1790522707.3796656,
+    "ast_hash": "2798514f72dc0c895d236f49f7ad7e1b",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_C2_6L_BJ.txt": {
+    "mtime": 1790521952.8720543,
+    "seen": 1790522707.3796656,
+    "ast_hash": "47ba6687aad037e883d77f5ba36eafb1",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/GEOMETRY_UNSAVED_BEFORE_BG.txt": {
+    "mtime": 1790519432.073299,
+    "seen": 1790522707.397496,
+    "ast_hash": "02b829926e7faa17a2322c98eb9b74d9",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/ASTRA_CL4_TARGET.txt": {
+    "mtime": 1790510850.4237926,
+    "seen": 1790522707.4328182,
+    "ast_hash": "3077560004c0a656dc7abfd78d21b32e",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BA.txt": {
+    "mtime": 1790506605.9384181,
+    "seen": 1790522707.4382555,
+    "ast_hash": "5d41aa76d9e454fdcd0366c2b36d0c6c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BB.txt": {
+    "mtime": 1790507975.0376377,
+    "seen": 1790522707.4382555,
+    "ast_hash": "8474007c478469ff079a81e416057d8c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BC_CH4.txt": {
+    "mtime": 1790510531.0540428,
+    "seen": 1790522707.4382555,
+    "ast_hash": "077bcce67efd1fc0bb40292762441db2",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BD_VC1.txt": {
+    "mtime": 1790511863.921385,
+    "seen": 1790522707.4382555,
+    "ast_hash": "0fbcbe673e37ca641d9cd136474f90f8",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BE_UART.txt": {
+    "mtime": 1790513599.1753483,
+    "seen": 1790522707.4382555,
+    "ast_hash": "3a71459becaa1589be1395e249e417df",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BE_UART_POWER_PRESERVED.txt": {
+    "mtime": 1790513682.3790162,
+    "seen": 1790522707.4382555,
+    "ast_hash": "76437c2f4907593d7703b11c0e82fc2a",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BE_UART_READY.txt": {
+    "mtime": 1790513753.76178,
+    "seen": 1790522707.4382555,
+    "ast_hash": "91871e4ab1055984c83e0c7f246afdff",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BF_UART_RX_READY.txt": {
+    "mtime": 1790514591.1279805,
+    "seen": 1790522707.4382555,
+    "ast_hash": "272e51a7ce738d8ac8ef3d8746a365be",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BF_UART_RX_REINFORCED.txt": {
+    "mtime": 1790514877.0039518,
+    "seen": 1790522707.4382555,
+    "ast_hash": "bbf82d3de53f414744290114d141b583",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BF_UART_RX_TRIAL.txt": {
+    "mtime": 1790514591.1279805,
+    "seen": 1790522707.4382555,
+    "ast_hash": "272e51a7ce738d8ac8ef3d8746a365be",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BG_CS_FINAL.txt": {
+    "mtime": 1790519011.55269,
+    "seen": 1790522707.4382555,
+    "ast_hash": "a6476c3ab6d4cccfb14b9c271a08ea65",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BG_CS_READY.txt": {
+    "mtime": 1790518167.2371342,
+    "seen": 1790522707.4382555,
+    "ast_hash": "8ad191e42470f7fb85c13437d7302aea",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BG_CS_REBASED.txt": {
+    "mtime": 1790519950.9375496,
+    "seen": 1790522707.4382555,
+    "ast_hash": "a6476c3ab6d4cccfb14b9c271a08ea65",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BG_CS_TRIAL.txt": {
+    "mtime": 1790517950.779054,
+    "seen": 1790522707.4382555,
+    "ast_hash": "90a03a08ae89a72137b0625b2aad359c",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BH_TX_CANDIDATE.txt": {
+    "mtime": 1790520452.8554397,
+    "seen": 1790522707.4382555,
+    "ast_hash": "d3d1de26e0f7d1d57bd98963e304d0b0",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BH_TX_CENTERED.txt": {
+    "mtime": 1790520673.1032476,
+    "seen": 1790522707.4382555,
+    "ast_hash": "a4343aebd30ee61301cae9f5c3f00205",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_BJ_ANTENNA_CLEANUP.txt": {
+    "mtime": 1790521769.2340982,
+    "seen": 1790522707.4382555,
+    "ast_hash": "dcfbbbdbaa5893608729d1788771ac7d",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/work/OPS_SEED_CHECK_ONLY_DO_NOT_APPLY.txt": {
+    "mtime": 1790520364.9263127,
+    "seen": 1790522707.4790301,
+    "ast_hash": "002c7f0fd2ea0c8ab3f075a9d173d196",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_CH4_BB_GEOMETRY.png": {
+    "mtime": 1790509131.7615912,
+    "seen": 1790522707.5142171,
+    "ast_hash": "76e48a6ed0a6b0012d7b3816941012ee",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_DRC_OPTIONS_BEFORE.png": {
+    "mtime": 1790520879.6409042,
+    "seen": 1790522707.5142171,
+    "ast_hash": "67bc127097628b1c75cad0e4a889d799",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_DRC_ROUTING_BEFORE.png": {
+    "mtime": 1790520925.5788248,
+    "seen": 1790522707.5142171,
+    "ast_hash": "67fdb406b3c7433237b4c22d04dbf6ce",
+    "semantic_hash": ""
+  },
+  "hardware/compact_mainboard_20260925T115919Z/evidence/ASTRA_DRC_ROUTING_ENABLED.png": {
+    "mtime": 1790521000.745161,
+    "seen": 1790522707.5142171,
+    "ast_hash": "d4e74fa402da000e443b55ca436290ec",
     "semantic_hash": ""
   }
 }

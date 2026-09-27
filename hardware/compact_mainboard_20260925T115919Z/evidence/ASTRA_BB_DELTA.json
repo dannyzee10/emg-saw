@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "errors": [],
+  "tolerance_mm": 0.00015,
+  "counts": {
+    "before": {
+      "TRACK": 2189,
+      "VIA": 451
+    },
+    "after": {
+      "TRACK": 2208,
+      "VIA": 453
+    },
+    "expected_after": {
+      "TRACK": 2208,
+      "VIA": 453
+    },
+    "planned_adds": {
+      "TRACK": 41,
+      "VIA": 6
+    },
+    "planned_deletes": {
+      "TRACK": 22,
+      "VIA": 4
+    },
+    "matched_deletes": {
+      "TRACK": 22,
+      "VIA": 4
+    }
+  },
+  "unchanged": {
+    "pads": {
+      "passed": true,
+      "before_count": 812,
+      "after_count": 812,
+      "removed": [],
+      "added": []
+    },
+    "comps": {
+      "passed": true,
+      "before_count": 231,
+      "after_count": 231,
+      "removed": [],
+      "added": []
+    },
+    "fixed": {
+      "passed": true,
+      "before_count": 1629,
+      "after_count": 1629,
+      "removed": [],
+      "added": []
+    }
+  },
+  "missing": [],
+  "unexpected": [],
+  "deletion_checks": {
+    "width_and_hole_checked_when_provided": true,
+    "ambiguous_matches_allowed": false
+  },
+  "ignored_polygon_records": {
+    "before": 117,
+    "after": 116
+  },
+  "limitations": [
+    "Native exports omit net objects, rules, layer stack and via spans; verify separately.",
+    "Only the pad/primitive fields present in the native export are compared.",
+    "Polygon-generated primitives may change after repour.",
+    "This verifies the requested copper delta, not electrical completion or DRC."
+  ],
+  "inputs": {
+    "..\\evidence\\GEOMETRY_C2_6L_BA.txt": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BA.txt",
+      "sha256": "e2dd0fde601b606301f4cf47c0953eca67d622bbdfe4567ebe724a540275d067"
+    },
+    "..\\evidence\\GEOMETRY_C2_6L_BB.txt": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BB.txt",
+      "sha256": "d6b3e7e6b9644da4ffd6cd6dee91448fbbaa359a87abf68fbe75ce70816e0373"
+    },
+    "..\\evidence\\ASTRA_REP_BA1_ADDS_OK.csv": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_REP_BA1_ADDS_OK.csv",
+      "sha256": "de6147f57ae7e80a4c5c159240032a0f77d1e30920540e0915a84160af221f1d"
+    },
+    "..\\evidence\\ASTRA_REP_BA1_DELS_OK.csv": {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_REP_BA1_DELS_OK.csv",
+      "sha256": "c166b19f049f5731e5f0bd278448b395cc18d52818e2f10a864cc4633cd130aa"
+    }
+  }
+}

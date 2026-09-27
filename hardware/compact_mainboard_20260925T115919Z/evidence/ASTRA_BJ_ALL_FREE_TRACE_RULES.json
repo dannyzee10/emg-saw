@@ -1,0 +1,304 @@
+{
+  "passed": true,
+  "inputs": {
+    "pcb": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\EMG_MainBoard_Layout.PcbDoc",
+    "geometry": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BJ.txt",
+    "pcb_sha256": "0acc1e8eefea1bba24c8ec74a84c7dddd757a6bd520cf3d82f972191e28b585c",
+    "geometry_sha256": "f666b33c4d9caa5d36192a83e12bc37a6c6218bba34af554142512a5adf0536a",
+    "rules_sha256": "67c752166f3edd0bb3b55257d647c9260c6efb24edd6be982609547e4ae27660",
+    "classes_sha256": "62f9db22ccfb8b0b0b5d9bd1b8c825013f475525c510157cb7d2be55955f1035"
+  },
+  "primitive_counts": {
+    "VIA": 470,
+    "TRACK": 2281
+  },
+  "netless_copper_track_count": 0,
+  "excluded_non_copper_free_tracks": {
+    "count": 10,
+    "layers": {
+      "Mechanical Layer 4": 10
+    },
+    "native_records": [
+      "TRACK|Mechanical Layer 4|-|61.2000|13.0875|61.2000|14.2000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|61.9000|6.0000|61.9000|11.1000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|50.4000|13.0875|50.4000|14.2000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|51.1000|6.0000|51.1000|11.1000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|39.6000|13.0875|39.6000|14.2000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|40.3000|6.0000|40.3000|11.1000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|28.8000|13.0875|28.8000|14.2000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|29.5000|6.0000|29.5000|11.1000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|18.0000|13.0875|18.0000|14.2000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False",
+      "TRACK|Mechanical Layer 4|-|18.7000|6.0000|18.7000|11.1000|0.0800|INCOMP=False|INPOLY=False|KEEPOUT=False"
+    ]
+  },
+  "check_counts": {
+    "passed": 5032
+  },
+  "rule_usage": [
+    {
+      "check": "routing_layer",
+      "rule": "RoutingLayers",
+      "count": 2281
+    },
+    {
+      "check": "via_envelope",
+      "rule": "VIA_STD_060_030",
+      "count": 470
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_ADC",
+      "count": 118
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_ANALOG",
+      "count": 523
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_CONTROL",
+      "count": 540
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_CRYSTAL",
+      "count": 6
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_GND",
+      "count": 269
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_POWER",
+      "count": 380
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_REFERENCE",
+      "count": 200
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_SPI",
+      "count": 119
+    },
+    {
+      "check": "width",
+      "rule": "WIDTH_EMG_SWITCH",
+      "count": 4
+    },
+    {
+      "check": "width",
+      "rule": "Width",
+      "count": 122
+    }
+  ],
+  "failures": [],
+  "unresolved": [],
+  "unresolved_free_copper_arcs": [],
+  "net_classes": {
+    "EMG_GND": [
+      "GND"
+    ],
+    "EMG_CONTROL": [
+      "AFE_EN",
+      "BAT_TEMP",
+      "FG_ALRT",
+      "I2C_SCL",
+      "I2C_SDA",
+      "KILL_CTRL",
+      "MCU_BOOT0",
+      "MCU_NRST",
+      "MCU_PWR_INT_N",
+      "MCU_SHUTDOWN",
+      "MCU_SWCLK",
+      "MCU_SWDIO",
+      "MCU_VCAP",
+      "MCU_WIFI_UART_RX",
+      "MCU_WIFI_UART_TX",
+      "NetC1_EN1_2",
+      "NetC2_EN1_1",
+      "NetC3_EN1_2",
+      "NetCUP4_FB_1",
+      "NetD_CC_ESD_1",
+      "NetD_CC_ESD_2",
+      "NetJP_WIFI_BOOT_1",
+      "NetLED_CHG_A",
+      "NetLED_CHG_C",
+      "NetPWR_BTN_N_A",
+      "NetQ_SHDN_1",
+      "NetRISET_1",
+      "NetR_EN1_BIAS_2",
+      "NetR_LIM_2",
+      "NetR_TMR_2",
+      "SYS_EN",
+      "TS",
+      "USB_PGOOD_N",
+      "WIFI_BOOT",
+      "WIFI_CHIP_EN",
+      "WIFI_SPI_RDY",
+      "WIFI_UART_RX",
+      "WIFI_UART_TX"
+    ],
+    "EMG_ANALOG": [
+      "INA_OUT_1",
+      "INA_OUT_2",
+      "INA_OUT_3",
+      "INA_OUT_4",
+      "INA_OUT_5",
+      "NetCH_1_2",
+      "NetCH_2_2",
+      "NetCH_3_2",
+      "NetCH_4_2",
+      "NetCH_5_2",
+      "NetCL_1_1",
+      "NetCL_2_1",
+      "NetCL_3_1",
+      "NetCL_4_1",
+      "NetCL_5_1",
+      "NetCservo_1_1",
+      "NetCservo_2_1",
+      "NetCservo_3_1",
+      "NetCservo_4_1",
+      "NetCservo_5_1",
+      "NetINA1_2",
+      "NetINA1_3",
+      "NetINA1_7",
+      "NetINA2_2",
+      "NetINA2_3",
+      "NetINA2_7",
+      "NetINA3_2",
+      "NetINA3_3",
+      "NetINA3_7",
+      "NetINA4_2",
+      "NetINA4_3",
+      "NetINA4_7",
+      "NetINA5_2",
+      "NetINA5_3",
+      "NetINA5_7",
+      "NetJ_REF_1",
+      "Va_1",
+      "Va_2",
+      "Va_3",
+      "Va_4",
+      "Va_5",
+      "Vb_1",
+      "Vb_2",
+      "Vb_3",
+      "Vb_4",
+      "Vb_5",
+      "Vc_1",
+      "Vc_2",
+      "Vc_3",
+      "Vc_4",
+      "Vc_5",
+      "Vservo_1",
+      "Vservo_2",
+      "Vservo_3",
+      "Vservo_4",
+      "Vservo_5"
+    ],
+    "EMG_CRYSTAL": [
+      "NetC_WIFI_X32_IN_2",
+      "NetC_WIFI_X32_OUT_2",
+      "WIFI_X32_RAW_IN",
+      "WIFI_X32_RAW_OUT"
+    ],
+    "EMG_SWITCH": [
+      "NetL1_1",
+      "NetL1_2"
+    ],
+    "EMG_SPI": [
+      "MCU_SPI_MISO",
+      "MCU_SPI_MOSI",
+      "MCU_SPI_SCK",
+      "MCU_WIFI_CS",
+      "WIFI_SPI_CLK",
+      "WIFI_SPI_CS",
+      "WIFI_SPI_MISO",
+      "WIFI_SPI_MOSI"
+    ],
+    "EMG_ADC": [
+      "ADC_EMG1",
+      "ADC_EMG2",
+      "ADC_EMG3",
+      "ADC_EMG4",
+      "ADC_EMG5",
+      "VOUT_1",
+      "VOUT_2",
+      "VOUT_3",
+      "VOUT_4",
+      "VOUT_5"
+    ],
+    "EMG_REFERENCE": [
+      "NetJ_FPC1_8",
+      "NetJ_FPC2_8",
+      "NetJ_FPC3_8",
+      "NetJ_FPC4_8",
+      "NetJ_FPC5_8",
+      "VDiv",
+      "VREF_A",
+      "VREF_B_SRC"
+    ],
+    "EMG_POWER": [
+      "3V0_ANA",
+      "3V3_DIG",
+      "VBAT_CELL",
+      "VBUS",
+      "VSYS"
+    ],
+    "All Nets": null
+  },
+  "duplicate_net_class_records": {
+    "EMG_GND": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_CONTROL": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_ANALOG": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_CRYSTAL": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_SWITCH": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_SPI": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_ADC": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_REFERENCE": {
+      "count": 2,
+      "identical_membership": true
+    },
+    "EMG_POWER": {
+      "count": 2,
+      "identical_membership": true
+    }
+  },
+  "tolerance_mm": 0.00015,
+  "limitations": [
+    "Caller must pair a saved native PCB and its matching complete native geometry export.",
+    "Checks every exported free copper TRACK and VIA, independently of routing-plan provenance.",
+    "Footprint tracks, polygon-generated copper, pads, regions and fills are outside this free-trace audit.",
+    "Free copper ARC exports omit width/path data and make this audit unresolved if present.",
+    "Only saved unary All/InNet/InNetClass scopes and explicit width/layer/via-envelope fields are evaluated.",
+    "Unsupported higher-priority scopes are unresolved; no lower-priority fallback is guessed.",
+    "Via layer spans, internal padstacks, clearances, connectivity, impedance and current capacity are not verified here.",
+    "Native DRC with proven batch coverage remains required."
+  ]
+}

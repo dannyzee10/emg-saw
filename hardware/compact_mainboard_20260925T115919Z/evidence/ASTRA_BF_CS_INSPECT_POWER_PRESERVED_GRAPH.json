@@ -1,0 +1,1770 @@
+{
+  "passed": true,
+  "requested_nets": [
+    "WIFI_SPI_CS"
+  ],
+  "graphs": {
+    "3V3_DIG": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "C_WIFI_BULK",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "R_WIFI_BOOT_OVR",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "R_KILL_PU",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "R_INT_PULLUP",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "R_AL",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "R_SDA",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "R_SCL",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "R_PGOOD",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "UP2",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "UP2",
+          "pin": "6",
+          "component_after": 198
+        },
+        {
+          "ref": "CUP4_FB",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "RUP_3",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "CUP5_5",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "CUP5_1",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "CUP4",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "UP3",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "J_SWD",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "6",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "11",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "28",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "50",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "73",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "75",
+          "component_after": 198
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "100",
+          "component_after": 198
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_3V3_DIG",
+          "component_after": 198
+        },
+        {
+          "ref": "R_NRST",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDDIO2_HF",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDDIO2",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDD33_HF",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDDIO1_HF",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDD33",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_WIFI_VDDIO1",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_BULK",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_VDD5",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_VDD4",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_VDD3",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_VDD2",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_MCU_VDD1",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "C_VDDUSB",
+          "pin": "1",
+          "component_after": 198
+        },
+        {
+          "ref": "C_VBAT",
+          "pin": "2",
+          "component_after": 198
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "25",
+          "component_after": 198
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "16",
+          "component_after": 198
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "9",
+          "component_after": 198
+        }
+      ]
+    },
+    "GND": {
+      "before_component_count": 121,
+      "after_component_count": 121,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "C_DRL_DEC",
+          "pin": "2",
+          "component_after": 188
+        },
+        {
+          "ref": "U_DRL1",
+          "pin": "2",
+          "component_after": 288
+        },
+        {
+          "ref": "UP4",
+          "pin": "1",
+          "component_after": 287
+        },
+        {
+          "ref": "UP4",
+          "pin": "4",
+          "component_after": 286
+        },
+        {
+          "ref": "UP4",
+          "pin": "6",
+          "component_after": 286
+        },
+        {
+          "ref": "UP4",
+          "pin": "9",
+          "component_after": 286
+        },
+        {
+          "ref": "C_WIFI_BULK",
+          "pin": "1",
+          "component_after": 124
+        },
+        {
+          "ref": "C_UV_BYPASS",
+          "pin": "2",
+          "component_after": 283
+        },
+        {
+          "ref": "R_SHDN_PD",
+          "pin": "1",
+          "component_after": 282
+        },
+        {
+          "ref": "C3_EN1",
+          "pin": "1",
+          "component_after": 281
+        },
+        {
+          "ref": "C2_EN1",
+          "pin": "2",
+          "component_after": 280
+        },
+        {
+          "ref": "C1_EN1",
+          "pin": "1",
+          "component_after": 11
+        },
+        {
+          "ref": "R_EN_PD",
+          "pin": "2",
+          "component_after": 279
+        },
+        {
+          "ref": "CU6_1",
+          "pin": "1",
+          "component_after": 278
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "2",
+          "component_after": 277
+        },
+        {
+          "ref": "Q_SHDN",
+          "pin": "2",
+          "component_after": 282
+        },
+        {
+          "ref": "U_EN1",
+          "pin": "4",
+          "component_after": 275
+        },
+        {
+          "ref": "UP1",
+          "pin": "17",
+          "component_after": 21
+        },
+        {
+          "ref": "UP1",
+          "pin": "15",
+          "component_after": 21
+        },
+        {
+          "ref": "UP1",
+          "pin": "8",
+          "component_after": 21
+        },
+        {
+          "ref": "UP1",
+          "pin": "5",
+          "component_after": 21
+        },
+        {
+          "ref": "UP1",
+          "pin": "4",
+          "component_after": 21
+        },
+        {
+          "ref": "UP2",
+          "pin": "7",
+          "component_after": 28
+        },
+        {
+          "ref": "C_IN_",
+          "pin": "2",
+          "component_after": 200
+        },
+        {
+          "ref": "CUP5_3",
+          "pin": "1",
+          "component_after": 274
+        },
+        {
+          "ref": "CUP5_2",
+          "pin": "1",
+          "component_after": 273
+        },
+        {
+          "ref": "CUP5_5",
+          "pin": "2",
+          "component_after": 272
+        },
+        {
+          "ref": "CUP5_1",
+          "pin": "2",
+          "component_after": 271
+        },
+        {
+          "ref": "RUP_4",
+          "pin": "1",
+          "component_after": 28
+        },
+        {
+          "ref": "CUP4",
+          "pin": "2",
+          "component_after": 29
+        },
+        {
+          "ref": "CUP4_1",
+          "pin": "2",
+          "component_after": 30
+        },
+        {
+          "ref": "R_LIM",
+          "pin": "1",
+          "component_after": 31
+        },
+        {
+          "ref": "R_TMR",
+          "pin": "1",
+          "component_after": 270
+        },
+        {
+          "ref": "RISET",
+          "pin": "2",
+          "component_after": 269
+        },
+        {
+          "ref": "R_TS_BOTTOM",
+          "pin": "1",
+          "component_after": 268
+        },
+        {
+          "ref": "C_BAT",
+          "pin": "2",
+          "component_after": 35
+        },
+        {
+          "ref": "C_OUT_",
+          "pin": "2",
+          "component_after": 190
+        },
+        {
+          "ref": "Cdiv",
+          "pin": "1",
+          "component_after": 267
+        },
+        {
+          "ref": "Cdiv_10uF",
+          "pin": "1",
+          "component_after": 266
+        },
+        {
+          "ref": "Cdiv_1",
+          "pin": "1",
+          "component_after": 265
+        },
+        {
+          "ref": "RV1",
+          "pin": "2",
+          "component_after": 264
+        },
+        {
+          "ref": "CU_24",
+          "pin": "2",
+          "component_after": 41
+        },
+        {
+          "ref": "CU_14",
+          "pin": "1",
+          "component_after": 186
+        },
+        {
+          "ref": "CU_22",
+          "pin": "2",
+          "component_after": 164
+        },
+        {
+          "ref": "CU_12",
+          "pin": "1",
+          "component_after": 164
+        },
+        {
+          "ref": "CU_21",
+          "pin": "2",
+          "component_after": 217
+        },
+        {
+          "ref": "CU_11",
+          "pin": "1",
+          "component_after": 217
+        },
+        {
+          "ref": "UP3",
+          "pin": "2",
+          "component_after": 261
+        },
+        {
+          "ref": "U3",
+          "pin": "11",
+          "component_after": 48
+        },
+        {
+          "ref": "U2",
+          "pin": "11",
+          "component_after": 218
+        },
+        {
+          "ref": "U1",
+          "pin": "11",
+          "component_after": 192
+        },
+        {
+          "ref": "TP_GND",
+          "pin": "TP",
+          "component_after": 260
+        },
+        {
+          "ref": "J_SWD",
+          "pin": "3",
+          "component_after": 259
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "3",
+          "component_after": 307
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "5",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "1",
+          "component_after": 258
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "9",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "7",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "P2_1",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "P2_2",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "P2_3",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC1",
+          "pin": "10",
+          "component_after": 306
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "3",
+          "component_after": 303
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "5",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "1",
+          "component_after": 304
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "9",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "7",
+          "component_after": 301
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "P2_1",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "P2_2",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "P2_3",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC2",
+          "pin": "10",
+          "component_after": 302
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "3",
+          "component_after": 299
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "5",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "1",
+          "component_after": 300
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "9",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "7",
+          "component_after": 297
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "P2_1",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "P2_2",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "P2_3",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC3",
+          "pin": "10",
+          "component_after": 298
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "3",
+          "component_after": 295
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "5",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "1",
+          "component_after": 171
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "9",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "7",
+          "component_after": 293
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "P2_1",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "P2_2",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "P2_3",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC4",
+          "pin": "10",
+          "component_after": 294
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "3",
+          "component_after": 291
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "5",
+          "component_after": 290
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "1",
+          "component_after": 169
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "9",
+          "component_after": 290
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "7",
+          "component_after": 289
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "P2_1",
+          "component_after": 290
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "P2_2",
+          "component_after": 290
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "P2_3",
+          "component_after": 290
+        },
+        {
+          "ref": "J_FPC5",
+          "pin": "10",
+          "component_after": 290
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "A1_B12",
+          "component_after": 221
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "B1_A12",
+          "component_after": 257
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "10",
+          "component_after": 28
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "19",
+          "component_after": 255
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "20",
+          "component_after": 255
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "27",
+          "component_after": 254
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "49",
+          "component_after": 253
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "74",
+          "component_after": 236
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "99",
+          "component_after": 106
+        },
+        {
+          "ref": "MCU_VCAP",
+          "pin": "1",
+          "component_after": 252
+        },
+        {
+          "ref": "C_ADC5",
+          "pin": "2",
+          "component_after": 194
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_GND_DIG",
+          "component_after": 251
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_GND_ANA",
+          "component_after": 250
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_GND_PWR",
+          "component_after": 249
+        },
+        {
+          "ref": "R_MCU_BOOT0_PD",
+          "pin": "1",
+          "component_after": 112
+        },
+        {
+          "ref": "C_NRST",
+          "pin": "2",
+          "component_after": 124
+        },
+        {
+          "ref": "C_WIFI_X32_IN",
+          "pin": "1",
+          "component_after": 248
+        },
+        {
+          "ref": "C_WIFI_X32_OUT",
+          "pin": "1",
+          "component_after": 247
+        },
+        {
+          "ref": "C_WIFI_VDDIO2_HF",
+          "pin": "1",
+          "component_after": 246
+        },
+        {
+          "ref": "C_WIFI_VDDIO2",
+          "pin": "1",
+          "component_after": 283
+        },
+        {
+          "ref": "C_WIFI_VDD33_HF",
+          "pin": "2",
+          "component_after": 245
+        },
+        {
+          "ref": "C_WIFI_VDDIO1_HF",
+          "pin": "2",
+          "component_after": 244
+        },
+        {
+          "ref": "C_WIFI_VDD33",
+          "pin": "2",
+          "component_after": 243
+        },
+        {
+          "ref": "C_WIFI_VDDIO1",
+          "pin": "1",
+          "component_after": 242
+        },
+        {
+          "ref": "R_WIFI_BOOT_PD",
+          "pin": "1",
+          "component_after": 241
+        },
+        {
+          "ref": "C_WIFI_EN",
+          "pin": "2",
+          "component_after": 124
+        },
+        {
+          "ref": "R_WIFI_EN_PD",
+          "pin": "2",
+          "component_after": 124
+        },
+        {
+          "ref": "R_WIFI_CS_PD",
+          "pin": "2",
+          "component_after": 210
+        },
+        {
+          "ref": "C_ADC4",
+          "pin": "2",
+          "component_after": 193
+        },
+        {
+          "ref": "C_ADC3",
+          "pin": "2",
+          "component_after": 240
+        },
+        {
+          "ref": "C_ADC2",
+          "pin": "2",
+          "component_after": 239
+        },
+        {
+          "ref": "C_ADC1",
+          "pin": "2",
+          "component_after": 238
+        },
+        {
+          "ref": "C_MCU_BULK",
+          "pin": "2",
+          "component_after": 130
+        },
+        {
+          "ref": "C_MCU_VDD5",
+          "pin": "2",
+          "component_after": 237
+        },
+        {
+          "ref": "C_MCU_VDD4",
+          "pin": "2",
+          "component_after": 236
+        },
+        {
+          "ref": "C_MCU_VDD3",
+          "pin": "1",
+          "component_after": 235
+        },
+        {
+          "ref": "C_MCU_VDD2",
+          "pin": "1",
+          "component_after": 234
+        },
+        {
+          "ref": "C_MCU_VDD1",
+          "pin": "1",
+          "component_after": 233
+        },
+        {
+          "ref": "C_VDDUSB",
+          "pin": "2",
+          "component_after": 232
+        },
+        {
+          "ref": "C_VBAT",
+          "pin": "1",
+          "component_after": 137
+        },
+        {
+          "ref": "C4_MCU",
+          "pin": "1",
+          "component_after": 209
+        },
+        {
+          "ref": "C3_MCU",
+          "pin": "2",
+          "component_after": 230
+        },
+        {
+          "ref": "C1_MCU",
+          "pin": "2",
+          "component_after": 229
+        },
+        {
+          "ref": "C2_MCU",
+          "pin": "1",
+          "component_after": 209
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "36",
+          "component_after": 142
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "35",
+          "component_after": 143
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "34",
+          "component_after": 144
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "33",
+          "component_after": 145
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "32",
+          "component_after": 228
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "30",
+          "component_after": 227
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "26",
+          "component_after": 226
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "18",
+          "component_after": 225
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "15",
+          "component_after": 224
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "10",
+          "component_after": 223
+        },
+        {
+          "ref": "C_VBUS",
+          "pin": "1",
+          "component_after": 257
+        },
+        {
+          "ref": "D_VBUS",
+          "pin": "2",
+          "component_after": 257
+        },
+        {
+          "ref": "RJ2",
+          "pin": "1",
+          "component_after": 221
+        },
+        {
+          "ref": "RJ1",
+          "pin": "1",
+          "component_after": 221
+        },
+        {
+          "ref": "D_CC_ESD",
+          "pin": "3",
+          "component_after": 187
+        },
+        {
+          "ref": "CCU9",
+          "pin": "1",
+          "component_after": 235
+        },
+        {
+          "ref": "CCU10",
+          "pin": "2",
+          "component_after": 235
+        },
+        {
+          "ref": "CCU7",
+          "pin": "1",
+          "component_after": 185
+        },
+        {
+          "ref": "CCU8",
+          "pin": "2",
+          "component_after": 185
+        },
+        {
+          "ref": "CCU5",
+          "pin": "1",
+          "component_after": 219
+        },
+        {
+          "ref": "CCU6",
+          "pin": "2",
+          "component_after": 218
+        },
+        {
+          "ref": "CCU3",
+          "pin": "1",
+          "component_after": 164
+        },
+        {
+          "ref": "CCU4",
+          "pin": "2",
+          "component_after": 164
+        },
+        {
+          "ref": "CCU2",
+          "pin": "1",
+          "component_after": 217
+        },
+        {
+          "ref": "CCU1",
+          "pin": "2",
+          "component_after": 217
+        },
+        {
+          "ref": "PWR_BTN_N",
+          "pin": "D",
+          "component_after": 216
+        },
+        {
+          "ref": "PWR_BTN_N",
+          "pin": "C",
+          "component_after": 264
+        },
+        {
+          "ref": "INA5",
+          "pin": "4",
+          "component_after": 169
+        },
+        {
+          "ref": "INA5",
+          "pin": "1",
+          "component_after": 169
+        },
+        {
+          "ref": "INA4",
+          "pin": "4",
+          "component_after": 171
+        },
+        {
+          "ref": "INA4",
+          "pin": "1",
+          "component_after": 171
+        },
+        {
+          "ref": "INA3",
+          "pin": "4",
+          "component_after": 199
+        },
+        {
+          "ref": "INA3",
+          "pin": "1",
+          "component_after": 300
+        },
+        {
+          "ref": "INA2",
+          "pin": "4",
+          "component_after": 196
+        },
+        {
+          "ref": "INA2",
+          "pin": "1",
+          "component_after": 304
+        },
+        {
+          "ref": "INA1",
+          "pin": "4",
+          "component_after": 195
+        },
+        {
+          "ref": "INA1",
+          "pin": "1",
+          "component_after": 258
+        },
+        {
+          "ref": "R_TH_BAT",
+          "pin": "1",
+          "component_after": 179
+        },
+        {
+          "ref": "J_Li-Po",
+          "pin": "1",
+          "component_after": 180
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "SH2",
+          "component_after": 257
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "SH1",
+          "component_after": 182
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "SH4",
+          "component_after": 183
+        },
+        {
+          "ref": "J_USB_C",
+          "pin": "SH3",
+          "component_after": 184
+        }
+      ]
+    },
+    "MCU_SPI_MISO": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "U_MCU1",
+          "pin": "31",
+          "component_after": 0
+        },
+        {
+          "ref": "R_SPI_MISO",
+          "pin": "2",
+          "component_after": 0
+        }
+      ]
+    },
+    "MCU_SPI_MOSI": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "U_MCU1",
+          "pin": "32",
+          "component_after": 1
+        },
+        {
+          "ref": "R_SPI_MOSI",
+          "pin": "2",
+          "component_after": 1
+        }
+      ]
+    },
+    "MCU_SWDIO": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "J_SWD",
+          "pin": "2",
+          "component_after": 1
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "72",
+          "component_after": 1
+        }
+      ]
+    },
+    "SYS_EN": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_EN",
+          "pin": "2",
+          "component_after": 7
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "1",
+          "component_after": 7
+        },
+        {
+          "ref": "U_EN1",
+          "pin": "6",
+          "component_after": 7
+        },
+        {
+          "ref": "UP2",
+          "pin": "5",
+          "component_after": 7
+        }
+      ]
+    },
+    "VSYS": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "C_UV_BYPASS",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "R_EN1_1",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "R_EN",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "3",
+          "component_after": 13
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "5",
+          "component_after": 13
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "6",
+          "component_after": 13
+        },
+        {
+          "ref": "UP1",
+          "pin": "11",
+          "component_after": 13
+        },
+        {
+          "ref": "UP1",
+          "pin": "10",
+          "component_after": 13
+        },
+        {
+          "ref": "UP2",
+          "pin": "4",
+          "component_after": 13
+        },
+        {
+          "ref": "CUP4_1",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "R_CHG_LED",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "R_EN1_BIAS",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "C_OUT_",
+          "pin": "1",
+          "component_after": 13
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_VSYS",
+          "component_after": 13
+        }
+      ]
+    },
+    "WIFI_CHIP_EN": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "TP_WIFI_CHIP_EN",
+          "pin": "TP",
+          "component_after": 29
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "87",
+          "component_after": 29
+        },
+        {
+          "ref": "C_WIFI_EN",
+          "pin": "1",
+          "component_after": 29
+        },
+        {
+          "ref": "R_WIFI_EN_PD",
+          "pin": "1",
+          "component_after": 29
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "17",
+          "component_after": 29
+        }
+      ]
+    },
+    "WIFI_SPI_CS": {
+      "before_component_count": 2,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_CS_PD",
+          "pin": "1",
+          "component_after": 36
+        },
+        {
+          "ref": "R_SPI_CS",
+          "pin": "1",
+          "component_after": 36
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "24",
+          "component_after": 36
+        }
+      ],
+      "requested_endpoints_connected_after": true
+    },
+    "WIFI_SPI_RDY": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "U_MCU1",
+          "pin": "89",
+          "component_after": 0
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "21",
+          "component_after": 0
+        }
+      ]
+    },
+    "WIFI_UART_TX": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_objects": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_UART_RX_LINK",
+          "pin": "1",
+          "component_after": 10
+        },
+        {
+          "ref": "TP_WIFI_UART_TX",
+          "pin": "TP",
+          "component_after": 10
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "22",
+          "component_after": 10
+        }
+      ]
+    }
+  },
+  "power_width_path_preservation": {
+    "3V3_DIG": {
+      "retained_connectivity_at_original_width_thresholds_preserved": true,
+      "threshold_checks": [
+        {
+          "minimum_track_width_mm": 0.15,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        },
+        {
+          "minimum_track_width_mm": 0.2,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        },
+        {
+          "minimum_track_width_mm": 0.3,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        },
+        {
+          "minimum_track_width_mm": 0.4,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        }
+      ],
+      "source_pad": "UP2.1",
+      "source_to_pad_thresholds": [
+        {
+          "ref": "C_WIFI_BULK",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.3,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_WIFI_BOOT_OVR",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_KILL_PU",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "R_INT_PULLUP",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "R_AL",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_SDA",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_SCL",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_PGOOD",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "UP2",
+          "pin": "6",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "CUP4_FB",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.2
+        },
+        {
+          "ref": "RUP_3",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "CUP5_5",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "CUP5_1",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "CUP4",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.3,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "UP3",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "J_SWD",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "6",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "11",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "28",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "50",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "73",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "75",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "100",
+          "before_maximum_track_threshold_mm": 0.3,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_3V3_DIG",
+          "before_maximum_track_threshold_mm": 0.3,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "R_NRST",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_WIFI_VDDIO2_HF",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_WIFI_VDDIO2",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_WIFI_VDD33_HF",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_WIFI_VDDIO1_HF",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_WIFI_VDD33",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_WIFI_VDDIO1",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_MCU_BULK",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_MCU_VDD5",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.3,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_MCU_VDD4",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_MCU_VDD3",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_MCU_VDD2",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_MCU_VDD1",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "C_VDDUSB",
+          "pin": "1",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "C_VBAT",
+          "pin": "2",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "25",
+          "before_maximum_track_threshold_mm": 0.15,
+          "after_maximum_track_threshold_mm": 0.15
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "16",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "9",
+          "before_maximum_track_threshold_mm": 0.2,
+          "after_maximum_track_threshold_mm": 0.3
+        }
+      ],
+      "regressed_source_to_pad_thresholds": [],
+      "new_sub040_tracks": []
+    },
+    "VSYS": {
+      "retained_connectivity_at_original_width_thresholds_preserved": true,
+      "threshold_checks": [
+        {
+          "minimum_track_width_mm": 0.15,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        },
+        {
+          "minimum_track_width_mm": 0.3,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        },
+        {
+          "minimum_track_width_mm": 0.4,
+          "retained_connectivity_preserved": true,
+          "split_retained_objects": [],
+          "after_fragments": []
+        }
+      ],
+      "source_pad": null,
+      "source_to_pad_thresholds": [],
+      "regressed_source_to_pad_thresholds": [],
+      "new_sub040_tracks": []
+    }
+  },
+  "deletions_matched": 48,
+  "additions": 90,
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BF.txt",
+      "sha256": "95662332096e888b7d20b3e8bcd4df59af21af8ed7dd5d67409cce30bda61151"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_WIDE_BRIDGE_ADDS.csv",
+      "sha256": "4071ec69f37d419c35ce2f5377a84d9d192c007ab40af2529981319d646ff4c9"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_PRUNED_DELS.csv",
+      "sha256": "e204cb66ca68241bea0044e2f687120cc8e1f680b081883882b0517d55793e97"
+    }
+  ],
+  "limits": [
+    "No router/native operation; affected-net copper graphs only.",
+    "Exported copper shapes use 0.00015 mm contact tolerance; pour geometry is incomplete.",
+    "Power threshold comparison detects newly required thin tracks, not effective junction widths or current capacity.",
+    "Native exact geometry, DRC and protected structure checks remain required."
+  ]
+}

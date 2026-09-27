@@ -1,0 +1,759 @@
+{
+ "total": "264",
+ "summary": [
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_2-1')),(IsPad And (Name = 'RH_2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_1-1')),(IsPad And (Name = 'RH_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC2-1')),(IsPad And (Name = 'R_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_5-1')),(IsPad And (Name = 'RH_5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_4-1')),(IsPad And (Name = 'RH_4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RH_3-1')),(IsPad And (Name = 'RH_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'R_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA5_7') And InRegionAbsolute(2416.333832,821.845684,2480.314964,885.826816)),(IsPad And (Name = 'INA5-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetINA1_7') And InRegionAbsolute(715.546425,821.845684,779.527557,885.826816)),(IsPad And (Name = 'INA1-6'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-25'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-1')),(IsPad And (Name = 'U_MCU1-24'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(679.133802,662.401564,884.842534,678.149596)),(IsPad And (Name = 'Rservo_1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VBAT-1')),(IsPad And (Name = 'C_VBAT-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_UV_BYPASS-1')),(IsPad And (Name = 'C_UV_BYPASS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD5-1')),(IsPad And (Name = 'C_MCU_VDD5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C3_MCU-1')),(IsPad And (Name = 'C3_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C1_MCU-1')),(IsPad And (Name = 'C1_MCU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_VDDUSB-1')),(IsPad And (Name = 'C_VDDUSB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD1-1')),(IsPad And (Name = 'C_MCU_VDD1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('ADC_EMG5') And InRegionAbsolute(2101.574767,973.346469,2127.165399,1061.023601)),(IsPad And (Name = 'U_MCU1-30'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('Vservo_1') And InRegionAbsolute(679.133802,662.401564,884.842534,678.149596)),(IsPad And (Name = 'Rservo_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD4-1')),(IsPad And (Name = 'C_MCU_VDD4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD3-1')),(IsPad And (Name = 'C_MCU_VDD3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'C_MCU_VDD2-1')),(IsPad And (Name = 'C_MCU_VDD2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('NetCL_1_1') And InRegionAbsolute(872.047163,875.984200,887.795195,1019.685032)),(IsPad And (Name = 'CL_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC1')),(IsPad And InComponent('J_FPC1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP4')),(IsPad And InComponent('UP4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP2')),(IsPad And InComponent('UP2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC4')),(IsPad And InComponent('J_FPC4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC3')),(IsPad And InComponent('J_FPC3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC2')),(IsPad And InComponent('J_FPC2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_ANALOG') Or InNetClass('EMG_ADC') Or InNetClass('EMG_REFERENCE')),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (All),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('UP1')),(IsPad And InComponent('UP1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('U_MCU1')),(IsPad And InComponent('U_MCU1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.25mm) (InNetClass('EMG_POWER')),(All)",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.1mm) (IsPad And InComponent('J_FPC5')),(IsPad And InComponent('J_FPC5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC3-1')),(IsPad And (Name = 'C_ADC3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC2-1')),(IsPad And (Name = 'C_ADC2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC1-1')),(IsPad And (Name = 'C_ADC1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv_1-1')),(IsPad And (Name = 'Cdiv_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC5-1')),(IsPad And (Name = 'C_ADC5-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.125mm) (IsPad And (Name = 'C_ADC4-1')),(IsPad And (Name = 'C_ADC4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_SHDN_G-1')),(IsPad And (Name = 'R_SHDN_G-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1664.173000,633.858402,1665.747804)),(IsPad And (Name = 'J_USB_C-A1_B12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1436.614000,633.858402,1438.188804)),(IsPad And (Name = 'J_USB_C-B1_A12'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1982.752442,1612.932731,1998.500474,1664.704363)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(2002.437442,1612.932731,2018.185474,1664.704363)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsVia And InNet('GND') And InRegionAbsolute(2148.424882,1043.975984,2149.212284,1044.763386)),(IsPad And (Name = 'U_MCU1-31'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(2022.122542,1612.932731,2110.705174,1637.145363)),(IsPad And (Name = 'UP2-3'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1890.232742,1612.932731,1978.815374,1636.191863)),(IsPad And (Name = 'UP2-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_1') And InRegionAbsolute(2002.437442,1612.932731,2018.185474,1664.704363)),(IsPad And (Name = 'UP2-4'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1890.232742,1612.932731,1998.500474,1664.704363)),(IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1890.232742,1612.932731,1998.500474,1664.704363))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(2002.437442,1612.932731,2110.705174,1664.704363)),(IsTrack And InNet('NetL1_1') And InRegionAbsolute(2002.437442,1612.932731,2110.705174,1664.704363))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsTrack And InNet('NetL1_2') And InRegionAbsolute(1982.752442,1612.932731,1998.500474,1664.704363)),(IsPad And (Name = 'UP2-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'RUP_3-1')),(IsPad And (Name = 'RUP_3-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_KILL_PU-1')),(IsPad And (Name = 'R_KILL_PU-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1922.572742,1454.074531,1949.709874,1636.191863)),(IsPad And (Name = 'RUP_3-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VSYS') And InRegionAbsolute(582.677044,1543.307129,639.763776,1568.897661)),(IsPad And (Name = 'UP1-9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('VBAT_CELL') And InRegionAbsolute(440.944844,1533.464529,488.188876,1549.212561)),(IsPad And (Name = 'UP1-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0mm) (IsPad And InComponent('U_WIFI1') And ((Name = 'U_WIFI1-25') Or (Name = 'U_WIFI1-26') Or (Name = 'U_WIFI1-27') Or (Name = 'U_WIFI1-28') Or (Name = 'U_WIFI1-29') Or (Name = 'U_WIFI1-30') Or (Name = 'U_WIFI1-31') Or (Name = 'U_WIFI1-32'))),(IsRegion And OnLayer('Keep-Out Layer') And InRegionAbsolute(1191.692913,1788.937008,1675.236220,1985.866142))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP4')),(IsTrack And InRegionAbsolute(684.8386,1196.4567,871.0591,1344.8819))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_DRL1')),(IsTrack And InRegionAbsolute(529.5276,493.3071,706.6929,725.5906))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP2')),(IsTrack And InRegionAbsolute(1925.2717,1510.5709,2075.6654,1673.1693))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('C_DRL_DEC')),(IsTrack And InRegionAbsolute(468.7323,522.7559,594.7165,621.1811))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('UP1')),(IsTrack And InRegionAbsolute(429.1339,1444.8819,641.7323,1657.4803))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.15mm) (IsPad And InComponent('U_MCU1')),(IsTrack And InRegionAbsolute(1913.5630,1024.5866,2659.6654,1770.6890))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1854.3307,409.4488,2133.8583,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4'))),(InRegionAbsolute(1854.3307,409.4488,2133.8583,594.4882) And (InComponent('J_FPC4') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC4_8') Or InNet('Va_4') Or InNet('Vb_4') Or InNet('Vc_4')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(2279.5276,409.4488,2559.0551,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5'))),(InRegionAbsolute(2279.5276,409.4488,2559.0551,594.4882) And (InComponent('J_FPC5') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC5_8') Or InNet('Va_5') Or InNet('Vb_5') Or InNet('Vc_5')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1429.1339,409.4488,1708.6614,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3'))),(InRegionAbsolute(1429.1339,409.4488,1708.6614,594.4882) And (InComponent('J_FPC3') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC3_8') Or InNet('Va_3') Or InNet('Vb_3') Or InNet('Vc_3')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(578.7402,409.4488,858.2677,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1'))),(InRegionAbsolute(578.7402,409.4488,858.2677,594.4882) And (InComponent('J_FPC1') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC1_8') Or InNet('Va_1') Or InNet('Vb_1') Or InNet('Vc_1')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.13mm) (InRegionAbsolute(1003.9370,409.4488,1283.4646,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2'))),(InRegionAbsolute(1003.9370,409.4488,1283.4646,594.4882) And (InComponent('J_FPC2') Or InNet('3V0_ANA') Or InNet('GND') Or InNet('NetJ_FPC2_8') Or InNet('Va_2') Or InNet('Vb_2') Or InNet('Vc_2')))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_INT_PULLUP-1')),(IsPad And (Name = 'R_INT_PULLUP-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU1-1')),(IsPad And (Name = 'CCU1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU4-1')),(IsPad And (Name = 'CCU4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CUP4_FB-1')),(IsPad And (Name = 'CUP4_FB-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1926.059442,1454.074531,1949.484674,1636.191863)),(IsPad And (Name = 'CUP4_FB-1'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU10-1')),(IsPad And (Name = 'CCU10-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU6_1-1')),(IsPad And (Name = 'CU6_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'Cdiv-1')),(IsPad And (Name = 'Cdiv-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU8-1')),(IsPad And (Name = 'CCU8-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_11-1')),(IsPad And (Name = 'CU_11-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_14-1')),(IsPad And (Name = 'CU_14-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CU_12-1')),(IsPad And (Name = 'CU_12-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'CCU6-1')),(IsPad And (Name = 'CCU6-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_ADC1-2')),(IsPad And (Name = 'U_MCU1-22'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B4_A9')),(IsPad And (Name = 'J_USB_C-B5'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_AL-1')),(IsPad And (Name = 'R_AL-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'R_EN1_BIAS-1')),(IsPad And (Name = 'R_EN1_BIAS-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And (Name = 'R_EN1_1-1')),(IsPad And (Name = 'R_EN1_1-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-B1_A12')),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1436.614000,633.858402,1438.188804)),(IsPad And (Name = 'J_USB_C-B4_A9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsTrack And InNet('3V3_DIG') And InRegionAbsolute(1933.736642,1454.074531,1949.709874,1636.191863)),(IsPad And (Name = 'CUP4-2'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.2mm) (IsPad And InComponent('J_USB_C') And InRegionAbsolute(632.283598,1664.173000,633.858402,1665.747804)),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A4_B9')),(IsPad And (Name = 'J_USB_C-B8'))",
+   0
+  ],
+  [
+   "Clearance Constraint (Gap=0.175mm) (IsPad And (Name = 'J_USB_C-A1_B12')),(IsPad And (Name = 'J_USB_C-A4_B9'))",
+   0
+  ],
+  [
+   "Short-Circuit Constraint (Allowed=No) (All),(All)",
+   0
+  ],
+  [
+   "Un-Routed Net Constraint ( (All) )",
+   8
+  ],
+  [
+   "Modified Polygon (Allow modified: No), (Allow shelved: No)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (All)",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_CRYSTAL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.18mm) (InNetClass('EMG_SPI'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.4mm) (InNetClass('EMG_GND'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.2mm) (Max=1.5mm) (Preferred=0.5mm) (InNetClass('EMG_SWITCH'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=3mm) (Preferred=0.9mm) (InNetClass('EMG_POWER'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.3mm) (Preferred=0.2mm) (InNetClass('EMG_ADC'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.4mm) (Preferred=0.2mm) (InNetClass('EMG_ANALOG'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.2mm) (InNetClass('EMG_CONTROL'))",
+   0
+  ],
+  [
+   "Width Constraint (Min=0.15mm) (Max=0.5mm) (Preferred=0.3mm) (InNetClass('EMG_REFERENCE'))",
+   0
+  ],
+  [
+   "Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)",
+   0
+  ],
+  [
+   "Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)",
+   0
+  ],
+  [
+   "Hole To Hole Clearance (Gap=0.254mm) (All),(All)",
+   0
+  ],
+  [
+   "Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)",
+   0
+  ],
+  [
+   "Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)",
+   159
+  ],
+  [
+   "Silk to Silk (Clearance=0.254mm) (All),(All)",
+   84
+  ],
+  [
+   "Net Antennae (Tolerance=0mm) (All)",
+   8
+  ],
+  [
+   "Board Clearance Constraint (Gap=0mm) (All)",
+   5
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = 0.5mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) ",
+   0
+  ],
+  [
+   "Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)",
+   0
+  ]
+ ],
+ "details": [
+  "Un-Routed Net Constraint: Net NetINA4_3 Between Pad INA4-3(51.425mm,15.85mm) on L1 TOP And Track (57.375mm,17.025mm)(57.375mm,18.375mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net WIFI_SPI_CS Between Track (45.825mm,43.875mm)(46.375mm,43.325mm) on L1 TOP And Pad R_SPI_CS-1(58.48mm,25.538mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net MCU_WIFI_UART_RX Between Pad R_WIFI_UART_RX_LINK-2(45.011mm,43.309mm) on L6 BOTTOM And Pad U_MCU1-93(55.58mm,43.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net MCU_WIFI_UART_TX Between Pad R_WIFI_UART_TX_LINK-2(44.026mm,40.805mm) on L6 BOTTOM And Pad U_MCU1-92(56.08mm,43.238mm) on L1 TOP [Unplated]",
+  "Un-Routed Net Constraint: Net WIFI_UART_RX Between Pad U_WIFI1-23(42.126mm,42.475mm) on L1 TOP [Unplated] And Via (43.525mm,40.075mm) from L1 TOP to L6 BOTTOM",
+  "Un-Routed Net Constraint: Net GND Between Track (53.475mm,21.175mm)(53.475mm,22.275mm) on L6 BOTTOM And Track (54.075mm,19.775mm)(54.075mm,20.375mm) on L1 TOP",
+  "Un-Routed Net Constraint: Net VREF_A Between Via (14.525mm,20.625mm) from L1 TOP to L6 BOTTOM And Via (15.125mm,23.025mm) from L1 TOP to L6 BOTTOM",
+  "Un-Routed Net Constraint: Net Vc_1 Between Via (15.9mm,11.2mm) from L1 TOP to L6 BOTTOM And Via (24.175mm,19.325mm) from L1 TOP to L6 BOTTOM",
+  "Silk To Solder Mask Clearance Constraint: (0.094mm < 0.254mm) Between Arc (12.6mm,37.05mm) on Bottom Overlay And Pad RISET-1(12.029mm,36.6mm) on L6 BOTTOM [Bottom Overlay] to [Bottom Solder] clearance [0.094mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Arc (12.6mm,37.05mm) on Bottom Overlay And Pad RISET-2(12.979mm,36.6mm) on L6 BOTTOM [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Arc (18.028mm,16.455mm) on Bottom Overlay And Pad R_DRL_OUT1-2(18.1mm,15.925mm) on L6 BOTTOM [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_DEC-1(13.106mm,14.528mm) on L6 BOTTOM And Track (12.7mm,14.725mm)(13.7mm,14.725mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_DEC-1(13.106mm,14.528mm) on L6 BOTTOM And Track (12.906mm,14.351mm)(14.179mm,14.351mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.24mm < 0.254mm) Between Pad C_DRL_DEC-2(13.906mm,14.528mm) on L6 BOTTOM And Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.24mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_DEC-2(13.906mm,14.528mm) on L6 BOTTOM And Track (12.7mm,14.725mm)(13.7mm,14.725mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_DEC-2(13.906mm,14.528mm) on L6 BOTTOM And Track (12.906mm,14.351mm)(14.179mm,14.351mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_FB-1(13.142mm,13.676mm) on L6 BOTTOM And Track (12.87mm,13.853mm)(14.142mm,13.853mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_DRL_FB-2(13.942mm,13.676mm) on L6 BOTTOM And Track (12.87mm,13.853mm)(14.142mm,13.853mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.025mm < 0.254mm) Between Pad C_MCU_BULK-1(67.55mm,42.65mm) on L1 TOP And Track (67.144mm,42.175mm)(68.416mm,42.175mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.025mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_MCU_VDD3-1(65.08mm,25.521mm) on L1 TOP And Text \"CCU10\" (65.35mm,21.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.175mm < 0.254mm) Between Pad C_OUT_-2(16.6mm,40.6mm) on L6 BOTTOM And Track (17.525mm,39.65mm)(17.525mm,40.65mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.175mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_UV_BYPASS-1(45.02mm,41.642mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_UV_BYPASS-2(45.777mm,41.642mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.215mm < 0.254mm) Between Pad C_WIFI_BULK-1(45.58mm,38.374mm) on L6 BOTTOM And Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.215mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.198mm < 0.254mm) Between Pad C_WIFI_BULK-1(45.58mm,38.374mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.198mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_WIFI_BULK-2(45.58mm,40.226mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.198mm < 0.254mm) Between Pad C_WIFI_BULK-2(45.58mm,40.226mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.198mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C_WIFI_BULK-2(45.58mm,40.226mm) on L6 BOTTOM And Track (44.762mm,40.967mm)(46.035mm,40.967mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.156mm < 0.254mm) Between Pad C1_EN1-1(65.068mm,39.35mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.156mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C1_EN1-2(64.311mm,39.35mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C2_EN1-1(64.09mm,35.95mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C2_EN1-2(65.09mm,35.95mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.188mm < 0.254mm) Between Pad C2_MCU-1(46.18mm,33.1mm) on L1 TOP And Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.188mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.021mm < 0.254mm) Between Pad C4_MCU-1(46.18mm,31.8mm) on L1 TOP And Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.021mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.106mm < 0.254mm) Between Pad CCU1-2(21.629mm,20.55mm) on L1 TOP And Text \"RH_2\" (22.067mm,19.883mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.106mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.157mm < 0.254mm) Between Pad CCU2-1(21.65mm,19.55mm) on L1 TOP And Text \"RH_2\" (22.067mm,19.883mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.157mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.053mm < 0.254mm) Between Pad Cdiv_10uF-2(13.95mm,26.8mm) on L6 BOTTOM And Text \"R_SDA\" (19.093mm,26.158mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.053mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cdiv-1(16.021mm,26.8mm) on L6 BOTTOM And Text \"CL_1\" (17.217mm,26.616mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cdiv-1(16.021mm,26.8mm) on L6 BOTTOM And Text \"R_SDA\" (19.093mm,26.158mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cdiv-2(16.779mm,26.8mm) on L6 BOTTOM And Text \"CL_1\" (17.217mm,26.616mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cdiv-2(16.779mm,26.8mm) on L6 BOTTOM And Text \"R_SDA\" (19.093mm,26.158mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cservo_1-2(23.175mm,17.65mm) on L6 BOTTOM And Text \"CU_21\" (23.633mm,17.484mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cservo_3-1(41.725mm,17.65mm) on L6 BOTTOM And Text \"RGN_3\" (38.067mm,17.767mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cservo_3-2(44.675mm,17.65mm) on L6 BOTTOM And Text \"CH_3\" (45.017mm,17.558mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Cservo_3-2(44.675mm,17.65mm) on L6 BOTTOM And Text \"CU_24\" (46.267mm,20.683mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CU_14-1(53.379mm,20.95mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4_1-2(53.412mm,39.483mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4_FB-1(49.902mm,37.133mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4_FB-2(49.122mm,37.133mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4-1(48.212mm,41.359mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4-1(48.212mm,41.359mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad CUP4-2(48.212mm,39.508mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.1mm < 0.254mm) Between Pad D_VBUS-2(18.5mm,35.5mm) on L1 TOP And Track (18.175mm,35.975mm)(19.225mm,35.975mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.1mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Free-TP_GND_ANA(12.5mm,16.2mm) on L1 TOP And Text \"INA1\" (13.8mm,14.017mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Free-TP_GND_ANA(12.5mm,16.2mm) on L1 TOP And Text \"J_REF\" (10.197mm,14.783mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Free-TP_GND_PWR(22.385mm,35.705mm) on L1 TOP And Text \"J_SWD\" (22.581mm,34.925mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.114mm < 0.254mm) Between Pad Free-TP_GND_PWR(22.385mm,35.705mm) on L1 TOP And Track (23.099mm,34.184mm)(23.099mm,41.804mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.114mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.078mm < 0.254mm) Between Pad Free-TP_VBUS(14.225mm,34.252mm) on L1 TOP And Track (13.8mm,34.93mm)(15.05mm,34.93mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.078mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Free-TP_VOUT_1(45.33mm,29.75mm) on L1 TOP And Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Free-TP_VOUT_3(45.83mm,25.25mm) on L1 TOP And Text \"RH_3\" (47.317mm,22.267mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.07mm < 0.254mm) Between Pad J_FPC5-P1_2(59.885mm,12.2mm) on L1 TOP And Text \"CCU8\" (55.967mm,11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.07mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad J_Li-Po-1(24.369mm,35.454mm) on Multi-Layer And Text \"J_SWD\" (22.581mm,34.925mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.132mm < 0.254mm) Between Pad J_REF-1(11.93mm,12.2mm) on Multi-Layer And Track (12.906mm,13.001mm)(14.179mm,13.001mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.132mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad J_REF-2(14.47mm,12.2mm) on Multi-Layer And Text \"J_FPC1\" (15.717mm,10.934mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.002mm < 0.254mm) Between Pad J_REF-2(14.47mm,12.2mm) on Multi-Layer And Track (12.906mm,13.001mm)(14.179mm,13.001mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.002mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.218mm < 0.254mm) Between Pad J_USB_C-SH2(16.58mm,35.08mm) on Multi-Layer And Track (16.624mm,34.261mm)(18.096mm,34.261mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.218mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.184mm < 0.254mm) Between Pad J_USB_C-SH3(12.4mm,43.72mm) on Multi-Layer And Text \"UP1\" (11.5mm,43.166mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.184mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.125mm < 0.254mm) Between Pad J_USB_C-SH3(12.4mm,43.72mm) on Multi-Layer And Track (13.525mm,43.975mm)(13.525mm,44.425mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.125mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.246mm < 0.254mm) Between Pad LED_CHG-C(25.428mm,42.7mm) on L1 TOP And Track (23.099mm,41.804mm)(25.639mm,41.804mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.246mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.066mm < 0.254mm) Between Pad MCU_VCAP-1(62.68mm,24.512mm) on L1 TOP And Text \"INA5\" (58.351mm,23.1mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.066mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.054mm < 0.254mm) Between Pad Q_SHDN-1(55.58mm,37mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.054mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Q_SHDN-2(55.58mm,38.9mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.168mm < 0.254mm) Between Pad R_DRL_FB-2(13.17mm,16.793mm) on L6 BOTTOM And Track (12.7mm,16.075mm)(13.7mm,16.075mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.168mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_DRL_OUT1-1(18.1mm,14.475mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_DRL_OUT1-2(18.1mm,15.925mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.14mm < 0.254mm) Between Pad R_DRL_OUT2-1(19.896mm,14.274mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.14mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_DRL_OUT2-2(19.896mm,15.724mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_DRL_VC3-1(45.175mm,14.4mm) on L6 BOTTOM And Text \"CH_3\" (45.017mm,17.558mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_EN-1(43.198mm,38.442mm) on L6 BOTTOM And Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_EN1_1-2(64.011mm,40.25mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_EN-2(44.198mm,38.442mm) on L6 BOTTOM And Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_EN-2(44.198mm,38.442mm) on L6 BOTTOM And Track (44.402mm,37.647mm)(44.402mm,40.953mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_INT_PULLUP-1(59.114mm,35.75mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_INT_PULLUP-2(60.066mm,35.75mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_KILL_PU-1(60.066mm,39.45mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_KILL_PU-2(59.114mm,39.45mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_ref-1(12.7mm,15.4mm) on L6 BOTTOM And Track (12.87mm,15.203mm)(14.142mm,15.203mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_ref-2(13.7mm,15.4mm) on L6 BOTTOM And Track (12.87mm,15.203mm)(14.142mm,15.203mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_SHDN_G-1(54.166mm,37.25mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_SHDN_G-2(53.214mm,37.25mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.208mm < 0.254mm) Between Pad R_SHDN_PD-1(54.19mm,38.45mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.208mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.245mm < 0.254mm) Between Pad R_SHDN_PD-2(53.19mm,38.45mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.245mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_TH_BAT-1(26.939mm,36.583mm) on Multi-Layer And Text \"J_SWD\" (22.581mm,34.925mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_TS_TOP-2(10.794mm,40.774mm) on L6 BOTTOM And Text \"UP1\" (11.5mm,43.166mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.175mm < 0.254mm) Between Pad R_VREF1-2(22.6mm,12.912mm) on L1 TOP And Text \"RDD2\" (23.1mm,13mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.175mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.175mm < 0.254mm) Between Pad R_VREF2-2(33.4mm,12.912mm) on L1 TOP And Text \"RDD5\" (33.9mm,13mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.175mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.175mm < 0.254mm) Between Pad R_VREF3-2(44.2mm,12.912mm) on L1 TOP And Text \"RDD8\" (44.7mm,13mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.175mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_VREF4-2(55mm,12.912mm) on L1 TOP And Text \"RDD11\" (55.3mm,13mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_VREF5-2(65.8mm,12.912mm) on L1 TOP And Text \"RDD14\" (65.6mm,13mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_RX_LINK-1(45.011mm,42.509mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_RX_LINK-1(45.011mm,42.509mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_RX_LINK-1(45.011mm,42.509mm) on L6 BOTTOM And Track (44.762mm,42.317mm)(46.035mm,42.317mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_RX_LINK-2(45.011mm,43.309mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_TX_LINK-1(43.226mm,40.805mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.062mm < 0.254mm) Between Pad R_WIFI_UART_TX_LINK-1(43.226mm,40.805mm) on L6 BOTTOM And Track (42.198mm,41.192mm)(43.198mm,41.192mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.062mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.062mm < 0.254mm) Between Pad R_WIFI_UART_TX_LINK-1(43.226mm,40.805mm) on L6 BOTTOM And Track (43.198mm,41.192mm)(43.198mm,44.292mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.062mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad R_WIFI_UART_TX_LINK-2(44.026mm,40.805mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.051mm < 0.254mm) Between Pad R_WIFI_UART_TX_LINK-2(44.026mm,40.805mm) on L6 BOTTOM And Track (44.402mm,37.647mm)(44.402mm,40.953mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.051mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.217mm < 0.254mm) Between Pad RDD10-2(57.412mm,16.8mm) on L1 TOP And Text \"J_FPC5\" (58.917mm,10.768mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.217mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.192mm < 0.254mm) Between Pad RDD11-2(57.4mm,15mm) on L1 TOP And Text \"J_FPC5\" (58.917mm,10.768mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.192mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.192mm < 0.254mm) Between Pad RDD2-2(25mm,15mm) on L1 TOP And Text \"J_FPC2\" (26.517mm,10.768mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.192mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RDD4-1(34.788mm,16.8mm) on L1 TOP And Text \"INA3\" (35.4mm,16.651mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.1mm < 0.254mm) Between Pad RDD4-2(35.812mm,16.8mm) on L1 TOP And Text \"INA3\" (35.4mm,16.651mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.1mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.192mm < 0.254mm) Between Pad RDD5-2(35.8mm,15mm) on L1 TOP And Text \"J_FPC3\" (37.317mm,10.768mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.192mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RDD6-1(34.788mm,18.6mm) on L1 TOP And Text \"INA3\" (35.4mm,16.651mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.1mm < 0.254mm) Between Pad RDD6-2(35.812mm,18.6mm) on L1 TOP And Text \"INA3\" (35.4mm,16.651mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.1mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.192mm < 0.254mm) Between Pad RDD8-2(46.6mm,15mm) on L1 TOP And Text \"J_FPC4\" (48.117mm,10.768mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.192mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RDD9-1(45.588mm,18.6mm) on L1 TOP And Text \"INA4\" (45.551mm,17.9mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RDD9-2(46.612mm,18.6mm) on L1 TOP And Text \"INA4\" (45.551mm,17.9mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.043mm < 0.254mm) Between Pad RG_1-1(18.9mm,22.45mm) on L6 BOTTOM And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.043mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.043mm < 0.254mm) Between Pad RG_1-2(18.9mm,21.45mm) on L6 BOTTOM And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.043mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RG_4-1(53.4mm,19.35mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad RG_4-2(53.4mm,18.35mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Rservo_1-1(21.275mm,15.55mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.168mm < 0.254mm) Between Pad Rservo_1-2(22.125mm,15.55mm) on L6 BOTTOM And Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.168mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Rservo_2-1(29.425mm,25.25mm) on L6 BOTTOM And Text \"CUP5_2\" (33.982mm,25.521mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Rservo_2-2(28.575mm,25.25mm) on L6 BOTTOM And Text \"CUP5_2\" (33.982mm,25.521mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.039mm < 0.254mm) Between Pad Rservo_3-2(43.625mm,15.55mm) on L6 BOTTOM And Text \"CH_3\" (45.017mm,17.558mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.039mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.234mm < 0.254mm) Between Pad RUP_3-1(49.99mm,38.134mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.234mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_GND-TP(48.226mm,44.205mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.06mm < 0.254mm) Between Pad TP_MCU_BOOT0-TP(55.28mm,41.238mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.06mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_WIFI_BOOT-TP(32.693mm,41.141mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_WIFI_UART_RX-TP(47.268mm,37.227mm) on L6 BOTTOM And Text \"L1\" (47.312mm,36.168mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_WIFI_UART_RX-TP(47.268mm,37.227mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_WIFI_UART_RX-TP(47.268mm,37.227mm) on L6 BOTTOM And Track (46.758mm,37.647mm)(46.758mm,40.953mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad TP_WIFI_UART_TX-TP(46.307mm,43.653mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_DRL1-2(15.7mm,14.08mm) on L6 BOTTOM And Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_DRL1-3(14.75mm,14.08mm) on L6 BOTTOM And Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.208mm < 0.254mm) Between Pad U_DRL1-3(14.75mm,14.08mm) on L6 BOTTOM And Track (12.87mm,13.853mm)(14.142mm,13.853mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.208mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.171mm < 0.254mm) Between Pad U_DRL1-3(14.75mm,14.08mm) on L6 BOTTOM And Track (12.906mm,14.351mm)(14.179mm,14.351mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.171mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_DRL1-4(14.75mm,16.88mm) on L6 BOTTOM And Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_EN1-1(63.8mm,38.625mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_EN1-3(63.8mm,37.325mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_EN1-4(63.8mm,36.675mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_EN1-5(61.18mm,36.675mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_EN1-6(61.18mm,37.325mm) on L6 BOTTOM And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.133mm < 0.254mm) Between Pad U_EN1-8(61.18mm,38.625mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.133mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_UV1-1(41.423mm,41.792mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_UV1-2(41.423mm,42.742mm) on L6 BOTTOM And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.041mm < 0.254mm) Between Pad U_UV1-2(41.423mm,42.742mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.041mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_UV1-3(41.423mm,43.692mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_UV1-4(43.973mm,43.692mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U_UV1-5(43.973mm,42.742mm) on L6 BOTTOM And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U1-1(17.45mm,22.35mm) on L6 BOTTOM And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U1-10(11.75mm,19.75mm) on L6 BOTTOM And Text \"Cdiv\" (11.251mm,20.3mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U1-11(11.75mm,20.4mm) on L6 BOTTOM And Text \"Cdiv\" (11.251mm,20.3mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U1-2(17.45mm,21.7mm) on L6 BOTTOM And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.083mm < 0.254mm) Between Pad U1-3(17.45mm,21.05mm) on L6 BOTTOM And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.083mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U1-9(11.75mm,19.1mm) on L6 BOTTOM And Text \"Cdiv\" (11.251mm,20.3mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U3-1(54.85mm,18.45mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U3-2(54.85mm,19.1mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U3-5(54.85mm,21.05mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad U3-6(54.85mm,21.7mm) on L6 BOTTOM And Text \"CL_4\" (53.483mm,18.017mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.105mm < 0.254mm) Between Pad UP2-3(51.062mm,41.169mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.105mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.103mm < 0.254mm) Between Pad UP2-4(51.562mm,41.169mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.103mm]",
+  "Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad UP2-5(51.562mm,39.699mm) on L6 BOTTOM And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]",
+  "Silk To Solder Mask Clearance Constraint: (0.083mm < 0.254mm) Between Pad UP3-3(36.3mm,27.387mm) on L6 BOTTOM And Track (37.086mm,27.405mm)(38.758mm,27.405mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.083mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Arc (15.2mm,21.95mm) on Bottom Overlay And Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Arc (17.45mm,23.075mm) on Bottom Overlay And Text \"CL_1\" (17.217mm,26.616mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Arc (41.423mm,40.967mm) on Bottom Overlay And Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.019mm < 0.254mm) Between Arc (65mm,38.525mm) on Bottom Overlay And Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay Silk Text to Silk Clearance [0.019mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CCU1\" (23.5mm,19.034mm) on Top Overlay And Text \"RH_2\" (22.067mm,19.883mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CCU10\" (65.35mm,21.75mm) on Top Overlay And Track (64.405mm,25.264mm)(64.405mm,26.536mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.233mm < 0.254mm) Between Text \"CCU10\" (65.35mm,21.75mm) on Top Overlay And Track (65.755mm,25.264mm)(65.755mm,26.536mm) on Top Overlay Silk Text to Silk Clearance [0.233mm]",
+  "Silk To Silk Clearance Constraint: (0.2mm < 0.254mm) Between Text \"CCU3\" (34.05mm,19.35mm) on Top Overlay And Text \"INA3\" (35.4mm,16.651mm) on Top Overlay Silk Text to Silk Clearance [0.2mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CCU8\" (55.967mm,11mm) on Top Overlay And Text \"J_FPC5\" (58.917mm,10.768mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"Cdiv\" (11.251mm,20.3mm) on Bottom Overlay And Track (13mm,17.85mm)(13mm,22.95mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.142mm < 0.254mm) Between Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay And Track (13mm,17.85mm)(13mm,22.95mm) on Bottom Overlay Silk Text to Silk Clearance [0.142mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"Cdiv_1\" (18.482mm,21.383mm) on Bottom Overlay And Track (16.2mm,17.85mm)(16.2mm,22.95mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.075mm < 0.254mm) Between Text \"CH_1\" (20.766mm,26.508mm) on Bottom Overlay And Text \"CL_1\" (17.217mm,26.616mm) on Bottom Overlay Silk Text to Silk Clearance [0.075mm]",
+  "Silk To Silk Clearance Constraint: (0.213mm < 0.254mm) Between Text \"CH_1\" (20.766mm,26.508mm) on Bottom Overlay And Text \"R_SCL\" (19.493mm,27.958mm) on Bottom Overlay Silk Text to Silk Clearance [0.213mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CH_1\" (20.766mm,26.508mm) on Bottom Overlay And Text \"R_SDA\" (19.093mm,26.158mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.1mm < 0.254mm) Between Text \"CH_3\" (45.017mm,17.558mm) on Bottom Overlay And Text \"CU_24\" (46.267mm,20.683mm) on Bottom Overlay Silk Text to Silk Clearance [0.1mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CL_1\" (17.217mm,26.616mm) on Bottom Overlay And Text \"R_SDA\" (19.093mm,26.158mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.145mm < 0.254mm) Between Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay And Track (17.7mm,15.175mm)(17.7mm,15.225mm) on Bottom Overlay Silk Text to Silk Clearance [0.145mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay And Track (18.5mm,15.175mm)(18.5mm,15.225mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.046mm < 0.254mm) Between Text \"CU_11\" (17.417mm,15.667mm) on Bottom Overlay And Track (20.296mm,14.974mm)(20.296mm,15.024mm) on Bottom Overlay Silk Text to Silk Clearance [0.046mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CU_14\" (60.249mm,16.733mm) on Bottom Overlay And Track (56.1mm,17.85mm)(59.3mm,17.85mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CU_14\" (60.249mm,16.733mm) on Bottom Overlay And Track (59.3mm,17.85mm)(59.3mm,22.95mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay And Track (43.198mm,37.767mm)(44.198mm,37.767mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CUP4\" (43.512mm,34.8mm) on Bottom Overlay And Track (44.402mm,37.647mm)(44.402mm,40.953mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"CUP5_3\" (26.733mm,25.105mm) on Bottom Overlay And Text \"RGN_1\" (27.066mm,26.533mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"INA1\" (13.8mm,14.017mm) on Top Overlay And Text \"J_REF\" (10.197mm,14.783mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"INA2\" (27.4mm,17.051mm) on Top Overlay And Text \"RDD3\" (26.6mm,16.2mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.25mm < 0.254mm) Between Text \"INA3\" (35.4mm,16.651mm) on Top Overlay And Text \"RDD4\" (34mm,15.3mm) on Top Overlay Silk Text to Silk Clearance [0.25mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"INA3\" (35.4mm,16.651mm) on Top Overlay And Text \"RDD6\" (35.6mm,19.4mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.001mm < 0.254mm) Between Text \"J_FPC1\" (15.717mm,10.934mm) on Top Overlay And Text \"J_REF\" (10.197mm,14.783mm) on Top Overlay Silk Text to Silk Clearance [0.001mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC1\" (15.717mm,10.934mm) on Top Overlay And Track (10.66mm,10.93mm)(15.74mm,10.93mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC2\" (26.517mm,10.768mm) on Top Overlay And Text \"RDD2\" (23.1mm,13mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC2\" (26.517mm,10.768mm) on Top Overlay And Text \"RDD3\" (26.6mm,16.2mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC3\" (37.317mm,10.768mm) on Top Overlay And Text \"RDD5\" (33.9mm,13mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC4\" (48.117mm,10.768mm) on Top Overlay And Text \"RDD8\" (44.7mm,13mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC4\" (48.117mm,10.768mm) on Top Overlay And Text \"RDD9\" (48.2mm,14.4mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC5\" (58.917mm,10.768mm) on Top Overlay And Text \"RDD11\" (55.3mm,13mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_FPC5\" (58.917mm,10.768mm) on Top Overlay And Text \"RDD12\" (59mm,15.3mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"J_SWD\" (22.581mm,34.925mm) on Top Overlay And Track (23.099mm,34.184mm)(23.099mm,41.804mm) on Top Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (42.198mm,41.192mm)(42.198mm,44.292mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (42.198mm,41.192mm)(43.198mm,41.192mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.081mm < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (43.198mm,41.192mm)(43.198mm,44.292mm) on Bottom Overlay Silk Text to Silk Clearance [0.081mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (44.402mm,37.647mm)(44.402mm,40.953mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (44.762mm,40.967mm)(46.035mm,40.967mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (44.762mm,42.317mm)(46.035mm,42.317mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (46.758mm,37.647mm)(46.758mm,40.953mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"JP_WIFI_BOOT\" (47.461mm,41.078mm) on Bottom Overlay And Track (47.034mm,38.78mm)(47.034mm,42.087mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.236mm < 0.254mm) Between Text \"L1\" (47.312mm,36.168mm) on Bottom Overlay And Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay Silk Text to Silk Clearance [0.236mm]",
+  "Silk To Silk Clearance Constraint: (0.091mm < 0.254mm) Between Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay And Track (12.906mm,14.351mm)(14.179mm,14.351mm) on Bottom Overlay Silk Text to Silk Clearance [0.091mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay And Track (13mm,17.85mm)(16.2mm,17.85mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"R_ref\" (15.417mm,18.566mm) on Bottom Overlay And Track (15.648mm,16.93mm)(15.752mm,16.93mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"RG_3\" (35.767mm,17.142mm) on Bottom Overlay And Text \"RGN_3\" (38.067mm,17.767mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.201mm < 0.254mm) Between Text \"RGN_3\" (38.067mm,17.767mm) on Bottom Overlay And Track (37.7mm,17.85mm)(37.7mm,22.95mm) on Bottom Overlay Silk Text to Silk Clearance [0.201mm]",
+  "Silk To Silk Clearance Constraint: (0.212mm < 0.254mm) Between Text \"RH_2\" (22.067mm,19.883mm) on Top Overlay And Track (20.614mm,21.225mm)(21.886mm,21.225mm) on Top Overlay Silk Text to Silk Clearance [0.212mm]",
+  "Silk To Silk Clearance Constraint: (0.188mm < 0.254mm) Between Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay And Track (46.055mm,31.175mm)(47.105mm,31.175mm) on Top Overlay Silk Text to Silk Clearance [0.188mm]",
+  "Silk To Silk Clearance Constraint: (0.189mm < 0.254mm) Between Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay And Track (46.055mm,32.425mm)(47.105mm,32.425mm) on Top Overlay Silk Text to Silk Clearance [0.189mm]",
+  "Silk To Silk Clearance Constraint: (0.233mm < 0.254mm) Between Text \"RH_4\" (45.717mm,29.467mm) on Top Overlay And Track (46.055mm,32.475mm)(47.105mm,32.475mm) on Top Overlay Silk Text to Silk Clearance [0.233mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_GND\" (56.27mm,46.076mm) on Bottom Overlay And Text \"TP_WIFI_UART_TX\" (67.559mm,45.517mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_MCU_BOOT0\" (72.463mm,43.104mm) on Bottom Overlay And Text \"UP2\" (55.145mm,42.534mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay And Track (42.198mm,41.192mm)(42.198mm,44.292mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay And Track (42.198mm,44.292mm)(43.198mm,44.292mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay And Track (43.198mm,41.192mm)(43.198mm,44.292mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.198mm < 0.254mm) Between Text \"TP_WIFI_BOOT\" (49.354mm,42.996mm) on Bottom Overlay And Track (44.762mm,42.317mm)(46.035mm,42.317mm) on Bottom Overlay Silk Text to Silk Clearance [0.198mm]",
+  "Silk To Silk Clearance Constraint: (0.18mm < 0.254mm) Between Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay And Track (50.912mm,37.459mm)(51.912mm,37.459mm) on Bottom Overlay Silk Text to Silk Clearance [0.18mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay And Track (56.717mm,36.5mm)(57.14mm,36.5mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay And Track (57.14mm,36.5mm)(57.14mm,37.286mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay And Track (58.865mm,37.275mm)(59.915mm,37.275mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.026mm < 0.254mm) Between Text \"TP_WIFI_CHIP_EN\" (65.918mm,35.528mm) on Bottom Overlay And Track (64.065mm,35.275mm)(65.115mm,35.275mm) on Bottom Overlay Silk Text to Silk Clearance [0.026mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (46.758mm,37.647mm)(46.758mm,40.953mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (47.034mm,38.78mm)(47.034mm,42.087mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (50.912mm,38.808mm)(51.912mm,38.808mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (51.862mm,40.348mm)(51.862mm,40.519mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (52.687mm,40.208mm)(52.687mm,40.659mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (54.137mm,40.208mm)(54.137mm,40.659mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (56.717mm,39.4mm)(57.14mm,39.4mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (57.14mm,38.614mm)(57.14mm,39.4mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (58.734mm,40.186mm)(60.446mm,40.186mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.227mm < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (58.86mm,38.631mm)(59.91mm,38.631mm) on Bottom Overlay Silk Text to Silk Clearance [0.227mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (62.19mm,36.196mm)(62.19mm,39.096mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (62.19mm,39.096mm)(62.79mm,39.096mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text \"TP_WIFI_UART_RX\" (68.52mm,39.085mm) on Bottom Overlay And Track (62.79mm,36.196mm)(62.79mm,39.096mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]",
+  "Silk To Silk Clearance Constraint: (0.239mm < 0.254mm) Between Text \"TP_WIFI_UART_TX\" (67.559mm,45.517mm) on Bottom Overlay And Text \"U_UV1\" (41.132mm,48.159mm) on Bottom Overlay Silk Text to Silk Clearance [0.239mm]",
+  "Net Antennae: Track (14.525mm,20.625mm)(14.875mm,20.975mm) on L1 TOP",
+  "Net Antennae: Track (14.825mm,38.725mm)(16.3mm,37.25mm) on L1 TOP",
+  "Net Antennae: Track (16.3mm,41.675mm)(19.025mm,41.675mm) on L3 SIGNAL",
+  "Net Antennae: Track (20.025mm,38.125mm)(20.025mm,39.325mm) on L3 SIGNAL",
+  "Net Antennae: Track (20.725mm,42.325mm)(20.725mm,42.925mm) on L6 BOTTOM",
+  "Net Antennae: Track (21.975mm,41.275mm)(22.825mm,41.275mm) on L3 SIGNAL",
+  "Net Antennae: Track (22.625mm,39.425mm)(25.775mm,39.425mm) on L5 POWER SIGNAL",
+  "Net Antennae: Via (15.125mm,23.025mm) from L1 TOP to L6 BOTTOM",
+  "Board Outline Clearance(Outline Edge): (0.047mm < 0.5mm) Between Board Edge And Text \"J_REF\" (10.197mm,14.783mm) on Top Overlay",
+  "Board Outline Clearance(Outline Edge): (Collision < 0.5mm) Between Board Edge And Text \"RV1\" (9.9mm,24.9mm) on Bottom Overlay",
+  "Board Outline Clearance(Outline Edge): (0.35mm < 0.5mm) Between Board Edge And Text \"UP1\" (11.5mm,43.166mm) on Bottom Overlay",
+  "Board Outline Clearance(Outline Edge): (0.191mm < 0.5mm) Between Board Edge And Track (10.66mm,10.93mm)(10.66mm,13.47mm) on Top Overlay",
+  "Board Outline Clearance(Outline Edge): (0.191mm < 0.5mm) Between Board Edge And Track (10.66mm,10.93mm)(15.74mm,10.93mm) on Top Overlay"
+ ]
+}

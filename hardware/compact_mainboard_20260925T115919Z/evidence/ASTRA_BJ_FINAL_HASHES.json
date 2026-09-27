@@ -1,0 +1,95 @@
+{
+  "created_local": "2026-09-27T23:17:31.337396",
+  "pcb": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\EMG_MainBoard_Layout.PcbDoc",
+  "pcb_sha256": "0acc1e8eefea1bba24c8ec74a84c7dddd757a6bd520cf3d82f972191e28b585c",
+  "variant": "PROTO_1_REMOTE_NTC",
+  "source_files": [
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\AFE_Channel_1.SchDoc",
+      "sha256": "eb2a1d0ce890068189bc24991dd7d6bd5708afde893962b5b0ea2f9db65c8c15",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\AFE_Channel_2.SchDoc",
+      "sha256": "1593dfd627b4924361c0f661553afa645e96c8058d597121d7931c18020070d4",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\AFE_Channel_3.SchDoc",
+      "sha256": "21951b7c23c33f718df10518f3e7a9272ad998fac39a5f55e8e099bed5c6d533",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\AFE_Channel_4.SchDoc",
+      "sha256": "7f36a0ec00fc4897558edfcf7b66f56efb214867acec10479d50304858542a01",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\AFE_Channel_5.SchDoc",
+      "sha256": "914abf7e1dc92600f0f8f362115a9bdc9b8533b41919b93c50503027e7de0390",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\Analog_Shared.SchDoc",
+      "sha256": "7575eaa7e7d32439ec831452e50a439024df99cf132b8d3f50f2b44cb6b93146",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\EMG_MainBoard_Layout.PrjPcb",
+      "sha256": "e66412978005a6c78836dde1eb8a6ad040c17a3e86c817791358dba996641310",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\MCU_sheet.SchDoc",
+      "sha256": "bf3c97a6057b20102ec9da096ea3381f2313dcd4a2fa00822a4935bb6229e35a",
+      "unchanged_since_BFS": true
+    },
+    {
+      "file": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\C2_COMPACT_4L_2SIDE\\MainBoard\\Power_tree_design.SchDoc",
+      "sha256": "372cc696b494aa57471f76aff14afb2b74caef634109c263202f2c3e1cb1a47c",
+      "unchanged_since_BFS": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "GEOMETRY_C2_6L_BJ.txt",
+      "sha256": "f666b33c4d9caa5d36192a83e12bc37a6c6218bba34af554142512a5adf0536a"
+    },
+    {
+      "file": "DRC_C2_6L_BJ.txt.html",
+      "sha256": "5f9e1b34e584beef0776961feedceffa38288302894218aefa742e54eb749630"
+    },
+    {
+      "file": "DRC_C2_6L_BJ.json",
+      "sha256": "817f513bc812ce94d8b46fe7dedf79ed1b4f6b7f9e2249be090213ca597931be"
+    },
+    {
+      "file": "ASTRA_BJ_ALL_FREE_TRACE_RULES.json",
+      "sha256": "86b9dd1703cf60cc708d568f5b329b7fac2145428fa346e7f468709a4f5aba59"
+    },
+    {
+      "file": "ASTRA_BJ_DELTA.json",
+      "sha256": "9da613ebefd630605880c9b03d30ca633de67dce7924b922b711217aba018910"
+    },
+    {
+      "file": "ASTRA_BJ_DRC_COVERAGE.json",
+      "sha256": "c0bd8e0edbf60b34f9decc30ea0ec481d250e6372bb91d5d16b77745c91f7cd4"
+    },
+    {
+      "file": "ASTRA_BJ_INDEPENDENT_REVIEW.json",
+      "sha256": "92a86f3a5db91153871f44f488f75b0f5b4b4c424f166e308e9cb6e028288671"
+    },
+    {
+      "file": "ASTRA_BJ_TRACE_SHAPE_INVENTORY.json",
+      "sha256": "ac66a1bced2d7d6778946e215e5478918a8400c2d771a2bd9a81b48e57ee2107"
+    },
+    {
+      "file": "ASTRA_BI_ANTENNA_GRAPH.json",
+      "sha256": "f2ce49097b0ce857e65a075816b450194e4ac778e29a5f7b6ede1141763c129c"
+    },
+    {
+      "file": "ASTRA_BH_BI_RULE_OPTIONS_DELTA.json",
+      "sha256": "e4b53512440e4ddc29e78d731b1392f457b8c2f0f07423b26e3026b4d272f0d1"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "safe_single_ended_stub_cluster": true,
+  "stubs": [
+    [
+      "TRACK",
+      "Top Layer",
+      "3V3_DIG",
+      "52.6750",
+      "38.3685",
+      "52.6750",
+      "38.6750",
+      "0.4000",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ],
+    [
+      "TRACK",
+      "Top Layer",
+      "3V3_DIG",
+      "52.6750",
+      "37.8250",
+      "52.6750",
+      "38.3685",
+      "0.4000",
+      "INCOMP=False",
+      "INPOLY=False",
+      "KEEPOUT=False"
+    ]
+  ],
+  "external_same_net_contacts": [
+    {
+      "kind": "TRACK",
+      "ref": "",
+      "pin": "",
+      "native_record": [
+        "TRACK",
+        "Top Layer",
+        "3V3_DIG",
+        "52.7219",
+        "38.7281",
+        "54.3250",
+        "37.1250",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "attaches_only_at_terminal_centerline": false,
+      "shares_external_junction_outside_stub_centerline": true
+    },
+    {
+      "kind": "TRACK",
+      "ref": "",
+      "pin": "",
+      "native_record": [
+        "TRACK",
+        "Top Layer",
+        "3V3_DIG",
+        "52.4750",
+        "38.9750",
+        "52.7219",
+        "38.7281",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "attaches_only_at_terminal_centerline": false,
+      "shares_external_junction_outside_stub_centerline": true
+    }
+  ],
+  "external_contact_junction": [
+    52.7219,
+    38.7281
+  ],
+  "junction_remains_without_stubs": true,
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BF.txt",
+      "sha256": "95662332096e888b7d20b3e8bcd4df59af21af8ed7dd5d67409cce30bda61151"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_WIDE_BRIDGE_ADDS.csv",
+      "sha256": "4071ec69f37d419c35ce2f5377a84d9d192c007ab40af2529981319d646ff4c9"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_CS_INSPECT_DELS.csv",
+      "sha256": "a57a22a64436100f5de7cf431484f25aee274c3f2e82e0fdd8eb872af3516b5d"
+    }
+  ],
+  "limits": [
+    "Candidate-only exact deletion CSV emitted; no CAD or router operation.",
+    "All source and proposed copper contacts examined; full after-prune graph still required."
+  ]
+}

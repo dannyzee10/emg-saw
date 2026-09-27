@@ -1,0 +1,7 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,3V3_DIG,Top Layer,44.7750,41.6250,46.2250,41.6250,0.1500,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,WIFI_CHIP_EN,Mid Layer 2,45.9750,34.9750,48.6045,34.9750,0.2000,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,WIFI_CHIP_EN,Mid Layer 2,44.8750,36.0750,45.9750,34.9750,0.2000,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,WIFI_UART_TX,Mid Layer 2,48.6045,41.9250,48.9019,41.9250,0.1500,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,WIFI_UART_TX,Mid Layer 2,48.9019,41.9250,49.2250,41.9250,0.1500,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,3V3_DIG,Mid Layer 4,51.0250,33.6750,51.0250,37.0750,0.1500,,,bounded cleanup of four newly reported BG antenna branches,0

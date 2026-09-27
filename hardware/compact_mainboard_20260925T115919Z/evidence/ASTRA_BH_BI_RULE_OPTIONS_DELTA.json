@@ -1,0 +1,792 @@
+{
+  "passed": false,
+  "errors": [
+    "Other saved stream changed: Pads6/Data",
+    "Other saved stream changed: Regions6/Data",
+    "Other saved stream changed: ShapeBasedRegions6/Data",
+    "Other saved stream changed: Texts/Data",
+    "Other saved stream changed: Texts6/Data",
+    "Other saved stream changed: Vias6/Data"
+  ],
+  "checks": {
+    "Rules6/Data": {
+      "passed": true,
+      "record_count": 147,
+      "changes": [
+        {
+          "rule": "VIA_STD_060_030",
+          "field": "MINWIDTH",
+          "before": "23.622mil",
+          "after": "17.7165mil"
+        },
+        {
+          "rule": "VIA_STD_060_030",
+          "field": "MINHOLEWIDTH",
+          "before": "11.811mil",
+          "after": "7.874mil"
+        }
+      ],
+      "all_other_rule_bytes_preserved": true
+    },
+    "Design Rule Checker Options6/Data": {
+      "passed": true,
+      "added": [
+        9,
+        11
+      ],
+      "removed": [],
+      "all_other_option_bytes_preserved": true
+    }
+  },
+  "before": {
+    "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BH_BEFORE_BI_20260927\\EMG_MainBoard_Layout.PcbDoc",
+    "sha256": "01e72cb0222f4f824c61f66a0a262fb08bdabdfc21d32b90e91cd4a4f28fd1e1",
+    "size": 9467392
+  },
+  "after": {
+    "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BI_BEFORE_BJ_20260927\\EMG_MainBoard_Layout.PcbDoc",
+    "sha256": "368ac3f5802f522e992d59b28ce9e63624be7260affbe8cebf1a7dc4df8c33d3",
+    "size": 9449472
+  },
+  "identical_stream_count": 150,
+  "changed_streams": [
+    {
+      "stream": "Board6/Data",
+      "before_sha256": "e4f52c7ad71dba44ce9db150daee56bd506292304b5701184d8393b032bbc2f6",
+      "after_sha256": "3df3e951c43bd75d4a29c7a17e53b2df3e82aa00a62531400a55399e866ef264",
+      "parameters": [
+        {
+          "key": "TIME",
+          "before": [
+            "10:52:07 PM"
+          ],
+          "after": [
+            "11:01:39 PM"
+          ],
+          "group": "save_or_view_metadata"
+        },
+        {
+          "key": "VP.HX",
+          "before": [
+            "21915770"
+          ],
+          "after": [
+            "163183264"
+          ],
+          "group": "save_or_view_metadata"
+        },
+        {
+          "key": "VP.HY",
+          "before": [
+            "18813941\r"
+          ],
+          "after": [
+            "118890672\r"
+          ],
+          "group": "save_or_view_metadata"
+        },
+        {
+          "key": "VP.LX",
+          "before": [
+            "15722522"
+          ],
+          "after": [
+            "0"
+          ],
+          "group": "save_or_view_metadata"
+        },
+        {
+          "key": "VP.LY",
+          "before": [
+            "14301718"
+          ],
+          "after": [
+            "0"
+          ],
+          "group": "save_or_view_metadata"
+        }
+      ],
+      "classification": "save_or_view_metadata"
+    },
+    {
+      "stream": "Design Rule Checker Options6/Data",
+      "before_sha256": "b055f9134a6f0b9924fa663ef7782dead30e7c8ef1f34055f9aee6dec9e03651",
+      "after_sha256": "1672f62eaa58086c29c5aa2cf4f74cbc6cb9c875b5a9d94752ccdfd7da3f9fb8",
+      "classification": "authorized_change_verified"
+    },
+    {
+      "stream": "FileHeaderSix",
+      "before_sha256": "db9eaa5215f844494a42b45f3baa44d5c337ae93ba2bf18c4ded5607d118b6e1",
+      "after_sha256": "df6cafcba13a25466b121a814938219b2f2512dcfc6a400e74bf6ff6cd54bd14",
+      "classification": "save_metadata"
+    },
+    {
+      "stream": "Pads6/Data",
+      "before_sha256": "5137888493338de8587564f1ecbad757edf50072fbcae688a7089e7be24af892",
+      "after_sha256": "fd554a980e7242381a1d0888c44bda5a5aef435fcc6605b327a4855668e59716",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 214180,
+        "after_size": 214180,
+        "same_length": true,
+        "changed_byte_count": 12963,
+        "distinct_byte_transition_count": 1016,
+        "most_common_byte_transitions": {
+          "0a->ba": 100,
+          "de->2c": 100,
+          "7b->5e": 100,
+          "6a->c6": 100,
+          "9c->34": 100,
+          "8e->fa": 100,
+          "40->49": 100,
+          "4e->47": 100,
+          "ac->a8": 100,
+          "87->b3": 100,
+          "1c->08": 100,
+          "e4->98": 100,
+          "36->f2": 100,
+          "2f->6f": 100,
+          "f7->c8": 100,
+          "e0->c1": 100
+        },
+        "first_changed_offsets": [
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391
+        ],
+        "first_contexts": [
+          {
+            "offset": 156,
+            "before": "e54c000000380eb8b7583f",
+            "after": "e54c0000001a4259fde317"
+          },
+          {
+            "offset": 157,
+            "before": "4c000000380eb8b7583f4b",
+            "after": "4c0000001a4259fde317ff"
+          },
+          {
+            "offset": 158,
+            "before": "000000380eb8b7583f4b4f",
+            "after": "0000001a4259fde317ff43"
+          },
+          {
+            "offset": 159,
+            "before": "0000380eb8b7583f4b4f93",
+            "after": "00001a4259fde317ff43a8"
+          },
+          {
+            "offset": 160,
+            "before": "00380eb8b7583f4b4f9342",
+            "after": "001a4259fde317ff43a8d1"
+          },
+          {
+            "offset": 161,
+            "before": "380eb8b7583f4b4f9342cd",
+            "after": "1a4259fde317ff43a8d121"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "unresolved": "Unfamiliar binary record framing"
+      }
+    },
+    {
+      "stream": "Regions6/Data",
+      "before_sha256": "ebbca15cdcb6a3933c25a0a78e76ca66d45041d8c08030334cd7d1ad30d11fdd",
+      "after_sha256": "9cb2ab5490a33d6518a2f0b90b4f2761d6398278ce046aaa5042cd5102c1c1a8",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 420959,
+        "after_size": 420959,
+        "same_length": true,
+        "changed_byte_count": 234086,
+        "distinct_byte_transition_count": 33939,
+        "most_common_byte_transitions": {
+          "41->00": 9693,
+          "00->41": 8386,
+          "00->c0": 1243,
+          "00->80": 1213,
+          "80->00": 1205,
+          "70->00": 1199,
+          "40->00": 1196,
+          "00->40": 1194,
+          "c0->00": 1182,
+          "60->00": 1167,
+          "00->60": 873,
+          "00->70": 792,
+          "20->00": 791,
+          "40->41": 785,
+          "e0->00": 762,
+          "a0->00": 729
+        },
+        "first_changed_offsets": [
+          1,
+          2,
+          5,
+          7,
+          10,
+          11,
+          23,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52
+        ],
+        "first_contexts": [
+          {
+            "offset": 1,
+            "before": "0be7000000380c",
+            "after": "0b4f020000020c"
+          },
+          {
+            "offset": 2,
+            "before": "0be7000000380c02",
+            "after": "0b4f020000020c00"
+          },
+          {
+            "offset": 5,
+            "before": "0be7000000380c02ffffff",
+            "after": "0b4f020000020c00ffff00"
+          },
+          {
+            "offset": 7,
+            "before": "000000380c02ffffffffff",
+            "after": "020000020c00ffff0000ff"
+          },
+          {
+            "offset": 10,
+            "before": "380c02ffffffffffffffff",
+            "after": "020c00ffff0000ffffffff"
+          },
+          {
+            "offset": 11,
+            "before": "0c02ffffffffffffffffff",
+            "after": "0c00ffff0000ffffffffff"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "before_count": 124,
+        "after_count": 124,
+        "entire_record_multisets_identical": false,
+        "unchanged_entire_records": 9,
+        "note": "Observed tag/length framing exactly exhausts Data and agrees with Header; no binary field semantics inferred."
+      }
+    },
+    {
+      "stream": "Rules6/Data",
+      "before_sha256": "195482691ae58ab5a424c5115d3cb3e96eacbfc46e2771e44129af6b186fa295",
+      "after_sha256": "67c752166f3edd0bb3b55257d647c9260c6efb24edd6be982609547e4ae27660",
+      "classification": "authorized_change_verified"
+    },
+    {
+      "stream": "ShapeBasedRegions6/Data",
+      "before_sha256": "32bab1feec13ca55f2292c699b5ad8a2cbdecb52a8f2284c4f26d7c12adb7dd8",
+      "after_sha256": "59c3a4a98b2cad6ef8a383705e0fb2021a9d6f662ccaf9c37362e5a3ac483aac",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 670344,
+        "after_size": 670344,
+        "same_length": true,
+        "changed_byte_count": 230351,
+        "distinct_byte_transition_count": 27144,
+        "most_common_byte_transitions": {
+          "41->00": 11854,
+          "00->41": 11660,
+          "01->00": 2860,
+          "00->01": 2735,
+          "80->00": 1659,
+          "40->00": 1647,
+          "00->40": 1631,
+          "00->80": 1614,
+          "c0->00": 1527,
+          "00->c0": 1492,
+          "60->00": 1389,
+          "00->60": 1259,
+          "20->00": 1071,
+          "70->00": 1056,
+          "e0->00": 1049,
+          "00->70": 1038
+        },
+        "first_changed_offsets": [
+          1,
+          2,
+          5,
+          7,
+          10,
+          11,
+          23,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52
+        ],
+        "first_contexts": [
+          {
+            "offset": 1,
+            "before": "0b60010000380c",
+            "after": "0bc0040000020c"
+          },
+          {
+            "offset": 2,
+            "before": "0b60010000380c02",
+            "after": "0bc0040000020c00"
+          },
+          {
+            "offset": 5,
+            "before": "0b60010000380c02ffffff",
+            "after": "0bc0040000020c00ffff00"
+          },
+          {
+            "offset": 7,
+            "before": "010000380c02ffffffffff",
+            "after": "040000020c00ffff0000ff"
+          },
+          {
+            "offset": 10,
+            "before": "380c02ffffffffffffffff",
+            "after": "020c00ffff0000ffffffff"
+          },
+          {
+            "offset": 11,
+            "before": "0c02ffffffffffffffffff",
+            "after": "0c00ffff0000ffffffffff"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "before_count": 124,
+        "after_count": 124,
+        "entire_record_multisets_identical": false,
+        "unchanged_entire_records": 122,
+        "note": "Observed tag/length framing exactly exhausts Data and agrees with Header; no binary field semantics inferred."
+      }
+    },
+    {
+      "stream": "TDisconnectedSubnetsViolation/Data",
+      "before_sha256": "447bd6aa2ce6f6a2610678e8b0e27a66234b0c3aa4d580ff34cb63c0bd9fe6fc",
+      "after_sha256": null,
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "TDisconnectedSubnetsViolation/Header",
+      "before_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+      "after_sha256": null,
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "TRoutingViaStyleViolation/Data",
+      "before_sha256": "52ea67cd2b4401a60212e90b17d439cd1ae0b0428a1e4c84d0e2b15affe2540c",
+      "after_sha256": null,
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "TRoutingViaStyleViolation/Header",
+      "before_sha256": "7aa8ca4a02506da9133d8f889678b76f716ce45d02e22fdb7b70a15e56a0eff8",
+      "after_sha256": null,
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "TSilkToSilkClearanceViolation/Data",
+      "before_sha256": "431b09c5f2477b2f946aaa9ecb586410c941c21522cd1adda1c40c0e23c390b9",
+      "after_sha256": "a38f41032bbadf9a79907f73f09f35d04bca44317c281bf6b604e8ed8ce5d6cf",
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "TSilkToSilkClearanceViolation/Header",
+      "before_sha256": "3fbf037cb6bcb6178ea17e51a1766736cbcb464e4bc6991e76c0961d313c9446",
+      "after_sha256": "4f2d892d6af406902c1aae6e58a78b2e6865fd4b782fc96b12de65d3bf3dc03e",
+      "classification": "cached_drc_results"
+    },
+    {
+      "stream": "Texts/Data",
+      "before_sha256": "614d0e61a59e25453d08b650f578447758690710cc387ef48fc7e107d8b4482e",
+      "after_sha256": "ccc7316f679597f7399c8d1bddd329378d7c9c8a61fbc05d1ba38bb700b17ea6",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 964,
+        "after_size": 964,
+        "same_length": true,
+        "changed_byte_count": 294,
+        "distinct_byte_transition_count": 49,
+        "most_common_byte_transitions": {
+          "00->80": 54,
+          "47->80": 33,
+          "c6->80": 33,
+          "ee->80": 9,
+          "f1->80": 6,
+          "c6->00": 6,
+          "06->80": 6,
+          "c0->80": 6,
+          "ec->80": 6,
+          "12->80": 6,
+          "e6->80": 6,
+          "eb->80": 6,
+          "ed->80": 6,
+          "ef->80": 6,
+          "47->c9": 3,
+          "00->ff": 3
+        },
+        "first_changed_offsets": [
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "first_contexts": [
+          {
+            "offset": 63,
+            "before": "006c000000f1470064c8c6",
+            "after": "006c00000080c9ff800d00"
+          },
+          {
+            "offset": 64,
+            "before": "6c000000f1470064c8c600",
+            "after": "6c00000080c9ff800d0000"
+          },
+          {
+            "offset": 65,
+            "before": "000000f1470064c8c60086",
+            "after": "00000080c9ff800d000047"
+          },
+          {
+            "offset": 66,
+            "before": "0000f1470064c8c60086ef",
+            "after": "000080c9ff800d00004702"
+          },
+          {
+            "offset": 67,
+            "before": "00f1470064c8c60086ef47",
+            "after": "0080c9ff800d000047029a"
+          },
+          {
+            "offset": 68,
+            "before": "f1470064c8c60086ef4700",
+            "after": "80c9ff800d000047029a01"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "unresolved": "Unfamiliar binary record framing"
+      }
+    },
+    {
+      "stream": "Texts6/Data",
+      "before_sha256": "f8316f8fdeb9b35034f4a1f431b6be0d31f69eb80a1b8521c5b9c5206b0c9b7f",
+      "after_sha256": "8f2da3c308962952856e2a603d88226c15dd06bb6bc212d8886b24c8469e4ffe",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 159676,
+        "after_size": 159676,
+        "same_length": true,
+        "changed_byte_count": 23987,
+        "distinct_byte_transition_count": 30,
+        "most_common_byte_transitions": {
+          "00->01": 5265,
+          "00->47": 1755,
+          "00->02": 1170,
+          "00->07": 1170,
+          "00->94": 1170,
+          "00->fb": 585,
+          "00->09": 585,
+          "00->d8": 585,
+          "00->67": 585,
+          "00->a0": 585,
+          "00->bc": 585,
+          "00->ad": 585,
+          "00->03": 585,
+          "00->e3": 585,
+          "00->80": 585,
+          "00->8f": 585
+        },
+        "first_changed_offsets": [
+          69,
+          70,
+          71,
+          72,
+          77,
+          78,
+          79,
+          80,
+          81,
+          85,
+          93,
+          94,
+          95,
+          96,
+          101,
+          102,
+          103,
+          104,
+          105,
+          109,
+          181,
+          189,
+          190,
+          191
+        ],
+        "first_contexts": [
+          {
+            "offset": 69,
+            "before": "0000000000000000000000",
+            "after": "0000000000fb09d8670000"
+          },
+          {
+            "offset": 70,
+            "before": "0000000000000000000000",
+            "after": "00000000fb09d867000000"
+          },
+          {
+            "offset": 71,
+            "before": "0000000000000000000000",
+            "after": "000000fb09d86700000000"
+          },
+          {
+            "offset": 72,
+            "before": "0000000000000000000000",
+            "after": "0000fb09d86700000000a0"
+          },
+          {
+            "offset": 77,
+            "before": "0000000000000000000000",
+            "after": "6700000000a0bcad470100"
+          },
+          {
+            "offset": 78,
+            "before": "0000000000000000000000",
+            "after": "00000000a0bcad47010000"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "unresolved": "Unfamiliar binary record framing"
+      }
+    },
+    {
+      "stream": "Vias6/Data",
+      "before_sha256": "a8880003008bfa9fba430fc761db01ad169635732b5aff46ef442c59d0b115cb",
+      "after_sha256": "9c23e9fae2bf42d6473bc7bb5ffad64aee1f292f0b38e60015f09d50e0d175a3",
+      "classification": "unexpected",
+      "byte_diagnostic": {
+        "before_size": 153220,
+        "after_size": 153220,
+        "same_length": true,
+        "changed_byte_count": 7550,
+        "distinct_byte_transition_count": 49,
+        "most_common_byte_transitions": {
+          "6e->fe": 327,
+          "76->b8": 327,
+          "66->b4": 327,
+          "b5->e4": 327,
+          "79->09": 327,
+          "92->94": 327,
+          "a9->f4": 327,
+          "4f->46": 327,
+          "9f->95": 327,
+          "8a->49": 327,
+          "b8->05": 327,
+          "7c->eb": 327,
+          "75->2d": 327,
+          "f2->7e": 327,
+          "98->cf": 327,
+          "a9->41": 327
+        },
+        "first_changed_offsets": [
+          66,
+          67,
+          68,
+          69,
+          72,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          392,
+          393,
+          394
+        ],
+        "first_contexts": [
+          {
+            "offset": 66,
+            "before": "fdff000000000000000001",
+            "after": "fdff000000010101010001"
+          },
+          {
+            "offset": 67,
+            "before": "ff00000000000000000100",
+            "after": "ff00000001010101000101"
+          },
+          {
+            "offset": 68,
+            "before": "0000000000000000010000",
+            "after": "0000000101010100010100"
+          },
+          {
+            "offset": 69,
+            "before": "0000000000000001000000",
+            "after": "0000010101010001010000"
+          },
+          {
+            "offset": 72,
+            "before": "0000000001000000000000",
+            "after": "0101010001010000000000"
+          },
+          {
+            "offset": 264,
+            "before": "2a00000000046483d9cc23",
+            "after": "2a00000000d340dd4fe237"
+          }
+        ],
+        "note": "Diagnostic only; unknown binary differences remain failures."
+      },
+      "binary_record_diagnostic": {
+        "before_count": 470,
+        "after_count": 470,
+        "entire_record_multisets_identical": false,
+        "unchanged_entire_records": 0,
+        "note": "Observed tag/length framing exactly exhausts Data and agrees with Header; no binary field semantics inferred."
+      }
+    }
+  ],
+  "reported_board_save_view_changes": [
+    {
+      "key": "TIME",
+      "before": [
+        "10:52:07 PM"
+      ],
+      "after": [
+        "11:01:39 PM"
+      ],
+      "group": "save_or_view_metadata"
+    },
+    {
+      "key": "VP.HX",
+      "before": [
+        "21915770"
+      ],
+      "after": [
+        "163183264"
+      ],
+      "group": "save_or_view_metadata"
+    },
+    {
+      "key": "VP.HY",
+      "before": [
+        "18813941\r"
+      ],
+      "after": [
+        "118890672\r"
+      ],
+      "group": "save_or_view_metadata"
+    },
+    {
+      "key": "VP.LX",
+      "before": [
+        "15722522"
+      ],
+      "after": [
+        "0"
+      ],
+      "group": "save_or_view_metadata"
+    },
+    {
+      "key": "VP.LY",
+      "before": [
+        "14301718"
+      ],
+      "after": [
+        "0"
+      ],
+      "group": "save_or_view_metadata"
+    }
+  ],
+  "limitations": [
+    "OLE allocation/directory timestamps are container metadata and are not compared.",
+    "Listed save/view metadata and cached DRC result streams may change; every other stream is exact."
+  ]
+}

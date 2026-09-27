@@ -1,0 +1,7 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.925,12.425,22.375,12.875,0.2,,,observed user edit; read-only evidence,0
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.925,12.375,21.925,12.425,0.2,,,observed user edit; read-only evidence,0
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.875,12.325,21.925,12.375,0.2,,,observed user edit; read-only evidence,0
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.875,12.175,21.875,12.325,0.2,,,observed user edit; read-only evidence,0
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.625,11.925,21.875,12.175,0.2,,,observed user edit; read-only evidence,0
+TRACK,USER_EDIT_PRESERVE,NetJ_FPC1_8,Top Layer,21.625,11.125,21.625,11.925,0.2,,,observed user edit; read-only evidence,0

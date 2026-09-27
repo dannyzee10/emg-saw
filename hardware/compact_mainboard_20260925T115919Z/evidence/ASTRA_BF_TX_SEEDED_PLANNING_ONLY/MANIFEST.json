@@ -1,0 +1,12 @@
+{
+  "native_base": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BF.txt",
+  "native_drc": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\DRC_C2_6L_BF.json",
+  "seed": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BF_TX_LINK_ESCAPE_SEED_ADDS.csv",
+  "seed_rows": 1,
+  "hashes": {
+    "..\\evidence\\GEOMETRY_C2_6L_BF.txt": "95662332096e888b7d20b3e8bcd4df59af21af8ed7dd5d67409cce30bda61151",
+    "..\\evidence\\DRC_C2_6L_BF.json": "5625c2ae355f2e2c284cd33caaf0292440c815770e42ca58fef52d97ec96d4a5",
+    "..\\evidence\\ASTRA_BF_TX_LINK_ESCAPE_SEED_ADDS.csv": "effabdbbd6035fdefd44292cddebf7068703697590af2a6b766374e0b9883b0b"
+  },
+  "warning": "Derived geometry is not a native export and proves no native connectivity."
+}

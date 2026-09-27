@@ -1,0 +1,1167 @@
+{
+  "geometry": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BC.txt",
+  "geometry_sha256": "7afcf5e3e86fe1a8c6d5fd4aab6b830ec2243fd092893c1e03ec01080b516e88",
+  "net": "Vc_1",
+  "layer": "Mid Layer 4",
+  "paths": [
+    {
+      "name": "initial",
+      "width_mm": 0.2,
+      "length_mm": 15.648275605729689,
+      "model_clear": true,
+      "segments": [
+        {
+          "from": [
+            15.9,
+            11.2
+          ],
+          "to": [
+            16.175,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4546139,
+              "required_mm": 0.2,
+              "margin_mm": 0.2546139,
+              "source": [
+                "VIA",
+                "GND",
+                "15.1000",
+                "10.9000",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                14.799999999999999,
+                10.6,
+                15.4,
+                11.200000000000001
+              ]
+            },
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.6701228,
+              "required_mm": 0.13,
+              "margin_mm": 0.5401228,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            16.175,
+            10.925
+          ],
+          "to": [
+            20.5,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.36,
+              "required_mm": 0.13,
+              "margin_mm": 0.23,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "NetJ_FPC1_8",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6028492,
+              "required_mm": 0.2,
+              "margin_mm": 0.4028492,
+              "source": [
+                "VIA",
+                "NetJ_FPC1_8",
+                "21.5000",
+                "10.8500",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                21.2,
+                10.549999999999999,
+                21.8,
+                11.15
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            20.5,
+            10.925
+          ],
+          "to": [
+            21.55,
+            11.975
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.1492551,
+              "required_mm": 0.13,
+              "margin_mm": 0.0192551,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.2772422,
+              "required_mm": 0.2,
+              "margin_mm": 0.0772422,
+              "source": [
+                "VIA",
+                "GND",
+                "21.2550",
+                "12.5000",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                21.029999999999998,
+                12.275,
+                21.48,
+                12.725
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            21.55,
+            11.975
+          ],
+          "to": [
+            22.5,
+            11.975
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.2772422,
+              "required_mm": 0.25,
+              "margin_mm": 0.0272422,
+              "source": [
+                "VIA",
+                "GND",
+                "21.2550",
+                "12.5000",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                21.029999999999998,
+                12.275,
+                21.48,
+                12.725
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.5278595,
+              "required_mm": 0.25,
+              "margin_mm": 0.2778595,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            22.5,
+            11.975
+          ],
+          "to": [
+            24.725,
+            14.2
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.5278595,
+              "required_mm": 0.25,
+              "margin_mm": 0.2778595,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6429825,
+              "required_mm": 0.25,
+              "margin_mm": 0.3929825,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.2250",
+                "13.2250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                24.925,
+                12.924999999999999,
+                25.525000000000002,
+                13.525
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            14.2
+          ],
+          "to": [
+            24.725,
+            18.775
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "Vb_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.35,
+              "required_mm": 0.25,
+              "margin_mm": 0.1,
+              "source": [
+                "VIA",
+                "Vb_1",
+                "23.9750",
+                "15.0250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                23.675,
+                14.725,
+                24.275000000000002,
+                15.325000000000001
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6,
+              "required_mm": 0.25,
+              "margin_mm": 0.35,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.7250",
+                "17.5750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                25.425,
+                17.275,
+                26.025000000000002,
+                17.875
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            18.775
+          ],
+          "to": [
+            24.175,
+            19.325
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "INA_OUT_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.7566656,
+              "required_mm": 0.25,
+              "margin_mm": 0.5066656,
+              "source": [
+                "VIA",
+                "INA_OUT_1",
+                "23.5750",
+                "20.2250",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                23.349999999999998,
+                20.0,
+                23.8,
+                20.450000000000003
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "initial",
+      "width_mm": 0.15,
+      "length_mm": 15.648275605729689,
+      "model_clear": true,
+      "segments": [
+        {
+          "from": [
+            15.9,
+            11.2
+          ],
+          "to": [
+            16.175,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4796005,
+              "required_mm": 0.2,
+              "margin_mm": 0.2796005,
+              "source": [
+                "VIA",
+                "GND",
+                "15.1000",
+                "10.9000",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                14.799999999999999,
+                10.6,
+                15.4,
+                11.200000000000001
+              ]
+            },
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.6950927,
+              "required_mm": 0.13,
+              "margin_mm": 0.5650927,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            16.175,
+            10.925
+          ],
+          "to": [
+            20.5,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.385,
+              "required_mm": 0.13,
+              "margin_mm": 0.255,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "NetJ_FPC1_8",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6278431,
+              "required_mm": 0.2,
+              "margin_mm": 0.4278431,
+              "source": [
+                "VIA",
+                "NetJ_FPC1_8",
+                "21.5000",
+                "10.8500",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                21.2,
+                10.549999999999999,
+                21.8,
+                11.15
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            20.5,
+            10.925
+          ],
+          "to": [
+            21.55,
+            11.975
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.1742551,
+              "required_mm": 0.13,
+              "margin_mm": 0.0442551,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.302238,
+              "required_mm": 0.2,
+              "margin_mm": 0.102238,
+              "source": [
+                "VIA",
+                "GND",
+                "21.2550",
+                "12.5000",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                21.029999999999998,
+                12.275,
+                21.48,
+                12.725
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            21.55,
+            11.975
+          ],
+          "to": [
+            22.5,
+            11.975
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.302238,
+              "required_mm": 0.25,
+              "margin_mm": 0.052238,
+              "source": [
+                "VIA",
+                "GND",
+                "21.2550",
+                "12.5000",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                21.029999999999998,
+                12.275,
+                21.48,
+                12.725
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.5528316,
+              "required_mm": 0.25,
+              "margin_mm": 0.3028316,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            22.5,
+            11.975
+          ],
+          "to": [
+            24.725,
+            14.2
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.5528316,
+              "required_mm": 0.25,
+              "margin_mm": 0.3028316,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6679825,
+              "required_mm": 0.25,
+              "margin_mm": 0.4179825,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.2250",
+                "13.2250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                24.925,
+                12.924999999999999,
+                25.525000000000002,
+                13.525
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            14.2
+          ],
+          "to": [
+            24.725,
+            18.775
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "Vb_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.375,
+              "required_mm": 0.25,
+              "margin_mm": 0.125,
+              "source": [
+                "VIA",
+                "Vb_1",
+                "23.9750",
+                "15.0250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                23.675,
+                14.725,
+                24.275000000000002,
+                15.325000000000001
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.625,
+              "required_mm": 0.25,
+              "margin_mm": 0.375,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.7250",
+                "17.5750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                25.425,
+                17.275,
+                26.025000000000002,
+                17.875
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            18.775
+          ],
+          "to": [
+            24.175,
+            19.325
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "INA_OUT_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.7816656,
+              "required_mm": 0.25,
+              "margin_mm": 0.5316656,
+              "source": [
+                "VIA",
+                "INA_OUT_1",
+                "23.5750",
+                "20.2250",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                23.349999999999998,
+                20.0,
+                23.8,
+                20.450000000000003
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "larger_keepout_gap",
+      "width_mm": 0.2,
+      "length_mm": 15.706854249492379,
+      "model_clear": true,
+      "segments": [
+        {
+          "from": [
+            15.9,
+            11.2
+          ],
+          "to": [
+            16.175,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4546139,
+              "required_mm": 0.2,
+              "margin_mm": 0.2546139,
+              "source": [
+                "VIA",
+                "GND",
+                "15.1000",
+                "10.9000",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                14.799999999999999,
+                10.6,
+                15.4,
+                11.200000000000001
+              ]
+            },
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.6701228,
+              "required_mm": 0.13,
+              "margin_mm": 0.5401228,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            16.175,
+            10.925
+          ],
+          "to": [
+            20.675,
+            10.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "NetJ_FPC1_8",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4285393,
+              "required_mm": 0.2,
+              "margin_mm": 0.2285393,
+              "source": [
+                "VIA",
+                "NetJ_FPC1_8",
+                "21.5000",
+                "10.8500",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                21.2,
+                10.549999999999999,
+                21.8,
+                11.15
+              ]
+            },
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.36,
+              "required_mm": 0.13,
+              "margin_mm": 0.23,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            20.675,
+            10.925
+          ],
+          "to": [
+            21.675,
+            11.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "NetJ_FPC1_8",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.2363961,
+              "required_mm": 0.2,
+              "margin_mm": 0.0363961,
+              "source": [
+                "VIA",
+                "NetJ_FPC1_8",
+                "21.5000",
+                "10.8500",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                21.2,
+                10.549999999999999,
+                21.8,
+                11.15
+              ]
+            },
+            {
+              "kind": "KEEPOUT",
+              "net": "",
+              "ref": "J_FPC1",
+              "pin": "keepout",
+              "distance_mm": 0.2729988,
+              "required_mm": 0.13,
+              "margin_mm": 0.1429988,
+              "source": null,
+              "bounds_mm": [
+                16.7925,
+                11.385,
+                20.6075,
+                13.015
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            21.675,
+            11.925
+          ],
+          "to": [
+            22.55,
+            11.925
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "GND",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.3872088,
+              "required_mm": 0.25,
+              "margin_mm": 0.1372088,
+              "source": [
+                "VIA",
+                "GND",
+                "21.2550",
+                "12.5000",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                21.029999999999998,
+                12.275,
+                21.48,
+                12.725
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4678444,
+              "required_mm": 0.25,
+              "margin_mm": 0.2178444,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            22.55,
+            11.925
+          ],
+          "to": [
+            24.725,
+            14.1
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "DRL_LIMITED",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.4678444,
+              "required_mm": 0.25,
+              "margin_mm": 0.2178444,
+              "source": [
+                "VIA",
+                "DRL_LIMITED",
+                "22.7250",
+                "11.0750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                22.425,
+                10.774999999999999,
+                23.025000000000002,
+                11.375
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.5722718,
+              "required_mm": 0.25,
+              "margin_mm": 0.3222718,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.2250",
+                "13.2250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                24.925,
+                12.924999999999999,
+                25.525000000000002,
+                13.525
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            14.1
+          ],
+          "to": [
+            24.725,
+            18.775
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "Vb_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.35,
+              "required_mm": 0.25,
+              "margin_mm": 0.1,
+              "source": [
+                "VIA",
+                "Vb_1",
+                "23.9750",
+                "15.0250",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                23.675,
+                14.725,
+                24.275000000000002,
+                15.325000000000001
+              ]
+            },
+            {
+              "kind": "VIA",
+              "net": "DRL_SUM",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.6,
+              "required_mm": 0.25,
+              "margin_mm": 0.35,
+              "source": [
+                "VIA",
+                "DRL_SUM",
+                "25.7250",
+                "17.5750",
+                "0.6000",
+                "0.3000"
+              ],
+              "bounds_mm": [
+                25.425,
+                17.275,
+                26.025000000000002,
+                17.875
+              ]
+            }
+          ]
+        },
+        {
+          "from": [
+            24.725,
+            18.775
+          ],
+          "to": [
+            24.175,
+            19.325
+          ],
+          "edge_ok": true,
+          "blockers": [],
+          "nearest": [
+            {
+              "kind": "VIA",
+              "net": "INA_OUT_1",
+              "ref": "",
+              "pin": "",
+              "distance_mm": 0.7566656,
+              "required_mm": 0.25,
+              "margin_mm": 0.5066656,
+              "source": [
+                "VIA",
+                "INA_OUT_1",
+                "23.5750",
+                "20.2250",
+                "0.4500",
+                "0.2000"
+              ],
+              "bounds_mm": [
+                23.349999999999998,
+                20.0,
+                23.8,
+                20.450000000000003
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only fixed hand-specified segments checked, no routing search or CAD changes.",
+    "No existing copper, component, via, pad or keepout is removed or moved.",
+    "J_FPC1 escape-zone clearance is modeled; native DRC must confirm exact applicability.",
+    "Existing polygon copper is incompletely represented and needs native repour/DRC.",
+    "No routing-width-rule approval or actual PCB connectivity result is asserted."
+  ]
+}

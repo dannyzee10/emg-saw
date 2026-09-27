@@ -1,0 +1,9 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,3V3_DIG,Mid Layer 4,51.025,33.675,51.025,35.025,0.15,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BG_ANTENNA_BOUNDED,3V3_DIG,Mid Layer 4,51.025,35.025,50.725,35.025,0.15,,,bounded cleanup of four newly reported BG antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,VBUS,Top Layer,15.775,37.675,15.875,37.675,0.15,,,bounded cleanup of ten native BH antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,VBUS,Top Layer,15.875,37.675,16.3,37.25,0.15,,,bounded cleanup of ten native BH antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,NetD_CC_ESD_2,Mid Layer 2,22.125,41.225,22.175,41.275,0.15,,,bounded cleanup of ten native BH antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,NetD_CC_ESD_2,Mid Layer 2,22.175,41.275,22.825,41.275,0.15,,,bounded cleanup of ten native BH antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,VSYS,Mid Layer 4,27.525,40.175,27.575,40.125,0.15,,,bounded cleanup of ten native BH antenna branches,0
+TRACK,ASTRA_BH_LEGACY_JUNCTION,VSYS,Mid Layer 4,27.575,40.125,32.825,40.125,0.15,,,bounded cleanup of ten native BH antenna branches,0

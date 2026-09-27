@@ -1,0 +1,4 @@
+"kind","group","net","layer","x1","y1","x2","y2","w","d","h","conn","relax"
+"VIA","ASTRA_BF_CS_ESCAPE VIP","WIFI_SPI_CS","Multi Layer","58.38","25.838","","","","0.45","0.20","R_SPI_CS.1 escape seed","0"
+"TRACK","ASTRA_BF_CS_ESCAPE VIP","WIFI_SPI_CS","Top Layer","58.48","25.538","58.38","25.838","0.18","","","R_SPI_CS.1 escape seed","0"
+"VIA","ASTRA_BF_TX_LINK_ESCAPE VIP","MCU_WIFI_UART_TX","Multi Layer","44.026","40.805","","","","0.45","0.2","R_WIFI_UART_TX_LINK.2 escape seed","0"

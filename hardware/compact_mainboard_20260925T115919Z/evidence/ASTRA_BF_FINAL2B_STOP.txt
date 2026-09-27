@@ -1,0 +1,1 @@
+﻿Stopped owned offline planner after broad CS failure and TX cascade expanded to21 victim groups. No native CAD was open; no candidate applied. Prefer proven CS escape seed and bounded UART reroute.

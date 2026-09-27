@@ -1,0 +1,573 @@
+{
+  "passed": true,
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BH.txt",
+      "sha256": "d3a094dc5ccabc24051e295fdc2878f064df6e4070c22d0490e69668f5c1689b"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BG_ANTENNA_BOUNDED_ADDS.csv",
+      "sha256": "54d84a39bf8dfac75d959581925d5aa02dd7005a5331aca9ce14f2a7ea39f220"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BG_ANTENNA_BOUNDED_DELS.csv",
+      "sha256": "2d140642d85f05f1a0e33ed777a5128975ebeb5475d8a9fb07543e2c8ae00062"
+    }
+  ],
+  "deletion_count": 19,
+  "addition_count": 8,
+  "graphs": {
+    "3V3_DIG": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "NetD_CC_ESD_1": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "NetD_CC_ESD_2": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "VBUS": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "VSYS": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "WIFI_CHIP_EN": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    },
+    "WIFI_UART_TX": {
+      "retained_connections_preserved": true,
+      "split_group_count": 0,
+      "detached_additions": [],
+      "before_components": 1,
+      "after_components": 1
+    }
+  },
+  "power_thresholds": {
+    "3V3_DIG": [
+      {
+        "threshold_mm": 0.15,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.2,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.3,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.4,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      }
+    ],
+    "VBUS": [
+      {
+        "threshold_mm": 0.15,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.4,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      }
+    ],
+    "VSYS": [
+      {
+        "threshold_mm": 0.15,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.3,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      },
+      {
+        "threshold_mm": 0.4,
+        "retained_connections_preserved": true,
+        "split_group_count": 0
+      }
+    ]
+  },
+  "bridge_contacts": [
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 4",
+        "3V3_DIG",
+        "51.0250",
+        "33.6750",
+        "51.0250",
+        "37.0750",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "3V3_DIG",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 4",
+          "3V3_DIG",
+          "51.0250",
+          "33.6750",
+          "53.4250",
+          "31.2750",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.017767650890254345,
+      "after_area_mm2": 0.017767650890254345,
+      "lost_old_area_mm2": 0.0,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 4",
+        "3V3_DIG",
+        "51.0250",
+        "33.6750",
+        "51.0250",
+        "37.0750",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "3V3_DIG",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 4",
+          "3V3_DIG",
+          "50.1750",
+          "35.5750",
+          "50.9750",
+          "34.7750",
+          "0.4000",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.06314810950078928,
+      "after_area_mm2": 0.10557246587283581,
+      "lost_old_area_mm2": 0.0,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Top Layer",
+        "VBUS",
+        "14.8250",
+        "38.7250",
+        "16.3000",
+        "37.2500",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "VBUS",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Top Layer",
+          "VBUS",
+          "16.3750",
+          "37.1750",
+          "16.5750",
+          "37.1750",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.0031965426296601982,
+      "after_area_mm2": 0.0031965426296602126,
+      "lost_old_area_mm2": 0.0,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Top Layer",
+        "VBUS",
+        "14.8250",
+        "38.7250",
+        "16.3000",
+        "37.2500",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "VBUS",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Top Layer",
+          "VBUS",
+          "14.8000",
+          "36.7000",
+          "15.7750",
+          "37.6750",
+          "0.4000",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.054274117717336576,
+      "after_area_mm2": 0.04022743413959839,
+      "lost_old_area_mm2": 0.022708341186459344,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Top Layer",
+        "VBUS",
+        "14.8250",
+        "38.7250",
+        "16.3000",
+        "37.2500",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "VBUS",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Top Layer",
+          "VBUS",
+          "16.3000",
+          "37.2500",
+          "16.3750",
+          "37.1750",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.017643085259320818,
+      "after_area_mm2": 0.017643085259320825,
+      "lost_old_area_mm2": 7.581368585240845e-18,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 2",
+        "NetD_CC_ESD_2",
+        "21.9750",
+        "41.2750",
+        "22.8250",
+        "41.2750",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "NetD_CC_ESD_2",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 2",
+          "NetD_CC_ESD_2",
+          "22.1250",
+          "41.2250",
+          "22.9250",
+          "40.4250",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.014230954597688755,
+      "after_area_mm2": 0.019482313944490716,
+      "lost_old_area_mm2": 2.784422402634695e-17,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 2",
+        "NetD_CC_ESD_2",
+        "21.9750",
+        "41.2750",
+        "22.8250",
+        "41.2750",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "NetD_CC_ESD_2",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 2",
+          "NetD_CC_ESD_2",
+          "22.8250",
+          "41.2750",
+          "23.3250",
+          "41.7750",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.017767650890254314,
+      "after_area_mm2": 0.017767650890254314,
+      "lost_old_area_mm2": 0.0,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 4",
+        "VSYS",
+        "26.4750",
+        "40.1250",
+        "32.8250",
+        "40.1250",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "VSYS",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 4",
+          "VSYS",
+          "32.8250",
+          "40.1250",
+          "33.5250",
+          "39.4250",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.017767650890254345,
+      "after_area_mm2": 0.017767650890254356,
+      "lost_old_area_mm2": 0.0,
+      "contact_preserved": true
+    },
+    {
+      "bridge": [
+        "TRACK",
+        "Mid Layer 4",
+        "VSYS",
+        "26.4750",
+        "40.1250",
+        "32.8250",
+        "40.1250",
+        "0.1500",
+        "INCOMP=False",
+        "INPOLY=False",
+        "KEEPOUT=False"
+      ],
+      "retained_contact": {
+        "kind": "TRACK",
+        "net": "VSYS",
+        "ref": "",
+        "pin": "",
+        "record": [
+          "TRACK",
+          "Mid Layer 4",
+          "VSYS",
+          "23.0250",
+          "44.6750",
+          "27.5250",
+          "40.1750",
+          "0.1500",
+          "INCOMP=False",
+          "INPOLY=False",
+          "KEEPOUT=False"
+        ]
+      },
+      "before_area_mm2": 0.014230954597688748,
+      "after_area_mm2": 0.01764308525932084,
+      "lost_old_area_mm2": 0.0017331175760417132,
+      "contact_preserved": true
+    }
+  ],
+  "explicit_centerline_junctions": [
+    {
+      "net": "VBUS",
+      "point": [
+        15.775,
+        37.675
+      ],
+      "replacement_width_mm": 0.15,
+      "exact_retained_endpoint_matches": [
+        {
+          "kind": "TRACK",
+          "net": "VBUS",
+          "ref": "",
+          "pin": "",
+          "record": [
+            "TRACK",
+            "Top Layer",
+            "VBUS",
+            "14.8000",
+            "36.7000",
+            "15.7750",
+            "37.6750",
+            "0.4000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "full_endpoint_disk_inside_retained_copper": true
+    },
+    {
+      "net": "NetD_CC_ESD_2",
+      "point": [
+        22.125,
+        41.225
+      ],
+      "replacement_width_mm": 0.15,
+      "exact_retained_endpoint_matches": [
+        {
+          "kind": "TRACK",
+          "net": "NetD_CC_ESD_2",
+          "ref": "",
+          "pin": "",
+          "record": [
+            "TRACK",
+            "Mid Layer 2",
+            "NetD_CC_ESD_2",
+            "22.1250",
+            "41.2250",
+            "22.9250",
+            "40.4250",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "full_endpoint_disk_inside_retained_copper": true
+    },
+    {
+      "net": "VSYS",
+      "point": [
+        27.525,
+        40.175
+      ],
+      "replacement_width_mm": 0.15,
+      "exact_retained_endpoint_matches": [
+        {
+          "kind": "TRACK",
+          "net": "VSYS",
+          "ref": "",
+          "pin": "",
+          "record": [
+            "TRACK",
+            "Mid Layer 4",
+            "VSYS",
+            "23.0250",
+            "44.6750",
+            "27.5250",
+            "40.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "full_endpoint_disk_inside_retained_copper": true
+    }
+  ],
+  "blockers": [],
+  "edge_clear": true,
+  "keepout": false,
+  "L5_reserved_clear": true,
+  "all_pads_and_vias_retained": true,
+  "VREF_untouched": true,
+  "NetJ_FPC1_8_untouched": true,
+  "seconds": 0.5,
+  "limits": [
+    "Only ten reported BH antenna branches and their bounded terminal chains.",
+    "Some legacy bridge contact area changes, with full-width centerline endpoint connections replacing offset contacts.",
+    "No CAD/native/router operation; full polygon topology remains outside exported-copper model.",
+    "Native DRC must establish antenna count after apply."
+  ]
+}

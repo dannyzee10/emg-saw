@@ -1,0 +1,2 @@
+kind,group,net,layer,x1,y1,x2,y2,w,d,h,conn,relax
+VIA,ASTRA_BF_CS_GND_STITCH,GND,Multi Layer,58.88,24.638,,,,0.6,0.3,CS reference-plane stitch; verify native pours,0

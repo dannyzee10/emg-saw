@@ -2,11 +2,12 @@
 margins; stop at the first accepted result.  usage:
 python neg_sweep.py STATE TAG "RNG:MARGIN,RNG:MARGIN,..." KEY=VALUE ...   (KEY=VALUEs as for run_repair.py)
 Each try writes evidence/<TAG>_<n>_ADDS/DELS.csv and its own log; the winner is copied to <TAG>_ADDS/DELS.csv."""
-import shutil, subprocess, sys
+import os, pathlib, shutil, subprocess, sys
 
 state, tag, tries = sys.argv[1], sys.argv[2], sys.argv[3].split(',')
 extra = sys.argv[4:]
-log_dir = r'C:/Users/PMLS/.claude/jobs/5c1210bf/tmp'
+log_dir = os.environ.get('NEG_LOG_DIR', str(pathlib.Path(__file__).resolve().parent.parent / 'evidence' / 'routing_logs'))
+pathlib.Path(log_dir).mkdir(parents=True, exist_ok=True)
 for n, tr in enumerate(tries):
     rng, marg = tr.split(':')
     t = f'{tag}_{n}'

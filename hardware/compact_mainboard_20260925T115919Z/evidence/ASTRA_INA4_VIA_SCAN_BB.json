@@ -1,0 +1,5978 @@
+{
+  "geometry": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BB.txt",
+  "geometry_sha256": "d6b3e7e6b9644da4ffd6cd6dee91448fbbaa359a87abf68fbe75ce70816e0373",
+  "net": "NetINA4_3",
+  "pin": [
+    "PAD",
+    "INA4",
+    "3",
+    "NetINA4_3",
+    "Top Layer",
+    "51.4251",
+    "15.8500",
+    "51.2001",
+    "15.2500",
+    "51.6501",
+    "16.4500",
+    "HOLE=0.0000",
+    "ROT=0",
+    "SX=0.3500",
+    "SY=1.1000",
+    "SHAPE=2"
+  ],
+  "candidate_count": 23,
+  "clear_count": 0,
+  "candidates": [
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.3,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": false,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.05,
+          "required_mm": 0.25,
+          "margin_mm": -0.2,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.091295,
+          "required_mm": 0.25,
+          "margin_mm": -0.158705,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "48.0250",
+            "18.1250",
+            "51.0750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.05,
+          "required_mm": 0.25,
+          "margin_mm": -0.2,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4721806,
+          "required_mm": 0.254,
+          "margin_mm": 1.2181806,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 2.0288498,
+          "required_mm": 0.254,
+          "margin_mm": 1.7748498,
+          "source": [
+            "VIA",
+            "GND",
+            "53.4750",
+            "16.1750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.35,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": false,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.1,
+          "required_mm": 0.25,
+          "margin_mm": -0.15,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.120229,
+          "required_mm": 0.25,
+          "margin_mm": -0.129771,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "48.0250",
+            "18.1250",
+            "51.0750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.1,
+          "required_mm": 0.25,
+          "margin_mm": -0.15,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5046155,
+          "required_mm": 0.254,
+          "margin_mm": 1.2506155,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 2.0096978,
+          "required_mm": 0.254,
+          "margin_mm": 1.7556978,
+          "source": [
+            "VIA",
+            "GND",
+            "53.4750",
+            "16.1750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.4,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.15,
+          "required_mm": 0.25,
+          "margin_mm": -0.1,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1528669,
+          "required_mm": 0.25,
+          "margin_mm": -0.0971331,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "48.0250",
+            "18.1250",
+            "51.0750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.15,
+          "required_mm": 0.25,
+          "margin_mm": -0.1,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5378858,
+          "required_mm": 0.254,
+          "margin_mm": 1.2838858,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.970511,
+          "required_mm": 0.254,
+          "margin_mm": 1.716511,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.45,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Va_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.2,
+          "required_mm": 0.25,
+          "margin_mm": -0.05,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "Va_4",
+            "50.7500",
+            "14.9500",
+            "54.1000",
+            "14.9500",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.05,
+          "required_mm": 0.25,
+          "margin_mm": -0.2,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1877231,
+          "required_mm": 0.25,
+          "margin_mm": -0.0622769,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "48.0250",
+            "18.1250",
+            "51.0750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.05,
+          "required_mm": 0.25,
+          "margin_mm": -0.2,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5717303,
+          "required_mm": 0.254,
+          "margin_mm": 1.3177303,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.9251473,
+          "required_mm": 0.254,
+          "margin_mm": 1.6711473,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.5,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1,
+          "required_mm": 0.25,
+          "margin_mm": -0.15,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2230785,
+          "required_mm": 0.25,
+          "margin_mm": -0.0269215,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "48.0250",
+            "18.1250",
+            "51.0750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1,
+          "required_mm": 0.25,
+          "margin_mm": -0.15,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6063241,
+          "required_mm": 0.254,
+          "margin_mm": 1.3523241,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.8799562,
+          "required_mm": 0.254,
+          "margin_mm": 1.6259562,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.55,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.15,
+          "required_mm": 0.25,
+          "margin_mm": -0.1,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.15,
+          "required_mm": 0.25,
+          "margin_mm": -0.1,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6416758,
+          "required_mm": 0.254,
+          "margin_mm": 1.3876758,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.8349644,
+          "required_mm": 0.254,
+          "margin_mm": 1.5809644,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.6,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2,
+          "required_mm": 0.25,
+          "margin_mm": -0.05,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2,
+          "required_mm": 0.25,
+          "margin_mm": -0.05,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6777455,
+          "required_mm": 0.254,
+          "margin_mm": 1.4237455,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7902288,
+          "required_mm": 0.254,
+          "margin_mm": 1.5362288,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.65,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "Vservo_4",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.25,
+          "required_mm": 0.25,
+          "margin_mm": 0.0,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "Vservo_4",
+            "51.0750",
+            "15.0750",
+            "54.9750",
+            "15.0750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7144427,
+          "required_mm": 0.254,
+          "margin_mm": 1.4604427,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7457255,
+          "required_mm": 0.254,
+          "margin_mm": 1.4917255,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.7,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "NetINA4_2",
+          "component": "INA4",
+          "name": "2",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.2502,
+          "required_mm": 0.25,
+          "margin_mm": 0.0002,
+          "source": [
+            "PAD",
+            "INA4",
+            "2",
+            "NetINA4_2",
+            "Top Layer",
+            "50.7749",
+            "15.8500",
+            "50.5499",
+            "15.2500",
+            "50.9999",
+            "16.4500",
+            "HOLE=0.0000",
+            "ROT=0",
+            "SX=0.3500",
+            "SY=1.1000",
+            "SHAPE=2"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7015276,
+          "required_mm": 0.254,
+          "margin_mm": 1.4475276,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7515841,
+          "required_mm": 0.254,
+          "margin_mm": 1.4975841,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.75,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2203055,
+          "required_mm": 0.25,
+          "margin_mm": -0.0296945,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2203055,
+          "required_mm": 0.25,
+          "margin_mm": -0.0296945,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.2203055,
+          "required_mm": 0.25,
+          "margin_mm": -0.0296945,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6576593,
+          "required_mm": 0.254,
+          "margin_mm": 1.4036593,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7892707,
+          "required_mm": 0.254,
+          "margin_mm": 1.5352707,
+          "source": [
+            "VIA",
+            "GND",
+            "50.1000",
+            "14.2000",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.8,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1802539,
+          "required_mm": 0.25,
+          "margin_mm": -0.0697461,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1802539,
+          "required_mm": 0.25,
+          "margin_mm": -0.0697461,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1802539,
+          "required_mm": 0.25,
+          "margin_mm": -0.0697461,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6141194,
+          "required_mm": 0.254,
+          "margin_mm": 1.3601194,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7514787,
+          "required_mm": 0.254,
+          "margin_mm": 1.4974787,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.85,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1423758,
+          "required_mm": 0.25,
+          "margin_mm": -0.1076242,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1423758,
+          "required_mm": 0.25,
+          "margin_mm": -0.1076242,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1423758,
+          "required_mm": 0.25,
+          "margin_mm": -0.1076242,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1423758,
+          "required_mm": 0.25,
+          "margin_mm": -0.1076242,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5709163,
+          "required_mm": 0.254,
+          "margin_mm": 1.3169163,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.7046851,
+          "required_mm": 0.254,
+          "margin_mm": 1.4506851,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.9,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1070347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1429653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1065157,
+          "required_mm": 0.25,
+          "margin_mm": -0.1434843,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1065157,
+          "required_mm": 0.25,
+          "margin_mm": -0.1434843,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.1070347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1429653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5280396,
+          "required_mm": 0.254,
+          "margin_mm": 1.2740396,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6580476,
+          "required_mm": 0.254,
+          "margin_mm": 1.4040476,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 15.95,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0750347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1749653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0711603,
+          "required_mm": 0.25,
+          "margin_mm": -0.1788397,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0711603,
+          "required_mm": 0.25,
+          "margin_mm": -0.1788397,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0750347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1749653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4855292,
+          "required_mm": 0.254,
+          "margin_mm": 1.2315292,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.6115889,
+          "required_mm": 0.254,
+          "margin_mm": 1.3575889,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.0,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0473213,
+          "required_mm": 0.25,
+          "margin_mm": -0.2026787,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.035805,
+          "required_mm": 0.25,
+          "margin_mm": -0.214195,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.035805,
+          "required_mm": 0.25,
+          "margin_mm": -0.214195,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0473213,
+          "required_mm": 0.25,
+          "margin_mm": -0.2026787,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4434227,
+          "required_mm": 0.254,
+          "margin_mm": 1.1894227,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5653485,
+          "required_mm": 0.254,
+          "margin_mm": 1.3113485,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.05,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0249173,
+          "required_mm": 0.25,
+          "margin_mm": -0.2250827,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0004497,
+          "required_mm": 0.25,
+          "margin_mm": -0.2495503,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0004497,
+          "required_mm": 0.25,
+          "margin_mm": -0.2495503,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0249173,
+          "required_mm": 0.25,
+          "margin_mm": -0.2250827,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4018197,
+          "required_mm": 0.254,
+          "margin_mm": 1.1478197,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.5193462,
+          "required_mm": 0.254,
+          "margin_mm": 1.2653462,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.1,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0092571,
+          "required_mm": 0.25,
+          "margin_mm": -0.2407429,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0092571,
+          "required_mm": 0.25,
+          "margin_mm": -0.2407429,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.360767,
+          "required_mm": 0.254,
+          "margin_mm": 1.106767,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4735868,
+          "required_mm": 0.254,
+          "margin_mm": 1.2195868,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.15,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0010268,
+          "required_mm": 0.25,
+          "margin_mm": -0.2489732,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0010268,
+          "required_mm": 0.25,
+          "margin_mm": -0.2489732,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.3202399,
+          "required_mm": 0.254,
+          "margin_mm": 1.0662399,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.4280602,
+          "required_mm": 0.254,
+          "margin_mm": 1.1740602,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.2,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0010268,
+          "required_mm": 0.25,
+          "margin_mm": -0.2489732,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0010268,
+          "required_mm": 0.25,
+          "margin_mm": -0.2489732,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.2802064,
+          "required_mm": 0.254,
+          "margin_mm": 1.0262064,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.3828107,
+          "required_mm": 0.254,
+          "margin_mm": 1.1288107,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.25,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": true,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0092571,
+          "required_mm": 0.25,
+          "margin_mm": -0.2407429,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetCL_4_1",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.2369394,
+          "required_mm": 0.25,
+          "margin_mm": -0.0130606,
+          "source": [
+            "TRACK",
+            "Bottom Layer",
+            "NetCL_4_1",
+            "51.4250",
+            "16.9750",
+            "51.6250",
+            "16.7750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0092571,
+          "required_mm": 0.25,
+          "margin_mm": -0.2407429,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.2407834,
+          "required_mm": 0.254,
+          "margin_mm": 0.9867834,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.3377078,
+          "required_mm": 0.254,
+          "margin_mm": 1.0837078,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.3,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": false,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0249173,
+          "required_mm": 0.25,
+          "margin_mm": -0.2250827,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetCL_4_1",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1903634,
+          "required_mm": 0.25,
+          "margin_mm": -0.0596366,
+          "source": [
+            "TRACK",
+            "Bottom Layer",
+            "NetCL_4_1",
+            "51.4250",
+            "16.9750",
+            "51.6250",
+            "16.7750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0249173,
+          "required_mm": 0.25,
+          "margin_mm": -0.2250827,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.202083,
+          "required_mm": 0.254,
+          "margin_mm": 0.948083,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.2929419,
+          "required_mm": 0.254,
+          "margin_mm": 1.0389419,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.35,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": false,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0473213,
+          "required_mm": 0.25,
+          "margin_mm": -0.2026787,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "3V0_ANA",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 4"
+          ],
+          "distance_mm": 0.2480785,
+          "required_mm": 0.25,
+          "margin_mm": -0.0019215,
+          "source": [
+            "TRACK",
+            "Mid Layer 4",
+            "3V0_ANA",
+            "48.4750",
+            "14.1750",
+            "51.4250",
+            "17.1250",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetCL_4_1",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1448143,
+          "required_mm": 0.25,
+          "margin_mm": -0.1051857,
+          "source": [
+            "TRACK",
+            "Bottom Layer",
+            "NetCL_4_1",
+            "51.4250",
+            "16.9750",
+            "51.6250",
+            "16.7750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetINA4_2",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.2,
+          "required_mm": 0.25,
+          "margin_mm": -0.05,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "NetINA4_2",
+            "51.0250",
+            "16.8750",
+            "53.9750",
+            "16.8750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0473213,
+          "required_mm": 0.25,
+          "margin_mm": -0.2026787,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.1641827,
+          "required_mm": 0.254,
+          "margin_mm": 0.9101827,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.2484979,
+          "required_mm": 0.254,
+          "margin_mm": 0.9944979,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    },
+    {
+      "x_mm": 51.4251,
+      "y_mm": 16.4,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.2,
+      "model_clear": false,
+      "build_ops_same_net_vip_gate": false,
+      "edge_ok": true,
+      "keepout_overlap": false,
+      "pin_copper_overlap": true,
+      "whole_via_inside_pin": false,
+      "hole_inside_pin": false,
+      "blockers": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "PAD",
+          "net": "INA_OUT_4",
+          "component": "CL_4",
+          "name": "2",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1501,
+          "required_mm": 0.25,
+          "margin_mm": -0.0999,
+          "source": [
+            "PAD",
+            "CL_4",
+            "2",
+            "INA_OUT_4",
+            "Bottom Layer",
+            "50.3500",
+            "16.0500",
+            "49.6000",
+            "15.2500",
+            "51.1000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0750347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1749653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "3V0_ANA",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 4"
+          ],
+          "distance_mm": 0.2127231,
+          "required_mm": 0.25,
+          "margin_mm": -0.0372769,
+          "source": [
+            "TRACK",
+            "Mid Layer 4",
+            "3V0_ANA",
+            "48.4750",
+            "14.1750",
+            "51.4250",
+            "17.1250",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetCL_4_1",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.1000731,
+          "required_mm": 0.25,
+          "margin_mm": -0.1499269,
+          "source": [
+            "TRACK",
+            "Bottom Layer",
+            "NetCL_4_1",
+            "51.4250",
+            "16.9750",
+            "51.6250",
+            "16.7750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "NetINA4_2",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Top Layer"
+          ],
+          "distance_mm": 0.15,
+          "required_mm": 0.25,
+          "margin_mm": -0.1,
+          "source": [
+            "TRACK",
+            "Top Layer",
+            "NetINA4_2",
+            "51.0250",
+            "16.8750",
+            "53.9750",
+            "16.8750",
+            "0.2000",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "hole_blockers": [],
+      "nearest_copper": [
+        {
+          "kind": "PAD",
+          "net": "NetCL_4_1",
+          "component": "CL_4",
+          "name": "1",
+          "layers": [
+            "Bottom Layer"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "PAD",
+            "CL_4",
+            "1",
+            "NetCL_4_1",
+            "Bottom Layer",
+            "52.2500",
+            "16.0500",
+            "51.5000",
+            "15.2500",
+            "53.0000",
+            "16.8500",
+            "HOLE=0.0000",
+            "ROT=90",
+            "SX=1.5000",
+            "SY=1.4000",
+            "SHAPE=2"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0,
+          "required_mm": 0.25,
+          "margin_mm": -0.25,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "51.7250",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        },
+        {
+          "kind": "TRACK",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [
+            "Mid Layer 2"
+          ],
+          "distance_mm": 0.0750347,
+          "required_mm": 0.25,
+          "margin_mm": -0.1749653,
+          "source": [
+            "TRACK",
+            "Mid Layer 2",
+            "GND",
+            "51.7250",
+            "16.1750",
+            "53.4750",
+            "16.1750",
+            "0.1500",
+            "INCOMP=False",
+            "INPOLY=False",
+            "KEEPOUT=False"
+          ]
+        }
+      ],
+      "nearest_holes": [
+        {
+          "kind": "HOLE",
+          "net": "GND",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.1270414,
+          "required_mm": 0.254,
+          "margin_mm": 0.8730414,
+          "source": [
+            "VIA",
+            "GND",
+            "50.5250",
+            "17.3750",
+            "0.4500",
+            "0.2000"
+          ]
+        },
+        {
+          "kind": "HOLE",
+          "net": "NetCH_4_2",
+          "component": "",
+          "name": "",
+          "layers": [],
+          "distance_mm": 1.2044895,
+          "required_mm": 0.254,
+          "margin_mm": 0.9504895,
+          "source": [
+            "VIA",
+            "NetCH_4_2",
+            "52.1250",
+            "17.6750",
+            "0.6000",
+            "0.3000"
+          ]
+        }
+      ],
+      "pads_within_vip_gate": [
+        "CL_4.1:NetCL_4_1",
+        "INA4.3:NetINA4_3"
+      ]
+    }
+  ],
+  "limitations": [
+    "No copper is ripped or moved; every modeled existing object stays fixed.",
+    "Poured polygon copper is not fully represented in geom.py; native repour/DRC is still needed.",
+    "This is only a via-site test, not a complete route or a manufacturing release.",
+    "Via annulus extends beyond the 0.35 mm-wide pin; filled/capped treatment must match the order."
+  ]
+}

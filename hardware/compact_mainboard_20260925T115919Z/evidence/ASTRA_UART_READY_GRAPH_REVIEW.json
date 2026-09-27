@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "graphs": {
+    "MCU_SPI_MISO": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "U_MCU1",
+          "pin": "31",
+          "component_after": 0
+        },
+        {
+          "ref": "R_SPI_MISO",
+          "pin": "2",
+          "component_after": 0
+        }
+      ]
+    },
+    "SYS_EN": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_EN",
+          "pin": "2",
+          "component_after": 2
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "1",
+          "component_after": 2
+        },
+        {
+          "ref": "U_EN1",
+          "pin": "6",
+          "component_after": 2
+        },
+        {
+          "ref": "UP2",
+          "pin": "5",
+          "component_after": 2
+        }
+      ]
+    },
+    "VSYS": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "C_UV_BYPASS",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "R_EN1_1",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "R_EN",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "3",
+          "component_after": 61
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "5",
+          "component_after": 61
+        },
+        {
+          "ref": "U_UV1",
+          "pin": "6",
+          "component_after": 61
+        },
+        {
+          "ref": "UP1",
+          "pin": "11",
+          "component_after": 61
+        },
+        {
+          "ref": "UP1",
+          "pin": "10",
+          "component_after": 61
+        },
+        {
+          "ref": "UP2",
+          "pin": "4",
+          "component_after": 61
+        },
+        {
+          "ref": "CUP4_1",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "R_CHG_LED",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "R_EN1_BIAS",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "C_OUT_",
+          "pin": "1",
+          "component_after": 61
+        },
+        {
+          "ref": "FREE",
+          "pin": "TP_VSYS",
+          "component_after": 61
+        }
+      ]
+    },
+    "WIFI_BOOT": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "TP_WIFI_BOOT",
+          "pin": "TP",
+          "component_after": 26
+        },
+        {
+          "ref": "JP_WIFI_BOOT",
+          "pin": "2",
+          "component_after": 26
+        },
+        {
+          "ref": "U_MCU1",
+          "pin": "91",
+          "component_after": 26
+        },
+        {
+          "ref": "R_WIFI_BOOT_PD",
+          "pin": "2",
+          "component_after": 26
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "3",
+          "component_after": 26
+        }
+      ]
+    },
+    "WIFI_UART_RX": {
+      "before_component_count": 2,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_UART_TX_LINK",
+          "pin": "1",
+          "component_after": 2
+        },
+        {
+          "ref": "TP_WIFI_UART_RX",
+          "pin": "TP",
+          "component_after": 2
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "23",
+          "component_after": 2
+        }
+      ],
+      "requested_endpoints_connected_after": true
+    },
+    "WIFI_UART_TX": {
+      "before_component_count": 1,
+      "after_component_count": 1,
+      "all_retained_copper_connections_preserved": true,
+      "split_retained_object_ids": [],
+      "detached_additions": [],
+      "pads": [
+        {
+          "ref": "R_WIFI_UART_RX_LINK",
+          "pin": "1",
+          "component_after": 2
+        },
+        {
+          "ref": "TP_WIFI_UART_TX",
+          "pin": "TP",
+          "component_after": 2
+        },
+        {
+          "ref": "U_WIFI1",
+          "pin": "22",
+          "component_after": 2
+        }
+      ]
+    }
+  },
+  "original_vsys_via_retained": true,
+  "all_new_vsys_tracks_at_least_040_mm": true,
+  "deletions_matched": 15,
+  "additions": 19,
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BD.txt",
+      "sha256": "671c0d1a333d114710a38123b79a52d3861b2896c3f295f89648fbf7e0f138aa"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_UART_READY_ADDS.csv",
+      "sha256": "c7b477faddf61930d3ad69b405e07d7586ac566008e0ec35306107432edd3f56"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_UART_READY_DELS.csv",
+      "sha256": "6925603bc68568017f007421d7d2e48cce7ebaab8f994ec38e81b4d7c5278434"
+    }
+  ],
+  "limits": [
+    "No router or native CAD operation; only six-net copper connectivity graphs.",
+    "Uses native exported copper shapes with 0.00015 mm readback tolerance.",
+    "Pours are not completely represented; native DRC and readback remain required.",
+    "Retained copper overlap proves connectivity, not constant effective junction width."
+  ]
+}

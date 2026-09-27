@@ -1,3 +1,14 @@
+# CURRENT: BJ — routing complete and all-trace checks, 27 September 2026
+
+- Native DRC: zero opens/antennae/shorts/clearance/width/layer/via errors. Remaining246 =157silk-mask+84silk-silk+5overlay-outline.
+- Current savedPCB hash `0acc1e8eefea1bba24c8ec74a84c7dddd757a6bd520cf3d82f972191e28b585c`. Altium left open on this saved PCB; inspect live state before any new writer.
+- All2281freecoppertracks and470vias pass5032independent width/layer/via checks. Via rule min.45/.20; preferred/max.60/.30. Native batch kinds9/11 are now enabled; previous coverage gap closed.
+- User edit retained. TP_GND_DIG +.20mmX; no schematic/project changes. Remaining raw-serialization and manufacturing limitations are documented, not waived.
+- Authoritative summary: ASTRA_ROUTING_COMPLETE_BJ_20260927.md; finalnativebase GEOMETRY_C2_6L_BJ.txt / DRC_C2_6L_BJ.json. All approved adds/deletes named in report. Do not apply old candidates again.
+- Next bounded work: overlay finishing. No current unrouted task remains. No fabrication release.
+
+---
+
 # C2 6-layer routing completion — resume note (keep this file current)
 
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
@@ -6,6 +17,60 @@
 ## HANDOFF 21:xx (27 Sep): work paused by the user and handed to Astra -> read `HANDOFF_ASTRA_2026-09-27.md` first
 - State AZ in Altium (9 unrouted); MERGE_I_ADDS_OK/DELS_OK ready (-> 6); 3V0_ANA U1-4 solved by seeded negotiation
   (NEG_C9). NetINA4_3 sweep (NEG_B8) stopped after tries 0-1; Vc_1, Wi-Fi x4 still open. Commands in the handoff.
+
+## CURRENT — Astra BF, 27 Sep2026, native DRC completed21:22:37local
+
+- **MCU_WIFI_UART_RX routed; two opens remain:**`MCU_WIFI_UART_TX`,`WIFI_SPI_CS`. See `ASTRA_MCU_RX_RESOLUTION_BF.md`.
+- Applied ONLY `ASTRA_MCU_RX_REINFORCED_ADDS/DELS.csv`, `OPS_BF_UART_RX_REINFORCED.txt`:33tracks+5vias added,16tracks removed; no component/pin/rule changes. POWER_READY candidate failed clearance and was NOT applied.
+- Neighboring3V3_DIG/I2C_SDA/MCU_BOOT0/VSYS routes preserved and adjusted. All added power tracks.40mm, with direct .40mm sourcevia→CUP4_1 feed; original pin escape retained. Target .20mm withtwo.60/.30vias; otherthreevias belong toSDA/BOOT0.
+- Native save/reopen and exactdelta PASS:2236free tracks/460vias;231components/812pads/1629fixed records unchanged. EightSchDocs+PrjPcb unchanged. Net/rule/stack/outline streams preserved; opaque body/pad/text differences still documented.
+- Fresh DRC254total:2unrouted,6antennae,157silk-mask,84silk-silk,5outline. Only MCU_WIFI_UART_RX diagnostic removed; no new violations. ViaStylebatchcoverage remains open; not fabrication-ready.
+- Nextbaseline:`GEOMETRY_C2_6L_BF.txt`,`DRC_C2_6L_BF.json`. Backup:`ASTRA_BF_BEFORE_20260927/`; savedhash:`ASTRA_BF_AFTER_HASH.json`. AltiumPID14888 open at checkpoint, no router/script remains active. Verify live state before writing.
+- `run_repair.PLANS` still not extended automatically. Include only accepted final CSVs intentionally as EXTRA_PLANS; protect CH4/Vc_1 boundedL5 routes and completedUART routes. Do not use rejectedcandidates.
+
+## Previous — Astra BE, 27 Sep 2026, native DRC completed20:59:18local
+
+- **WIFI_UART_RX routed; three opens remain.** See `ASTRA_UART_RESOLUTION_BE.md` and independent BEreview.
+- Final applied plan ONLY:`ASTRA_UART_READY_ADDS.csv` / `ASTRA_UART_READY_DELS.csv`; `OPS_BE_UART_READY.txt`.18tracks+1via added,15tracks removed. One .45/.20 VIP atU_WIFI1.23(42.275,42.325). No parts/pins/rules changed.
+- Neighboring tracks adjusted on MCU_SPI_MISO,SYS_EN,WIFI_UART_TX,WIFI_BOOT,VSYS; allsix nets graph-verified and native-verified. OriginalVSYSvia(43.125,41.625) retained; every addedVSYStrack .40mm. **Reject earlier raw ASTRA_BD_WIFI_LOCAL/OPS_BE_UART candidate**: long thin VSYSdetour was NOT applied.
+- Fresh native DRC255total:3unrouted,6antennae,157silk-mask,84silk-silk,5outline. Only WIFI_UART_RXopen removed; every other diagnostic unchanged. Zero reported shorts/clearance/width/component-clearance.
+- Remaining:`WIFI_SPI_CS`,`MCU_WIFI_UART_RX`,`MCU_WIFI_UART_TX`. Nextbaseline:`GEOMETRY_C2_6L_BE.txt`,`DRC_C2_6L_BE.json`.
+- Native save/reopen and exactcopperdelta PASS:2219free tracks/455vias;231components/812pads/1629fixed records unchanged. EightSchDocs+PrjPcb preserved. Rules/nets/stack/outline unchanged; rawbody/pad/text/cache differences remain documented. ViaStylebatchcoverage stillopen.
+- Backup:`ASTRA_BE_BEFORE_20260927/`; afterhash:`ASTRA_BE_AFTER_HASH.json`. AltiumPID19436 open at checkpoint, no routing script remains active. Verify live PID/state before anotherwrite.
+- `run_repair.PLANS` not automatically extended: include ONLY final READY files as EXTRA_PLANS if intending future rip-up; protect CH4/Vc_1 boundedL5routes. Do not include rejectedrawUARTplan.
+
+## Previous — Astra BD, 27 Sep 2026, native DRC completed 20:25:32 local
+
+- **Vc_1 solved in native Altium; four unrouted remain.** See `ASTRA_VC1_RESOLUTION_BD.md`.
+- Added seven .20mm L5/Mid Layer4 tracks between existing Vc_1 vias(15.9,11.2) and(24.175,19.325). No component/via moves, no deletions, no rules changed. Actual socket keepout avoided. Limited L5 exception; preserve L2/L4 GND.
+- Applied `OPS_BD_VC1.txt`; native save/reopen completed. Exact copper delta PASS:2216free tracks/454vias; all231packages/812pads/1629fixed records unchanged. EightSchDocs+PrjPcb hash-preserved.
+- Fresh native DRC256total:4unrouted,6antennae,157silk-mask,84silk-silk,5outline; zero reported copper-clearance/short/width/component-clearance. Only Vc_1 violation removed; all other details unchanged.
+- Remaining:`WIFI_SPI_CS`,`WIFI_UART_RX`,`MCU_WIFI_UART_TX`,`MCU_WIFI_UART_RX`. Baseline for next work:`GEOMETRY_C2_6L_BD.txt`,`DRC_C2_6L_BD.json`.
+- Before backup:`ASTRA_BD_BEFORE_20260927/`; saved hash:`ASTRA_BD_AFTER_HASH.json`. Strict stream comparison retains opaque Pads6/Texts and cached violation changes; via-style batch coverage remains open. No full-board DRC/fabrication approval.
+- Vc_1 and CH4 new copper remain protected from routine rip-up unless their CSVs are explicitly included. No native process was left running by the scripts; Altium remains open with the saved board.
+
+## Previous — Astra BC, 27 Sep 2026, native DRC completed 20:10:52 local
+
+- **Channel 4 solved in native Altium. Current saved state is BC, five unrouted.** Details: `ASTRA_CHANNEL4_RESOLUTION_BC.md`.
+- INA4 unchanged. CL_4 Bottom moved x51.3 to48.2mm, y16.05/rotation180 unchanged. Short NetINA4_3 route uses L5 within x51.2–57.6/y15.1–17.35; existing native routing-layer rule allows it. No rule change or GND split.
+- Applied `OPS_BC_CH4.txt`, exact `ASTRA_CH4_READY_ADDS.csv` / `ASTRA_CH4_READY_DELS.csv`. Native save/reopen and explicit translation-aware geometry delta PASS. Free geometry:2209tracks/454vias (writer net-assigned track count2199).
+- Native DRC257total:5unrouted,6antennae,157silk-mask,84silk-silk,5outline. Zero reported copper-clearance,short,width,component-clearance violations. ViaStyle batch coverage remains OPEN; do not claim full DRC clean.
+- Remaining opens:Vc_1,WIFI_SPI_CS,WIFI_UART_RX,MCU_WIFI_UART_TX,MCU_WIFI_UART_RX. Use `GEOMETRY_C2_6L_BC.txt` / `DRC_C2_6L_BC.json` for future work.
+- Backup BB:`ASTRA_BC_BEFORE_20260927/`; after hash:`ASTRA_BC_AFTER_HASH.json`. Eight SchDocs+PrjPcb unchanged. Strict raw-stream checker still reports component/pad/body/text changes; see limitations in resolution report.
+- New BC copper is not yet added to `run_repair.PLANS`; include `EXTRA_PLANS=ASTRA_CH4_READY_ADDS` if intentionally allowing it to be ripped. Prefer protecting the solved input route during unrelated repairs. Keep bounded L5 exception rather than globally permitting new L5 analog routes.
+
+## Astra update — 27 Sep 2026, 19:10 local (actual native timestamps)
+- State BA is now saved/reopened after MERGE_I. Native DRC reports **8 unrouted**, not the handoff's predicted6.
+  No copper shorts/clearance violations;8antennae,159silk-mask,84silk-silk,5outline violations remain.
+- Newly open VREF_A is the pruned path between vias(14.525,20.625) and(15.125,23.025). Do not repeat that prune.
+  GND remains between Bottom track(53.475,21.175)-(53.475,22.275) andTop track(54.075,19.775)-(54.075,20.375).
+  Other six remain NetINA4_3,Vc_1,WIFI_UART_RX,MCU_WIFI_UART_TX,MCU_WIFI_UART_RX,WIFI_SPI_CS.
+- Backup/source hashes: `ASTRA_BA_20260927/`. Fresh nativeAZ export exactly matched handoff geometry before writing.
+- `ASTRA_BA_DELTA.json` verifies every requested copper delta:2189free tracks/451vias, unchanged nativePAD/COMP/fixed
+  geometry. NativeapplyPHASE1_OK/RULES=0,SAVED,AFTER_REOPEN,COMPLETE. Rules,nets,classes,stack/outline/origin frozen.
+  OLEstructural checker separately flags native serialization changes in pad/body/text streams; not silently masked.
+- `run_repair.PLANS` includesMERGE_I. `neg_sweep` logs now defaultinsideworktree `evidence/routing_logs/` ratherthan
+  the previous session's external Claude job folder. Oneheavyprocessatatime; Altium mustclosecleanly before routing.
 
 ## Update 19:30 (27 Sep) - on top of the 17:50 state below
 - Wins on AZ (not written yet, exact-checked together as MERGE_H: 177 add / 132 del rows, 0 problems):
@@ -302,3 +367,16 @@
 ## Remaining after routing
 Pours (`OPS_C2_6L_POURS.txt`: L5 GND fill + L1 Top GND), final DRC, STACK=6 audit, docs (C2_COMPACT_AUDIT.md,
 NEXT_AGENT_CHECKPOINT.md), refresh.ps1 / commit / push, final report with `result:` line.
+# Astra update — 27 September 2026, state BB
+
+Authoritative saved PCB remains `C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc` in branch `pcb-routing-0925`.
+
+- Applied `ASTRA_REP_BA1_ADDS_OK.csv` / `_DELS_OK.csv` after exact clearance check: 47 additions, 26 deletions, zero precheck problems. This restores the GND and VREF_A connections left open after MERGE_I.
+- Native save/reopen: `ASTRA_APPLY_BB.txt`. Fresh DRC: `DRC_C2_6L_BB.txt.html` / `.json`: **6 unrouted, 6 antennae, 159 silk/mask, 84 silk/silk, 5 outline violations**. No reported shorts, copper-clearance, width or component-clearance violations. Batch Via Style is NOT enabled yet; do not call the full rule set clean.
+- Remaining nets: NetINA4_3, Vc_1, WIFI_SPI_CS, WIFI_UART_RX, MCU_WIFI_UART_TX, MCU_WIFI_UART_RX.
+- `ASTRA_BB_DELTA.json`: PASS; actual 2,208 free tracks and 453 vias, all requested copper changes matched, exported pads/component geometry preserved.
+- `ASTRA_BB_STRUCTURE.json`: rules/nets/components/stack/outline invariant checks pass. Whole protected-stream byte comparison fails on native model/pad/text serialization streams, as in BA. Retain this limitation; do not relabel it an unconditional byte-preservation PASS.
+- Backup before BB: `ASTRA_BB_BEFORE_20260927/`. Original AZ backup: `ASTRA_BA_20260927/`.
+- Native clean-close check `ASTRA_CLEAN_CLOSE_BB.txt`: all documents saved, `UNSAVED_COUNT=0`. Task-owned Altium PID7056 closed normally before the next heavy router.
+- Running next: single `ASTRA_NEG_BB1` channel-4 routing search, seed23/margin0.01, at most40 iterations; output only, PCB unchanged until checked/applied. Logs under `evidence/routing_logs/`.
+- User requested JLC minimum verification for existing via sizes. Current JLC capability page confirms preferred0.20mm hole, diameter>=0.45mm avoids its stated small-via surcharge category. Plan: align saved via minimums to0.45/0.20mm, keep preferred/max0.60/0.30mm and existing clearances. Script prepared but not yet executed. See `ASTRA_VIA_RULE_REVIEW.md`; no verified native batch-selection setter is established yet.

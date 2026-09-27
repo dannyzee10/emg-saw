@@ -1,0 +1,272 @@
+{
+  "both_center_links_clear": true,
+  "checks": [
+    {
+      "layer": "Mid Layer 4",
+      "start": [
+        44.026,
+        40.805
+      ],
+      "end": [
+        43.825,
+        40.675
+      ],
+      "width": 0.15,
+      "passed": true,
+      "blockers": [],
+      "nearest_other_copper": [
+        {
+          "net": "WIFI_UART_RX",
+          "kind": "VIA",
+          "ref": "",
+          "pin": "",
+          "gap": 0.2958954919970735,
+          "required": 0.2
+        },
+        {
+          "net": "VSYS",
+          "kind": "VIA",
+          "ref": "",
+          "pin": "",
+          "gap": 0.8801662777090824,
+          "required": 0.25
+        },
+        {
+          "net": "WIFI_BOOT",
+          "kind": "TRACK",
+          "ref": "",
+          "pin": "",
+          "gap": 1.500144345936919,
+          "required": 0.2
+        }
+      ],
+      "original_via_to_endpoint_distance": 0.23937627284257074
+    },
+    {
+      "layer": "Mid Layer 2",
+      "start": [
+        56.08,
+        44.3
+      ],
+      "end": [
+        56.175,
+        44.125
+      ],
+      "width": 0.15,
+      "passed": true,
+      "blockers": [],
+      "nearest_other_copper": [
+        {
+          "net": "MCU_BOOT0",
+          "kind": "VIA",
+          "ref": "",
+          "pin": "",
+          "gap": 0.5086515578620509,
+          "required": 0.2
+        },
+        {
+          "net": "MCU_BOOT0",
+          "kind": "TRACK",
+          "ref": "",
+          "pin": "",
+          "gap": 0.680001569227187,
+          "required": 0.2
+        },
+        {
+          "net": "MCU_BOOT0",
+          "kind": "TRACK",
+          "ref": "",
+          "pin": "",
+          "gap": 0.6947429100866374,
+          "required": 0.2
+        }
+      ],
+      "original_via_to_endpoint_distance": 0.19912307751739572
+    }
+  ],
+  "return_via_distances": [
+    {
+      "signal_via": [
+        44.026,
+        40.805
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            45.9239,
+            42.2151
+          ],
+          "distance": 2.3644040306174405,
+          "diameter": 0.45,
+          "hole": 0.2
+        },
+        {
+          "xy": [
+            47.2119,
+            39.5077
+          ],
+          "distance": 3.4399049550823317,
+          "diameter": 0.6,
+          "hole": 0.3
+        }
+      ]
+    },
+    {
+      "signal_via": [
+        56.08,
+        44.3
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            57.5759,
+            44.941
+          ],
+          "distance": 1.6274513233888144,
+          "diameter": 0.6,
+          "hole": 0.3
+        },
+        {
+          "xy": [
+            54.58,
+            45.06
+          ],
+          "distance": 1.6815469068687938,
+          "diameter": 0.45,
+          "hole": 0.2
+        }
+      ]
+    },
+    {
+      "signal_via": [
+        41.225,
+        37.975
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            41.2905,
+            36.1265
+          ],
+          "distance": 1.8496601039109875,
+          "diameter": 0.6,
+          "hole": 0.3
+        },
+        {
+          "xy": [
+            38.91,
+            38.5
+          ],
+          "distance": 2.3737838991786977,
+          "diameter": 0.6,
+          "hole": 0.3
+        }
+      ]
+    },
+    {
+      "signal_via": [
+        53.725,
+        34.575
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            51.5017,
+            32.1186
+          ],
+          "distance": 3.3131501399725334,
+          "diameter": 0.6,
+          "hole": 0.3
+        },
+        {
+          "xy": [
+            51.9765,
+            31.7566
+          ],
+          "distance": 3.3167198871776953,
+          "diameter": 0.6,
+          "hole": 0.3
+        }
+      ]
+    },
+    {
+      "signal_via": [
+        62.125,
+        39.225
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            62.7112,
+            36.4217
+          ],
+          "distance": 2.863934588987674,
+          "diameter": 0.6,
+          "hole": 0.3
+        },
+        {
+          "xy": [
+            64.425,
+            41.225
+          ],
+          "distance": 3.047950130825632,
+          "diameter": 0.6,
+          "hole": 0.3
+        }
+      ]
+    },
+    {
+      "signal_via": [
+        58.425,
+        40.475
+      ],
+      "nearest_retained_ground_vias": [
+        {
+          "xy": [
+            55.7439,
+            39.6778
+          ],
+          "distance": 2.797110124753763,
+          "diameter": 0.6,
+          "hole": 0.3
+        },
+        {
+          "xy": [
+            58.9404,
+            37.288
+          ],
+          "distance": 3.2284061330631917,
+          "diameter": 0.6,
+          "hole": 0.3
+        }
+      ]
+    }
+  ],
+  "candidate_only_tx_net": true,
+  "candidate_signal_layers": [
+    "Bottom Layer",
+    "Mid Layer 2",
+    "Mid Layer 4",
+    "Top Layer"
+  ],
+  "candidate_track_widths": [
+    0.15,
+    0.2
+  ],
+  "output_if_clear": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BGM_TX_CENTERED_ADDS.csv",
+  "inputs": [
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\GEOMETRY_C2_6L_BGM.txt",
+      "sha256": "98bc299ee8f9b5d85d78f9f71b458fb649597d03f8c21d4541c2c7d32cc9f207"
+    },
+    {
+      "path": "C:\\Users\\PMLS\\Desktop\\emg-saw\\.claude\\worktrees\\pcb-routing-0925\\hardware\\compact_mainboard_20260925T115919Z\\evidence\\ASTRA_BGM_TX_LAST_WITH_SEED_ADDS.csv",
+      "sha256": "5e20a102c0252371ff86a1e80af8f43db287c0df7551ca18cb66d867c13c126e"
+    }
+  ],
+  "limits": [
+    "Checks only the two optional additions; root must rerun combined exact and graph checks.",
+    "Ground-via proximity does not establish poured copper attachment or signal integrity.",
+    "No native operation, full router, deletion, or CAD edit."
+  ]
+}
