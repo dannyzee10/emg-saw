@@ -3,6 +3,24 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
+## State at 13:20 (27 Sep) - SUPERSEDES the older state notes below (the plan below still applies)
+- REP_AR was KILLED by the system for low memory (2nd time) - it had no gains yet (UP1 + ch4 regions rejected).
+  Harness rule: do not restart killed jobs without the user's go-ahead -> asked the user. Edge uses ~0.6 GB; the user can
+  also start Claude Code with CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1.
+- UP1 pins 6/7 (EN1_BIAS + USB_PGOOD_N) hand escape attempted (R_EN1_BIAS moved to (14.22,44.55) rot 270, plan
+  evidence/UP1_ESCAPE_PLAN.csv): FAILS by 0.03-0.07 mm - SH3 is a rectangle (corner 13.30,43.22) and C_BAT pad 2
+  (x >= 14.18 up to y 42.73) pinch the two escapes. Board file RESTORED to 9bbd96c (git checkout of the PcbDoc).
+  Real fix needs C_BAT relocated (or a 0.4/0.2 via = JLC extra cost -> rejected).
+- Board on disk = state AQ = commit 9bbd96c, 18 unrouted.
+
+## State at 12:50 (27 Sep)
+- C2 = state AQ, committed 9bbd96c (pushed): 18 unrouted = REP_AQ +4 then 5 links opened on purpose by the JLC fixes
+  (UP1-8 GND, C_MCU_BULK GND + 3V3_DIG, J_FPC1 pin-7 GND, MCU_SWCLK). JLC geometry clean: edge 0.5, pad-hole >= 0.45,
+  via-to-track >= 0.2 (geom.required gives vias 0.2 even in BK13 zones; geom.hole_gap 0.45 for pad holes).
+- Running: REP_AR on AQ (plane mode, taller UP1 box incl. R_EN1_BIAS, ch4, U1-right, VOUT_2, ADC_EMG5), log tmp/rep_ar.log.
+- Do NOT prune the DRL_SUM antenna (26.475,14.775-15.575): part of the open DRL_SUM link.
+- After each write: run fab_check.py (JLC) as well as DRC.
+
 ## Plan agreed with the user (13:xx 27 Sep) - do in this order after the current round is written
 1. Write REP_AQ (+2 so far) together with: C_MCU_BULK (67.83,43.90,90) -> (67.55,43.60,90) (was 0.169 mm from the board
    corner, JLC >= 0.2; rip RIP_CBULK.csv incl. its stitch via) and removal of the S0:GND stitch via (15.4865,42.7668)
