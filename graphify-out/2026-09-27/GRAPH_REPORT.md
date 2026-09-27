@@ -1,16 +1,16 @@
 # Graph Report - pcb-routing-0925  (2026-09-27)
 
 ## Corpus Check
-- 585 files · ~3,385,074 words
+- 599 files · ~3,496,916 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4142 nodes · 7621 edges · 468 communities (249 shown, 103 thin omitted)
+- 4235 nodes · 7832 edges · 479 communities (255 shown, 103 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `aee37505`
+- Built from commit: `261e3b18`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -367,6 +367,12 @@
 - ._prompt_save_recording
 - AcquisitionModel
 - gai_073926.pas
+- apj_083031.pas
+- apl_094611.pas
+- prj_083356.pas
+- gaj_083031.pas
+- gak_083357.pas
+- gal_094611.pas
 
 ## God Nodes (most connected - your core abstractions)
 1. `EmgScope` - 85 edges
@@ -402,7 +408,7 @@
 - **Extraction schema rules** — _claude_skills_graphify_references_extraction_spec_subagent, _claude_skills_graphify_references_extraction_spec_confidence, _claude_skills_graphify_references_extraction_spec_confidence_score, _claude_skills_graphify_references_extraction_spec_node_id_format, _claude_skills_graphify_references_extraction_spec_semantic_similarity, _claude_skills_graphify_references_extraction_spec_hyperedges [INFERRED 0.85]
 - **Query/answer flow** — _claude_skills_graphify_references_query_query, _claude_skills_graphify_references_query_path, _claude_skills_graphify_references_query_explain, _claude_skills_graphify_references_query_expansion, _claude_skills_graphify_references_query_save_result, _claude_skills_graphify_references_query_reflect [INFERRED 0.85]
 
-## Communities (468 total, 103 thin omitted)
+## Communities (479 total, 103 thin omitted)
 
 ### Community 0 - "EmgScope"
 Cohesion: 0.06
@@ -1185,8 +1191,8 @@ Cohesion: 0.26
 Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
 
 ### Community 353 - "C2 6-layer routing completion — resume note (keep this file current)"
-Cohesion: 0.12
-Nodes (15): C2 6-layer routing completion — resume note (keep this file current), How to run things (work/), Remaining after routing, State at 01:40 (27 Sep), State at 02:55 (27 Sep), State at 03:45 (27 Sep), State at 05:10 (27 Sep), State at 05:45 (27 Sep) (+7 more)
+Cohesion: 0.11
+Nodes (17): C2 6-layer routing completion — resume note (keep this file current), How to run things (work/), Remaining after routing, State at 01:40 (27 Sep), State at 02:55 (27 Sep), State at 03:45 (27 Sep), State at 05:10 (27 Sep), State at 05:45 (27 Sep) (+9 more)
 
 ### Community 354 - "g6g_171149.pas"
 Cohesion: 0.80
@@ -1400,16 +1406,40 @@ Nodes (3): AcquisitionModel, Read new samples from the underlying source and upd
 Cohesion: 0.80
 Nodes (4): MM(), NetOf(), RectS(), RunFixed()
 
+### Community 468 - "apj_083031.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 469 - "apl_094611.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 470 - "prj_083356.pas"
+Cohesion: 0.26
+Nodes (21): AddCutout(), AddPoly(), CloseTo(), CountItems(), CountPolys(), Counts(), Fail(), FindNet() (+13 more)
+
+### Community 471 - "gaj_083031.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 472 - "gak_083357.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
+### Community 473 - "gal_094611.pas"
+Cohesion: 0.80
+Nodes (4): MM(), NetOf(), RectS(), RunFixed()
+
 ## Knowledge Gaps
-- **458 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+453 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1170 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **460 isolated node(s):** `0. How to use this handoff`, `1. Mission`, `2. Quick start — open the EMG scope`, `3. Current state — DONE ✅ (as of 2026-08-27)`, `4. Repo map` (+455 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1182 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **103 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `EmgScope` connect `EmgScope` to `ReviewWindow`, `emg_plotter.py`, `EmgFilters`, `EmgPlotWidget`, `ProcessingDialog`, `RecordingController`, `MvcDialog`, `test_leadoff.py`, `AmpNormDialog`, `._prompt_save_recording`, `AcquisitionModel`, `ChannelPanel`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `SaveRecordingDialog` connect `MvcDialog` to `EmgScope`, `emg_plotter.py`, `._prompt_save_recording`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `EmgFilters` connect `EmgFilters` to `EmgScope`, `ReviewWindow`, `emg_plotter.py`, `dsp.py`, `MvcDialog`, `test_pipeline.py`, `emg_features.py`?**

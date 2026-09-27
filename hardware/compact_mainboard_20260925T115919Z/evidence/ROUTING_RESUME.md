@@ -3,7 +3,19 @@
 **Task (user, 26 Sep 2026):** "switch to 6 layers and now complete all the unrouted" on candidate C2
 (`C2_COMPACT_4L_2SIDE/MainBoard/EMG_MainBoard_Layout.PcbDoc`). No fabrication approval (R2). Never push to main.
 
-## State at 08:45 (27 Sep) - SUPERSEDES everything below
+## State at 10:00 (27 Sep) - SUPERSEDES everything below
+- Last commit 0601824 = state AL: **18 unrouted** (pushed).
+- On disk (not committed): TP_VREF_B_SRC free pad moved (12.5,20.2) -> (11.4,22.95) (PMOVE, OPS_TPVB_MOVE.txt; legal by
+  chk_tp.py), its attached Top copper ripped (RIP_TPVB.csv) -> state AM 21 (+3 VREF_B_SRC). Goal: free U1-11 GND via site
+  and the VREF_B_SRC path that also blocks C_DRL_DEC-2 GND.
+- Running: REP_AO on AM (VREF_B_SRC first; regions U1-left + C_DRL_DEC), log tmp/rep_ao.log. If it ends above 18,
+  restore 0601824's PcbDoc (git checkout 0601824 -- <PcbDoc>) and try differently.
+- Next idea for UP1 pins 6/7 (EN1_BIAS + USB_PGOOD_N): 0.4/0.2 vias fit in the C_BAT pad gap - EN1_BIAS via
+  (13.39,41.80), PGOOD straight up x=13.9 to via (13.65,42.95); DRC decides whether 0.4 mm passes the via-style rule.
+- Pour connectivity (L1 GND / L5 3V0_ANA pours) is not modelled: new copper can cut a pad off its pour -> expect 1-2
+  surprise links per round.
+
+## State at 08:45 (27 Sep)
 - User (08:1x): "do it and solve the unrouted and complete it" -> keep going to zero.
 - Last commit 261e3b1 = state AI (19). On disk now (not committed): state AK = REP_AM written (ch2 NetINA2_3 closed by
   region, +1 -> 18) then an antenna prune that over-deleted a live VOUT_2 chain (prune_from_antennae misses a via
